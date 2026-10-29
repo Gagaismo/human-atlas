@@ -15,6 +15,17 @@ Source OBJ comments mention an older CC BY-SA 2.1 Japan license. The official cu
 
 BodyParts3D represents an adult male reference anatomy based on TARO MRI and anatomical illustration refinements. It is not a complete model of every possible human anatomical structure or variation. This interface is educational and is not a clinical tool.
 
+## Kinesiology mode model (`public/models/kinesio/`)
+
+`lower-limb.glb.gz` and `lower-limb.json` are derived from **Z-Anatomy** by Gauthier Kervyn and contributors, licensed under **CC BY-SA 4.0**, which is itself built on BodyParts3D (above, CC BY 4.0). These two files are therefore distributed under **CC BY-SA 4.0**: you may share and adapt them, including commercially, if you credit the sources and share your adaptations under the same license. The application code that loads them stays under the MIT License.
+
+- Source: https://github.com/Z-Anatomy/Models-of-human-anatomy (`Z-Anatomy.zip` for the muscle bellies and their origin/insertion patches, `Z-Biomechanics.7z` for the armature and the skeleton meshes).
+- License terms: https://creativecommons.org/licenses/by-sa/4.0/
+
+Adaptations, made by `scripts/kinesio/build-rig.py`: the Z-Biomechanics armature returned to its rest pose with animation and constraints removed; skeleton meshes decimated and kept rigid on their bones, with the patella moved to the tibia; 18 lower-limb muscles per side (and 3 context muscles) appended from Z-Anatomy, decimated to at most 2,500 vertices and skinned to the bones they cross with line-of-action weights; origin and insertion markers taken from the Z-Anatomy patches (or from the belly ends where a patch is missing) plus a pelvic via point for psoas major and iliacus; exported to glTF with Y-up and gzip-compressed.
+
+The clinical content of the kinesiology mode (`app/kinesio/catalog.ts`) cites Kendall et al., *Músculos: pruebas funcionales, postura y dolor*, and Kapandji, *Fisiología articular*, tomo 2, for concepts and reference values. No text or figure from those works is reproduced. Every technique is marked as pending review by a kinesiologist.
+
 ## Historical assets (not included in the current release)
 
 Earlier repository revisions included female reference anatomy: Kristen Browne and Heidi Schlehlein, Human Reference Atlas / HuBMAP, *3D Reference Organ Set for Female v1.5* (2023). CC BY 4.0. Geometry adapted for this viewer.

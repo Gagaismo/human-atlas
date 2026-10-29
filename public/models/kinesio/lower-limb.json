@@ -1,0 +1,754 @@
+{
+ "model": "lower-limb.glb.gz",
+ "modelBytes": 8416316,
+ "license": "CC BY-SA 4.0 — derived from Z-Anatomy (Gauthier Kervyn et al.) and BodyParts3D (DBCLS, CC BY 4.0)",
+ "joints": [
+  {
+   "id": "pelvis",
+   "bone": "Hips",
+   "pivot": [
+    -0.0,
+    0.93615,
+    -0.026853
+   ],
+   "axes": {},
+   "limits": {}
+  },
+  {
+   "id": "hip_r",
+   "bone": "RightUpLeg",
+   "pivot": [
+    -0.083053,
+    0.861369,
+    -0.004362
+   ],
+   "axes": {
+    "flexion": [
+     -1.0,
+     0.0,
+     -0.0
+    ],
+    "abduction": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "rotation": [
+     0.0,
+     1.0,
+     -0.0
+    ]
+   },
+   "limits": {
+    "flexion": [
+     -20,
+     140
+    ],
+    "abduction": [
+     -30,
+     45
+    ],
+    "rotation": [
+     -60,
+     30
+    ]
+   }
+  },
+  {
+   "id": "knee_r",
+   "bone": "Knee-Flexion.r",
+   "pivot": [
+    -0.08105,
+    0.454631,
+    -0.016437
+   ],
+   "axes": {
+    "flexion": [
+     1.0,
+     0.0,
+     -0.0
+    ]
+   },
+   "limits": {
+    "flexion": [
+     0,
+     150
+    ]
+   }
+  },
+  {
+   "id": "ankle_r",
+   "bone": "RightFoot",
+   "pivot": [
+    -0.07576,
+    0.072348,
+    -0.040094
+   ],
+   "axes": {
+    "flexion": [
+     -1.0,
+     0.0,
+     -0.0
+    ]
+   },
+   "limits": {
+    "flexion": [
+     -50,
+     30
+    ]
+   }
+  },
+  {
+   "id": "hip_l",
+   "bone": "LeftUpLeg",
+   "pivot": [
+    0.083053,
+    0.861369,
+    -0.004362
+   ],
+   "axes": {
+    "flexion": [
+     -1.0,
+     0.0,
+     -0.0
+    ],
+    "abduction": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "rotation": [
+     0.0,
+     -1.0,
+     -0.0
+    ]
+   },
+   "limits": {
+    "flexion": [
+     -20,
+     140
+    ],
+    "abduction": [
+     -30,
+     45
+    ],
+    "rotation": [
+     -60,
+     30
+    ]
+   }
+  },
+  {
+   "id": "knee_l",
+   "bone": "Knee-Flexion.l",
+   "pivot": [
+    0.08105,
+    0.454631,
+    -0.016437
+   ],
+   "axes": {
+    "flexion": [
+     1.0,
+     0.0,
+     -0.0
+    ]
+   },
+   "limits": {
+    "flexion": [
+     0,
+     150
+    ]
+   }
+  },
+  {
+   "id": "ankle_l",
+   "bone": "LeftFoot",
+   "pivot": [
+    0.07576,
+    0.072348,
+    -0.040094
+   ],
+   "axes": {
+    "flexion": [
+     -1.0,
+     0.0,
+     -0.0
+    ]
+   },
+   "limits": {
+    "flexion": [
+     -50,
+     30
+    ]
+   }
+  }
+ ],
+ "muscles": [
+  {
+   "id": "biceps_femoris_long",
+   "side": "l",
+   "name": "Long head of biceps femoris",
+   "mesh": "muscle__biceps_femoris_long__l",
+   "bones": [
+    "LHipJoint",
+    "LeftUpLeg",
+    "Tibia.l"
+   ],
+   "origin": "origin__biceps_femoris_long__l",
+   "insertion": "insertion__biceps_femoris_long__l",
+   "restLength": 0.40777,
+   "fallback": []
+  },
+  {
+   "id": "biceps_femoris_long",
+   "side": "r",
+   "name": "Long head of biceps femoris",
+   "mesh": "muscle__biceps_femoris_long__r",
+   "bones": [
+    "RHipJoint",
+    "RightUpLeg",
+    "Tibia.r"
+   ],
+   "origin": "origin__biceps_femoris_long__r",
+   "insertion": "insertion__biceps_femoris_long__r",
+   "restLength": 0.40777,
+   "fallback": []
+  },
+  {
+   "id": "biceps_femoris_short",
+   "side": "l",
+   "name": "Short head of biceps femoris",
+   "mesh": "muscle__biceps_femoris_short__l",
+   "bones": [
+    "LeftUpLeg",
+    "Tibia.l"
+   ],
+   "origin": "origin__biceps_femoris_short__l",
+   "insertion": "insertion__biceps_femoris_short__l",
+   "restLength": 0.29666,
+   "fallback": [
+    "origin"
+   ]
+  },
+  {
+   "id": "biceps_femoris_short",
+   "side": "r",
+   "name": "Short head of biceps femoris",
+   "mesh": "muscle__biceps_femoris_short__r",
+   "bones": [
+    "RightUpLeg",
+    "Tibia.r"
+   ],
+   "origin": "origin__biceps_femoris_short__r",
+   "insertion": "insertion__biceps_femoris_short__r",
+   "restLength": 0.12947,
+   "fallback": [
+    "origin"
+   ]
+  },
+  {
+   "id": "semitendinosus",
+   "side": "l",
+   "name": "Semitendinosus muscle",
+   "mesh": "muscle__semitendinosus__l",
+   "bones": [
+    "LHipJoint",
+    "LeftUpLeg",
+    "Tibia.l"
+   ],
+   "origin": "origin__semitendinosus__l",
+   "insertion": "insertion__semitendinosus__l",
+   "restLength": 0.42601,
+   "fallback": []
+  },
+  {
+   "id": "semitendinosus",
+   "side": "r",
+   "name": "Semitendinosus muscle",
+   "mesh": "muscle__semitendinosus__r",
+   "bones": [
+    "RHipJoint",
+    "RightUpLeg",
+    "Tibia.r"
+   ],
+   "origin": "origin__semitendinosus__r",
+   "insertion": "insertion__semitendinosus__r",
+   "restLength": 0.42601,
+   "fallback": []
+  },
+  {
+   "id": "semimembranosus",
+   "side": "l",
+   "name": "Semimembranosus muscle",
+   "mesh": "muscle__semimembranosus__l",
+   "bones": [
+    "LHipJoint",
+    "LeftUpLeg",
+    "Tibia.l"
+   ],
+   "origin": "origin__semimembranosus__l",
+   "insertion": "insertion__semimembranosus__l",
+   "restLength": 0.39039,
+   "fallback": []
+  },
+  {
+   "id": "semimembranosus",
+   "side": "r",
+   "name": "Semimembranosus muscle",
+   "mesh": "muscle__semimembranosus__r",
+   "bones": [
+    "RHipJoint",
+    "RightUpLeg",
+    "Tibia.r"
+   ],
+   "origin": "origin__semimembranosus__r",
+   "insertion": "insertion__semimembranosus__r",
+   "restLength": 0.39039,
+   "fallback": []
+  },
+  {
+   "id": "rectus_femoris",
+   "side": "l",
+   "name": "Rectus femoris muscle",
+   "mesh": "muscle__rectus_femoris__l",
+   "bones": [
+    "LHipJoint",
+    "LeftUpLeg",
+    "Tibia.l"
+   ],
+   "origin": "origin__rectus_femoris__l",
+   "insertion": "insertion__rectus_femoris__l",
+   "restLength": 0.44332,
+   "fallback": []
+  },
+  {
+   "id": "rectus_femoris",
+   "side": "r",
+   "name": "Rectus femoris muscle",
+   "mesh": "muscle__rectus_femoris__r",
+   "bones": [
+    "RHipJoint",
+    "RightUpLeg",
+    "Tibia.r"
+   ],
+   "origin": "origin__rectus_femoris__r",
+   "insertion": "insertion__rectus_femoris__r",
+   "restLength": 0.44332,
+   "fallback": []
+  },
+  {
+   "id": "vastus_lateralis",
+   "side": "l",
+   "name": "Vastus lateralis muscle",
+   "mesh": "muscle__vastus_lateralis__l",
+   "bones": [
+    "LeftUpLeg",
+    "Tibia.l"
+   ],
+   "origin": "origin__vastus_lateralis__l",
+   "insertion": "insertion__vastus_lateralis__l",
+   "restLength": 0.27555,
+   "fallback": []
+  },
+  {
+   "id": "vastus_lateralis",
+   "side": "r",
+   "name": "Vastus lateralis muscle",
+   "mesh": "muscle__vastus_lateralis__r",
+   "bones": [
+    "RightUpLeg",
+    "Tibia.r"
+   ],
+   "origin": "origin__vastus_lateralis__r",
+   "insertion": "insertion__vastus_lateralis__r",
+   "restLength": 0.27555,
+   "fallback": []
+  },
+  {
+   "id": "vastus_medialis",
+   "side": "l",
+   "name": "Vastus medialis muscle",
+   "mesh": "muscle__vastus_medialis__l",
+   "bones": [
+    "LeftUpLeg",
+    "Tibia.l"
+   ],
+   "origin": "origin__vastus_medialis__l",
+   "insertion": "insertion__vastus_medialis__l",
+   "restLength": 0.16367,
+   "fallback": []
+  },
+  {
+   "id": "vastus_medialis",
+   "side": "r",
+   "name": "Vastus medialis muscle",
+   "mesh": "muscle__vastus_medialis__r",
+   "bones": [
+    "RightUpLeg",
+    "Tibia.r"
+   ],
+   "origin": "origin__vastus_medialis__r",
+   "insertion": "insertion__vastus_medialis__r",
+   "restLength": 0.16367,
+   "fallback": []
+  },
+  {
+   "id": "vastus_intermedius",
+   "side": "l",
+   "name": "Vastus intermedius muscle",
+   "mesh": "muscle__vastus_intermedius__l",
+   "bones": [
+    "LeftUpLeg",
+    "Tibia.l"
+   ],
+   "origin": "origin__vastus_intermedius__l",
+   "insertion": "insertion__vastus_intermedius__l",
+   "restLength": 0.21438,
+   "fallback": []
+  },
+  {
+   "id": "vastus_intermedius",
+   "side": "r",
+   "name": "Vastus intermedius muscle",
+   "mesh": "muscle__vastus_intermedius__r",
+   "bones": [
+    "RightUpLeg",
+    "Tibia.r"
+   ],
+   "origin": "origin__vastus_intermedius__r",
+   "insertion": "insertion__vastus_intermedius__r",
+   "restLength": 0.21438,
+   "fallback": []
+  },
+  {
+   "id": "psoas_major",
+   "side": "l",
+   "name": "Psoas major",
+   "mesh": "muscle__psoas_major__l",
+   "bones": [
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "L5",
+    "LHipJoint",
+    "LeftUpLeg"
+   ],
+   "origin": "origin__psoas_major__l",
+   "insertion": "insertion__psoas_major__l",
+   "restLength": 0.37471,
+   "fallback": [
+    "origin"
+   ]
+  },
+  {
+   "id": "psoas_major",
+   "side": "r",
+   "name": "Psoas major",
+   "mesh": "muscle__psoas_major__r",
+   "bones": [
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "L5",
+    "RHipJoint",
+    "RightUpLeg"
+   ],
+   "origin": "origin__psoas_major__r",
+   "insertion": "insertion__psoas_major__r",
+   "restLength": 0.37471,
+   "fallback": [
+    "origin"
+   ]
+  },
+  {
+   "id": "iliacus",
+   "side": "l",
+   "name": "Iliacus muscle",
+   "mesh": "muscle__iliacus__l",
+   "bones": [
+    "LHipJoint",
+    "LeftUpLeg"
+   ],
+   "origin": "origin__iliacus__l",
+   "insertion": "insertion__iliacus__l",
+   "restLength": 0.16971,
+   "fallback": []
+  },
+  {
+   "id": "iliacus",
+   "side": "r",
+   "name": "Iliacus muscle",
+   "mesh": "muscle__iliacus__r",
+   "bones": [
+    "RHipJoint",
+    "RightUpLeg"
+   ],
+   "origin": "origin__iliacus__r",
+   "insertion": "insertion__iliacus__r",
+   "restLength": 0.16971,
+   "fallback": []
+  },
+  {
+   "id": "gastrocnemius_medial",
+   "side": "l",
+   "name": "Medial head of gastrocnemius",
+   "mesh": "muscle__gastrocnemius_medial__l",
+   "bones": [
+    "LeftUpLeg",
+    "Tibia.l",
+    "Calcaneus.l"
+   ],
+   "origin": "origin__gastrocnemius_medial__l",
+   "insertion": "insertion__gastrocnemius_medial__l",
+   "restLength": 0.45356,
+   "fallback": []
+  },
+  {
+   "id": "gastrocnemius_medial",
+   "side": "r",
+   "name": "Medial head of gastrocnemius",
+   "mesh": "muscle__gastrocnemius_medial__r",
+   "bones": [
+    "RightUpLeg",
+    "Tibia.r",
+    "Calcaneus.r"
+   ],
+   "origin": "origin__gastrocnemius_medial__r",
+   "insertion": "insertion__gastrocnemius_medial__r",
+   "restLength": 0.45356,
+   "fallback": []
+  },
+  {
+   "id": "gastrocnemius_lateral",
+   "side": "l",
+   "name": "Lateral head of gastrocnemius",
+   "mesh": "muscle__gastrocnemius_lateral__l",
+   "bones": [
+    "LeftUpLeg",
+    "Tibia.l",
+    "Calcaneus.l"
+   ],
+   "origin": "origin__gastrocnemius_lateral__l",
+   "insertion": "insertion__gastrocnemius_lateral__l",
+   "restLength": 0.44102,
+   "fallback": []
+  },
+  {
+   "id": "gastrocnemius_lateral",
+   "side": "r",
+   "name": "Lateral head of gastrocnemius",
+   "mesh": "muscle__gastrocnemius_lateral__r",
+   "bones": [
+    "RightUpLeg",
+    "Tibia.r",
+    "Calcaneus.r"
+   ],
+   "origin": "origin__gastrocnemius_lateral__r",
+   "insertion": "insertion__gastrocnemius_lateral__r",
+   "restLength": 0.44102,
+   "fallback": []
+  },
+  {
+   "id": "soleus",
+   "side": "l",
+   "name": "Soleus muscle",
+   "mesh": "muscle__soleus__l",
+   "bones": [
+    "Tibia.l",
+    "Calcaneus.l"
+   ],
+   "origin": "origin__soleus__l",
+   "insertion": "insertion__soleus__l",
+   "restLength": 0.3225,
+   "fallback": []
+  },
+  {
+   "id": "soleus",
+   "side": "r",
+   "name": "Soleus muscle",
+   "mesh": "muscle__soleus__r",
+   "bones": [
+    "Tibia.r",
+    "Calcaneus.r"
+   ],
+   "origin": "origin__soleus__r",
+   "insertion": "insertion__soleus__r",
+   "restLength": 0.3225,
+   "fallback": []
+  },
+  {
+   "id": "adductor_longus",
+   "side": "l",
+   "name": "Adductor longus",
+   "mesh": "muscle__adductor_longus__l",
+   "bones": [
+    "LHipJoint",
+    "LeftUpLeg"
+   ],
+   "origin": "origin__adductor_longus__l",
+   "insertion": "insertion__adductor_longus__l",
+   "restLength": 0.15557,
+   "fallback": []
+  },
+  {
+   "id": "adductor_longus",
+   "side": "r",
+   "name": "Adductor longus",
+   "mesh": "muscle__adductor_longus__r",
+   "bones": [
+    "RHipJoint",
+    "RightUpLeg"
+   ],
+   "origin": "origin__adductor_longus__r",
+   "insertion": "insertion__adductor_longus__r",
+   "restLength": 0.15557,
+   "fallback": []
+  },
+  {
+   "id": "adductor_brevis",
+   "side": "l",
+   "name": "Adductor brevis",
+   "mesh": "muscle__adductor_brevis__l",
+   "bones": [
+    "LHipJoint",
+    "LeftUpLeg"
+   ],
+   "origin": "origin__adductor_brevis__l",
+   "insertion": "insertion__adductor_brevis__l",
+   "restLength": 0.19009,
+   "fallback": [
+    "origin",
+    "insertion"
+   ]
+  },
+  {
+   "id": "adductor_brevis",
+   "side": "r",
+   "name": "Adductor brevis",
+   "mesh": "muscle__adductor_brevis__r",
+   "bones": [
+    "RHipJoint",
+    "RightUpLeg"
+   ],
+   "origin": "origin__adductor_brevis__r",
+   "insertion": "insertion__adductor_brevis__r",
+   "restLength": 0.19009,
+   "fallback": [
+    "origin",
+    "insertion"
+   ]
+  },
+  {
+   "id": "adductor_magnus",
+   "side": "l",
+   "name": "Adductor magnus",
+   "mesh": "muscle__adductor_magnus__l",
+   "bones": [
+    "LHipJoint",
+    "LeftUpLeg",
+    "Tibia.l"
+   ],
+   "origin": "origin__adductor_magnus__l",
+   "insertion": "insertion__adductor_magnus__l",
+   "restLength": 0.2004,
+   "fallback": []
+  },
+  {
+   "id": "adductor_magnus",
+   "side": "r",
+   "name": "Adductor magnus",
+   "mesh": "muscle__adductor_magnus__r",
+   "bones": [
+    "RHipJoint",
+    "RightUpLeg",
+    "Tibia.r"
+   ],
+   "origin": "origin__adductor_magnus__r",
+   "insertion": "insertion__adductor_magnus__r",
+   "restLength": 0.2004,
+   "fallback": []
+  },
+  {
+   "id": "gracilis",
+   "side": "l",
+   "name": "Gracilis muscle",
+   "mesh": "muscle__gracilis__l",
+   "bones": [
+    "LHipJoint",
+    "LeftUpLeg",
+    "Tibia.l"
+   ],
+   "origin": "origin__gracilis__l",
+   "insertion": "insertion__gracilis__l",
+   "restLength": 0.45475,
+   "fallback": []
+  },
+  {
+   "id": "gracilis",
+   "side": "r",
+   "name": "Gracilis muscle",
+   "mesh": "muscle__gracilis__r",
+   "bones": [
+    "RHipJoint",
+    "RightUpLeg",
+    "Tibia.r"
+   ],
+   "origin": "origin__gracilis__r",
+   "insertion": "insertion__gracilis__r",
+   "restLength": 0.45475,
+   "fallback": []
+  },
+  {
+   "id": "pectineus",
+   "side": "l",
+   "name": "Pectineus muscle",
+   "mesh": "muscle__pectineus__l",
+   "bones": [
+    "LHipJoint",
+    "LeftUpLeg"
+   ],
+   "origin": "origin__pectineus__l",
+   "insertion": "insertion__pectineus__l",
+   "restLength": 0.14012,
+   "fallback": [
+    "insertion"
+   ]
+  },
+  {
+   "id": "pectineus",
+   "side": "r",
+   "name": "Pectineus muscle",
+   "mesh": "muscle__pectineus__r",
+   "bones": [
+    "RHipJoint",
+    "RightUpLeg"
+   ],
+   "origin": "origin__pectineus__r",
+   "insertion": "insertion__pectineus__r",
+   "restLength": 0.12001,
+   "fallback": []
+  }
+ ],
+ "context": [
+  "context__gluteus_maximus__l",
+  "context__gluteus_maximus__r",
+  "context__sartorius__l",
+  "context__sartorius__r",
+  "context__tibialis_anterior__l",
+  "context__tibialis_anterior__r"
+ ],
+ "bounds": {
+  "min": [
+   -0.336318,
+   0.009203,
+   -0.112823
+  ],
+  "max": [
+   0.334629,
+   1.705411,
+   0.137308
+  ]
+ }
+}

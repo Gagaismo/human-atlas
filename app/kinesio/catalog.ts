@@ -1,4 +1,13 @@
-import type {Citation,StretchEntry} from './types';
+import type {Citation,MuscleId,PatientPosition,StretchEntry,StretchVariant} from './types';
+
+export const MUSCLE_NAMES:Record<MuscleId,string>={
+ biceps_femoris_long:'Bíceps femoral (cabeza larga)',biceps_femoris_short:'Bíceps femoral (cabeza corta)',semitendinosus:'Semitendinoso',semimembranosus:'Semimembranoso',
+ rectus_femoris:'Recto femoral',vastus_lateralis:'Vasto lateral',vastus_medialis:'Vasto medial',vastus_intermedius:'Vasto intermedio',
+ psoas_major:'Psoas mayor',iliacus:'Ilíaco',gastrocnemius_medial:'Gemelo medial',gastrocnemius_lateral:'Gemelo lateral',soleus:'Sóleo',
+ adductor_longus:'Aductor largo',adductor_brevis:'Aductor corto',adductor_magnus:'Aductor mayor',gracilis:'Grácil',pectineus:'Pectíneo',
+};
+export const POSITION_NAMES:Record<PatientPosition,string>={supino:'Decúbito supino',prono:'Decúbito prono',lateral:'Decúbito lateral',sedente:'Sedente',bipedestacion:'Bipedestación'};
+export const MODE_NAMES:Record<StretchVariant['mode'],string>={activo:'Activo: se mueve el paciente',pasivo:'Pasivo: mueve el terapeuta',inmovil:'Paciente inmóvil (decúbito obligado)'};
 
 // Clinical content for slice 1. Every entry stays `validated:false` until a kinesiologist reviews it.
 // Concepts and values follow the cited works; their figures and text are not reproduced.

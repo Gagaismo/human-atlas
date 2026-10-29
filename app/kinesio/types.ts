@@ -27,6 +27,7 @@ export interface StretchEntry {
 // Metadata written by scripts/kinesio/build-rig.py next to the glb. Node names are the raw glTF names; three.js
 // GLTFLoader sanitizes them on load (PropertyBinding.sanitizeNodeName), so look them up sanitized. Axes are unit vectors in the glTF world
 // frame of the rest pose (Y up, body facing +Z); a positive angle about the axis is the positive motion.
+// A muscle's length is measured along origin -> via points -> insertion; restLength is that path at rest.
 export interface RigJoint {id:JointId;bone:string;pivot:[number,number,number];axes:Partial<Record<Motion,[number,number,number]>>;limits:Partial<Record<Motion,[number,number]>>}
-export interface RigMuscle {id:MuscleId;side:Side;name:string;mesh:string;bones:string[];origin:string;insertion:string;restLength:number;fallback:('origin'|'insertion')[]}
+export interface RigMuscle {id:MuscleId;side:Side;name:string;mesh:string;bones:string[];origin:string;insertion:string;via:string[];restLength:number;fallback:('origin'|'insertion')[]}
 export interface RigMeta {model:string;modelBytes:number;license:string;joints:RigJoint[];muscles:RigMuscle[];context:string[];bounds:{min:[number,number,number];max:[number,number,number]}}

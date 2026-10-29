@@ -42,6 +42,8 @@ for(const id of muscleIds)for(const side of ['l','r']){
  if(!muscle){fail(`muscle ${label} is missing from lower-limb.json`);continue;}
  if(!(muscle.restLength>0))fail(`muscle ${label}: restLength must be positive, got ${muscle.restLength}`);
  for(const key of ['origin','insertion'])if(!nodes.has(muscle[key]))fail(`muscle ${label}: ${key} node ${muscle[key]} is not in the model`);
+ if(!Array.isArray(muscle.via))fail(`muscle ${label}: via must be a list of node names`);
+ for(const via of muscle.via??[])if(!nodes.has(via))fail(`muscle ${label}: via node ${via} is not in the model`);
  const node=nodes.get(muscle.mesh);
  if(!node||node.mesh===undefined||node.skin===undefined){fail(`muscle ${label}: skinned mesh node ${muscle.mesh} is not in the model`);continue;}
  const skinJoints=gltf.skins[node.skin].joints.map(j=>gltf.nodes[j].name),allowed=new Set(muscle.bones),outside=new Set();

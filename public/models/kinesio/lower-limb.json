@@ -1,6 +1,6 @@
 {
  "model": "lower-limb.glb.gz",
- "modelBytes": 8416316,
+ "modelBytes": 8417384,
  "license": "CC BY-SA 4.0 — derived from Z-Anatomy (Gauthier Kervyn et al.) and BodyParts3D (DBCLS, CC BY 4.0)",
  "joints": [
   {
@@ -196,6 +196,7 @@
    ],
    "origin": "origin__biceps_femoris_long__l",
    "insertion": "insertion__biceps_femoris_long__l",
+   "via": [],
    "restLength": 0.40777,
    "fallback": []
   },
@@ -211,6 +212,7 @@
    ],
    "origin": "origin__biceps_femoris_long__r",
    "insertion": "insertion__biceps_femoris_long__r",
+   "via": [],
    "restLength": 0.40777,
    "fallback": []
   },
@@ -225,6 +227,7 @@
    ],
    "origin": "origin__biceps_femoris_short__l",
    "insertion": "insertion__biceps_femoris_short__l",
+   "via": [],
    "restLength": 0.29666,
    "fallback": [
     "origin"
@@ -241,6 +244,7 @@
    ],
    "origin": "origin__biceps_femoris_short__r",
    "insertion": "insertion__biceps_femoris_short__r",
+   "via": [],
    "restLength": 0.12947,
    "fallback": [
     "origin"
@@ -258,6 +262,7 @@
    ],
    "origin": "origin__semitendinosus__l",
    "insertion": "insertion__semitendinosus__l",
+   "via": [],
    "restLength": 0.42601,
    "fallback": []
   },
@@ -273,6 +278,7 @@
    ],
    "origin": "origin__semitendinosus__r",
    "insertion": "insertion__semitendinosus__r",
+   "via": [],
    "restLength": 0.42601,
    "fallback": []
   },
@@ -288,6 +294,7 @@
    ],
    "origin": "origin__semimembranosus__l",
    "insertion": "insertion__semimembranosus__l",
+   "via": [],
    "restLength": 0.39039,
    "fallback": []
   },
@@ -303,6 +310,7 @@
    ],
    "origin": "origin__semimembranosus__r",
    "insertion": "insertion__semimembranosus__r",
+   "via": [],
    "restLength": 0.39039,
    "fallback": []
   },
@@ -318,6 +326,7 @@
    ],
    "origin": "origin__rectus_femoris__l",
    "insertion": "insertion__rectus_femoris__l",
+   "via": [],
    "restLength": 0.44332,
    "fallback": []
   },
@@ -333,6 +342,7 @@
    ],
    "origin": "origin__rectus_femoris__r",
    "insertion": "insertion__rectus_femoris__r",
+   "via": [],
    "restLength": 0.44332,
    "fallback": []
   },
@@ -347,6 +357,7 @@
    ],
    "origin": "origin__vastus_lateralis__l",
    "insertion": "insertion__vastus_lateralis__l",
+   "via": [],
    "restLength": 0.27555,
    "fallback": []
   },
@@ -361,6 +372,7 @@
    ],
    "origin": "origin__vastus_lateralis__r",
    "insertion": "insertion__vastus_lateralis__r",
+   "via": [],
    "restLength": 0.27555,
    "fallback": []
   },
@@ -375,6 +387,7 @@
    ],
    "origin": "origin__vastus_medialis__l",
    "insertion": "insertion__vastus_medialis__l",
+   "via": [],
    "restLength": 0.16367,
    "fallback": []
   },
@@ -389,6 +402,7 @@
    ],
    "origin": "origin__vastus_medialis__r",
    "insertion": "insertion__vastus_medialis__r",
+   "via": [],
    "restLength": 0.16367,
    "fallback": []
   },
@@ -403,6 +417,7 @@
    ],
    "origin": "origin__vastus_intermedius__l",
    "insertion": "insertion__vastus_intermedius__l",
+   "via": [],
    "restLength": 0.21438,
    "fallback": []
   },
@@ -417,6 +432,7 @@
    ],
    "origin": "origin__vastus_intermedius__r",
    "insertion": "insertion__vastus_intermedius__r",
+   "via": [],
    "restLength": 0.21438,
    "fallback": []
   },
@@ -436,7 +452,10 @@
    ],
    "origin": "origin__psoas_major__l",
    "insertion": "insertion__psoas_major__l",
-   "restLength": 0.37471,
+   "via": [
+    "via__psoas_major__l"
+   ],
+   "restLength": 0.39644,
    "fallback": [
     "origin"
    ]
@@ -457,7 +476,10 @@
    ],
    "origin": "origin__psoas_major__r",
    "insertion": "insertion__psoas_major__r",
-   "restLength": 0.37471,
+   "via": [
+    "via__psoas_major__r"
+   ],
+   "restLength": 0.39644,
    "fallback": [
     "origin"
    ]
@@ -473,7 +495,10 @@
    ],
    "origin": "origin__iliacus__l",
    "insertion": "insertion__iliacus__l",
-   "restLength": 0.16971,
+   "via": [
+    "via__iliacus__l"
+   ],
+   "restLength": 0.18658,
    "fallback": []
   },
   {
@@ -487,7 +512,10 @@
    ],
    "origin": "origin__iliacus__r",
    "insertion": "insertion__iliacus__r",
-   "restLength": 0.16971,
+   "via": [
+    "via__iliacus__r"
+   ],
+   "restLength": 0.18658,
    "fallback": []
   },
   {
@@ -502,6 +530,7 @@
    ],
    "origin": "origin__gastrocnemius_medial__l",
    "insertion": "insertion__gastrocnemius_medial__l",
+   "via": [],
    "restLength": 0.45356,
    "fallback": []
   },
@@ -517,6 +546,7 @@
    ],
    "origin": "origin__gastrocnemius_medial__r",
    "insertion": "insertion__gastrocnemius_medial__r",
+   "via": [],
    "restLength": 0.45356,
    "fallback": []
   },
@@ -532,6 +562,7 @@
    ],
    "origin": "origin__gastrocnemius_lateral__l",
    "insertion": "insertion__gastrocnemius_lateral__l",
+   "via": [],
    "restLength": 0.44102,
    "fallback": []
   },
@@ -547,6 +578,7 @@
    ],
    "origin": "origin__gastrocnemius_lateral__r",
    "insertion": "insertion__gastrocnemius_lateral__r",
+   "via": [],
    "restLength": 0.44102,
    "fallback": []
   },
@@ -561,6 +593,7 @@
    ],
    "origin": "origin__soleus__l",
    "insertion": "insertion__soleus__l",
+   "via": [],
    "restLength": 0.3225,
    "fallback": []
   },
@@ -575,6 +608,7 @@
    ],
    "origin": "origin__soleus__r",
    "insertion": "insertion__soleus__r",
+   "via": [],
    "restLength": 0.3225,
    "fallback": []
   },
@@ -589,6 +623,7 @@
    ],
    "origin": "origin__adductor_longus__l",
    "insertion": "insertion__adductor_longus__l",
+   "via": [],
    "restLength": 0.15557,
    "fallback": []
   },
@@ -603,6 +638,7 @@
    ],
    "origin": "origin__adductor_longus__r",
    "insertion": "insertion__adductor_longus__r",
+   "via": [],
    "restLength": 0.15557,
    "fallback": []
   },
@@ -617,6 +653,7 @@
    ],
    "origin": "origin__adductor_brevis__l",
    "insertion": "insertion__adductor_brevis__l",
+   "via": [],
    "restLength": 0.19009,
    "fallback": [
     "origin",
@@ -634,6 +671,7 @@
    ],
    "origin": "origin__adductor_brevis__r",
    "insertion": "insertion__adductor_brevis__r",
+   "via": [],
    "restLength": 0.19009,
    "fallback": [
     "origin",
@@ -652,6 +690,7 @@
    ],
    "origin": "origin__adductor_magnus__l",
    "insertion": "insertion__adductor_magnus__l",
+   "via": [],
    "restLength": 0.2004,
    "fallback": []
   },
@@ -667,6 +706,7 @@
    ],
    "origin": "origin__adductor_magnus__r",
    "insertion": "insertion__adductor_magnus__r",
+   "via": [],
    "restLength": 0.2004,
    "fallback": []
   },
@@ -682,6 +722,7 @@
    ],
    "origin": "origin__gracilis__l",
    "insertion": "insertion__gracilis__l",
+   "via": [],
    "restLength": 0.45475,
    "fallback": []
   },
@@ -697,6 +738,7 @@
    ],
    "origin": "origin__gracilis__r",
    "insertion": "insertion__gracilis__r",
+   "via": [],
    "restLength": 0.45475,
    "fallback": []
   },
@@ -711,6 +753,7 @@
    ],
    "origin": "origin__pectineus__l",
    "insertion": "insertion__pectineus__l",
+   "via": [],
    "restLength": 0.14012,
    "fallback": [
     "insertion"
@@ -727,6 +770,7 @@
    ],
    "origin": "origin__pectineus__r",
    "insertion": "insertion__pectineus__r",
+   "via": [],
    "restLength": 0.12001,
    "fallback": []
   }

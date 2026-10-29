@@ -41,6 +41,9 @@ CONTEXT = {
     'sartorius': ('Sartorius muscle', 'RHipJoint', 'Tibia.r', ['RHipJoint', 'RightUpLeg', 'Tibia.r']),
     'tibialis_anterior': ('Tibialis anterior muscle', 'Tibia.r', 'RightFoot', ['Tibia.r', 'RightFoot']),
 }
+# Muscles that wrap over the front of the hip: their path goes through a via point fixed on the pelvis, taken
+# as the centroid of the belly where it crosses the height of the hip joint (as musculoskeletal models do).
+VIA = {'psoas_major': 'RHipJoint', 'iliacus': 'RHipJoint'}
 LEFT = {'RHipJoint': 'LHipJoint', 'RightUpLeg': 'LeftUpLeg', 'RightFoot': 'LeftFoot', 'Knee-Flexion.r': 'Knee-Flexion.l'}
 def side_bone(name, side):
     if side == 'r': return name
@@ -189,8 +192,17 @@ for group, table in (('muscle', MUSCLES), ('context', CONTEXT)):
                 context_nodes.append(o.name); continue
             on, iname = f'origin__{mid}__{side}', f'insertion__{mid}__{side}'
             marker_empty(on, origin, obone); marker_empty(iname, insertion, ibone)
-            meta_muscles.append({'id': mid, 'side': side, 'name': base, 'mesh': o.name, 'bones': sb,
-                                 'origin': on, 'insertion': iname, 'restLength': round((insertion - origin).length, 5), 'fallback': fallback})
+            path, via = [origin], []
+            if mid in VIA:
+                hip_z = (arm.matrix_world @ arm.data.bones[side_bone('RightUpLeg', side)].head_local).z
+                slab = [v.co for v in o.data.vertices if abs(v.co.z - hip_z) < 0.015]
+                assert slab, f'{mid}:{side} does not cross the height of the hip joint'
+                point = sum(slab, Vector()) / len(slab)
+                via.append(f'via__{mid}__{side}'); marker_empty(via[0], point, side_bone(VIA[mid], side)); path.append(point)
+            path.append(insertion)
+            rest = sum((b - a).length for a, b in zip(path, path[1:]))
+            meta_muscles.append({'id': mid, 'side': side, 'name': base, 'mesh': o.name, 'bones': sb, 'origin': on, 'insertion': iname,
+                                 'via': via, 'restLength': round(rest, 5), 'fallback': fallback})
 
 # 3. Skeleton: rigid bone meshes, decimated. The patella follows the tibia (patellar ligament) instead of the femur.
 for o in skeleton:

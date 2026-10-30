@@ -13,6 +13,7 @@ export const FIELDS = {
  venous:['Origen','Trayecto','Desembocadura','Territorio'],
  nervous:['Ubicación','Partes','Origen','Trayecto','Ramas','Inervación','Función'],
  reproductive:['Ubicación','Partes','Irrigación','Función'],
+ lymphatic:['Ubicación','Drena','Eferentes','Función'],
 } as const satisfies Partial<Record<SystemId,readonly string[]>>;
 export const DESCRIBED_SYSTEMS = Object.keys(FIELDS) as (keyof typeof FIELDS)[];
 

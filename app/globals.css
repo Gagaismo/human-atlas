@@ -163,3 +163,16 @@ h1 .edition{font-family:inherit;font-weight:500;font-size:10px;letter-spacing:.0
 .tissue-credit a{color:#3f5f73;text-decoration:underline}
 @media(max-width:767px){.histology-sheet{width:100vw!important}.tissue-grid{grid-template-columns:repeat(2,1fr)}.top-actions button[aria-label="Histología"] span{display:none}}
 .tissue-credit a{white-space:nowrap}
+.landmark-labels{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:5}
+.landmark-label{position:absolute;left:0;top:0;font-size:11px;line-height:14px;white-space:nowrap;color:#1f2d3a;background:#ffffffd9;padding:0 5px;border-radius:3px;box-shadow:0 1px 2px #18253618}
+.landmark-label.is-behind{opacity:.35}
+.fact-list{margin:14px 0 0;font-size:13px;color:#33414e}
+.fact-list summary{cursor:pointer;font-size:12px;letter-spacing:.04em;color:#5d6976;padding:6px 0}
+.fact-list ul{margin:4px 0 0;padding-left:18px;display:grid;gap:3px;line-height:1.45}
+.attachment-summary{margin:14px 0 0;font-size:13px;line-height:1.5;color:#33414e}
+.attachment-summary h3{font-size:12px;letter-spacing:.04em;color:#5d6976;font-weight:500;margin:0 0 6px}
+.attachment-summary p{margin:0 0 4px}
+.tag{font-style:normal;font-size:10px;font-weight:600;letter-spacing:.04em;border-radius:3px;padding:1px 5px;margin:0 6px 0 0;color:white;vertical-align:1px}
+li .tag{margin:0 0 0 6px}
+.tag.origin{background:#c8473f}.tag.insertion{background:#2f6fb3}
+.opening-content{display:block;font-size:12px;line-height:1.5;color:#5d6976;margin:1px 0 4px}

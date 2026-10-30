@@ -26,6 +26,15 @@ Adaptations, made by `scripts/kinesio/build-rig.py`: the Z-Biomechanics armature
 
 The clinical content of the kinesiology mode (`app/kinesio/catalog.ts`) cites Kendall et al., *Músculos: pruebas funcionales, postura y dolor*, and Kapandji, *Fisiología articular*, tomo 2, for concepts and reference values. No text or figure from those works is reproduced. Every technique is marked as pending review by a kinesiologist.
 
+## Bone landmarks, muscle attachments and lymph nodes (`public/models/descriptive/`)
+
+`landmarks.json`, `attachments.glb.gz`, `lymph.glb.gz` and the lymph chunk (`lymph-chunk.bin*`, `lymph-parts.json`) are derived from **Z-Anatomy** by Gauthier Kervyn and contributors, licensed under **CC BY-SA 4.0** (itself built on BodyParts3D). These files are therefore distributed under **CC BY-SA 4.0**.
+
+- Source: https://github.com/Z-Anatomy/Models-of-human-anatomy (`Z-Anatomy.zip`, `Startup.blend`)
+- License terms: https://creativecommons.org/licenses/by-sa/4.0/
+
+Adaptations, made by `scripts/zanatomy/extract.py`, `scripts/zanatomy/build.mjs` and `scripts/lymph/to-chunk.mjs`: landmark labels, origin and insertion areas and lymphoid organ meshes exported from the Blender file; aligned bone by bone to the BodyParts3D frame (Z-Anatomy bones are remodelled, so one global transform left about 17 mm of error); landmarks snapped to the atlas bone surfaces and one-sided labels mirrored to the other side; region labels, the spleen and the thymus (already in BodyParts3D) left out; meshes simplified; Spanish names added; lymph nodes packed as an extra atlas geometry chunk, with their side taken from the geometry. Z-Anatomy has no lymphatic vessel geometry, so lymph pathways are described in text.
+
 ## Female variant (`public/models/female/`)
 
 The female structures shown by the sex switch (bony pelvis, uterus, uterine tubes, ovaries, urinary bladder, mammary glands and skin) are derived from the **Human Reference Atlas (HuBMAP)** 3D reference organs of the Visible Human female, licensed **CC BY 4.0**.

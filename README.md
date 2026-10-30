@@ -12,6 +12,7 @@ An interactive 3D anatomy explorer built with React, Three.js, and shadcn/ui, wi
 - Search anatomical names and source identifiers.
 - Isolate a selected structure and read its details.
 - Read Spanish descriptions of every bone (shape, parts, landmarks and what passes through its foramina), muscle (origin, insertion, innervation, action, supply), artery, vein, nerve and reproductive organ.
+- See the landmarks of a selected bone, what passes through its foramina and grooves, and the origin and insertion areas of its muscles; explore the lymph node groups.
 - Switch between the male and the female variant.
 - Cut the assembled body with a sagittal, coronal or transverse plane, move the plane and flip the kept half.
 - Browse openly licensed histology micrographs, also linked from each structure.
@@ -31,6 +32,10 @@ The sex switch in the systems panel replaces the male reproductive organs, bony 
 ## Section planes
 
 The scissors button in the camera controls cuts the assembled body with a sagittal, coronal or transverse plane. The camera turns to face the cut, the plane position can be moved, and the kept half can be flipped. Cut interiors are shaded darker, taps on the removed half are ignored, and exploding the anatomy removes the cut.
+
+## Landmarks, attachments and lymph nodes
+
+Selecting a bone labels its landmarks (processes, tuberosities, foramina, grooves…) on the model, lists them in the detail panel with what passes through each opening, and draws the origin (red) and insertion (blue) areas of the muscles attached to it. Selecting a muscle shows where it arises and inserts, drawn through the surrounding anatomy. Labels on the far side are dimmed and respect the section plane. Lymph node groups are selectable structures of the lymphatic system, with what they drain and where their lymph goes. The data come from Z-Anatomy (CC BY-SA 4.0), aligned bone by bone to the atlas; rebuild them with Blender 5.2 (see `scripts/zanatomy/build.mjs`), then `npm run build:descriptive`, `npm run build:lymph` and `npm run validate:descriptive`.
 
 ## Histology
 
@@ -64,9 +69,11 @@ Open http://localhost:3016. To build the static site, run `npm run build`; the o
 npm run check
 node scripts/validate-atlas.mjs
 node scripts/validate-interactions.mjs
-npm run validate:kinesio
+npm run validate:all
 npm run build
 ```
+
+`validate:all` runs every content and data check: Spanish names (`validate:names`), section planes (`validate:section`), descriptions and opening contents (`validate:descriptions`), the female variant (`validate:female`), landmarks, attachment areas and lymph nodes (`validate:descriptive`), histology images, credits and links (`validate:histology`) and the kinesiology mode (`validate:kinesio`).
 
 `validate:kinesio` checks the rigged model (joints, muscles, origin/insertion nodes, skin weights limited to the bones each muscle crosses, size budget), the clinical catalog (coverage, sign conventions, joint ranges, an immobile-patient option per group, pending-review flags) and the physiology of the rig: for example, a straight-leg raise must lengthen the hamstrings, knee flexion must not change the soleus, and every catalog technique must lengthen its target muscles.
 

@@ -1,5 +1,6 @@
 import type {Atlas,Concept} from './anatomy';
-import {fold} from './names';
+/** Lowercase, accent-free text, as app/names.ts fold (kept local so Node can run the interaction checks). */
+const fold=(text:string)=>text.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
 type Tool={name:string;description:string;inputSchema:object;annotations:{readOnlyHint:boolean};execute:(input:unknown)=>unknown};
 function record(input:unknown):Record<string,unknown>{if(!input||typeof input!=='object'||Array.isArray(input))throw new Error('Expected an object.');return input as Record<string,unknown>;}
 export function atlasTools(atlas:Atlas,inspect:(concept:Concept)=>void):Tool[]{return [

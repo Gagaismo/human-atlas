@@ -17,11 +17,13 @@ export const SYSTEMS: {id:SystemId;name:string;color:string;description:string}[
  {id:'connective',name:'Tejido conectivo',color:'#aec3bb',description:'El cartílago, los ligamentos y otros tejidos conectivos sostienen, unen y separan estructuras. Entre sus funciones están estabilizar las articulaciones y repartir las cargas mecánicas.'},
 ];
 import type {Section} from './section';
-export interface Part {id:string;name:string;nameEn?:string;conceptId:string;system:SystemId;chunk:number;positions:number;normals:number;indices:number;vertexCount:number;indexCount:number;bounds:[number[],number[]]}
+export type Sex = 'male'|'female';
+/** sex is set only on structures that differ between the male and female variants. */
+export interface Part {id:string;name:string;nameEn?:string;sex?:Sex;conceptId:string;system:SystemId;chunk:number;positions:number;normals:number;indices:number;vertexCount:number;indexCount:number;bounds:[number[],number[]]}
 export interface Concept {id:string;name:string;nameEn?:string;elements:string[]}
 export interface Atlas {version:string;sex?:'male';source?:string;scope?:string;parts:Part[];concepts:Concept[];chunks:{url:string;bytes:number;gzip?:string;gzipBytes?:number}[];triangles:number}
 export type View = 'three-quarter'|'front'|'back'|'side'|'right-side'|'top'|'bottom';
-export interface SceneState {section?:Section|null;inspectorOpen?:boolean;explode:number;visible:SystemId[];selected:string[];isolate:boolean;view:View;rotate:boolean;reset:number}
+export interface SceneState {sex?:Sex;section?:Section|null;inspectorOpen?:boolean;explode:number;visible:SystemId[];selected:string[];isolate:boolean;view:View;rotate:boolean;reset:number}
 export const DEFAULT_VISIBLE:SystemId[] = ['cardiac','sensory','skeletal','muscular','arterial','venous','nervous','respiratory','digestive','urinary','lymphatic','endocrine','reproductive','connective'];
 /** Short Spanish explanations of major organs, keyed by the lowercase English source name. */
 export const EXPLANATIONS:Record<string,string> = {
@@ -35,4 +37,5 @@ export const EXPLANATIONS:Record<string,string> = {
  'trachea':'Vía aérea principal que une la laringe con los bronquios. Sus anillos cartilaginosos la mantienen abierta durante la respiración.',
  'diaphragm':'Músculo ancho que separa el tórax del abdomen. Al contraerse aumenta el volumen del tórax y ayuda a que entre el aire a los pulmones.',
 };
-export function explanation(name:string,system:SystemId){return EXPLANATIONS[name.toLowerCase()] ?? SYSTEMS.find(s=>s.id===system)?.description ?? '';}
+const FEMALE_REPRODUCTIVE='Las estructuras reproductoras femeninas representadas aquí (ovarios, trompas uterinas y útero) participan en la producción de ovocitos y de hormonas sexuales, la fecundación y la gestación.';
+export function explanation(name:string,system:SystemId,sex:Sex='male'){return EXPLANATIONS[name.toLowerCase()] ?? (system==='reproductive'&&sex==='female'?FEMALE_REPRODUCTIVE:SYSTEMS.find(s=>s.id===system)?.description) ?? '';}

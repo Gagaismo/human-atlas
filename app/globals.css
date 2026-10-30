@@ -143,3 +143,7 @@ h1 .edition{font-family:inherit;font-weight:500;font-size:10px;letter-spacing:.0
 .structure-facts dt{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#7f8c98;margin-bottom:3px}
 .structure-facts dd{margin:0;font-size:13.5px;line-height:1.55;color:#33414e}
 .review-note{display:inline-block;margin-top:10px}
+.sex-switch{display:flex;gap:5px;padding-top:14px}
+.sex-switch button{flex:1;font-size:12px;padding:7px 11px;border:1px solid #18253618;border-radius:3px;color:#65717e}
+.sex-switch button[aria-pressed=true]{background:white;color:#233644;box-shadow:0 1px 3px #18253612}
+.sex-note{font-size:11.5px;line-height:1.5;color:#78838f;margin:8px 0 0}

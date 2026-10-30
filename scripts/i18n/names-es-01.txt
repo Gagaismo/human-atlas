@@ -1,0 +1,400 @@
+abdomen
+abdomen propiamente dicho
+aorta abdominal
+porción abdominal del músculo pectoral mayor
+porción abdominal del músculo pectoral mayor {1:m}
+segmento abdominal del tronco
+músculo abductor del dedo meñique del pie
+músculo abductor del dedo meñique de la mano
+músculo abductor del dedo meñique del pie {1:m}
+músculo abductor del dedo meñique de la mano {1:f}
+músculo abductor del dedo gordo
+músculo abductor corto del pulgar
+músculo abductor largo del pulgar
+vena hemiácigos accesoria
+rama subsuperior accesoria de la arteria segmentaria basal posterior
+rama subsuperior accesoria de la arteria segmentaria basal posterior {1:f}
+rama acromial de la arteria toracoacromial
+rama acromial de la arteria toracoacromial {1:f}
+porción acromial del músculo deltoides
+porción acromial del músculo deltoides {1:m}
+músculo aductor corto
+músculo aductor largo
+músculo aductor mayor
+músculo aductor mínimo
+glándula suprarrenal
+sistema digestivo
+amígdala cerebral (cuerpo amigdalino)
+porción anal del periné
+anastomosis
+entidad límite anatómica
+cavidad anatómica
+conjunto anatómico agrupado
+espacio compartimental anatómico
+espacio de conducto anatómico
+entidad anatómica
+unión anatómica
+línea anatómica
+lóbulo anatómico
+conjunto anatómico
+espacio anatómico
+estructura anatómica
+músculo ancóneo
+giro angular
+pared abdominal anterior
+arteria segmentaria basal anterior
+árbol bronquial segmentario basal anterior
+vena segmentaria basal anterior
+rama anterior de la rama interventricular anterior de la arteria coronaria {1:f}
+rama anterior de la arteria segmentaria anterior
+rama anterior de la arteria segmentaria lateral
+rama anterior de la arteria segmentaria anterior {1:f}
+rama anterior de la vena porta {1:f}
+vena cardíaca anterior
+árbol venoso cardíaco anterior
+arteria cecal anterior
+arteria cerebral anterior
+cámara anterior del globo ocular
+cámara anterior del globo ocular {1:m}
+cara anterior del tórax
+pared torácica anterior
+arteria coroidea anterior
+arteria circunfleja humeral anterior
+vena circunfleja humeral anterior
+comisura anterior
+arteria comunicante anterior
+valva anterior de la válvula aórtica
+división anterior de la arteria renal
+división anterior de la arteria renal {1:f}
+nervio etmoidal anterior
+arteria cerebelosa anteroinferior
+arteria pancreaticoduodenal inferior anterior
+rama segmentaria inferior anterior de la vena porta {1:f}
+arteria hepática segmentaria inferior anterior
+afluente segmentario inferior anterior de la vena hepática media
+afluente inferior anterior del árbol biliar hepático {1:m}
+arteria interósea anterior
+rama interventricular anterior de la arteria coronaria {1:f}
+vena interventricular anterior
+valva anterior de la válvula mitral
+valva anterior de la válvula tricúspide
+mediastino anterior
+músculo papilar anterior del ventrículo {1:m}
+arteria parietal anterior
+porción anterior de la arteria segmentaria apical
+porción anterior de la vena segmentaria apical
+porción anterior de la vena segmentaria lateral
+porción anterior del giro temporal superior
+porción anterior de la arteria segmentaria apical {1:f}
+porción anterior de la vena segmentaria apical {1:f}
+región anterior de la rodilla {1:f}
+porción anterior del giro temporal superior {1:m}
+sector anterior del hígado {1:m}
+arteria segmentaria anterior
+árbol bronquial segmentario anterior
+arteria hepática segmentaria anterior
+vena segmentaria anterior
+arteria espinal anterior
+músculo suboccipital anterior
+pared torácica anterior superficial
+arteria pancreaticoduodenal superior anterior
+rama segmentaria superior anterior de la vena porta {1:f}
+arteria hepática segmentaria superior anterior
+afluente segmentario superior anterior de la vena hepática {1:f}
+afluente superior anterior del árbol biliar hepático {1:m}
+arteria temporal anterior
+rama temporal anterior de la arteria occipital lateral
+rama temporal anterior de la arteria occipital lateral {1:f}
+pared torácica anterior
+arteria tibial anterior
+arteria recurrente tibial anterior
+vena tibial anterior
+afluente anterior del árbol biliar hepático {1:m}
+arteria recurrente cubital anterior
+rama ventricular anterior de la arteria coronaria {1:f}
+pared anterior del ventrículo {1:m}
+arteria segmentaria basal anteromedial
+rama central anterolateral de la arteria cerebral media
+rama central anterolateral de la arteria cerebral media {1:f}
+cabeza anterolateral del músculo papilar lateral del ventrículo {1:m}
+aorta
+válvula aórtica
+porción apical de la arteria segmentaria apical
+porción apical de la vena segmentaria apical
+porción apical de la arteria segmentaria posterior
+porción apical de la arteria segmentaria apical {1:f}
+porción apical de la vena segmentaria apical {1:f}
+porción apical de la arteria segmentaria posterior {1:f}
+arteria segmentaria apical
+árbol bronquial segmentario apical
+vena segmentaria apical
+segmento broncopulmonar apicoposterior
+división apicoposterior de la arteria lobular superior {1:f}
+vena segmentaria apicoposterior
+arteria apendicular
+apéndice vermiforme
+arco de la aorta
+arteria arqueada
+arteria principal del pulgar
+arteria radial del índice
+anastomosis arterial
+tronco arterial
+arteria
+arteria del surco central
+arteria del surco poscentral
+arteria del surco precentral
+arteria del surco poscentral {1:m}
+arteria del surco precentral {1:m}
+disco articular de la sínfisis
+músculo ariepiglótico
+cartílago aritenoides
+aorta ascendente
+rama ascendente de la rama inferior de la arteria ileocólica
+rama ascendente de la arteria cólica {1:f}
+colon ascendente
+vena lumbar ascendente
+porción ascendente del músculo trapecio
+porción ascendente del músculo trapecio {1:m}
+atlas
+costilla atípica
+ganglio autónomo
+sistema esquelético axial
+esqueleto axial
+arteria axilar
+vena axilar
+axis
+vena ácigos
+región posterior del abdomen
+región posterior del cuello (nuca)
+región posterior del tórax
+rama basal de la arteria segmentaria basal anterior
+rama basal de la arteria segmentaria basal anterior {1:f}
+ganglio basal del telencéfalo
+árbol bronquial segmentario basal
+porción basicraneal de la cabeza propiamente dicha
+base del cráneo
+arteria basilar
+vena basílica
+conducto colédoco
+árbol biliar
+contenido de cavidad corporal
+compartimento corporal
+cuerpo del órgano
+cuerpo del esternón
+cuerpo propiamente dicho
+pared corporal
+hueso (órgano)
+porción ósea del tabique nasal
+pelvis ósea
+arteria braquial (humeral)
+vena braquial (humeral)
+músculo braquial
+tronco braquiocefálico
+vena braquiocefálica
+músculo braquiorradial (supinador largo)
+brazo del colículo inferior
+brazo del neuroeje
+brazo del colículo superior
+brazo del colículo inferior {1:m}
+brazo del colículo superior {1:m}
+encéfalo
+tronco del encéfalo
+rama de la arteria cerebral anterior
+rama de la arteria coroidea anterior
+rama de la arteria coroidea anterior al brazo posterior de la cápsula interna
+rama de la rama interventricular anterior de la arteria coronaria {1:f}
+rama de anastomosis arterial
+rama de la arteria basilar
+rama de la arteria braquial
+rama de la arteria callosomarginal
+rama del círculo arterial cerebral
+rama del ganglio ciliar
+rama de la arteria interósea común
+rama de nervio craneal
+rama de la arteria braquial profunda
+rama del arco palmar profundo
+rama de la primera arteria digital palmar común
+rama del nervio frontal
+rama de la arteria ileocólica
+rama de la rama inferior de la arteria ileocólica
+rama de la arteria circunfleja femoral lateral
+rama de la arteria occipital lateral
+rama de la arteria plantar lateral
+rama de la rama medial de la arteria cerebelosa superior
+rama de la arteria occipital medial
+rama de la arteria plantar medial
+rama de la arteria cerebral media
+rama de la arteria cerebral media al giro angular
+rama del nervio nasociliar
+rama del nervio oculomotor
+rama del nervio oftálmico
+rama de la arteria pericallosa
+rama de arteria pontina
+rama de la porción poscomunicante de la arteria cerebral anterior
+rama de la arteria cerebral posterior
+rama de la arteria coroidea posterior
+rama de la arteria comunicante posterior
+rama de la arteria tibial posterior
+rama de la arteria radial
+rama de la segunda arteria digital palmar común
+rama de la porción esfenoidal de la arteria cerebral media
+rama del arco palmar superficial
+rama de la arteria cerebelosa superior
+rama de la tercera arteria digital palmar común
+rama del nervio trigémino
+rama de la arteria cubital
+rama de la arteria vertebral
+rama de la arteria coroidea anterior {1:f} al brazo posterior de la cápsula interna {2:f}
+rama de la arteria coronaria {1:f}
+rama de la arteria cerebral media {1:f} al giro angular {2:m}
+arteria bronquial
+rama bronquial del arco de la aorta
+bronquio
+tendón calcáneo (de Aquiles)
+calcáneo
+arteria callosomarginal
+diente canino
+hueso grande (capitado)
+cápsula del hemisferio cerebral
+vena cardíaca
+parte cardinal de órgano
+segmento cardinal del encéfalo
+parte cardinal de tejido
+sistema cardiovascular
+hueso del carpo
+cartílago (órgano)
+componente de cartílago
+porción cartilaginosa del tabique nasal
+esqueleto cartilaginoso de la nariz externa
+esqueleto cartilaginoso de la nariz
+arteria pancreática caudal
+rama del lóbulo caudado de la arteria hepática {1:f}
+rama del lóbulo caudado de la vena porta {1:f}
+lóbulo caudado del hígado
+afluente del lóbulo caudado del árbol biliar hepático {1:m}
+núcleo caudado
+órgano cavernoso
+órgano cavitado
+cavidad del atrio
+cavidad de cámara cardíaca
+cavidad del neuroeje
+cavidad de parte de órgano
+cavidad del ventrículo
+cavidad del atrio {1:m}
+cavidad del ventrículo {1:m}
+ciego
+arteria celíaca
+tronco celíaco
+conjunto de partes celulares
+conjunto de partes celulares del neuroeje
+conducto central de la médula espinal
+vena cefálica
+cerebelo
+acueducto del mesencéfalo
+círculo arterial cerebral (polígono de Willis)
+sustancia blanca cerebral
+músculo rotador cervical
+vértebra cervical
+columna vertebral cervical
+cámara del globo ocular
+ligamento de contención del músculo recto lateral
+ligamento de contención del músculo recto medial
+ligamento de contención del músculo recto lateral {1:m}
+ligamento de contención del músculo recto medial {1:m}
+pared torácica
+coroides
+plexo coroideo del hemisferio cerebral
+ganglio ciliar
+giro del cíngulo
+rama circunfleja de la arteria coronaria {1:f}
+arteria circunfleja de la escápula
+vena circunfleja de la escápula
+órgano circunventricular del neuroeje
+clavícula
+porción clavicular del músculo deltoides
+porción clavicular del músculo pectoral mayor
+porción clavicular del músculo deltoides {1:m}
+porción clavicular del músculo pectoral mayor {1:m}
+músculo coccígeo
+comisura del diencéfalo
+comisura del fórnix
+comisura del neuroeje
+arteria carótida común
+arteria hepática común
+conducto hepático común
+arteria ilíaca común
+vena ilíaca común
+arteria interósea común
+vena digital palmar común
+anillo tendinoso común
+rama comunicante del nervio nasociliar con el ganglio ciliar
+rama comunicante del nervio nasociliar {1:m} con el ganglio ciliar {2:m}
+compartimento del abdomen
+compartimento del tórax
+músculo constrictor de la faringe
+contenido del abdomen
+contenido del mediastino anterior
+contenido del mediastino inferior
+contenido del mediastino
+contenido del mediastino medio
+contenido del mediastino posterior
+contenido del mediastino superior
+contenido del tórax
+rama del cono de la rama interventricular anterior de la arteria coronaria {1:f}
+cono elástico
+músculo coracobraquial
+córnea
+cartílago corniculado
+corona ciliar
+arteria coronaria
+seno coronario
+árbol del seno coronario
+cuerpo calloso
+cuerpo cavernoso del pene
+cuerpo esponjoso del pene
+corteza del hemisferio cerebral {1:m}
+corteza del lóbulo frontal {1:m}
+órgano corticomedular
+cartílago costal
+tronco costocervical
+nervio craneal
+ganglio parasimpático craneal
+cartílago cricoides
+ligamento cricotiroideo
+hueso cuboides
+hueso cuneiforme
+cartílago cuneiforme
+valva de la válvula aórtica
+valva de válvula cardíaca
+valva de la válvula pulmonar
+conducto cístico
+decusación
+arteria braquial profunda
+arteria cervical profunda
+vena dorsal profunda del pene
+músculo extrínseco profundo del hombro
+sistema fascial profundo
+vena femoral profunda
+músculo profundo del compartimento anterior del antebrazo
+músculo profundo del compartimento posterior del antebrazo
+músculo profundo del compartimento posterior de la pierna
+arco palmar profundo
+arco venoso palmar profundo
+arteria plantar profunda
+músculo posvertebral profundo
+conducto deferente
+rama deltoidea de la arteria toracoacromial
+rama deltoidea de la arteria toracoacromial {1:f}
+aorta descendente
+rama descendente de la arteria circunfleja femoral lateral
+rama descendente de la arteria cólica {1:f}
+rama descendente de la arteria circunfleja femoral lateral {1:f}
+colon descendente
+arteria descendente de la rodilla
+porción descendente del músculo trapecio
+porción descendente del músculo trapecio {1:m}
+aorta torácica descendente
+rama diagonal de la rama descendente anterior de la arteria coronaria {1:f}
+diafragma
+diencéfalo
+músculo digástrico

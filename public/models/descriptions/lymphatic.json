@@ -1,0 +1,1778 @@
+{
+ "system": "lymphatic",
+ "entries": {
+  "anterior axillary nodes": {
+   "resumen": "Grupo pectoral de los ganglios axilares, a lo largo del borde inferior del pectoral menor.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Pared anterior de la axila, detrás del pectoral mayor, junto a los vasos torácicos laterales."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "La mayor parte de la mama y la pared anterolateral del tórax y del abdomen por encima del ombligo."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios axilares centrales y apicales, y de allí al tronco subclavio."
+    }
+   ]
+  },
+  "posterior axillary nodes": {
+   "resumen": "Grupo subescapular de los ganglios axilares, en la pared posterior de la axila.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Pared posterior de la axila, a lo largo de los vasos subescapulares y delante del músculo subescapular."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "La región posterior del tronco hasta el nivel del ombligo, la región escapular y la nuca baja."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios axilares centrales y apicales, y de allí al tronco subclavio."
+    }
+   ]
+  },
+  "lateral axillary nodes": {
+   "resumen": "Grupo lateral (humeral) de los ganglios axilares, junto a la vena axilar.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Pared lateral de la axila, a lo largo de la vena axilar y medial al húmero."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Casi todo el miembro superior, salvo el territorio que acompaña a la vena cefálica."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios axilares centrales y apicales."
+    }
+   ]
+  },
+  "central axillary nodes": {
+   "resumen": "Ganglios del centro de la axila, donde confluye la linfa de los demás grupos axilares.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Tejido graso del centro de la axila, por debajo del pectoral menor."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Los ganglios axilares anteriores, posteriores y laterales."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios axilares apicales."
+    }
+   ]
+  },
+  "apical axillary nodes": {
+   "resumen": "Grupo apical de los ganglios axilares, en el vértice de la axila.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Vértice de la axila, por encima del borde superior del pectoral menor, junto a la porción final de la vena axilar."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Los demás grupos axilares y los ganglios infraclaviculares; también parte de la porción superior de la mama."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Tronco subclavio, que desemboca a la derecha en el conducto linfático derecho o en el ángulo venoso y a la izquierda en el conducto torácico o en el ángulo venoso."
+    }
+   ]
+  },
+  "interpectoral nodes": {
+   "resumen": "Pequeños ganglios situados entre los músculos pectorales, también llamados de Rotter.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Entre los músculos pectoral mayor y pectoral menor."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Parte profunda de la mama y estructuras vecinas de la pared torácica anterior."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios axilares apicales."
+    }
+   ]
+  },
+  "infraclavicular nodes": {
+   "resumen": "Ganglios del trígono clavipectoral, ubicados debajo de la clavícula.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Debajo de la clavícula, a lo largo de la vena cefálica en el surco deltopectoral."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "El territorio superficial de la cara lateral del miembro superior que acompaña a la vena cefálica."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios axilares apicales o directamente el tronco subclavio."
+    }
+   ]
+  },
+  "brachial nodes": {
+   "resumen": "Ganglios del brazo, a lo largo de los vasos braquiales.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Cara medial del brazo, junto a la arteria y las venas braquiales."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Los vasos linfáticos profundos del antebrazo y de la mano."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios axilares laterales."
+    }
+   ]
+  },
+  "cubital nodes": {
+   "resumen": "Ganglios del codo, también llamados epitrocleares.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Cara medial del codo, por encima del epicóndilo medial del húmero, junto a la vena basílica."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Dedos anular y meñique, borde medial de la mano y cara medial del antebrazo."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios axilares laterales."
+    }
+   ]
+  },
+  "supratrochlear nodes": {
+   "resumen": "Ganglios del codo, situados por encima de la tróclea del húmero.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Cara medial del brazo, encima del epicóndilo medial."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Borde cubital de la mano y del antebrazo."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios braquiales y axilares laterales."
+    }
+   ]
+  },
+  "supraclavicular nodes": {
+   "resumen": "Ganglios de la fosa supraclavicular, en la base del cuello.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Fosa supraclavicular, sobre la vena subclavia, en el trígono cervical posterior."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "La parte inferior del cuello y la región pectoral superior; recibe además la linfa de los grupos cervicales profundos."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Tronco yugular y tronco subclavio, que desembocan en el ángulo venoso (el izquierdo, a menudo a través del conducto torácico)."
+    }
+   ]
+  },
+  "superficial anterior cervical nodes": {
+   "resumen": "Ganglios superficiales de la región anterior del cuello.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Sobre la vena yugular anterior, bajo el platisma."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "La piel y los tejidos superficiales de la región anterior del cuello."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios cervicales laterales profundos inferiores."
+    }
+   ]
+  },
+  "superficial lateral cervical nodes": {
+   "resumen": "Ganglios superficiales de la región lateral del cuello.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "A lo largo de la vena yugular externa, sobre el esternocleidomastoideo."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Piel del cuello lateral, parte del pabellón auricular y la región parotídea."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios cervicales laterales profundos."
+    }
+   ]
+  },
+  "inferior deep lateral cervical nodes": {
+   "resumen": "Parte inferior de la cadena yugular interna.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "A lo largo de la porción inferior de la vena yugular interna y del plexo braquial, en el trígono supraclavicular."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Los ganglios cervicales profundos superiores y los ganglios supraclaviculares; el tiroides, la tráquea y el esófago cervical."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Tronco yugular, que desemboca en el ángulo venoso o en el conducto torácico."
+    }
+   ]
+  },
+  "anterior inferior jugular nodes": {
+   "resumen": "Ganglios de la cadena yugular interna en su porción inferior y anterior.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Cuello inferior, delante y junto a la vena yugular interna, cerca del ángulo venoso."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Estructuras profundas de la región anterior del cuello, como la laringe inferior, la tráquea y el tiroides."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Tronco yugular."
+    }
+   ]
+  },
+  "lateral superior jugular node": {
+   "resumen": "Ganglio de la cadena yugular interna, en su porción superior.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Porción superior de la vena yugular interna, bajo el ángulo de la mandíbula."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Lengua, amígdala palatina y faringe, a través de los ganglios submandibulares y submentonianos."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios cervicales laterales profundos inferiores."
+    }
+   ]
+  },
+  "jugulodigastric node": {
+   "resumen": "Ganglio de la cadena yugular, ubicado donde el vientre posterior del digástrico cruza la vena yugular interna.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Debajo del ángulo de la mandíbula, entre la vena yugular interna y el vientre posterior del digástrico."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Amígdala palatina, el dorso de la lengua y la faringe."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios yugulares inferiores y de allí el tronco yugular."
+    }
+   ]
+  },
+  "submandibular nodes": {
+   "resumen": "Ganglios situados junto a la glándula submandibular.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Debajo de la mandíbula, en el trígono submandibular, junto a la glándula submandibular y la arteria facial."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Cara, lengua, labios, encías y parte de la cavidad nasal."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios cervicales laterales profundos."
+    }
+   ]
+  },
+  "submental nodes": {
+   "resumen": "Ganglios del trígono submentoniano, bajo el mentón.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Debajo del mentón, sobre el músculo milohioideo y entre los vientres anteriores de los digástricos."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Punta de la lengua, suelo de la boca, labio inferior y mentón."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios submandibulares y cervicales laterales profundos."
+    }
+   ]
+  },
+  "mandibular node": {
+   "resumen": "Pequeño ganglio de la cara, cercano a la mandíbula.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Borde inferior de la mandíbula, junto a los vasos faciales."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "La piel y las mucosas de la porción inferior de la cara."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios submandibulares."
+    }
+   ]
+  },
+  "bucinator node": {
+   "resumen": "Pequeño ganglio facial, junto al músculo buccinador.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Mejilla, sobre el músculo buccinador, cerca de la vena facial."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Piel y mucosa de la mejilla y de la comisura de la boca."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios submandibulares."
+    }
+   ]
+  },
+  "nasolabial node": {
+   "resumen": "Pequeño ganglio facial del surco nasolabial.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Surco nasolabial, junto a la vena facial."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Piel de la nariz, del labio superior y de la parte medial de la mejilla."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios submandibulares."
+    }
+   ]
+  },
+  "pre-auricular nodes": {
+   "resumen": "Ganglios delante del pabellón auricular.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Delante del trago, sobre la fascia parotídea."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Región frontal y temporal, párpados, parte lateral de la nariz y conducto auditivo externo."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios cervicales laterales profundos."
+    }
+   ]
+  },
+  "infra-auricular nodes": {
+   "resumen": "Ganglios situados debajo de la oreja, en relación con la glándula parótida.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Debajo del lóbulo de la oreja, en el límite inferior de la glándula parótida."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Región temporal baja, parte del pabellón auricular y la región parotídea."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios cervicales laterales profundos."
+    }
+   ]
+  },
+  "superficial parotid nodes": {
+   "resumen": "Ganglios que se encuentran sobre la glándula parótida.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Sobre la fascia de la glándula parótida."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Piel de la sien, la frente y los párpados, y parte del pabellón auricular."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios cervicales laterales superficiales y profundos."
+    }
+   ]
+  },
+  "intraglandular parotid nodes": {
+   "resumen": "Ganglios situados dentro de la glándula parótida.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En el espesor de la glándula parótida."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "La glándula parótida, el conducto auditivo externo, el oído medio y la trompa auditiva."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios cervicales laterales profundos."
+    }
+   ]
+  },
+  "mastoid nodes": {
+   "resumen": "Ganglios retroauriculares, detrás de la oreja.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Sobre la apófisis mastoides, detrás del pabellón auricular."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Piel de la región temporal y parietal posterior y cara posterior del pabellón auricular."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios cervicales laterales superficiales y profundos."
+    }
+   ]
+  },
+  "occipital nodes": {
+   "resumen": "Ganglios de la región posterior de la cabeza.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Cerca de la inserción del trapecio, en la región occipital."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Piel de la región occipital y de la nuca superior."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios cervicales laterales superficiales y profundos."
+    }
+   ]
+  },
+  "retropharyngeal nodes": {
+   "resumen": "Ganglios situados detrás de la faringe.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En el espacio retrofaríngeo, entre la faringe y la fascia prevertebral."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Nasofaringe, cavidad nasal posterior, trompa auditiva y oído medio."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios cervicales laterales profundos."
+    }
+   ]
+  },
+  "prevertebral nodes": {
+   "resumen": "Ganglios delante de la columna cervical.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Delante de las vértebras cervicales, bajo la fascia prevertebral."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Parte posterior de la faringe y estructuras prevertebrales del cuello."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios cervicales laterales profundos."
+    }
+   ]
+  },
+  "paratracheal cervical nodes": {
+   "resumen": "Ganglios que acompañan a la tráquea en el cuello.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "A los lados de la tráquea cervical, junto a los nervios laríngeos recurrentes."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Tiroides, laringe inferior, tráquea cervical y esófago cervical."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios cervicales laterales profundos inferiores y ganglios paratraqueales torácicos."
+    }
+   ]
+  },
+  "pretracheal nodes": {
+   "resumen": "Ganglios situados por delante de la tráquea.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Delante de la tráquea, bajo el istmo del tiroides."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Tiroides, laringe inferior y tráquea cervical."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios paratraqueales y cervicales laterales profundos inferiores."
+    }
+   ]
+  },
+  "thyroid nodes": {
+   "resumen": "Ganglios próximos a la glándula tiroides.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Sobre la superficie de la glándula tiroides y alrededor de ella."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "La glándula tiroides."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios pretraqueales y paratraqueales."
+    }
+   ]
+  },
+  "parasternal nodes": {
+   "resumen": "Ganglios paraesternales, junto a los vasos torácicos internos.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Detrás de los cartílagos costales, a los lados del esternón, junto a los vasos torácicos internos."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Parte medial de la mama, la pared anterior del tórax, la cara superior del hígado y el diafragma anterior."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Tronco broncomediastínico, o directamente el conducto torácico o el conducto linfático derecho."
+    }
+   ]
+  },
+  "intercostal nodes": {
+   "resumen": "Ganglios de los espacios intercostales posteriores.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Parte posterior de los espacios intercostales, junto a las cabezas de las costillas."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "La pared torácica posterior y la pleura parietal."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Conducto torácico, o ganglios mediastínicos."
+    }
+   ]
+  },
+  "superior diaphragmatic nodes": {
+   "resumen": "Ganglios de la cara torácica del diafragma.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Sobre la cara superior del diafragma, delante, a los lados y detrás."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "El diafragma, la pleura diafragmática y la cara superior del hígado."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios paraesternales y mediastínicos posteriores, y de allí el tronco broncomediastínico."
+    }
+   ]
+  },
+  "prepericardial nodes": {
+   "resumen": "Ganglios por delante del pericardio.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Delante del pericardio, detrás del esternón y de los cartílagos costales inferiores."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "La cara anterior del pericardio y del diafragma."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios paraesternales."
+    }
+   ]
+  },
+  "lateral pericardial nodes": {
+   "resumen": "Ganglios a los lados del pericardio.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "A ambos lados del pericardio, junto a los nervios frénicos."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "El pericardio y la pleura mediastínica."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios traqueobronquiales y mediastínicos anteriores."
+    }
+   ]
+  },
+  "brachiocephalic nodes": {
+   "resumen": "Ganglios del mediastino anterior, delante de los grandes vasos.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Mediastino anterosuperior, delante de las venas braquiocefálicas y del arco aórtico."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Timo, pericardio, tiroides y parte del corazón."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Tronco broncomediastínico."
+    }
+   ]
+  },
+  "node of arch of azygos vein": {
+   "resumen": "Ganglio situado junto al arco de la vena ácigos.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En el mediastino medio, junto al arco de la vena ácigos, a la derecha de la tráquea."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Esófago, pleura y bronquio derecho."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios traqueobronquiales superiores derechos y paratraqueales."
+    }
+   ]
+  },
+  "node of ligamentum arteriosum": {
+   "resumen": "Ganglio situado junto al ligamento arterioso.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Bajo el arco aórtico, junto al ligamento arterioso."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "El lóbulo superior del pulmón izquierdo y el pericardio."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios paratraqueales izquierdos y tronco broncomediastínico."
+    }
+   ]
+  },
+  "paratracheal thoracic nodes": {
+   "resumen": "Ganglios laterales a la tráquea dentro del tórax.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "A los lados de la tráquea, en el mediastino superior."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Tráquea, bronquios, pulmones y los ganglios traqueobronquiales."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Tronco broncomediastínico."
+    }
+   ]
+  },
+  "superior tracheobronchial nodes": {
+   "resumen": "Ganglios del ángulo entre la tráquea y los bronquios principales.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En el ángulo formado por la tráquea y cada bronquio principal."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Los pulmones, los bronquios y la pleura, y los ganglios traqueobronquiales inferiores."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios paratraqueales y tronco broncomediastínico."
+    }
+   ]
+  },
+  "inferior tracheobronchial nodes": {
+   "resumen": "Ganglios subcarinales, debajo de la bifurcación traqueal.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Debajo de la carina, entre los dos bronquios principales."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Los pulmones, los bronquios y el esófago."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios traqueobronquiales superiores y de allí el tronco broncomediastínico."
+    }
+   ]
+  },
+  "intrapulmonary nodes": {
+   "resumen": "Ganglios situados dentro del pulmón.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En el interior del pulmón, en las bifurcaciones de los bronquios."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Los bronquios y el tejido pulmonar vecino."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios broncopulmonares del hilio y luego traqueobronquiales."
+    }
+   ]
+  },
+  "juxta-oesophageal nodes": {
+   "resumen": "Ganglios junto al esófago, en el mediastino posterior.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En contacto con el esófago torácico."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Esófago, parte posterior del pericardio y diafragma."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios traqueobronquiales y paratraqueales, o directamente el conducto torácico."
+    }
+   ]
+  },
+  "lobe of thymus": {
+   "resumen": "Cada uno de los dos lóbulos del timo, órgano linfoide del mediastino anterior.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Mediastino anterior, detrás del manubrio del esternón y delante del pericardio y de los grandes vasos."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Es el sitio donde maduran los linfocitos T. Es más grande en la infancia y con los años se atrofia, sustituido por tejido adiposo."
+    }
+   ]
+  },
+  "palatine tonsil": {
+   "resumen": "Acumulación de tejido linfoide en la pared lateral de la orofaringe.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Fosa amigdalina, entre los arcos palatogloso y palatofaríngeo."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Participa en la defensa inmunitaria de la entrada del tubo digestivo y respiratorio, al reconocer los agentes que llegan con el aire y los alimentos."
+    }
+   ]
+  },
+  "spleen": {
+   "resumen": "Órgano linfoide de la parte superior izquierda del abdomen.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Hipocondrio izquierdo, contra el diafragma y a la altura de las costillas 9 a 11."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Filtra la sangre, retira los eritrocitos envejecidos y participa en la respuesta inmunitaria. Su linfa sale por vasos del hilio."
+    }
+   ]
+  },
+  "splenic nodes": {
+   "resumen": "Ganglios del hilio del bazo.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Hilio del bazo, en el ligamento esplenorrenal, junto a los vasos esplénicos."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "El bazo, la parte izquierda del estómago y el páncreas."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios pancreáticos superiores y celíacos."
+    }
+   ]
+  },
+  "gastric nodes": {
+   "resumen": "Ganglios del estómago, junto a la curvatura menor.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "A lo largo de la curvatura menor del estómago, con los vasos gástricos izquierdo y derecho."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "La parte superior y medial del estómago."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios celíacos."
+    }
+   ]
+  },
+  "gastro-omental nodes": {
+   "resumen": "Ganglios de la curvatura mayor del estómago.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En el epiplón mayor, a lo largo de los vasos gastroepiploicos."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "La curvatura mayor del estómago."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios subpilóricos y ganglios celíacos."
+    }
+   ]
+  },
+  "suprapyloric node": {
+   "resumen": "Ganglio por encima del píloro.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Sobre el píloro, junto a la arteria gástrica derecha."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "El píloro y la parte distal de la curvatura menor."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios celíacos."
+    }
+   ]
+  },
+  "subpyloric nodes": {
+   "resumen": "Ganglios por debajo del píloro.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Debajo del píloro, junto a la arteria gastroepiploica derecha."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "El píloro y la curvatura mayor del estómago."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios celíacos."
+    }
+   ]
+  },
+  "retropyloric nodes": {
+   "resumen": "Ganglios detrás del píloro.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Detrás del píloro y de la primera porción del duodeno."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "El píloro, el duodeno y la cabeza del páncreas."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios celíacos."
+    }
+   ]
+  },
+  "cystic node": {
+   "resumen": "Ganglio del cuello de la vesícula biliar.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Cuello de la vesícula biliar, en el comienzo del conducto cístico."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "La vesícula biliar."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios hepáticos y de allí los ganglios celíacos."
+    }
+   ]
+  },
+  "superior pancreatic nodes": {
+   "resumen": "Ganglios del borde superior del páncreas.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Borde superior del páncreas, junto a la arteria esplénica."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "La parte superior del páncreas."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios celíacos."
+    }
+   ]
+  },
+  "inferior pancreatic nodes": {
+   "resumen": "Ganglios del borde inferior del páncreas.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Borde inferior del páncreas, junto a la arteria pancreática inferior."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "La parte inferior del páncreas."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios mesentéricos superiores."
+    }
+   ]
+  },
+  "superior pancreaticoduodenal nodes": {
+   "resumen": "Ganglios entre la cabeza del páncreas y el duodeno.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Entre el duodeno y la cabeza del páncreas, junto a las arcadas pancreaticoduodenales."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "El duodeno y la cabeza del páncreas."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios hepáticos y celíacos."
+    }
+   ]
+  },
+  "coeliac nodes": {
+   "resumen": "Ganglios del tronco celíaco.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Alrededor del origen del tronco celíaco, delante de la aorta abdominal."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Los ganglios gástricos, hepáticos, esplénicos y pancreáticos, y con ello el esófago abdominal, el estómago, el duodeno, el hígado, la vesícula biliar, el páncreas y el bazo."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Tronco intestinal, que desemboca en la cisterna del quilo."
+    }
+   ]
+  },
+  "central superior mesenteric nodes": {
+   "resumen": "Ganglios centrales de la raíz del mesenterio.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Raíz del mesenterio, alrededor del origen de la arteria mesentérica superior."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Los demás ganglios mesentéricos superiores, con el yeyuno, el íleon y la mitad derecha del colon."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios preaórticos y tronco intestinal."
+    }
+   ]
+  },
+  "juxta-intestinal mesenteric nodes": {
+   "resumen": "Ganglios mesentéricos junto a la pared del intestino delgado.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En el mesenterio, junto al borde mesentérico del yeyuno y del íleon."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Yeyuno e íleon."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios mesentéricos superiores centrales."
+    }
+   ]
+  },
+  "ileocolic nodes": {
+   "resumen": "Ganglios del ángulo ileocólico.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Región ileocecal, a lo largo de la arteria ileocólica."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Íleon terminal, ciego, apéndice y comienzo del colon ascendente."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios mesentéricos superiores."
+    }
+   ]
+  },
+  "precaecal nodes": {
+   "resumen": "Ganglios por delante del ciego.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Delante del ciego."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "El ciego."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios ileocólicos."
+    }
+   ]
+  },
+  "retrocaecal nodes": {
+   "resumen": "Ganglios por detrás del ciego.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Detrás del ciego."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "El ciego y la base del apéndice."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios ileocólicos."
+    }
+   ]
+  },
+  "appendicular nodes": {
+   "resumen": "Ganglios del mesenterio del apéndice vermiforme.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Mesoapéndice, junto a la arteria apendicular."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "El apéndice vermiforme."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios ileocólicos."
+    }
+   ]
+  },
+  "colic nodes": {
+   "resumen": "Ganglios de los vasos cólicos.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Mesocolon, junto a las arterias cólicas."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "El colon, según el segmento."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios mesentéricos superiores o inferiores."
+    }
+   ]
+  },
+  "paracolic superior mesenteric nodes": {
+   "resumen": "Ganglios situados junto al colon.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Junto al borde mesocólico del colon ascendente y transverso."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "El colon ascendente y transverso."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios cólicos y mesentéricos superiores."
+    }
+   ]
+  },
+  "middle colic nodes": {
+   "resumen": "Ganglios de la arteria cólica media.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Mesocolon transverso, junto a la arteria cólica media."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "El colon transverso."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios mesentéricos superiores."
+    }
+   ]
+  },
+  "sigmoid nodes": {
+   "resumen": "Ganglios del mesocolon sigmoide.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Mesocolon sigmoide, junto a las arterias sigmoideas."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "El colon sigmoide."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios mesentéricos inferiores y de allí los preaórticos."
+    }
+   ]
+  },
+  "pararectal nodes": {
+   "resumen": "Ganglios que rodean el recto.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Mesorrecto, cerca de los vasos rectales superiores."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "El recto."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios mesentéricos inferiores y sacros."
+    }
+   ]
+  },
+  "pre-aortic nodes": {
+   "resumen": "Ganglios por delante de la aorta abdominal.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Delante de la aorta abdominal, junto al origen de las arterias celíaca y mesentéricas."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Las vísceras del tubo digestivo abdominal, el hígado, el páncreas y el bazo."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Tronco intestinal y cisterna del quilo."
+    }
+   ]
+  },
+  "retro-aortic nodes": {
+   "resumen": "Ganglios detrás de la aorta.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Detrás de la aorta abdominal."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Estructuras posteriores del retroperitoneo."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Troncos lumbares y cisterna del quilo."
+    }
+   ]
+  },
+  "lateral aortic nodes": {
+   "resumen": "Ganglios lumbares, a los lados de la aorta abdominal.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "A los lados de la aorta abdominal, sobre el psoas."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Riñones, suprarrenales, testículos u ovarios y los ganglios ilíacos comunes."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Troncos lumbares, que desembocan en la cisterna del quilo."
+    }
+   ]
+  },
+  "lateral caval nodes": {
+   "resumen": "Ganglios laterales a la vena cava inferior.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "A la derecha de la vena cava inferior, sobre el psoas."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Riñón derecho, suprarrenal derecha, ovario o testículo derecho y ganglios ilíacos comunes derechos."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Troncos lumbares."
+    }
+   ]
+  },
+  "precaval nodes": {
+   "resumen": "Ganglios delante de la vena cava inferior.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Delante de la vena cava inferior."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Estructuras abdominales cercanas y ganglios ilíacos comunes."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Troncos lumbares."
+    }
+   ]
+  },
+  "retrocaval nodes": {
+   "resumen": "Ganglios detrás de la vena cava inferior.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Detrás de la vena cava inferior."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Estructuras posteriores del retroperitoneo."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Troncos lumbares."
+    }
+   ]
+  },
+  "intermediate lumbar nodes": {
+   "resumen": "Ganglios lumbares entre la aorta y la vena cava inferior.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Entre la aorta abdominal y la vena cava inferior."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Riñones, suprarrenales y gónadas."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Troncos lumbares y cisterna del quilo."
+    }
+   ]
+  },
+  "inferior diaphragmatic nodes": {
+   "resumen": "Ganglios de la cara inferior del diafragma.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Cara abdominal del diafragma, junto a los vasos frénicos inferiores."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "La cara inferior del diafragma y parte de la cara posterior del hígado."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios lumbares y celíacos."
+    }
+   ]
+  },
+  "inferior epigastric nodes": {
+   "resumen": "Ganglios de la pared anterior del abdomen.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Cara posterior del músculo recto del abdomen, junto a los vasos epigástricos inferiores."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "La pared anterior del abdomen por debajo del ombligo."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios ilíacos externos."
+    }
+   ]
+  },
+  "lateral common iliac nodes": {
+   "resumen": "Grupo lateral de los ganglios ilíacos comunes.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Lateral a la arteria ilíaca común, sobre el psoas."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Los ganglios ilíacos externos e internos."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios aórticos laterales."
+    }
+   ]
+  },
+  "intermediate common iliac nodes": {
+   "resumen": "Grupo intermedio de los ganglios ilíacos comunes.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Entre la arteria y la vena ilíacas comunes."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Los ganglios ilíacos externos e internos."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios aórticos laterales."
+    }
+   ]
+  },
+  "medial common iliac nodes": {
+   "resumen": "Grupo medial de los ganglios ilíacos comunes.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Medial a la arteria ilíaca común."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Los ganglios ilíacos externos e internos."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios aórticos laterales."
+    }
+   ]
+  },
+  "intermediate external iliac nodes": {
+   "resumen": "Grupo intermedio de los ganglios ilíacos externos.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Entre la arteria y la vena ilíacas externas."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Los ganglios inguinales, la vejiga, la parte profunda de la pared abdominal inferior y los genitales."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios ilíacos comunes."
+    }
+   ]
+  },
+  "medial external iliac nodes": {
+   "resumen": "Grupo medial de los ganglios ilíacos externos.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Medial a la vena ilíaca externa."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Los ganglios inguinales y los genitales externos."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios ilíacos comunes."
+    }
+   ]
+  },
+  "obturator nodes": {
+   "resumen": "Ganglios junto al conducto obturador.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Alrededor de los vasos y del nervio obturadores, en la pared lateral de la pelvis."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Vísceras pelvianas y parte medial del muslo."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios ilíacos externos o internos."
+    }
+   ]
+  },
+  "superior gluteal nodes": {
+   "resumen": "Ganglios de los vasos glúteos superiores.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Junto a los vasos glúteos superiores, sobre el piriforme."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "La región glútea profunda."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios ilíacos internos."
+    }
+   ]
+  },
+  "inferior gluteal nodes": {
+   "resumen": "Ganglios de los vasos glúteos inferiores.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Junto a los vasos glúteos inferiores, por debajo del piriforme."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "La región glútea profunda y la cara posterior del muslo."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios ilíacos internos."
+    }
+   ]
+  },
+  "lateral sacral nodes": {
+   "resumen": "Ganglios a los lados del sacro.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Junto a los vasos sacros laterales."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "El recto, la próstata o el cuello del útero y la pelvis posterior."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios ilíacos internos y comunes."
+    }
+   ]
+  },
+  "median sacral nodes": {
+   "resumen": "Ganglios de la línea media del sacro.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Delante del sacro, junto a la arteria sacra media."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "El recto y la cara posterior de la pelvis."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios ilíacos comunes."
+    }
+   ]
+  },
+  "subaortic nodes": {
+   "resumen": "Ganglios del promontorio, bajo la bifurcación aórtica.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Debajo de la bifurcación de la aorta, delante del promontorio."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Parte de las vísceras pelvianas."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios ilíacos comunes y aórticos laterales."
+    }
+   ]
+  },
+  "lateral vesical nodes": {
+   "resumen": "Ganglios a los lados de la vejiga.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "A cada lado de la vejiga urinaria."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "La vejiga urinaria."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios ilíacos externos e internos."
+    }
+   ]
+  },
+  "prevesical nodes": {
+   "resumen": "Ganglios por delante de la vejiga.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En el espacio retropúbico, delante de la vejiga."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "La parte anterior de la vejiga y la uretra."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios ilíacos externos."
+    }
+   ]
+  },
+  "postvesical nodes": {
+   "resumen": "Ganglios por detrás de la vejiga.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Detrás de la vejiga."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "La cara posterior de la vejiga y estructuras pelvianas vecinas."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios ilíacos internos."
+    }
+   ]
+  },
+  "superomedial superficial inguinal nodes": {
+   "resumen": "Ganglios inguinales superficiales superomediales.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Debajo del ligamento inguinal, medial al cayado de la safena."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Periné, genitales externos y ano."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios inguinales profundos e ilíacos externos."
+    }
+   ]
+  },
+  "superolateral superficial inguinal nodes": {
+   "resumen": "Ganglios inguinales superficiales superolaterales.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Debajo del ligamento inguinal, lateral al cayado de la safena."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Región glútea, flanco y pared abdominal inferior."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios inguinales profundos e ilíacos externos."
+    }
+   ]
+  },
+  "inferior superficial inguinal nodes": {
+   "resumen": "Ganglios inguinales superficiales inferiores.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Tejido subcutáneo del muslo, a lo largo de la vena safena magna."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "La piel del miembro inferior."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios inguinales profundos."
+    }
+   ]
+  },
+  "proximal deep inguinal node": {
+   "resumen": "Ganglio inguinal profundo proximal.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En el anillo femoral."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Miembro inferior y genitales."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios ilíacos externos."
+    }
+   ]
+  },
+  "intermediate deep inguinal node": {
+   "resumen": "Ganglio inguinal profundo intermedio.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Parte media del canal femoral, medial a la vena femoral."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Los ganglios inguinales superficiales y los vasos profundos del miembro inferior."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios ilíacos externos."
+    }
+   ]
+  },
+  "lateral lacunar node": {
+   "resumen": "Ganglio del espacio lacunar.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En la laguna vascular, lateral a la vena femoral."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Los vasos linfáticos profundos del miembro inferior."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios ilíacos externos."
+    }
+   ]
+  },
+  "superficial popliteal nodes": {
+   "resumen": "Ganglios superficiales de la fosa poplítea.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Junto a la vena safena parva en la fosa poplítea."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Cara lateral del pie y región posterior de la pierna."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios poplíteos profundos."
+    }
+   ]
+  },
+  "deep popliteal nodes": {
+   "resumen": "Ganglios profundos de la fosa poplítea.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En la profundidad de la fosa poplítea, junto a los vasos poplíteos."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Los ganglios poplíteos superficiales, los ganglios tibiales y la rodilla."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios inguinales profundos."
+    }
+   ]
+  },
+  "anterior tibial node": {
+   "resumen": "Ganglio de la cara anterior de la pierna.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Junto a los vasos tibiales anteriores."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Los vasos linfáticos profundos de la región anterior de la pierna y del dorso del pie."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios poplíteos profundos."
+    }
+   ]
+  },
+  "posterior tibial node": {
+   "resumen": "Ganglio de la cara posterior de la pierna.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Junto a los vasos tibiales posteriores."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Los vasos linfáticos profundos de la región posterior de la pierna."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios poplíteos profundos."
+    }
+   ]
+  },
+  "fibular node": {
+   "resumen": "Ganglio de la cara lateral de la pierna.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Junto a los vasos peroneos."
+    },
+    {
+     "titulo": "Drena",
+     "texto": "Los vasos linfáticos profundos de la región lateral de la pierna."
+    },
+    {
+     "titulo": "Eferentes",
+     "texto": "Ganglios poplíteos profundos."
+    }
+   ]
+  }
+ }
+}

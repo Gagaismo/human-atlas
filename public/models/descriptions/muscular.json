@@ -1,0 +1,5005 @@
+{
+ "system": "muscular",
+ "entries": {
+  "abdominal part of pectoralis major": {
+   "resumen": "Porción inferior del músculo pectoral mayor, de fibras que ascienden oblicuamente hacia el húmero; nace de la vaina del músculo recto del abdomen.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Aponeurosis del músculo oblicuo externo y vaina del músculo recto del abdomen."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Labio lateral del surco intertubercular del húmero, junto con el resto del tendón del pectoral mayor."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervios pectorales medial y lateral."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Aduce y rota medialmente el brazo; lo desciende desde la elevación."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Ramas pectorales de la arteria toracoacromial y arteria torácica interna."
+    }
+   ]
+  },
+  "abductor digiti minimi of foot": {
+   "resumen": "Músculo del borde lateral de la planta del pie, de la capa superficial de los músculos plantares.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Procesos medial y lateral de la tuberosidad del calcáneo y aponeurosis plantar."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara lateral de la base de la falange proximal del dedo pequeño del pie."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio plantar lateral."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Abduce y flexiona el dedo pequeño del pie; colabora en sostener el arco longitudinal lateral."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria plantar lateral."
+    }
+   ]
+  },
+  "abductor digiti minimi of hand": {
+   "resumen": "Músculo del borde medial de la eminencia hipotenar de la mano, el más superficial de ese grupo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Hueso pisiforme y tendón del músculo flexor ulnar del carpo."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Base de la falange proximal del dedo meñique, en su lado medial, y expansión extensora."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Rama profunda del nervio ulnar."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Abduce el dedo meñique, alejándolo del dedo anular, y colabora en su flexión."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria ulnar y su rama palmar profunda."
+    }
+   ]
+  },
+  "abductor hallucis": {
+   "resumen": "Músculo del borde medial de la planta del pie que forma el relieve del margen medial.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Proceso medial de la tuberosidad del calcáneo, retináculo flexor y aponeurosis plantar."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara medial de la base de la falange proximal del hallux, junto al hueso sesamoideo medial."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio plantar medial."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Abduce y flexiona el hallux; sostiene el arco longitudinal medial."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias plantar medial y tibial posterior."
+    }
+   ]
+  },
+  "abductor pollicis brevis": {
+   "resumen": "Músculo corto y superficial de la eminencia tenar, en el lado lateral de la palma.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Tubérculo del hueso escafoides, tubérculo del trapecio y retináculo flexor."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Lado lateral de la base de la falange proximal del pulgar."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio mediano (rama recurrente)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Abduce el pulgar en un plano perpendicular a la palma; interviene en la oposición."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria radial (ramas palmares) y arco palmar superficial."
+    }
+   ]
+  },
+  "abductor pollicis longus": {
+   "resumen": "Músculo profundo del compartimento posterior del antebrazo, cuyo tendón forma el borde lateral de la tabaquera anatómica.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara posterior del cuerpo de la ulna y del radio y membrana interósea."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara lateral de la base del primer metacarpiano."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio interóseo posterior (rama del nervio radial)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Abduce el pulgar y colabora en la extensión y abducción de la mano."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria interósea posterior."
+    }
+   ]
+  },
+  "acromial part of deltoid": {
+   "resumen": "Porción media del músculo deltoides, multipenniforme, que forma el contorno redondeado del hombro.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Borde lateral y cara superior del acromion."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Tuberosidad deltoidea del húmero (común a las tres porciones)."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio axilar."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Abduce el brazo entre los 15° y los 90°, aproximadamente."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria toracoacromial (rama deltoidea) y arteria circunfleja humeral posterior."
+    }
+   ]
+  },
+  "adductor brevis": {
+   "resumen": "Músculo aductor corto del muslo, situado profundo al pectíneo y al aductor largo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cuerpo y rama inferior del pubis."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Parte proximal de la línea áspera del fémur y línea pectínea."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio obturador."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Aduce el muslo y colabora en su flexión."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria femoral profunda y arteria obturatriz."
+    }
+   ]
+  },
+  "adductor longus": {
+   "resumen": "Músculo aductor largo, el más superficial de los aductores, de forma triangular.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cuerpo del pubis, debajo de la cresta púbica."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Tercio medio del labio medial de la línea áspera del fémur."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio obturador (rama anterior)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Aduce el muslo y colabora en su flexión y en la rotación lateral."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria femoral profunda."
+    }
+   ]
+  },
+  "adductor magnus": {
+   "resumen": "Músculo grande y triangular de la región medial del muslo, con una porción aductora y otra isquiocondílea.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Rama inferior del pubis, rama del isquion y tuberosidad isquiática."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Línea áspera, línea supracondílea medial y tubérculo del aductor del fémur."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio obturador (porción aductora) y nervio tibial del isquiático (porción isquiocondílea)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Aduce el muslo; la porción isquiocondílea colabora en la extensión de la cadera."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria femoral profunda y arteria obturatriz."
+    }
+   ]
+  },
+  "adductor minimus": {
+   "resumen": "Haz superior y más craneal del aductor mayor, a veces descrito como porción separada.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Rama inferior del pubis y rama del isquion."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Parte proximal de la línea áspera y línea pectínea del fémur."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio obturador."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Aduce el muslo y colabora en su rotación lateral."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria femoral profunda y arteria obturatriz."
+    }
+   ]
+  },
+  "anconeus": {
+   "resumen": "Pequeño músculo triangular en la cara posterolateral del codo, en continuidad con el tríceps braquial.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Epicóndilo lateral del húmero."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Olécranon y cara posterior de la ulna, en su parte proximal."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio radial."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Colabora en la extensión del codo y estabiliza la articulación."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria colateral media y arteria recurrente interósea."
+    }
+   ]
+  },
+  "anterior papillary muscle of ventricle": {
+   "resumen": "Columna muscular cónica que se proyecta desde la pared anterior del ventrículo hacia su cavidad.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Pared anterior del ventrículo, cerca del ápice."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Mediante cuerdas tendinosas, a las valvas de la válvula atrioventricular."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Inervación autonómica por el plexo cardíaco."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Se contrae durante la sístole y tensa las cuerdas tendinosas, evitando que las valvas se inviertan hacia la aurícula."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias coronarias."
+    }
+   ]
+  },
+  "anterolateral head of lateral papillary muscle of ventricle": {
+   "resumen": "Cabeza anterolateral del músculo papilar lateral, que se proyecta desde la pared del ventrículo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Pared anterolateral del ventrículo."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Mediante cuerdas tendinosas, a las valvas de la válvula atrioventricular."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Inervación autonómica por el plexo cardíaco."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Tensa las cuerdas tendinosas durante la sístole para mantener cerrada la válvula atrioventricular."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias coronarias."
+    }
+   ]
+  },
+  "aryepiglotticus": {
+   "resumen": "Músculo delgado de la laringe, continuación del aritenoideo oblicuo hacia la epiglotis; forma el pliegue ariepiglótico.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Proceso muscular del cartílago aritenoides."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Borde lateral de la epiglotis."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio laríngeo recurrente (rama del nervio vago)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Cierra el vestíbulo laríngeo tirando de la epiglotis hacia el aritenoides durante la deglución."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias laríngeas superior e inferior."
+    }
+   ]
+  },
+  "ascending part of trapezius": {
+   "resumen": "Porción inferior del trapecio, de fibras que ascienden desde la columna torácica hacia la espina de la escápula.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Procesos espinosos de las vértebras torácicas inferiores (aprox. T7–T12)."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Espina de la escápula (extremo medial)."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio accesorio (XI par craneal) y ramas del plexo cervical (C3–C4)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Desciende la escápula y colabora en su rotación superior."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria cervical transversa (rama dorsal) y arteria dorsal de la escápula."
+    }
+   ]
+  },
+  "brachialis": {
+   "resumen": "Músculo profundo de la región anterior del brazo, situado bajo el bíceps braquial.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Mitad distal de la cara anterior del húmero y tabiques intermusculares."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Tuberosidad de la ulna y proceso coronoides."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio musculocutáneo; una parte lateral recibe también fibras del nervio radial."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona el antebrazo en el codo, sea cual sea la posición del antebrazo."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria braquial y arteria recurrente radial."
+    }
+   ]
+  },
+  "brachioradialis": {
+   "resumen": "Músculo largo de la cara lateral del antebrazo que forma el relieve lateral de la fosa cubital.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Borde supracondíleo lateral del húmero."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara lateral de la extremidad distal del radio, cerca del proceso estiloides."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio radial."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona el antebrazo en el codo, sobre todo con el antebrazo en posición intermedia entre pronación y supinación."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria recurrente radial y arteria radial."
+    }
+   ]
+  },
+  "cervical rotator": {
+   "resumen": "Pequeños músculos profundos del grupo transversoespinoso, en la región cervical.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Procesos transversos de una vértebra cervical."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Base del proceso espinoso de la vértebra situada uno o dos niveles por encima."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos dorsales de los nervios espinales cervicales."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extienden y rotan la columna hacia el lado opuesto; actúan sobre todo como propioceptores posturales."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias cervical profunda y vertebral."
+    }
+   ]
+  },
+  "clavicular part of deltoid": {
+   "resumen": "Porción anterior del músculo deltoides, de fibras que se dirigen hacia lateral y abajo desde la clavícula.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Tercio lateral del borde anterior de la clavícula."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Tuberosidad deltoidea del húmero."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio axilar."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona y rota medialmente el brazo; colabora en la abducción."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria toracoacromial (rama deltoidea) y arteria circunfleja humeral anterior."
+    }
+   ]
+  },
+  "clavicular part of pectoralis major": {
+   "resumen": "Porción superior del pectoral mayor, de fibras que descienden hacia el húmero.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Mitad medial de la clavícula."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Labio lateral del surco intertubercular del húmero."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervios pectorales lateral y medial."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona el brazo desde la posición neutra y lo rota medialmente."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Ramas pectorales de la arteria toracoacromial."
+    }
+   ]
+  },
+  "coccygeus": {
+   "resumen": "Músculo pequeño y triangular del piso de la pelvis, posterior al elevador del ano; forma parte del diafragma pélvico.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Espina isquiática y ligamento sacroespinoso."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Bordes laterales del cóccix y de las últimas vértebras sacras."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramas del plexo sacro (S4–S5)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Sostiene las vísceras pélvicas y flexiona el cóccix."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias glútea inferior y pudenda interna."
+    }
+   ]
+  },
+  "coracobrachialis": {
+   "resumen": "Músculo alargado de la región anterior del brazo, medial, que acompaña al bíceps braquial.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Vértice del proceso coracoides de la escápula."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara medial del tercio medio del húmero."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio musculocutáneo."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona y aduce el brazo en la articulación del hombro."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria braquial y arteria circunfleja humeral anterior."
+    }
+   ]
+  },
+  "descending part of trapezius": {
+   "resumen": "Porción superior del trapecio, de fibras que descienden desde la región occipital hacia la clavícula.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Protuberancia occipital externa, línea nucal superior y ligamento nucal."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Tercio lateral de la clavícula."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio accesorio (XI par craneal) y ramas del plexo cervical (C3–C4)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Eleva la escápula y rota el acromion hacia arriba; inclina y extiende la cabeza si actúa de un solo lado."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias cervical transversa y occipital."
+    }
+   ]
+  },
+  "diaphragm": {
+   "resumen": "Lámina musculotendinosa en forma de cúpula que separa la cavidad torácica de la abdominal; es el principal músculo de la inspiración.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Porción esternal (cara posterior del proceso xifoides), costal (seis costillas inferiores) y lumbar (pilares y arcos lumbocostales)."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Centro tendinoso del diafragma."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio frénico (C3–C5)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Al contraerse desciende la cúpula y aumenta el volumen torácico, produciendo la inspiración; aumenta también la presión intraabdominal."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias frénicas inferiores y superiores, pericardiofrénica y musculofrénica."
+    }
+   ]
+  },
+  "digastric": {
+   "resumen": "Músculo suprahioideo con dos vientres unidos por un tendón intermedio que se relaciona con el hueso hioides.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Vientre posterior: incisura mastoidea del temporal. Vientre anterior: fosa digástrica de la mandíbula."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Tendón intermedio unido al hioides mediante un asa fibrosa."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Vientre posterior: nervio facial; vientre anterior: nervio milohioideo (rama del mandibular)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Eleva el hioides y abate la mandíbula contra resistencia."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias facial, occipital y submentoniana."
+    }
+   ]
+  },
+  "extensor carpi radialis brevis": {
+   "resumen": "Músculo del compartimento posterior del antebrazo, lateral, algo más corto que el extensor radial largo del carpo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Epicóndilo lateral del húmero y ligamento colateral radial."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Base del tercer metacarpiano."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio radial (ramo profundo)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende y abduce la mano en la articulación de la muñeca."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias radial, recurrente radial e interósea posterior."
+    }
+   ]
+  },
+  "extensor carpi radialis longus": {
+   "resumen": "Músculo largo y superficial del antebrazo, en el lado lateral de la región posterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cresta supraepicondílea lateral del húmero."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Base del segundo metacarpiano."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio radial."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende y abduce la mano en la muñeca."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria radial y arteria recurrente radial."
+    }
+   ]
+  },
+  "extensor carpi ulnaris": {
+   "resumen": "Músculo del lado ulnar del compartimento posterior del antebrazo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Epicóndilo lateral del húmero y margen posterior de la ulna."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Base del quinto metacarpiano."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio interóseo posterior (rama del nervio radial)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende y aduce la mano en la muñeca."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias interósea posterior y ulnar."
+    }
+   ]
+  },
+  "extensor digiti minimi": {
+   "resumen": "Músculo delgado del compartimento posterior del antebrazo, destinado al dedo meñique.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Epicóndilo lateral del húmero (tendón extensor común)."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Expansión extensora del dedo meñique."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio interóseo posterior."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende el dedo meñique y colabora en su abducción."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria interósea posterior."
+    }
+   ]
+  },
+  "extensor digitorum": {
+   "resumen": "Músculo superficial del compartimento posterior del antebrazo con cuatro tendones para los dedos índice a meñique.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Epicóndilo lateral del húmero (tendón extensor común)."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Expansiones extensoras de los dedos segundo a quinto, con inserción en las falanges media y distal."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio interóseo posterior (rama del nervio radial)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende los dedos y colabora en la extensión de la mano."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria interósea posterior."
+    }
+   ]
+  },
+  "extensor digitorum longus": {
+   "resumen": "Músculo largo de la región anterior de la pierna, lateral al tibial anterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cóndilo lateral de la tibia, cabeza y cara anterior de la fíbula y membrana interósea."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Falanges media y distal de los dedos segundo a quinto del pie."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio fibular profundo."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende los dedos y dorsiflexiona el pie."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria tibial anterior."
+    }
+   ]
+  },
+  "extensor hallucis brevis": {
+   "resumen": "Músculo corto del dorso del pie, profundo a los tendones extensores largos.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara dorsal del calcáneo, en su parte anterior."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Falange proximal del hallux."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio fibular profundo."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende la articulación metatarsofalángica del hallux."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria dorsal del pie."
+    }
+   ]
+  },
+  "extensor hallucis longus": {
+   "resumen": "Músculo delgado de la región anterior de la pierna, entre el tibial anterior y el extensor largo de los dedos.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Parte media de la cara medial de la fíbula y membrana interósea."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Falange distal del hallux."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio fibular profundo."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende el hallux y dorsiflexiona el pie."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria tibial anterior."
+    }
+   ]
+  },
+  "extensor indicis": {
+   "resumen": "Músculo profundo del compartimento posterior del antebrazo destinado al dedo índice.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara posterior de la ulna, parte distal, y membrana interósea."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Expansión extensora del dedo índice."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio interóseo posterior."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende el índice de forma independiente, como al señalar."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria interósea posterior."
+    }
+   ]
+  },
+  "extensor pollicis brevis": {
+   "resumen": "Músculo corto del compartimento posterior del antebrazo; su tendón forma el borde lateral de la tabaquera anatómica junto con el del abductor largo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara posterior del radio y membrana interósea."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Base de la falange proximal del pulgar."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio interóseo posterior."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende la falange proximal del pulgar y colabora en su abducción."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria interósea posterior."
+    }
+   ]
+  },
+  "extensor pollicis longus": {
+   "resumen": "Músculo largo del antebrazo cuyo tendón rodea el tubérculo dorsal del radio y forma el límite medial de la tabaquera anatómica.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara posterior de la ulna, tercio medio, y membrana interósea."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Base de la falange distal del pulgar."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio interóseo posterior."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende la falange distal del pulgar y colabora en la aducción y extensión de la mano."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria interósea posterior."
+    }
+   ]
+  },
+  "external anal sphincter": {
+   "resumen": "Músculo esquelético en anillo que rodea el canal anal, con control voluntario.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Rodea el canal anal; sus fibras se anclan en el cóccix y el rafe anococcígeo."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Centro tendinoso del periné."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio rectal inferior (rama del nervio pudendo)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Cierra el ano de manera voluntaria y refuerza la continencia fecal."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria rectal inferior."
+    }
+   ]
+  },
+  "external intercostal muscle": {
+   "resumen": "Músculo de los espacios intercostales, de la capa más externa, con fibras oblicuas hacia abajo y adelante.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Borde inferior de la costilla superior."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Borde superior de la costilla inferior."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervios intercostales."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Eleva las costillas durante la inspiración."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias intercostales posteriores y anteriores."
+    }
+   ]
+  },
+  "external oblique": {
+   "resumen": "Músculo ancho y más superficial de la pared anterolateral del abdomen, con fibras orientadas hacia abajo y medial.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara externa de las ocho costillas inferiores."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cresta ilíaca, línea alba y tubérculo púbico mediante su aponeurosis."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervios intercostales inferiores, iliohipogástrico e ilioinguinal."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona y rota el tronco hacia el lado opuesto y comprime las vísceras abdominales."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias epigástrica inferior, musculofrénica e intercostales."
+    }
+   ]
+  },
+  "first lumbrical of foot": {
+   "resumen": "Músculo pequeño de la planta del pie, de la capa intermedia.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Tendón del flexor largo de los dedos destinado al segundo dedo (borde medial)."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Expansión extensora del segundo dedo, lado medial."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio plantar medial."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona la articulación metatarsofalángica y extiende las interfalángicas del segundo dedo."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias plantares."
+    }
+   ]
+  },
+  "first plantar interosseous of foot": {
+   "resumen": "Músculo pequeño ubicado entre los metatarsianos, en la cara plantar.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara medial del tercer metatarsiano."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Lado medial de la falange proximal del tercer dedo."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio plantar lateral."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Aduce el tercer dedo hacia el eje del segundo dedo."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias plantares."
+    }
+   ]
+  },
+  "flexor accessorius": {
+   "resumen": "Músculo accesorio (cuadrado plantar) de la planta del pie, de la capa intermedia.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara medial y borde lateral del calcáneo."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Tendón del flexor largo de los dedos."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio plantar lateral."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Corrige la tracción oblicua del flexor largo de los dedos y colabora en la flexión de estos."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria plantar lateral."
+    }
+   ]
+  },
+  "flexor carpi radialis": {
+   "resumen": "Músculo superficial del compartimento anterior del antebrazo, cuyo tendón se palpa en el lado radial de la muñeca.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Epicóndilo medial del húmero (tendón flexor común)."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Bases del segundo y tercer metacarpiano."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio mediano."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona y abduce la mano en la muñeca."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias radial y ulnar."
+    }
+   ]
+  },
+  "flexor digiti minimi brevis of foot": {
+   "resumen": "Pequeño músculo de la planta del pie, junto al quinto metatarsiano.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Base del quinto metatarsiano y vaina del fibular largo."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Base de la falange proximal del dedo pequeño."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio plantar lateral."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona la articulación metatarsofalángica del dedo pequeño."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria plantar lateral."
+    }
+   ]
+  },
+  "flexor digiti minimi brevis of hand": {
+   "resumen": "Músculo pequeño de la eminencia hipotenar, lateral al abductor del meñique.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Gancho del hueso ganchoso y retináculo flexor."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Base de la falange proximal del dedo meñique."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Rama profunda del nervio ulnar."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona la falange proximal del meñique."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria ulnar."
+    }
+   ]
+  },
+  "flexor digitorum brevis": {
+   "resumen": "Músculo de la capa superficial de la planta del pie, bajo la aponeurosis plantar.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Proceso medial de la tuberosidad del calcáneo y aponeurosis plantar."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Falanges medias de los dedos segundo a quinto, mediante cuatro tendones."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio plantar medial."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona los dedos del pie y sostiene el arco longitudinal."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias plantares medial y lateral."
+    }
+   ]
+  },
+  "flexor digitorum longus": {
+   "resumen": "Músculo profundo del compartimento posterior de la pierna, cuyo tendón pasa por detrás del maléolo medial.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara posterior de la tibia, por debajo de la línea del sóleo."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Falanges distales de los dedos segundo a quinto del pie."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio tibial."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona los dedos y colabora en la flexión plantar y la inversión del pie."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria tibial posterior."
+    }
+   ]
+  },
+  "flexor digitorum profundus": {
+   "resumen": "Músculo profundo del compartimento anterior del antebrazo con cuatro tendones para los dedos.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara anterior y medial de la ulna y membrana interósea."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Bases de las falanges distales de los dedos segundo a quinto."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Mitad lateral: nervio interóseo anterior (mediano); mitad medial: nervio ulnar."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona las falanges distales de los dedos y colabora en la flexión de la mano."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias interósea anterior y ulnar."
+    }
+   ]
+  },
+  "flexor digitorum superficialis": {
+   "resumen": "Músculo del plano intermedio del compartimento anterior del antebrazo, con cuatro tendones que se dividen para dejar pasar los del flexor profundo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Epicóndilo medial del húmero, proceso coronoides de la ulna y cara anterior del radio."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Falanges medias de los dedos segundo a quinto."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio mediano."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona las falanges medias y proximales de los dedos y colabora en la flexión de la mano."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria ulnar."
+    }
+   ]
+  },
+  "flexor hallucis longus": {
+   "resumen": "Músculo profundo del compartimento posterior de la pierna; su tendón pasa por un surco en el talus y bajo el sustentáculo del talus.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Dos tercios distales de la cara posterior de la fíbula y membrana interósea."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Base de la falange distal del hallux."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio tibial."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona el hallux y colabora en la flexión plantar y la inversión del pie."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias fibular y tibial posterior."
+    }
+   ]
+  },
+  "flexor pollicis brevis": {
+   "resumen": "Músculo de la eminencia tenar con dos cabezas, una superficial y otra profunda.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Retináculo flexor y tubérculo del trapecio (cabeza superficial); trapezoide y hueso grande (cabeza profunda)."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Base de la falange proximal del pulgar, en su lado lateral."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Cabeza superficial: nervio mediano; cabeza profunda: nervio ulnar."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona el pulgar en la articulación metacarpofalángica."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria radial y arco palmar superficial."
+    }
+   ]
+  },
+  "flexor pollicis longus": {
+   "resumen": "Músculo largo del compartimento anterior del antebrazo; su tendón pasa por el túnel del carpo hasta el pulgar.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara anterior del radio y membrana interósea."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Base de la falange distal del pulgar."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio interóseo anterior (rama del nervio mediano)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona la falange distal del pulgar."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias interósea anterior y radial."
+    }
+   ]
+  },
+  "fourth lumbrical of foot": {
+   "resumen": "Músculo pequeño de la planta del pie, de la capa intermedia, destinado al quinto dedo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Tendones del flexor largo de los dedos para el cuarto y quinto dedo."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Expansión extensora del quinto dedo, en su lado medial."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio plantar lateral."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona la articulación metatarsofalángica y extiende las interfalángicas del quinto dedo."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias plantares."
+    }
+   ]
+  },
+  "gemellus inferior": {
+   "resumen": "Pequeño músculo de la región glútea profunda, por debajo del tendón del obturador interno.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Tuberosidad isquiática (parte superior)."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara medial del trocánter mayor, junto con el tendón del obturador interno."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio del cuadrado femoral."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Rota lateralmente el muslo y estabiliza la cabeza del fémur en el acetábulo."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias glútea inferior y circunfleja femoral medial."
+    }
+   ]
+  },
+  "gemellus superior": {
+   "resumen": "Pequeño músculo de la región glútea profunda, por encima del tendón del obturador interno.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Espina isquiática."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara medial del trocánter mayor, junto con el tendón del obturador interno."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio del obturador interno."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Rota lateralmente el muslo y estabiliza la cabeza del fémur en el acetábulo."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias glútea inferior y pudenda interna."
+    }
+   ]
+  },
+  "genioglossus": {
+   "resumen": "Músculo extrínseco de la lengua, grande y en abanico, que forma gran parte de su masa a cada lado del septo lingual.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Espina geniana superior de la mandíbula."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara inferior de la lengua y cuerpo del hioides."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio hipogloso (XII par craneal)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Protruye la lengua y desciende su parte central; es esencial para sacar la lengua."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria lingual y arteria submentoniana."
+    }
+   ]
+  },
+  "geniohyoid": {
+   "resumen": "Músculo suprahioideo delgado, situado sobre el milohioideo y cercano a la línea media.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Espina geniana inferior de la mandíbula."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara anterior del cuerpo del hioides."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Fibras de C1 que acompañan al nervio hipogloso."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Eleva y lleva hacia adelante el hioides; abate la mandíbula si el hioides está fijo."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria lingual y arteria submentoniana."
+    }
+   ]
+  },
+  "gluteus maximus": {
+   "resumen": "Músculo más grande y superficial de la región glútea; da su forma a la nalga.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara externa del ilion posterior a la línea glútea posterior, sacro, cóccix y ligamento sacrotuberoso."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Tracto iliotibial (mayor parte) y tuberosidad glútea del fémur."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio glúteo inferior."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende y rota lateralmente la cadera; estabiliza la rodilla por el tracto iliotibial."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias glúteas superior e inferior."
+    }
+   ]
+  },
+  "gluteus medius": {
+   "resumen": "Músculo en abanico de la región glútea, cubierto parcialmente por el glúteo mayor.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara externa del ilion, entre las líneas glúteas posterior y anterior."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara lateral del trocánter mayor."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio glúteo superior."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Abduce el muslo y, con el glúteo menor, mantiene la pelvis nivelada al caminar."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria glútea superior."
+    }
+   ]
+  },
+  "gluteus minimus": {
+   "resumen": "Músculo más profundo de la región glútea, bajo el glúteo medio.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara externa del ilion, entre las líneas glúteas anterior e inferior."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara anterior del trocánter mayor."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio glúteo superior."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Abduce y rota medialmente el muslo; estabiliza la pelvis al caminar."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria glútea superior."
+    }
+   ]
+  },
+  "gracilis": {
+   "resumen": "Músculo largo y delgado de la región medial del muslo, el más superficial de los aductores.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cuerpo y rama inferior del pubis."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Parte superior de la cara medial de la tibia, en la pata de ganso."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio obturador."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Aduce el muslo, flexiona la rodilla y rota medialmente la pierna flexionada."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria femoral profunda y arteria obturatriz."
+    }
+   ]
+  },
+  "humeral head of flexor carpi ulnaris": {
+   "resumen": "Cabeza humeral del flexor ulnar del carpo, en el lado ulnar del compartimento anterior del antebrazo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Epicóndilo medial del húmero (tendón flexor común)."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Hueso pisiforme, gancho del hueso ganchoso y base del quinto metacarpiano."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio ulnar."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona y aduce la mano en la muñeca."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria ulnar."
+    }
+   ]
+  },
+  "humeral head of pronator teres": {
+   "resumen": "Cabeza humeral del pronador redondo, que cruza oblicuamente la cara anterior del antebrazo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Epicóndilo medial del húmero y tabique intermuscular."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara lateral del tercio medio del radio."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio mediano."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Pronación del antebrazo y colabora en la flexión del codo."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias ulnar y radial."
+    }
+   ]
+  },
+  "hyoglossus": {
+   "resumen": "Músculo extrínseco de la lengua, delgado y cuadrangular, que sube desde el hioides.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cuerpo y asta mayor del hioides."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Lados de la lengua."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio hipogloso (XII par craneal)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Deprime y retrae la lengua."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria lingual."
+    }
+   ]
+  },
+  "iliacus": {
+   "resumen": "Músculo triangular que cubre la fosa ilíaca; junto con el psoas mayor forma el iliopsoas.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Fosa ilíaca y ala del sacro."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Trocánter menor del fémur, junto con el tendón del psoas mayor."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio femoral."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona el muslo en la cadera y flexiona el tronco si el fémur está fijo."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria iliolumbar y arteria circunfleja ilíaca profunda."
+    }
+   ]
+  },
+  "iliococcygeus": {
+   "resumen": "Parte del músculo elevador del ano que forma la porción posterior del piso pélvico.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Arco tendíneo del músculo elevador del ano y espina isquiática."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Rafe anococcígeo y cóccix."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramas del plexo sacro (S4) y nervio pudendo."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Sostiene las vísceras pélvicas y eleva el piso de la pelvis."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias pudenda interna y glútea inferior."
+    }
+   ]
+  },
+  "iliocostalis cervicis": {
+   "resumen": "Porción cervical del músculo iliocostal, el más lateral de los erectores de la columna.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Ángulos de las costillas tercera a sexta."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Procesos transversos de C4–C6."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos dorsales de los nervios espinales cervicales."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende y flexiona lateralmente la columna cervical."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria cervical profunda y ramas de las arterias intercostales posteriores."
+    }
+   ]
+  },
+  "iliocostalis lumborum": {
+   "resumen": "Porción lumbar del músculo iliocostal, la parte más lateral de los erectores de la columna.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cresta ilíaca, sacro y fascia toracolumbar."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Ángulos de las seis costillas inferiores."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos dorsales de los nervios espinales lumbares."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende la columna lumbar y la flexiona lateralmente; mantiene la postura erguida."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias lumbares e intercostales posteriores."
+    }
+   ]
+  },
+  "iliocostalis thoracis": {
+   "resumen": "Porción torácica del músculo iliocostal, que une costillas entre sí en un trayecto vertical.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Ángulos de las seis costillas inferiores."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Ángulos de las seis costillas superiores y proceso transverso de C7."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos dorsales de los nervios espinales torácicos."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende la columna torácica y mantiene la postura; estabiliza las costillas."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias intercostales posteriores."
+    }
+   ]
+  },
+  "inferior oblique": {
+   "resumen": "Músculo extrínseco del ojo; el único que nace en la parte anterior de la órbita.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Piso de la órbita, cerca del margen medial (maxilar)."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Parte posterolateral del globo ocular, por debajo del recto lateral."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio oculomotor (III par craneal)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Rota el ojo hacia fuera y lo eleva cuando está aducido."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias infraorbitaria y oftálmica."
+    }
+   ]
+  },
+  "inferior oblique part of longus colli": {
+   "resumen": "Porción inferior oblicua del músculo largo del cuello, en la cara anterior de la columna cervical.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cuerpos vertebrales de T1–T3."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Procesos transversos de C5–C6."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos anteriores de los nervios espinales cervicales (C2–C6)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona la columna cervical y la inclina hacia el lado de acción."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias vertebral y cervical ascendente."
+    }
+   ]
+  },
+  "inferior rectus": {
+   "resumen": "Músculo extrínseco del ojo en el lado inferior del globo ocular.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Anillo tendinoso común, en el vértice de la órbita."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara inferior del globo ocular, por detrás de la córnea."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio oculomotor (III par craneal)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Deprime el globo ocular; produce también aducción y rotación lateral."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria oftálmica (rama muscular)."
+    }
+   ]
+  },
+  "infraspinatus muscle": {
+   "resumen": "Músculo de la fosa infraespinosa de la escápula, uno de los músculos del manguito rotador.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Fosa infraespinosa de la escápula."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Faceta media del tubérculo mayor del húmero."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio supraescapular."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Rota lateralmente el brazo y estabiliza la cabeza del húmero en la cavidad glenoidea."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias supraescapular y circunfleja escapular."
+    }
+   ]
+  },
+  "innermost intercostal muscle": {
+   "resumen": "Capa más profunda de los músculos intercostales, separada de la capa media por los vasos y nervios intercostales.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Borde interno de la costilla superior."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Borde interno de la costilla inferior."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervios intercostales."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Estabiliza la pared torácica y colabora en la espiración forzada."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias intercostales."
+    }
+   ]
+  },
+  "internal intercostal muscle": {
+   "resumen": "Músculo intercostal de la capa media, con fibras oblicuas hacia abajo y atrás.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Borde inferior de la costilla superior (surco costal)."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Borde superior de la costilla inferior."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervios intercostales."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Desciende las costillas durante la espiración forzada y estabiliza el espacio intercostal."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias intercostales posteriores y anteriores."
+    }
+   ]
+  },
+  "interspinalis thoracis": {
+   "resumen": "Pequeños músculos pares entre los procesos espinosos de las vértebras torácicas.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Proceso espinoso de una vértebra torácica."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Proceso espinoso de la vértebra inmediatamente superior."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos dorsales de los nervios espinales torácicos."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extienden la columna y refuerzan la propiocepción postural."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias intercostales posteriores."
+    }
+   ]
+  },
+  "lateral crico-arytenoid": {
+   "resumen": "Músculo intrínseco de la laringe que cierra la glotis.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Arco del cartílago cricoides (cara lateral)."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Proceso muscular del cartílago aritenoides."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio laríngeo recurrente (nervio vago)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Aduce las cuerdas vocales y cierra la glotis."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria laríngea inferior."
+    }
+   ]
+  },
+  "lateral head of flexor hallucis brevis": {
+   "resumen": "Cabeza lateral del flexor corto del hallux en la planta del pie.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cuboides y cuneiforme lateral."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara lateral de la base de la falange proximal del hallux (con hueso sesamoideo lateral)."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio plantar lateral."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona la articulación metatarsofalángica del hallux."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias plantares."
+    }
+   ]
+  },
+  "lateral head of gastrocnemius": {
+   "resumen": "Cabeza lateral del gastrocnemio, una de las dos masas del tríceps sural.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara lateral del cóndilo lateral del fémur."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara posterior del calcáneo mediante el tendón calcáneo."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio tibial."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona plantarmente el pie y flexiona la rodilla."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria sural lateral y arteria poplítea."
+    }
+   ]
+  },
+  "lateral head of triceps brachii": {
+   "resumen": "Cabeza lateral del tríceps braquial, superficial en la cara posterior del brazo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara posterior del húmero, por encima del surco del nervio radial."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Olécranon de la ulna (tendón común)."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio radial."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende el codo."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria braquial profunda."
+    }
+   ]
+  },
+  "lateral lumbar intertransversarius": {
+   "resumen": "Pequeño músculo entre los procesos transversos lumbares, en su componente lateral.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Proceso transverso de una vértebra lumbar."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Proceso transverso de la vértebra lumbar inmediatamente superior."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos anteriores de los nervios espinales lumbares."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona lateralmente la columna lumbar."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias lumbares."
+    }
+   ]
+  },
+  "lateral papillary muscle of ventricle": {
+   "resumen": "Columna muscular que se proyecta desde la pared lateral del ventrículo hacia su cavidad.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Pared lateral del ventrículo."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Mediante cuerdas tendinosas, a las valvas de la válvula atrioventricular."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Inervación autonómica por el plexo cardíaco."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Tensa las cuerdas tendinosas durante la sístole, impidiendo la inversión de las valvas."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias coronarias."
+    }
+   ]
+  },
+  "lateral rectus": {
+   "resumen": "Músculo extrínseco del ojo en el lado lateral del globo ocular.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Anillo tendinoso común, en el vértice de la órbita."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara lateral del globo ocular."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio abducens (VI par craneal)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Abduce el globo ocular (lo gira hacia fuera)."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria lagrimal y arteria oftálmica."
+    }
+   ]
+  },
+  "levator palpebrae superioris": {
+   "resumen": "Músculo del párpado superior que nace en el techo de la órbita.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Ala menor del esfenoides, por encima del canal óptico."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Piel y placa tarsal del párpado superior."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio oculomotor (III par craneal)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Eleva el párpado superior, abriendo la hendidura palpebral."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria oftálmica (rama muscular)."
+    }
+   ]
+  },
+  "levator veli palatini": {
+   "resumen": "Músculo del paladar blando, cuyo tendón forma una hamaca que lo eleva.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara inferior del peñasco del temporal y cartílago de la tuba auditiva."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Aponeurosis palatina del paladar blando."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Plexo faríngeo (fibras del nervio vago)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Eleva el velo del paladar, cerrando el istmo nasofaríngeo durante la deglución."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias palatina ascendente y palatina mayor."
+    }
+   ]
+  },
+  "long head of biceps brachii": {
+   "resumen": "Cabeza larga del bíceps braquial, que pasa por el surco intertubercular y la articulación del hombro.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Tubérculo supraglenoideo de la escápula."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Tuberosidad del radio y aponeurosis bicipital (tendón común)."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio musculocutáneo."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona el codo, supina el antebrazo y colabora en la flexión del hombro."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria braquial."
+    }
+   ]
+  },
+  "long head of biceps femoris": {
+   "resumen": "Cabeza larga del bíceps femoral, el más lateral de los isquiotibiales.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Tuberosidad isquiática."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cabeza de la fíbula."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Porción tibial del nervio isquiático."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona la rodilla y extiende la cadera; con la rodilla flexionada rota lateralmente la pierna."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria femoral profunda (perforantes) y glútea inferior."
+    }
+   ]
+  },
+  "long head of triceps brachii": {
+   "resumen": "Cabeza larga del tríceps braquial, que cruza la articulación del hombro.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Tubérculo infraglenoideo de la escápula."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Olécranon de la ulna (tendón común)."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio radial."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende el codo y colabora en la extensión y aducción del hombro."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria braquial profunda."
+    }
+   ]
+  },
+  "longissimus capitis": {
+   "resumen": "Porción más larga de los erectores de la columna en el cuello, hacia la cabeza.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Procesos transversos de T1–T5 y procesos articulares de C4–C7."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Borde posterior del proceso mastoides."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos dorsales de los nervios espinales cervicales."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende e inclina la cabeza hacia el lado de acción."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria occipital y arteria cervical profunda."
+    }
+   ]
+  },
+  "longissimus cervicis": {
+   "resumen": "Porción cervical del longísimo, entre los erectores de la columna.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Procesos transversos de T1–T5."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Procesos transversos de C2–C6."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos dorsales de los nervios espinales cervicales."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende e inclina lateralmente la columna cervical."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias cervical profunda y vertebral."
+    }
+   ]
+  },
+  "longissimus thoracis": {
+   "resumen": "Porción torácica del longísimo, la columna central de los erectores de la columna.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara posterior del sacro, procesos espinosos lumbares y cresta ilíaca."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Procesos transversos de las vértebras torácicas y costillas inferiores."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos dorsales de los nervios espinales torácicos y lumbares."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende la columna y la inclina lateralmente."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias lumbares e intercostales posteriores."
+    }
+   ]
+  },
+  "longus capitis": {
+   "resumen": "Músculo prevertebral del cuello, de forma aplanada, que flexiona la cabeza.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Procesos transversos de C3–C6."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Parte basilar del hueso occipital."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos anteriores de los nervios espinales cervicales (C1–C3)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona la cabeza y la inclina hacia el lado de acción."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias faríngea ascendente y vertebral."
+    }
+   ]
+  },
+  "medial head of flexor hallucis brevis": {
+   "resumen": "Cabeza medial del flexor corto del hallux, en la planta del pie.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cuneiforme medial y tendón del tibial posterior."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara medial de la base de la falange proximal del hallux (con hueso sesamoideo medial)."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio plantar medial."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona la articulación metatarsofalángica del hallux."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias plantares."
+    }
+   ]
+  },
+  "medial head of gastrocnemius": {
+   "resumen": "Cabeza medial del gastrocnemio, una de las dos masas del tríceps sural.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara posterior del fémur, por encima del cóndilo medial."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara posterior del calcáneo mediante el tendón calcáneo."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio tibial."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona plantarmente el pie y flexiona la rodilla."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria sural medial y arteria poplítea."
+    }
+   ]
+  },
+  "medial head of triceps brachii": {
+   "resumen": "Cabeza medial del tríceps braquial, profunda a las otras dos cabezas.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara posterior del húmero, por debajo del surco del nervio radial."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Olécranon de la ulna (tendón común)."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio radial."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende el codo."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria braquial profunda."
+    }
+   ]
+  },
+  "medial lumbar intertransversarius": {
+   "resumen": "Pequeño músculo entre los procesos transversos lumbares, en su componente medial.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Proceso accesorio y mamilar de una vértebra lumbar."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Proceso mamilar de la vértebra lumbar inmediatamente superior."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos dorsales de los nervios espinales lumbares."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende y estabiliza la columna lumbar."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias lumbares."
+    }
+   ]
+  },
+  "medial rectus": {
+   "resumen": "Músculo extrínseco del ojo en el lado medial (nasal) del globo ocular.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Anillo tendinoso común, en el vértice de la órbita."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara medial del globo ocular."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio oculomotor (III par craneal)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Aduce el globo ocular (lo gira hacia la nariz)."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria oftálmica (rama muscular medial)."
+    }
+   ]
+  },
+  "mylohyoid": {
+   "resumen": "Músculo suprahioideo plano que forma el piso de la boca, bajo la lengua.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Línea milohioidea de la mandíbula."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Rafe milohioideo y cuerpo del hioides."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio milohioideo (rama del nervio mandibular)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Eleva el piso de la boca y el hioides, y colabora en el descenso de la mandíbula."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias submentoniana y milohioidea."
+    }
+   ]
+  },
+  "oblique arytenoid": {
+   "resumen": "Músculo intrínseco de la laringe, formado por haces que se cruzan entre los cartílagos aritenoides.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara posterior del proceso muscular de un aritenoides."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Ápice del aritenoides opuesto."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio laríngeo recurrente (nervio vago)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Aproxima los aritenoides y cierra la hendidura glótica posterior."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias laríngeas superior e inferior."
+    }
+   ]
+  },
+  "oblique head of adductor hallucis": {
+   "resumen": "Cabeza oblicua del aductor del hallux, que cruza la planta del pie en sentido oblicuo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cuboides, cuneiforme lateral y bases de los metatarsianos segundo a cuarto."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Lado lateral de la base de la falange proximal del hallux."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio plantar lateral (rama profunda)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Aduce el hallux hacia la línea media del pie y sostiene el arco transversal."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arco plantar profundo."
+    }
+   ]
+  },
+  "oblique head of adductor pollicis": {
+   "resumen": "Cabeza oblicua del aductor del pulgar, profunda en la palma.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Hueso grande, bases de los metacarpianos segundo y tercero."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Lado medial de la base de la falange proximal del pulgar."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Rama profunda del nervio ulnar."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Aduce el pulgar hacia la palma y participa en la pinza."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arco palmar profundo."
+    }
+   ]
+  },
+  "oblique part of cricothyroid": {
+   "resumen": "Porción oblicua del músculo cricotiroideo de la laringe.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara anterior del arco del cartílago cricoides."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Borde inferior del cartílago tiroides, hacia el asta inferior."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio laríngeo superior (rama externa)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Inclina el cartílago tiroides hacia delante y tensa las cuerdas vocales."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria cricotiroidea."
+    }
+   ]
+  },
+  "obliquus capitis inferior": {
+   "resumen": "Músculo suboccipital que une el axis con el atlas; forma el borde inferior del triángulo suboccipital.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Proceso espinoso del axis."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Proceso transverso del atlas."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio suboccipital (ramo dorsal de C1)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Rota la cabeza hacia el mismo lado a través del atlas."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias occipital y vertebral."
+    }
+   ]
+  },
+  "obliquus capitis superior": {
+   "resumen": "Músculo suboccipital que forma el límite superolateral del triángulo suboccipital.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Proceso transverso del atlas."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Hueso occipital, entre las líneas nucales superior e inferior."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio suboccipital (ramo dorsal de C1)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende la cabeza y la inclina lateralmente."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias occipital y vertebral."
+    }
+   ]
+  },
+  "obturator externus": {
+   "resumen": "Músculo en forma de abanico en la cara anterior de la región pélvica, que cubre la membrana obturadora.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Margen externo del foramen obturado y membrana obturatriz."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Fosa trocantérica del fémur."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio obturador."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Rota lateralmente el muslo y estabiliza la cadera."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias obturatriz y circunfleja femoral medial."
+    }
+   ]
+  },
+  "obturator internus": {
+   "resumen": "Músculo de la pared lateral de la pelvis, cuyo tendón sale por el foramen isquiático menor.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara interna de la membrana obturatriz y márgenes del foramen obturado."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara medial del trocánter mayor."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio del obturador interno."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Rota lateralmente el muslo extendido y abduce el muslo flexionado."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias obturatriz y pudenda interna."
+    }
+   ]
+  },
+  "omohyoid": {
+   "resumen": "Músculo infrahioideo con dos vientres unidos por un tendón intermedio en la región lateral del cuello.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Borde superior de la escápula, cerca de la incisura escapular."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Borde inferior del cuerpo del hioides."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Asa cervical (C1–C3)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Desciende y fija el hioides."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias tiroidea superior y cervical transversa."
+    }
+   ]
+  },
+  "opponens digiti minimi of foot": {
+   "resumen": "Pequeño músculo del dedo pequeño del pie, a veces inconstante.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Ligamento plantar largo y vaina del fibular largo."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Quinto metatarsiano."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio plantar lateral."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Tracciona el quinto metatarsiano hacia la planta."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria plantar lateral."
+    }
+   ]
+  },
+  "opponens digiti minimi of hand": {
+   "resumen": "Músculo profundo de la eminencia hipotenar.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Gancho del hueso ganchoso y retináculo flexor."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Borde medial del quinto metacarpiano."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Rama profunda del nervio ulnar."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Lleva el quinto metacarpiano hacia la palma, profundizando su concavidad."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria ulnar."
+    }
+   ]
+  },
+  "opponens pollicis": {
+   "resumen": "Músculo profundo de la eminencia tenar.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Tubérculo del trapecio y retináculo flexor."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Borde lateral y cara palmar del primer metacarpiano."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio mediano (rama recurrente)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Lleva el pulgar hacia la oposición con los demás dedos."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria radial (rama superficial palmar)."
+    }
+   ]
+  },
+  "palmaris longus": {
+   "resumen": "Músculo delgado del compartimento anterior del antebrazo, con un largo tendón; puede faltar en algunas personas.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Epicóndilo medial del húmero (tendón flexor común)."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Retináculo flexor y aponeurosis palmar."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio mediano."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Tensa la aponeurosis palmar y colabora en la flexión de la muñeca."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria ulnar."
+    }
+   ]
+  },
+  "pectineus": {
+   "resumen": "Músculo cuadrangular en la parte superior del compartimento medial del muslo, cerca del triángulo femoral.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Línea pectínea del pubis y rama superior del pubis."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Línea pectínea del fémur, justo debajo del trocánter menor."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio femoral y nervio obturador."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona y aduce el muslo."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias femoral y obturatriz."
+    }
+   ]
+  },
+  "pectoralis minor": {
+   "resumen": "Músculo triangular plano situado bajo el pectoral mayor.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Costillas tercera a quinta."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Proceso coracoides de la escápula."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervios pectorales medial y lateral."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Desciende y protrae la escápula; eleva las costillas si la escápula está fija."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria toracoacromial y arteria torácica lateral."
+    }
+   ]
+  },
+  "piriformis": {
+   "resumen": "Músculo piramidal que sale de la pelvis por el foramen isquiático mayor.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara anterior del sacro y ligamento sacrotuberoso."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Borde superior del trocánter mayor."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos anteriores de S1–S2."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Rota lateralmente el muslo extendido y abduce el muslo flexionado."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias glúteas superior e inferior."
+    }
+   ]
+  },
+  "plantaris": {
+   "resumen": "Músculo vestigial de la región posterior de la pierna, con un tendón largo y delgado.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Línea supracondílea lateral del fémur."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Calcáneo, junto al tendón calcáneo."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio tibial."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Colabora débilmente en la flexión plantar y la flexión de la rodilla."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria sural y arterias genicular."
+    }
+   ]
+  },
+  "platysma": {
+   "resumen": "Músculo cutáneo delgado y ancho de la región anterolateral del cuello.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Fascia del deltoides y del pectoral mayor."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Borde inferior de la mandíbula y piel de la parte inferior del rostro."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Rama cervical del nervio facial."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Tensa la piel del cuello y desciende la comisura labial y la mandíbula."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias facial y submentoniana."
+    }
+   ]
+  },
+  "popliteus": {
+   "resumen": "Músculo triangular profundo en la fosa poplítea.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cóndilo lateral del fémur y menisco lateral."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara posterior de la tibia, sobre la línea del sóleo."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio tibial."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Desbloquea la rodilla al iniciar su flexión mediante rotación medial de la tibia."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias poplítea y tibial posterior."
+    }
+   ]
+  },
+  "posterior crico-arytenoid": {
+   "resumen": "Músculo intrínseco de la laringe que abre la glotis.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara posterior de la lámina del cricoides."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Proceso muscular del aritenoides."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio laríngeo recurrente (nervio vago)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Abduce las cuerdas vocales, abriendo la glotis para respirar."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria laríngea inferior."
+    }
+   ]
+  },
+  "posterior papillary muscle of ventricle": {
+   "resumen": "Columna muscular cónica que se proyecta desde la pared posterior del ventrículo hacia su cavidad.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Pared posterior del ventrículo."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Mediante cuerdas tendinosas, a las valvas de la válvula atrioventricular."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Inervación autonómica por el plexo cardíaco."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Tensa las cuerdas tendinosas durante la sístole, evitando la inversión de las valvas."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias coronarias."
+    }
+   ]
+  },
+  "pronator quadratus": {
+   "resumen": "Músculo cuadrangular y plano del antebrazo distal, profundo, en la cara anterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cuarto distal de la cara anterior de la ulna."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cuarto distal de la cara anterior del radio."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio interóseo anterior (rama del nervio mediano)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Pronación del antebrazo y estabiliza la articulación radioulnar distal."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria interósea anterior."
+    }
+   ]
+  },
+  "psoas major": {
+   "resumen": "Músculo largo de la pared posterior del abdomen, lateral a la columna lumbar; forma el iliopsoas con el ilíaco.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cuerpos vertebrales de T12–L5, discos intervertebrales y procesos transversos lumbares."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Trocánter menor del fémur."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos anteriores de L1–L3 (plexo lumbar)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona el muslo en la cadera y flexiona el tronco si el fémur está fijo."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias lumbares e iliolumbar."
+    }
+   ]
+  },
+  "pubococcygeus": {
+   "resumen": "Porción media del elevador del ano, formando el piso muscular de la pelvis.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara posterior del pubis."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Rafe anococcígeo y cóccix."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramas del plexo sacro (S3–S4) y nervio pudendo."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Sostiene las vísceras pélvicas y participa en la continencia."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias pudenda interna y glútea inferior."
+    }
+   ]
+  },
+  "puborectalis": {
+   "resumen": "Porción del elevador del ano que forma un asa en U alrededor de la unión anorrectal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cuerpo del pubis."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Se continúa con la fibra contralateral por detrás del recto."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio pudendo y ramas de S3–S4."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Tracciona la unión anorrectal hacia delante, manteniendo el ángulo anorrectal y la continencia."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria pudenda interna."
+    }
+   ]
+  },
+  "quadratus femoris": {
+   "resumen": "Músculo cuadrangular plano de la región glútea profunda.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Borde lateral de la tuberosidad isquiática."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cresta intertrocantérica del fémur."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio del cuadrado femoral."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Rota lateralmente el muslo y estabiliza la cadera."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias circunfleja femoral medial y glútea inferior."
+    }
+   ]
+  },
+  "rectus capitis anterior": {
+   "resumen": "Pequeño músculo prevertebral, profundo, entre el atlas y el occipital.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Masa lateral del atlas."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Parte basilar del hueso occipital."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos anteriores de C1–C2."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona la cabeza en la articulación atlantooccipital."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria vertebral."
+    }
+   ]
+  },
+  "rectus capitis lateralis": {
+   "resumen": "Pequeño músculo profundo, lateral al recto anterior de la cabeza.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Proceso transverso del atlas."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Proceso yugular del occipital."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos anteriores de C1–C2."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Inclina la cabeza hacia el lado de acción."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria vertebral."
+    }
+   ]
+  },
+  "rectus capitis posterior major": {
+   "resumen": "Músculo suboccipital que forma el límite superomedial del triángulo suboccipital.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Proceso espinoso del axis."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Parte media de la línea nucal inferior."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio suboccipital (ramo dorsal de C1)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende la cabeza y la rota hacia el mismo lado."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias occipital y vertebral."
+    }
+   ]
+  },
+  "rectus capitis posterior minor": {
+   "resumen": "Pequeño músculo suboccipital en la línea media, medial al recto posterior mayor.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Tubérculo posterior del atlas."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Parte medial de la línea nucal inferior."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio suboccipital (ramo dorsal de C1)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende la cabeza."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias occipital y vertebral."
+    }
+   ]
+  },
+  "rectus femoris": {
+   "resumen": "Músculo bipenniforme del cuadríceps femoral, el único que cruza la articulación de la cadera.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Espina ilíaca anteroinferior y surco por encima del acetábulo."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Base de la patela y, a través del ligamento patelar, tuberosidad de la tibia."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio femoral."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende la rodilla y flexiona la cadera."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria femoral profunda (circunfleja femoral lateral)."
+    }
+   ]
+  },
+  "rhomboid major": {
+   "resumen": "Músculo plano y romboidal entre la columna y la escápula, profundo al trapecio.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Procesos espinosos de T2–T5."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Borde medial de la escápula, por debajo de la espina."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio dorsal de la escápula."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Retrae la escápula y la rota hacia abajo; la fija contra el tórax."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria dorsal de la escápula."
+    }
+   ]
+  },
+  "rhomboid minor": {
+   "resumen": "Músculo plano y pequeño, superior al romboides mayor.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Ligamento nucal y procesos espinosos de C7–T1."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Borde medial de la escápula, a nivel de la espina."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio dorsal de la escápula."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Retrae la escápula y la fija contra el tórax."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria dorsal de la escápula."
+    }
+   ]
+  },
+  "lumbar rotator": {
+   "resumen": "Pequeños músculos profundos del grupo transversoespinoso, en la región lumbar.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Proceso mamilar y transverso de una vértebra lumbar."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Base del proceso espinoso de la vértebra situada uno o dos niveles por encima."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos dorsales de los nervios espinales lumbares."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extienden y rotan la columna hacia el lado opuesto; sirven de propioceptores posturales."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias lumbares."
+    }
+   ]
+  },
+  "sartorius": {
+   "resumen": "Músculo más largo del cuerpo, en cinta, que cruza oblicuamente la cara anterior del muslo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Espina ilíaca anterosuperior."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Parte superior de la cara medial de la tibia, en la pata de ganso."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio femoral."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona la cadera y la rodilla, abduce y rota lateralmente el muslo (posición de sentado con las piernas cruzadas)."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria femoral."
+    }
+   ]
+  },
+  "scalenus anterior": {
+   "resumen": "Músculo escaleno anterior, que limita el hiato interescalénico por delante y se relaciona con la arteria subclavia.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Tubérculos anteriores de los procesos transversos de C3–C6."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Tubérculo del escaleno de la primera costilla."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos anteriores de los nervios espinales cervicales (C5–C6)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Eleva la primera costilla y flexiona e inclina el cuello hacia el lado de acción."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias cervical ascendente y tiroidea inferior."
+    }
+   ]
+  },
+  "scalenus medius": {
+   "resumen": "Músculo escaleno medio, el más grande de los escalenos, entre las raíces del plexo braquial por delante y los demás músculos por detrás.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Tubérculos posteriores de los procesos transversos de C2–C7."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara superior de la primera costilla, por detrás del surco de la arteria subclavia."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos anteriores de los nervios espinales cervicales."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Eleva la primera costilla e inclina el cuello hacia el lado de acción."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias cervical ascendente y tiroidea inferior."
+    }
+   ]
+  },
+  "scalenus posterior": {
+   "resumen": "Músculo escaleno posterior, el más pequeño de los escalenos.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Tubérculos posteriores de los procesos transversos de C4–C6."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara externa de la segunda costilla."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos anteriores de los nervios espinales cervicales (C7–C8)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Eleva la segunda costilla e inclina el cuello hacia el lado de acción."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias cervical ascendente y transversa del cuello."
+    }
+   ]
+  },
+  "second lumbrical of foot": {
+   "resumen": "Músculo pequeño de la planta del pie, en la capa intermedia.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Tendones del flexor largo de los dedos para el segundo y tercer dedo."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Expansión extensora del tercer dedo, en su lado medial."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio plantar lateral."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona la articulación metatarsofalángica y extiende las interfalángicas del tercer dedo."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias plantares."
+    }
+   ]
+  },
+  "second plantar interosseous of foot": {
+   "resumen": "Músculo pequeño entre los metatarsianos, en la cara plantar.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara medial del cuarto metatarsiano."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Lado medial de la falange proximal del cuarto dedo."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio plantar lateral."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Aduce el cuarto dedo hacia el segundo."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias plantares."
+    }
+   ]
+  },
+  "semimembranosus": {
+   "resumen": "Músculo isquiotibial medial, con un tendón de origen membranoso largo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Tuberosidad isquiática."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cóndilo medial de la tibia y ligamento poplíteo oblicuo."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Porción tibial del nervio isquiático."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende la cadera, flexiona la rodilla y rota medialmente la pierna flexionada."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria femoral profunda (perforantes) y arteria glútea inferior."
+    }
+   ]
+  },
+  "semispinalis capitis": {
+   "resumen": "Músculo grande del grupo transversoespinoso en la nuca, que forma el relieve vertical a cada lado de la línea media.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Procesos transversos de C4–T6 y procesos articulares cervicales."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Entre las líneas nucales superior e inferior del occipital."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos dorsales de los nervios espinales cervicales."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende la cabeza y el cuello e inclina lateralmente la cabeza."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias occipital y cervical profunda."
+    }
+   ]
+  },
+  "semispinalis cervicis": {
+   "resumen": "Porción cervical del semiespinoso, bajo el semiespinoso de la cabeza.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Procesos transversos de T1–T5."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Procesos espinosos de C2–C5."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos dorsales de los nervios espinales cervicales."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende la columna cervical y la rota hacia el lado opuesto."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria cervical profunda."
+    }
+   ]
+  },
+  "semispinalis thoracis": {
+   "resumen": "Porción torácica del semiespinoso, con fascículos largos que abarcan varias vértebras.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Procesos transversos de T6–T10."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Procesos espinosos de C6–T4."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos dorsales de los nervios espinales torácicos."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende la columna torácica y la rota hacia el lado opuesto."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias intercostales posteriores."
+    }
+   ]
+  },
+  "semitendinosus": {
+   "resumen": "Músculo isquiotibial medial, con un tendón largo y cilíndrico.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Tuberosidad isquiática."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Parte superior de la cara medial de la tibia, en la pata de ganso."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Porción tibial del nervio isquiático."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende la cadera, flexiona la rodilla y rota medialmente la pierna flexionada."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria femoral profunda (perforantes) y arteria glútea inferior."
+    }
+   ]
+  },
+  "septal papillary muscle of ventricle": {
+   "resumen": "Columna muscular que se proyecta desde el septo interventricular hacia la cavidad del ventrículo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Septo interventricular."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Mediante cuerdas tendinosas, a las valvas de la válvula atrioventricular."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Inervación autonómica por el plexo cardíaco."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Tensa las cuerdas tendinosas durante la sístole, evitando la inversión de las valvas."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias coronarias."
+    }
+   ]
+  },
+  "serratus anterior": {
+   "resumen": "Músculo ancho de la pared lateral del tórax, con digitaciones que se interdigitan con el oblicuo externo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Caras externas de las ocho o nueve primeras costillas."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Borde medial de la escápula (cara costal)."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio torácico largo (C5–C7)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Protrae y rota la escápula hacia arriba, y la mantiene aplicada contra el tórax."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias torácica lateral y toracodorsal."
+    }
+   ]
+  },
+  "serratus posterior inferior": {
+   "resumen": "Músculo plano y delgado de la parte inferior del dorso.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Procesos espinosos de T11–L2 y fascia toracolumbar."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Bordes inferiores de las cuatro últimas costillas."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervios intercostales (T9–T12)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Desciende las costillas inferiores y colabora en la espiración."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias intercostales posteriores y lumbares."
+    }
+   ]
+  },
+  "serratus posterior superior": {
+   "resumen": "Músculo plano y delgado de la parte superior del dorso, profundo a los romboides.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Ligamento nucal y procesos espinosos de C7–T3."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Bordes superiores de las costillas segunda a quinta."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervios intercostales (T1–T4)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Eleva las costillas superiores y colabora en la inspiración."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias intercostales posteriores."
+    }
+   ]
+  },
+  "set of anterior cervical intertransversarii": {
+   "resumen": "Conjunto de pequeños músculos entre los procesos transversos cervicales, en su componente anterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Tubérculo anterior de un proceso transverso cervical."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Tubérculo anterior del proceso transverso de la vértebra inmediatamente superior."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos anteriores de los nervios espinales cervicales."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Inclinan lateralmente el cuello y estabilizan la columna cervical."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias vertebral y cervical ascendente."
+    }
+   ]
+  },
+  "set of dorsal interossei of hand": {
+   "resumen": "Conjunto de cuatro músculos bipenniformes entre los metacarpianos, visibles en el dorso de la mano.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Caras adyacentes de dos metacarpianos contiguos."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Expansión extensora y base de la falange proximal del dedo correspondiente (segundo a cuarto)."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Rama profunda del nervio ulnar."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Abducen los dedos respecto del eje del dedo medio y flexionan las articulaciones metacarpofalángicas."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arco palmar profundo y arterias metacarpianas dorsales."
+    }
+   ]
+  },
+  "set of interspinales cervicis": {
+   "resumen": "Conjunto de pequeños músculos pares entre los procesos espinosos de las vértebras cervicales.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Proceso espinoso de una vértebra cervical."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Proceso espinoso de la vértebra cervical inmediatamente superior."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos dorsales de los nervios espinales cervicales."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extienden la columna cervical y refuerzan la propiocepción postural."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias cervical profunda y vertebral."
+    }
+   ]
+  },
+  "set of interspinales lumborum": {
+   "resumen": "Conjunto de pequeños músculos pares entre los procesos espinosos de las vértebras lumbares.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Proceso espinoso de una vértebra lumbar."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Proceso espinoso de la vértebra lumbar inmediatamente superior."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos dorsales de los nervios espinales lumbares."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extienden la columna lumbar y refuerzan la propiocepción postural."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias lumbares."
+    }
+   ]
+  },
+  "set of levatores costarum breves": {
+   "resumen": "Conjunto de pequeños músculos triangulares que unen cada proceso transverso torácico con la costilla inmediatamente inferior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Procesos transversos de C7–T11."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara externa de la costilla subyacente, entre el tubérculo y el ángulo."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos dorsales de los nervios espinales torácicos."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Elevan las costillas durante la inspiración y colaboran en la extensión de la columna."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias intercostales posteriores."
+    }
+   ]
+  },
+  "set of levatores costarum longi": {
+   "resumen": "Conjunto de pequeños músculos que saltan una costilla antes de insertarse, en la parte inferior del tórax.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Procesos transversos de T7–T10."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara externa de la segunda costilla subyacente."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos dorsales de los nervios espinales torácicos."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Elevan las costillas durante la inspiración y colaboran en la extensión de la columna."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias intercostales posteriores."
+    }
+   ]
+  },
+  "set of lumbricals of hand": {
+   "resumen": "Conjunto de cuatro músculos vermiformes de la palma que nacen de los tendones del flexor profundo de los dedos.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Tendones del flexor profundo de los dedos."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Expansiones extensoras de los dedos segundo a quinto, en su lado radial."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Primero y segundo: nervio mediano; tercero y cuarto: rama profunda del nervio ulnar."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexionan las articulaciones metacarpofalángicas y extienden las interfalángicas."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arcos palmares superficial y profundo."
+    }
+   ]
+  },
+  "set of palmar interossei of hand": {
+   "resumen": "Conjunto de músculos pequeños situados entre los metacarpianos, en la cara palmar.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Caras palmares de los metacarpianos primero, segundo, cuarto y quinto."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Expansión extensora y base de la falange proximal del dedo correspondiente."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Rama profunda del nervio ulnar."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Aducen los dedos hacia el eje del dedo medio y flexionan las articulaciones metacarpofalángicas."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arco palmar profundo."
+    }
+   ]
+  },
+  "set of posterior cervical intertransversarii": {
+   "resumen": "Conjunto de pequeños músculos entre los procesos transversos cervicales, en su componente posterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Tubérculo posterior de un proceso transverso cervical."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Tubérculo posterior del proceso transverso de la vértebra inmediatamente superior."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos dorsales de los nervios espinales cervicales."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Inclinan lateralmente el cuello y estabilizan la columna cervical."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias vertebral y cervical profunda."
+    }
+   ]
+  },
+  "short head of biceps brachii": {
+   "resumen": "Cabeza corta del bíceps braquial, medial a la cabeza larga.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Vértice del proceso coracoides de la escápula."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Tuberosidad del radio y aponeurosis bicipital (tendón común)."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio musculocutáneo."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona el codo, supina el antebrazo y colabora en la flexión del hombro."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria braquial."
+    }
+   ]
+  },
+  "short head of biceps femoris": {
+   "resumen": "Cabeza corta del bíceps femoral, que no cruza la articulación de la cadera.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Labio lateral de la línea áspera del fémur."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cabeza de la fíbula."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Porción fibular común del nervio isquiático."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona la rodilla y, con la rodilla flexionada, rota lateralmente la pierna."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria femoral profunda (perforantes)."
+    }
+   ]
+  },
+  "soleus": {
+   "resumen": "Músculo plano y ancho de la pierna, profundo al gastrocnemio; forma el tríceps sural con las cabezas del gastrocnemio.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cabeza y cuarto proximal de la fíbula, línea del sóleo y borde medial de la tibia."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara posterior del calcáneo mediante el tendón calcáneo."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio tibial."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona plantarmente el pie; mantiene la posición erguida al evitar la inclinación hacia delante."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias tibial posterior y fibular."
+    }
+   ]
+  },
+  "spinal part of deltoid": {
+   "resumen": "Porción posterior del músculo deltoides, con fibras que descienden desde la espina de la escápula.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Borde inferior de la espina de la escápula."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Tuberosidad deltoidea del húmero."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio axilar."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende y rota lateralmente el brazo; colabora en la abducción."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria circunfleja humeral posterior y arteria circunfleja escapular."
+    }
+   ]
+  },
+  "spinalis": {
+   "resumen": "Músculo más medial de los erectores de la columna, junto a los procesos espinosos.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Procesos espinosos de las vértebras lumbares superiores y torácicas inferiores."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Procesos espinosos de vértebras torácicas superiores y cervicales."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos dorsales de los nervios espinales."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende la columna vertebral."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias intercostales posteriores y lumbares."
+    }
+   ]
+  },
+  "spinalis thoracis": {
+   "resumen": "Porción torácica del espinal, la más medial de los erectores de la columna.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Procesos espinosos de T11–L2."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Procesos espinosos de T1–T8."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos dorsales de los nervios espinales torácicos."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende la columna torácica."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias intercostales posteriores."
+    }
+   ]
+  },
+  "splenius capitis": {
+   "resumen": "Músculo ancho de la nuca, que cubre los músculos profundos y se dirige hacia el cráneo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Ligamento nucal y procesos espinosos de C7–T3."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Proceso mastoides y parte lateral de la línea nucal superior."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos dorsales de los nervios espinales cervicales."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende la cabeza; si actúa de un solo lado, la inclina y la rota hacia ese lado."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias occipital y cervical transversa."
+    }
+   ]
+  },
+  "splenius cervicis": {
+   "resumen": "Músculo de la nuca, profundo al esplenio de la cabeza, que sube hacia las vértebras cervicales superiores.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Procesos espinosos de T3–T6."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Tubérculos posteriores de los procesos transversos de C1–C3."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos dorsales de los nervios espinales cervicales."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende el cuello; unilateralmente lo rota e inclina hacia el mismo lado."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias cervical profunda y occipital."
+    }
+   ]
+  },
+  "sternocleidomastoid": {
+   "resumen": "Músculo superficial del cuello que va del esternón y la clavícula al cráneo y forma el relieve oblicuo lateral del cuello.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Manubrio del esternón (cabeza esternal) y tercio medial de la clavícula (cabeza clavicular)."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Proceso mastoides y línea nucal superior del occipital."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio accesorio (XI par craneal) y ramas del plexo cervical (C2–C3)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Inclina la cabeza hacia el mismo lado y la rota hacia el lado opuesto; ambos lados flexionan el cuello."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias occipital y tiroidea superior."
+    }
+   ]
+  },
+  "sternocostal part of pectoralis major": {
+   "resumen": "Porción inferior y más grande del pectoral mayor, de fibras horizontales y oblicuas.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara anterior del esternón y cartílagos costales de las seis primeras costillas."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Labio lateral del surco intertubercular del húmero."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervios pectorales lateral y medial."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Aduce y rota medialmente el brazo; lo extiende desde la flexión."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Ramas pectorales de la arteria toracoacromial y arteria torácica interna."
+    }
+   ]
+  },
+  "sternohyoid": {
+   "resumen": "Músculo infrahioideo en cinta, el más superficial de la región anterior del cuello.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Manubrio del esternón y extremo medial de la clavícula."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Borde inferior del cuerpo del hioides."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Asa cervical (C1–C3)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Desciende el hioides tras la deglución."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria tiroidea superior."
+    }
+   ]
+  },
+  "sternothyroid": {
+   "resumen": "Músculo infrahioideo, profundo al esternohioideo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara posterior del manubrio del esternón y primer cartílago costal."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Línea oblicua del cartílago tiroides."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Asa cervical (C1–C3)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Desciende la laringe."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria tiroidea superior."
+    }
+   ]
+  },
+  "straight part of cricothyroid": {
+   "resumen": "Porción recta del músculo cricotiroideo de la laringe.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara anterior del arco del cartílago cricoides."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Lámina del cartílago tiroides, borde inferior."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio laríngeo superior (rama externa)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Tensa las cuerdas vocales inclinando el cartílago tiroides."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria cricotiroidea."
+    }
+   ]
+  },
+  "stylohyoid": {
+   "resumen": "Músculo suprahioideo delgado, que corre junto al vientre posterior del digástrico.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Proceso estiloides del temporal."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cuerpo del hioides, cerca de la unión con el asta mayor."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio facial."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Eleva y retrae el hioides durante la deglución."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias facial y occipital."
+    }
+   ]
+  },
+  "subclavius": {
+   "resumen": "Músculo pequeño bajo la clavícula, entre la clavícula y la primera costilla.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Primera costilla y su cartílago, en la unión costocondral."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara inferior del tercio medio de la clavícula."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio del subclavio (C5–C6)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Estabiliza la clavícula y la deprime, amortiguando la articulación esternoclavicular."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria toracoacromial."
+    }
+   ]
+  },
+  "superficial head of flexor pollicis brevis": {
+   "resumen": "Cabeza superficial del flexor corto del pulgar, lateral en la eminencia tenar.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Retináculo flexor y tubérculo del trapecio."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Base de la falange proximal del pulgar, lateral."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio mediano."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona la articulación metacarpofalángica del pulgar."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria radial y arco palmar superficial."
+    }
+   ]
+  },
+  "superficial perineal muscle": {
+   "resumen": "Músculo transverso superficial del periné, delgado, que cruza el triángulo urogenital.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Rama del isquion."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Centro tendinoso del periné."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio perineal (rama del nervio pudendo)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Estabiliza el centro tendinoso del periné, fijando el cuerpo perineal."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria perineal (rama de la pudenda interna)."
+    }
+   ]
+  },
+  "superior oblique": {
+   "resumen": "Músculo extrínseco del ojo cuyo tendón pasa por la tróclea, en la parte superomedial de la órbita.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cuerpo del esfenoides, sobre el anillo tendinoso común."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara superolateral del globo ocular, por detrás del ecuador (tras pasar por la tróclea)."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio troclear (IV par craneal)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Gira el ojo hacia abajo y hacia fuera (deprime, abduce e intorsiona)."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria oftálmica (rama muscular)."
+    }
+   ]
+  },
+  "superior oblique part of longus colli": {
+   "resumen": "Porción superior oblicua del músculo largo del cuello, en la cara anterior de la columna cervical.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Tubérculos anteriores de los procesos transversos de C3–C5."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Tubérculo anterior del atlas."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos anteriores de los nervios espinales cervicales (C2–C6)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona e inclina la columna cervical hacia el lado de acción."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias vertebral y cervical ascendente."
+    }
+   ]
+  },
+  "superior rectus": {
+   "resumen": "Músculo extrínseco del ojo en el lado superior del globo ocular.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Anillo tendinoso común, en el vértice de la órbita."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara superior del globo ocular, por detrás de la córnea."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio oculomotor (III par craneal)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Eleva el globo ocular; produce también aducción e intorsión."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria oftálmica (rama muscular lateral)."
+    }
+   ]
+  },
+  "supinator": {
+   "resumen": "Músculo plano y profundo del antebrazo que rodea el extremo proximal del radio.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Epicóndilo lateral del húmero, ligamento colateral radial y cresta del supinador de la ulna."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara lateral del tercio proximal del radio."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio interóseo posterior (rama del nervio radial)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Supina el antebrazo, es decir, gira la palma hacia arriba."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria recurrente radial y arteria interósea posterior."
+    }
+   ]
+  },
+  "supraspinatus": {
+   "resumen": "Músculo de la fosa supraespinosa de la escápula, uno de los músculos del manguito rotador.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Fosa supraespinosa de la escápula."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Faceta superior del tubérculo mayor del húmero."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio supraescapular."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Inicia la abducción del brazo y estabiliza la cabeza del húmero en la cavidad glenoidea."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria supraescapular."
+    }
+   ]
+  },
+  "tensor veli palatini": {
+   "resumen": "Músculo del paladar blando, que rodea el gancho pterigoideo con su tendón.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Fosa escafoidea, espina del esfenoides y cartílago de la tuba auditiva."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Aponeurosis palatina del paladar blando."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio del músculo tensor del velo del paladar (rama del nervio mandibular)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Tensa el velo del paladar y abre la tuba auditiva al deglutir o bostezar."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias palatina ascendente y palatina mayor."
+    }
+   ]
+  },
+  "teres major": {
+   "resumen": "Músculo grueso que va de la escápula al húmero, formando el borde inferior de la axila posterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Ángulo inferior y borde lateral de la escápula."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Labio medial del surco intertubercular del húmero."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio subescapular inferior."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Aduce y rota medialmente el brazo y lo extiende desde la flexión."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias circunfleja escapular y toracodorsal."
+    }
+   ]
+  },
+  "teres minor": {
+   "resumen": "Músculo pequeño del manguito rotador, ubicado bajo el infraespinoso.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Parte superior del borde lateral de la escápula."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Faceta inferior del tubérculo mayor del húmero."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio axilar."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Rota lateralmente el brazo y estabiliza la cabeza del húmero."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias circunfleja escapular y circunfleja humeral posterior."
+    }
+   ]
+  },
+  "third lumbrical of foot": {
+   "resumen": "Músculo pequeño de la planta del pie, en la capa intermedia.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Tendones del flexor largo de los dedos para el tercer y cuarto dedo."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Expansión extensora del cuarto dedo, en su lado medial."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio plantar lateral."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona la articulación metatarsofalángica y extiende las interfalángicas del cuarto dedo."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias plantares."
+    }
+   ]
+  },
+  "third plantar interosseous of foot": {
+   "resumen": "Músculo pequeño entre los metatarsianos, en la cara plantar.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara medial del quinto metatarsiano."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Lado medial de la falange proximal del quinto dedo."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio plantar lateral."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Aduce el quinto dedo hacia el segundo."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias plantares."
+    }
+   ]
+  },
+  "thoracic rotator": {
+   "resumen": "Pequeños músculos profundos del grupo transversoespinoso, en la región torácica.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Proceso transverso de una vértebra torácica."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Base del proceso espinoso de la vértebra situada uno o dos niveles por encima."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos dorsales de los nervios espinales torácicos."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extienden y rotan la columna hacia el lado opuesto; actúan sobre todo como propioceptores posturales."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias intercostales posteriores."
+    }
+   ]
+  },
+  "thyro-arytenoid": {
+   "resumen": "Músculo intrínseco de la laringe que forma el cuerpo de la cuerda vocal junto al vocal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Ángulo interno del cartílago tiroides."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Proceso muscular y cara anterolateral del aritenoides."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio laríngeo recurrente (nervio vago)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Relaja las cuerdas vocales y acorta la glotis; colabora en el cierre del orificio."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria laríngea inferior."
+    }
+   ]
+  },
+  "thyrohyoid": {
+   "resumen": "Músculo infrahioideo corto, continuación superior del esternotiroideo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Línea oblicua del cartílago tiroides."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Asta mayor y cuerpo del hioides."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Fibras de C1 que acompañan al nervio hipogloso."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Desciende el hioides o eleva la laringe, según el punto fijo."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria tiroidea superior."
+    }
+   ]
+  },
+  "transverse arytenoid": {
+   "resumen": "Músculo intrínseco de la laringe que une transversalmente los dos aritenoides por detrás.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Borde posterior y cara posterior de un aritenoides."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Mismo borde del aritenoides del lado opuesto."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio laríngeo recurrente (nervio vago)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Aproxima los aritenoides y cierra la porción posterior de la glotis."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias laríngeas superior e inferior."
+    }
+   ]
+  },
+  "transverse head of adductor hallucis": {
+   "resumen": "Cabeza transversa del aductor del hallux, que cruza los cuellos de los metatarsianos.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Ligamentos metatarsofalángicos de los tres últimos dedos."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Base de la falange proximal del hallux, junto con la cabeza oblicua."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio plantar lateral (rama profunda)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Aduce el hallux y sostiene el arco transversal del pie."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arco plantar profundo."
+    }
+   ]
+  },
+  "transverse head of adductor pollicis": {
+   "resumen": "Cabeza transversa del aductor del pulgar, profunda en la palma.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara palmar del tercer metacarpiano."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Lado medial de la base de la falange proximal del pulgar."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Rama profunda del nervio ulnar."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Aduce el pulgar hacia la palma y participa en la pinza."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arco palmar profundo."
+    }
+   ]
+  },
+  "transverse part of trapezius": {
+   "resumen": "Porción media del trapecio, de fibras horizontales hacia el hombro.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Ligamento nucal y procesos espinosos de C7–T6."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Acromion y espina de la escápula."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio accesorio (XI par craneal) y ramas del plexo cervical (C3–C4)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Retrae la escápula y estabiliza el hombro."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria cervical transversa y arteria dorsal de la escápula."
+    }
+   ]
+  },
+  "transversus thoracis": {
+   "resumen": "Músculo delgado en la cara interna de la pared anterior del tórax, profundo al esternón.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cara posterior del cuerpo del esternón y proceso xifoides."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cartílagos costales de las costillas segunda a sexta."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervios intercostales adyacentes."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Desciende los cartílagos costales y colabora en la espiración forzada."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias torácica interna e intercostales anteriores."
+    }
+   ]
+  },
+  "ulnar head of flexor carpi ulnaris": {
+   "resumen": "Cabeza ulnar del flexor ulnar del carpo, en el lado ulnar del compartimento anterior del antebrazo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Olécranon y borde posterior de la ulna."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Hueso pisiforme, gancho del hueso ganchoso y base del quinto metacarpiano."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio ulnar."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona y aduce la mano en la muñeca."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria ulnar."
+    }
+   ]
+  },
+  "ulnar head of pronator teres": {
+   "resumen": "Cabeza ulnar del pronador redondo, delgada y profunda.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Proceso coronoides de la ulna."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cara lateral del tercio medio del radio."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio mediano."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Pronación del antebrazo y colabora en la flexión del codo."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria ulnar."
+    }
+   ]
+  },
+  "uvular muscle": {
+   "resumen": "Músculo del paladar blando que forma el cuerpo de la úvula.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Espina nasal posterior y aponeurosis palatina."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Mucosa de la úvula."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Plexo faríngeo (fibras del nervio vago)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Acorta y eleva la úvula, contribuyendo al cierre nasofaríngeo."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria palatina ascendente."
+    }
+   ]
+  },
+  "vastus intermedius": {
+   "resumen": "Músculo profundo del cuadríceps femoral, bajo el recto femoral.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Caras anterior y lateral de los dos tercios proximales del fémur."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Base de la patela y tuberosidad de la tibia por el ligamento patelar."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio femoral."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende la rodilla."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria femoral profunda."
+    }
+   ]
+  },
+  "vastus lateralis": {
+   "resumen": "Músculo más grande del cuadríceps femoral, en el lado lateral del muslo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Trocánter mayor y labio lateral de la línea áspera del fémur."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Base y borde lateral de la patela; tuberosidad de la tibia por el ligamento patelar."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio femoral."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende la rodilla."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria femoral profunda (circunfleja femoral lateral)."
+    }
+   ]
+  },
+  "vastus medialis": {
+   "resumen": "Músculo del cuadríceps femoral en el lado medial del muslo, con fibras oblicuas distales que estabilizan la patela.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Línea intertrocantérica y labio medial de la línea áspera del fémur."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Base y borde medial de la patela; tuberosidad de la tibia por el ligamento patelar."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio femoral."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Extiende la rodilla y estabiliza la patela."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias femoral y femoral profunda."
+    }
+   ]
+  },
+  "vertical intermediate part of longus colli": {
+   "resumen": "Porción vertical intermedia del músculo largo del cuello, en la cara anterior de la columna.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Cuerpos de las tres vértebras torácicas superiores y las tres cervicales inferiores."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Cuerpos de C2–C4."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Ramos anteriores de los nervios espinales cervicales (C2–C6)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Flexiona la columna cervical."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arterias vertebral y cervical ascendente."
+    }
+   ]
+  },
+  "vocalis": {
+   "resumen": "Fascículo medial del tiroaritenoideo que forma el cuerpo de la cuerda vocal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Ángulo interno del cartílago tiroides."
+    },
+    {
+     "titulo": "Inserción",
+     "texto": "Proceso vocal del aritenoides."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Nervio laríngeo recurrente (nervio vago)."
+    },
+    {
+     "titulo": "Acción",
+     "texto": "Regula la tensión del borde libre de la cuerda vocal, modulando el tono de la voz."
+    },
+    {
+     "titulo": "Irrigación",
+     "texto": "Arteria laríngea inferior."
+    }
+   ]
+  }
+ }
+}

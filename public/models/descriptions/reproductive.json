@@ -1,0 +1,404 @@
+{
+  "system": "reproductive",
+  "entries": {
+    "corpus cavernosum of penis": {
+      "resumen": "Cuerpo cilíndrico de tejido eréctil, par, que forma el dorso y los lados del cuerpo del pene; se llena de sangre durante la erección.",
+      "detalles": [
+        {
+          "titulo": "Ubicación",
+          "texto": "Dos columnas paralelas en la parte dorsal del pene; hacia atrás se separan como pilares fijados a las ramas isquiopubianas, y están rodeadas por la túnica albugínea."
+        },
+        {
+          "titulo": "Partes",
+          "texto": "Cada cuerpo cavernoso es una masa de espacios vasculares (cavernas) separados por trabéculas de músculo liso y tejido conectivo; ambos se comunican por un tabique incompleto, y la arteria profunda del pene recorre su centro."
+        },
+        {
+          "titulo": "Irrigación",
+          "texto": "Arterias profundas y dorsales del pene, ramas de la arteria pudenda interna; el retorno venoso va a las venas dorsales del pene y a los plexos prostático y vesical. La linfa de la piel del pene drena a los ganglios inguinales superficiales y la de las porciones profundas a los ganglios ilíacos."
+        },
+        {
+          "titulo": "Función",
+          "texto": "Almacena sangre bajo presión y da rigidez al pene durante la erección, necesaria para la penetración en el coito."
+        }
+      ]
+    },
+    "corpus spongiosum of penis": {
+      "resumen": "Columna impar de tejido eréctil que rodea la uretra y se expande en su extremo distal formando el glande.",
+      "detalles": [
+        {
+          "titulo": "Ubicación",
+          "texto": "En la cara ventral del pene, en el surco entre los dos cuerpos cavernosos; su extremo posterior se ensancha en el bulbo del pene, en el periné."
+        },
+        {
+          "titulo": "Partes",
+          "texto": "Bulbo del pene (extremo posterior), cuerpo esponjoso propiamente dicho y glande (extremo distal). La uretra esponjosa lo atraviesa en toda su longitud."
+        },
+        {
+          "titulo": "Irrigación",
+          "texto": "Arteria del bulbo del pene y arteria uretral, ramas de la arteria pudenda interna; drenaje venoso a las venas dorsales y bulbares. La linfa se dirige a los ganglios inguinales y, desde las porciones profundas, a los ganglios ilíacos."
+        },
+        {
+          "titulo": "Función",
+          "texto": "Mantiene permeable la uretra durante la erección, para que pase el semen en la eyaculación, y forma el glande, sensible al tacto."
+        }
+      ]
+    },
+    "glans penis": {
+      "resumen": "Extremo distal expandido del pene, en forma de capuchón, cubierto por el prepucio y rico en terminaciones sensitivas.",
+      "detalles": [
+        {
+          "titulo": "Ubicación",
+          "texto": "Cubre los extremos distales de los cuerpos cavernosos y es la continuación del cuerpo esponjoso; en su vértice se abre el orificio uretral externo."
+        },
+        {
+          "titulo": "Partes",
+          "texto": "Corona del glande (reborde posterior), surco coronario, orificio uretral externo en el vértice y frenillo en la cara ventral."
+        },
+        {
+          "titulo": "Irrigación",
+          "texto": "Ramas de las arterias dorsales del pene y de la arteria uretral, de la pudenda interna; drenaje venoso a la vena dorsal profunda. La linfa drena a los ganglios inguinales superficiales y profundos."
+        },
+        {
+          "titulo": "Función",
+          "texto": "Zona de mayor sensibilidad del pene y salida de la orina y del semen."
+        }
+      ]
+    },
+    "deferent duct": {
+      "resumen": "Conducto muscular largo que transporta los espermatozoides desde el epidídimo hasta la uretra; su pared gruesa se palpa como un cordón firme en el escroto.",
+      "detalles": [
+        {
+          "titulo": "Ubicación",
+          "texto": "Nace en la cola del epidídimo, asciende por el cordón espermático, atraviesa el conducto inguinal, cruza la pelvis por detrás de la vejiga y llega a la base de la próstata."
+        },
+        {
+          "titulo": "Partes",
+          "texto": "Porción escrotal, inguinal, pélvica y ampolla del conducto deferente, que se une al conducto de la vesícula seminal para formar el conducto eyaculador."
+        },
+        {
+          "titulo": "Irrigación",
+          "texto": "Arteria del conducto deferente, rama de la arteria vesical inferior o umbilical; drenaje venoso al plexo pampiniforme y al plexo vesical. La linfa drena a los ganglios ilíacos externos."
+        },
+        {
+          "titulo": "Función",
+          "texto": "Conduce y propulsa los espermatozoides durante la eyaculación mediante contracciones peristálticas de su capa muscular."
+        }
+      ]
+    },
+    "epididymis": {
+      "resumen": "Estructura alargada en forma de coma sobre el testículo, formada por un conducto muy enrollado donde los espermatozoides maduran y se almacenan.",
+      "detalles": [
+        {
+          "titulo": "Ubicación",
+          "texto": "Adosado a la cara posterior y al borde superior del testículo, dentro del escroto."
+        },
+        {
+          "titulo": "Partes",
+          "texto": "Cabeza (arriba, recibe los conductillos eferentes), cuerpo y cola (abajo, continúa con el conducto deferente)."
+        },
+        {
+          "titulo": "Irrigación",
+          "texto": "Arteria testicular y arteria del conducto deferente; drenaje venoso al plexo pampiniforme. La linfa drena a los ganglios lumboaórticos (lumbares)."
+        },
+        {
+          "titulo": "Función",
+          "texto": "Almacena y madura los espermatozoides, que adquieren movilidad antes de la eyaculación."
+        }
+      ]
+    },
+    "seminal vesicle": {
+      "resumen": "Glándula par en forma de saco plegado que produce la mayor parte del líquido seminal, rico en fructosa.",
+      "detalles": [
+        {
+          "titulo": "Ubicación",
+          "texto": "En la pelvis menor, detrás de la vejiga y delante del recto, por encima de la próstata y por fuera de las ampollas de los conductos deferentes."
+        },
+        {
+          "titulo": "Partes",
+          "texto": "Cuerpo, fondo y conducto excretor, que se une al conducto deferente para formar el conducto eyaculador."
+        },
+        {
+          "titulo": "Irrigación",
+          "texto": "Arterias vesical inferior y rectal media, ramas de la ilíaca interna; drenaje venoso a las venas ilíacas internas. La linfa drena a los ganglios ilíacos internos."
+        },
+        {
+          "titulo": "Función",
+          "texto": "Secreta un líquido alcalino y nutritivo que aporta cerca de dos tercios del volumen del semen y energía a los espermatozoides."
+        }
+      ]
+    },
+    "testis": {
+      "resumen": "Gónada masculina ovoide, par, que produce espermatozoides y testosterona.",
+      "detalles": [
+        {
+          "titulo": "Ubicación",
+          "texto": "Dentro del escroto, suspendido por el cordón espermático; rodeado por la túnica albugínea y la túnica vaginal."
+        },
+        {
+          "titulo": "Partes",
+          "texto": "Lobulillos con túbulos seminíferos (donde se forman los espermatozoides), tejido intersticial con células de Leydig y rete testis, que se continúa con el epidídimo mediante los conductillos eferentes."
+        },
+        {
+          "titulo": "Irrigación",
+          "texto": "Arteria testicular, rama de la aorta abdominal; drenaje venoso por el plexo pampiniforme hacia la vena testicular. La linfa drena a los ganglios lumboaórticos, no a los inguinales."
+        },
+        {
+          "titulo": "Función",
+          "texto": "Produce espermatozoides (espermatogénesis) y secreta testosterona, hormona que regula los caracteres sexuales masculinos."
+        }
+      ]
+    },
+    "prostate": {
+      "resumen": "Glándula impar del tamaño de una nuez, que rodea el inicio de la uretra y aporta una parte del líquido seminal.",
+      "detalles": [
+        {
+          "titulo": "Ubicación",
+          "texto": "En la pelvis menor, debajo de la vejiga y delante del recto, por lo que se puede palpar mediante el tacto rectal; la uretra prostática la atraviesa."
+        },
+        {
+          "titulo": "Partes",
+          "texto": "Base (junto a la vejiga), vértice (hacia el diafragma urogenital), lóbulos laterales y medio, e istmo. Los conductos eyaculadores la atraviesan."
+        },
+        {
+          "titulo": "Irrigación",
+          "texto": "Arterias vesical inferior y rectal media, ramas de la ilíaca interna; drenaje venoso al plexo prostático y a las venas ilíacas internas. La linfa drena a los ganglios ilíacos internos y sacros."
+        },
+        {
+          "titulo": "Función",
+          "texto": "Secreta un líquido ligeramente ácido, con enzimas como el antígeno prostático específico, que forma parte del semen y favorece la movilidad de los espermatozoides."
+        }
+      ]
+    },
+    "fundus of uterus": {
+      "resumen": "Porción superior abovedada del útero, por encima de la entrada de las trompas uterinas.",
+      "detalles": [
+        {
+          "titulo": "Ubicación",
+          "texto": "Extremo superior del útero, en la pelvis menor; su altura se usa como referencia para estimar la edad gestacional durante el embarazo."
+        },
+        {
+          "titulo": "Partes",
+          "texto": "Es la parte del cuerpo uterino situada por encima de los cuernos, donde desembocan las trompas."
+        },
+        {
+          "titulo": "Irrigación",
+          "texto": "Arterias uterinas, ramas de las ilíacas internas, y ramas de las arterias ováricas; drenaje venoso a los plexos uterino y ovárico. La linfa drena sobre todo a los ganglios lumboaórticos y, en parte, a los inguinales por el ligamento redondo."
+        },
+        {
+          "titulo": "Función",
+          "texto": "Es la zona del útero que más se expande durante el embarazo y la que se contrae con más fuerza en el parto."
+        }
+      ]
+    },
+    "body of uterus": {
+      "resumen": "Porción principal del útero, órgano muscular hueco de la pelvis donde se implanta y desarrolla el embrión.",
+      "detalles": [
+        {
+          "titulo": "Ubicación",
+          "texto": "En la pelvis menor, entre la vejiga por delante y el recto por detrás, habitualmente en anteversión y anteflexión."
+        },
+        {
+          "titulo": "Partes",
+          "texto": "Pared formada por tres capas: perimetrio (serosa), miometrio (músculo liso) y endometrio (mucosa), que se renueva en cada ciclo menstrual. Su cavidad es triangular."
+        },
+        {
+          "titulo": "Irrigación",
+          "texto": "Arterias uterinas, ramas de las ilíacas internas; drenaje venoso al plexo uterino y a las venas ilíacas internas. La linfa drena a los ganglios ilíacos y lumboaórticos."
+        },
+        {
+          "titulo": "Función",
+          "texto": "Aloja la implantación del embrión, sostiene el desarrollo del feto y lo expulsa con las contracciones del miometrio en el parto."
+        }
+      ]
+    },
+    "cornua of uterus": {
+      "resumen": "Ángulos superolaterales del útero, donde desembocan las trompas uterinas.",
+      "detalles": [
+        {
+          "titulo": "Ubicación",
+          "texto": "En los extremos laterales del fondo uterino; allí se insertan los ligamentos redondo y propio del ovario."
+        },
+        {
+          "titulo": "Partes",
+          "texto": "Cada cuerno recibe la porción intramural (uterina) de la trompa; por debajo y por delante nace el ligamento redondo del útero."
+        },
+        {
+          "titulo": "Irrigación",
+          "texto": "Ramas tubáricas de las arterias uterina y ovárica, que se anastomosan entre sí; la linfa drena a los ganglios lumboaórticos y, a través del ligamento redondo, a los inguinales superficiales."
+        },
+        {
+          "titulo": "Función",
+          "texto": "Es el punto de paso de los óvulos y de los espermatozoides entre la trompa y la cavidad uterina."
+        }
+      ]
+    },
+    "lower uterine segment": {
+      "resumen": "Porción inferior adelgazada del cuerpo del útero, justo por encima del cuello; se forma sobre todo en el último trimestre del embarazo.",
+      "detalles": [
+        {
+          "titulo": "Ubicación",
+          "texto": "Entre el cuerpo y el cuello del útero, a la altura del istmo, por detrás del repliegue peritoneal vesicouterino."
+        },
+        {
+          "titulo": "Partes",
+          "texto": "Corresponde al istmo uterino; su pared es más delgada que la del cuerpo."
+        },
+        {
+          "titulo": "Irrigación",
+          "texto": "Ramas descendentes de las arterias uterinas; drenaje venoso al plexo uterino. La linfa drena a los ganglios ilíacos internos y externos."
+        },
+        {
+          "titulo": "Función",
+          "texto": "Es la zona por la que se hace la incisión de la cesárea, por ser delgada, poco vascularizada y estar cubierta por el peritoneo."
+        }
+      ]
+    },
+    "cervix of uterus": {
+      "resumen": "Porción inferior estrecha del útero que se proyecta dentro de la vagina y comunica la cavidad uterina con ella.",
+      "detalles": [
+        {
+          "titulo": "Ubicación",
+          "texto": "Parte inferior del útero, que se proyecta en la parte superior de la vagina, por delante del recto y detrás de la vejiga."
+        },
+        {
+          "titulo": "Partes",
+          "texto": "Porción supravaginal, porción vaginal (hocico de tenca) con los orificios cervicales interno y externo, y conducto del cuello, o endocérvix, tapizado por glándulas mucosas."
+        },
+        {
+          "titulo": "Irrigación",
+          "texto": "Ramas cervicovaginales de las arterias uterinas; drenaje venoso al plexo uterovaginal. La linfa drena a los ganglios ilíacos externos, internos y sacros."
+        },
+        {
+          "titulo": "Función",
+          "texto": "Produce moco cervical, que cambia con el ciclo y actúa como barrera o permite el paso de los espermatozoides, y se dilata en el parto para dar salida al feto."
+        }
+      ]
+    },
+    "cervicovaginal junction": {
+      "resumen": "Zona de transición donde el cuello del útero se une con la vagina y donde se forman los fondos de saco vaginales.",
+      "detalles": [
+        {
+          "titulo": "Ubicación",
+          "texto": "En la parte superior de la vagina, alrededor de la porción vaginal del cuello; es el punto donde la vagina se inserta en el cuello."
+        },
+        {
+          "titulo": "Partes",
+          "texto": "Incluye el límite entre el epitelio plano del exocérvix y el cilíndrico del endocérvix (zona de transformación) y los fondos de saco vaginales."
+        },
+        {
+          "titulo": "Irrigación",
+          "texto": "Ramas cervicovaginales de la arteria uterina y ramas de la arteria vaginal; drenaje venoso al plexo uterovaginal. La linfa drena a los ganglios ilíacos internos y externos."
+        },
+        {
+          "titulo": "Función",
+          "texto": "Es la zona de la que se toma la citología (Papanicolaou) para detectar cáncer de cuello uterino."
+        }
+      ]
+    },
+    "uterine tube": {
+      "resumen": "Conducto muscular par que lleva el óvulo desde el ovario hasta el útero; es el sitio habitual de la fecundación.",
+      "detalles": [
+        {
+          "titulo": "Ubicación",
+          "texto": "A cada lado del útero, en el borde superior del ligamento ancho, entre el ovario y el cuerno uterino."
+        },
+        {
+          "titulo": "Partes",
+          "texto": "De lateral a medial: infundíbulo con fimbrias, ampolla (la porción más larga, donde ocurre la fecundación), istmo y porción uterina (intramural)."
+        },
+        {
+          "titulo": "Irrigación",
+          "texto": "Ramas tubáricas de las arterias uterina y ovárica; drenaje venoso a los plexos uterino y ovárico. La linfa drena a los ganglios lumboaórticos."
+        },
+        {
+          "titulo": "Función",
+          "texto": "Capta el óvulo con las fimbrias, lo transporta con cilios y contracciones, y ofrece el medio para la fecundación; un embrión que se implanta aquí produce un embarazo ectópico."
+        }
+      ]
+    },
+    "ovary": {
+      "resumen": "Gónada femenina ovoide, par, que produce los óvulos y las hormonas sexuales femeninas.",
+      "detalles": [
+        {
+          "titulo": "Ubicación",
+          "texto": "En la pelvis menor, a cada lado del útero, en la fosa ovárica de la pared lateral; fijado por el ligamento propio del ovario y el ligamento suspensorio."
+        },
+        {
+          "titulo": "Partes",
+          "texto": "Corteza, con los folículos en distintas etapas, y médula, con vasos y tejido conectivo; a su alrededor están las fimbrias de la trompa."
+        },
+        {
+          "titulo": "Irrigación",
+          "texto": "Arteria ovárica, rama de la aorta abdominal, que se anastomosa con la rama ovárica de la uterina; drenaje venoso por el plexo pampiniforme hacia la vena ovárica. La linfa drena a los ganglios lumboaórticos."
+        },
+        {
+          "titulo": "Función",
+          "texto": "Libera un óvulo en cada ciclo (ovulación) y produce estrógenos y progesterona, que regulan el ciclo menstrual."
+        }
+      ]
+    },
+    "adipose tissue of breast": {
+      "resumen": "Tejido graso que rodea y sostiene el tejido glandular de la mama y le da su forma y volumen.",
+      "detalles": [
+        {
+          "titulo": "Ubicación",
+          "texto": "Cubre la glándula mamaria sobre el músculo pectoral mayor, entre la piel y la fascia pectoral, desde la segunda hasta la sexta costilla, con una prolongación hacia la axila."
+        },
+        {
+          "titulo": "Partes",
+          "texto": "Se distribuye entre los lobulillos y los ligamentos suspensorios de la mama (de Cooper), que unen la piel a la fascia profunda."
+        },
+        {
+          "titulo": "Irrigación",
+          "texto": "Arterias torácica interna, torácica lateral e intercostales; la linfa drena sobre todo a los ganglios axilares y, en parte, a los paraesternales."
+        },
+        {
+          "titulo": "Función",
+          "texto": "Da volumen, forma y protección a la mama; su cantidad varía con la edad, el peso y las hormonas."
+        }
+      ]
+    },
+    "mammary lobes": {
+      "resumen": "Unidades de tejido glandular de la mama donde se produce la leche, organizadas en lobulillos y lóbulos.",
+      "detalles": [
+        {
+          "titulo": "Ubicación",
+          "texto": "Dentro de la mama, dispuestos de forma radiada alrededor del pezón, en número de unos quince a veinte lóbulos."
+        },
+        {
+          "titulo": "Partes",
+          "texto": "Cada lóbulo reúne lobulillos con alvéolos secretores, que desembocan en un conducto galactóforo propio hacia el pezón."
+        },
+        {
+          "titulo": "Irrigación",
+          "texto": "Arterias torácica interna, torácica lateral e intercostales; la linfa drena sobre todo a los ganglios axilares y, en parte, a los paraesternales."
+        },
+        {
+          "titulo": "Función",
+          "texto": "Producen leche durante la lactancia, bajo la acción de la prolactina, y la expulsan por la acción de la oxitocina."
+        }
+      ]
+    },
+    "lactiferous ducts": {
+      "resumen": "Conductos que llevan la leche desde los lobulillos hasta el pezón.",
+      "detalles": [
+        {
+          "titulo": "Ubicación",
+          "texto": "Convergen desde cada lóbulo hacia el pezón, donde se abren en la superficie; bajo la areola presentan una dilatación, el seno galactóforo."
+        },
+        {
+          "titulo": "Partes",
+          "texto": "Conducto galactóforo de cada lóbulo, seno galactóforo (ampolla subareolar) y orificio en el pezón."
+        },
+        {
+          "titulo": "Irrigación",
+          "texto": "Arterias torácica interna, torácica lateral e intercostales; la linfa drena sobre todo a los ganglios axilares, pasando por el plexo subareolar."
+        },
+        {
+          "titulo": "Función",
+          "texto": "Recogen la leche producida en los lobulillos y la conducen hasta el pezón para la lactancia."
+        }
+      ]
+    }
+  }
+}

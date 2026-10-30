@@ -1,0 +1,4925 @@
+{
+ "system": "arterial",
+ "entries": {
+  "anterior cerebral artery": {
+   "resumen": "Rama terminal de la arteria carótida interna que irriga la cara medial de los hemisferios cerebrales. Se dirige hacia adelante y arriba, siguiendo la fisura longitudinal del cerebro.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria carótida interna, lateralmente al quiasma óptico."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia la fisura longitudinal, se une a su homóloga por la arteria comunicante anterior y rodea la rodilla del cuerpo calloso, donde continúa como arteria pericallosa."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arteria comunicante anterior, arterias frontobasales medial y prefrontal, arteria callosomarginal y arteria pericallosa."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Cara medial de los lóbulos frontal y parietal, parte superior de la cara lateral del hemisferio y cuerpo calloso."
+    }
+   ]
+  },
+  "anterior communicating artery": {
+   "resumen": "Pequeña arteria impar que une las dos arterias cerebrales anteriores. Cierra por delante el polígono arterial de Willis.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se forma entre las dos arterias cerebrales anteriores, delante del quiasma óptico."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Es muy corta y atraviesa transversalmente la fisura longitudinal del cerebro."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Comunica ambos territorios carotídeos; aporta ramas perforantes a la región hipotalámica anterior."
+    }
+   ]
+  },
+  "anterior inferior cerebellar artery": {
+   "resumen": "Arteria del tronco encefálico que irriga la parte anteroinferior del cerebelo. Se origina en el tercio inferior del tronco basilar.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria basilar, cerca de su origen."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige lateralmente en relación con los nervios facial y vestibulococlear, hacia el conducto auditivo interno y el flóculo."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arteria laberíntica (del laberinto), a veces ramas pontinas."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Cara inferior del cerebelo, flóculo, protuberancia inferior y oído interno."
+    }
+   ]
+  },
+  "anterior spinal artery": {
+   "resumen": "Arteria impar que recorre la cara anterior de la médula espinal por la fisura mediana anterior. Se forma por la unión de ramas de las arterias vertebrales.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se forma por la unión de dos ramas que provienen de las arterias vertebrales."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por la cara anterior del bulbo raquídeo y de la médula espinal, junto a la fisura mediana anterior."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Ramas sulcales y ramas coronales (pialeas)."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Dos tercios anteriores de la médula espinal."
+    }
+   ]
+  },
+  "anterior choroidal artery": {
+   "resumen": "Arteria delgada que irriga el plexo coroideo del ventrículo lateral y estructuras profundas del cerebro. Su calibre pequeño la hace vulnerable a la oclusión.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria carótida interna, poco después del origen de la comunicante posterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Pasa por debajo del tracto óptico, rodea el pedúnculo cerebral y llega al asta temporal del ventrículo lateral."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Ramas para el brazo posterior de la cápsula interna."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Plexo coroideo del ventrículo lateral, tracto óptico, parte de la cápsula interna y de los núcleos de la base."
+    }
+   ]
+  },
+  "anterior temporal artery": {
+   "resumen": "Rama de la arteria cerebral media que irriga la parte anterior del lóbulo temporal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria cerebral media."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia abajo y adelante sobre la cara lateral del lóbulo temporal."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Parte anterior del lóbulo temporal."
+    }
+   ]
+  },
+  "insular part of middle cerebral artery": {
+   "resumen": "Segmento de la arteria cerebral media que recorre la superficie de la ínsula, en la profundidad del surco lateral.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Continúa al segmento esfenoidal de la arteria cerebral media."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende sobre la ínsula, en el fondo del surco lateral, y luego sale por los opérculos."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias corticales hacia los lóbulos frontal, parietal y temporal."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Ínsula y corteza vecina."
+    }
+   ]
+  },
+  "anterior temporal branch of lateral occipital artery": {
+   "resumen": "Rama de la arteria occipital lateral que se dirige a la parte anterior de la cara inferior del lóbulo temporal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria occipital lateral."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Discurre por la cara inferior del lóbulo temporal."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Parte anterior de la cara inferior del lóbulo temporal."
+    }
+   ]
+  },
+  "anterolateral central branch of middle cerebral artery": {
+   "resumen": "Ramas perforantes finas, también llamadas lenticuloestriadas, que penetran en la sustancia perforada anterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nacen del segmento esfenoidal de la arteria cerebral media."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Ascienden penetrando en la sustancia perforada anterior hacia los núcleos de la base."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Núcleos de la base (putamen, globo pálido, cabeza del núcleo caudado) y cápsula interna."
+    }
+   ]
+  },
+  "artery of central sulcus": {
+   "resumen": "Rama cortical de la arteria cerebral media que sigue el surco central.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria cerebral media."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por el surco central, entre los giros precentral y poscentral."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Giros precentral y poscentral, áreas motora y sensitiva primarias."
+    }
+   ]
+  },
+  "artery of postcentral sulcus": {
+   "resumen": "Rama cortical de la arteria cerebral media que sigue el surco poscentral.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria cerebral media."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia arriba y atrás por el surco poscentral."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Giro poscentral y lóbulo parietal adyacente."
+    }
+   ]
+  },
+  "anterior parietal artery": {
+   "resumen": "Rama cortical de la arteria cerebral media destinada al lóbulo parietal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria cerebral media."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende hacia el lóbulo parietal sobre la cara lateral del hemisferio."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Parte anterior del lóbulo parietal."
+    }
+   ]
+  },
+  "artery of precentral sulcus": {
+   "resumen": "Rama cortical de la arteria cerebral media que sigue el surco precentral.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria cerebral media."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por el surco precentral, por delante del surco central."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Giro precentral y corteza frontal posterior."
+    }
+   ]
+  },
+  "precuneal branch of pericallosal artery": {
+   "resumen": "Rama de la arteria pericallosa que irriga el precúneo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria pericallosa."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia arriba y atrás sobre la cara medial del lóbulo parietal."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Precúneo."
+    }
+   ]
+  },
+  "basilar artery": {
+   "resumen": "Arteria impar formada por la unión de las dos arterias vertebrales. Asciende por la cara anterior de la protuberancia.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se forma por la fusión de las arterias vertebrales, en el borde inferior de la protuberancia."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por el surco basilar de la protuberancia, en la cisterna pontina, hasta dividirse en las dos arterias cerebrales posteriores."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias cerebelosa anteroinferior, cerebelosa superior, ramas pontinas, arteria laberíntica y arterias cerebrales posteriores."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Protuberancia, cerebelo, oído interno y, por sus ramas terminales, lóbulos occipital y temporal."
+    }
+   ]
+  },
+  "branch of middle cerebral artery to angular gyrus": {
+   "resumen": "Rama cortical de la arteria cerebral media destinada al giro angular.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria cerebral media."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia atrás sobre la cara lateral del lóbulo parietal inferior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Giro angular."
+    }
+   ]
+  },
+  "branch of anterior choroidal artery to posterior limb of internal capsule": {
+   "resumen": "Pequeña rama de la arteria coroidea anterior para el brazo posterior de la cápsula interna.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria coroidea anterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Penetra en la sustancia cerebral profunda."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Brazo posterior de la cápsula interna."
+    }
+   ]
+  },
+  "thalamogeniculate artery": {
+   "resumen": "Arteria perforante fina que irriga los cuerpos geniculados y el tálamo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria cerebral posterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Penetra en el tálamo desde su cara inferior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Región posterolateral del tálamo y cuerpo geniculado lateral."
+    }
+   ]
+  },
+  "callosomarginal artery": {
+   "resumen": "Rama de la arteria cerebral anterior que recorre el surco del cíngulo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria cerebral anterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Sigue el surco del cíngulo sobre la cara medial del hemisferio."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Ramas frontales anteromedial, intermediomedial y posteromedial, y rama paracentral."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Cara medial de los lóbulos frontal y parietal."
+    }
+   ]
+  },
+  "splenial artery": {
+   "resumen": "Rama terminal de la arteria pericallosa que rodea el esplenio del cuerpo calloso.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria pericallosa."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Curva alrededor del esplenio del cuerpo calloso."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Esplenio del cuerpo calloso y zonas vecinas."
+    }
+   ]
+  },
+  "hypothalamic branch of posterior communicating artery": {
+   "resumen": "Rama fina de la arteria comunicante posterior que penetra en el hipotálamo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria comunicante posterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se introduce en la base del diencéfalo."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Hipotálamo y estructuras vecinas."
+    }
+   ]
+  },
+  "middle temporal branch of lateral occipital artery": {
+   "resumen": "Rama de la arteria occipital lateral que se dirige a la parte media del lóbulo temporal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria occipital lateral."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Discurre por la cara inferior del lóbulo temporal."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Parte media de la cara inferior del lóbulo temporal."
+    }
+   ]
+  },
+  "intermediomedial branch of callosomarginal artery": {
+   "resumen": "Rama frontal de la arteria callosomarginal para la cara medial del lóbulo frontal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria callosomarginal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por la cara medial del hemisferio."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Parte media de la cara medial del lóbulo frontal."
+    }
+   ]
+  },
+  "internal carotid artery": {
+   "resumen": "Arteria que lleva sangre al encéfalo y a la órbita. Asciende por el cuello y atraviesa la base del cráneo para ingresar en la cavidad craneal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria carótida común a la altura del borde superior del cartílago tiroides."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por el cuello sin dar ramas, entra por el conducto carotídeo del temporal, recorre el seno cavernoso y perfora la duramadre cerca de la apófisis clinoides anterior."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arteria oftálmica, arterias comunicante posterior y coroidea anterior; termina en las arterias cerebral anterior y cerebral media."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Encéfalo (circulación anterior), órbita y frente."
+    }
+   ]
+  },
+  "lateral branch of superior cerebellar artery": {
+   "resumen": "Rama de la arteria cerebelosa superior que se dirige a la parte lateral del cerebelo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria cerebelosa superior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Rodea el pedúnculo cerebeloso superior hacia el hemisferio cerebeloso."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Hemisferio cerebeloso, cara superior."
+    }
+   ]
+  },
+  "lateral branch of pontine artery": {
+   "resumen": "Rama de las arterias pontinas que rodea lateralmente la protuberancia.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria basilar."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Discurre sobre la cara lateral de la protuberancia."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Parte lateral de la protuberancia."
+    }
+   ]
+  },
+  "lateral frontobasal artery": {
+   "resumen": "Rama de la arteria cerebral media que irriga la cara orbitaria lateral del lóbulo frontal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria cerebral media."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia la cara inferior del lóbulo frontal."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Parte lateral de la cara orbitaria del lóbulo frontal."
+    }
+   ]
+  },
+  "lateral occipital artery": {
+   "resumen": "Rama de la arteria cerebral posterior para la cara lateral del lóbulo occipital y la cara inferior del temporal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria cerebral posterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia atrás y lateralmente por la cara inferior del hemisferio."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Ramas temporales anterior, media y posterior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Cara inferolateral del lóbulo temporal y lóbulo occipital."
+    }
+   ]
+  },
+  "medial branch of superior cerebellar artery": {
+   "resumen": "Rama de la arteria cerebelosa superior que se dirige hacia el vermis.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria cerebelosa superior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Rodea el mesencéfalo y llega al vermis cerebeloso."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Rama vermiana superior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Vermis y parte medial del cerebelo."
+    }
+   ]
+  },
+  "medial branch of pontine artery": {
+   "resumen": "Rama de las arterias pontinas que irriga la parte medial de la protuberancia.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria basilar."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Penetra en la protuberancia cerca de la línea media."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Parte medial de la protuberancia."
+    }
+   ]
+  },
+  "medial frontobasal artery": {
+   "resumen": "Rama de la arteria cerebral anterior que irriga la cara orbitaria medial del lóbulo frontal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria cerebral anterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende hacia la cara inferior del lóbulo frontal."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Giro recto y parte medial de la cara orbitaria."
+    }
+   ]
+  },
+  "medial occipital artery": {
+   "resumen": "Rama de la arteria cerebral posterior para la cara medial del lóbulo occipital.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria cerebral posterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Recorre la cara medial del hemisferio hacia el polo occipital."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Ramas calcarina, parietooccipital y temporales."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Cara medial del lóbulo occipital, incluida la corteza visual."
+    }
+   ]
+  },
+  "sphenoid part of middle cerebral artery": {
+   "resumen": "Primer segmento de la arteria cerebral media, que sigue el ala menor del esfenoides.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Es la continuación de la arteria carótida interna."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige lateralmente por el surco lateral hasta la ínsula."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias centrales anterolaterales (lenticuloestriadas)."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Núcleos de la base y cápsula interna."
+    }
+   ]
+  },
+  "middle temporal branch of middle cerebral artery": {
+   "resumen": "Rama de la arteria cerebral media que irriga la parte media del lóbulo temporal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria cerebral media."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende sobre la cara lateral del lóbulo temporal."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Parte media del lóbulo temporal."
+    }
+   ]
+  },
+  "ophthalmic artery": {
+   "resumen": "Primera rama importante de la arteria carótida interna al entrar en el cráneo. Lleva sangre a la órbita y al globo ocular.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria carótida interna, bajo el nervio óptico."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña al nervio óptico a través del conducto óptico hacia la órbita."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arteria central de la retina, arterias ciliares, lagrimal, etmoidales y supraorbitaria."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Globo ocular, estructuras orbitarias y parte de la frente y de la nariz."
+    }
+   ]
+  },
+  "paracentral branch of callosomarginal artery": {
+   "resumen": "Rama de la arteria callosomarginal para el lobulillo paracentral.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria callosomarginal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por la cara medial del hemisferio."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Lobulillo paracentral."
+    }
+   ]
+  },
+  "pericallosal artery": {
+   "resumen": "Continuación de la arteria cerebral anterior sobre el cuerpo calloso.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Continúa a la arteria cerebral anterior después de la comunicante anterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Rodea la rodilla del cuerpo calloso y recorre su cara superior hasta el esplenio."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Ramas precuneales y arteria esplenial."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Cuerpo calloso y cara medial del lóbulo parietal."
+    }
+   ]
+  },
+  "posterior inferior cerebellar artery": {
+   "resumen": "Arteria cerebelosa de mayor calibre, de gran importancia clínica por su territorio bulbar.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria vertebral."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Rodea el bulbo raquídeo y llega a la cara inferior del cerebelo."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Rama para el plexo coroideo del cuarto ventrículo y ramas cerebelosas."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Cara inferior del cerebelo, vermis, parte del bulbo y plexo coroideo del cuarto ventrículo."
+    }
+   ]
+  },
+  "polar temporal artery": {
+   "resumen": "Rama de la arteria cerebral media para el polo del lóbulo temporal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria cerebral media."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia el polo temporal."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Polo temporal."
+    }
+   ]
+  },
+  "posterior communicating artery": {
+   "resumen": "Arteria que une la carótida interna con la cerebral posterior. Forma parte del polígono arterial de Willis.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria carótida interna."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia atrás, por encima del nervio oculomotor, y se une a la arteria cerebral posterior."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Ramas hipotalámicas y talámicas."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Hipotálamo, tálamo anterior y cápsula interna."
+    }
+   ]
+  },
+  "postcommunicating part of posterior cerebral artery": {
+   "resumen": "Segmento de la arteria cerebral posterior distal a la unión con la comunicante posterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Continúa al segmento precomunicante."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Rodea el mesencéfalo y se dirige hacia el lóbulo occipital."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias occipitales lateral y medial, y ramas talámicas."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Lóbulos occipital y temporal inferior, mesencéfalo y tálamo."
+    }
+   ]
+  },
+  "posterior parietal artery": {
+   "resumen": "Rama de la arteria cerebral media para la parte posterior del lóbulo parietal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria cerebral media."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia atrás sobre la cara lateral del hemisferio."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Lóbulo parietal posterior."
+    }
+   ]
+  },
+  "posterior temporal branch of middle cerebral artery": {
+   "resumen": "Rama de la arteria cerebral media para la parte posterior del lóbulo temporal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria cerebral media."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por la cara lateral del lóbulo temporal."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Parte posterior del lóbulo temporal."
+    }
+   ]
+  },
+  "trunk of inferior terminal branch of middle cerebral artery": {
+   "resumen": "Tronco común de las ramas corticales inferiores de la arteria cerebral media.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la bifurcación de la arteria cerebral media."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia abajo y atrás dentro del surco lateral."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Ramas temporales y parietales."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Lóbulo temporal y parietal inferior."
+    }
+   ]
+  },
+  "set of posterior temporal branches of lateral occipital artery": {
+   "resumen": "Conjunto de ramas temporales posteriores de la arteria occipital lateral.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nacen de la arteria occipital lateral."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Discurren sobre la cara inferior del lóbulo temporal."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Parte posterior de la cara inferior del lóbulo temporal."
+    }
+   ]
+  },
+  "thalamoperforating artery": {
+   "resumen": "Arterias finas que penetran en el tálamo desde el polígono arterial.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nacen de la arteria cerebral posterior y de la comunicante posterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Penetran por la sustancia perforada posterior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Tálamo y mesencéfalo."
+    }
+   ]
+  },
+  "posteromedial central branch of posterior cerebral artery": {
+   "resumen": "Ramas perforantes de la arteria cerebral posterior que se dirigen al mesencéfalo y al tálamo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nacen del segmento precomunicante de la arteria cerebral posterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Penetran por la fosa interpeduncular."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Mesencéfalo y tálamo."
+    }
+   ]
+  },
+  "posteromedial branch of callosomarginal artery": {
+   "resumen": "Rama de la arteria callosomarginal para la parte posterior de la cara medial del lóbulo frontal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria callosomarginal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por la cara medial del hemisferio."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Parte posterior de la cara medial del lóbulo frontal."
+    }
+   ]
+  },
+  "precommunicating part of posterior cerebral artery": {
+   "resumen": "Primer segmento de la arteria cerebral posterior, hasta su unión con la comunicante posterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la bifurcación de la arteria basilar."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Rodea el mesencéfalo y se une a la arteria comunicante posterior."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Ramas centrales posteromediales."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Mesencéfalo y tálamo."
+    }
+   ]
+  },
+  "prefrontal artery": {
+   "resumen": "Rama de la arteria cerebral media para la corteza prefrontal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria cerebral media."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia arriba y adelante por la cara lateral del lóbulo frontal."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Lóbulo frontal anterior."
+    }
+   ]
+  },
+  "vertebral artery": {
+   "resumen": "Rama de la arteria subclavia que asciende por el cuello y entra en el cráneo por el foramen magno. Aporta la circulación posterior del encéfalo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la primera porción de la arteria subclavia."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende a través de los forámenes transversos de C6 a C1, rodea el arco posterior del atlas y entra por el foramen magno."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Ramas espinales y meníngeas, arteria espinal anterior y arteria cerebelosa posteroinferior; se une con la opuesta para formar la arteria basilar."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Médula espinal cervical, tronco encefálico, cerebelo y lóbulo occipital."
+    }
+   ]
+  },
+  "superior cerebellar artery": {
+   "resumen": "Arteria que irriga la cara superior del cerebelo. Corre justo debajo de la arteria cerebral posterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria basilar, cerca de su extremo superior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Rodea el pedúnculo cerebral y llega a la cara superior del cerebelo."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Ramas medial y lateral."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Cara superior del cerebelo, mesencéfalo inferior y protuberancia superior."
+    }
+   ]
+  },
+  "posterior medial choroidal artery": {
+   "resumen": "Arteria fina que irriga el plexo coroideo del tercer ventrículo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria cerebral posterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Rodea el mesencéfalo y penetra en el techo del tercer ventrículo."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Plexo coroideo del tercer ventrículo y tálamo."
+    }
+   ]
+  },
+  "superior vermian branch of medial branch of superior cerebellar artery": {
+   "resumen": "Rama de la arteria cerebelosa superior para el vermis superior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la rama medial de la arteria cerebelosa superior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Discurre sobre el vermis superior del cerebelo."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Vermis superior."
+    }
+   ]
+  },
+  "temporo-occipital branch of middle cerebral artery": {
+   "resumen": "Rama de la arteria cerebral media que se dirige a la unión temporooccipital.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria cerebral media."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Discurre hacia atrás sobre la cara lateral del hemisferio."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Unión de los lóbulos temporal y occipital."
+    }
+   ]
+  },
+  "celiac artery": {
+   "resumen": "Tronco arterial corto e impar que nace de la aorta abdominal y da la irrigación del intestino anterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la cara anterior de la aorta abdominal, a la altura de T12, por debajo del hiato aórtico del diafragma."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Es muy corto y se divide enseguida, por encima del borde superior del páncreas."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arteria gástrica izquierda, arteria hepática común y arteria esplénica."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Estómago, hígado, vesícula biliar, bazo, páncreas y parte del duodeno."
+    }
+   ]
+  },
+  "lobe branch of hepatic artery": {
+   "resumen": "Rama de la arteria hepática propia destinada a un lóbulo del hígado.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria hepática propia."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Penetra en el hígado por el hilio, acompañando a la vena porta y al conducto biliar."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Lóbulo hepático correspondiente."
+    }
+   ]
+  },
+  "caudate lobe branch of hepatic artery": {
+   "resumen": "Rama de la arteria hepática para el lóbulo caudado del hígado.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de las ramas de la arteria hepática propia."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Penetra en el lóbulo caudado desde el hilio hepático."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Lóbulo caudado del hígado."
+    }
+   ]
+  },
+  "superior mesenteric artery": {
+   "resumen": "Gran rama impar de la aorta abdominal que irriga el intestino delgado y la mitad derecha del colon.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la aorta abdominal, a la altura de L1, por debajo del tronco celíaco."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Pasa por detrás del cuello del páncreas, cruza por delante de la tercera porción del duodeno y desciende por la raíz del mesenterio."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias pancreaticoduodenales inferiores, yeyunales e ileales, ileocólica, cólica derecha y cólica media."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Páncreas inferior, duodeno, yeyuno, íleon, ciego, colon ascendente y dos tercios proximales del colon transverso."
+    }
+   ]
+  },
+  "descending thoracic aorta": {
+   "resumen": "Segmento torácico de la aorta descendente, ubicado en el mediastino posterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Continúa al arco de la aorta a la altura de T4."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por delante de la columna vertebral, ligeramente a la izquierda, hasta el hiato aórtico del diafragma a nivel de T12."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias intercostales posteriores, bronquiales, esofágicas, pericárdicas, mediastínicas y frénicas superiores."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Pared torácica, bronquios, esófago y mediastino."
+    }
+   ]
+  },
+  "abdominal aorta": {
+   "resumen": "Segmento de la aorta que atraviesa el abdomen, por delante de la columna lumbar.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Continúa a la aorta torácica al pasar por el hiato aórtico del diafragma, a nivel de T12."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por delante de los cuerpos vertebrales, a la izquierda de la vena cava inferior, hasta L4."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Tronco celíaco, arterias mesentéricas superior e inferior, renales, suprarrenales medias, gonadales, frénicas inferiores y lumbares; termina en las arterias ilíacas comunes."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Vísceras abdominales, pared abdominal posterior y, por sus ramas terminales, pelvis y miembros inferiores."
+    }
+   ]
+  },
+  "bronchial artery": {
+   "resumen": "Arteria nutricia de los bronquios y del tejido pulmonar, distinta de la circulación pulmonar funcional.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la aorta torácica o de las arterias intercostales posteriores."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña a los bronquios principales hacia el hilio pulmonar."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Bronquios, tejido de sostén del pulmón, pleura visceral y ganglios del hilio."
+    }
+   ]
+  },
+  "esophageal artery": {
+   "resumen": "Rama de la aorta torácica que irriga el esófago.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la cara anterior de la aorta torácica."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige al esófago en el mediastino posterior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Esófago torácico."
+    }
+   ]
+  },
+  "superior intercostal artery": {
+   "resumen": "Rama del tronco costocervical que da los dos primeros espacios intercostales posteriores.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace del tronco costocervical, rama de la arteria subclavia."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por delante del cuello de las costillas primera y segunda."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias intercostales posteriores primera y segunda."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Primer y segundo espacio intercostal."
+    }
+   ]
+  },
+  "superior epigastric artery": {
+   "resumen": "Rama terminal de la arteria torácica interna que desciende por la pared abdominal anterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria torácica interna, a nivel del sexto espacio intercostal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por detrás del músculo recto del abdomen y se anastomosa con la arteria epigástrica inferior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Músculo recto del abdomen y pared abdominal anterior superior."
+    }
+   ]
+  },
+  "internal thoracic artery": {
+   "resumen": "Arteria que desciende por detrás de los cartílagos costales, a un dedo del borde del esternón.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la cara inferior de la arteria subclavia."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por la cara interna de la pared torácica anterior y se divide en las arterias musculofrénica y epigástrica superior."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias intercostales anteriores, perforantes, pericardiofrénica, musculofrénica y epigástrica superior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Pared torácica anterior, mama, diafragma y parte de la pared abdominal."
+    }
+   ]
+  },
+  "lateral thoracic artery": {
+   "resumen": "Rama de la arteria axilar que desciende por la pared lateral del tórax.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la segunda porción de la arteria axilar."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por el borde lateral del músculo pectoral menor hacia el serrato anterior."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Ramas mamarias laterales."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Músculos pectoral mayor, pectoral menor y serrato anterior, y glándula mamaria."
+    }
+   ]
+  },
+  "first posterior intercostal artery": {
+   "resumen": "Arteria del primer espacio intercostal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria intercostal suprema (rama del tronco costocervical)."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige por el primer espacio intercostal."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Primer espacio intercostal."
+    }
+   ]
+  },
+  "second posterior intercostal artery": {
+   "resumen": "Arteria del segundo espacio intercostal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria intercostal suprema (rama del tronco costocervical)."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige por el segundo espacio intercostal."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segundo espacio intercostal."
+    }
+   ]
+  },
+  "posterior intercostal arteries": {
+   "resumen": "Pares de arterias que recorren los espacios intercostales, de tercero a undécimo, por detrás.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nacen de la aorta torácica."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Siguen el borde inferior de cada costilla, en el surco costal, junto con la vena y el nervio intercostales, y se anastomosan con las arterias intercostales anteriores."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Ramas dorsal, cutáneas laterales y mamarias."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Músculos intercostales, piel y pared torácica y abdominal superior."
+    }
+   ]
+  },
+  "subcostal artery": {
+   "resumen": "Última arteria de la serie intercostal, ubicada debajo de la duodécima costilla.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la aorta torácica."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Pasa por debajo de la duodécima costilla, hacia la pared abdominal."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Músculos de la pared abdominal lateral y posterior."
+    }
+   ]
+  },
+  "musculophrenic artery": {
+   "resumen": "Rama terminal lateral de la arteria torácica interna.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria torácica interna."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Sigue el reborde costal por detrás de los cartílagos hasta el diafragma."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias intercostales anteriores para los espacios inferiores."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Diafragma, últimos espacios intercostales y pared abdominal."
+    }
+   ]
+  },
+  "marginal colic artery": {
+   "resumen": "Arco anastomótico paralelo al colon, formado por ramas de las arterias cólicas.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se forma por anastomosis de las arterias cólicas."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Corre cerca del borde mesentérico del colon."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias rectas."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Pared del colon."
+    }
+   ]
+  },
+  "ileal branch of inferior branch of ileocolic artery": {
+   "resumen": "Rama ileal de la arteria ileocólica destinada al íleon terminal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la rama inferior de la arteria ileocólica."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Discurre hacia el íleon terminal."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Íleon terminal."
+    }
+   ]
+  },
+  "renal artery": {
+   "resumen": "Arteria que lleva sangre a cada riñón. Nace de la aorta abdominal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la aorta abdominal, a la altura de L1–L2, por debajo de la mesentérica superior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige lateralmente hacia el hilio renal, por detrás de la vena renal."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arteria suprarrenal inferior, ramas ureterales y ramas segmentarias (anterior y posterior)."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Riñón, parte del uréter y glándula suprarrenal."
+    }
+   ]
+  },
+  "anterior segmental artery": {
+   "resumen": "Arteria segmentaria renal anterior, de la división anterior de la arteria renal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la división anterior de la arteria renal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Pasa por delante de la pelvis renal."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmentos renales anteriores."
+    }
+   ]
+  },
+  "superior segmental branch of renal artery": {
+   "resumen": "Rama de la arteria renal para el segmento renal superior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria renal o de su división anterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige al polo superior del riñón."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento superior del riñón."
+    }
+   ]
+  },
+  "inferior segmental branch of renal artery": {
+   "resumen": "Rama de la arteria renal para el segmento renal inferior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria renal o de su división anterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige al polo inferior del riñón."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento inferior del riñón."
+    }
+   ]
+  },
+  "posterior segmental branch of renal artery": {
+   "resumen": "Rama de la arteria renal para el segmento posterior del riñón.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la división posterior de la arteria renal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Pasa por detrás de la pelvis renal."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento posterior del riñón."
+    }
+   ]
+  },
+  "dorsalis pedis artery": {
+   "resumen": "Arteria del dorso del pie, continuación de la arteria tibial anterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Continúa a la arteria tibial anterior al pasar por delante de la articulación del tobillo."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Recorre el dorso del pie, lateral al tendón extensor largo del hallux, hasta el primer espacio interóseo."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias tarsales, arqueada y metatarsiana dorsal primera; arteria plantar profunda."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Dorso del pie y dedos. Su pulso se palpa en el dorso del pie."
+    }
+   ]
+  },
+  "descending branch of lateral circumflex femoral artery": {
+   "resumen": "Rama descendente de la arteria circunfleja femoral lateral.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria circunfleja femoral lateral."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por el vasto lateral del cuádriceps hasta la rodilla."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Anastomosis con las arterias geniculares."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Músculo cuádriceps femoral y red articular de la rodilla."
+    }
+   ]
+  },
+  "distal perforating artery": {
+   "resumen": "Pequeña arteria que conecta el sistema plantar con el dorsal a nivel de los metatarsianos.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de los arcos plantares."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Atraviesa los espacios interóseos."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Región interósea del pie."
+    }
+   ]
+  },
+  "anterior tibial artery": {
+   "resumen": "Arteria de el compartimento anterior de la pierna. Es una rama de la arteria poplítea.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria poplítea, a nivel del borde inferior del músculo poplíteo."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Pasa por el borde superior de la membrana interósea, desciende por el compartimento anterior de la pierna y continúa como arteria dorsal del pie."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias recurrentes tibiales, maleolares y musculares."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Músculos de el compartimento anterior de la pierna y dorso del pie."
+    }
+   ]
+  },
+  "anterior tibial recurrent artery": {
+   "resumen": "Rama recurrente de la arteria tibial anterior que asciende hacia la rodilla.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria tibial anterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por delante de la rodilla."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Red articular de la rodilla."
+    }
+   ]
+  },
+  "arcuate artery": {
+   "resumen": "Arteria arqueada del dorso del pie, rama de la arteria dorsal del pie.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria dorsal del pie."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Cruza la base de los metatarsianos."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias metatarsianas dorsales segunda, tercera y cuarta."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Dorso del antepié y dedos."
+    }
+   ]
+  },
+  "deep plantar artery": {
+   "resumen": "Rama terminal de la arteria dorsal del pie que pasa a la planta.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria dorsal del pie."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Atraviesa el primer espacio interóseo y se une al arco plantar."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Planta del pie, primer dedo."
+    }
+   ]
+  },
+  "descending genicular artery": {
+   "resumen": "Rama de la arteria femoral que desciende hacia la rodilla.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria femoral, en el conducto aductor."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende hacia la cara medial de la rodilla."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Ramas safena y articular."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Red articular de la rodilla y piel de la cara medial de la pierna."
+    }
+   ]
+  },
+  "dorsal digital artery of foot": {
+   "resumen": "Arterias del dorso de los dedos del pie.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nacen de las arterias metatarsianas dorsales."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Siguen los bordes de los dedos."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Dorso de los dedos del pie."
+    }
+   ]
+  },
+  "femoral artery": {
+   "resumen": "Arteria principal del miembro inferior. Continúa a la ilíaca externa a nivel del ligamento inguinal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Continúa a la arteria ilíaca externa al pasar por debajo del ligamento inguinal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por el triángulo femoral y el conducto aductor, y al atravesar el hiato aductor pasa a llamarse arteria poplítea."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias epigástrica superficial, circunfleja ilíaca superficial, pudendas externas, femoral profunda y genicular descendente."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Miembro inferior."
+    }
+   ]
+  },
+  "inferior lateral genicular artery": {
+   "resumen": "Rama de la arteria poplítea que rodea la rodilla por su lado lateral e inferior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria poplítea."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Pasa por debajo del cóndilo lateral del fémur, bajo el ligamento colateral peroneo."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Cara lateral de la rodilla."
+    }
+   ]
+  },
+  "inferior medial genicular artery": {
+   "resumen": "Rama de la arteria poplítea que rodea la rodilla por su lado medial e inferior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria poplítea."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Pasa por debajo del cóndilo medial de la tibia, bajo el ligamento colateral tibial."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Cara medial de la rodilla."
+    }
+   ]
+  },
+  "lateral circumflex femoral artery": {
+   "resumen": "Rama de la arteria femoral profunda que rodea el cuello femoral por su lado lateral.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria femoral profunda."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige lateralmente entre las ramas del nervio femoral."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Ramas ascendente, transversa y descendente."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Cuádriceps, glúteos y cadera."
+    }
+   ]
+  },
+  "lateral superior genicular artery": {
+   "resumen": "Rama de la arteria poplítea que rodea la rodilla por su lado lateral y superior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria poplítea."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Pasa por encima del cóndilo lateral del fémur."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Cara lateral y superior de la rodilla."
+    }
+   ]
+  },
+  "lateral tarsal artery": {
+   "resumen": "Rama de la arteria dorsal del pie para el lado lateral del tarso.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria dorsal del pie."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Pasa por debajo del músculo extensor corto de los dedos."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Tarso lateral y articulaciones del pie."
+    }
+   ]
+  },
+  "medial plantar artery": {
+   "resumen": "Rama terminal medial de la arteria tibial posterior en la planta del pie.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria tibial posterior, bajo el retináculo flexor."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia delante por el borde medial de la planta."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Rama superficial y rama profunda."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Músculos del borde medial y del hallux."
+    }
+   ]
+  },
+  "medial superior genicular artery": {
+   "resumen": "Rama de la arteria poplítea que rodea la rodilla por su lado medial y superior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria poplítea."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Pasa por encima del cóndilo medial del fémur."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Cara medial y superior de la rodilla."
+    }
+   ]
+  },
+  "middle genicular artery": {
+   "resumen": "Rama de la arteria poplítea que penetra en la articulación de la rodilla.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria poplítea."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Atraviesa la cápsula posterior de la rodilla."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Ligamentos cruzados y membrana sinovial de la rodilla."
+    }
+   ]
+  },
+  "plantar arch": {
+   "resumen": "Arco arterial de la planta del pie formado por la arteria plantar lateral y la rama profunda de la arteria dorsal del pie.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se forma por la unión de la arteria plantar lateral con la arteria plantar profunda."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Cruza la planta por debajo de las bases de los metatarsianos."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias metatarsianas plantares y perforantes."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Planta del pie y dedos."
+    }
+   ]
+  },
+  "popliteal artery": {
+   "resumen": "Arteria de la fosa poplítea, continuación de la femoral.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Continúa a la arteria femoral al atravesar el hiato aductor."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por la fosa poplítea, por detrás de la rodilla, hasta el borde inferior del músculo poplíteo, donde se divide."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias geniculares y musculares; se divide en arterias tibial anterior y tibial posterior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Rodilla y músculos de la fosa poplítea."
+    }
+   ]
+  },
+  "posterior tibial artery": {
+   "resumen": "Arteria de la pierna, rama terminal de la poplítea.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria poplítea, en el borde inferior del músculo poplíteo."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por el compartimento posterior profunda de la pierna y pasa por detrás del maléolo medial."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arteria peronea, ramas calcáneas y arterias plantares medial y lateral."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Loge posterior de la pierna y planta del pie."
+    }
+   ]
+  },
+  "superficial medial plantar artery": {
+   "resumen": "Rama superficial de la arteria plantar medial.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria plantar medial."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Discurre por la planta, bajo la aponeurosis plantar."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Piel y músculos del borde medial de la planta."
+    }
+   ]
+  },
+  "set of perforating arteries": {
+   "resumen": "Ramas de la arteria femoral profunda que atraviesan los aductores.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nacen de la arteria femoral profunda."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Perforan los músculos aductores hasta la región posterior del muslo."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Músculos posteriores del muslo y fémur."
+    }
+   ]
+  },
+  "set of calcaneal branches of posterior tibial artery": {
+   "resumen": "Ramas de la arteria tibial posterior que irrigan el talón.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nacen de la arteria tibial posterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Descienden hacia el calcáneo."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Talón y piel de la planta del pie."
+    }
+   ]
+  },
+  "set of common plantar digital arteries": {
+   "resumen": "Arterias digitales plantares comunes de la planta del pie.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nacen de las arterias metatarsianas plantares."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Siguen los espacios interóseos hacia los dedos."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Dedos del pie."
+    }
+   ]
+  },
+  "set of dorsal digital arteries": {
+   "resumen": "Conjunto de arterias digitales dorsales del pie.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nacen de las arterias metatarsianas dorsales."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Siguen los bordes de los dedos por el dorso."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Dorso de los dedos."
+    }
+   ]
+  },
+  "set of plantar digital arteries proper": {
+   "resumen": "Arterias digitales plantares propias de los dedos del pie.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nacen de las arterias digitales plantares comunes."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Siguen los bordes laterales de los dedos."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Cara plantar de los dedos."
+    }
+   ]
+  },
+  "plantar metatarsal artery": {
+   "resumen": "Arteria metatarsiana plantar que nace del arco plantar.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace del arco plantar."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Sigue los espacios interóseos de la planta."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Músculos interóseos y dedos."
+    }
+   ]
+  },
+  "inferior thyroid artery": {
+   "resumen": "Arteria que irriga la glándula tiroides y estructuras cervicales vecinas. Es rama del tronco tirocervical.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace del tronco tirocervical, rama de la arteria subclavia."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por delante del músculo escaleno anterior, se arquea hacia la línea media por detrás de la vaina carotídea y llega a la cara posterior del tiroides, en relación con el nervio laríngeo recurrente."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arteria cervical ascendente, ramas laríngeas inferiores, traqueales, esofágicas y glandulares."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Glándula tiroides, paratiroides, laringe, tráquea y esófago cervical."
+    }
+   ]
+  },
+  "acromial branch of thoraco-acromial artery": {
+   "resumen": "Rama de la arteria toracoacromial que se dirige al acromion.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace del tronco toracoacromial."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Pasa por debajo del deltoides hacia el acromion."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Red acromial y articulación del hombro."
+    }
+   ]
+  },
+  "anterior circumflex humeral artery": {
+   "resumen": "Arteria pequeña que rodea por delante el cuello quirúrgico del húmero.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria axilar, a nivel del borde inferior del músculo subescapular."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Pasa por debajo del coracobraquial y bíceps, rodeando el cuello quirúrgico del húmero."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Rama ascendente para el canal intertubercular."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Articulación del hombro y músculo deltoides."
+    }
+   ]
+  },
+  "anterior interosseous artery": {
+   "resumen": "Rama de la arteria interósea común que desciende por la cara anterior de la membrana interósea del antebrazo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria interósea común."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende sobre la membrana interósea, entre los músculos flexores profundos; perfora la membrana hacia el dorso del carpo."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Ramas nutricias para el radio y la ulna, y arteria mediana."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Músculos profundos del antebrazo, radio y ulna."
+    }
+   ]
+  },
+  "inferior ulnar collateral artery": {
+   "resumen": "Rama de la arteria braquial que contribuye a la red del codo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria braquial, por encima del codo."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia el epicóndilo medial."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Región medial del codo."
+    }
+   ]
+  },
+  "axillary artery": {
+   "resumen": "Arteria de la axila, continuación de la subclavia.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Continúa a la arteria subclavia al cruzar el borde lateral de la primera costilla."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Atraviesa la axila, por detrás del músculo pectoral menor, hasta el borde inferior del músculo redondo mayor, donde pasa a ser la arteria braquial."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias torácica superior, toracoacromial, torácica lateral, subescapular y circunflejas humerales anterior y posterior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Miembro superior proximal, pared torácica y hombro."
+    }
+   ]
+  },
+  "circumflex scapular artery": {
+   "resumen": "Rama de la arteria subescapular que atraviesa el espacio triangular.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria subescapular."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Atraviesa el espacio triangular y llega a la fosa infraespinosa."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Músculos subescapular, infraespinoso y redondos."
+    }
+   ]
+  },
+  "common interosseous artery": {
+   "resumen": "Tronco corto de la arteria cubital, para el antebrazo profundo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria cubital."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende cerca de la membrana interósea."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias interósea anterior y posterior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Músculos profundos del antebrazo."
+    }
+   ]
+  },
+  "costocervical trunk": {
+   "resumen": "Tronco arterial corto que nace de la arteria subclavia, por detrás del músculo escaleno anterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria subclavia."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia atrás sobre la pleura y se divide en arterias intercostal suprema y cervical profunda."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias intercostal suprema y cervical profunda."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Primeros espacios intercostales y músculos profundos del cuello."
+    }
+   ]
+  },
+  "deep brachial artery": {
+   "resumen": "Rama de la arteria braquial para el compartimento posterior del brazo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria braquial, cerca del borde inferior del redondo mayor."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por el surco del nervio radial, entre las cabezas del tríceps."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias colaterales radial y media."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Músculo tríceps braquial y húmero."
+    }
+   ]
+  },
+  "deep cervical artery": {
+   "resumen": "Rama del tronco costocervical para los músculos profundos del cuello.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace del tronco costocervical."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por detrás de los procesos transversos cervicales."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Músculos posteriores del cuello."
+    }
+   ]
+  },
+  "deep palmar arch": {
+   "resumen": "Arco arterial profundo de la palma de la mano formado principalmente por la arteria radial.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se forma por la terminación de la arteria radial, que se anastomosa con la rama profunda de la cubital."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Cruza la palma de la mano a nivel de las bases de los metacarpianos."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias metacarpianas palmares."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Huesos y músculos de la palma."
+    }
+   ]
+  },
+  "deltoid branch of thoraco-acromial artery": {
+   "resumen": "Rama de la arteria toracoacromial para el deltoides.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace del tronco toracoacromial."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Sigue la vena cefálica entre deltoides y pectoral mayor."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Músculo deltoides y piel."
+    }
+   ]
+  },
+  "dorsal carpal branch of radial artery": {
+   "resumen": "Rama de la arteria radial que contribuye a la red carpiana dorsal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria radial."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Pasa por debajo de los tendones extensores del pulgar."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Dorso del carpo."
+    }
+   ]
+  },
+  "dorsal scapular artery": {
+   "resumen": "Arteria que corre por el borde medial de la escápula.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria subclavia o del tronco tirocervical."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Pasa por debajo del elevador de la escápula y los romboides."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Músculos romboides y elevador de la escápula."
+    }
+   ]
+  },
+  "dorsal carpal branch of ulnar artery": {
+   "resumen": "Rama de la arteria cubital para la red carpiana dorsal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria cubital."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Pasa por debajo del tendón del flexor cubital del carpo hacia el dorso."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Dorso del carpo."
+    }
+   ]
+  },
+  "palmar metacarpal artery": {
+   "resumen": "Arterias metacarpianas palmares que nacen del arco palmar profundo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nacen del arco palmar profundo."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Siguen los espacios interóseos de la palma."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Músculos interóseos."
+    }
+   ]
+  },
+  "posterior circumflex humeral artery": {
+   "resumen": "Arteria que rodea por detrás el cuello quirúrgico del húmero.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria axilar."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Atraviesa el espacio cuadrangular junto con el nervio axilar."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Músculo deltoides, redondo menor y articulación del hombro."
+    }
+   ]
+  },
+  "posterior ulnar recurrent artery": {
+   "resumen": "Rama recurrente de la arteria cubital que asciende hacia el codo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria cubital."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Pasa por detrás del epicóndilo medial."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Red del codo."
+    }
+   ]
+  },
+  "radial artery": {
+   "resumen": "Arteria del lado lateral del antebrazo. Se palpa en la muñeca.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria braquial, en la fosa cubital."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por el antebrazo, pasa por la tabaquera anatómica, atraviesa el primer espacio interóseo y llega a la palma."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arteria recurrente radial, ramas carpianas, principal del pulgar y arco palmar profundo."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Antebrazo lateral, muñeca y mano."
+    }
+   ]
+  },
+  "radial recurrent artery": {
+   "resumen": "Rama recurrente de la arteria radial para la red del codo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria radial."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende hacia el epicóndilo lateral."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Red del codo."
+    }
+   ]
+  },
+  "recurrent interosseous artery": {
+   "resumen": "Rama recurrente de la arteria interósea posterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria interósea posterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende hacia el codo, por debajo del ancóneo."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Red del codo."
+    }
+   ]
+  },
+  "subscapular artery": {
+   "resumen": "Rama más voluminosa de la arteria axilar.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria axilar."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por el borde lateral del subescapular."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arteria circunfleja de la escápula y arteria toracodorsal."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Escápula, hombro y músculo dorsal ancho."
+    }
+   ]
+  },
+  "superficial palmar arterial arch": {
+   "resumen": "Arco arterial superficial de la palma, formado sobre todo por la arteria cubital.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se forma por la continuación de la arteria cubital."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Cruza la palma por debajo de la aponeurosis palmar."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias digitales palmares comunes."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Dedos y palma."
+    }
+   ]
+  },
+  "suprascapular artery": {
+   "resumen": "Arteria de la región supraescapular, rama del tronco tirocervical.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace del tronco tirocervical."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Cruza por encima del ligamento transverso superior de la escápula y llega a la fosa supraespinosa."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Músculos supraespinoso e infraespinoso."
+    }
+   ]
+  },
+  "trunk of thoraco-acromial artery": {
+   "resumen": "Tronco de la arteria toracoacromial.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria axilar."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Atraviesa la fascia clavipectoral."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Ramas acromial, deltoidea, pectoral y clavicular."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Músculos pectorales, deltoides y región acromial."
+    }
+   ]
+  },
+  "thoracodorsal artery": {
+   "resumen": "Continuación de la arteria subescapular que irriga el dorsal ancho.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria subescapular."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende junto al nervio toracodorsal."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Músculo dorsal ancho y serrato anterior."
+    }
+   ]
+  },
+  "thyrocervical trunk": {
+   "resumen": "Tronco arterial corto de la arteria subclavia.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la primera porción de la arteria subclavia."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por delante del escaleno anterior."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias tiroidea inferior, cervical transversa y supraescapular."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Cuello, tiroides y hombro."
+    }
+   ]
+  },
+  "superficial cervical artery": {
+   "resumen": "Rama de la arteria cervical transversa.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace del tronco tirocervical o de la cervical transversa."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Sigue el trapecio."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Músculo trapecio."
+    }
+   ]
+  },
+  "transverse cervical artery": {
+   "resumen": "Arteria que cruza el triángulo posterior del cuello.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace del tronco tirocervical."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Cruza el triángulo posterior del cuello."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Rama superficial y rama profunda."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Músculos trapecio y romboides."
+    }
+   ]
+  },
+  "ulnar artery": {
+   "resumen": "Arteria del lado medial del antebrazo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria braquial en la fosa cubital."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por el antebrazo y entra en la mano por el canal de Guyon."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias recurrentes cubitales, interósea común y arco palmar superficial."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Antebrazo medial y mano."
+    }
+   ]
+  },
+  "anterior ulnar recurrent artery": {
+   "resumen": "Rama recurrente anterior de la arteria cubital.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria cubital."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por delante del epicóndilo medial."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Red del codo."
+    }
+   ]
+  },
+  "radial collateral branch of deep brachial artery": {
+   "resumen": "Rama colateral radial de la arteria braquial profunda.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria braquial profunda."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña al nervio radial por el surco lateral del brazo."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Región lateral del codo."
+    }
+   ]
+  },
+  "arteria radialis indicis": {
+   "resumen": "Rama de la arteria radial para el borde radial del dedo índice.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria radial o de la arteria principal del pulgar."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por el borde radial del índice."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Dedo índice."
+    }
+   ]
+  },
+  "first common palmar digital artery": {
+   "resumen": "Primera arteria digital palmar común.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace del arco palmar superficial."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende hacia el primer espacio interóseo."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Dedos pulgar e índice."
+    }
+   ]
+  },
+  "second common palmar digital artery": {
+   "resumen": "Segunda arteria digital palmar común.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace del arco palmar superficial."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende hacia el segundo espacio interóseo."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Dedos índice y medio."
+    }
+   ]
+  },
+  "third common palmar digital artery": {
+   "resumen": "Tercera arteria digital palmar común.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace del arco palmar superficial."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende hacia el tercer espacio interóseo."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Dedos medio y anular."
+    }
+   ]
+  },
+  "pectoral branch of thoraco-acromial artery": {
+   "resumen": "Rama de la arteria toracoacromial para los músculos pectorales.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace del tronco toracoacromial."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende entre los músculos pectorales."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Músculos pectorales."
+    }
+   ]
+  },
+  "middle collateral branch of deep brachial artery": {
+   "resumen": "Rama colateral media de la arteria braquial profunda.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria braquial profunda."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por el tríceps."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Tríceps braquial."
+    }
+   ]
+  },
+  "medial proper palmar digital artery of index finger": {
+   "resumen": "Arteria digital propia del lado medial del dedo índice.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la segunda arteria digital palmar común."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Sigue el lado medial del dedo."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Dedo índice."
+    }
+   ]
+  },
+  "lateral proper palmar digital artery of middle finger": {
+   "resumen": "Arteria digital propia del lado lateral del dedo medio.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria digital palmar común."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Sigue el lado lateral del dedo."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Dedo medio."
+    }
+   ]
+  },
+  "lateral proper palmar digital artery of ring finger": {
+   "resumen": "Arteria digital propia del lado lateral del dedo anular.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria digital palmar común."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Sigue el lado lateral del dedo."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Dedo anular."
+    }
+   ]
+  },
+  "lateral proper palmar digital artery of little finger": {
+   "resumen": "Arteria digital propia del lado lateral del dedo meñique.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria digital palmar común."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Sigue el lado lateral del dedo."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Dedo meñique."
+    }
+   ]
+  },
+  "fourth common palmar digital artery": {
+   "resumen": "Cuarta arteria digital palmar común.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace del arco palmar superficial."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende hacia el cuarto espacio interóseo."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Dedos anular y meñique."
+    }
+   ]
+  },
+  "arteria princeps pollicis": {
+   "resumen": "Arteria principal del pulgar, rama de la arteria radial.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria radial en la palma."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por el pulgar."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Pulgar."
+    }
+   ]
+  },
+  "set of dorsal metacarpal arteries": {
+   "resumen": "Arterias metacarpianas dorsales de la mano.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nacen de la red carpiana dorsal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Descienden por los espacios interóseos dorsales."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Dorso de la mano y dedos."
+    }
+   ]
+  },
+  "medial proper palmar digital artery of middle finger": {
+   "resumen": "Arteria digital propia del lado medial del dedo medio.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria digital palmar común."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Sigue el lado medial del dedo."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Dedo medio."
+    }
+   ]
+  },
+  "medial proper palmar digital artery of ring finger": {
+   "resumen": "Arteria digital propia del lado medial del dedo anular.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria digital palmar común."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Sigue el lado medial del dedo."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Dedo anular."
+    }
+   ]
+  },
+  "superior ulnar collateral artery": {
+   "resumen": "Rama de la arteria braquial que acompaña al nervio cubital.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria braquial, en la mitad del brazo."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña al nervio cubital hasta el epicóndilo medial."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Región medial del codo."
+    }
+   ]
+  },
+  "splenic artery": {
+   "resumen": "Rama del tronco celíaco, de trayecto sinuoso, que irriga el bazo y parte del páncreas y del estómago.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace del tronco celíaco."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Corre a lo largo del borde superior del páncreas, por detrás del estómago, hacia el hilio del bazo."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Ramas pancreáticas, arterias gástricas cortas, arteria gastroepiploica izquierda y ramas esplénicas terminales."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Bazo, cuerpo y cola del páncreas y curvatura mayor del estómago."
+    }
+   ]
+  },
+  "trunk of anterior interventricular branch of coronary artery": {
+   "resumen": "Tronco de la rama interventricular anterior de la arteria coronaria izquierda.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria coronaria izquierda."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por el surco interventricular anterior."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Ramas diagonales, septales y del cono."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Pared anterior del ventrículo izquierdo y tabique interventricular."
+    }
+   ]
+  },
+  "first anterior branch of anterior interventricular branch of coronary artery": {
+   "resumen": "Primera rama anterior de la rama interventricular anterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la rama interventricular anterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige a la pared anterior del ventrículo izquierdo."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Pared anterior del ventrículo izquierdo."
+    }
+   ]
+  },
+  "diagonal branch of anterior descending branch of coronary artery": {
+   "resumen": "Rama diagonal de la arteria interventricular anterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la rama interventricular anterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende diagonalmente sobre la pared anterolateral del ventrículo izquierdo."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Pared anterolateral del ventrículo izquierdo."
+    }
+   ]
+  },
+  "third anterior branch of anterior interventricular branch of coronary artery": {
+   "resumen": "Tercera rama anterior de la rama interventricular anterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la rama interventricular anterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige a la pared anterior del ventrículo izquierdo."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Pared anterior del ventrículo izquierdo."
+    }
+   ]
+  },
+  "conus branch of anterior interventricular branch of coronary artery": {
+   "resumen": "Rama del cono arterioso procedente de la rama interventricular anterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la rama interventricular anterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige al cono arterioso."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Cono arterioso del ventrículo derecho."
+    }
+   ]
+  },
+  "second anterior branch of anterior interventricular branch of coronary artery": {
+   "resumen": "Segunda rama anterior de la rama interventricular anterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la rama interventricular anterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige a la pared anterior del ventrículo izquierdo."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Pared anterior del ventrículo izquierdo."
+    }
+   ]
+  },
+  "circumflex branch of coronary artery": {
+   "resumen": "Rama circunfleja de la arteria coronaria izquierda.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria coronaria izquierda."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Rodea el borde izquierdo del corazón por el surco coronario."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Rama marginal izquierda."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Pared lateral y posterior del ventrículo izquierdo y aurícula izquierda."
+    }
+   ]
+  },
+  "marginal branch of coronary artery": {
+   "resumen": "Rama marginal de la arteria coronaria.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria coronaria."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Recorre el borde del ventrículo."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Pared del ventrículo correspondiente."
+    }
+   ]
+  },
+  "conus artery": {
+   "resumen": "Arteria del cono arterioso del ventrículo derecho.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria coronaria derecha."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Rodea el cono arterioso."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Cono arterioso."
+    }
+   ]
+  },
+  "first anterior ventricular branch of coronary artery": {
+   "resumen": "Primera rama ventricular anterior de la arteria coronaria.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria coronaria derecha."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por la pared anterior del ventrículo derecho."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Pared anterior del ventrículo derecho."
+    }
+   ]
+  },
+  "posterior interventricular branch of coronary artery": {
+   "resumen": "Rama interventricular posterior de la arteria coronaria.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria coronaria derecha en la mayoría de las personas."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por el surco interventricular posterior."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Ramas septales posteriores."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Parte posterior del tabique interventricular y paredes ventriculares adyacentes."
+    }
+   ]
+  },
+  "first posterior ventricular branch of coronary artery": {
+   "resumen": "Primera rama ventricular posterior de la arteria coronaria.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria coronaria."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige a la pared posterior del ventrículo."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Pared posterior del ventrículo."
+    }
+   ]
+  },
+  "trunk of coronary artery": {
+   "resumen": "Tronco de la arteria coronaria.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la aorta ascendente, en un seno aórtico."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Es corto y se divide pronto."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Pared del corazón."
+    }
+   ]
+  },
+  "septal branch of anterior interventricular artery": {
+   "resumen": "Rama septal de la arteria interventricular anterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la rama interventricular anterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Penetra en el tabique interventricular."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Dos tercios anteriores del tabique interventricular."
+    }
+   ]
+  },
+  "first septal branch of posterior interventricular artery": {
+   "resumen": "Primera rama septal de la arteria interventricular posterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la rama interventricular posterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Penetra en el tabique interventricular."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Tercio posterior del tabique interventricular."
+    }
+   ]
+  },
+  "second septal branch of posterior interventricular artery": {
+   "resumen": "Segunda rama septal de la arteria interventricular posterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la rama interventricular posterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Penetra en el tabique interventricular."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Tercio posterior del tabique interventricular."
+    }
+   ]
+  },
+  "posterior basal segmental artery": {
+   "resumen": "Arteria segmentaria pulmonar basal posterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria pulmonar inferior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña al bronquio segmentario correspondiente."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento basal posterior del pulmón."
+    }
+   ]
+  },
+  "lateral basal segmental artery": {
+   "resumen": "Arteria segmentaria pulmonar basal lateral.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria pulmonar inferior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña al bronquio segmentario correspondiente."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento basal lateral del pulmón."
+    }
+   ]
+  },
+  "anterior basal segmental artery": {
+   "resumen": "Arteria segmentaria pulmonar basal anterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria pulmonar inferior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña al bronquio segmentario correspondiente."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento basal anterior del pulmón."
+    }
+   ]
+  },
+  "medial basal segmental artery": {
+   "resumen": "Arteria segmentaria pulmonar basal medial.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria pulmonar inferior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña al bronquio segmentario correspondiente."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento basal medial del pulmón."
+    }
+   ]
+  },
+  "superior segmental artery": {
+   "resumen": "Arteria segmentaria superior del lóbulo inferior del pulmón.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria lobar inferior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña al bronquio segmentario superior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento superior del lóbulo inferior."
+    }
+   ]
+  },
+  "inferior lingular artery": {
+   "resumen": "Arteria lingular inferior del lóbulo superior del pulmón izquierdo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria pulmonar izquierda."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña al bronquio lingular."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento lingular inferior."
+    }
+   ]
+  },
+  "superior lingular artery": {
+   "resumen": "Arteria lingular superior del lóbulo superior del pulmón izquierdo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria pulmonar izquierda."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña al bronquio lingular."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento lingular superior."
+    }
+   ]
+  },
+  "posterior segmental artery": {
+   "resumen": "Arteria segmentaria posterior del lóbulo superior del pulmón.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria lobar superior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña al bronquio segmentario posterior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento posterior del pulmón."
+    }
+   ]
+  },
+  "apical segmental artery": {
+   "resumen": "Arteria segmentaria apical del lóbulo superior del pulmón.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria lobar superior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña al bronquio segmentario apical."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento apical del pulmón."
+    }
+   ]
+  },
+  "pulmonary artery": {
+   "resumen": "Arteria que lleva sangre pobre en oxígeno desde el tronco pulmonar a cada pulmón.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace del tronco pulmonar."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige al hilio pulmonar y se ramifica siguiendo a los bronquios."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias lobares y segmentarias."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Pulmón."
+    }
+   ]
+  },
+  "pulmonary trunk": {
+   "resumen": "Gran arteria que nace del ventrículo derecho y lleva sangre pobre en oxígeno hacia los pulmones.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace del cono arterioso del ventrículo derecho, a través de la válvula pulmonar."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende hacia arriba y atrás por delante de la aorta y se divide en las arterias pulmonares derecha e izquierda."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias pulmonares derecha e izquierda."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Circulación pulmonar."
+    }
+   ]
+  },
+  "apical part of apical segmental artery": {
+   "resumen": "Parte apical de la arteria segmentaria apical.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria segmentaria apical."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Sigue el ramo bronquial correspondiente."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Ápice del pulmón."
+    }
+   ]
+  },
+  "apical part of posterior segmental artery": {
+   "resumen": "Parte apical de la arteria segmentaria posterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria segmentaria posterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Sigue el ramo bronquial correspondiente."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento posterior del pulmón."
+    }
+   ]
+  },
+  "posterior part of posterior segmental artery": {
+   "resumen": "Parte posterior de la arteria segmentaria posterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria segmentaria posterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Sigue el ramo bronquial correspondiente."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento posterior del pulmón."
+    }
+   ]
+  },
+  "upper lobar artery": {
+   "resumen": "Arteria del lóbulo superior del pulmón.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria pulmonar."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña al bronquio lobar superior."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias segmentarias del lóbulo superior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Lóbulo superior del pulmón."
+    }
+   ]
+  },
+  "posterior branch of anterior segmental artery": {
+   "resumen": "Rama posterior de la arteria segmentaria anterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria segmentaria anterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña al bronquio correspondiente."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento anterior del pulmón."
+    }
+   ]
+  },
+  "anterior branch of anterior segmental artery": {
+   "resumen": "Rama anterior de la arteria segmentaria anterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria segmentaria anterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña al bronquio correspondiente."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento anterior del pulmón."
+    }
+   ]
+  },
+  "anterior part of apical segmental artery": {
+   "resumen": "Parte anterior de la arteria segmentaria apical.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria segmentaria apical."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña al bronquio correspondiente."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento apical del pulmón."
+    }
+   ]
+  },
+  "anterior branch of lateral segmental artery": {
+   "resumen": "Rama anterior de la arteria segmentaria lateral.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria segmentaria lateral del lóbulo medio."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña al bronquio correspondiente."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento lateral del lóbulo medio."
+    }
+   ]
+  },
+  "posterior branch of lateral segmental artery": {
+   "resumen": "Rama posterior de la arteria segmentaria lateral.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria segmentaria lateral del lóbulo medio."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña al bronquio correspondiente."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento lateral del lóbulo medio."
+    }
+   ]
+  },
+  "superior branch of medial segmental artery": {
+   "resumen": "Rama superior de la arteria segmentaria medial.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria segmentaria medial del lóbulo medio."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña al bronquio correspondiente."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento medial del lóbulo medio."
+    }
+   ]
+  },
+  "inferior branch of medial segmental artery": {
+   "resumen": "Rama inferior de la arteria segmentaria medial.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria segmentaria medial del lóbulo medio."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña al bronquio correspondiente."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento medial del lóbulo medio."
+    }
+   ]
+  },
+  "lateral branch of superior segmental artery": {
+   "resumen": "Rama lateral de la arteria segmentaria superior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria segmentaria superior del lóbulo inferior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña al bronquio correspondiente."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento superior del lóbulo inferior."
+    }
+   ]
+  },
+  "medial branch of superior segmental artery": {
+   "resumen": "Rama medial de la arteria segmentaria superior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria segmentaria superior del lóbulo inferior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña al bronquio correspondiente."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento superior del lóbulo inferior."
+    }
+   ]
+  },
+  "superior branch of superior segmental artery": {
+   "resumen": "Rama superior de la arteria segmentaria superior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria segmentaria superior del lóbulo inferior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña al bronquio correspondiente."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento superior del lóbulo inferior."
+    }
+   ]
+  },
+  "lateral branch of anterior basal segmental artery": {
+   "resumen": "Rama lateral de la arteria segmentaria basal anterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria basal anterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña al bronquio correspondiente."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento basal anterior."
+    }
+   ]
+  },
+  "basal branch of anterior basal segmental artery": {
+   "resumen": "Rama basal de la arteria segmentaria basal anterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria basal anterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña al bronquio correspondiente."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento basal anterior."
+    }
+   ]
+  },
+  "lateral branch of lateral basal segmental artery": {
+   "resumen": "Rama lateral de la arteria segmentaria basal lateral.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria basal lateral."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña al bronquio correspondiente."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento basal lateral."
+    }
+   ]
+  },
+  "mediobasal branch of posterior basal segmental artery": {
+   "resumen": "Rama mediobasal de la arteria segmentaria basal posterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria basal posterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña al bronquio correspondiente."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento basal posterior."
+    }
+   ]
+  },
+  "accessory subsuperior branch of posterior basal segmental artery": {
+   "resumen": "Rama accesoria subsuperior de la arteria segmentaria basal posterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria basal posterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña al bronquio correspondiente."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento basal posterior."
+    }
+   ]
+  },
+  "laterobasal branch of posterior basal segmental artery": {
+   "resumen": "Rama laterobasal de la arteria segmentaria basal posterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria basal posterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña al bronquio correspondiente."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento basal posterior."
+    }
+   ]
+  },
+  "anterior inferior segmental hepatic artery": {
+   "resumen": "Rama segmentaria de la arteria hepática para un segmento anteroinferior del hígado.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la rama de la arteria hepática propia."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Penetra en el hígado y acompaña al conducto biliar segmentario."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento hepático anteroinferior."
+    }
+   ]
+  },
+  "anterior superior segmental hepatic artery": {
+   "resumen": "Rama segmentaria de la arteria hepática para un segmento anterosuperior del hígado.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la rama de la arteria hepática propia."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Penetra en el hígado y acompaña al conducto biliar segmentario."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento hepático anterosuperior."
+    }
+   ]
+  },
+  "common hepatic artery": {
+   "resumen": "Rama del tronco celíaco que irriga el hígado, el estómago y el duodeno.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace del tronco celíaco."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige a la derecha por el borde superior del páncreas y se divide en arteria hepática propia y arteria gastroduodenal."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias hepática propia y gastroduodenal."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Hígado, vesícula biliar, estómago, duodeno y páncreas."
+    }
+   ]
+  },
+  "hepatic artery proper": {
+   "resumen": "Continuación de la arteria hepática común hacia el hígado.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Continúa a la arteria hepática común tras el origen de la gastroduodenal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende en el ligamento hepatoduodenal, por delante de la vena porta y a la izquierda del conducto colédoco."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arteria gástrica derecha y ramas derecha e izquierda."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Hígado y vesícula biliar."
+    }
+   ]
+  },
+  "lateral superior segmental hepatic artery": {
+   "resumen": "Rama segmentaria de la arteria hepática para el segmento lateral superior del hígado.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la rama izquierda de la arteria hepática."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Penetra en el hígado."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento lateral superior del hígado."
+    }
+   ]
+  },
+  "lateral inferior segmental hepatic artery": {
+   "resumen": "Rama segmentaria de la arteria hepática para el segmento lateral inferior del hígado.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la rama izquierda de la arteria hepática."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Penetra en el hígado."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento lateral inferior del hígado."
+    }
+   ]
+  },
+  "trunk of hepatic artery": {
+   "resumen": "Tronco de la arteria hepática.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace del tronco celíaco."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige al hígado."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Hígado."
+    }
+   ]
+  },
+  "medial inferior segmental hepatic artery": {
+   "resumen": "Rama segmentaria de la arteria hepática para el segmento medial inferior del hígado.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la rama izquierda de la arteria hepática."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Penetra en el hígado."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento medial inferior del hígado."
+    }
+   ]
+  },
+  "medial superior segmental hepatic artery": {
+   "resumen": "Rama segmentaria de la arteria hepática para el segmento medial superior del hígado.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la rama izquierda de la arteria hepática."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Penetra en el hígado."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento medial superior del hígado."
+    }
+   ]
+  },
+  "posterior inferior segmental hepatic artery": {
+   "resumen": "Rama segmentaria de la arteria hepática para el segmento posteroinferior del hígado.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la rama derecha de la arteria hepática."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Penetra en el hígado."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento posteroinferior del hígado."
+    }
+   ]
+  },
+  "posterior superior segmental hepatic artery": {
+   "resumen": "Rama segmentaria de la arteria hepática para el segmento posterosuperior del hígado.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la rama derecha de la arteria hepática."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Penetra en el hígado."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento posterosuperior del hígado."
+    }
+   ]
+  },
+  "ascending branch of colic artery": {
+   "resumen": "Rama ascendente de una arteria cólica.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de una arteria cólica."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende hacia el arco marginal del colon."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Pared del colon."
+    }
+   ]
+  },
+  "anterior inferior pancreaticoduodenal artery": {
+   "resumen": "Rama de la arteria mesentérica superior para el páncreas y el duodeno.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria pancreaticoduodenal inferior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Corre por delante de la cabeza del páncreas."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Cabeza del páncreas y duodeno."
+    }
+   ]
+  },
+  "anterior cecal artery": {
+   "resumen": "Rama de la arteria ileocólica para la cara anterior del ciego.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria ileocólica."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por la cara anterior del ciego."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Ciego."
+    }
+   ]
+  },
+  "anterior superior pancreaticoduodenal artery": {
+   "resumen": "Rama de la arteria gastroduodenal para el páncreas y el duodeno.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria gastroduodenal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Corre por delante de la cabeza del páncreas."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Cabeza del páncreas y duodeno."
+    }
+   ]
+  },
+  "appendicular artery": {
+   "resumen": "Arteria del apéndice vermiforme.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria ileocólica."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Pasa por detrás del íleon terminal y recorre el mesoapéndice."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Apéndice vermiforme."
+    }
+   ]
+  },
+  "arch of aorta": {
+   "resumen": "Segmento curvo de la aorta que une la aorta ascendente con la descendente.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Continúa a la aorta ascendente, por detrás del manubrio del esternón."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se arquea hacia atrás y a la izquierda, sobre el bronquio principal izquierdo, hasta T4."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Tronco braquiocefálico, arteria carótida común izquierda y arteria subclavia izquierda."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Cabeza, cuello y miembros superiores."
+    }
+   ]
+  },
+  "ascending aorta": {
+   "resumen": "Primer segmento de la aorta, que sale del ventrículo izquierdo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace del ventrículo izquierdo, a través de la válvula aórtica."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende dentro del pericardio hasta el arco aórtico."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias coronarias derecha e izquierda, que nacen de los senos aórticos."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Corazón (por las arterias coronarias)."
+    }
+   ]
+  },
+  "ascending branch of inferior branch of ileocolic artery": {
+   "resumen": "Rama ascendente de la rama inferior de la arteria ileocólica.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la rama inferior de la arteria ileocólica."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende hacia el ciego."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Ciego."
+    }
+   ]
+  },
+  "brachiocephalic artery": {
+   "resumen": "Arteria corta impar que nace del arco aórtico y se bifurca en subclavia y carótida común derechas.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la parte superior del arco aórtico."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende oblicuamente por detrás de la articulación esternoclavicular, donde se bifurca."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias carótida común y subclavia del lado derecho."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Cabeza, cuello y miembro superior del lado derecho."
+    }
+   ]
+  },
+  "bronchial branch of arch of aorta": {
+   "resumen": "Rama bronquial que nace del arco aórtico.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace del arco de la aorta."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige a los bronquios."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Bronquios."
+    }
+   ]
+  },
+  "caudal pancreatic artery": {
+   "resumen": "Rama de la arteria esplénica para la cola del páncreas.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria esplénica o de la arteria pancreática dorsal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Recorre la cola y el cuerpo del páncreas."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Cola del páncreas."
+    }
+   ]
+  },
+  "celiac trunk": {
+   "resumen": "Tronco arterial impar que nace de la aorta abdominal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la aorta abdominal, a la altura de T12."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Es muy corto y se divide en tres ramas."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias gástrica izquierda, hepática común y esplénica."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Estómago, hígado, vesícula biliar, bazo, páncreas y duodeno."
+    }
+   ]
+  },
+  "descending aorta": {
+   "resumen": "Segmento de la aorta que desciende desde el arco aórtico.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Continúa al arco de la aorta."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Atraviesa el tórax y el abdomen hasta L4, donde se bifurca."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias intercostales, viscerales y lumbares."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Tórax, abdomen y pelvis."
+    }
+   ]
+  },
+  "descending branch of colic artery": {
+   "resumen": "Rama descendente de una arteria cólica.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de una arteria cólica."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende hacia el arco marginal del colon."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Pared del colon."
+    }
+   ]
+  },
+  "dorsal pancreatic artery": {
+   "resumen": "Arteria del páncreas, rama de la arteria esplénica.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria esplénica."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por detrás del cuello del páncreas."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arteria pancreática inferior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Cuello y cuerpo del páncreas."
+    }
+   ]
+  },
+  "set of oesophageal branches of thoracic aorta": {
+   "resumen": "Ramas esofágicas de la aorta torácica.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nacen de la aorta torácica."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirigen al esófago."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Esófago torácico."
+    }
+   ]
+  },
+  "trunk of gastroduodenal artery": {
+   "resumen": "Tronco de la arteria gastroduodenal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria hepática común."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por detrás de la primera porción del duodeno."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias gastroomental derecha y pancreaticoduodenal superior anterior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Estómago, duodeno y páncreas."
+    }
+   ]
+  },
+  "great pancreatic artery": {
+   "resumen": "Rama voluminosa de la arteria esplénica para el páncreas.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria esplénica."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Penetra en el páncreas."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Páncreas."
+    }
+   ]
+  },
+  "ileal artery": {
+   "resumen": "Arterias ileales del intestino delgado.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nacen de la arteria mesentérica superior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirigen al íleon por el mesenterio."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Íleon."
+    }
+   ]
+  },
+  "ileocolic artery": {
+   "resumen": "Rama de la arteria mesentérica superior para el íleon terminal y el ciego.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria mesentérica superior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende hacia la fosa ilíaca derecha por la raíz del mesenterio."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias cecales anterior y posterior, apendicular, ramas ileales y cólica ascendente."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Íleon terminal, ciego, apéndice y colon ascendente."
+    }
+   ]
+  },
+  "inferior mesenteric artery": {
+   "resumen": "Arteria impar que irriga el colon izquierdo y el recto.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la aorta abdominal, a la altura de L3."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por la izquierda de la aorta, detrás del peritoneo."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arteria cólica izquierda, arterias sigmoideas y arteria rectal superior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Tercio distal del colon transverso, colon descendente, colon sigmoide y recto superior."
+    }
+   ]
+  },
+  "inferior pancreatic artery": {
+   "resumen": "Rama pancreática inferior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria pancreática dorsal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Corre por el borde inferior del páncreas."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Páncreas."
+    }
+   ]
+  },
+  "inferior pancreaticoduodenal artery": {
+   "resumen": "Rama de la arteria mesentérica superior para el páncreas y el duodeno.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria mesentérica superior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se bifurca en ramas anterior y posterior."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Ramas anterior y posterior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Cabeza del páncreas y duodeno."
+    }
+   ]
+  },
+  "anterior division of renal artery": {
+   "resumen": "División anterior de la arteria renal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria renal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Pasa por delante de la pelvis renal."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias segmentarias renales."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmentos renales anteriores."
+    }
+   ]
+  },
+  "common iliac artery": {
+   "resumen": "Una de las dos ramas terminales de la aorta abdominal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la bifurcación de la aorta, a la altura de L4."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende oblicuamente hasta la articulación sacroilíaca, donde se divide en arteria ilíaca interna y arteria ilíaca externa."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias ilíacas interna y externa."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Pelvis y miembro inferior."
+    }
+   ]
+  },
+  "external iliac artery": {
+   "resumen": "Arteria que lleva la sangre desde la ilíaca común hacia el miembro inferior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria ilíaca común, delante de la articulación sacroilíaca."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Sigue el borde medial del músculo psoas mayor hasta el ligamento inguinal, donde pasa a llamarse arteria femoral."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arteria epigástrica inferior y arteria circunfleja ilíaca profunda."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Pared abdominal inferior y miembro inferior."
+    }
+   ]
+  },
+  "inferior suprarenal artery": {
+   "resumen": "Rama de la arteria renal para la glándula suprarrenal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria renal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende hacia la glándula suprarrenal."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Glándula suprarrenal."
+    }
+   ]
+  },
+  "internal iliac artery": {
+   "resumen": "Arteria de la pelvis.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria ilíaca común, a nivel de la articulación sacroilíaca."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende hacia la pelvis y se divide en troncos anterior y posterior."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias glútea superior e inferior, pudenda interna, obturatriz, vesicales, uterina, vaginal y rectal media."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Vísceras pelvianas, periné, nalga y parte medial del muslo."
+    }
+   ]
+  },
+  "middle suprarenal artery": {
+   "resumen": "Rama de la aorta abdominal para la glándula suprarrenal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la aorta abdominal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige lateralmente a la glándula suprarrenal."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Glándula suprarrenal."
+    }
+   ]
+  },
+  "posterior division of renal artery": {
+   "resumen": "División posterior de la arteria renal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria renal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Pasa por detrás de la pelvis renal."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arteria segmentaria posterior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Segmento posterior del riñón."
+    }
+   ]
+  },
+  "trunk of renal artery": {
+   "resumen": "Tronco de la arteria renal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la aorta abdominal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige al hilio renal."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Divisiones anterior y posterior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Riñón."
+    }
+   ]
+  },
+  "subclavian artery": {
+   "resumen": "Arteria principal del hombro y del miembro superior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace del tronco braquiocefálico (derecha) o directamente del arco aórtico (izquierda)."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Arquea sobre la cúpula pleural, pasa entre los escalenos anterior y medio y cruza la primera costilla, donde pasa a llamarse arteria axilar."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arteria vertebral, tronco tirocervical, arteria torácica interna y tronco costocervical."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Cuello, médula espinal, encéfalo (por la vertebral) y miembro superior."
+    }
+   ]
+  },
+  "ureteric segment of renal artery": {
+   "resumen": "Segmento de la arteria renal que da ramas al uréter.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria renal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende junto al uréter."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Uréter superior."
+    }
+   ]
+  },
+  "common carotid artery": {
+   "resumen": "Arteria principal de la cabeza y el cuello.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace del tronco braquiocefálico (derecha) o del arco aórtico (izquierda)."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por el cuello dentro de la vaina carotídea hasta el borde superior del cartílago tiroides, donde se divide en carótida externa e interna."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias carótida externa e interna."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Cabeza, cuello y encéfalo."
+    }
+   ]
+  },
+  "colic artery": {
+   "resumen": "Arterias que irrigan el colon.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nacen de las arterias mesentéricas superior e inferior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirigen al arco marginal del colon."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Colon."
+    }
+   ]
+  },
+  "dorsal artery of penis": {
+   "resumen": "Arteria dorsal del pene.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria pudenda interna."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Corre por el dorso del pene, junto a la vena dorsal profunda."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Glande y cuerpos cavernosos del pene."
+    }
+   ]
+  },
+  "gastric artery": {
+   "resumen": "Arterias gástricas.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nacen del tronco celíaco y de la arteria hepática."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Siguen la curvatura menor del estómago."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Estómago."
+    }
+   ]
+  },
+  "gastro-epiploic artery": {
+   "resumen": "Arterias gastroomentales.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nacen de las arterias esplénica y gastroduodenal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Siguen la curvatura mayor del estómago."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Estómago y omento mayor."
+    }
+   ]
+  },
+  "inferior epigastric artery": {
+   "resumen": "Rama de la arteria ilíaca externa para la pared abdominal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria ilíaca externa, sobre el ligamento inguinal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por detrás del recto del abdomen y se anastomosa con la epigástrica superior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Músculos de la pared abdominal anterior."
+    }
+   ]
+  },
+  "inferior phrenic artery": {
+   "resumen": "Rama de la aorta abdominal para el diafragma.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la aorta abdominal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por la cara inferior del diafragma."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Diafragma inferior."
+    }
+   ]
+  },
+  "superficial epigastric artery": {
+   "resumen": "Rama de la arteria femoral para la piel del abdomen.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria femoral, debajo del ligamento inguinal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por el tejido subcutáneo del abdomen."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Piel del abdomen inferior."
+    }
+   ]
+  },
+  "testicular artery": {
+   "resumen": "Arteria del testículo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la aorta abdominal, debajo de las arterias renales."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por detrás del peritoneo, atraviesa el conducto inguinal con el cordón espermático."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Testículo y epidídimo."
+    }
+   ]
+  },
+  "marginal artery of colon": {
+   "resumen": "Arco anastomótico marginal del colon (arteria de Drummond).",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se forma por la anastomosis de las ramas cólicas de ambas arterias mesentéricas."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Recorre el colon cerca de su borde mesentérico."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arterias rectas."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Colon."
+    }
+   ]
+  },
+  "middle colic artery": {
+   "resumen": "Rama de la arteria mesentérica superior para el colon transverso.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria mesentérica superior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Entra al mesocolon transverso."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Ramas derecha e izquierda."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Colon transverso."
+    }
+   ]
+  },
+  "posterior inferior pancreaticoduodenal artery": {
+   "resumen": "Rama pancreaticoduodenal posteroinferior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria pancreaticoduodenal inferior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Corre por detrás de la cabeza del páncreas."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Cabeza del páncreas y duodeno."
+    }
+   ]
+  },
+  "posterior cecal artery": {
+   "resumen": "Rama de la arteria ileocólica para la cara posterior del ciego.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria ileocólica."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por la cara posterior del ciego."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Ciego."
+    }
+   ]
+  },
+  "posterior superior pancreaticoduodenal artery": {
+   "resumen": "Rama pancreaticoduodenal posterosuperior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria gastroduodenal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Corre por detrás de la cabeza del páncreas."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Cabeza del páncreas y duodeno."
+    }
+   ]
+  },
+  "lumbar artery": {
+   "resumen": "Arterias lumbares de la pared abdominal posterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nacen de la aorta abdominal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Rodean los cuerpos vertebrales lumbares."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Ramas dorsal y espinal."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Músculos lumbares y médula espinal."
+    }
+   ]
+  },
+  "sigmoid artery": {
+   "resumen": "Arterias sigmoideas del colon sigmoide.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nacen de la arteria mesentérica inferior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Descienden por el mesocolon sigmoide."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Colon sigmoide."
+    }
+   ]
+  },
+  "trunk of superior mesenteric artery": {
+   "resumen": "Tronco de la arteria mesentérica superior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la aorta abdominal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por la raíz del mesenterio."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Ramas yeyunales, ileales y cólicas."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Intestino delgado y colon derecho."
+    }
+   ]
+  },
+  "superior rectal artery": {
+   "resumen": "Rama terminal de la arteria mesentérica inferior para el recto.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria mesentérica inferior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por el mesorrecto."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Recto superior."
+    }
+   ]
+  },
+  "lateral plantar artery": {
+   "resumen": "Rama terminal lateral de la arteria tibial posterior en la planta del pie. Forma el arco plantar.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la arteria tibial posterior, bajo el retináculo flexor, junto al maléolo medial."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige oblicuamente hacia el borde lateral de la planta, entre el flexor corto de los dedos y el cuadrado plantar, y se arquea hacia medial formando el arco plantar."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arco plantar y, desde este, arterias metatarsianas plantares."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Músculos y piel de la planta del pie y dedos."
+    }
+   ]
+  },
+  "brachial artery": {
+   "resumen": "Arteria principal del brazo, continuación de la arteria axilar.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Continúa a la arteria axilar al pasar el borde inferior del músculo redondo mayor."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por la cara medial del brazo, junto al nervio mediano, hasta la fosa cubital, donde se divide en arterias radial y cubital."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Arteria braquial profunda, colaterales cubitales superior e inferior, y ramas musculares y nutricias del húmero; termina en las arterias radial y cubital."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Músculos del brazo, húmero y, por sus ramas terminales, antebrazo y mano."
+    }
+   ]
+  }
+ }
+}

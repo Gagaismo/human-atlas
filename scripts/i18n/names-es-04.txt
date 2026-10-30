@@ -1,0 +1,746 @@
+afluente del arco venoso palmar superficial
+afluente de la vena mesentérica superior
+afluente de la anastomosis venosa
+afluente de la vena hepática {1:f}
+válvula tricúspide
+hueso piramidal (triquetro)
+tróclea del músculo oblicuo superior
+tróclea del músculo oblicuo superior {1:m}
+nervio troclear
+costilla verdadera
+tronco
+tronco de la rama interventricular anterior de la arteria coronaria {1:f}
+tronco de la vena segmentaria apical
+tronco de la rama de la arteria celíaca
+tronco de la rama de la arteria hepática común
+tronco de la rama de la arteria ilíaca común
+tronco de la rama de la arteria coronaria
+tronco de la rama de la arteria ilíaca externa
+tronco de la rama de la vena porta hepática
+tronco de la rama de la arteria mesentérica inferior
+tronco de la rama de la arteria carótida interna
+tronco de la rama de la arteria cerebral media
+tronco de la rama de la arteria poplítea
+tronco de la rama de la arteria subclavia
+tronco de la rama de la arteria cólica {1:f}
+tronco de la arteria coronaria
+tronco de la arteria gastroduodenal
+tronco de la arteria hepática
+tronco de la rama terminal inferior de la arteria cerebral media
+tronco de la rama terminal inferior de la arteria cerebral media {1:f}
+tronco de la vena intrapulmonar
+tronco de la vena porta
+tronco de la vena pulmonar
+tronco de la arteria renal
+tronco de la vena pulmonar segmentaria
+tronco de la subdivisión de la arteria axilar
+tronco de la arteria mesentérica superior
+tronco de la vena sistémica
+tronco de la arteria toracoacromial
+tronco de la vena segmentaria apical {1:f}
+tronco de la arteria coronaria {1:f}
+tronco de la arteria hepática {1:f}
+tronco de la arteria plantar lateral {1:f}
+tronco de la arteria cerebral media {1:f}
+tronco de la vena porta {1:f}
+tronco de la arteria renal {1:f}
+tronco de la arteria toracoacromial {1:f}
+tuber cinereum
+duodécima costilla
+duodécima vértebra torácica
+costilla típica
+cúbito (ulna)
+arteria cubital (ulnar)
+cabeza cubital del músculo flexor cubital del carpo
+cabeza cubital del músculo pronador redondo
+cabeza cubital del músculo flexor cubital del carpo {1:m}
+cabeza cubital del músculo pronador redondo {1:m}
+arteria recurrente cubital
+vena cubital
+incisivo central permanente superior
+primer molar permanente superior
+primer premolar permanente superior
+tubo digestivo superior
+maxilar superior
+incisivo lateral permanente superior
+arteria lobar superior
+lóbulo superior del pulmón {1:m}
+porción del lóbulo superior del árbol bronquial {1:m}
+segundo molar permanente superior
+segundo premolar permanente superior
+canino permanente superior
+incisivo permanente superior
+molar permanente superior
+premolar permanente superior
+uréter
+segmento ureteral de la arteria renal
+segmento ureteral de la arteria renal {1:f}
+uretra
+vejiga urinaria
+sistema urinario
+úvula
+músculo de la úvula
+arteria variante
+arteria bronquial variante
+arteria sistémica variante
+anastomosis vascular
+capa vascular del globo ocular {1:m}
+árbol vascular
+vasculatura del cuerpo
+músculo vasto intermedio
+músculo vasto lateral
+músculo vasto medial
+vena
+anastomosis venosa
+órgano del árbol venoso
+tronco venoso
+rama ventricular de la arteria coronaria {1:f}
+sistema ventricular del encéfalo
+sistema ventricular del neuroeje
+vértebra
+arteria vertebral
+columna vertebral
+porción intermedia vertical del músculo largo del cuello
+porción intermedia vertical del músculo largo del cuello {1:m}
+peritoneo visceral
+viscerocráneo
+cuerpo vítreo
+ligamento vocal
+músculo vocal
+vómer
+pared del abdomen
+pared del abdomen propiamente dicho
+pared del atrio
+pared de la cámara cardíaca
+pared de la parte distal del íleon
+pared del íleon
+pared de la porción de entrada del ventrículo {1:m}
+pared de la nariz interna
+pared del intestino grueso
+pared del intestino delgado
+pared del ventrículo
+pared del atrio {1:m}
+pared del globo ocular {1:m}
+pared del lado del corazón {1:m}
+pared del lado de la nariz interna {1:m}
+pared del ventrículo {1:m}
+sustancia blanca del neuroeje
+sustancia blanca del telencéfalo
+sustancia blanca del hemisferio cerebral {1:m}
+apófisis xifoides
+zona de arteria
+zona de órgano óseo
+zona de órgano cavernoso
+zona de continuidad
+zona del cuerpo esponjoso del pene
+zona del músculo cricotiroideo
+zona del músculo deltoides
+zona del diencéfalo
+zona de la fascia lata
+zona del íleon
+zona de la fascia de revestimiento
+zona de la fascia de revestimiento del miembro inferior libre
+zona de la fascia de revestimiento del miembro inferior
+zona de la fascia de revestimiento del muslo
+zona del yeyuno
+zona del músculo elevador del ano
+zona del músculo largo del cuello
+zona de la arteria cerebral media
+zona de órgano muscular
+zona del neuroeje
+zona del músculo aritenoideo oblicuo
+zona del músculo pectoral mayor
+zona de la arteria cerebral posterior
+zona del músculo cuádriceps femoral
+zona del intestino delgado
+zona del esternón
+zona del músculo trapecio
+zona del tronco de la arteria plantar lateral
+hueso cigomático
+músculo abductor del dedo gordo {1:m}
+músculo abductor corto del pulgar {1:m}
+músculo abductor largo del pulgar {1:m}
+músculo aductor corto {1:m}
+músculo aductor largo {1:m}
+músculo aductor mayor {1:m}
+músculo aductor mínimo {1:m}
+glándula suprarrenal {1:f}
+amígdala cerebral (cuerpo amigdalino) {1:f}
+músculo ancóneo {1:m}
+giro angular {1:m}
+segmento broncopulmonar basal anterior {1:m}
+arteria segmentaria basal anterior {1:f}
+árbol bronquial segmentario basal anterior {1:m}
+vena segmentaria basal anterior {1:f}
+rama anterior {1:f} de la rama interventricular anterior de la arteria coronaria {2:f}
+segmento broncopulmonar anterior {1:m}
+arteria cerebral anterior {1:f}
+arteria coroidea anterior {1:f}
+arteria circunfleja humeral anterior {1:f}
+vena circunfleja humeral anterior {1:f}
+valva anterior de la válvula pulmonar {1:f}
+nervio etmoidal anterior {1:m}
+arteria interósea anterior {1:f}
+arteria parietal anterior {1:f}
+arteria segmentaria anterior {1:f}
+árbol bronquial segmentario anterior {1:m}
+vena segmentaria anterior {1:f}
+arteria espinal anterior {1:f}
+arteria temporal anterior {1:f}
+arteria tibial anterior {1:f}
+arteria recurrente tibial anterior {1:f}
+vena tibial anterior {1:f}
+arteria recurrente cubital anterior {1:f}
+segmento broncopulmonar apical {1:m}
+arteria segmentaria apical {1:f}
+árbol bronquial segmentario apical {1:m}
+vena segmentaria apical {1:f}
+arquicorteza {1:f}
+arteria arqueada {1:f}
+brazo {1:m}
+arteria principal del pulgar {1:f}
+arteria radial del índice {1:f}
+músculo ariepiglótico {1:m}
+cartílago aritenoides {1:m}
+vena lumbar ascendente {1:f}
+atrio {1:m}
+arteria axilar {1:f}
+vena axilar {1:f}
+arteria segmentaria basal {1:f}
+vena basílica {1:f}
+dedo gordo del pie {1:m}
+cintura pectoral ósea {1:f}
+arteria braquial (humeral) {1:f}
+músculo braquial {1:m}
+vena braquiocefálica {1:f}
+músculo braquiorradial (supinador largo) {1:m}
+árbol bronquial {1:m}
+tendón calcáneo (de Aquiles) {1:m}
+calcáneo {1:m}
+arteria callosomarginal {1:f}
+hueso grande (capitato) {1:m}
+núcleo caudado {1:m}
+vena cefálica {1:f}
+hemisferio cerebral {1:m}
+músculo rotador cervical {1:m}
+mejilla {1:f}
+coroides {1:f}
+ganglio ciliar {1:m}
+giro del cíngulo {1:m}
+arteria circunfleja escapular {1:f}
+vena circunfleja escapular {1:f}
+clavícula {1:f}
+músculo coccígeo {1:m}
+arteria cólica {1:f}
+vena cólica {1:f}
+vena basal común {1:f}
+arteria carótida común {1:f}
+arteria ilíaca común {1:f}
+vena ilíaca común {1:f}
+arteria interósea común {1:f}
+anillo tendinoso común {1:m}
+arteria del cono arterial {1:f}
+cono elástico {1:m}
+músculo coracobraquial {1:m}
+córnea {1:f}
+cartílago corniculado {1:m}
+corona ciliar {1:f}
+arteria coronaria {1:f}
+arteria costocervical {1:f}
+tronco costocervical {1:m}
+hueso cuboides {1:m}
+cartílago cuneiforme {1:m}
+arteria braquial profunda {1:f}
+arteria cervical profunda {1:f}
+arteria femoral profunda {1:f}
+vena femoral profunda {1:f}
+arco palmar profundo {1:m}
+arco venoso palmar profundo {1:m}
+arteria plantar profunda {1:f}
+conducto deferente {1:m}
+arteria descendente de la rodilla {1:f}
+músculo digástrico {1:m}
+arteria dorsal del pene {1:f}
+rama carpiana dorsal de la arteria cubital {1:f}
+arteria escapular dorsal {1:f}
+arteria dorsal del pie (pedia) {1:f}
+conducto del lóbulo caudado del hígado {1:m}
+octava costilla {1:f}
+undécima costilla {1:f}
+epidídimo {1:m}
+músculo extensor radial corto del carpo {1:m}
+músculo extensor radial largo del carpo {1:m}
+músculo extensor cubital del carpo {1:m}
+músculo extensor del dedo meñique {1:m}
+músculo extensor de los dedos {1:m}
+músculo extensor largo de los dedos {1:m}
+músculo extensor corto del dedo gordo {1:m}
+músculo extensor largo del dedo gordo {1:m}
+músculo extensor del índice {1:m}
+músculo extensor corto del pulgar {1:m}
+músculo extensor largo del pulgar {1:m}
+arteria ilíaca externa {1:f}
+vena ilíaca externa {1:f}
+músculo oblicuo externo {1:m}
+ojo {1:m}
+globo ocular {1:m}
+arteria femoral {1:f}
+vena femoral {1:f}
+fémur {1:m}
+peroné (fíbula) {1:m}
+vena fibular {1:f}
+músculo fibular corto (peroneo corto) {1:m}
+músculo fibular largo (peroneo largo) {1:m}
+músculo fibular tercero (peroneo anterior) {1:m}
+quinto cartílago costal {1:m}
+quinto hueso metacarpiano {1:m}
+quinto hueso metatarsiano {1:m}
+quinta costilla {1:f}
+primera arteria digital palmar común {1:f}
+primer cartílago costal {1:m}
+primer hueso metacarpiano {1:m}
+primer hueso metatarsiano {1:m}
+primera arteria intercostal posterior {1:f}
+primera costilla {1:f}
+músculo accesorio del flexor largo de los dedos {1:m}
+músculo flexor radial del carpo {1:m}
+músculo flexor corto de los dedos {1:m}
+músculo flexor largo de los dedos {1:m}
+músculo flexor profundo de los dedos {1:m}
+músculo flexor superficial de los dedos {1:m}
+músculo flexor largo del dedo gordo {1:m}
+músculo flexor corto del pulgar {1:m}
+músculo flexor largo del pulgar {1:m}
+pie {1:m}
+pie propiamente dicho {1:m}
+antebrazo {1:m}
+fórnix del prosencéfalo {1:m}
+cuarta arteria digital palmar común {1:f}
+cuarto cartílago costal {1:m}
+cuarto hueso metacarpiano {1:m}
+cuarto hueso metatarsiano {1:m}
+cuarta costilla {1:f}
+cuarto dedo del pie {1:m}
+miembro inferior libre {1:m}
+miembro superior libre {1:m}
+lóbulo frontal {1:m}
+nervio frontal {1:m}
+giro fusiforme {1:m}
+arteria gástrica {1:f}
+vena gástrica {1:f}
+arteria gastroepiploica {1:f}
+vena gastroepiploica {1:f}
+músculo gemelo inferior {1:m}
+músculo gemelo superior {1:m}
+vena genicular {1:f}
+músculo geniogloso {1:m}
+músculo genihioideo {1:m}
+globo pálido {1:m}
+músculo glúteo mayor {1:m}
+músculo glúteo medio {1:m}
+músculo glúteo menor {1:m}
+músculo grácil {1:m}
+vena safena magna {1:f}
+hueso ganchoso {1:m}
+mano {1:f}
+mano propiamente dicha {1:f}
+hemihígado {1:m}
+arteria hepática {1:f}
+árbol biliar hepático {1:m}
+conducto hepático {1:m}
+vena hepática {1:f}
+cadera {1:f}
+hueso coxal {1:m}
+formación del hipocampo {1:f}
+hipocampo {1:m}
+húmero {1:m}
+músculo hiogloso {1:m}
+músculo ilíaco {1:m}
+músculo iliococcígeo {1:m}
+músculo iliocostal cervical {1:m}
+músculo iliocostal lumbar {1:m}
+músculo iliocostal torácico {1:m}
+vena iliolumbar {1:f}
+tracto iliotibial {1:m}
+dedo índice {1:m}
+vena basal inferior {1:f}
+colículo inferior {1:m}
+arteria epigástrica inferior {1:f}
+vena epigástrica inferior {1:f}
+giro frontal inferior {1:m}
+vena glútea inferior {1:f}
+arteria inferior lateral de la rodilla {1:f}
+arteria inferior medial de la rodilla {1:f}
+concha nasal inferior {1:f}
+músculo oblicuo inferior {1:m}
+músculo constrictor inferior de la faringe {1:m}
+arteria frénica inferior {1:f}
+vena pulmonar inferior {1:f}
+músculo recto inferior {1:m}
+arteria suprarrenal inferior {1:f}
+giro temporal inferior {1:m}
+arteria tiroidea inferior {1:f}
+arteria colateral cubital inferior {1:f}
+músculo infraespinoso {1:m}
+nervio infratroclear {1:m}
+ínsula {1:f}
+hueso cuneiforme intermedio {1:m}
+tendón intermedio {1:m}
+cápsula interna {1:f}
+arteria carótida interna {1:f}
+arteria ilíaca interna {1:f}
+vena ilíaca interna {1:f}
+vena yugular interna {1:f}
+vena pudenda interna {1:f}
+arteria torácica interna {1:f}
+vena torácica interna {1:f}
+músculo interespinoso torácico {1:m}
+iris {1:m}
+riñón {1:m}
+rodilla {1:f}
+aparato lacrimal {1:m}
+hueso lagrimal {1:m}
+canalículo lagrimal {1:m}
+conducto lagrimal {1:m}
+glándula lagrimal {1:f}
+lago lagrimal {1:m}
+nervio lagrimal {1:m}
+saco lagrimal {1:m}
+segmento broncopulmonar basal lateral {1:m}
+arteria segmentaria basal lateral {1:f}
+árbol bronquial segmentario basal lateral {1:m}
+vena segmentaria basal lateral {1:f}
+pared torácica lateral {1:f}
+arteria circunfleja femoral lateral {1:f}
+vena circunfleja femoral lateral {1:f}
+músculo cricoaritenoideo lateral {1:m}
+hueso cuneiforme lateral {1:m}
+arteria frontobasal lateral {1:f}
+cuerpo geniculado lateral {1:m}
+cartílago nasal lateral {1:m}
+arteria occipital lateral {1:f}
+arteria plantar lateral {1:f}
+músculo recto lateral {1:m}
+vena sacra lateral {1:f}
+pared torácica superficial lateral {1:f}
+arteria superior lateral de la rodilla {1:f}
+arteria tarsiana lateral {1:f}
+arteria torácica lateral {1:f}
+vena torácica lateral {1:f}
+ligamento tirohioideo lateral {1:m}
+ventrículo lateral {1:m}
+pared lateral de la nariz interna {1:f}
+pierna {1:f}
+cristalino {1:m}
+músculo elevador del párpado superior {1:m}
+músculo elevador de la escápula {1:m}
+músculo elevador del velo del paladar {1:m}
+lóbulo límbico {1:m}
+dedo meñique {1:m}
+dedo meñique del pie {1:m}
+rama lobular {1:f} de la arteria hepática {2:f}
+lóbulo del hígado {1:m}
+lóbulo del timo {1:m}
+nervio ciliar largo {1:m}
+ligamento plantar largo {1:m}
+músculo longísimo de la cabeza {1:m}
+músculo longísimo del cuello {1:m}
+músculo longísimo del tórax {1:m}
+músculo largo de la cabeza {1:m}
+incisivo central permanente inferior {1:m}
+párpado inferior {1:m}
+primer molar permanente inferior {1:m}
+primer premolar permanente inferior {1:m}
+incisivo lateral permanente inferior {1:m}
+miembro inferior {1:m}
+arteria lobar inferior {1:f}
+segundo molar permanente inferior {1:m}
+segundo premolar permanente inferior {1:m}
+canino permanente inferior {1:m}
+músculo rotador lumbar {1:m}
+hueso semilunar {1:m}
+pulmón {1:m}
+bronquio principal {1:m}
+bronquio principal propiamente dicho {1:m}
+cartílago alar mayor {1:m}
+vena marginal {1:f}
+maxilar {1:m}
+segmento broncopulmonar basal medial {1:m}
+arteria segmentaria basal medial {1:f}
+árbol bronquial segmentario basal medial {1:m}
+vena segmentaria basal medial {1:f}
+vena braquial medial {1:f}
+vena circunfleja femoral medial {1:f}
+hueso cuneiforme medial {1:m}
+arteria frontobasal medial {1:f}
+cuerpo geniculado medial {1:m}
+arteria occipital medial {1:f}
+arteria plantar medial {1:f}
+músculo recto medial {1:m}
+arteria superior medial de la rodilla {1:f}
+vena mediana del antebrazo {1:f}
+vena mediana del codo {1:f}
+arteria cerebral media {1:f}
+dedo medio {1:m}
+giro frontal medio {1:m}
+arteria media de la rodilla {1:f}
+músculo constrictor medio de la faringe {1:m}
+arteria suprarrenal media {1:f}
+giro temporal medio {1:m}
+arteria musculofrénica {1:f}
+vena musculofrénica {1:f}
+músculo milohioideo {1:m}
+hueso nasal {1:m}
+nervio nasociliar {1:m}
+conducto nasolagrimal {1:m}
+novena costilla {1:f}
+músculo aritenoideo oblicuo {1:m}
+músculo oblicuo inferior de la cabeza {1:m}
+músculo oblicuo superior de la cabeza {1:m}
+músculo obturador externo {1:m}
+músculo obturador interno {1:m}
+vena obturatriz {1:f}
+lóbulo occipital {1:m}
+músculo omohioideo {1:m}
+arteria oftálmica {1:f}
+nervio oftálmico {1:m}
+músculo oponente del pulgar {1:m}
+nervio óptico {1:m}
+tracto óptico {1:m}
+órbita {1:f}
+compartimento orbitario {1:m}
+contenido orbitario {1:m}
+hueso palatino {1:m}
+músculo palatofaríngeo {1:m}
+arteria metacarpiana palmar {1:f}
+vena metacarpiana palmar {1:f}
+músculo palmar largo {1:m}
+giro parahipocampal {1:m}
+hueso parietal {1:m}
+lóbulo parietal {1:m}
+parte parietal de la cabeza {1:f}
+rótula (patela) {1:f}
+músculo pectíneo {1:m}
+cintura pectoral {1:f}
+parte pectoral del tórax {1:f}
+músculo pectoral mayor {1:m}
+músculo pectoral menor {1:m}
+cintura pélvica {1:f}
+arteria pericallosa {1:f}
+músculo piriforme {1:m}
+hueso pisiforme {1:m}
+arco plantar {1:m}
+músculo plantar delgado {1:m}
+músculo platisma (cutáneo del cuello) {1:m}
+arteria temporal polar {1:f}
+arteria pontina {1:f}
+arteria poplítea {1:f}
+vena poplítea {1:f}
+músculo poplíteo {1:m}
+vena porta {1:f}
+giro poscentral {1:m}
+segmento broncopulmonar basal posterior {1:m}
+arteria segmentaria basal posterior {1:f}
+árbol bronquial segmentario basal posterior {1:m}
+vena segmentaria basal posterior {1:f}
+segmento broncopulmonar posterior {1:m}
+arteria cerebral posterior {1:f}
+arteria coroidea posterior {1:f}
+arteria circunfleja humeral posterior {1:f}
+arteria comunicante posterior {1:f}
+músculo cricoaritenoideo posterior {1:m}
+valva posterior de la válvula aórtica {1:f}
+nervio etmoidal posterior {1:m}
+arteria cerebelosa posteroinferior {1:f}
+arteria coroidea posteromedial {1:f}
+arteria parietal posterior {1:f}
+arteria segmentaria posterior {1:f}
+árbol bronquial segmentario posterior {1:m}
+vena segmentaria posterior {1:f}
+arteria tibial posterior {1:f}
+vena tibial posterior {1:f}
+arteria recurrente cubital posterior {1:f}
+giro precentral {1:m}
+arteria prefrontal {1:f}
+corteza prefrontal {1:f}
+músculo pronador cuadrado {1:m}
+músculo psoas mayor {1:m}
+rafe pterigomandibular {1:m}
+músculo pubococcígeo {1:m}
+músculo puborrectal {1:m}
+arteria pulmonar {1:f}
+compartimento pulmopleural {1:m}
+putamen {1:m}
+músculo cuadrado femoral {1:m}
+arteria radial {1:f}
+arteria recurrente radial {1:f}
+vena radial {1:f}
+radio {1:m}
+músculo recto anterior de la cabeza {1:m}
+músculo recto lateral de la cabeza {1:m}
+músculo recto posterior mayor de la cabeza {1:m}
+músculo recto posterior menor de la cabeza {1:m}
+músculo recto femoral {1:m}
+arteria interósea recurrente {1:f}
+arteria renal {1:f}
+vena renal {1:f}
+músculo romboides mayor {1:m}
+músculo romboides menor {1:m}
+dedo anular {1:m}
+músculo salpingofaríngeo {1:m}
+músculo sartorio {1:m}
+músculo escaleno anterior {1:m}
+músculo escaleno medio {1:m}
+músculo escaleno posterior {1:m}
+hueso escafoides {1:m}
+escápula {1:f}
+esclera {1:f}
+segunda arteria digital palmar común {1:f}
+segundo cartílago costal {1:m}
+segundo hueso metacarpiano {1:m}
+segundo hueso metatarsiano {1:m}
+segunda arteria intercostal posterior {1:f}
+segunda costilla {1:f}
+segundo dedo del pie {1:m}
+músculo semimembranoso {1:m}
+vesícula seminal {1:f}
+músculo semiespinoso de la cabeza {1:m}
+músculo semiespinoso del cuello {1:m}
+músculo semiespinoso del tórax {1:m}
+músculo semitendinoso {1:m}
+músculo serrato anterior {1:m}
+músculo serrato posterior inferior {1:m}
+músculo serrato posterior superior {1:m}
+séptimo cartílago costal {1:m}
+séptima costilla {1:f}
+hombro {1:m}
+lado de la pelvis ósea {1:m}
+lado del corazón {1:m}
+lado de la nariz interna {1:m}
+lado de la caja torácica {1:m}
+sexto cartílago costal {1:m}
+sexta costilla {1:f}
+vena safena parva {1:f}
+músculo sóleo {1:m}
+músculo espinoso del tórax {1:m}
+arteria esplénica {1:f}
+músculo esplenio de la cabeza {1:m}
+músculo esplenio del cuello {1:m}
+músculo esternocleidomastoideo {1:m}
+músculo esternohioideo {1:m}
+músculo esternotiroideo {1:m}
+estría medular del tálamo {1:f}
+estría terminal {1:f}
+músculo estilohioideo {1:m}
+ligamento estilohioideo {1:m}
+músculo estilofaríngeo {1:m}
+arteria subclavia {1:f}
+vena subclavia {1:f}
+músculo subclavio {1:m}
+arteria subcostal {1:f}
+vena subcostal {1:f}
+glándula sublingual {1:f}
+glándula submandibular {1:f}
+arteria subescapular {1:f}
+vena subescapular {1:f}
+músculo subescapular {1:m}
+arteria cervical superficial {1:f}
+vena dorsal superficial del pene {1:f}
+arteria epigástrica superficial {1:f}
+vena epigástrica superficial {1:f}
+arteria plantar medial superficial {1:f}
+arco arterial palmar superficial {1:m}
+arco venoso palmar superficial {1:m}
+vena basal superior {1:f}
+segmento broncopulmonar superior {1:m}
+arteria cerebelosa superior {1:f}
+colículo superior {1:m}
+arteria epigástrica superior {1:f}
+vena epigástrica superior {1:f}
+giro frontal superior {1:m}
+vena glútea superior {1:f}
+arteria intercostal superior {1:f}
+vena intercostal superior {1:f}
+músculo oblicuo superior {1:m}
+lobulillo parietal superior {1:m}
+músculo constrictor superior de la faringe {1:m}
+vena pulmonar superior {1:f}
+músculo recto superior {1:m}
+arteria segmentaria superior {1:f}
+árbol bronquial segmentario superior {1:m}
+vena segmentaria superior {1:f}
+arteria colateral cubital superior {1:f}
+músculo supinador {1:m}
+nervio supraorbitario {1:m}
+giro supramarginal {1:m}
+vena suprarrenal {1:f}
+arteria supraescapular {1:f}
+vena supraescapular {1:f}
+músculo supraespinoso {1:m}
+nervio supratroclear {1:m}
+astrágalo (talus) {1:m}
+hueso temporal {1:m}
+lóbulo temporal {1:m}
+músculo tensor de la fascia lata {1:m}
+músculo tensor del velo del paladar {1:m}
+décima costilla {1:f}
+músculo redondo mayor {1:m}
+músculo redondo menor {1:m}
+arteria testicular {1:f}
+vena testicular {1:f}
+testículo {1:m}
+arteria talamogeniculada {1:f}
+arteria talamoperforante {1:f}
+tálamo {1:m}
+muslo {1:m}
+tercera arteria digital palmar común {1:f}
+tercer cartílago costal {1:m}
+tercer hueso metacarpiano {1:m}
+tercer hueso metatarsiano {1:m}
+tercera costilla {1:f}
+tercer dedo del pie {1:m}
+arteria toracoacromial {1:f}
+arteria toracodorsal {1:f}
+vena toracodorsal {1:f}
+pulgar {1:m}
+músculo tiroaritenoideo {1:m}
+arteria tirocervical {1:f}
+tronco tirocervical {1:m}
+músculo tirohioideo {1:m}
+membrana tirohioidea {1:f}
+tibia {1:f}
+músculo tibial anterior {1:m}
+músculo tibial posterior {1:m}
+arteria cervical transversa {1:f}
+músculo transverso del tórax {1:m}
+hueso trapecio {1:m}
+hueso trapezoide {1:m}
+hueso piramidal (triquetro) {1:m}
+nervio troclear {1:m}
+duodécima costilla {1:f}
+cúbito (ulna) {1:m}
+arteria cubital (ulnar) {1:f}
+vena cubital {1:f}
+incisivo central permanente superior {1:m}
+párpado superior {1:m}
+primer molar permanente superior {1:m}
+primer premolar permanente superior {1:m}
+incisivo lateral permanente superior {1:m}
+miembro superior {1:m}
+arteria lobar superior {1:f}
+vena lobar superior {1:f}
+segundo molar permanente superior {1:m}
+segundo premolar permanente superior {1:m}
+canino permanente superior {1:m}
+vías urinarias superiores {1:fp}
+uréter {1:m}
+músculo vasto intermedio {1:m}
+músculo vasto lateral {1:m}
+músculo vasto medial {1:m}
+ventrículo {1:m}
+arteria vertebral {1:f}
+cuerpo vítreo {1:m}
+ligamento vocal {1:m}
+músculo vocal {1:m}
+muñeca {1:f}
+hueso cigomático {1:m}

@@ -1,0 +1,1018 @@
+{
+  "source": "Wikimedia Commons",
+  "tissues": [
+    {
+      "id": "epitelio-plano-simple",
+      "nombre": "Epitelio plano simple",
+      "categoria": "Epitelial",
+      "descripcion": "Epitelio de una sola capa de células muy delgadas y aplanadas. Reviste superficies de intercambio y de deslizamiento, como los alvéolos pulmonares, el interior de los vasos (endotelio) y las serosas (mesotelio). En esta vista de superficie los bordes celulares forman una malla poligonal oscura y cada célula muestra un núcleo claro en el centro; en un corte perpendicular solo se vería una línea fina con núcleos achatados.",
+      "tincion": "no indicada",
+      "aumento": "400x",
+      "especie": "humano",
+      "estado": "a validar",
+      "image": "/histology/epitelio-plano-simple.webp",
+      "width": 1400,
+      "height": 789,
+      "credit": {
+        "author": "Berkshire Community College Bioscience Image Library",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "source": "https://commons.wikimedia.org/wiki/File:Epithelial_Tissues_Simple_Squamous_Epithelium_(41722161301).jpg",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "respiratory",
+          "arterial",
+          "venous"
+        ],
+        "names": [
+          "lung"
+        ]
+      }
+    },
+    {
+      "id": "epitelio-cubico-simple",
+      "nombre": "Epitelio cúbico simple",
+      "categoria": "Epitelial",
+      "descripcion": "Una sola capa de células tan altas como anchas, con núcleo redondo y central. Forma los túbulos renales, los folículos tiroideos y los conductos pequeños de muchas glándulas, donde participa en la absorción y la secreción. En la imagen, los túbulos cortados a lo largo muestran hileras de células con núcleos redondos bien alineados, apoyadas sobre una lámina de tejido conectivo.",
+      "tincion": "no indicada (aspecto de H&E)",
+      "especie": "no indicada",
+      "estado": "a validar",
+      "image": "/histology/epitelio-cubico-simple.webp",
+      "width": 1400,
+      "height": 1050,
+      "credit": {
+        "author": "Echinaceapallida",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Epith_simple_cuboidal4.jpg",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "urinary",
+          "endocrine"
+        ],
+        "names": [
+          "kidney"
+        ]
+      }
+    },
+    {
+      "id": "epitelio-cilindrico-simple",
+      "nombre": "Epitelio cilíndrico simple",
+      "categoria": "Epitelial",
+      "descripcion": "Una sola capa de células más altas que anchas, con núcleos alargados situados cerca de la base. Tapiza el tubo digestivo desde el estómago, la vesícula biliar y las vías del aparato reproductor femenino, y se especializa en absorber o secretar. En esta imagen, tomada de la superficie del endometrio, se reconoce la fila única de núcleos ovalados alineados en la base y el pliegue que se hunde en el tejido de sostén.",
+      "tincion": "H&E",
+      "especie": "humano",
+      "estado": "a validar",
+      "image": "/histology/epitelio-cilindrico-simple.webp",
+      "width": 1069,
+      "height": 741,
+      "credit": {
+        "author": "Mikael Häggström, M.D.",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "source": "https://commons.wikimedia.org/wiki/File:Histology_of_normal_simple_columnar_epithelium_of_the_endometrium.jpg",
+        "modification": "Convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "digestive",
+          "reproductive"
+        ],
+        "names": [
+          "stomach",
+          "small intestine",
+          "large intestine"
+        ]
+      }
+    },
+    {
+      "id": "epitelio-seudoestratificado-ciliado",
+      "nombre": "Epitelio seudoestratificado cilíndrico ciliado",
+      "categoria": "Epitelial",
+      "descripcion": "Todas las células tocan la membrana basal, pero sus núcleos se reparten a distintas alturas, lo que simula varios estratos. Reviste la tráquea y los bronquios, y sus cilios barren el moco hacia la faringe. En la imagen se distinguen las células ciliadas (C) en la superficie, las caliciformes (G) con su cuerpo claro y las células basales (B) sobre la membrana basal (BM).",
+      "tincion": "tricrómico de Masson",
+      "especie": "humano",
+      "estado": "a validar",
+      "image": "/histology/epitelio-seudoestratificado-ciliado.webp",
+      "width": 1114,
+      "height": 700,
+      "credit": {
+        "author": "John.devos",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Masson%27s_trichrome_staining_of_the_Human_trachea.jpg",
+        "modification": "Convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "respiratory"
+        ],
+        "names": [
+          "trachea",
+          "main bronchus"
+        ]
+      }
+    },
+    {
+      "id": "epitelio-plano-estratificado-queratinizado",
+      "nombre": "Epitelio plano estratificado queratinizado",
+      "categoria": "Epitelial",
+      "descripcion": "Epitelio de varias capas cuyas células se aplanan hacia la superficie y terminan en una capa córnea de células muertas llenas de queratina. Forma la epidermis de la piel y protege de la pérdida de agua y del roce. En la imagen se ve arriba el estrato córneo con aspecto de red de células sin núcleo, debajo las capas con núcleos y, más abajo, la dermis papilar y reticular.",
+      "tincion": "H&E",
+      "especie": "no indicada",
+      "estado": "a validar",
+      "image": "/histology/epitelio-plano-estratificado-queratinizado.webp",
+      "width": 843,
+      "height": 737,
+      "credit": {
+        "author": "Kilbad (original); Mikael Häggström, M.D. (obra derivada)",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "source": "https://commons.wikimedia.org/wiki/File:Epidermis,_papillary_dermis_and_reticular_dermis.png",
+        "modification": "Convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "integumentary"
+        ],
+        "names": [
+          "skin"
+        ]
+      }
+    },
+    {
+      "id": "epitelio-plano-estratificado-no-queratinizado",
+      "nombre": "Epitelio plano estratificado no queratinizado",
+      "categoria": "Epitelial",
+      "descripcion": "Epitelio de varias capas cuyas células superficiales se aplanan pero conservan el núcleo y se mantienen húmedas, sin capa de queratina. Reviste cavidades sometidas a roce, como la boca, el esófago y la vagina. Observe el engrosamiento de la pared con muchas capas de células, y los núcleos que siguen visibles hasta la superficie, a diferencia de la epidermis.",
+      "tincion": "no indicada (aspecto de H&E)",
+      "especie": "no indicada",
+      "estado": "a validar",
+      "image": "/histology/epitelio-plano-estratificado-no-queratinizado.webp",
+      "width": 1272,
+      "height": 1400,
+      "credit": {
+        "author": "Photograper09",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:A_classic_view_of_non-keratinized_stratified_squamous_epithelium.jpg",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "digestive"
+        ],
+        "names": [
+          "esophagus",
+          "tongue"
+        ]
+      }
+    },
+    {
+      "id": "epitelio-de-transicion",
+      "nombre": "Epitelio de transición (urotelio)",
+      "categoria": "Epitelial",
+      "descripcion": "Epitelio de varias capas que cambia de forma según la vejiga esté llena o vacía. Reviste la pelvis renal, los uréteres y la vejiga. Se reconoce por las células superficiales grandes y abombadas, a veces con dos núcleos, que cubren varias capas de células poligonales.",
+      "tincion": "no indicada (aspecto de H&E)",
+      "especie": "no indicada",
+      "estado": "a validar",
+      "image": "/histology/epitelio-de-transicion.webp",
+      "width": 1400,
+      "height": 952,
+      "credit": {
+        "author": "Echinaceapallida",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Epith_transitional.jpg",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "urinary"
+        ],
+        "names": [
+          "urinary bladder",
+          "ureter"
+        ]
+      }
+    },
+    {
+      "id": "conectivo-laxo",
+      "nombre": "Tejido conectivo laxo",
+      "categoria": "Conectivo",
+      "descripcion": "Tejido de sostén con pocas fibras, mucha sustancia fundamental y células dispersas. Rodea vasos, nervios y glándulas y forma la capa de apoyo bajo la mayoría de los epitelios. En este extendido se ven fibras elásticas oscuras y finas que se cruzan sobre haces de colágeno rosados, con núcleos de fibroblastos repartidos entre ellos.",
+      "tincion": "no indicada",
+      "aumento": "200x",
+      "especie": "no indicada",
+      "estado": "a validar",
+      "image": "/histology/conectivo-laxo.webp",
+      "width": 1400,
+      "height": 789,
+      "credit": {
+        "author": "Berkshire Community College Bioscience Image Library",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "source": "https://commons.wikimedia.org/wiki/File:Connective_Tissue_Loose_Aerolar_(41743649122).jpg",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "connective"
+        ],
+        "names": []
+      }
+    },
+    {
+      "id": "conectivo-denso-regular",
+      "nombre": "Tejido conectivo denso regular (tendón)",
+      "categoria": "Conectivo",
+      "descripcion": "Tejido formado casi solo por haces de colágeno paralelos, con muy pocas células. Constituye los tendones y los ligamentos, que resisten tracciones en una dirección. La imagen muestra una masa rosada de fibras en líneas paralelas y núcleos de fibroblastos alargados, aplanados entre los haces.",
+      "tincion": "H&E",
+      "especie": "humano",
+      "estado": "a validar",
+      "image": "/histology/conectivo-denso-regular.webp",
+      "width": 1400,
+      "height": 933,
+      "credit": {
+        "author": "Nephron",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Tendon_-_high_mag.jpg",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "connective",
+          "muscular"
+        ],
+        "names": [
+          "tendon"
+        ]
+      }
+    },
+    {
+      "id": "conectivo-denso-irregular",
+      "nombre": "Tejido conectivo denso irregular",
+      "categoria": "Conectivo",
+      "descripcion": "Tejido con haces gruesos de colágeno orientados en varias direcciones, que resiste tensiones desde distintos ángulos. Forma la dermis reticular de la piel y las cápsulas de varios órganos. Se distingue del denso regular porque los haces se entrecruzan y se cortan en distintos planos, con pocos núcleos entre ellos.",
+      "tincion": "no indicada (aspecto de H&E)",
+      "especie": "no indicada",
+      "estado": "a validar",
+      "image": "/histology/conectivo-denso-irregular.webp",
+      "width": 1400,
+      "height": 1050,
+      "credit": {
+        "author": "Echinaceapallida",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Dense_irregular.jpg",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "integumentary",
+          "connective"
+        ],
+        "names": [
+          "skin"
+        ]
+      }
+    },
+    {
+      "id": "tejido-adiposo",
+      "nombre": "Tejido adiposo (unilocular)",
+      "categoria": "Conectivo",
+      "descripcion": "Tejido conectivo especializado en almacenar grasa en células muy grandes con una sola gota lipídica. Se encuentra bajo la piel, alrededor de los órganos y en la médula ósea amarilla. En el corte las gotas se disuelven y dejan espacios vacíos de contorno poligonal, con una película de citoplasma y el núcleo apretado contra la pared; los pliegues se deben a una fijación insuficiente.",
+      "tincion": "H&E",
+      "especie": "no indicada",
+      "estado": "a validar",
+      "image": "/histology/tejido-adiposo.webp",
+      "width": 1400,
+      "height": 1047,
+      "credit": {
+        "author": "Mikael Häggström, M.D.",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "source": "https://commons.wikimedia.org/wiki/File:Adipose_tissue_with_crumpling_artifact_due_to_insufficient_fixation.jpg",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "connective"
+        ],
+        "names": []
+      }
+    },
+    {
+      "id": "cartilago-hialino",
+      "nombre": "Cartílago hialino",
+      "categoria": "Conectivo",
+      "descripcion": "Cartílago de matriz lisa y vítrea, con fibras de colágeno finas que no se ven. Se halla en la tráquea, los bronquios, el extremo de las costillas y las superficies articulares. En la imagen la matriz se tiñe de lila y los condrocitos aparecen en lagunas, a menudo en pares o grupos pequeños, con el pericondrio más rosado en un borde.",
+      "tincion": "H&E",
+      "aumento": "400x",
+      "especie": "no indicada",
+      "estado": "a validar",
+      "image": "/histology/cartilago-hialino.webp",
+      "width": 1400,
+      "height": 1050,
+      "credit": {
+        "author": "Ganímedes",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Cartilage03.JPG",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "skeletal",
+          "respiratory"
+        ],
+        "names": [
+          "trachea",
+          "costal cartilage"
+        ]
+      }
+    },
+    {
+      "id": "cartilago-elastico",
+      "nombre": "Cartílago elástico",
+      "categoria": "Conectivo",
+      "descripcion": "Cartílago semejante al hialino pero con una densa red de fibras elásticas en la matriz, lo que le da flexibilidad. Forma la epiglotis y el pabellón de la oreja. En la imagen las fibras elásticas se ven como filamentos oscuros que rodean las lagunas con condrocitos, más abundantes que en el hialino.",
+      "tincion": "no indicada (fibras elásticas teñidas de oscuro)",
+      "especie": "no indicada",
+      "estado": "a validar",
+      "image": "/histology/cartilago-elastico.webp",
+      "width": 1400,
+      "height": 1050,
+      "credit": {
+        "author": "Echinaceapallida",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Cartilage_elastic1.jpg",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "respiratory",
+          "sensory"
+        ],
+        "names": [
+          "epiglottis",
+          "external ear"
+        ]
+      }
+    },
+    {
+      "id": "fibrocartilago",
+      "nombre": "Fibrocartílago",
+      "categoria": "Conectivo",
+      "descripcion": "Cartílago con haces gruesos de colágeno de tipo I que alternan con hileras de condrocitos. Está en los discos intervertebrales, los meniscos y la sínfisis del pubis, donde soporta compresión y tracción. En la imagen los haces aparecen como bandas paralelas y los condrocitos, pequeños y poco numerosos, se alinean entre ellas.",
+      "tincion": "no indicada",
+      "aumento": "200x",
+      "especie": "no indicada",
+      "estado": "a validar",
+      "image": "/histology/fibrocartilago.webp",
+      "width": 1400,
+      "height": 789,
+      "credit": {
+        "author": "Berkshire Community College Bioscience Image Library",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "source": "https://commons.wikimedia.org/wiki/File:Connective_Tissue_Fibrocartilage_(41140134544).jpg",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "skeletal"
+        ],
+        "names": [
+          "intervertebral disk"
+        ]
+      }
+    },
+    {
+      "id": "hueso-compacto",
+      "nombre": "Hueso compacto",
+      "categoria": "Conectivo",
+      "descripcion": "Hueso denso formado por unidades cilíndricas llamadas osteonas o sistemas de Havers. Constituye la cortical de los huesos largos y le da resistencia. En la imagen se ven el conducto de Havers en el centro de cada osteona, las lagunas con osteocitos dispuestas en anillos concéntricos y los conductillos que las unen.",
+      "tincion": "no indicada (preparado por desgaste, sin tinción aparente)",
+      "aumento": "10x",
+      "especie": "no indicada",
+      "estado": "a validar",
+      "image": "/histology/hueso-compacto.webp",
+      "width": 1400,
+      "height": 930,
+      "credit": {
+        "author": "Athikhun.suw",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Compact_bone_histology_2014.jpg",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "skeletal"
+        ],
+        "names": [
+          "femur"
+        ]
+      }
+    },
+    {
+      "id": "hueso-esponjoso",
+      "nombre": "Hueso esponjoso (trabecular)",
+      "categoria": "Conectivo",
+      "descripcion": "Hueso formado por una red de trabéculas que dejan espacios ocupados por médula. Se encuentra en el interior de las vértebras y en los extremos de los huesos largos. La imagen corresponde a un cuerpo vertebral y tiene dos paneles: en luz común se ven trabéculas irregulares con médula entre ellas, y en luz polarizada las láminas de colágeno brillan.",
+      "tincion": "no indicada",
+      "especie": "no indicada",
+      "estado": "a validar",
+      "image": "/histology/hueso-esponjoso.webp",
+      "width": 1400,
+      "height": 801,
+      "credit": {
+        "author": "Nataliia Maryenko",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Spongy_bone_in_polarized_light.jpg",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "skeletal"
+        ],
+        "names": [
+          "vertebra"
+        ]
+      }
+    },
+    {
+      "id": "sangre-frotis",
+      "nombre": "Sangre (frotis periférico)",
+      "categoria": "Conectivo",
+      "descripcion": "Tejido conectivo líquido: células suspendidas en el plasma. En un frotis se ven muchos eritrocitos sin núcleo, con forma de disco, algunas plaquetas como puntos y los leucocitos, más escasos. En el centro de la imagen hay un neutrófilo, con núcleo dividido en varios lóbulos y citoplasma pálido.",
+      "tincion": "Wright",
+      "especie": "no indicada",
+      "estado": "a validar",
+      "image": "/histology/sangre-frotis.webp",
+      "width": 1400,
+      "height": 1050,
+      "credit": {
+        "author": "Ajay Kumar Chaurasiya",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:WBC_(neutrophil)_at_centre,_numerous_erythrocytes_and_platelets_(dot_like_bodies)_in_Wright%27s_stained_peripheral_blood_smear_(PBS)_microscopy.jpg",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "cardiac",
+          "arterial",
+          "venous"
+        ],
+        "names": [
+          "heart"
+        ]
+      }
+    },
+    {
+      "id": "musculo-esqueletico-longitudinal",
+      "nombre": "Músculo esquelético (corte longitudinal)",
+      "categoria": "Muscular",
+      "descripcion": "Músculo voluntario formado por fibras largas y multinucleadas que se contraen por la superposición de miofilamentos. Forma los músculos que mueven el esqueleto. En el corte longitudinal se reconocen las estrías transversales, claras y oscuras alternadas, y los muchos núcleos aplanados bajo la membrana de cada fibra.",
+      "tincion": "H&E",
+      "especie": "no indicada",
+      "estado": "a validar",
+      "image": "/histology/musculo-esqueletico-longitudinal.webp",
+      "width": 1400,
+      "height": 929,
+      "credit": {
+        "author": "Rollroboter",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Muskel_(_1).jpg",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "muscular"
+        ],
+        "names": []
+      }
+    },
+    {
+      "id": "musculo-esqueletico-transversal",
+      "nombre": "Músculo esquelético (corte transversal)",
+      "categoria": "Muscular",
+      "descripcion": "Mismo tejido que en el corte longitudinal, visto de punta. Las fibras aparecen como polígonos rosados de tamaño parecido, agrupados en fascículos y separados por finas capas de tejido conectivo. Los núcleos quedan en la periferia, pegados a la membrana, rasgo que lo distingue del músculo cardíaco.",
+      "tincion": "H&E",
+      "aumento": "400x",
+      "especie": "no indicada",
+      "estado": "a validar",
+      "image": "/histology/musculo-esqueletico-transversal.webp",
+      "width": 1400,
+      "height": 1050,
+      "credit": {
+        "author": "Ganímedes",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Muscular_estriado_transv_400X.JPG",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "muscular"
+        ],
+        "names": []
+      }
+    },
+    {
+      "id": "musculo-cardiaco",
+      "nombre": "Músculo cardíaco",
+      "categoria": "Muscular",
+      "descripcion": "Músculo estriado involuntario de la pared del corazón. Sus células son más cortas que las esqueléticas, tienen uno o dos núcleos centrales y se ramifican para unirse entre sí mediante discos intercalares. En la imagen se ven fibras en cortes longitudinales con núcleos ovales en el centro y espacios con tejido conectivo y capilares entre ellas.",
+      "tincion": "no indicada",
+      "aumento": "400x",
+      "especie": "no indicada",
+      "estado": "a validar",
+      "image": "/histology/musculo-cardiaco.webp",
+      "width": 1050,
+      "height": 1400,
+      "credit": {
+        "author": "Alexander G. Cheroske",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Cardiac_muscle_histology_400x.jpg",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "cardiac"
+        ],
+        "names": [
+          "heart"
+        ]
+      }
+    },
+    {
+      "id": "musculo-liso",
+      "nombre": "Músculo liso",
+      "categoria": "Muscular",
+      "descripcion": "Músculo involuntario sin estrías, formado por células fusiformes con un solo núcleo central. Está en la pared del tubo digestivo, los vasos sanguíneos, la vejiga y las vías respiratorias. En el corte longitudinal las células se disponen en haces ondulados de color rosado con núcleos alargados, en forma de cigarro.",
+      "tincion": "no indicada (aspecto de H&E)",
+      "especie": "no indicada",
+      "estado": "a validar",
+      "image": "/histology/musculo-liso.webp",
+      "width": 1400,
+      "height": 792,
+      "credit": {
+        "author": "Juan Carlos Fonseca Mata",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Smooth_muscle_(histology_slide).jpg",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "digestive",
+          "arterial",
+          "urinary"
+        ],
+        "names": [
+          "urinary bladder"
+        ]
+      }
+    },
+    {
+      "id": "neuronas-asta-anterior",
+      "nombre": "Neuronas del asta anterior de la médula espinal",
+      "categoria": "Nervioso",
+      "descripcion": "Las neuronas motoras del asta anterior son células grandes y multipolares. Sus cuerpos de Nissl, grumos de retículo endoplasmático rugoso, se tiñen de violeta con el violeta de cresilo, y las fibras mielínicas se tiñen de azul con el azul rápido de luxol. En la imagen, las flechas señalan cuerpos de Nissl en el citoplasma de neuronas con núcleo claro y nucléolo evidente; la barra de escala mide 30 µm.",
+      "tincion": "violeta de cresilo y azul rápido de luxol",
+      "especie": "no indicada",
+      "estado": "a validar",
+      "image": "/histology/neuronas-asta-anterior.webp",
+      "width": 1200,
+      "height": 900,
+      "credit": {
+        "author": "Tulemo",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Nissl_bodies_in_neurons_of_the_spinal_cord.jpg",
+        "modification": "Convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "nervous"
+        ],
+        "names": [
+          "spinal cord"
+        ]
+      }
+    },
+    {
+      "id": "nervio-periferico",
+      "nombre": "Nervio periférico (corte transversal)",
+      "categoria": "Nervioso",
+      "descripcion": "Los nervios están formados por fibras agrupadas en fascículos envueltos por tejido conectivo: endoneuro entre fibras, perineuro alrededor de cada fascículo y epineuro alrededor de todo el nervio. El ácido ósmico tiñe de negro la mielina, de modo que las fibras mielínicas aparecen como anillos oscuros con el axón claro en el centro. En la imagen se ven los fascículos redondeados y el tejido que los rodea.",
+      "tincion": "ácido ósmico",
+      "aumento": "400x",
+      "especie": "no indicada",
+      "estado": "a validar",
+      "image": "/histology/nervio-periferico.webp",
+      "width": 1400,
+      "height": 1049,
+      "credit": {
+        "author": "Малишко Анастасія",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%BE%D0%BF%D0%B5%D1%80%D0%B5%D1%87%D0%BD%D0%B8%D0%B9_%D0%BD%D0%B5%D1%80%D0%B2.jpg",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "nervous"
+        ],
+        "names": [
+          "nerve"
+        ]
+      }
+    },
+    {
+      "id": "piel",
+      "nombre": "Piel",
+      "categoria": "Órganos",
+      "descripcion": "Órgano formado por la epidermis, un epitelio plano estratificado queratinizado, y la dermis, de tejido conectivo, que apoya sobre la hipodermis con tejido adiposo. En la imagen (20x) los números remiten a la leyenda del archivo original: epitelio queratinizado, folículo piloso, dermis papilar y reticular, pelo, glándula sebácea, vaso sanguíneo, fibras de colágeno gruesas y tejido adiposo. Mire de arriba abajo cómo cambia la textura: capa celular delgada, tejido laxo y luego haces densos de colágeno.",
+      "tincion": "H&E",
+      "aumento": "20x",
+      "especie": "humano",
+      "estado": "a validar",
+      "image": "/histology/piel.webp",
+      "width": 1400,
+      "height": 1061,
+      "credit": {
+        "author": "Guido Fregapani",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Pele_de_humano_%E2%80%93_HE_%E2%80%93_20x.png",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "integumentary"
+        ],
+        "names": [
+          "skin"
+        ]
+      }
+    },
+    {
+      "id": "higado",
+      "nombre": "Hígado",
+      "categoria": "Órganos",
+      "descripcion": "Glándula que procesa nutrientes, produce bilis y detoxifica la sangre. Está formada por cordones de hepatocitos, células poligonales con núcleo redondo y citoplasma rosado, separados por sinusoides capilares. En la imagen se ve el parénquima de hepatocitos y, arriba a la derecha, una banda rosada de tejido fibroso de la cápsula o de un espacio portal.",
+      "tincion": "H&E",
+      "especie": "humano",
+      "estado": "a validar",
+      "image": "/histology/higado.webp",
+      "width": 1400,
+      "height": 1047,
+      "credit": {
+        "author": "Mikael Häggström, M.D.",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "source": "https://commons.wikimedia.org/wiki/File:Histology_of_liver_tissue_from_a_gallbladder_resection.jpg",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "digestive"
+        ],
+        "names": [
+          "liver"
+        ]
+      }
+    },
+    {
+      "id": "rinon",
+      "nombre": "Riñón (corteza)",
+      "categoria": "Órganos",
+      "descripcion": "Órgano que filtra la sangre y forma la orina. La corteza contiene corpúsculos renales, con un glomérulo de capilares dentro de la cápsula de Bowman, rodeados por cortes de túbulos. En la imagen se ve un glomérulo en el centro con su espacio urinario claro, y a su alrededor túbulos contorneados proximales de citoplasma rosado más intenso y túbulos distales más claros.",
+      "tincion": "H&E",
+      "especie": "humano",
+      "estado": "a validar",
+      "image": "/histology/rinon.webp",
+      "width": 1400,
+      "height": 933,
+      "credit": {
+        "author": "Nephron",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Benign_kidney_--_intermed_mag.jpg",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "urinary"
+        ],
+        "names": [
+          "kidney"
+        ]
+      }
+    },
+    {
+      "id": "pulmon",
+      "nombre": "Pulmón",
+      "categoria": "Órganos",
+      "descripcion": "Órgano del intercambio de gases, formado por vías aéreas que se ramifican y terminan en alvéolos de pared muy delgada. En la imagen se observa un bronquiolo con la luz plegada, rodeado de tejido conectivo y músculo liso, y a su alrededor los alvéolos como espacios vacíos separados por tabiques finísimos.",
+      "tincion": "no indicada (aspecto de H&E)",
+      "especie": "no indicada",
+      "estado": "a validar",
+      "image": "/histology/pulmon.webp",
+      "width": 1400,
+      "height": 952,
+      "credit": {
+        "author": "Yale Rosen",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Normal_lung_(5414785258).jpg",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "respiratory"
+        ],
+        "names": [
+          "lung"
+        ]
+      }
+    },
+    {
+      "id": "estomago",
+      "nombre": "Estómago (mucosa del fondo)",
+      "categoria": "Órganos",
+      "descripcion": "La mucosa del fondo gástrico tiene fositas superficiales y glándulas tubulares rectas que ocupan casi todo su espesor. Estas glándulas contienen células principales, que secretan pepsinógeno, y parietales, que producen ácido clorhídrico. La imagen muestra a 10x la mucosa con sus glándulas alineadas perpendiculares a la superficie, y un recuadro a 40x con los tipos celulares.",
+      "tincion": "H&E",
+      "aumento": "10x con recuadro a 40x",
+      "especie": "no indicada",
+      "estado": "a validar",
+      "image": "/histology/estomago.webp",
+      "width": 1400,
+      "height": 1037,
+      "credit": {
+        "author": "Carrasco G, Corvalán AH",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Histology_of_normal_fundic_mucosa.png",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "digestive"
+        ],
+        "names": [
+          "stomach"
+        ]
+      }
+    },
+    {
+      "id": "intestino-delgado",
+      "nombre": "Intestino delgado (mucosa)",
+      "categoria": "Órganos",
+      "descripcion": "La mucosa del intestino delgado forma vellosidades cubiertas de epitelio cilíndrico con células caliciformes, y criptas de Lieberkühn en la base. Esta organización aumenta la superficie para absorber nutrientes. En la imagen, de bajo aumento, las vellosidades se ven como proyecciones alargadas con un eje de tejido laxo, y entre sus bases las criptas alineadas.",
+      "tincion": "H&E",
+      "especie": "no indicada",
+      "estado": "a validar",
+      "image": "/histology/intestino-delgado.webp",
+      "width": 1232,
+      "height": 1400,
+      "credit": {
+        "author": "Nephron",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Small_intestine_low_mag.jpg",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "digestive"
+        ],
+        "names": [
+          "small intestine"
+        ]
+      }
+    },
+    {
+      "id": "colon",
+      "nombre": "Colon",
+      "categoria": "Órganos",
+      "descripcion": "La pared del colon tiene una mucosa sin vellosidades, con criptas rectas muy numerosas y abundantes células caliciformes, y debajo submucosa y una capa muscular gruesa. En la imagen, de bajo aumento, se aprecian las criptas alineadas como tubos paralelos, el tejido laxo de la submucosa y la capa de músculo liso rosada más profunda.",
+      "tincion": "H&E",
+      "especie": "no indicada",
+      "estado": "a validar",
+      "image": "/histology/colon.webp",
+      "width": 1400,
+      "height": 933,
+      "credit": {
+        "author": "CoRus13",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Colon,_low_mag.jpg",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "digestive"
+        ],
+        "names": [
+          "large intestine"
+        ]
+      }
+    },
+    {
+      "id": "tiroides",
+      "nombre": "Glándula tiroides",
+      "categoria": "Órganos",
+      "descripcion": "Glándula endocrina formada por folículos esféricos llenos de coloide, que almacena las hormonas tiroideas. Cada folículo está tapizado por epitelio cúbico simple. En la imagen, el número 1 marca el coloide, que se ve homogéneo y con grietas de retracción, el 2 el epitelio folicular, y la flecha una célula C parafolicular, que produce calcitonina.",
+      "tincion": "no indicada (aspecto de H&E)",
+      "especie": "no indicada",
+      "estado": "a validar",
+      "image": "/histology/tiroides.webp",
+      "width": 1334,
+      "height": 1197,
+      "credit": {
+        "author": "M-J-G",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Histology_thyroid_gland.jpg",
+        "modification": "Convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "endocrine"
+        ],
+        "names": []
+      }
+    },
+    {
+      "id": "bazo",
+      "nombre": "Bazo",
+      "categoria": "Órganos",
+      "descripcion": "Órgano linfático que filtra la sangre y participa en la respuesta inmunitaria. Se divide en pulpa blanca, acúmulos de linfocitos alrededor de arteriolas, y pulpa roja, con sinusoides llenos de sangre. En la imagen, las zonas más oscuras y densas de núcleos corresponden a la pulpa blanca y el tejido más laxo que las rodea, a la pulpa roja; la barra de escala mide 50 µm.",
+      "tincion": "no indicada",
+      "especie": "mamífero (especie no indicada)",
+      "estado": "a validar",
+      "image": "/histology/bazo.webp",
+      "width": 1400,
+      "height": 896,
+      "credit": {
+        "author": "Josef Reischig",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Spleen_(265_19)_Section;_mammal.jpg",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "lymphatic"
+        ],
+        "names": [
+          "spleen"
+        ]
+      }
+    },
+    {
+      "id": "ganglio-linfatico",
+      "nombre": "Ganglio linfático",
+      "categoria": "Órganos",
+      "descripcion": "Órgano en forma de frijol que filtra la linfa. Tiene una cápsula, una corteza con folículos de linfocitos y una médula con cordones y senos. En esta imagen del ganglio completo, de una pieza de colectomía, se ven la cápsula fina, el seno subcapsular claro bajo ella y los folículos redondeados más claros dentro de la corteza.",
+      "tincion": "no indicada (aspecto de H&E)",
+      "especie": "humano",
+      "estado": "a validar",
+      "image": "/histology/ganglio-linfatico.webp",
+      "width": 1200,
+      "height": 990,
+      "credit": {
+        "author": "Ed Uthman, MD",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Normal_Lymph_Node.jpg",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "lymphatic"
+        ],
+        "names": []
+      }
+    },
+    {
+      "id": "arteria-muscular",
+      "nombre": "Arteria muscular",
+      "categoria": "Órganos",
+      "descripcion": "Los vasos de distribución tienen túnica íntima, media y adventicia. En las arterias musculares la media es gruesa y de músculo liso, y la lámina elástica interna se pliega en ondas. En la imagen se ven la luz con restos de sangre, la lámina interna ondulada, la gruesa media circular y la adventicia de tejido conectivo con pequeños vasos alrededor.",
+      "tincion": "no indicada",
+      "especie": "humano",
+      "estado": "a validar",
+      "image": "/histology/arteria-muscular.webp",
+      "width": 1400,
+      "height": 1197,
+      "credit": {
+        "author": "Lord of Konrad",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "source": "https://commons.wikimedia.org/wiki/File:Artery.png",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "arterial"
+        ],
+        "names": [
+          "artery"
+        ]
+      }
+    },
+    {
+      "id": "vena-con-valvula",
+      "nombre": "Vena pequeña con válvula",
+      "categoria": "Órganos",
+      "descripcion": "Las venas tienen paredes más finas que las arterias, con una media delgada y poco músculo, y una luz grande y a menudo irregular. Las venas de calibre medio y pequeño tienen válvulas, pliegues de la íntima que evitan el reflujo de sangre. En la imagen, un corte transversal muestra la luz colapsada con el pliegue valvular en su interior, rodeada de tejido conectivo; la barra de escala mide 0,1 mm.",
+      "tincion": "no indicada",
+      "especie": "humano",
+      "estado": "a validar",
+      "image": "/histology/vena-con-valvula.webp",
+      "width": 1400,
+      "height": 896,
+      "credit": {
+        "author": "Josef Reischig",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Venule_(238_12A)_With_a_vein_valve;_cross-section;_human.jpg",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "venous"
+        ],
+        "names": [
+          "vein"
+        ]
+      }
+    },
+    {
+      "id": "osificacion-endocondral",
+      "nombre": "Osificación endocondral",
+      "categoria": "Órganos",
+      "descripcion": "Proceso por el que el cartílago es reemplazado por hueso, y que forma la mayoría de los huesos largos. En la placa de crecimiento los condrocitos se alinean, se hipertrofian y su matriz se calcifica, y luego el tejido óseo ocupa el lugar. En la imagen, de izquierda a derecha: cartílago, cartílago hipertrófico con columnas de células y hueso esponjoso; es de gato, no humano.",
+      "tincion": "no indicada (aspecto de H&E)",
+      "especie": "gato",
+      "estado": "a validar",
+      "image": "/histology/osificacion-endocondral.webp",
+      "width": 1400,
+      "height": 933,
+      "credit": {
+        "author": "Patbio",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Ossification_endochondrale_chez_le_chat.jpg",
+        "modification": "Redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "skeletal"
+        ],
+        "names": []
+      }
+    },
+    {
+      "id": "medula-osea",
+      "nombre": "Médula ósea (biopsia con trefina)",
+      "categoria": "Órganos",
+      "descripcion": "La médula ósea llena los espacios entre las trabéculas del hueso esponjoso y produce las células de la sangre. En el corte se ven las trabéculas óseas rosadas, las células hematopoyéticas con núcleos oscuros y los adipocitos como espacios claros redondos. La fuente no indica el diagnóstico del paciente, por lo que no debe usarse para juzgar la normalidad de la celularidad.",
+      "tincion": "H&E",
+      "especie": "no indicada",
+      "estado": "a validar",
+      "image": "/histology/medula-osea.webp",
+      "width": 900,
+      "height": 508,
+      "credit": {
+        "author": "Gabriel Caponetti",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Bone_marrow_core_biopsy_microscopy_(trephine)_H%26E_panorama_by_gabriel_caponetti.jpg",
+        "modification": "Recortada, redimensionada y convertida a WebP"
+      },
+      "related": {
+        "systems": [
+          "skeletal",
+          "lymphatic"
+        ],
+        "names": []
+      }
+    }
+  ]
+}

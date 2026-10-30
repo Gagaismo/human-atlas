@@ -1,0 +1,578 @@
+{
+  "source": "Human Reference Atlas (HuBMAP) — Visible Human female",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "sourceUrl": "https://lod.humanatlas.io/ref-organ",
+  "objects": [
+    {
+      "slug": "skin-female",
+      "version": "v1.5",
+      "url": "https://cdn.humanatlas.io/digital-objects/ref-organ/skin-female/v1.5/assets/3d-vh-f-skin.glb"
+    },
+    {
+      "slug": "pelvis-female",
+      "version": "v1.3",
+      "url": "https://cdn.humanatlas.io/digital-objects/ref-organ/pelvis-female/v1.3/assets/3d-vh-f-pelvis.glb"
+    },
+    {
+      "slug": "uterus-female",
+      "version": "v1.2",
+      "url": "https://cdn.humanatlas.io/digital-objects/ref-organ/uterus-female/v1.2/assets/3d-vh-f-uterus.glb"
+    },
+    {
+      "slug": "ovary-female-left",
+      "version": "v1.3",
+      "url": "https://cdn.humanatlas.io/digital-objects/ref-organ/ovary-female-left/v1.3/assets/3d-vh-f-ovary-l.glb"
+    },
+    {
+      "slug": "ovary-female-right",
+      "version": "v1.3",
+      "url": "https://cdn.humanatlas.io/digital-objects/ref-organ/ovary-female-right/v1.3/assets/3d-vh-f-ovary-r.glb"
+    },
+    {
+      "slug": "fallopian-tube-female-left",
+      "version": "v1.2",
+      "url": "https://cdn.humanatlas.io/digital-objects/ref-organ/fallopian-tube-female-left/v1.2/assets/3d-vh-f-fallopian-tube-l.glb"
+    },
+    {
+      "slug": "fallopian-tube-female-right",
+      "version": "v1.2",
+      "url": "https://cdn.humanatlas.io/digital-objects/ref-organ/fallopian-tube-female-right/v1.2/assets/3d-vh-f-fallopian-tube-r.glb"
+    },
+    {
+      "slug": "urinary-bladder-female",
+      "version": "v1.2",
+      "url": "https://cdn.humanatlas.io/digital-objects/ref-organ/urinary-bladder-female/v1.2/assets/3d-vh-f-urinary-bladder.glb"
+    },
+    {
+      "slug": "mammary-gland-female-left",
+      "version": "v1.1",
+      "url": "https://cdn.humanatlas.io/digital-objects/ref-organ/mammary-gland-female-left/v1.1/assets/3d-vh-f-mammary-gland-l.glb"
+    },
+    {
+      "slug": "mammary-gland-female-right",
+      "version": "v1.1",
+      "url": "https://cdn.humanatlas.io/digital-objects/ref-organ/mammary-gland-female-right/v1.1/assets/3d-vh-f-mammary-gland-r.glb"
+    }
+  ],
+  "parts": [
+    {
+      "id": "VHF-hip-bone-l",
+      "node": "VHF-hip-bone-l",
+      "name": "Left hip bone",
+      "nameEs": "hueso coxal izquierdo",
+      "system": "skeletal",
+      "bounds": [
+        [
+          -0.00153,
+          0.83843,
+          -0.10162
+        ],
+        [
+          0.1438,
+          1.02857,
+          0.0489
+        ]
+      ]
+    },
+    {
+      "id": "VHF-hip-bone-r",
+      "node": "VHF-hip-bone-r",
+      "name": "Right hip bone",
+      "nameEs": "hueso coxal derecho",
+      "system": "skeletal",
+      "bounds": [
+        [
+          -0.14392,
+          0.8371,
+          -0.1017
+        ],
+        [
+          0.00038,
+          1.02916,
+          0.04505
+        ]
+      ]
+    },
+    {
+      "id": "VHF-sacrum",
+      "node": "VHF-sacrum",
+      "name": "Sacrum",
+      "nameEs": "sacro",
+      "system": "skeletal",
+      "bounds": [
+        [
+          -0.05749,
+          0.91945,
+          -0.11705
+        ],
+        [
+          0.05822,
+          1.00938,
+          -0.0218
+        ]
+      ]
+    },
+    {
+      "id": "VHF-coccyx",
+      "node": "VHF-coccyx",
+      "name": "Coccyx",
+      "nameEs": "cóccix",
+      "system": "skeletal",
+      "bounds": [
+        [
+          -0.01372,
+          0.89618,
+          -0.11329
+        ],
+        [
+          0.01525,
+          0.92065,
+          -0.0788
+        ]
+      ]
+    },
+    {
+      "id": "VHF-uterine-fundus",
+      "node": "VHF-uterine-fundus",
+      "name": "Fundus of uterus",
+      "nameEs": "fondo del útero",
+      "system": "reproductive",
+      "bounds": [
+        [
+          -0.02257,
+          0.90878,
+          0.00363
+        ],
+        [
+          0.01503,
+          0.92796,
+          0.02366
+        ]
+      ]
+    },
+    {
+      "id": "VHF-uterine-body",
+      "node": "VHF-uterine-body",
+      "name": "Body of uterus",
+      "nameEs": "cuerpo del útero",
+      "system": "reproductive",
+      "bounds": [
+        [
+          -0.02331,
+          0.89912,
+          -0.01103
+        ],
+        [
+          0.01584,
+          0.92643,
+          0.01408
+        ]
+      ]
+    },
+    {
+      "id": "VHF-uterine-cornua",
+      "node": "VHF-uterine-cornua",
+      "name": "Cornua of uterus",
+      "nameEs": "cuernos del útero",
+      "system": "reproductive",
+      "bounds": [
+        [
+          -0.02836,
+          0.91328,
+          0.00693
+        ],
+        [
+          0.01929,
+          0.92174,
+          0.0157
+        ]
+      ]
+    },
+    {
+      "id": "VHF-lower-uterine-segment",
+      "node": "VHF-lower-uterine-segment",
+      "name": "Lower uterine segment",
+      "nameEs": "segmento uterino inferior",
+      "system": "reproductive",
+      "bounds": [
+        [
+          -0.01124,
+          0.89569,
+          -0.01624
+        ],
+        [
+          0.00513,
+          0.91417,
+          -0.003
+        ]
+      ]
+    },
+    {
+      "id": "VHF-cervix",
+      "node": "VHF-cervix",
+      "name": "Cervix of uterus",
+      "nameEs": "cuello del útero",
+      "system": "reproductive",
+      "bounds": [
+        [
+          -0.01461,
+          0.88528,
+          -0.02964
+        ],
+        [
+          0.01018,
+          0.91156,
+          -0.00759
+        ]
+      ]
+    },
+    {
+      "id": "VHF-cervicovaginal-junction",
+      "node": "VHF-cervicovaginal-junction",
+      "name": "Cervicovaginal junction",
+      "nameEs": "unión cervicovaginal",
+      "system": "reproductive",
+      "bounds": [
+        [
+          -0.02082,
+          0.88182,
+          -0.03345
+        ],
+        [
+          0.01392,
+          0.90296,
+          -0.01045
+        ]
+      ]
+    },
+    {
+      "id": "VHF-uterine-tube-l",
+      "node": "VHF-uterine-tube-l",
+      "name": "Left uterine tube",
+      "nameEs": "trompa uterina izquierda",
+      "system": "reproductive",
+      "bounds": [
+        [
+          0.01869,
+          0.91676,
+          0.00139
+        ],
+        [
+          0.05376,
+          0.95715,
+          0.01823
+        ]
+      ]
+    },
+    {
+      "id": "VHF-uterine-tube-r",
+      "node": "VHF-uterine-tube-r",
+      "name": "Right uterine tube",
+      "nameEs": "trompa uterina derecha",
+      "system": "reproductive",
+      "bounds": [
+        [
+          -0.05923,
+          0.91586,
+          -0.00402
+        ],
+        [
+          -0.02798,
+          0.95636,
+          0.01493
+        ]
+      ]
+    },
+    {
+      "id": "VHF-ovary-l",
+      "node": "VHF-ovary-l",
+      "name": "Left ovary",
+      "nameEs": "ovario izquierdo",
+      "system": "reproductive",
+      "bounds": [
+        [
+          0.04243,
+          0.92411,
+          0.00256
+        ],
+        [
+          0.05358,
+          0.94586,
+          0.01212
+        ]
+      ]
+    },
+    {
+      "id": "VHF-ovary-r",
+      "node": "VHF-ovary-r",
+      "name": "Right ovary",
+      "nameEs": "ovario derecho",
+      "system": "reproductive",
+      "bounds": [
+        [
+          -0.06194,
+          0.92405,
+          0.00249
+        ],
+        [
+          -0.05076,
+          0.94583,
+          0.01214
+        ]
+      ]
+    },
+    {
+      "id": "VHF-urinary-bladder",
+      "node": "VHF-urinary-bladder",
+      "name": "Urinary bladder",
+      "nameEs": "vejiga urinaria",
+      "system": "urinary",
+      "bounds": [
+        [
+          -0.02907,
+          0.86329,
+          -0.00519
+        ],
+        [
+          0.01812,
+          0.90345,
+          0.05083
+        ]
+      ]
+    },
+    {
+      "id": "VHF-skin",
+      "node": "VHF-skin",
+      "name": "Skin",
+      "nameEs": "piel",
+      "system": "integumentary",
+      "bounds": [
+        [
+          -0.49939,
+          0,
+          -0.16885
+        ],
+        [
+          0.49809,
+          1.71944,
+          0.17041
+        ]
+      ]
+    },
+    {
+      "id": "VHF-breast-fat-l",
+      "node": "VHF-breast-fat-l",
+      "name": "Adipose tissue of breast (left)",
+      "nameEs": "tejido adiposo de la mama izquierda",
+      "system": "reproductive",
+      "bounds": [
+        [
+          0.01675,
+          1.18097,
+          0.03506
+        ],
+        [
+          0.14949,
+          1.3695,
+          0.14449
+        ]
+      ]
+    },
+    {
+      "id": "VHF-mammary-lobes-l",
+      "node": "VHF-mammary-lobes-l",
+      "name": "Mammary lobes (left)",
+      "nameEs": "lobulillos de la glándula mamaria izquierda",
+      "system": "reproductive",
+      "bounds": [
+        [
+          0.06614,
+          1.19379,
+          0.08085
+        ],
+        [
+          0.1398,
+          1.30818,
+          0.13765
+        ]
+      ]
+    },
+    {
+      "id": "VHF-lactiferous-ducts-l",
+      "node": "VHF-lactiferous-ducts-l",
+      "name": "Lactiferous ducts (left)",
+      "nameEs": "conductos galactóforos de la mama izquierda",
+      "system": "reproductive",
+      "bounds": [
+        [
+          0.07721,
+          1.1967,
+          0.09135
+        ],
+        [
+          0.13676,
+          1.3019,
+          0.15048
+        ]
+      ]
+    },
+    {
+      "id": "VHF-areola-l",
+      "node": "VHF-areola-l",
+      "name": "Areola (left)",
+      "nameEs": "areola izquierda",
+      "system": "integumentary",
+      "bounds": [
+        [
+          0.09914,
+          1.21585,
+          0.13778
+        ],
+        [
+          0.12372,
+          1.24205,
+          0.14925
+        ]
+      ]
+    },
+    {
+      "id": "VHF-nipple-l",
+      "node": "VHF-nipple-l",
+      "name": "Nipple (left)",
+      "nameEs": "pezón izquierdo",
+      "system": "integumentary",
+      "bounds": [
+        [
+          0.10784,
+          1.22283,
+          0.14448
+        ],
+        [
+          0.11779,
+          1.23374,
+          0.15103
+        ]
+      ]
+    },
+    {
+      "id": "VHF-breast-fat-r",
+      "node": "VHF-breast-fat-r",
+      "name": "Adipose tissue of breast (right)",
+      "nameEs": "tejido adiposo de la mama derecha",
+      "system": "reproductive",
+      "bounds": [
+        [
+          -0.15001,
+          1.18361,
+          0.03345
+        ],
+        [
+          -0.0172,
+          1.37022,
+          0.14377
+        ]
+      ]
+    },
+    {
+      "id": "VHF-mammary-lobes-r",
+      "node": "VHF-mammary-lobes-r",
+      "name": "Mammary lobes (right)",
+      "nameEs": "lobulillos de la glándula mamaria derecha",
+      "system": "reproductive",
+      "bounds": [
+        [
+          -0.14107,
+          1.19578,
+          0.0802
+        ],
+        [
+          -0.06738,
+          1.31005,
+          0.1373
+        ]
+      ]
+    },
+    {
+      "id": "VHF-lactiferous-ducts-r",
+      "node": "VHF-lactiferous-ducts-r",
+      "name": "Lactiferous ducts (right)",
+      "nameEs": "conductos galactóforos de la mama derecha",
+      "system": "reproductive",
+      "bounds": [
+        [
+          -0.13799,
+          1.19874,
+          0.09058
+        ],
+        [
+          -0.07838,
+          1.30376,
+          0.15014
+        ]
+      ]
+    },
+    {
+      "id": "VHF-areola-r",
+      "node": "VHF-areola-r",
+      "name": "Areola (right)",
+      "nameEs": "areola derecha",
+      "system": "integumentary",
+      "bounds": [
+        [
+          -0.12493,
+          1.21651,
+          0.13751
+        ],
+        [
+          -0.10034,
+          1.24269,
+          0.14894
+        ]
+      ]
+    },
+    {
+      "id": "VHF-nipple-r",
+      "node": "VHF-nipple-r",
+      "name": "Nipple (right)",
+      "nameEs": "pezón derecho",
+      "system": "integumentary",
+      "bounds": [
+        [
+          -0.11897,
+          1.22349,
+          0.14417
+        ],
+        [
+          -0.10903,
+          1.23442,
+          0.15073
+        ]
+      ]
+    }
+  ],
+  "replaces": [
+    "FJ2810",
+    "FJ2812",
+    "FJ2813",
+    "FJ2814",
+    "FJ2815",
+    "FJ3132",
+    "FJ3133",
+    "FJ3134",
+    "FJ3135",
+    "FJ3136",
+    "FJ3137",
+    "FJ3138",
+    "FJ3139",
+    "FJ3140",
+    "FJ3141",
+    "FJ3142",
+    "FJ3143",
+    "FJ3148",
+    "FJ3149",
+    "FJ3152",
+    "FJ3288",
+    "FJ3393"
+  ]
+}

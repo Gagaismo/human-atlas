@@ -1,0 +1,750 @@
+arteria digital del pie
+hueso distal del carpo
+porción distal del íleon
+porción distal del yeyuno
+arteria perforante distal
+falange distal del dedo gordo del pie
+falange distal del cuarto dedo del pie
+falange distal del dedo índice
+falange distal del dedo meñique
+falange distal del dedo meñique del pie
+falange distal del dedo medio
+falange distal del dedo anular
+falange distal del segundo dedo del pie
+falange distal del tercer dedo del pie
+falange distal del pulgar
+falange distal del dedo gordo del pie {1:m}
+falange distal del cuarto dedo del pie {1:m}
+falange distal del dedo índice {1:m}
+falange distal del dedo meñique {1:m}
+falange distal del dedo meñique del pie {1:m}
+falange distal del dedo medio {1:m}
+falange distal del dedo anular {1:m}
+falange distal del segundo dedo del pie {1:m}
+falange distal del tercer dedo del pie {1:m}
+falange distal del pulgar {1:m}
+arteria dorsal del pene
+rama carpiana dorsal de la arteria radial
+rama carpiana dorsal de la arteria cubital
+rama carpiana dorsal de la arteria radial {1:f}
+arteria digital dorsal del pie
+vena metacarpiana dorsal
+arteria pancreática dorsal
+arteria escapular dorsal
+arco venoso dorsal del pie
+arco venoso dorsal del pie {1:m}
+red venosa dorsal de la mano
+red venosa dorsal de la mano {1:f}
+arteria dorsal del pie (pedia)
+dorso de la nariz
+conducto
+duodeno
+octava costilla
+octava sínfisis intervertebral torácica
+octava vértebra torácica
+undécima costilla
+undécima sínfisis intervertebral torácica
+undécima vértebra torácica
+sistema endocrino
+epidídimo
+epiglotis
+epitálamo
+arteria esofágica
+esófago
+hueso etmoides
+músculo extensor radial corto del carpo
+músculo extensor radial largo del carpo
+músculo extensor cubital del carpo
+músculo extensor del dedo meñique
+músculo extensor de los dedos
+músculo extensor largo de los dedos
+músculo extensor corto del dedo gordo
+músculo extensor largo del dedo gordo
+músculo extensor del índice
+músculo extensor corto del pulgar
+músculo extensor largo del pulgar
+músculo esfínter externo del ano
+oído externo
+arteria ilíaca externa
+vena ilíaca externa
+músculo intercostal externo
+nariz externa
+músculo oblicuo externo del abdomen
+músculo extraocular
+conducto biliar extrahepático
+ligamento extrínseco de la laringe
+músculo extrínseco del hombro
+músculo extrínseco de la lengua
+ceja
+cara
+costilla falsa
+fascia lata del muslo {1:m}
+porción faucial de la boca
+arteria femoral
+vena femoral
+fémur
+capa fibrosa del globo ocular
+capa fibrosa del globo ocular {1:m}
+anillo fibroso de la válvula mitral
+esqueleto fibroso del corazón
+peroné (fíbula)
+vena fibular
+músculo fibular corto (peroneo corto)
+músculo fibular largo (peroneo largo)
+músculo fibular tercero (peroneo anterior)
+quinta sínfisis intervertebral cervical
+quinta vértebra cervical
+quinto cartílago costal
+quinta sínfisis intervertebral lumbar
+quinta vértebra lumbar
+quinto hueso metacarpiano
+quinto hueso metatarsiano
+quinta costilla
+quinta sínfisis intervertebral torácica
+quinta vértebra torácica
+primera rama ventricular anterior de la arteria coronaria {1:f}
+primera arteria digital palmar común
+primer cartílago costal
+primera sínfisis intervertebral lumbar
+primera vértebra lumbar
+primer músculo lumbrical del pie
+primer músculo lumbrical del pie {1:m}
+primer hueso metacarpiano
+primer hueso metatarsiano
+primer músculo interóseo plantar del pie
+primer músculo interóseo plantar del pie {1:m}
+primera arteria intercostal posterior
+primera rama ventricular posterior de la arteria coronaria {1:f}
+primera costilla
+primera rama septal de la arteria interventricular posterior {1:f}
+primera sínfisis intervertebral torácica
+primera vértebra torácica
+primera rama anterior {1:f} de la rama interventricular anterior de la arteria coronaria {2:f}
+hueso plano
+músculo flexor accesorio (cuadrado plantar)
+músculo flexor radial del carpo
+músculo flexor corto del dedo meñique del pie
+músculo flexor corto del dedo meñique de la mano
+músculo flexor corto del dedo meñique del pie {1:m}
+músculo flexor corto del dedo meñique de la mano {1:f}
+músculo flexor corto de los dedos
+músculo flexor largo de los dedos
+músculo flexor profundo de los dedos
+músculo flexor superficial de los dedos
+músculo flexor largo del dedo gordo
+músculo flexor corto del pulgar
+músculo flexor largo del pulgar
+retináculo flexor de la muñeca
+retináculo flexor de la muñeca {1:f}
+costilla flotante
+prosencéfalo
+fórnix del prosencéfalo
+fórnix del neuroeje
+cuarta sínfisis intervertebral cervical
+cuarta vértebra cervical
+cuarta arteria digital palmar común
+cuarto cartílago costal
+cuarta sínfisis intervertebral lumbar
+cuarta vértebra lumbar
+cuarto músculo lumbrical del pie
+cuarto músculo lumbrical del pie {1:m}
+cuarto hueso metacarpiano
+cuarto hueso metatarsiano
+cuarta costilla
+cuarta sínfisis intervertebral torácica
+cuarta vértebra torácica
+cuarto ventrículo
+pared libre del ventrículo {1:m}
+hueso frontal
+nervio frontal
+porción frontal de la cabeza
+giro fusiforme
+vesícula biliar
+ganglio
+arteria gastroduodenal
+tubo digestivo
+músculo gemelo
+músculo gemelo inferior
+músculo gemelo superior
+vena genicular
+músculo geniogloso
+músculo geniohioideo
+sistema genital
+encía
+encía del maxilar inferior
+encía del maxilar superior
+glande del pene
+globo pálido
+músculo glúteo
+músculo glúteo mayor
+músculo glúteo medio
+músculo glúteo menor
+músculo grácil
+sustancia gris del diencéfalo
+sustancia gris del hipotálamo
+sustancia gris del neuroeje
+vena cardíaca magna
+arteria pancreática magna
+vena safena magna
+giro del neuroeje
+habénula
+pelo
+pelo de la cabeza
+pelo del tronco
+hueso ganchoso
+cabeza
+cabeza del músculo aductor del dedo gordo
+cabeza del músculo bíceps femoral
+cabeza del músculo flexor corto del dedo gordo
+cabeza del músculo gastrocnemio
+cabeza de órgano muscular
+cabeza de órgano
+cabeza propiamente dicha
+corazón
+vena hemiácigos
+arteria hepática
+arteria hepática propia
+árbol biliar hepático
+vena porta hepática
+vena hepática
+segmento hepatovenoso II
+segmento hepatovenoso III
+segmento hepatovenoso IV
+segmento hepatovenoso IX
+segmento hepatovenoso V
+segmento hepatovenoso VI
+segmento hepatovenoso VII
+segmento hepatovenoso VIII
+subsector hepatovenoso
+conjunto heterogéneo
+rombencéfalo
+hueso coxal
+hipocampo
+órgano arborescente hueco
+cuerpo humano
+cabeza humeral del músculo flexor cubital del carpo
+cabeza humeral del músculo pronador redondo
+cabeza humeral del músculo flexor cubital del carpo {1:m}
+cabeza humeral del músculo pronador redondo {1:m}
+húmero
+ligamento hioepiglótico
+músculo hiogloso
+hueso hioides
+rama hipotalámica de la arteria comunicante posterior
+rama hipotalámica de la arteria comunicante posterior {1:f}
+hipotálamo
+músculo hipotenar
+arteria ileal
+rama ileal de la rama inferior de la arteria ileocólica
+vena ileal
+unión ileocecal
+arteria ileocólica
+vena ileocólica
+íleon
+músculo ilíaco
+músculo iliococcígeo
+músculo iliocostal
+músculo iliocostal del cuello
+músculo iliocostal lumbar
+músculo iliocostal torácico
+vena iliolumbar
+tracto iliotibial
+entidad anatómica inmaterial
+diente incisivo
+rama inferior de la arteria ileocólica
+rama inferior de la arteria segmentaria medial
+rama inferior del nervio oculomotor
+rama inferior del nervio oculomotor {1:m}
+colículo inferior
+división inferior de la porción del lóbulo superior del árbol bronquial {1:m}
+arteria epigástrica inferior
+vena epigástrica inferior
+giro frontal inferior
+arteria geniculada inferior
+vena glútea inferior
+arteria geniculada inferior lateral
+arteria lingular inferior
+árbol bronquial lingular inferior
+segmento broncopulmonar lingular inferior
+vena lingular inferior
+arteria geniculada inferior medial
+mediastino inferior
+arteria mesentérica inferior
+vena mesentérica inferior
+concha nasal inferior
+músculo oblicuo inferior
+porción oblicua inferior del músculo largo del cuello
+porción oblicua inferior del músculo largo del cuello {1:m}
+arteria pancreática inferior
+arteria pancreaticoduodenal inferior
+porción inferior de la vena segmentaria anterior
+porción inferior de la vena segmentaria medial
+porción inferior de la vena segmentaria anterior {1:f}
+músculo constrictor inferior de la faringe
+arteria frénica inferior
+vena frénica inferior
+vena pulmonar inferior
+músculo recto inferior
+rama segmentaria inferior de la arteria renal {1:f}
+arteria renal segmentaria inferior
+arteria suprarrenal inferior
+árbol venoso sistémico inferior
+giro temporal inferior
+rama terminal inferior de la arteria cerebral media
+arteria tiroidea inferior
+arteria colateral cubital inferior
+vena cava inferior
+pared inferior del ventrículo {1:m}
+rama inferomedial de la arteria pulmonar {1:f}
+porción inferomedial del árbol bronquial {1:m}
+porción de entrada del ventrículo {1:m}
+músculo infrahioideo
+músculo infraespinoso
+nervio infratroclear
+músculo intercostal íntimo
+ínsula
+porción insular de la arteria cerebral media
+porción insular de la arteria cerebral media {1:f}
+tegumento
+sistema tegumentario
+músculo intercostal
+hueso cuneiforme intermedio
+región hipotalámica intermedia
+músculo posvertebral intermedio
+tendón intermedio
+rama intermediomedial de la arteria callosomarginal
+rama intermediomedial de la arteria callosomarginal {1:f}
+cápsula interna
+arteria carótida interna
+componente interno de sustancia gris
+arteria ilíaca interna
+vena ilíaca interna
+músculo intercostal interno
+vena yugular interna
+nariz interna
+vena pudenda interna
+arteria torácica interna
+vena torácica interna
+membrana interósea
+membrana interósea del antebrazo
+membrana interósea de la pierna
+membrana interósea del antebrazo {1:m}
+membrana interósea de la pierna {1:f}
+músculo interóseo del pie
+fosa interpeduncular
+músculo interespinoso
+músculo interespinoso torácico
+músculo intertransverso
+foramen interventricular
+disco intervertebral
+disco intervertebral del axis
+disco intervertebral de la vértebra cervical
+disco intervertebral de la octava vértebra torácica
+disco intervertebral de la undécima vértebra torácica
+disco intervertebral de la quinta vértebra cervical
+disco intervertebral de la quinta vértebra lumbar
+disco intervertebral de la quinta vértebra torácica
+disco intervertebral de la primera vértebra lumbar
+disco intervertebral de la primera vértebra torácica
+disco intervertebral de la cuarta vértebra cervical
+disco intervertebral de la cuarta vértebra lumbar
+disco intervertebral de la cuarta vértebra torácica
+disco intervertebral de la vértebra lumbar
+disco intervertebral de la novena vértebra torácica
+disco intervertebral de la segunda vértebra lumbar
+disco intervertebral de la segunda vértebra torácica
+disco intervertebral de la séptima vértebra cervical
+disco intervertebral de la séptima vértebra torácica
+disco intervertebral de la sexta vértebra cervical
+disco intervertebral de la sexta vértebra torácica
+disco intervertebral de la décima vértebra torácica
+disco intervertebral de la tercera vértebra cervical
+disco intervertebral de la tercera vértebra lumbar
+disco intervertebral de la tercera vértebra torácica
+disco intervertebral de la vértebra torácica
+sínfisis intervertebral
+sínfisis intervertebral del axis
+rama intracraneal de la arteria vertebral
+árbol biliar intrahepático
+porción intrapulmonar de la vena pulmonar inferior {1:f}
+porción intrapulmonar de la arteria pulmonar {1:f}
+porción intrapulmonar de la vena pulmonar superior {1:f}
+ligamento intrínseco de la laringe
+músculo intrínseco del dorso del pie
+músculo intrínseco del pie
+músculo intrínseco de la mano
+músculo intrínseco de la laringe
+músculo intrínseco de la región plantar del pie
+músculo intrínseco del hombro
+fascia de revestimiento del antebrazo {1:m}
+fascia de revestimiento del miembro inferior libre {1:m}
+fascia de revestimiento del miembro superior libre {1:m}
+fascia de revestimiento del miembro inferior {1:m}
+fascia de revestimiento del muslo {1:m}
+fascia de revestimiento del miembro superior {1:m}
+fascia de revestimiento de la muñeca {1:f}
+iris
+hueso irregular
+tejido conectivo irregular
+yeyuno
+riñón
+hueso lagrimal
+canalículo lagrimal
+glándula lagrimal
+lago lagrimal
+nervio lagrimal
+saco lagrimal
+lámina del hemisferio cerebral
+lámina del neuroeje
+lámina terminal
+intestino grueso
+cartílago laríngeo
+arteria segmentaria basal lateral
+árbol bronquial segmentario basal lateral
+vena segmentaria basal lateral
+rama lateral de la arteria segmentaria basal anterior
+rama lateral de la arteria pontina
+rama lateral de la arteria segmentaria superior
+rama lateral de la arteria segmentaria basal anterior {1:f}
+rama lateral de la arteria segmentaria basal lateral {1:f}
+rama lateral de la arteria pontina {1:f}
+rama lateral de la vena porta {1:f}
+rama lateral de la arteria cerebelosa superior {1:f}
+rama lateral de la arteria segmentaria superior {1:f}
+segmento broncopulmonar lateral
+arteria circunfleja femoral lateral
+vena circunfleja femoral lateral
+músculo cricoaritenoideo lateral
+hueso cuneiforme lateral
+arteria frontobasal lateral
+cuerpo geniculado lateral
+cabeza lateral del músculo flexor corto del dedo gordo
+cabeza lateral del músculo gastrocnemio
+cabeza lateral del músculo tríceps braquial
+cabeza lateral del músculo flexor corto del dedo gordo {1:m}
+cabeza lateral del músculo gastrocnemio {1:m}
+cabeza lateral del músculo tríceps braquial {1:m}
+rama segmentaria inferior lateral de la vena porta {1:f}
+arteria hepática segmentaria inferior lateral
+afluente segmentario inferior lateral de la vena hepática {1:f}
+afluente inferior lateral del árbol biliar hepático {1:m}
+músculo intertransverso lumbar lateral
+cartílago nasal lateral
+arteria occipital lateral
+músculo papilar lateral del ventrículo {1:m}
+arteria plantar lateral
+arteria digital palmar propia lateral del dedo meñique
+arteria digital palmar propia lateral del dedo medio
+arteria digital palmar propia lateral del dedo anular
+arteria digital palmar propia lateral del dedo meñique {1:m}
+arteria digital palmar propia lateral del dedo medio {1:m}
+arteria digital palmar propia lateral del dedo anular {1:m}
+músculo recto lateral
+vena sacra lateral
+arteria segmentaria lateral
+árbol bronquial segmentario lateral
+arteria hepática segmentaria lateral
+vena segmentaria lateral
+arteria cerebelosa superior lateral
+rama segmentaria superior lateral de la vena porta {1:f}
+arteria hepática segmentaria superior lateral
+afluente segmentario superior lateral de la vena hepática {1:f}
+afluente superior lateral del árbol biliar hepático {1:m}
+arteria tarsiana lateral
+arteria torácica lateral
+vena torácica lateral
+ligamento tirohioideo lateral
+afluente lateral del árbol biliar hepático {1:m}
+ventrículo lateral
+pared lateral del ventrículo {1:m}
+rama laterobasal de la arteria segmentaria basal posterior
+rama laterobasal de la arteria segmentaria basal posterior {1:f}
+capa de la pared del globo ocular
+valva de válvula cardíaca
+valva de la válvula mitral
+valva de la válvula tricúspide
+cristalino
+músculo elevador del párpado superior
+músculo elevador de la escápula
+músculo elevador del velo del paladar
+ligamento de la laringe
+ligamento del miembro
+ligamento del miembro inferior
+órgano ligamentoso
+componente de órgano ligamentoso
+línea alba
+vena lingular
+labio
+hígado
+arteria lobar
+lóbulo del hemisferio cerebral
+lóbulo del timo
+órgano lobulillar
+componente de órgano lobulillar
+segmento lobulillar
+lobulillo del hemisferio cerebral
+hueso largo
+nervio ciliar largo
+cabeza larga del músculo bíceps braquial
+cabeza larga del músculo bíceps femoral
+cabeza larga del músculo tríceps braquial
+cabeza larga del músculo bíceps braquial {1:m}
+cabeza larga del músculo bíceps femoral {1:m}
+cabeza larga del músculo tríceps braquial {1:m}
+ligamento plantar largo
+músculo longísimo
+músculo longísimo de la cabeza
+músculo longísimo del cuello
+músculo longísimo del tórax
+músculo largo de la cabeza
+tejido conectivo laxo
+incisivo central permanente inferior
+primer molar permanente inferior
+primer premolar permanente inferior
+tubo digestivo inferior
+maxilar inferior
+incisivo lateral permanente inferior
+miembro inferior
+lóbulo inferior del pulmón {1:m}
+porción del lóbulo inferior del árbol bronquial {1:m}
+vías respiratorias inferiores
+segundo molar permanente inferior
+segundo premolar permanente inferior
+canino permanente inferior
+incisivo permanente inferior
+molar permanente inferior
+premolar permanente inferior
+vías urinarias inferiores
+arteria lumbar
+músculo intertransverso lumbar
+músculo rotador lumbar
+vena lumbar
+vértebra lumbar
+columna vertebral lumbar
+músculo lumbrical del pie
+hueso semilunar
+bronquio principal
+cartílago alar mayor
+glándula salival mayor
+cuerpo mamilar
+mandíbula
+porción mandibular de la boca
+manubrio del esternón
+arteria marginal del colon
+rama marginal de la arteria coronaria {1:f}
+arteria cólica marginal
+entidad anatómica material
+maxilar
+porción maxilar de la boca
+arteria segmentaria basal medial
+árbol bronquial segmentario basal medial
+vena segmentaria basal medial
+vena braquial medial
+rama medial de la arteria pontina
+rama medial de la arteria cerebelosa superior
+rama medial de la arteria segmentaria superior
+rama medial de la arteria pontina {1:f}
+rama medial de la vena porta {1:f}
+rama medial de la arteria cerebelosa superior {1:f}
+rama medial de la arteria segmentaria superior {1:f}
+segmento broncopulmonar medial
+vena circunfleja femoral medial
+arteria colateral medial
+hueso cuneiforme medial
+arteria frontobasal medial
+cuerpo geniculado medial
+cabeza medial del músculo flexor corto del dedo gordo
+cabeza medial del músculo gastrocnemio
+cabeza medial del músculo tríceps braquial
+cabeza medial del músculo flexor corto del dedo gordo {1:m}
+cabeza medial del músculo gastrocnemio {1:m}
+cabeza medial del músculo tríceps braquial {1:m}
+rama segmentaria inferior medial de la vena porta {1:f}
+arteria hepática segmentaria inferior medial
+afluente segmentario inferior medial de la vena hepática media
+afluente inferior medial del árbol biliar hepático {1:m}
+músculo intertransverso lumbar medial
+arteria occipital medial
+arteria plantar medial
+arteria digital palmar propia medial del dedo índice
+arteria digital palmar propia medial del dedo medio
+arteria digital palmar propia medial del dedo anular
+arteria digital palmar propia medial del dedo índice {1:m}
+arteria digital palmar propia medial del dedo medio {1:m}
+arteria digital palmar propia medial del dedo anular {1:m}
+músculo recto medial
+arteria segmentaria medial
+árbol bronquial segmentario medial
+arteria hepática segmentaria medial
+vena segmentaria medial
+rama segmentaria superior medial de la vena porta {1:f}
+arteria hepática segmentaria superior medial
+afluente segmentario superior medial de la vena hepática {1:f}
+afluente superior medial del árbol biliar hepático {1:m}
+afluente medial del árbol biliar hepático {1:m}
+vena antebraquial mediana
+ligamento cricotiroideo mediano
+vena cubital mediana
+vena sacra mediana
+ligamento tirohioideo mediano
+mediastino
+rama mediobasal de la arteria segmentaria basal posterior
+rama mediobasal de la arteria segmentaria basal posterior {1:f}
+bulbo raquídeo (médula oblongada)
+órgano membranoso
+componente de órgano membranoso
+capa membranosa
+mesenterio del intestino grueso
+mesenterio del intestino delgado
+mesoapéndice
+hueso metacarpiano
+hueso metatarsiano
+metencéfalo
+mesencéfalo
+tectum del mesencéfalo
+vena cardíaca media
+arteria cólica media
+vena cólica media
+rama colateral media de la arteria braquial profunda {1:f}
+giro frontal medio
+arteria geniculada media
+vena hepática media
+arteria lobar media
+vena lobar media
+lóbulo medio del pulmón
+porción del lóbulo medio del árbol bronquial {1:m}
+mediastino medio
+porción media del íleon
+porción media del yeyuno
+falange media del cuarto dedo del pie
+falange media del dedo índice
+falange media del dedo meñique
+falange media del dedo meñique del pie
+falange media del dedo medio
+falange media del dedo anular
+falange media del segundo dedo del pie
+falange media del tercer dedo del pie
+falange media del cuarto dedo del pie {1:m}
+falange media del dedo índice {1:m}
+falange media del dedo meñique {1:m}
+falange media del dedo meñique del pie {1:m}
+falange media del dedo medio {1:m}
+falange media del dedo anular {1:m}
+falange media del segundo dedo del pie {1:m}
+falange media del tercer dedo del pie {1:m}
+músculo constrictor medio de la faringe
+arteria suprarrenal media
+rama temporal media de la arteria occipital lateral
+rama temporal media de la arteria cerebral media
+rama temporal media de la arteria occipital lateral {1:f}
+rama temporal media de la arteria cerebral media {1:f}
+giro temporal medio
+válvula mitral
+diente molar
+monte del pubis
+boca
+tejido mucoide
+capa muscular del intestino grueso
+músculo del abdomen
+músculo de la pared abdominal anterior
+músculo del compartimento anterior del brazo
+músculo del compartimento anterior del antebrazo
+músculo del compartimento anterior de la pierna
+músculo del compartimento anterior del muslo
+músculo del brazo
+músculo de la cara
+músculo del pie
+músculo del antebrazo
+músculo del miembro inferior libre
+músculo del miembro superior libre
+músculo de la mano
+músculo de la cabeza
+músculo de la laringe
+músculo del compartimento lateral de la pierna
+músculo de la pierna
+músculo del miembro inferior
+músculo del compartimento medial del muslo
+músculo del cuello
+músculo del paladar
+músculo de la cintura pectoral
+músculo de la cintura pélvica
+músculo de la pelvis
+músculo de la faringe
+músculo del compartimento posterior del brazo
+músculo del compartimento posterior del antebrazo
+músculo del compartimento posterior de la pierna
+músculo del compartimento posterior del muslo
+músculo del hombro
+músculo del muslo
+músculo del tórax
+músculo de la lengua
+músculo del tronco
+músculo del miembro superior
+músculo de la columna vertebral
+órgano muscular
+musculatura
+musculatura del abdomen
+musculatura de la pared abdominal anterior
+musculatura del tórax
+musculatura de una subdivisión del miembro superior libre
+musculatura de una subdivisión del tronco
+musculatura de una subdivisión del miembro superior
+arteria musculofrénica
+vena musculofrénica
+sistema musculoesquelético
+músculo milohioideo
+zona miocárdica 11
+zona miocárdica 12
+zona miocárdica 4
+miocardio de la pared libre del ventrículo {1:m}
+miocardio de la pared inferior del ventrículo {1:m}
+miocardio de la pared lateral del ventrículo {1:m}
+miocardio del ventrículo {1:m}
+miocardio del ventrículo {1:m} propiamente dicho
+hueso nasal
+cartílago nasal
+tabique nasal
+esqueleto nasal
+nervio nasociliar
+conducto nasolagrimal
+hueso navicular del pie
+hueso navicular del pie {1:m}
+cuello
+nervio
+tronco nervioso
+sistema nervioso
+órgano arborescente neural
+neuroeje
+neurocráneo
+novena costilla
+novena sínfisis intervertebral torácica
+novena vértebra torácica
+órgano no parenquimatoso
+ligamento no esquelético
+nariz
+complejo nuclear del neuroeje
+núcleo del encéfalo
+núcleo del neuroeje
+núcleo del tálamo
+músculo aritenoideo oblicuo
+cabeza oblicua del músculo aductor del dedo gordo
+cabeza oblicua del músculo aductor del pulgar
+cabeza oblicua del músculo aductor del dedo gordo {1:m}
+cabeza oblicua del músculo aductor del pulgar {1:m}
+porción oblicua del músculo cricotiroideo
+porción oblicua del músculo cricotiroideo {1:m}
+músculo oblicuo inferior de la cabeza
+músculo oblicuo superior de la cabeza
+músculo obturador externo
+músculo obturador interno
+músculo obturador
+vena obturatriz
+hueso occipital
+lóbulo occipital
+porción occipital de la cabeza
+músculo omohioideo
+arteria oftálmica
+nervio oftálmico
+músculo oponente del dedo meñique del pie
+músculo oponente del dedo meñique de la mano
+músculo oponente del dedo meñique del pie {1:m}

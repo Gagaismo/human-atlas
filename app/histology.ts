@@ -10,7 +10,7 @@ export interface Tissue {
 export interface HistologyCatalog {tissues:Tissue[]}
 
 /** Same key as descriptionKey: lowercase English name without left/right (kept local so Node can run the checks). */
-const baseName=(nameEn:string)=>nameEn.toLowerCase().replace(/\b(left|right)\b ?/g,'').trim();
+const baseName=(nameEn:string)=>nameEn.toLowerCase().replace(/\b(left|right)\b ?/g,'').replace(/\(\s*\)/g,'').replace(/\s+/g,' ').trim();
 const escape=(text:string)=>text.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 
 /** Tissues for an atlas structure: those whose related names appear as whole words in its English name or,

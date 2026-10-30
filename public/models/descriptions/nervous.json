@@ -1,0 +1,1118 @@
+{
+ "system": "nervous",
+ "entries": {
+  "amygdala": {
+   "resumen": "Conjunto de núcleos en la profundidad del lóbulo temporal, central en el procesamiento de las emociones.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En el polo anterior del lóbulo temporal, por delante del hipocampo y del asta inferior del ventrículo lateral."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Procesa el miedo y otras emociones; asigna valor emocional a los recuerdos y coordina las respuestas autónomas."
+    }
+   ]
+  },
+  "angular gyrus": {
+   "resumen": "Giro del lóbulo parietal inferior, que rodea el extremo del surco temporal superior.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En la parte posterior del lóbulo parietal inferior, cerca del lóbulo occipital."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Interviene en la lectura, el lenguaje y la integración de la información visual y auditiva."
+    }
+   ]
+  },
+  "anterior commissure": {
+   "resumen": "Pequeño haz de fibras transversales que une áreas del lóbulo temporal de ambos lados.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Delante de las columnas del fórnix, en la lámina terminal."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Conecta los lóbulos temporales y los bulbos olfatorios de ambos lados."
+    }
+   ]
+  },
+  "anterior ethmoidal nerve": {
+   "resumen": "Rama terminal del nasociliar que atraviesa la lámina cribosa hacia la cavidad nasal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nervio nasociliar (V1)."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Sale de la órbita por el foramen etmoidal anterior, cruza la fosa craneal anterior y desciende a la cavidad nasal por la lámina cribosa del etmoides; termina como nervio nasal externo."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Ramas nasales internas, laterales y septales, y nervio nasal externo."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Sensitiva: mucosa de la parte anterior del tabique y de la pared lateral de la nariz, y piel de la punta y del ala de la nariz."
+    }
+   ]
+  },
+  "anterior part of superior temporal gyrus": {
+   "resumen": "Parte anterior del giro temporal superior.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En la parte anterior del lóbulo temporal, bajo el surco lateral."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Participa en el procesamiento auditivo y del lenguaje."
+    }
+   ]
+  },
+  "brachium of inferior colliculus": {
+   "resumen": "Haz de fibras que une el colículo inferior con el cuerpo geniculado medial.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Entre el colículo inferior y el cuerpo geniculado medial."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Lleva información auditiva al tálamo."
+    }
+   ]
+  },
+  "brachium of superior colliculus": {
+   "resumen": "Haz de fibras que une el colículo superior con el cuerpo geniculado lateral.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Entre el colículo superior y el cuerpo geniculado lateral."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Lleva información visual hacia el colículo superior y el área pretectal."
+    }
+   ]
+  },
+  "caudate nucleus": {
+   "resumen": "Núcleo de los ganglios basales con forma de C, que bordea el ventrículo lateral.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Contiguo a la pared lateral del ventrículo lateral; separado del putamen por el brazo anterior de la cápsula interna."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Cabeza, cuerpo y cola."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Participa en el control del movimiento voluntario, el aprendizaje y las funciones cognitivas."
+    }
+   ]
+  },
+  "central canal of spinal cord": {
+   "resumen": "Estrecho conducto que recorre la médula espinal y es continuación del cuarto ventrículo.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En el centro de la sustancia gris de la médula espinal."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Contiene líquido cefalorraquídeo."
+    }
+   ]
+  },
+  "cerebellum": {
+   "resumen": "Estructura posterior al tronco encefálico que coordina el movimiento y el equilibrio.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En la fosa craneal posterior, bajo el tentorio del cerebelo y detrás del tronco encefálico."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Dos hemisferios y un vermis medio; se une al tronco por tres pares de pedúnculos cerebelosos."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Coordina el movimiento, mantiene el equilibrio y el tono muscular, y participa en el aprendizaje motor."
+    }
+   ]
+  },
+  "cerebral aqueduct": {
+   "resumen": "Estrecho conducto que atraviesa el mesencéfalo y comunica el tercer y el cuarto ventrículo.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En el centro del mesencéfalo, entre el tectum y el tegmento."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Permite el paso del líquido cefalorraquídeo entre los ventrículos."
+    }
+   ]
+  },
+  "ciliary ganglion": {
+   "resumen": "Pequeño ganglio parasimpático de la órbita, situado detrás del globo ocular, lateral al nervio óptico.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Entre el nervio óptico y el músculo recto lateral, cerca del vértice de la órbita."
+    },
+    {
+     "titulo": "Origen",
+     "texto": "Recibe la raíz parasimpática del nervio oculomotor (por su rama inferior), la raíz sensitiva del nasociliar y fibras simpáticas del plexo carotídeo interno."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Nervios ciliares cortos."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Fibras parasimpáticas para el esfínter de la pupila y el músculo ciliar (acomodación); sólo las parasimpáticas hacen sinapsis en este ganglio."
+    }
+   ]
+  },
+  "cingulate gyrus": {
+   "resumen": "Giro de la cara medial del hemisferio que rodea el cuerpo calloso.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En la cara medial del hemisferio, sobre el cuerpo calloso, bajo el surco cingulado."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Forma parte del sistema límbico: emoción, atención y regulación de la conducta."
+    }
+   ]
+  },
+  "commissure of fornix of forebrain": {
+   "resumen": "Banda de fibras transversales que une los dos pilares del fórnix.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Bajo el cuerpo calloso, entre los pilares de ambos lados."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Conecta los dos hipocampos entre sí."
+    }
+   ]
+  },
+  "communicating branch of nasociliary nerve with ciliary ganglion": {
+   "resumen": "Fina rama sensitiva que une el nervio nasociliar con el ganglio ciliar; se la considera la raíz sensitiva de este ganglio.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nervio nasociliar (V1)."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia delante, lateral al nervio óptico, hasta el ganglio ciliar, que atraviesa sin hacer sinapsis."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Sensitiva: lleva a los nervios ciliares cortos las fibras sensitivas del globo ocular."
+    }
+   ]
+  },
+  "corpus callosum": {
+   "resumen": "Mayor comisura de sustancia blanca del cerebro; une ambos hemisferios.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En el fondo de la fisura longitudinal, sobre el tercer ventrículo y los ventrículos laterales."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Pico, rodilla, cuerpo y esplenio."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Permite la comunicación y coordinación entre los dos hemisferios cerebrales."
+    }
+   ]
+  },
+  "fornix of forebrain": {
+   "resumen": "Haz de fibras en forma de arco que conecta el hipocampo con el hipotálamo.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Va desde el hipocampo, en el lóbulo temporal, y se arquea bajo el cuerpo calloso por encima del tálamo hasta los cuerpos mamilares."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Fimbria, pilares, cuerpo y columnas."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Principal vía de salida del hipocampo; forma parte del circuito de la memoria."
+    }
+   ]
+  },
+  "frontal nerve": {
+   "resumen": "Rama más grande del nervio oftálmico; recorre el techo de la órbita y emerge hacia la frente.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nervio oftálmico (V1)."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Entra en la órbita por la fisura orbitaria superior, por fuera del anillo tendinoso común, y avanza bajo el techo orbitario sobre el músculo elevador del párpado superior. Se divide a mitad de órbita en los nervios supraorbitario y supratroclear."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Nervios supraorbitario y supratroclear."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Sensitiva: piel de la frente y del párpado superior."
+    }
+   ]
+  },
+  "fusiform gyrus": {
+   "resumen": "Giro de la cara inferior del lóbulo temporal.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Entre los surcos colateral y occipitotemporal, en la cara inferior."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Reconocimiento visual de rostros y palabras."
+    }
+   ]
+  },
+  "globus pallidus": {
+   "resumen": "Núcleo de los ganglios basales; es la porción medial del núcleo lentiforme.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Medial al putamen, lateral a la cápsula interna."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Segmentos externo e interno."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Principal vía de salida de los ganglios basales hacia el tálamo; modula el movimiento."
+    }
+   ]
+  },
+  "habenula": {
+   "resumen": "Pequeño núcleo del epitálamo, junto a la glándula pineal.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Parte posterior y medial del tálamo, junto al tercer ventrículo, delante de la glándula pineal."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Relaciona el sistema límbico con el mesencéfalo; recibe fibras por la estría medular del tálamo."
+    }
+   ]
+  },
+  "hippocampus": {
+   "resumen": "Estructura curva de la corteza del lóbulo temporal medial, esencial para la memoria.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En el suelo del asta inferior del ventrículo lateral, en el lóbulo temporal medial."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Cabeza, cuerpo y cola; de él parte el fórnix."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Forma nuevos recuerdos (memoria declarativa) y participa en la orientación espacial."
+    }
+   ]
+  },
+  "hypothalamus": {
+   "resumen": "Región del diencéfalo situada bajo el tálamo; regula el medio interno y las funciones vegetativas.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Debajo del tálamo, en la pared y el suelo del tercer ventrículo, entre el quiasma óptico y los cuerpos mamilares."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Regiones anterior, tuberal y mamilar, con núcleos como el supraóptico, el paraventricular y los mamilares."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Controla la temperatura, el hambre, la sed, el sueño y el ritmo circadiano; regula el sistema nervioso autónomo y la hipófisis."
+    }
+   ]
+  },
+  "inferior branch of oculomotor nerve": {
+   "resumen": "Rama inferior del nervio oculomotor (III); es la más grande y lleva fibras motoras y parasimpáticas.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nervio oculomotor."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Entra en la órbita por la fisura orbitaria superior, dentro del anillo tendinoso, y se divide en ramas que se dirigen a la cara ocular de los músculos que inerva."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Ramas para los músculos recto medial, recto inferior y oblicuo inferior, y la raíz parasimpática para el ganglio ciliar."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Motora: músculos recto medial, recto inferior y oblicuo inferior. Parasimpática: esfínter de la pupila y músculo ciliar, tras hacer sinapsis en el ganglio ciliar."
+    }
+   ]
+  },
+  "inferior colliculus": {
+   "resumen": "Eminencia del tectum del mesencéfalo, relacionada con la audición.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Cara posterior del mesencéfalo; es el más caudal de los cuatro colículos."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Relevo de la vía auditiva; envía información al cuerpo geniculado medial por el brazo del colículo inferior."
+    }
+   ]
+  },
+  "inferior frontal gyrus": {
+   "resumen": "Giro frontal inferior; en el hemisferio dominante contiene el área de Broca.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En la parte inferior de la cara lateral del lóbulo frontal, bajo el surco frontal inferior."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Porciones opercular, triangular y orbitaria."
+    },
+    {
+     "titulo": "Función",
+     "texto": "En el hemisferio dominante, producción del lenguaje (área de Broca)."
+    }
+   ]
+  },
+  "inferior temporal gyrus": {
+   "resumen": "Giro inferior del lóbulo temporal.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En la parte inferior de la cara lateral del lóbulo temporal."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Participa en el reconocimiento visual de objetos y rostros."
+    }
+   ]
+  },
+  "infratrochlear nerve": {
+   "resumen": "Rama terminal del nasociliar que se dirige al ángulo medial del ojo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nervio nasociliar (V1)."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Avanza por la pared medial de la órbita, bajo la tróclea del músculo oblicuo superior, y sale de la órbita por el borde medial."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Sensitiva: piel de los párpados cerca del ángulo medial, conjuntiva, saco lagrimal y raíz de la nariz."
+    }
+   ]
+  },
+  "insula": {
+   "resumen": "Corteza cerebral oculta en la profundidad del surco lateral.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En la profundidad del surco lateral, cubierta por los opérculos frontal, parietal y temporal."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Participa en el gusto, la sensación visceral, la percepción corporal y las emociones."
+    }
+   ]
+  },
+  "internal capsule": {
+   "resumen": "Banda de sustancia blanca que lleva las fibras que suben y bajan entre la corteza y el tronco encefálico.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Entre el tálamo y el núcleo caudado por dentro, y el núcleo lentiforme por fuera."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Brazos anterior y posterior, y rodilla."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Conduce las fibras corticoespinales y corticonucleares (motoras) y las radiaciones talámicas hacia la corteza."
+    }
+   ]
+  },
+  "interpeduncular fossa": {
+   "resumen": "Depresión entre los pedúnculos cerebrales, en la cara anterior del mesencéfalo.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Entre los pedúnculos cerebrales, detrás de los cuerpos mamilares."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Por ella emerge el nervio oculomotor; su suelo es la sustancia perforada posterior."
+    }
+   ]
+  },
+  "lacrimal nerve": {
+   "resumen": "Rama más pequeña del nervio oftálmico; lleva sensibilidad a la glándula lagrimal y al párpado superior lateral.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nervio oftálmico (V1)."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Entra en la órbita por la fisura orbitaria superior, fuera del anillo tendinoso, y avanza por el borde superior del músculo recto lateral hasta la glándula lagrimal. Recibe una rama comunicante del nervio cigomático con fibras secretoras."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Sensitiva: glándula lagrimal, conjuntiva y piel del párpado superior en su parte lateral. Transporta fibras parasimpáticas secretoras posganglionares hacia la glándula."
+    }
+   ]
+  },
+  "lamina terminalis": {
+   "resumen": "Delgada lámina de tejido nervioso que cierra por delante el tercer ventrículo.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Entre el quiasma óptico y la comisura anterior, en la línea media."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Representa el extremo anterior del tubo neural; contiene órganos circunventriculares."
+    }
+   ]
+  },
+  "lateral geniculate body": {
+   "resumen": "Núcleo del tálamo que retransmite la información visual hacia la corteza.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Eminencia en la parte posterolateral del tálamo, bajo el pulvinar."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Seis capas de neuronas, que reciben fibras del tracto óptico."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Retransmite la vía visual desde el tracto óptico a la corteza visual (calcarina) del lóbulo occipital por la radiación óptica."
+    }
+   ]
+  },
+  "long ciliary nerve": {
+   "resumen": "Nervios finos del nasociliar que llevan sensibilidad al globo ocular y fibras simpáticas al músculo dilatador de la pupila.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nervio nasociliar (V1)."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Generalmente dos nervios que cruzan sobre el nervio óptico, perforan la esclera cerca de este y avanzan entre la esclera y la coroides hasta el cuerpo ciliar y el iris."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Sensitiva: córnea, iris y cuerpo ciliar. Motora simpática: músculo dilatador de la pupila."
+    }
+   ]
+  },
+  "mammillary body": {
+   "resumen": "Pequeña eminencia redondeada en la base del hipotálamo, parte del circuito de la memoria.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En el suelo del hipotálamo, detrás del tuber cinereum y delante de la fosa interpeduncular."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Recibe fibras del hipocampo por el fórnix y proyecta al tálamo anterior; participa en la memoria."
+    }
+   ]
+  },
+  "medial geniculate body": {
+   "resumen": "Núcleo del tálamo que retransmite la información auditiva.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Eminencia en la parte posteroinferior del tálamo, medial al cuerpo geniculado lateral."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Recibe fibras del colículo inferior por el brazo del colículo inferior y las proyecta a la corteza auditiva del lóbulo temporal."
+    }
+   ]
+  },
+  "medulla oblongata": {
+   "resumen": "Porción inferior del tronco encefálico, continuación de la médula espinal.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Entre la protuberancia y la médula espinal, a la altura del foramen magno."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Pirámides, olivas, decusación piramidal, y núcleos gracilis y cuneiforme."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Controla la respiración, la frecuencia cardíaca y la presión arterial; contiene núcleos de varios nervios craneales (IX a XII)."
+    }
+   ]
+  },
+  "midbrain": {
+   "resumen": "Porción más rostral del tronco encefálico, entre el diencéfalo y la protuberancia.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Entre la protuberancia y el diencéfalo, atravesado por el acueducto cerebral."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Tectum (colículos), tegmento y pedúnculos cerebrales."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Interviene en los reflejos visuales y auditivos, el movimiento ocular y el control motor; salen de él los nervios oculomotor y troclear."
+    }
+   ]
+  },
+  "middle frontal gyrus": {
+   "resumen": "Giro intermedio de la cara lateral del lóbulo frontal.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Entre los surcos frontales superior e inferior."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Relacionado con la planificación, la atención y los movimientos oculares."
+    }
+   ]
+  },
+  "middle temporal gyrus": {
+   "resumen": "Giro medio del lóbulo temporal.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Entre los surcos temporales superior e inferior."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Participa en la comprensión del lenguaje y el reconocimiento de movimiento."
+    }
+   ]
+  },
+  "nasociliary nerve": {
+   "resumen": "Rama del nervio oftálmico que lleva la sensibilidad del globo ocular y de la parte interna de la nariz.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nervio oftálmico (V1)."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Entra en la órbita por la fisura orbitaria superior, dentro del anillo tendinoso común, cruza sobre el nervio óptico y se dirige a la pared medial de la órbita, entre los músculos oblicuo superior y recto medial."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Rama comunicante con el ganglio ciliar, nervios ciliares largos, nervios etmoidales posterior y anterior y nervio infratroclear."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Sensitiva: globo ocular, celdillas etmoidales, parte anterior de la cavidad nasal, punta de la nariz y piel del ángulo medial del ojo."
+    }
+   ]
+  },
+  "occipital lobe": {
+   "resumen": "Lóbulo posterior del cerebro, sede de la corteza visual.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En la parte posterior del hemisferio, detrás del surco parietooccipital."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Procesa la información visual; la corteza visual primaria se encuentra a lo largo del surco calcarino."
+    }
+   ]
+  },
+  "ophthalmic nerve": {
+   "resumen": "Primera rama del nervio trigémino (V1), exclusivamente sensitiva. Lleva la sensibilidad de la órbita, el globo ocular y la frente.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Ganglio trigeminal (semilunar), en el cavum trigeminal de la fosa craneal media."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Avanza por la pared lateral del seno cavernoso y llega a la órbita por la fisura orbitaria superior, donde se divide en sus tres ramas."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Nervios frontal, lacrimal y nasociliar; además una rama meníngea recurrente para el tentorio del cerebelo."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Sensitiva: piel de la frente, párpado superior y dorso de la nariz, córnea, conjuntiva, mucosa de las celdillas etmoidales y de la parte anterior de la cavidad nasal."
+    }
+   ]
+  },
+  "optic chiasm": {
+   "resumen": "Cruce de los nervios ópticos, situado delante del hipotálamo. Aquí se cruzan las fibras de las mitades nasales de ambas retinas.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Sobre la silla turca, delante del tallo hipofisario y debajo del hipotálamo, en el suelo del tercer ventrículo."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Recibe los dos nervios ópticos y origina los dos tractos ópticos."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Las fibras de la hemirretina nasal se cruzan al lado opuesto; las temporales no, de modo que cada tracto óptico lleva la información del campo visual contralateral."
+    }
+   ]
+  },
+  "optic nerve": {
+   "resumen": "II par craneal. Es un haz de fibras del sistema nervioso central, envuelto por las meninges, que lleva la información visual de la retina al encéfalo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Axones de las células ganglionares de la retina, que convergen en el disco óptico."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Sale del globo ocular, atraviesa la órbita, pasa al cráneo por el conducto óptico junto con la arteria oftálmica y llega al quiasma óptico."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Sensorial: visión; transmite el estímulo luminoso desde la retina."
+    }
+   ]
+  },
+  "optic tract": {
+   "resumen": "Haz de fibras que continúa a partir del quiasma óptico y rodea el pedúnculo cerebral hacia el cuerpo geniculado lateral.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Desde el quiasma óptico rodea el hipotálamo y el pedúnculo cerebral por su cara lateral."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Termina principalmente en el cuerpo geniculado lateral; algunas fibras llegan al colículo superior y al área pretectal."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Lleva la información del campo visual contralateral al tálamo y al mesencéfalo."
+    }
+   ]
+  },
+  "orbital gyrus": {
+   "resumen": "Giros de la cara inferior del lóbulo frontal, sobre el techo de la órbita.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En la cara orbitaria (inferior) del lóbulo frontal."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Participa en la conducta, la toma de decisiones y el procesamiento de la recompensa."
+    }
+   ]
+  },
+  "parahippocampal gyrus": {
+   "resumen": "Giro de la cara medial del lóbulo temporal, junto al hipocampo.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Cara medial e inferior del lóbulo temporal, entre el surco colateral y el surco del hipocampo."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Conecta el hipocampo con la corteza y participa en la memoria y la orientación espacial."
+    }
+   ]
+  },
+  "peduncle of midbrain": {
+   "resumen": "Haces de fibras de la cara anterior del mesencéfalo, que llevan información motora desde la corteza.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En la cara anterior del mesencéfalo, a ambos lados de la fosa interpeduncular."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Conducen las fibras corticoespinales, corticonucleares y corticopontinas."
+    }
+   ]
+  },
+  "pons": {
+   "resumen": "Porción del tronco encefálico entre el mesencéfalo y el bulbo raquídeo; puente entre el cerebro y el cerebelo.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Delante del cerebelo y del cuarto ventrículo, entre el mesencéfalo y el bulbo."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Base y tegmento; sus fibras transversales forman los pedúnculos cerebelosos medios."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Retransmite información entre la corteza y el cerebelo; contiene núcleos de los nervios trigémino, abducens, facial y vestibulococlear, y centros respiratorios."
+    }
+   ]
+  },
+  "postcentral gyrus": {
+   "resumen": "Giro somatosensitivo primario, detrás del surco central.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En el lóbulo parietal, inmediatamente detrás del surco central."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Corteza somatosensitiva primaria: recibe tacto, presión, dolor y propiocepción del lado opuesto del cuerpo."
+    }
+   ]
+  },
+  "posterior commissure": {
+   "resumen": "Pequeño haz de fibras transversales en la unión entre el tercer ventrículo y el acueducto cerebral.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Por debajo de la glándula pineal, en la entrada del acueducto cerebral."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Interviene en el reflejo pupilar a la luz consensual."
+    }
+   ]
+  },
+  "posterior ethmoidal nerve": {
+   "resumen": "Pequeña rama del nasociliar que lleva sensibilidad a las celdillas etmoidales posteriores y al seno esfenoidal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nervio nasociliar (V1)."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Sale de la órbita por el foramen etmoidal posterior, que se abre en la sutura frontoetmoidal, y llega a las celdillas posteriores."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Sensitiva: mucosa de las celdillas etmoidales posteriores y, a veces, del seno esfenoidal."
+    }
+   ]
+  },
+  "posterior part of superior temporal gyrus": {
+   "resumen": "Parte posterior del giro temporal superior; contiene el área de Wernicke en el hemisferio dominante.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En la parte posterior del lóbulo temporal, bajo el surco lateral."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Comprensión del lenguaje (área de Wernicke) y corteza auditiva asociativa."
+    }
+   ]
+  },
+  "precentral gyrus": {
+   "resumen": "Giro motor primario, delante del surco central.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En el lóbulo frontal, inmediatamente por delante del surco central."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Corteza motora primaria: origina el movimiento voluntario del lado opuesto del cuerpo según un mapa somatotópico."
+    }
+   ]
+  },
+  "putamen": {
+   "resumen": "Núcleo de los ganglios basales, la porción más lateral del núcleo lentiforme.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Lateral al globo pálido, en la profundidad del hemisferio."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Interviene en la regulación del movimiento y el aprendizaje motor; junto con el núcleo caudado forma el cuerpo estriado."
+    }
+   ]
+  },
+  "septum of telencephalon": {
+   "resumen": "Región del cerebro anterior, bajo el cuerpo calloso, ligada al sistema límbico.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Delante de la comisura anterior y bajo el rostro del cuerpo calloso, en la línea media."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Forma parte del sistema límbico; relacionado con las emociones, la recompensa y la conexión con el hipocampo."
+    }
+   ]
+  },
+  "short ciliary nerve": {
+   "resumen": "Conjunto de 6 a 10 nervios finos que parten del ganglio ciliar y rodean el nervio óptico hacia el globo ocular.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Ganglio ciliar; llevan fibras parasimpáticas (del nervio oculomotor), sensitivas (del nasociliar) y simpáticas."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Rodean el nervio óptico, perforan la esclera alrededor de su entrada y se dirigen anteriormente entre la esclera y la coroides."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Parasimpática: músculo esfínter de la pupila y músculo ciliar. Sensitiva: córnea. Simpática: vasos del globo ocular."
+    }
+   ]
+  },
+  "stria medullaris of thalamus": {
+   "resumen": "Haz de fibras que recorre el borde medial superior del tálamo.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Sobre la cara superomedial del tálamo, en el borde del tercer ventrículo."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Lleva fibras de la región septal e hipotalámica hasta la habénula."
+    }
+   ]
+  },
+  "stria terminalis": {
+   "resumen": "Haz de fibras en forma de arco que une la amígdala con el hipotálamo y la región septal.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En el surco entre el núcleo caudado y el tálamo, siguiendo la curvatura del ventrículo lateral."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Principal vía de salida de la amígdala; participa en las respuestas emocionales y en la respuesta de estrés."
+    }
+   ]
+  },
+  "superior branch of oculomotor nerve": {
+   "resumen": "Rama superior de la división del nervio oculomotor (III); es la más pequeña y es exclusivamente motora.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nervio oculomotor, que se divide en la parte anterior del seno cavernoso o al entrar en la órbita."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Entra en la órbita por la fisura orbitaria superior, dentro del anillo tendinoso, y sube lateralmente al nervio óptico para llegar a la cara inferior del músculo recto superior."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Motora: músculos recto superior y elevador del párpado superior."
+    }
+   ]
+  },
+  "superior colliculus": {
+   "resumen": "Eminencia del tectum del mesencéfalo, relacionada con la visión.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Cara posterior del mesencéfalo; es el más rostral de los cuatro colículos."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Coordina los movimientos oculares reflejos y la orientación de la cabeza hacia estímulos visuales."
+    }
+   ]
+  },
+  "superior frontal gyrus": {
+   "resumen": "Giro superior del lóbulo frontal, que se extiende hasta la cara medial.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Por encima del surco frontal superior, en el borde superior del hemisferio."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Interviene en las funciones ejecutivas, la planificación y el control motor."
+    }
+   ]
+  },
+  "superior parietal lobule": {
+   "resumen": "Parte superior del lóbulo parietal, por encima del surco intraparietal.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Parte posterior y superior de la cara lateral del hemisferio."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Integra la información sensitiva y espacial para dirigir los movimientos."
+    }
+   ]
+  },
+  "supra-orbital nerve": {
+   "resumen": "Rama lateral del nervio frontal que sale de la órbita por la escotadura o foramen supraorbitario y asciende por la frente.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nervio frontal (V1)."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Recorre el techo orbitario, atraviesa la escotadura (o foramen) supraorbitaria del hueso frontal y asciende por la frente bajo el músculo frontal."
+    },
+    {
+     "titulo": "Ramas",
+     "texto": "Ramas medial y lateral para la frente y el cuero cabelludo, y ramas para el seno frontal."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Sensitiva: párpado superior, frente y cuero cabelludo hasta la sutura coronal; mucosa del seno frontal."
+    }
+   ]
+  },
+  "supramarginal gyrus": {
+   "resumen": "Giro del lóbulo parietal inferior, que rodea el extremo posterior del surco lateral.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "En el lóbulo parietal inferior, alrededor del extremo del surco lateral."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Participa en el lenguaje (procesamiento fonológico) y la percepción somatosensorial."
+    }
+   ]
+  },
+  "supratrochlear nerve": {
+   "resumen": "Rama medial y más pequeña del nervio frontal; sale de la órbita en el ángulo superomedial.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nervio frontal (V1)."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Pasa por encima de la tróclea del músculo oblicuo superior, sale de la órbita por la escotadura frontal (o por un foramen) cerca de la línea media y asciende por la frente."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Sensitiva: parte medial de la frente, raíz de la nariz y parte medial del párpado superior."
+    }
+   ]
+  },
+  "tentorium cerebelli": {
+   "resumen": "Pliegue de duramadre que separa el cerebelo de los lóbulos occipitales del cerebro.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Cubre el cerebelo, entre éste y los lóbulos occipitales; tiene una escotadura para el tronco encefálico."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Sostiene los lóbulos occipitales y divide la cavidad craneal en compartimentos supratentorial e infratentorial."
+    }
+   ]
+  },
+  "thalamus": {
+   "resumen": "Gran masa de sustancia gris del diencéfalo, formada por varios núcleos. Es la principal estación de relevo de la información sensitiva hacia la corteza cerebral.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "A cada lado del tercer ventrículo, por encima del hipotálamo y medial a la cápsula interna."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Núcleos anteriores, mediales y laterales (con el pulvinar) y los cuerpos geniculados medial y lateral."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Retransmite información sensitiva (excepto la olfatoria) y motora a la corteza; participa en la atención, la conciencia y el sueño."
+    }
+   ]
+  },
+  "trochlear nerve": {
+   "resumen": "IV par craneal. Es el nervio craneal más delgado y el único que sale por la cara dorsal del tronco encefálico.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Núcleo del nervio troclear, en el mesencéfalo, a la altura del colículo inferior; sus fibras se cruzan antes de emerger."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Rodea el pedúnculo cerebral, corre por la pared lateral del seno cavernoso y entra en la órbita por la fisura orbitaria superior, por fuera del anillo tendinoso común."
+    },
+    {
+     "titulo": "Inervación",
+     "texto": "Motora: músculo oblicuo superior del ojo."
+    }
+   ]
+  },
+  "tuber cinereum": {
+   "resumen": "Zona del suelo del hipotálamo, de color grisáceo, entre los cuerpos mamilares y el quiasma óptico.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Entre los cuerpos mamilares y el quiasma óptico; de ella parte el infundíbulo (tallo hipofisario)."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Región hipotalámica que controla la hipófisis, a la cual está unida por el tallo."
+    }
+   ]
+  },
+  "white matter of cerebral hemisphere": {
+   "resumen": "Sustancia blanca del hemisferio, formada por axones mielínicos que conectan regiones del encéfalo.",
+   "detalles": [
+    {
+     "titulo": "Ubicación",
+     "texto": "Bajo la corteza cerebral, en el interior de cada hemisferio."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Fibras de asociación, comisurales y de proyección."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Comunica las áreas corticales entre sí, con el otro hemisferio y con estructuras profundas."
+    }
+   ]
+  }
+ }
+}

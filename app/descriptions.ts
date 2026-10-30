@@ -11,11 +11,14 @@ export const FIELDS = {
  muscular:['Origen','Inserción','Inervación','Acción','Irrigación'],
  arterial:['Origen','Trayecto','Ramas','Territorio'],
  venous:['Origen','Trayecto','Desembocadura','Territorio'],
+ nervous:['Ubicación','Partes','Origen','Trayecto','Ramas','Inervación','Función'],
+ reproductive:['Ubicación','Partes','Irrigación','Función'],
 } as const satisfies Partial<Record<SystemId,readonly string[]>>;
 export const DESCRIBED_SYSTEMS = Object.keys(FIELDS) as (keyof typeof FIELDS)[];
 
-/** Descriptions are shared by both sides: the key is the English source name without left/right. */
-export function descriptionKey(nameEn:string){return nameEn.toLowerCase().replace(/\b(left|right)\b ?/g,'').trim();}
+/** Descriptions are shared by both sides: the key is the English source name without left/right, also when
+ * the side is written in parentheses, as in "Areola (left)". */
+export function descriptionKey(nameEn:string){return nameEn.toLowerCase().replace(/\b(left|right)\b ?/g,'').replace(/\(\s*\)/g,'').replace(/\s+/g,' ').trim();}
 
 export function describe(tables:DescriptionTables,nameEn:string,system:SystemId):Description|undefined{
  return tables[system]?.entries[descriptionKey(nameEn)];

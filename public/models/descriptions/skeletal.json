@@ -1,0 +1,3446 @@
+{
+ "system": "skeletal",
+ "entries": {
+  "arytenoid cartilage": {
+   "resumen": "Cartílago pequeño y piramidal de la laringe, que se apoya sobre la lámina del cricoides.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Pirámide de tres caras con una base y un vértice."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Base con un proceso vocal, donde se fija el ligamento vocal, y un proceso muscular, donde se insertan los músculos cricoaritenoideos; el vértice se articula con el cartílago corniculado."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Gira y se desliza sobre el cricoides, con lo que abre y cierra la glotis y regula la tensión de las cuerdas vocales."
+    }
+   ]
+  },
+  "atlas": {
+   "resumen": "Primera vértebra cervical (C1), que sostiene el cráneo; es un anillo óseo sin cuerpo ni proceso espinoso verdaderos.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Anillo formado por un arco anterior, un arco posterior y dos masas laterales."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Cada masa lateral tiene una carilla articular superior cóncava, que recibe un cóndilo occipital, y una inferior para el axis. El arco anterior tiene el tubérculo anterior y la fóvea del diente, que se articula con el diente del axis; el arco posterior tiene el tubérculo posterior y, sobre él, el surco de la arteria vertebral, por donde pasan esta arteria y el primer nervio cervical. El foramen transversario de cada proceso transverso da paso a la arteria y las venas vertebrales. El ligamento transverso del atlas fija el diente contra el arco anterior."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el occipital (articulación atlantooccipital) y con el axis (articulaciones atlantoaxiales lateral y mediana)."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Recto posterior menor de la cabeza, recto lateral y anterior de la cabeza, oblicuos superior e inferior de la cabeza, largo del cuello, esplenio del cuello y elevador de la escápula."
+    }
+   ]
+  },
+  "axis": {
+   "resumen": "Segunda vértebra cervical (C2), con una prolongación vertical, el diente, alrededor de la cual gira el atlas junto con la cabeza.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Cuerpo robusto que se prolonga hacia arriba en el diente (proceso odontoides) y proceso espinoso grande y bífido."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "El diente tiene una carilla anterior que se articula con el atlas y una posterior para el ligamento transverso; en su punta se fijan los ligamentos apical y alares. Las carillas articulares superiores son anchas y miran hacia arriba y afuera. Cada proceso transverso tiene un foramen transversario por donde sube la arteria vertebral."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el atlas (articulaciones atlantoaxiales mediana y laterales) y con C3 por el disco y las articulaciones cigapofisarias."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Recto posterior mayor de la cabeza, oblicuo inferior de la cabeza, semiespinoso del cuello, largo del cuello y multífido."
+    }
+   ]
+  },
+  "body of sternum": {
+   "resumen": "Porción media y más larga del esternón, una lámina alargada situada en la pared anterior del tórax.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso plano y alargado, formado por la fusión de cuatro piezas llamadas esternebras, cuyas uniones se ven como crestas transversales."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Su cara lateral presenta las incisuras costales, donde se unen los cartílagos costales segundo a séptimo. Detrás se relaciona con la pleura, el pericardio y el corazón."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el manubrio arriba, con el proceso xifoides abajo y con los cartílagos costales de las costillas verdaderas."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Pectoral mayor y transverso del tórax; el recto del abdomen se relaciona con su extremo inferior por medio de los cartílagos costales."
+    }
+   ]
+  },
+  "calcaneus": {
+   "resumen": "Hueso más grande del tarso, el que forma el talón.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso robusto, alargado, con una cara superior articular con el talus."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "En la parte posterior, la tuberosidad del calcáneo con sus procesos medial y lateral. El sustentáculo del talus sostiene al talus y tiene por debajo un surco por donde pasa el tendón del flexor largo del dedo gordo. El tubérculo de los fibulares separa los tendones de los fibulares largo y corto. El seno del tarso aloja ligamentos."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el talus (articulación subastragalina) y con el cuboides."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Tendón calcáneo del tríceps sural, plantar, abductor del dedo gordo, abductor del meñique, flexor corto de los dedos, cuadrado plantar y extensor corto de los dedos."
+    }
+   ]
+  },
+  "capitate": {
+   "resumen": "Hueso más grande del carpo, en el centro de la muñeca, con una cabeza redondeada que encaja en el escafoides y el semilunar.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Consta de una cabeza, un cuello y un cuerpo."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "La cabeza se orienta hacia arriba; el cuerpo tiene una carilla distal para el tercer metacarpiano."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el escafoides, el semilunar, el trapezoide, el hueso ganchoso y los metacarpianos segundo, tercero y cuarto."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Cabeza oblicua del aductor del pulgar, flexor corto del pulgar."
+    }
+   ]
+  },
+  "clavicle": {
+   "resumen": "Hueso largo en forma de S que une el esqueleto del tronco con el miembro superior y funciona como puntal de la cintura escapular.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo con doble curvatura: convexa hacia adelante en su tercio medial y cóncava hacia adelante en el lateral."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Extremo esternal (medial) engrosado y extremo acromial (lateral) aplanado. En la cara inferior hay el surco del subclavio (para el músculo subclavio), la impresión del ligamento costoclavicular, el tubérculo conoideo y la línea trapezoidea, donde se fija el ligamento coracoclavicular. Un foramen nutricio, orientado hacia el extremo lateral, da paso a vasos nutricios."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el manubrio del esternón (articulación esternoclavicular) y con el acromion de la escápula (articulación acromioclavicular)."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Esternocleidomastoideo, trapecio, deltoides, pectoral mayor, subclavio y esternohioideo."
+    }
+   ]
+  },
+  "corniculate cartilage": {
+   "resumen": "Pequeño cartílago laríngeo con forma de cuerno, sobre el vértice del aritenoides.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Nódulo cónico, muy pequeño."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Se ubica en el pliegue ariepiglótico, en el borde de la entrada de la laringe."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Refuerza el vértice del aritenoides y contribuye al soporte de la entrada laríngea."
+    }
+   ]
+  },
+  "cricoid cartilage": {
+   "resumen": "Cartílago en forma de anillo de sello, situado en la base de la laringe sobre el primer anillo traqueal.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Anillo completo, más alto atrás (lámina) que adelante (arco)."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Arco anterior, lámina posterior, carillas articulares para los cuernos inferiores del tiroides y para los aritenoides. Es el único cartílago laríngeo que forma un anillo completo."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Mantiene abierta la vía aérea y es sede de inserción del cricotiroideo, del cricoaritenoideo posterior y lateral y del constrictor inferior de la faringe."
+    }
+   ]
+  },
+  "cuboid bone": {
+   "resumen": "Hueso del tarso de forma cúbica, en el borde lateral del pie.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso con seis caras."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "En su cara plantar hay la tuberosidad del cuboides y un surco por donde pasa el tendón del fibular largo."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el calcáneo, el cuneiforme lateral, el navicular y los metatarsianos cuarto y quinto."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Flexor corto del dedo gordo y expansión del tibial posterior."
+    }
+   ]
+  },
+  "cuneiform cartilage": {
+   "resumen": "Cartílago pequeño y alargado de la laringe, en el espesor del pliegue ariepiglótico.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Barra delgada de cartílago."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Se halla por delante del corniculado, en cada pliegue ariepiglótico, y no se articula con otros cartílagos."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Da rigidez al pliegue ariepiglótico y sostiene la entrada de la laringe."
+    }
+   ]
+  },
+  "distal phalanx of big toe": {
+   "resumen": "Falange distal del dedo gordo del pie, la más pequeña, que sostiene la uña.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso muy pequeño, con una tuberosidad ensanchada en su extremo."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base proximal articular y tuberosidad distal."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la falange proximal del dedo gordo."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Flexor largo del dedo gordo en la planta y extensor largo del dedo gordo en el dorso."
+    }
+   ]
+  },
+  "distal phalanx of fourth toe": {
+   "resumen": "Falange distal del cuarto dedo del pie, la más pequeña, que sostiene la uña.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso muy pequeño, con una tuberosidad ensanchada en su extremo."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base proximal articular y tuberosidad distal."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la falange media."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Flexor largo de los dedos en la planta y extensor largo de los dedos en el dorso."
+    }
+   ]
+  },
+  "distal phalanx of index finger": {
+   "resumen": "Falange distal del dedo índice, la más pequeña, que sostiene la uña.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso pequeño con una base proximal y un extremo distal ensanchado."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base articular con una tróclea y la tuberosidad distal, que sostiene la yema del dedo y la matriz de la uña."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la falange media."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Flexor profundo de los dedos en la cara palmar y expansión extensora en la dorsal."
+    }
+   ]
+  },
+  "distal phalanx of little finger": {
+   "resumen": "Falange distal del dedo meñique, la más pequeña, que sostiene la uña.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso pequeño con una base proximal y un extremo distal ensanchado."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base articular con una tróclea y la tuberosidad distal, que sostiene la yema del dedo y la matriz de la uña."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la falange media."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Flexor profundo de los dedos en la cara palmar y expansión extensora en la dorsal."
+    }
+   ]
+  },
+  "distal phalanx of little toe": {
+   "resumen": "Falange distal del quinto dedo del pie, la más pequeña, que sostiene la uña.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso muy pequeño, con una tuberosidad ensanchada en su extremo."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base proximal articular y tuberosidad distal."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la falange media."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Flexor largo de los dedos en la planta y extensor largo de los dedos en el dorso."
+    }
+   ]
+  },
+  "distal phalanx of middle finger": {
+   "resumen": "Falange distal del dedo medio, la más pequeña, que sostiene la uña.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso pequeño con una base proximal y un extremo distal ensanchado."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base articular con una tróclea y la tuberosidad distal, que sostiene la yema del dedo y la matriz de la uña."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la falange media."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Flexor profundo de los dedos en la cara palmar y expansión extensora en la dorsal."
+    }
+   ]
+  },
+  "distal phalanx of ring finger": {
+   "resumen": "Falange distal del dedo anular, la más pequeña, que sostiene la uña.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso pequeño con una base proximal y un extremo distal ensanchado."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base articular con una tróclea y la tuberosidad distal, que sostiene la yema del dedo y la matriz de la uña."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la falange media."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Flexor profundo de los dedos en la cara palmar y expansión extensora en la dorsal."
+    }
+   ]
+  },
+  "distal phalanx of second toe": {
+   "resumen": "Falange distal del segundo dedo del pie, la más pequeña, que sostiene la uña.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso muy pequeño, con una tuberosidad ensanchada en su extremo."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base proximal articular y tuberosidad distal."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la falange media."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Flexor largo de los dedos en la planta y extensor largo de los dedos en el dorso."
+    }
+   ]
+  },
+  "distal phalanx of third toe": {
+   "resumen": "Falange distal del tercer dedo del pie, la más pequeña, que sostiene la uña.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso muy pequeño, con una tuberosidad ensanchada en su extremo."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base proximal articular y tuberosidad distal."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la falange media."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Flexor largo de los dedos en la planta y extensor largo de los dedos en el dorso."
+    }
+   ]
+  },
+  "distal phalanx of thumb": {
+   "resumen": "Falange distal del pulgar, la más pequeña, que sostiene la uña.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso pequeño con una base proximal y un extremo distal ensanchado."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base articular con una tróclea y la tuberosidad distal, que sostiene la yema del dedo y la matriz de la uña."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la falange proximal del pulgar."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Flexor largo del pulgar en la cara palmar y extensor largo del pulgar en la cara dorsal."
+    }
+   ]
+  },
+  "eighth rib": {
+   "resumen": "Octava costilla: arco óseo del tórax que se une a la costilla superior mediante cartílago. Primera de las costillas falsas, cuyo cartílago se une al de la costilla superior en lugar del esternón.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso plano, alargado y curvo, de las costillas falsas (8.ª a 10.ª)."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Una cabeza que se articula con los cuerpos vertebrales, un cuello, un tubérculo que se articula con el proceso transverso, un ángulo y un cuerpo con el surco costal en su borde inferior; por ese surco corren la vena, la arteria y el nervio intercostales."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la séptima y octava vértebras torácicas; su cartílago se une al de la séptima costilla."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Serrato anterior, intercostales, oblicuo externo del abdomen, dorsal ancho y diafragma, entre otros."
+    }
+   ]
+  },
+  "eighth thoracic vertebra": {
+   "resumen": "Octava vértebra torácica (T8).",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Cuerpo en forma de corazón, foramen vertebral casi circular y proceso espinoso largo e inclinado hacia abajo, que se superpone al de la vértebra siguiente."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Semifóveas costales superior e inferior en el cuerpo y fóvea costal transversa en el proceso transverso. Los procesos transversos son gruesos y se dirigen hacia atrás y afuera; los forámenes intervertebrales dan salida a los nervios espinales torácicos y a sus vasos."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con las costillas octava y novena. Articula con las vértebras vecinas por el disco y las articulaciones cigapofisarias."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Trapecio, romboides, serrato posterior superior o inferior según el nivel, erectores de la columna, semiespinoso, multífido, rotadores, elevadores de las costillas e intertransversos."
+    }
+   ]
+  },
+  "eleventh rib": {
+   "resumen": "Undécima costilla: arco óseo del tórax que no se une al esternón. Costilla flotante, corta, sin tubérculo ni cuello definido.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso plano, alargado y curvo, de las costillas flotantes (11.ª y 12.ª)."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Cabeza con una carilla articular, sin tubérculo ni ángulo marcados; el extremo anterior termina en cartílago libre."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Solo con la undécima vértebra torácica."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Oblicuo externo del abdomen, diafragma, serrato posterior inferior, dorsal ancho e intercostales."
+    }
+   ]
+  },
+  "eleventh thoracic vertebra": {
+   "resumen": "Undécima vértebra torácica (T11).",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Cuerpo en forma de corazón, foramen vertebral casi circular y proceso espinoso largo e inclinado hacia abajo, que se superpone al de la vértebra siguiente."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Una fóvea costal completa en el pedículo y cuerpo y ninguna fóvea en el proceso transverso, que es corto. Los procesos transversos son gruesos y se dirigen hacia atrás y afuera; los forámenes intervertebrales dan salida a los nervios espinales torácicos y a sus vasos."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la undécima costilla. Articula con las vértebras vecinas por el disco y las articulaciones cigapofisarias."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Trapecio, romboides, serrato posterior superior o inferior según el nivel, erectores de la columna, semiespinoso, multífido, rotadores, elevadores de las costillas e intertransversos."
+    }
+   ]
+  },
+  "ethmoid": {
+   "resumen": "Hueso impar, ligero y esponjoso, situado entre las órbitas y las fosas nasales; forma parte de la base del cráneo, del tabique nasal y de la pared medial de la órbita.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Formado por una lámina cribosa horizontal, una lámina perpendicular vertical y dos laberintos etmoidales laterales con celdillas aéreas."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "La lámina cribosa tiene pequeños orificios por donde pasan los filetes del nervio olfatorio, y sobre ella se levanta la crista galli. Los laberintos presentan la lámina orbitaria, los cornetes nasales superior y medio, la bulla etmoidal y el proceso uncinado. En la sutura con el frontal se abren los agujeros etmoidales anterior y posterior, por donde pasan nervios y vasos etmoidales."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el frontal, el esfenoides, los maxilares, los lagrimales, los palatinos, los cornetes inferiores, los nasales y el vómer."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "No tiene inserciones musculares relevantes; la crista galli da fijación a la hoz del cerebro."
+    }
+   ]
+  },
+  "femur": {
+   "resumen": "Hueso largo del muslo, el más largo y resistente del cuerpo; transmite el peso del tronco a la pierna.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo con un cuerpo casi cilíndrico, arqueado hacia adelante, y extremos proximal y distal engrosados."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Extremo proximal con cabeza, cuello y los trocánteres mayor y menor; la cabeza tiene la fóvea para el ligamento redondo, por donde entra una pequeña rama arterial. Entre los trocánteres están la línea intertrocantérica por delante y la cresta intertrocantérica por detrás. El cuerpo tiene la línea áspera posterior, la tuberosidad glútea y la línea pectínea. El extremo distal tiene los cóndilos medial y lateral, la fosa intercondílea, la cara patelar y los epicóndilos; sobre el cóndilo medial se alza el tubérculo del aductor. La superficie poplítea se relaciona con la arteria y vena poplíteas."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el hueso coxal (articulación coxofemoral), con la tibia (articulación de la rodilla) y con la patela."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Glúteos medio y menor, piriforme, obturadores y gemelos en el trocánter mayor; iliopsoas en el trocánter menor; glúteo mayor en la tuberosidad glútea; vastos, aductores y bíceps femoral en la línea áspera; gastrocnemio y plantar en los cóndilos; poplíteo en el epicóndilo lateral."
+    }
+   ]
+  },
+  "fibula": {
+   "resumen": "Hueso largo y delgado de la pierna, ubicado lateralmente; no soporta carga importante y sirve sobre todo de inserción muscular y de estabilidad del tobillo.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo, esbelto y con la cabeza y el maléolo lateral como extremos."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "La cabeza lleva un vértice y se continúa con el cuello, alrededor del cual rodea el nervio fibular común. El cuerpo tiene los bordes anterior, interóseo y posterior. El maléolo lateral tiene la fosa maleolar y un surco para los tendones de los fibulares."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la tibia (articulaciones tibiofibulares) y con el talus (articulación del tobillo)."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Bíceps femoral en la cabeza; fibulares largo, corto y tercero, extensor largo de los dedos, extensor largo del dedo gordo, sóleo, tibial posterior y flexor largo del dedo gordo."
+    }
+   ]
+  },
+  "fibularis brevis": {
+   "resumen": "Músculo lateral de la pierna, profundo al fibular largo.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Se origina en el tercio inferior de la cara lateral de la fíbula; su tendón pasa por detrás del maléolo lateral y se inserta en la tuberosidad de la base del quinto metatarsiano. Lo inerva el nervio fibular superficial."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Evierte el pie y ayuda a la flexión plantar."
+    }
+   ]
+  },
+  "fibularis longus": {
+   "resumen": "Músculo lateral de la pierna, largo y superficial, cuyo tendón cruza la planta del pie.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Se origina en la cabeza y los dos tercios superiores de la cara lateral de la fíbula; su tendón pasa por detrás del maléolo lateral, rodea el cuboides y cruza la planta para insertarse en el cuneiforme medial y la base del primer metatarsiano. Lo inerva el nervio fibular superficial."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Evierte el pie, ayuda a la flexión plantar y sostiene los arcos transverso y longitudinal del pie."
+    }
+   ]
+  },
+  "fibularis tertius": {
+   "resumen": "Músculo pequeño e inconstante del compartimento anterior de la pierna, unido al extensor largo de los dedos.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Se origina en la parte distal de la cara anterior de la fíbula y se inserta en la base del quinto metatarsiano. Lo inerva el nervio fibular profundo."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Dorsiflexiona y evierte el pie."
+    }
+   ]
+  },
+  "fifth cervical vertebra": {
+   "resumen": "Vértebra cervical típica (C5).",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Cuerpo pequeño, más ancho que alto, con bordes laterales elevados (procesos unciformes); foramen vertebral grande y triangular; proceso espinoso corto y bífido."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Cada proceso transverso tiene un foramen transversario por donde pasan la arteria y las venas vertebrales (la arteria vertebral entra desde C6), con los tubérculos anterior y posterior y entre ambos el surco del nervio espinal. Las carillas articulares superiores e inferiores son planas y oblicuas; entre los pedículos y las láminas se forman las incisuras vertebrales, que dejan los forámenes intervertebrales para los nervios espinales."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la vértebra cervical superior y la inferior por los discos y las articulaciones cigapofisarias; las uncovertebrales unen los bordes de los cuerpos."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Longuísimo del cuello, esplenio del cuello, escalenos, elevador de la escápula, semiespinoso, multífido, interespinosos e intertransversos."
+    }
+   ]
+  },
+  "fifth costal cartilage": {
+   "resumen": "Cartílago hialino que continúa el extremo anterior de la quinta costilla y la une con el esternón.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Da inserción a fibras del pectoral mayor y al recto del abdomen."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Extremo lateral unido a la costilla y extremo medial unido al esternón."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Se une al cuerpo del esternón. Da elasticidad a la pared torácica durante la respiración."
+    }
+   ]
+  },
+  "fifth lumbar vertebra": {
+   "resumen": "Quinta vértebra lumbar (L5). Su cuerpo es más alto adelante que atrás, lo que forma el ángulo lumbosacro; los procesos transversos son gruesos y fuertes.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Cuerpo grande y reniforme, foramen vertebral triangular y proceso espinoso corto, cuadrangular y horizontal."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Los procesos costiformes (transversos) son largos y delgados; en su base están los procesos accesorios, y en las carillas articulares superiores los procesos mamilares. Los forámenes intervertebrales dan salida a los nervios espinales lumbares. El foramen vertebral aloja la cauda equina y no la médula en los niveles inferiores."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la cuarta lumbar y con el sacro (disco L5-S1 y articulaciones cigapofisarias); sus procesos transversos se unen al hueso coxal por el ligamento iliolumbar."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Psoas mayor, cuadrado lumbar, erectores de la columna, multífido, interespinosos e intertransversos, pilares del diafragma y fascia toracolumbar."
+    }
+   ]
+  },
+  "fifth metacarpal bone": {
+   "resumen": "Hueso largo del quinto radio de la mano, entre el carpo y la falange proximal del dedo meñique. Pequeño, con una tuberosidad en la base.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo, con una base proximal, un cuerpo ligeramente cóncavo hacia la palma y una cabeza distal."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Tuberosidad de la base, en el lado medial. La cabeza es redondeada y forma el nudillo de la mano."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el hueso ganchoso, el cuarto metacarpiano y la falange proximal del meñique."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Extensor cubital del carpo, oponente del meñique y flexor corto del meñique."
+    }
+   ]
+  },
+  "fifth metatarsal bone": {
+   "resumen": "Hueso largo del quinto radio del pie, entre el tarso y la falange proximal del quinto dedo. Hueso con una tuberosidad prominente en la base, palpable en el borde lateral del pie.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo con base, cuerpo y cabeza; el cuerpo es prismático y algo cóncavo hacia la planta."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Tuberosidad lateral de la base, que se proyecta hacia afuera. La cabeza es convexa y se articula con la falange proximal."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el cuboides, el cuarto metatarsiano y la falange proximal del quinto dedo."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Fibular corto y fibular tercero, abductor del meñique y flexor corto del meñique."
+    }
+   ]
+  },
+  "fifth rib": {
+   "resumen": "Quinta costilla: arco óseo del tórax que llega al esternón mediante su cartílago costal. Costilla típica, de tamaño medio.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso plano, alargado y curvo, de las costillas verdaderas (1.ª a 7.ª)."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Una cabeza que se articula con los cuerpos vertebrales, un cuello, un tubérculo que se articula con el proceso transverso, un ángulo y un cuerpo con el surco costal en su borde inferior; por ese surco corren la vena, la arteria y el nervio intercostales."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la cuarta y quinta vértebras torácicas y con el esternón por su cartílago."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Pectoral menor, serrato anterior, intercostales, iliocostal y longuísimo."
+    }
+   ]
+  },
+  "fifth thoracic vertebra": {
+   "resumen": "Quinta vértebra torácica (T5).",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Cuerpo en forma de corazón, foramen vertebral casi circular y proceso espinoso largo e inclinado hacia abajo, que se superpone al de la vértebra siguiente."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Semifóveas costales superior e inferior en el cuerpo y fóvea costal transversa en el proceso transverso. Los procesos transversos son gruesos y se dirigen hacia atrás y afuera; los forámenes intervertebrales dan salida a los nervios espinales torácicos y a sus vasos."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con las costillas quinta y sexta. Articula con las vértebras vecinas por el disco y las articulaciones cigapofisarias."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Trapecio, romboides, serrato posterior superior o inferior según el nivel, erectores de la columna, semiespinoso, multífido, rotadores, elevadores de las costillas e intertransversos."
+    }
+   ]
+  },
+  "first costal cartilage": {
+   "resumen": "Cartílago hialino que continúa el extremo anterior de la primera costilla y la une con el esternón.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Es el más corto y grueso; el ligamento costoclavicular y el músculo subclavio se fijan junto a él."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Extremo lateral unido a la costilla y extremo medial unido al esternón."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Se une al manubrio del esternón por una sincondrosis. Da elasticidad a la pared torácica durante la respiración."
+    }
+   ]
+  },
+  "first lumbar vertebra": {
+   "resumen": "Primera vértebra lumbar (L1). Primera vértebra sin costilla; el cono medular termina aproximadamente a su altura.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Cuerpo grande y reniforme, foramen vertebral triangular y proceso espinoso corto, cuadrangular y horizontal."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Los procesos costiformes (transversos) son largos y delgados; en su base están los procesos accesorios, y en las carillas articulares superiores los procesos mamilares. Los forámenes intervertebrales dan salida a los nervios espinales lumbares. El foramen vertebral aloja la cauda equina y no la médula en los niveles inferiores."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con las vértebras vecinas por los discos y las articulaciones cigapofisarias."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Psoas mayor, cuadrado lumbar, erectores de la columna, multífido, interespinosos e intertransversos, pilares del diafragma y fascia toracolumbar."
+    }
+   ]
+  },
+  "first metacarpal bone": {
+   "resumen": "Hueso largo del primero radio de la mano, entre el carpo y la falange proximal del pulgar. Más corto y grueso, y con mayor movilidad.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo, con una base proximal, un cuerpo ligeramente cóncavo hacia la palma y una cabeza distal."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base en silla de montar para el trapecio. La cabeza es redondeada y forma el nudillo de la mano."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el trapecio y la falange proximal del pulgar."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Abductor largo del pulgar en la base, oponente del pulgar en el cuerpo y primer interóseo dorsal."
+    }
+   ]
+  },
+  "first metatarsal bone": {
+   "resumen": "Hueso largo del primero radio del pie, entre el tarso y la falange proximal del dedo gordo. Más corto y más grueso de los metatarsianos; soporta gran parte del peso.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo con base, cuerpo y cabeza; el cuerpo es prismático y algo cóncavo hacia la planta."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base con una carilla en forma de riñón para el cuneiforme medial; la cabeza tiene dos surcos plantares para los sesamoideos. La cabeza es convexa y se articula con la falange proximal."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el cuneiforme medial y con la falange proximal del dedo gordo."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Fibular largo y tibial anterior en la base; primer interóseo dorsal."
+    }
+   ]
+  },
+  "first rib": {
+   "resumen": "Primera costilla: arco óseo del tórax que llega al esternón mediante su cartílago costal. Es la costilla más corta, ancha y curva; es plana, con caras superior e inferior.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso plano, alargado y curvo, de las costillas verdaderas (1.ª a 7.ª)."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Cabeza con una sola carilla articular; tubérculo del músculo escaleno anterior, que separa el surco de la vena subclavia (adelante) del surco de la arteria subclavia y del tronco inferior del plexo braquial (atrás); no tiene surco costal."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la primera vértebra torácica y con el manubrio, por su cartílago."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Escalenos anterior y medio, subclavio (por el ligamento costoclavicular) y primera digitación del serrato anterior."
+    }
+   ]
+  },
+  "first thoracic vertebra": {
+   "resumen": "Primera vértebra torácica (T1), la de transición con la columna cervical.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Cuerpo en forma de corazón, foramen vertebral casi circular y proceso espinoso largo e inclinado hacia abajo, que se superpone al de la vértebra siguiente."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Fóvea costal superior completa para la cabeza de la primera costilla y una semifóvea inferior para la segunda. Los procesos transversos son gruesos y se dirigen hacia atrás y afuera; los forámenes intervertebrales dan salida a los nervios espinales torácicos y a sus vasos."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la primera costilla y con la segunda. Articula con las vértebras vecinas por el disco y las articulaciones cigapofisarias."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Trapecio, romboides, serrato posterior superior o inferior según el nivel, erectores de la columna, semiespinoso, multífido, rotadores, elevadores de las costillas e intertransversos."
+    }
+   ]
+  },
+  "fourth cervical vertebra": {
+   "resumen": "Vértebra cervical típica (C4), situada a la altura de la parte alta de la laringe.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Cuerpo pequeño, más ancho que alto, con bordes laterales elevados (procesos unciformes); foramen vertebral grande y triangular; proceso espinoso corto y bífido."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Cada proceso transverso tiene un foramen transversario por donde pasan la arteria y las venas vertebrales (la arteria vertebral entra desde C6), con los tubérculos anterior y posterior y entre ambos el surco del nervio espinal. Las carillas articulares superiores e inferiores son planas y oblicuas; entre los pedículos y las láminas se forman las incisuras vertebrales, que dejan los forámenes intervertebrales para los nervios espinales."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la vértebra cervical superior y la inferior por los discos y las articulaciones cigapofisarias; las uncovertebrales unen los bordes de los cuerpos."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Longuísimo del cuello, esplenio del cuello, escalenos, elevador de la escápula, semiespinoso, multífido, interespinosos e intertransversos."
+    }
+   ]
+  },
+  "fourth costal cartilage": {
+   "resumen": "Cartílago hialino que continúa el extremo anterior de la cuarta costilla y la une con el esternón.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Cartílago de longitud intermedia."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Extremo lateral unido a la costilla y extremo medial unido al esternón."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Se une al cuerpo del esternón. Da elasticidad a la pared torácica durante la respiración."
+    }
+   ]
+  },
+  "fourth lumbar vertebra": {
+   "resumen": "Cuarta vértebra lumbar (L4). La línea que une las crestas ilíacas pasa aproximadamente por su proceso espinoso.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Cuerpo grande y reniforme, foramen vertebral triangular y proceso espinoso corto, cuadrangular y horizontal."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Los procesos costiformes (transversos) son largos y delgados; en su base están los procesos accesorios, y en las carillas articulares superiores los procesos mamilares. Los forámenes intervertebrales dan salida a los nervios espinales lumbares. El foramen vertebral aloja la cauda equina y no la médula en los niveles inferiores."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con las vértebras vecinas por los discos y las articulaciones cigapofisarias."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Psoas mayor, cuadrado lumbar, erectores de la columna, multífido, interespinosos e intertransversos, pilares del diafragma y fascia toracolumbar."
+    }
+   ]
+  },
+  "fourth metacarpal bone": {
+   "resumen": "Hueso largo del cuarto radio de la mano, entre el carpo y la falange proximal del dedo anular. Más corto y delgado que los anteriores.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo, con una base proximal, un cuerpo ligeramente cóncavo hacia la palma y una cabeza distal."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base con carillas para el capitato y el hueso ganchoso. La cabeza es redondeada y forma el nudillo de la mano."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el capitato, el hueso ganchoso, los metacarpianos vecinos y la falange proximal del anular."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Interóseos dorsales y palmares."
+    }
+   ]
+  },
+  "fourth metatarsal bone": {
+   "resumen": "Hueso largo del cuarto radio del pie, entre el tarso y la falange proximal del cuarto dedo. Hueso largo de forma típica.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo con base, cuerpo y cabeza; el cuerpo es prismático y algo cóncavo hacia la planta."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base con carillas para el cuboides y el cuneiforme lateral. La cabeza es convexa y se articula con la falange proximal."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el cuboides, el cuneiforme lateral, los metatarsianos vecinos y la falange proximal del cuarto dedo."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Interóseos y aductor del dedo gordo."
+    }
+   ]
+  },
+  "fourth rib": {
+   "resumen": "Cuarta costilla: arco óseo del tórax que llega al esternón mediante su cartílago costal. Costilla típica, de tamaño medio.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso plano, alargado y curvo, de las costillas verdaderas (1.ª a 7.ª)."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Una cabeza que se articula con los cuerpos vertebrales, un cuello, un tubérculo que se articula con el proceso transverso, un ángulo y un cuerpo con el surco costal en su borde inferior; por ese surco corren la vena, la arteria y el nervio intercostales."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la tercera y cuarta vértebras torácicas y con el esternón por su cartílago."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Pectoral menor, serrato anterior, intercostales, iliocostal y longuísimo."
+    }
+   ]
+  },
+  "fourth thoracic vertebra": {
+   "resumen": "Cuarta vértebra torácica (T4).",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Cuerpo en forma de corazón, foramen vertebral casi circular y proceso espinoso largo e inclinado hacia abajo, que se superpone al de la vértebra siguiente."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Semifóveas costales superior e inferior en el cuerpo y fóvea costal transversa en el proceso transverso. Los procesos transversos son gruesos y se dirigen hacia atrás y afuera; los forámenes intervertebrales dan salida a los nervios espinales torácicos y a sus vasos."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con las costillas cuarta y quinta. Articula con las vértebras vecinas por el disco y las articulaciones cigapofisarias."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Trapecio, romboides, serrato posterior superior o inferior según el nivel, erectores de la columna, semiespinoso, multífido, rotadores, elevadores de las costillas e intertransversos."
+    }
+   ]
+  },
+  "frontal bone": {
+   "resumen": "Hueso impar de la frente que forma la parte anterior de la bóveda del cráneo y gran parte del techo de las órbitas.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso plano y curvo, con una porción vertical (escama) y dos porciones horizontales (orbitarias) separadas por la escotadura etmoidal."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Escama con la glabela, los arcos superciliares y los tubérculos frontales; el margen supraorbitario presenta la escotadura o foramen supraorbitario, por donde pasan el nervio y los vasos supraorbitarios, y una escotadura frontal con el nervio y la arteria supratrocleares. Detrás del margen está el proceso cigomático con la línea temporal. En la cara interna destacan la cresta frontal, el foramen ciego, el surco del seno sagital superior y los senos frontales, cavidades aéreas que comunican con la nariz."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con los parietales (sutura coronal), el esfenoides, el etmoides, los nasales, los maxilares, los lagrimales y los cigomáticos."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Da origen al músculo temporal en su línea temporal, al corrugador superciliar y al prócero; el músculo frontal se inserta en la galea aponeurótica y no en el hueso."
+    }
+   ]
+  },
+  "gingiva of lower jaw": {
+   "resumen": "Encía de la mandíbula: mucosa que cubre el reborde alveolar y rodea el cuello de los dientes inferiores.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Mucosa masticatoria rosada, firme y adherida al hueso alveolar."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Encía libre, encía adherida y papilas interdentarias entre los dientes."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Sella el cuello de los dientes y protege el hueso alveolar y el ligamento periodontal."
+    }
+   ]
+  },
+  "gingiva of upper jaw": {
+   "resumen": "Encía del maxilar: mucosa que cubre el reborde alveolar y rodea el cuello de los dientes superiores.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Mucosa masticatoria rosada, firme y adherida al hueso alveolar."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Encía libre, que forma el surco gingival, encía adherida y papilas interdentarias entre los dientes."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Sella el cuello de los dientes y protege el hueso alveolar y el ligamento periodontal."
+    }
+   ]
+  },
+  "hamate": {
+   "resumen": "Hueso del carpo en la fila distal, lado medial, con una apófisis en forma de gancho que sobresale hacia la palma.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso en cuña con una proyección palmar, el gancho del hueso ganchoso."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "El gancho forma el borde medial del túnel carpiano; cerca de él pasa el nervio ulnar con la arteria ulnar."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el semilunar, el piramidal, el capitato y los metacarpianos cuarto y quinto."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Flexor corto del meñique, oponente del meñique y retináculo flexor; ligamento pisohamato."
+    }
+   ]
+  },
+  "hip bone": {
+   "resumen": "Hueso par grande e irregular de la cintura pélvica, formado por la fusión de ilion, isquion y pubis; se une al sacro y al del lado opuesto.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Lámina contorneada, con aspecto de hélice, con el acetábulo en la unión de sus tres componentes."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "El ilion tiene la cresta ilíaca, las espinas ilíacas anterosuperior y anteroinferior, posterosuperior y posteroinferior, la fosa ilíaca y la superficie auricular. El isquion tiene la espina isquiática, la tuberosidad isquiática y la incisura isquiática mayor (por donde pasan el músculo piriforme, el nervio ciático y los vasos glúteos) y la menor (tendón del obturador interno). El pubis tiene la rama superior, el tubérculo púbico, la cresta pectínea y la sínfisis púbica. El foramen obturador está cerrado casi todo por una membrana, con el canal obturador para el nervio y los vasos obturadores. El acetábulo recibe la cabeza del fémur y tiene una escotadura y una fosa."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el sacro (sacroilíaca), con el coxal del otro lado (sínfisis púbica) y con el fémur (articulación coxofemoral)."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Glúteos mayor, medio y menor, sartorio, recto femoral, tensor de la fascia lata, iliopsoas, aductores, obturadores, gemelos, isquiotibiales, recto del abdomen, oblicuos y transverso del abdomen, cuadrado lumbar y ligamento inguinal."
+    }
+   ]
+  },
+  "humerus": {
+   "resumen": "Hueso largo del brazo, que se articula con la escápula en el hombro y con el radio y la ulna en el codo.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo con un cuerpo casi cilíndrico en su parte alta y prismático en la inferior."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Extremo proximal con la cabeza, el cuello anatómico, el cuello quirúrgico y los tubérculos mayor y menor, separados por el surco intertubercular, por donde pasa el tendón de la cabeza larga del bíceps. En el cuerpo, la tuberosidad deltoidea y el surco del nervio radial, por donde corren el nervio radial y la arteria profunda del brazo. El extremo distal tiene los epicóndilos medial y lateral, el cóndilo del húmero, la tróclea y las fosas olecraniana, coronoidea y radial; por detrás del epicóndilo medial se halla el surco del nervio ulnar."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la escápula (articulación glenohumeral) y con el radio y la ulna (articulación del codo)."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Supraespinoso, infraespinoso, redondo menor, subescapular, pectoral mayor, dorsal ancho, redondo mayor, deltoides, coracobraquial, braquial, braquiorradial, tríceps braquial, ancóneo, pronador redondo, flexores y extensores del antebrazo."
+    }
+   ]
+  },
+  "hyoid bone": {
+   "resumen": "Hueso impar en forma de U situado en el cuello, por debajo de la mandíbula y por encima de la laringe; no se articula directamente con ningún otro hueso.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Consta de un cuerpo central, dos astas mayores dirigidas hacia atrás y dos astas menores que ascienden desde la unión entre el cuerpo y el asta mayor."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "El cuerpo tiene una cara anterior convexa; las astas mayores terminan en un extremo libre y las menores dan inserción a ligamentos."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Se une por ligamentos al proceso estiloides (ligamento estilohioideo) y a la laringe (membrana tirohioidea); se mantiene suspendido por los músculos suprahioideos e infrahioideos."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Milohioideo, genihioideo, digástrico (por un asa) y estilohioideo entre los suprahioideos; esternohioideo, omohioideo y tirohioideo entre los infrahioideos; también el hiogloso y el constrictor medio de la faringe."
+    }
+   ]
+  },
+  "iliotibial tract": {
+   "resumen": "Engrosamiento lateral de la fascia lata del muslo, una banda fibrosa desde la cresta ilíaca hasta la tibia.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Nace en el hueso coxal, recibe fibras del tensor de la fascia lata y del glúteo mayor y desciende por la cara lateral del muslo para insertarse en el cóndilo lateral de la tibia."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Estabiliza lateralmente la cadera y la rodilla y transmite la tensión de los músculos glúteos."
+    }
+   ]
+  },
+  "intermediate cuneiform bone": {
+   "resumen": "El más pequeño de los tres cuneiformes, entre el medial y el lateral.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso en cuña cuya base es dorsal, lo que forma un hueco en el que encaja el segundo metatarsiano."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Su posición más corta crea el encaje del segundo metatarsiano."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el navicular, los cuneiformes medial y lateral y el segundo metatarsiano."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Expansión del tibial posterior."
+    }
+   ]
+  },
+  "intervertebral disk": {
+   "resumen": "Disco fibrocartilaginoso que une dos cuerpos vertebrales consecutivos.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Lámina biconvexa interpuesta entre los cuerpos vertebrales; su altura y su forma varían según la región."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Anillo fibroso de láminas concéntricas de fibrocartílago, núcleo pulposo central blando y placas terminales cartilaginosas fijadas a los cuerpos."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Amortigua las cargas de compresión, permite pequeños movimientos de flexión, extensión e inclinación entre los cuerpos vertebrales y los une como articulación de tipo sínfisis."
+    }
+   ]
+  },
+  "intervertebral disk of axis": {
+   "resumen": "Disco entre el axis (C2) y la tercera vértebra cervical (C3); no hay disco entre el atlas y el axis.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Disco bajo y bien delimitado, más alto adelante que atrás."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Anillo fibroso de láminas concéntricas de fibrocartílago, núcleo pulposo central blando y placas terminales cartilaginosas fijadas a los cuerpos."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Amortigua las cargas de compresión, permite pequeños movimientos de flexión, extensión e inclinación entre los cuerpos vertebrales y los une como articulación de tipo sínfisis."
+    }
+   ]
+  },
+  "intervertebral disk of eighth thoracic vertebra": {
+   "resumen": "Disco intervertebral torácico asociado a la octava vértebra torácica, en el nivel T8-T9.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Disco torácico, relativamente delgado y de altura uniforme, que contribuye a la cifosis torácica."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Anillo fibroso de láminas concéntricas de fibrocartílago, núcleo pulposo central blando y placas terminales cartilaginosas fijadas a los cuerpos."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Amortigua las cargas de compresión, permite pequeños movimientos de flexión, extensión e inclinación entre los cuerpos vertebrales y los une como articulación de tipo sínfisis."
+    }
+   ]
+  },
+  "intervertebral disk of eleventh thoracic vertebra": {
+   "resumen": "Disco intervertebral torácico asociado a la undécima vértebra torácica, en el nivel T11-T12.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Disco torácico, relativamente delgado y de altura uniforme, que contribuye a la cifosis torácica."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Anillo fibroso de láminas concéntricas de fibrocartílago, núcleo pulposo central blando y placas terminales cartilaginosas fijadas a los cuerpos."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Amortigua las cargas de compresión, permite pequeños movimientos de flexión, extensión e inclinación entre los cuerpos vertebrales y los une como articulación de tipo sínfisis."
+    }
+   ]
+  },
+  "intervertebral disk of fifth cervical vertebra": {
+   "resumen": "Disco intervertebral cervical asociado a la quinta vértebra cervical, situado en la región C5-C6 de la columna.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Disco cervical, pequeño y más alto adelante que atrás, que contribuye a la lordosis cervical."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Anillo fibroso de láminas concéntricas de fibrocartílago, núcleo pulposo central blando y placas terminales cartilaginosas fijadas a los cuerpos."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Amortigua las cargas de compresión, permite pequeños movimientos de flexión, extensión e inclinación entre los cuerpos vertebrales y los une como articulación de tipo sínfisis."
+    }
+   ]
+  },
+  "intervertebral disk of fifth lumbar vertebra": {
+   "resumen": "Disco intervertebral lumbar asociado a la quinta vértebra lumbar, en el nivel L5-S1.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Disco lumbar, el más grueso de la columna y más alto adelante que atrás, que sostiene la lordosis lumbar."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Anillo fibroso de láminas concéntricas de fibrocartílago, núcleo pulposo central blando y placas terminales cartilaginosas fijadas a los cuerpos."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Amortigua las cargas de compresión, permite pequeños movimientos de flexión, extensión e inclinación entre los cuerpos vertebrales y los une como articulación de tipo sínfisis."
+    }
+   ]
+  },
+  "intervertebral disk of fifth thoracic vertebra": {
+   "resumen": "Disco intervertebral torácico asociado a la quinta vértebra torácica, en el nivel T5-T6.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Disco torácico, relativamente delgado y de altura uniforme, que contribuye a la cifosis torácica."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Anillo fibroso de láminas concéntricas de fibrocartílago, núcleo pulposo central blando y placas terminales cartilaginosas fijadas a los cuerpos."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Amortigua las cargas de compresión, permite pequeños movimientos de flexión, extensión e inclinación entre los cuerpos vertebrales y los une como articulación de tipo sínfisis."
+    }
+   ]
+  },
+  "intervertebral disk of first lumbar vertebra": {
+   "resumen": "Disco intervertebral lumbar asociado a la primera vértebra lumbar, en el nivel L1-L2.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Disco lumbar, el más grueso de la columna y más alto adelante que atrás, que sostiene la lordosis lumbar."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Anillo fibroso de láminas concéntricas de fibrocartílago, núcleo pulposo central blando y placas terminales cartilaginosas fijadas a los cuerpos."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Amortigua las cargas de compresión, permite pequeños movimientos de flexión, extensión e inclinación entre los cuerpos vertebrales y los une como articulación de tipo sínfisis."
+    }
+   ]
+  },
+  "intervertebral disk of first thoracic vertebra": {
+   "resumen": "Disco intervertebral torácico asociado a la primera vértebra torácica, en el nivel T1-T2.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Disco torácico, relativamente delgado y de altura uniforme, que contribuye a la cifosis torácica."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Anillo fibroso de láminas concéntricas de fibrocartílago, núcleo pulposo central blando y placas terminales cartilaginosas fijadas a los cuerpos."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Amortigua las cargas de compresión, permite pequeños movimientos de flexión, extensión e inclinación entre los cuerpos vertebrales y los une como articulación de tipo sínfisis."
+    }
+   ]
+  },
+  "intervertebral disk of fourth cervical vertebra": {
+   "resumen": "Disco intervertebral cervical asociado a la cuarta vértebra cervical, situado en la región C4-C5 de la columna.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Disco cervical, pequeño y más alto adelante que atrás, que contribuye a la lordosis cervical."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Anillo fibroso de láminas concéntricas de fibrocartílago, núcleo pulposo central blando y placas terminales cartilaginosas fijadas a los cuerpos."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Amortigua las cargas de compresión, permite pequeños movimientos de flexión, extensión e inclinación entre los cuerpos vertebrales y los une como articulación de tipo sínfisis."
+    }
+   ]
+  },
+  "intervertebral disk of fourth lumbar vertebra": {
+   "resumen": "Disco intervertebral lumbar asociado a la cuarta vértebra lumbar, en el nivel L4-L5.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Disco lumbar, el más grueso de la columna y más alto adelante que atrás, que sostiene la lordosis lumbar."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Anillo fibroso de láminas concéntricas de fibrocartílago, núcleo pulposo central blando y placas terminales cartilaginosas fijadas a los cuerpos."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Amortigua las cargas de compresión, permite pequeños movimientos de flexión, extensión e inclinación entre los cuerpos vertebrales y los une como articulación de tipo sínfisis."
+    }
+   ]
+  },
+  "intervertebral disk of fourth thoracic vertebra": {
+   "resumen": "Disco intervertebral torácico asociado a la cuarta vértebra torácica, en el nivel T4-T5.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Disco torácico, relativamente delgado y de altura uniforme, que contribuye a la cifosis torácica."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Anillo fibroso de láminas concéntricas de fibrocartílago, núcleo pulposo central blando y placas terminales cartilaginosas fijadas a los cuerpos."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Amortigua las cargas de compresión, permite pequeños movimientos de flexión, extensión e inclinación entre los cuerpos vertebrales y los une como articulación de tipo sínfisis."
+    }
+   ]
+  },
+  "intervertebral disk of ninth thoracic vertebra": {
+   "resumen": "Disco intervertebral torácico asociado a la novena vértebra torácica, en el nivel T9-T10.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Disco torácico, relativamente delgado y de altura uniforme, que contribuye a la cifosis torácica."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Anillo fibroso de láminas concéntricas de fibrocartílago, núcleo pulposo central blando y placas terminales cartilaginosas fijadas a los cuerpos."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Amortigua las cargas de compresión, permite pequeños movimientos de flexión, extensión e inclinación entre los cuerpos vertebrales y los une como articulación de tipo sínfisis."
+    }
+   ]
+  },
+  "intervertebral disk of second lumbar vertebra": {
+   "resumen": "Disco intervertebral lumbar asociado a la segunda vértebra lumbar, en el nivel L2-L3.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Disco lumbar, el más grueso de la columna y más alto adelante que atrás, que sostiene la lordosis lumbar."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Anillo fibroso de láminas concéntricas de fibrocartílago, núcleo pulposo central blando y placas terminales cartilaginosas fijadas a los cuerpos."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Amortigua las cargas de compresión, permite pequeños movimientos de flexión, extensión e inclinación entre los cuerpos vertebrales y los une como articulación de tipo sínfisis."
+    }
+   ]
+  },
+  "intervertebral disk of second thoracic vertebra": {
+   "resumen": "Disco intervertebral torácico asociado a la segunda vértebra torácica, en el nivel T2-T3.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Disco torácico, relativamente delgado y de altura uniforme, que contribuye a la cifosis torácica."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Anillo fibroso de láminas concéntricas de fibrocartílago, núcleo pulposo central blando y placas terminales cartilaginosas fijadas a los cuerpos."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Amortigua las cargas de compresión, permite pequeños movimientos de flexión, extensión e inclinación entre los cuerpos vertebrales y los une como articulación de tipo sínfisis."
+    }
+   ]
+  },
+  "intervertebral disk of seventh cervical vertebra": {
+   "resumen": "Disco intervertebral cervical asociado a la séptima vértebra cervical, situado en la región C7-T1 de la columna.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Disco cervical, pequeño y más alto adelante que atrás, que contribuye a la lordosis cervical."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Anillo fibroso de láminas concéntricas de fibrocartílago, núcleo pulposo central blando y placas terminales cartilaginosas fijadas a los cuerpos."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Amortigua las cargas de compresión, permite pequeños movimientos de flexión, extensión e inclinación entre los cuerpos vertebrales y los une como articulación de tipo sínfisis."
+    }
+   ]
+  },
+  "intervertebral disk of seventh thoracic vertebra": {
+   "resumen": "Disco intervertebral torácico asociado a la séptima vértebra torácica, en el nivel T7-T8.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Disco torácico, relativamente delgado y de altura uniforme, que contribuye a la cifosis torácica."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Anillo fibroso de láminas concéntricas de fibrocartílago, núcleo pulposo central blando y placas terminales cartilaginosas fijadas a los cuerpos."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Amortigua las cargas de compresión, permite pequeños movimientos de flexión, extensión e inclinación entre los cuerpos vertebrales y los une como articulación de tipo sínfisis."
+    }
+   ]
+  },
+  "intervertebral disk of sixth cervical vertebra": {
+   "resumen": "Disco intervertebral cervical asociado a la sexta vértebra cervical, situado en la región C6-C7 de la columna.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Disco cervical, pequeño y más alto adelante que atrás, que contribuye a la lordosis cervical."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Anillo fibroso de láminas concéntricas de fibrocartílago, núcleo pulposo central blando y placas terminales cartilaginosas fijadas a los cuerpos."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Amortigua las cargas de compresión, permite pequeños movimientos de flexión, extensión e inclinación entre los cuerpos vertebrales y los une como articulación de tipo sínfisis."
+    }
+   ]
+  },
+  "intervertebral disk of sixth thoracic vertebra": {
+   "resumen": "Disco intervertebral torácico asociado a la sexta vértebra torácica, en el nivel T6-T7.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Disco torácico, relativamente delgado y de altura uniforme, que contribuye a la cifosis torácica."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Anillo fibroso de láminas concéntricas de fibrocartílago, núcleo pulposo central blando y placas terminales cartilaginosas fijadas a los cuerpos."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Amortigua las cargas de compresión, permite pequeños movimientos de flexión, extensión e inclinación entre los cuerpos vertebrales y los une como articulación de tipo sínfisis."
+    }
+   ]
+  },
+  "intervertebral disk of tenth thoracic vertebra": {
+   "resumen": "Disco intervertebral torácico asociado a la décima vértebra torácica, en el nivel T10-T11.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Disco torácico, relativamente delgado y de altura uniforme, que contribuye a la cifosis torácica."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Anillo fibroso de láminas concéntricas de fibrocartílago, núcleo pulposo central blando y placas terminales cartilaginosas fijadas a los cuerpos."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Amortigua las cargas de compresión, permite pequeños movimientos de flexión, extensión e inclinación entre los cuerpos vertebrales y los une como articulación de tipo sínfisis."
+    }
+   ]
+  },
+  "intervertebral disk of third cervical vertebra": {
+   "resumen": "Disco intervertebral cervical asociado a la tercera vértebra cervical, situado en la región C3-C4 de la columna.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Disco cervical, pequeño y más alto adelante que atrás, que contribuye a la lordosis cervical."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Anillo fibroso de láminas concéntricas de fibrocartílago, núcleo pulposo central blando y placas terminales cartilaginosas fijadas a los cuerpos."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Amortigua las cargas de compresión, permite pequeños movimientos de flexión, extensión e inclinación entre los cuerpos vertebrales y los une como articulación de tipo sínfisis."
+    }
+   ]
+  },
+  "intervertebral disk of third lumbar vertebra": {
+   "resumen": "Disco intervertebral lumbar asociado a la tercera vértebra lumbar, en el nivel L3-L4.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Disco lumbar, el más grueso de la columna y más alto adelante que atrás, que sostiene la lordosis lumbar."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Anillo fibroso de láminas concéntricas de fibrocartílago, núcleo pulposo central blando y placas terminales cartilaginosas fijadas a los cuerpos."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Amortigua las cargas de compresión, permite pequeños movimientos de flexión, extensión e inclinación entre los cuerpos vertebrales y los une como articulación de tipo sínfisis."
+    }
+   ]
+  },
+  "intervertebral disk of third thoracic vertebra": {
+   "resumen": "Disco intervertebral torácico asociado a la tercera vértebra torácica, en el nivel T3-T4.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Disco torácico, relativamente delgado y de altura uniforme, que contribuye a la cifosis torácica."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Anillo fibroso de láminas concéntricas de fibrocartílago, núcleo pulposo central blando y placas terminales cartilaginosas fijadas a los cuerpos."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Amortigua las cargas de compresión, permite pequeños movimientos de flexión, extensión e inclinación entre los cuerpos vertebrales y los une como articulación de tipo sínfisis."
+    }
+   ]
+  },
+  "lateral cuneiform bone": {
+   "resumen": "Cuneiforme lateral, de tamaño intermedio, ubicado entre el cuneiforme intermedio y el cuboides.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso en cuña con base dorsal."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Su cara distal se articula con el tercer metatarsiano."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el navicular, el cuneiforme intermedio, el cuboides y los metatarsianos segundo, tercero y cuarto."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Flexor corto del dedo gordo y tibial posterior."
+    }
+   ]
+  },
+  "levator scapulae": {
+   "resumen": "Músculo posterolateral del cuello, que une las vértebras cervicales superiores con la escápula.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Se origina en los tubérculos posteriores de los procesos transversos de C1 a C4 y se inserta en el borde medial de la escápula, entre el ángulo superior y la espina. Lo inerva el nervio dorsal de la escápula, con ramos cervicales."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Eleva la escápula y la inclina para dirigir la cavidad glenoidea hacia abajo."
+    }
+   ]
+  },
+  "lower central secondary incisor tooth": {
+   "resumen": "Incisivo central permanente inferior, implantado en el arco dentario inferior.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Corona en forma de cincel con un borde incisal recto."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Corona cubierta de esmalte, cuello cubierto por la encía y raíz cubierta de cemento, fijada al alvéolo por el ligamento periodontal. Bajo el esmalte está la dentina y, en el centro, la cámara pulpar con vasos y nervios. Tiene una sola raíz, larga en el canino."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Corta los alimentos. Erupciona hacia los 6 a 8 años."
+    }
+   ]
+  },
+  "lower first secondary molar tooth": {
+   "resumen": "Primer molar permanente inferior, implantado en el arco dentario inferior.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Corona grande con varias cúspides."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Corona cubierta de esmalte, cuello cubierto por la encía y raíz cubierta de cemento, fijada al alvéolo por el ligamento periodontal. Bajo el esmalte está la dentina y, en el centro, la cámara pulpar con vasos y nervios. Tiene dos raíces, mesial y distal. Corona con cinco cúspides."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Tritura y muele los alimentos. Erupciona hacia los 6 a 7 años, antes que los demás permanentes de su zona."
+    }
+   ]
+  },
+  "lower first secondary premolar tooth": {
+   "resumen": "Primer premolar permanente inferior, implantado en el arco dentario inferior.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Corona con dos cúspides, una vestibular y otra lingual o palatina."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Corona cubierta de esmalte, cuello cubierto por la encía y raíz cubierta de cemento, fijada al alvéolo por el ligamento periodontal. Bajo el esmalte está la dentina y, en el centro, la cámara pulpar con vasos y nervios. Tiene una sola raíz aplanada."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Tritura y desgarra los alimentos. Erupciona hacia los 10 a 12 años."
+    }
+   ]
+  },
+  "lower lateral secondary incisor tooth": {
+   "resumen": "Incisivo lateral permanente inferior, implantado en el arco dentario inferior.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Corona similar a la del central pero algo más pequeña."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Corona cubierta de esmalte, cuello cubierto por la encía y raíz cubierta de cemento, fijada al alvéolo por el ligamento periodontal. Bajo el esmalte está la dentina y, en el centro, la cámara pulpar con vasos y nervios. Tiene una sola raíz, larga en el canino."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Corta los alimentos. Erupciona hacia los 7 a 9 años."
+    }
+   ]
+  },
+  "lower second secondary molar tooth": {
+   "resumen": "Segundo molar permanente inferior, implantado en el arco dentario inferior.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Corona grande con varias cúspides, algo menor que la del primer molar."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Corona cubierta de esmalte, cuello cubierto por la encía y raíz cubierta de cemento, fijada al alvéolo por el ligamento periodontal. Bajo el esmalte está la dentina y, en el centro, la cámara pulpar con vasos y nervios. Tiene dos raíces, mesial y distal. Corona con cuatro cúspides principales."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Tritura y muele los alimentos. Erupciona hacia los 11 a 13 años."
+    }
+   ]
+  },
+  "lower second secondary premolar tooth": {
+   "resumen": "Segundo premolar permanente inferior, implantado en el arco dentario inferior.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Corona con dos cúspides, de contorno similar al primer premolar."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Corona cubierta de esmalte, cuello cubierto por la encía y raíz cubierta de cemento, fijada al alvéolo por el ligamento periodontal. Bajo el esmalte está la dentina y, en el centro, la cámara pulpar con vasos y nervios. Tiene una sola raíz."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Tritura los alimentos. Erupciona hacia los 10 a 12 años."
+    }
+   ]
+  },
+  "lower secondary canine tooth": {
+   "resumen": "Canino permanente inferior, implantado en el arco dentario inferior.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Corona cónica con una cúspide única y una raíz larga."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Corona cubierta de esmalte, cuello cubierto por la encía y raíz cubierta de cemento, fijada al alvéolo por el ligamento periodontal. Bajo el esmalte está la dentina y, en el centro, la cámara pulpar con vasos y nervios. Tiene una sola raíz, larga en el canino."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Desgarra los alimentos y guía la oclusión. Erupciona hacia los 9 a 12 años."
+    }
+   ]
+  },
+  "lunate": {
+   "resumen": "Hueso de la fila proximal del carpo con forma de media luna, situado entre el escafoides y el piramidal.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Su cara proximal es convexa y la distal cóncava."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Cara proximal para el radio, cara distal para el capitato y el hueso ganchoso."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el radio, el escafoides, el piramidal, el capitato y el hueso ganchoso."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "No tiene inserciones musculares; se mantiene por ligamentos."
+    }
+   ]
+  },
+  "major alar cartilage": {
+   "resumen": "Cartílago de la punta de la nariz, en forma de U, que sostiene el orificio nasal.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Lámina curva en U con una crus medial y una crus lateral."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "La crus medial forma parte del tabique móvil; la crus lateral sostiene el ala de la nariz."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Mantiene abierta la narina y da forma a la punta y a las alas de la nariz."
+    }
+   ]
+  },
+  "mandible": {
+   "resumen": "Hueso impar en herradura que forma el esqueleto de la mandíbula inferior; es el único hueso móvil del cráneo.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Un cuerpo horizontal curvo y dos ramas verticales que se unen en los ángulos de la mandíbula."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "En el cuerpo, la protuberancia mentoniana, el foramen mentoniano (nervio y vasos mentonianos), las líneas oblicua y milohioidea, las espinas mentonianas y las fositas digástrica y sublingual. En la rama, el foramen mandibular, que da paso al nervio y los vasos alveolares inferiores y está parcialmente cubierto por la língula; el surco milohioideo, para el nervio milohioideo; el proceso coronoides, la escotadura mandibular y el proceso condilar con su cabeza y cuello."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el temporal en la articulación temporomandibular y con los dientes inferiores en los alvéolos del arco alveolar."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Masetero y pterigoideo medial en el ángulo; temporal en el proceso coronoides; pterigoideo lateral en el cuello del cóndilo; milohioideo, vientre anterior del digástrico, geniogloso y genihioideo en la cara interna del mentón; buccinador, depresores del labio y mentoniano en el cuerpo."
+    }
+   ]
+  },
+  "manubrium": {
+   "resumen": "Porción superior del esternón, de forma trapezoidal, que se articula con las clavículas y con los dos primeros cartílagos costales.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso plano, ancho arriba y más estrecho abajo, que se une al cuerpo del esternón en el ángulo del esternón."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Borde superior con la incisura yugular, palpable en la base del cuello, y a cada lado las incisuras claviculares; en el borde lateral, la incisura costal para el primer cartílago costal y media incisura para el segundo. Por detrás de la incisura yugular pasan la tráquea y los grandes vasos del mediastino superior."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con las clavículas (articulaciones esternoclaviculares), con el primer cartílago costal (sincondrosis) y con el cuerpo del esternón (sínfisis manubrioesternal)."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Esternocleidomastoideo (cabeza esternal), esternohioideo, esternotiroideo y pectoral mayor."
+    }
+   ]
+  },
+  "maxilla": {
+   "resumen": "Hueso par que forma la mayor parte del esqueleto de la cara media, el paladar duro, el suelo de la órbita y el borde lateral de la nariz.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Un cuerpo con una cavidad aérea, el seno maxilar, y cuatro procesos: frontal, cigomático, alveolar y palatino."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "El foramen infraorbitario, bajo el borde de la órbita, da salida al nervio y los vasos infraorbitarios, que recorren antes el canal infraorbitario. Se identifican también la fosa canina, la espina nasal anterior, la escotadura nasal, la tuberosidad del maxilar con los agujeros alveolares superiores posteriores (nervios y vasos del mismo nombre), el hiato maxilar y el canal incisivo, por donde pasa el nervio nasopalatino. La fisura orbitaria inferior queda entre el maxilar y el ala mayor del esfenoides."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el maxilar opuesto, el frontal, el etmoides, el nasal, el lagrimal, el cigomático, el palatino, el cornete inferior, el vómer y los dientes superiores."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Orbicular de la boca, buccinador, elevador del labio superior, elevador del ángulo de la boca, nasal, depresor del tabique nasal y masetero (proceso cigomático)."
+    }
+   ]
+  },
+  "medial cuneiform bone": {
+   "resumen": "El mayor de los tres cuneiformes, ubicado en el lado medial del tarso, entre el navicular y el primer metatarsiano.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso en forma de cuña con base inferior."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Su superficie plantar sirve de inserción tendinosa."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el navicular, el cuneiforme intermedio y los metatarsianos primero y segundo."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Tibial anterior y fibular largo."
+    }
+   ]
+  },
+  "middle phalanx of fourth toe": {
+   "resumen": "Falange media del cuarto dedo del pie.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso muy pequeño y corto."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base cóncava, cuerpo corto y cabeza troclear."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la falange proximal y con la distal."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Flexor corto de los dedos y expansión del extensor largo de los dedos."
+    }
+   ]
+  },
+  "middle phalanx of index finger": {
+   "resumen": "Falange media del dedo índice, intermedia entre la proximal y la distal.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo de pequeño tamaño, con base, cuerpo y cabeza."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base con dos concavidades separadas por una cresta, cuerpo corto y cabeza con una tróclea."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la falange proximal y con la distal."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Flexor superficial de los dedos en los lados de la cara palmar y expansión extensora (lengüeta central) en la base dorsal."
+    }
+   ]
+  },
+  "middle phalanx of little finger": {
+   "resumen": "Falange media del dedo meñique, intermedia entre la proximal y la distal.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo de pequeño tamaño, con base, cuerpo y cabeza."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base con dos concavidades separadas por una cresta, cuerpo corto y cabeza con una tróclea."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la falange proximal y con la distal."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Flexor superficial de los dedos en los lados de la cara palmar y expansión extensora (lengüeta central) en la base dorsal."
+    }
+   ]
+  },
+  "middle phalanx of little toe": {
+   "resumen": "Falange media del quinto dedo del pie.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso muy pequeño y corto; en el quinto dedo suele estar fusionada con la distal."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base cóncava, cuerpo corto y cabeza troclear."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la falange proximal y con la distal."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Flexor corto de los dedos y expansión del extensor largo de los dedos."
+    }
+   ]
+  },
+  "middle phalanx of middle finger": {
+   "resumen": "Falange media del dedo medio, intermedia entre la proximal y la distal.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo de pequeño tamaño, con base, cuerpo y cabeza."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base con dos concavidades separadas por una cresta, cuerpo corto y cabeza con una tróclea."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la falange proximal y con la distal."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Flexor superficial de los dedos en los lados de la cara palmar y expansión extensora (lengüeta central) en la base dorsal."
+    }
+   ]
+  },
+  "middle phalanx of ring finger": {
+   "resumen": "Falange media del dedo anular, intermedia entre la proximal y la distal.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo de pequeño tamaño, con base, cuerpo y cabeza."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base con dos concavidades separadas por una cresta, cuerpo corto y cabeza con una tróclea."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la falange proximal y con la distal."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Flexor superficial de los dedos en los lados de la cara palmar y expansión extensora (lengüeta central) en la base dorsal."
+    }
+   ]
+  },
+  "middle phalanx of second toe": {
+   "resumen": "Falange media del segundo dedo del pie.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso muy pequeño y corto."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base cóncava, cuerpo corto y cabeza troclear."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la falange proximal y con la distal."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Flexor corto de los dedos y expansión del extensor largo de los dedos."
+    }
+   ]
+  },
+  "middle phalanx of third toe": {
+   "resumen": "Falange media del tercer dedo del pie.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso muy pequeño y corto."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base cóncava, cuerpo corto y cabeza troclear."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la falange proximal y con la distal."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Flexor corto de los dedos y expansión del extensor largo de los dedos."
+    }
+   ]
+  },
+  "nasal bone": {
+   "resumen": "Hueso pequeño y rectangular que forma el puente de la nariz.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Lámina cuadrilátera delgada, convexa por fuera, que se une a su homólogo en la línea media."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "La cara interna tiene el surco etmoidal, por donde discurre el nervio nasal externo, y la cara externa un pequeño foramen nasal para una vena."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el frontal, el nasal opuesto, el maxilar y la lámina perpendicular del etmoides."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Sirve de origen al prócero y de relación al músculo nasal."
+    }
+   ]
+  },
+  "navicular bone of foot": {
+   "resumen": "Hueso del tarso en forma de bote, entre la cabeza del talus y los tres cuneiformes, en el lado medial del pie.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso aplanado y cóncavo en su cara posterior."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "La tuberosidad del navicular, medial, es palpable y marca el arco longitudinal del pie."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el talus, los tres cuneiformes y, a menudo, con el cuboides."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Tibial posterior en la tuberosidad."
+    }
+   ]
+  },
+  "ninth rib": {
+   "resumen": "Novena costilla: arco óseo del tórax que se une a la costilla superior mediante cartílago. Costilla falsa, de longitud intermedia.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso plano, alargado y curvo, de las costillas falsas (8.ª a 10.ª)."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Una cabeza que se articula con los cuerpos vertebrales, un cuello, un tubérculo que se articula con el proceso transverso, un ángulo y un cuerpo con el surco costal en su borde inferior; por ese surco corren la vena, la arteria y el nervio intercostales."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la octava y novena vértebras torácicas; su cartílago se une al de la octava."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Oblicuo externo del abdomen, serrato anterior, diafragma, intercostales y serrato posterior inferior."
+    }
+   ]
+  },
+  "ninth thoracic vertebra": {
+   "resumen": "Novena vértebra torácica (T9).",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Cuerpo en forma de corazón, foramen vertebral casi circular y proceso espinoso largo e inclinado hacia abajo, que se superpone al de la vértebra siguiente."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Fóvea costal superior en el cuerpo y, con frecuencia, sin semifóvea inferior; fóvea costal transversa en el proceso transverso. Los procesos transversos son gruesos y se dirigen hacia atrás y afuera; los forámenes intervertebrales dan salida a los nervios espinales torácicos y a sus vasos."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con las costillas novena y, a veces, décima. Articula con las vértebras vecinas por el disco y las articulaciones cigapofisarias."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Trapecio, romboides, serrato posterior superior o inferior según el nivel, erectores de la columna, semiespinoso, multífido, rotadores, elevadores de las costillas e intertransversos."
+    }
+   ]
+  },
+  "occipital bone": {
+   "resumen": "Hueso impar que forma la parte posterior e inferior del cráneo y rodea el foramen magno.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso con una escama cóncava, dos partes laterales y una parte basilar dispuestas alrededor del foramen magno."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "El foramen magno da paso al bulbo raquídeo con sus meninges, a las arterias vertebrales y espinales y a las raíces espinales del nervio accesorio. En las partes laterales están los cóndilos occipitales y, sobre ellos, el canal del hipogloso (nervio hipogloso); por detrás, el canal condíleo con una vena emisaria. El borde lateral forma, con el temporal, el foramen yugular. En la escama se ven la protuberancia occipital externa y las líneas nucales suprema, superior e inferior; por dentro, la protuberancia occipital interna, la cresta occipital interna y los surcos de los senos sagital superior, transverso y sigmoideo."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el atlas (articulación atlantooccipital), los parietales (sutura lambdoidea), los temporales y el esfenoides (sincondrosis esfenooccipital)."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Trapecio, esternocleidomastoideo, esplenio de la cabeza, semiespinoso de la cabeza, longuísimo de la cabeza, rectos posteriores mayor y menor de la cabeza, oblicuo superior de la cabeza y recto lateral de la cabeza."
+    }
+   ]
+  },
+  "palatine bone": {
+   "resumen": "Hueso par en forma de L situado detrás del maxilar, que forma la parte posterior del paladar duro y de la pared lateral de la cavidad nasal.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Consta de una lámina horizontal y de una lámina perpendicular, con un proceso piramidal en su unión."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "En la lámina perpendicular, la cresta conchal y la cresta etmoidal, y el foramen esfenopalatino, que da paso a la arteria esfenopalatina y al nervio nasopalatino. El proceso piramidal contiene los forámenes palatinos mayor y menores, por donde descienden los nervios y los vasos palatinos hacia el paladar y el velo. La lámina horizontal forma la espina nasal posterior."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el maxilar, el esfenoides (proceso pterigoides), el etmoides, el vómer, el cornete inferior y el palatino opuesto."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Tensor del velo del paladar y pterigoideo medial en el proceso piramidal; el músculo de la úvula se origina en la espina nasal posterior."
+    }
+   ]
+  },
+  "parietal bone": {
+   "resumen": "Hueso par, cuadrilátero y curvo, que forma la parte superior y lateral de la bóveda craneal.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Lámina cuadrangular convexa por fuera y cóncava por dentro, con cuatro bordes (sagital, frontal, occipital y escamoso) y cuatro ángulos."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "En la cara externa, el tuber parietal y las líneas temporales superior e inferior; cerca del borde sagital suele existir el foramen parietal, por donde pasa una vena emisaria. La cara interna presenta el surco del seno sagital superior, los surcos de las ramas de la arteria meníngea media y las fositas granulares; en el ángulo mastoideo se marca el surco del seno sigmoideo."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el parietal opuesto (sutura sagital), el frontal (sutura coronal), el occipital (lambdoidea), el temporal (escamosa) y el ala mayor del esfenoides."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "El músculo temporal se origina de las líneas temporales y de la fosa que queda por debajo; la galea aponeurótica se fija en la zona superior."
+    }
+   ]
+  },
+  "patella": {
+   "resumen": "Hueso sesamoideo grande, triangular, incluido en el tendón del cuádriceps femoral, delante de la rodilla.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso aplanado con una base superior, un vértice inferior, una cara anterior rugosa y una cara posterior articular."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "La cara articular posterior tiene carillas medial y lateral que se apoyan en la cara patelar del fémur. El vértice da fijación al ligamento patelar."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el fémur (articulación femoropatelar)."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Recto femoral, vasto medial, vasto lateral y vasto intermedio por el tendón del cuádriceps; el ligamento patelar la une a la tuberosidad de la tibia."
+    }
+   ]
+  },
+  "pisiform": {
+   "resumen": "Hueso pequeño y redondeado del carpo, situado en la cara palmar del piramidal; es un hueso sesamoideo del tendón del flexor cubital del carpo.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso pequeño, ovoide, palpable en el borde medial de la muñeca."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Tiene una sola carilla articular, para el piramidal."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el piramidal."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Flexor cubital del carpo, abductor del meñique y retináculo flexor; ligamentos pisohamato y pisometacarpiano."
+    }
+   ]
+  },
+  "proximal phalanx of big toe": {
+   "resumen": "Falange proximal del dedo gordo del pie.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo de pequeño tamaño con base, cuerpo y cabeza; en el dedo gordo es más ancha y robusta."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base cóncava para la cabeza del metatarsiano, cuerpo con cara plantar plana y cabeza con tróclea."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el primer metatarsiano y con la falange distal del dedo gordo."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Flexor corto del dedo gordo, abductor del dedo gordo, aductor del dedo gordo y extensor corto del dedo gordo."
+    }
+   ]
+  },
+  "proximal phalanx of fourth toe": {
+   "resumen": "Falange proximal del cuarto dedo del pie.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo de pequeño tamaño con base, cuerpo y cabeza; en el dedo gordo es más ancha y robusta."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base cóncava para la cabeza del metatarsiano, cuerpo con cara plantar plana y cabeza con tróclea."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el metatarsiano correspondiente y con la falange media."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Interóseos y lumbricales, y el extensor corto de los dedos mediante la expansión extensora."
+    }
+   ]
+  },
+  "proximal phalanx of index finger": {
+   "resumen": "Falange proximal del dedo índice, la más larga de sus falanges.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo con una base cóncava, un cuerpo semicilíndrico y una cabeza con forma de polea."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base con una cavidad glenoidea, cuerpo con cara palmar plana y dorsal convexa, y cabeza con dos cóndilos y una tróclea."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el metacarpiano correspondiente y con la falange media."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Interóseos y lumbricales (por la expansión extensora); los flexores se relacionan con su cara palmar por una vaina tendinosa."
+    }
+   ]
+  },
+  "proximal phalanx of little finger": {
+   "resumen": "Falange proximal del dedo meñique, la más larga de sus falanges.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo con una base cóncava, un cuerpo semicilíndrico y una cabeza con forma de polea."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base con una cavidad glenoidea, cuerpo con cara palmar plana y dorsal convexa, y cabeza con dos cóndilos y una tróclea."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el metacarpiano correspondiente y con la falange media."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Interóseos y lumbricales (por la expansión extensora); los flexores se relacionan con su cara palmar por una vaina tendinosa."
+    }
+   ]
+  },
+  "proximal phalanx of little toe": {
+   "resumen": "Falange proximal del quinto dedo del pie.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo de pequeño tamaño con base, cuerpo y cabeza; en el dedo gordo es más ancha y robusta."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base cóncava para la cabeza del metatarsiano, cuerpo con cara plantar plana y cabeza con tróclea."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el metatarsiano correspondiente y con la falange media."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Interóseos y lumbricales, y el extensor corto de los dedos mediante la expansión extensora."
+    }
+   ]
+  },
+  "proximal phalanx of middle finger": {
+   "resumen": "Falange proximal del dedo medio, la más larga de sus falanges.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo con una base cóncava, un cuerpo semicilíndrico y una cabeza con forma de polea."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base con una cavidad glenoidea, cuerpo con cara palmar plana y dorsal convexa, y cabeza con dos cóndilos y una tróclea."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el metacarpiano correspondiente y con la falange media."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Interóseos y lumbricales (por la expansión extensora); los flexores se relacionan con su cara palmar por una vaina tendinosa."
+    }
+   ]
+  },
+  "proximal phalanx of ring finger": {
+   "resumen": "Falange proximal del dedo anular, la más larga de sus falanges.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo con una base cóncava, un cuerpo semicilíndrico y una cabeza con forma de polea."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base con una cavidad glenoidea, cuerpo con cara palmar plana y dorsal convexa, y cabeza con dos cóndilos y una tróclea."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el metacarpiano correspondiente y con la falange media."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Interóseos y lumbricales (por la expansión extensora); los flexores se relacionan con su cara palmar por una vaina tendinosa."
+    }
+   ]
+  },
+  "proximal phalanx of second toe": {
+   "resumen": "Falange proximal del segundo dedo del pie.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo de pequeño tamaño con base, cuerpo y cabeza; en el dedo gordo es más ancha y robusta."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base cóncava para la cabeza del metatarsiano, cuerpo con cara plantar plana y cabeza con tróclea."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el metatarsiano correspondiente y con la falange media."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Interóseos y lumbricales, y el extensor corto de los dedos mediante la expansión extensora."
+    }
+   ]
+  },
+  "proximal phalanx of third toe": {
+   "resumen": "Falange proximal del tercer dedo del pie.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo de pequeño tamaño con base, cuerpo y cabeza; en el dedo gordo es más ancha y robusta."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base cóncava para la cabeza del metatarsiano, cuerpo con cara plantar plana y cabeza con tróclea."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el metatarsiano correspondiente y con la falange media."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Interóseos y lumbricales, y el extensor corto de los dedos mediante la expansión extensora."
+    }
+   ]
+  },
+  "proximal phalanx of thumb": {
+   "resumen": "Falange proximal del pulgar, la más larga de sus falanges.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo con una base cóncava, un cuerpo semicilíndrico y una cabeza con forma de polea."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base con una cavidad glenoidea, cuerpo con cara palmar plana y dorsal convexa, y cabeza con dos cóndilos y una tróclea."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el primer metacarpiano y con la falange distal del pulgar."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Flexor corto del pulgar, abductor corto del pulgar, aductor del pulgar y extensor corto del pulgar."
+    }
+   ]
+  },
+  "radius": {
+   "resumen": "Hueso lateral del antebrazo, más corto que la ulna, cuyo extremo distal forma la mayor parte de la articulación de la muñeca.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo con un cuerpo triangular y un extremo distal más grueso que el proximal."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "La cabeza discoide se apoya en el cóndilo del húmero; debajo están el cuello y la tuberosidad del radio. En el extremo distal, el proceso estiloides, la escotadura ulnar y el tubérculo dorsal, que separa surcos para los tendones extensores. El borde interóseo da inserción a la membrana interósea."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el húmero, con la ulna (radioulnar proximal y distal) y con el escafoides y el semilunar (articulación radiocarpiana)."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Bíceps braquial en la tuberosidad del radio, supinador, pronador redondo, pronador cuadrado, braquiorradial, flexor superficial de los dedos, flexor largo del pulgar y abductor largo del pulgar."
+    }
+   ]
+  },
+  "sacrum": {
+   "resumen": "Hueso impar triangular formado por la fusión de las cinco vértebras sacras; forma la parte posterior de la pelvis y soporta el peso de la columna.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso en cuña, de base superior y vértice inferior, cóncavo hacia adelante."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "El promontorio es el borde anterior de la base. Los cuatro pares de forámenes sacros anteriores y posteriores dan salida a las ramas anteriores y posteriores de los nervios sacros y a vasos sacros. El canal sacro, continuación del canal vertebral, se abre en el hiato sacro, flanqueado por los cuernos sacros. Hay también la cresta sacra media, las intermedias y las laterales, las alas y las superficies auriculares para el hueso coxal."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la quinta vértebra lumbar (disco L5-S1), con el cóccix y con los huesos coxales (articulaciones sacroilíacas)."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Piriforme (cara pélvica), glúteo mayor, erectores de la columna, multífido, coccígeo, elevador del ano y dorsal ancho."
+    }
+   ]
+  },
+  "scaphoid": {
+   "resumen": "Hueso de la fila proximal del carpo, el más lateral y el más grande de ella; se articula con el radio.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso en forma de barco con una cintura central y un tubérculo palpable."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "El tubérculo del escafoides se proyecta hacia la palma; los vasos que lo nutren entran sobre todo por la cara dorsal y por el polo distal."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el radio, el semilunar, el capitato, el trapecio y el trapezoide."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Sirve de fijación a ligamentos del carpo y al retináculo flexor; no recibe inserciones de tendones."
+    }
+   ]
+  },
+  "scapula": {
+   "resumen": "Hueso plano y triangular de la cintura escapular, situado en la pared posterior del tórax entre las costillas segunda y séptima.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Lámina triangular con tres bordes (superior, medial y lateral) y tres ángulos (superior, inferior y lateral); la cara posterior está dividida por la espina."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "La espina de la escápula termina lateralmente en el acromion; el proceso coracoides se proyecta hacia adelante. La cavidad glenoidea, con los tubérculos supraglenoideo e infraglenoideo, recibe la cabeza del húmero. Las fosas supraespinosa, infraespinosa y subescapular alojan músculos. La escotadura escapular, cerrada por el ligamento transverso superior, deja pasar el nervio supraescapular, mientras que la arteria supraescapular pasa por encima del ligamento; la escotadura espinoglenoidea da paso al nervio y los vasos supraescapulares hacia la fosa infraespinosa."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el húmero (articulación glenohumeral) y con la clavícula (articulación acromioclavicular)."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Supraespinoso, infraespinoso, redondo menor, redondo mayor, subescapular, deltoides, serrato anterior, romboides mayor y menor, elevador de la escápula, trapecio, pectoral menor, coracobraquial, bíceps braquial, tríceps braquial (cabeza larga), omohioideo y dorsal ancho."
+    }
+   ]
+  },
+  "second costal cartilage": {
+   "resumen": "Cartílago hialino que continúa el extremo anterior de la segunda costilla y la une con el esternón.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Corto, con una articulación sinovial con el esternón."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Extremo lateral unido a la costilla y extremo medial unido al esternón."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Se une al esternón en el ángulo del esternón, entre manubrio y cuerpo. Da elasticidad a la pared torácica durante la respiración."
+    }
+   ]
+  },
+  "second lumbar vertebra": {
+   "resumen": "Segunda vértebra lumbar (L2).",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Cuerpo grande y reniforme, foramen vertebral triangular y proceso espinoso corto, cuadrangular y horizontal."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Los procesos costiformes (transversos) son largos y delgados; en su base están los procesos accesorios, y en las carillas articulares superiores los procesos mamilares. Los forámenes intervertebrales dan salida a los nervios espinales lumbares. El foramen vertebral aloja la cauda equina y no la médula en los niveles inferiores."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con las vértebras vecinas por los discos y las articulaciones cigapofisarias."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Psoas mayor, cuadrado lumbar, erectores de la columna, multífido, interespinosos e intertransversos, pilares del diafragma y fascia toracolumbar."
+    }
+   ]
+  },
+  "second metacarpal bone": {
+   "resumen": "Hueso largo del segundo radio de la mano, entre el carpo y la falange proximal del dedo índice. Más largo de los metacarpianos.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo, con una base proximal, un cuerpo ligeramente cóncavo hacia la palma y una cabeza distal."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base con una hendidura para el trapezoide y carillas para el trapecio y el capitato. La cabeza es redondeada y forma el nudillo de la mano."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el trapezoide, el trapecio, el capitato, el tercer metacarpiano y la falange proximal del índice."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Extensor radial largo del carpo, flexor radial del carpo y primer y segundo interóseos dorsales."
+    }
+   ]
+  },
+  "second metatarsal bone": {
+   "resumen": "Hueso largo del segundo radio del pie, entre el tarso y la falange proximal del segundo dedo. El más largo de los metatarsianos.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo con base, cuerpo y cabeza; el cuerpo es prismático y algo cóncavo hacia la planta."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base encajada entre los tres cuneiformes. La cabeza es convexa y se articula con la falange proximal."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con los tres cuneiformes, el tercer metatarsiano y la falange proximal del segundo dedo."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Interóseos dorsales y plantares, aductor del dedo gordo."
+    }
+   ]
+  },
+  "second rib": {
+   "resumen": "Segunda costilla: arco óseo del tórax que llega al esternón mediante su cartílago costal. Más larga que la primera, con caras externa e interna y una curva menor.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso plano, alargado y curvo, de las costillas verdaderas (1.ª a 7.ª)."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Tuberosidad del serrato anterior en su cara externa; surco costal poco marcado."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la primera y la segunda vértebras torácicas, y con el esternón por su cartílago."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Escaleno posterior, serrato anterior, serrato posterior superior e iliocostal."
+    }
+   ]
+  },
+  "second thoracic vertebra": {
+   "resumen": "Segunda vértebra torácica (T2).",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Cuerpo en forma de corazón, foramen vertebral casi circular y proceso espinoso largo e inclinado hacia abajo, que se superpone al de la vértebra siguiente."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Semifóveas costales superior e inferior en el cuerpo y fóvea costal transversa en el proceso transverso. Los procesos transversos son gruesos y se dirigen hacia atrás y afuera; los forámenes intervertebrales dan salida a los nervios espinales torácicos y a sus vasos."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con las costillas segunda y tercera. Articula con las vértebras vecinas por el disco y las articulaciones cigapofisarias."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Trapecio, romboides, serrato posterior superior o inferior según el nivel, erectores de la columna, semiespinoso, multífido, rotadores, elevadores de las costillas e intertransversos."
+    }
+   ]
+  },
+  "sesamoid bone of foot": {
+   "resumen": "Pequeño hueso incluido en un tendón en la planta del pie, junto a la cabeza del primer metatarsiano.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso pequeño, ovalado, con una cara articular dorsal."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Los dos sesamoideos del dedo gordo se ubican en los tendones del flexor corto del dedo gordo, bajo la cabeza del primer metatarsiano; entre ellos pasa el tendón del flexor largo del dedo gordo."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la cabeza del primer metatarsiano."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Flexor corto del dedo gordo, abductor del dedo gordo y aductor del dedo gordo."
+    }
+   ]
+  },
+  "seventh cervical vertebra": {
+   "resumen": "Vértebra cervical (C7) o vértebra prominente, de transición entre la columna cervical y la torácica.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Proceso espinoso largo, no bífido y fácilmente palpable en la base del cuello; cuerpo algo mayor que el de las demás cervicales."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "El foramen transversario es pequeño y da paso a venas vertebrales accesorias, pero no a la arteria vertebral. El proceso transverso es largo, con un tubérculo posterior prominente. Foramen vertebral triangular."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la sexta cervical y con la primera torácica (disco C7-T1), y por carillas con las apófisis articulares vecinas."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Trapecio, romboides menor, serrato posterior superior, semiespinoso, esplenio del cuello, multífido y ligamento nucal."
+    }
+   ]
+  },
+  "seventh costal cartilage": {
+   "resumen": "Cartílago hialino que continúa el extremo anterior de la séptima costilla y la une con el esternón.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "El más largo de las costillas verdaderas; se relaciona con el recto del abdomen y los ligamentos costoxifoideos."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Extremo lateral unido a la costilla y extremo medial unido al esternón."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Se une al cuerpo del esternón cerca del proceso xifoides. Da elasticidad a la pared torácica durante la respiración."
+    }
+   ]
+  },
+  "seventh rib": {
+   "resumen": "Séptima costilla: arco óseo del tórax que llega al esternón mediante su cartílago costal. Última costilla verdadera, larga y de curvatura marcada.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso plano, alargado y curvo, de las costillas verdaderas (1.ª a 7.ª)."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Una cabeza que se articula con los cuerpos vertebrales, un cuello, un tubérculo que se articula con el proceso transverso, un ángulo y un cuerpo con el surco costal en su borde inferior; por ese surco corren la vena, la arteria y el nervio intercostales."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la sexta y séptima vértebras torácicas; su cartílago llega al esternón."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Serrato anterior, intercostales, iliocostal y longuísimo; el recto del abdomen se fija en su cartílago."
+    }
+   ]
+  },
+  "seventh thoracic vertebra": {
+   "resumen": "Séptima vértebra torácica (T7).",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Cuerpo en forma de corazón, foramen vertebral casi circular y proceso espinoso largo e inclinado hacia abajo, que se superpone al de la vértebra siguiente."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Semifóveas costales superior e inferior en el cuerpo y fóvea costal transversa en el proceso transverso. Los procesos transversos son gruesos y se dirigen hacia atrás y afuera; los forámenes intervertebrales dan salida a los nervios espinales torácicos y a sus vasos."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con las costillas séptima y octava. Articula con las vértebras vecinas por el disco y las articulaciones cigapofisarias."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Trapecio, romboides, serrato posterior superior o inferior según el nivel, erectores de la columna, semiespinoso, multífido, rotadores, elevadores de las costillas e intertransversos."
+    }
+   ]
+  },
+  "sixth cervical vertebra": {
+   "resumen": "Vértebra cervical (C6), con un tubérculo anterior prominente en el proceso transverso, el tubérculo carotídeo, contra el cual puede comprimirse la arteria carótida común.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Cuerpo pequeño, más ancho que alto, con bordes laterales elevados (procesos unciformes); foramen vertebral grande y triangular; proceso espinoso corto y bífido."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Cada proceso transverso tiene un foramen transversario por donde pasan la arteria y las venas vertebrales (la arteria vertebral entra desde C6), con los tubérculos anterior y posterior y entre ambos el surco del nervio espinal. Las carillas articulares superiores e inferiores son planas y oblicuas; entre los pedículos y las láminas se forman las incisuras vertebrales, que dejan los forámenes intervertebrales para los nervios espinales."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la vértebra cervical superior y la inferior por los discos y las articulaciones cigapofisarias; las uncovertebrales unen los bordes de los cuerpos."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Longuísimo del cuello, esplenio del cuello, escalenos, elevador de la escápula, semiespinoso, multífido, interespinosos e intertransversos."
+    }
+   ]
+  },
+  "sixth costal cartilage": {
+   "resumen": "Cartílago hialino que continúa el extremo anterior de la sexta costilla y la une con el esternón.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Da inserción a fibras del pectoral mayor y al recto del abdomen."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Extremo lateral unido a la costilla y extremo medial unido al esternón."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Se une al cuerpo del esternón. Da elasticidad a la pared torácica durante la respiración."
+    }
+   ]
+  },
+  "sixth rib": {
+   "resumen": "Sexta costilla: arco óseo del tórax que llega al esternón mediante su cartílago costal. Costilla típica, de tamaño medio.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso plano, alargado y curvo, de las costillas verdaderas (1.ª a 7.ª)."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Una cabeza que se articula con los cuerpos vertebrales, un cuello, un tubérculo que se articula con el proceso transverso, un ángulo y un cuerpo con el surco costal en su borde inferior; por ese surco corren la vena, la arteria y el nervio intercostales."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la quinta y sexta vértebras torácicas y con el esternón por su cartílago."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Serrato anterior, intercostales, iliocostal y longuísimo; el recto del abdomen y el pectoral mayor se fijan en su cartílago."
+    }
+   ]
+  },
+  "sixth thoracic vertebra": {
+   "resumen": "Sexta vértebra torácica (T6).",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Cuerpo en forma de corazón, foramen vertebral casi circular y proceso espinoso largo e inclinado hacia abajo, que se superpone al de la vértebra siguiente."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Semifóveas costales superior e inferior en el cuerpo y fóvea costal transversa en el proceso transverso. Los procesos transversos son gruesos y se dirigen hacia atrás y afuera; los forámenes intervertebrales dan salida a los nervios espinales torácicos y a sus vasos."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con las costillas sexta y séptima. Articula con las vértebras vecinas por el disco y las articulaciones cigapofisarias."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Trapecio, romboides, serrato posterior superior o inferior según el nivel, erectores de la columna, semiespinoso, multífido, rotadores, elevadores de las costillas e intertransversos."
+    }
+   ]
+  },
+  "sphenoid bone": {
+   "resumen": "Hueso impar en forma de murciélago situado en el centro de la base del cráneo, que se articula con casi todos los demás huesos craneales.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Consta de un cuerpo central con el seno esfenoidal, dos alas menores, dos alas mayores y dos procesos pterigoides."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "En el cuerpo, la silla turca con la fosa hipofisaria, el tubérculo y el dorso de la silla y los procesos clinoides. El canal óptico da paso al nervio óptico y a la arteria oftálmica; la fisura orbitaria superior, a los nervios oculomotor, troclear, abducens y oftálmico y a las venas oftálmicas. En el ala mayor, el foramen redondo (nervio maxilar), el foramen oval (nervio mandibular) y el foramen espinoso (arteria meníngea media). Los procesos pterigoides tienen láminas medial y lateral, el hámulo pterigoideo y el canal pterigoideo (nervio del canal pterigoideo)."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el frontal, el etmoides, los parietales, los temporales, el occipital, el vómer, los palatinos y los cigomáticos."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Pterigoideos medial y lateral, tensor del velo del paladar, temporal, constrictor superior de la faringe (por el hámulo) y, alrededor del canal óptico, los músculos rectos del ojo y el elevador del párpado superior."
+    }
+   ]
+  },
+  "subscapularis": {
+   "resumen": "Músculo del manguito de los rotadores que ocupa la fosa subescapular.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Se origina en la fosa subescapular y se inserta en el tubérculo menor del húmero. Lo inervan los nervios subescapulares."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Rota medialmente el brazo y estabiliza la articulación glenohumeral por delante."
+    }
+   ]
+  },
+  "talus": {
+   "resumen": "Hueso del tarso que transmite el peso de la tibia al pie; articula con la pierna y con el calcáneo y el navicular.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Consta de una cabeza, un cuello y un cuerpo con la tróclea."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "La tróclea del talus se encaja entre ambos maléolos. En su cara posterior hay un surco por donde pasa el tendón del flexor largo del dedo gordo, entre los tubérculos medial y lateral del proceso posterior."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la tibia y la fíbula (articulación del tobillo), con el calcáneo y con el navicular."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "No recibe inserciones musculares; solo ligamentos."
+    }
+   ]
+  },
+  "temporal bone": {
+   "resumen": "Hueso par de la base y la pared lateral del cráneo que aloja el oído medio y el oído interno.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso complejo formado por las porciones escamosa, timpánica, mastoidea y petrosa, y por el proceso estiloides."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "La escama presenta el proceso cigomático, el tubérculo articular y la fosa mandibular. La porción petrosa contiene el canal carotídeo (arteria carótida interna y su plexo simpático), el meato acústico interno (nervios facial y vestibulococlear y arteria laberíntica) y el hiato del canal del nervio petroso mayor; su borde posterior forma con el occipital el foramen yugular, por donde pasan la vena yugular interna y los nervios glosofaríngeo, vago y accesorio. El foramen estilomastoideo da salida al nervio facial. Además hay meato acústico externo, proceso mastoides con la incisura mastoidea (vientre posterior del digástrico), proceso estiloides y surco del seno sigmoideo."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la mandíbula (articulación temporomandibular), el parietal, el occipital, el esfenoides y el cigomático."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Esternocleidomastoideo, esplenio de la cabeza y longuísimo de la cabeza en la mastoides; temporal en la escama; masetero en el arco cigomático; vientre posterior del digástrico; estilohioideo, estilogloso y estilofaríngeo en el proceso estiloides."
+    }
+   ]
+  },
+  "tenth rib": {
+   "resumen": "Décima costilla: arco óseo del tórax que se une a la costilla superior mediante cartílago. Costilla falsa; su cabeza tiene una sola carilla articular.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso plano, alargado y curvo, de las costillas falsas (8.ª a 10.ª)."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Cabeza con una sola carilla articular, cuello corto y tubérculo; surco costal poco profundo."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Solo con la décima vértebra torácica; su cartílago se une al de la novena."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Oblicuo externo del abdomen, serrato posterior inferior, dorsal ancho, diafragma e intercostales."
+    }
+   ]
+  },
+  "tenth thoracic vertebra": {
+   "resumen": "Décima vértebra torácica (T10).",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Cuerpo en forma de corazón, foramen vertebral casi circular y proceso espinoso largo e inclinado hacia abajo, que se superpone al de la vértebra siguiente."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Una sola fóvea costal completa en el cuerpo, que se articula con la décima costilla; el proceso transverso suele tener fóvea costal transversa. Los procesos transversos son gruesos y se dirigen hacia atrás y afuera; los forámenes intervertebrales dan salida a los nervios espinales torácicos y a sus vasos."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la décima costilla. Articula con las vértebras vecinas por el disco y las articulaciones cigapofisarias."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Trapecio, romboides, serrato posterior superior o inferior según el nivel, erectores de la columna, semiespinoso, multífido, rotadores, elevadores de las costillas e intertransversos."
+    }
+   ]
+  },
+  "third cervical vertebra": {
+   "resumen": "Vértebra cervical típica (C3), con cuerpo pequeño y ancho, foramen vertebral triangular y proceso espinoso corto y bífido.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Cuerpo pequeño, más ancho que alto, con bordes laterales elevados (procesos unciformes); foramen vertebral grande y triangular; proceso espinoso corto y bífido."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Cada proceso transverso tiene un foramen transversario por donde pasan la arteria y las venas vertebrales (la arteria vertebral entra desde C6), con los tubérculos anterior y posterior y entre ambos el surco del nervio espinal. Las carillas articulares superiores e inferiores son planas y oblicuas; entre los pedículos y las láminas se forman las incisuras vertebrales, que dejan los forámenes intervertebrales para los nervios espinales."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la vértebra cervical superior y la inferior por los discos y las articulaciones cigapofisarias; las uncovertebrales unen los bordes de los cuerpos."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Longuísimo del cuello, esplenio del cuello, escalenos, elevador de la escápula, semiespinoso, multífido, interespinosos e intertransversos."
+    }
+   ]
+  },
+  "third costal cartilage": {
+   "resumen": "Cartílago hialino que continúa el extremo anterior de la tercera costilla y la une con el esternón.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Largo y recto; sirve de inserción a fibras del pectoral mayor y al pectoral menor en la costilla."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Extremo lateral unido a la costilla y extremo medial unido al esternón."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Se une al cuerpo del esternón. Da elasticidad a la pared torácica durante la respiración."
+    }
+   ]
+  },
+  "third lumbar vertebra": {
+   "resumen": "Tercera vértebra lumbar (L3).",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Cuerpo grande y reniforme, foramen vertebral triangular y proceso espinoso corto, cuadrangular y horizontal."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Los procesos costiformes (transversos) son largos y delgados; en su base están los procesos accesorios, y en las carillas articulares superiores los procesos mamilares. Los forámenes intervertebrales dan salida a los nervios espinales lumbares. El foramen vertebral aloja la cauda equina y no la médula en los niveles inferiores."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con las vértebras vecinas por los discos y las articulaciones cigapofisarias."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Psoas mayor, cuadrado lumbar, erectores de la columna, multífido, interespinosos e intertransversos, pilares del diafragma y fascia toracolumbar."
+    }
+   ]
+  },
+  "third metacarpal bone": {
+   "resumen": "Hueso largo del tercero radio de la mano, entre el carpo y la falange proximal del dedo medio. Largo, con un proceso estiloides en el lado dorsal de la base.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo, con una base proximal, un cuerpo ligeramente cóncavo hacia la palma y una cabeza distal."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Proceso estiloides de la base. La cabeza es redondeada y forma el nudillo de la mano."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el capitato, el segundo y cuarto metacarpianos y la falange proximal del dedo medio."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Extensor radial corto del carpo, aductor del pulgar (cabeza transversa) e interóseos."
+    }
+   ]
+  },
+  "third metatarsal bone": {
+   "resumen": "Hueso largo del tercero radio del pie, entre el tarso y la falange proximal del tercer dedo. Hueso largo de forma típica.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo con base, cuerpo y cabeza; el cuerpo es prismático y algo cóncavo hacia la planta."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Base con carilla para el cuneiforme lateral. La cabeza es convexa y se articula con la falange proximal."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el cuneiforme lateral, los metatarsianos vecinos y la falange proximal del tercer dedo."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Interóseos y aductor del dedo gordo."
+    }
+   ]
+  },
+  "third rib": {
+   "resumen": "Tercera costilla: arco óseo del tórax que llega al esternón mediante su cartílago costal. Costilla típica, de tamaño medio, con cabeza, cuello, tubérculo y ángulo.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso plano, alargado y curvo, de las costillas verdaderas (1.ª a 7.ª)."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Una cabeza que se articula con los cuerpos vertebrales, un cuello, un tubérculo que se articula con el proceso transverso, un ángulo y un cuerpo con el surco costal en su borde inferior; por ese surco corren la vena, la arteria y el nervio intercostales."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la segunda y tercera vértebras torácicas y con el esternón por su cartílago."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Pectoral menor, serrato anterior, intercostales, serrato posterior superior, iliocostal y longuísimo."
+    }
+   ]
+  },
+  "third thoracic vertebra": {
+   "resumen": "Tercera vértebra torácica (T3).",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Cuerpo en forma de corazón, foramen vertebral casi circular y proceso espinoso largo e inclinado hacia abajo, que se superpone al de la vértebra siguiente."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Semifóveas costales superior e inferior en el cuerpo y fóvea costal transversa en el proceso transverso. Los procesos transversos son gruesos y se dirigen hacia atrás y afuera; los forámenes intervertebrales dan salida a los nervios espinales torácicos y a sus vasos."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con las costillas tercera y cuarta. Articula con las vértebras vecinas por el disco y las articulaciones cigapofisarias."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Trapecio, romboides, serrato posterior superior o inferior según el nivel, erectores de la columna, semiespinoso, multífido, rotadores, elevadores de las costillas e intertransversos."
+    }
+   ]
+  },
+  "thyroid cartilage": {
+   "resumen": "Cartílago más grande de la laringe, formado por dos láminas que se unen adelante en la prominencia laríngea.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Dos láminas cuadriláteras que forman un ángulo abierto hacia atrás; el ángulo es más agudo en el varón."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Prominencia laríngea o nuez, escotadura tiroidea superior, línea oblicua y los cuernos superiores e inferiores; el cuerno superior se une al hioides por un ligamento y el inferior se articula con el cartílago cricoides. El nervio laríngeo superior atraviesa la membrana tirohioidea cerca del cuerno superior."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Protege las estructuras laríngeas, sostiene las cuerdas vocales, que se fijan en su cara interna, y sirve de inserción a músculos laríngeos y faríngeos."
+    }
+   ]
+  },
+  "tibia": {
+   "resumen": "Hueso largo y grueso de la pierna, situado en su cara medial; soporta el peso del cuerpo.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo prismático triangular con extremos proximal y distal ensanchados."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "El extremo proximal tiene los cóndilos medial y lateral con la meseta tibial, la eminencia intercondílea y, por delante, la tuberosidad de la tibia. El cuerpo tiene un borde anterior, un borde interóseo y la línea del sóleo. El extremo distal forma el maléolo medial y la escotadura fibular; el foramen nutricio del cuerpo da paso a la arteria nutricia."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el fémur (rodilla), con la fíbula (articulaciones tibiofibulares proximal y distal) y con el talus (articulación talocrural)."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Ligamento patelar en la tuberosidad; sartorio, grácil y semitendinoso en la cara medial superior; semimembranoso en el cóndilo medial; tibial anterior, poplíteo, sóleo, flexor largo de los dedos y tibial posterior en el cuerpo."
+    }
+   ]
+  },
+  "tibialis anterior": {
+   "resumen": "Músculo del compartimento anterior de la pierna, que se palpa lateral a la cresta de la tibia.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Se origina en el cóndilo lateral y la mitad superior de la cara lateral de la tibia y en la membrana interósea; su tendón se inserta en el cuneiforme medial y la base del primer metatarsiano. Lo inerva el nervio fibular profundo."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Dorsiflexiona e invierte el pie y mantiene el arco longitudinal medial."
+    }
+   ]
+  },
+  "tibialis posterior": {
+   "resumen": "Músculo profundo del compartimento posterior de la pierna.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Se origina en la membrana interósea y en las caras posteriores de la tibia y la fíbula; su tendón pasa por detrás del maléolo medial y se inserta sobre todo en la tuberosidad del navicular, con expansiones a otros huesos del tarso. Lo inerva el nervio tibial."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Invierte el pie, ayuda a la flexión plantar y sostiene el arco longitudinal."
+    }
+   ]
+  },
+  "trapezium": {
+   "resumen": "Hueso del carpo en la fila distal, en su lado lateral; forma la articulación en silla de montar con el primer metacarpiano.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso cuboideo con un tubérculo anterior y un surco para un tendón."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "El surco del trapecio aloja el tendón del flexor radial del carpo; el tubérculo da fijación al retináculo flexor."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el escafoides, el trapezoide, el segundo metacarpiano y el primer metacarpiano."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Oponente del pulgar, abductor corto del pulgar y flexor corto del pulgar."
+    }
+   ]
+  },
+  "trapezoid": {
+   "resumen": "Hueso pequeño del carpo, en la fila distal, ubicado entre el trapecio y el capitato.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso en forma de cuña con base dorsal ancha."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Una carilla distal para el segundo metacarpiano."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el escafoides, el trapecio, el capitato y el segundo metacarpiano."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Sirve de inserción a ligamentos; en general sin inserciones musculares importantes."
+    }
+   ]
+  },
+  "triquetral": {
+   "resumen": "Hueso piramidal de la fila proximal del carpo, situado en el lado medial.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso con forma de pirámide."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "En su cara palmar lleva una carilla para el pisiforme."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el semilunar, el pisiforme, el hueso ganchoso y, mediante un disco, con la ulna."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "No tiene inserciones musculares importantes; sirve de fijación a ligamentos."
+    }
+   ]
+  },
+  "twelfth rib": {
+   "resumen": "Duodécima costilla: arco óseo del tórax que no se une al esternón. Costilla flotante, la más corta y delgada de todas.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso plano, alargado y curvo, de las costillas flotantes (11.ª y 12.ª)."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Una carilla articular en la cabeza; no tiene tubérculo, cuello ni surco costal marcados."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Solo con la duodécima vértebra torácica."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Cuadrado lumbar, diafragma, dorsal ancho, serrato posterior inferior y oblicuo externo del abdomen."
+    }
+   ]
+  },
+  "twelfth thoracic vertebra": {
+   "resumen": "Duodécima vértebra torácica (T12), de transición con la columna lumbar.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Cuerpo en forma de corazón, foramen vertebral casi circular y proceso espinoso largo e inclinado hacia abajo, que se superpone al de la vértebra siguiente."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Una fóvea costal completa en el cuerpo, sin fóvea transversa; los procesos articulares inferiores miran hacia afuera, como en las lumbares, y aparecen pequeños tubérculos mamilar, accesorio y lateral. Los procesos transversos son gruesos y se dirigen hacia atrás y afuera; los forámenes intervertebrales dan salida a los nervios espinales torácicos y a sus vasos."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con la duodécima costilla. Articula con las vértebras vecinas por el disco y las articulaciones cigapofisarias."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Trapecio, romboides, serrato posterior superior o inferior según el nivel, erectores de la columna, semiespinoso, multífido, rotadores, elevadores de las costillas e intertransversos."
+    }
+   ]
+  },
+  "ulna": {
+   "resumen": "Hueso medial del antebrazo, largo y grueso arriba, que forma la parte principal de la articulación del codo.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso largo prismático, con un extremo proximal grande y uno distal reducido."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "En el extremo proximal están el olécranon, el proceso coronoides, la escotadura troclear, la escotadura radial y la tuberosidad de la ulna. El extremo distal tiene la cabeza y el proceso estiloides. Presenta además la cresta del supinador y el borde interóseo."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el húmero (codo), con el radio (radioulnar proximal y distal) y, mediante el disco articular, con el carpo."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Tríceps braquial y ancóneo en el olécranon; braquial en la tuberosidad; flexor cubital del carpo, flexor profundo de los dedos, supinador y pronador cuadrado."
+    }
+   ]
+  },
+  "upper central secondary incisor tooth": {
+   "resumen": "Incisivo central permanente superior, implantado en el arco dentario superior.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Corona en forma de cincel con un borde incisal recto."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Corona cubierta de esmalte, cuello cubierto por la encía y raíz cubierta de cemento, fijada al alvéolo por el ligamento periodontal. Bajo el esmalte está la dentina y, en el centro, la cámara pulpar con vasos y nervios. Tiene una sola raíz, larga en el canino."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Corta los alimentos. Erupciona hacia los 6 a 8 años."
+    }
+   ]
+  },
+  "upper first secondary molar tooth": {
+   "resumen": "Primer molar permanente superior, implantado en el arco dentario superior.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Corona grande con varias cúspides."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Corona cubierta de esmalte, cuello cubierto por la encía y raíz cubierta de cemento, fijada al alvéolo por el ligamento periodontal. Bajo el esmalte está la dentina y, en el centro, la cámara pulpar con vasos y nervios. Tiene tres raíces: dos vestibulares y una palatina. Corona con cuatro cúspides principales."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Tritura y muele los alimentos. Erupciona hacia los 6 a 7 años, antes que los demás permanentes de su zona."
+    }
+   ]
+  },
+  "upper first secondary premolar tooth": {
+   "resumen": "Primer premolar permanente superior, implantado en el arco dentario superior.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Corona con dos cúspides, una vestibular y otra lingual o palatina."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Corona cubierta de esmalte, cuello cubierto por la encía y raíz cubierta de cemento, fijada al alvéolo por el ligamento periodontal. Bajo el esmalte está la dentina y, en el centro, la cámara pulpar con vasos y nervios. Suele tener dos raíces, vestibular y palatina, o una raíz aplanada y dividida."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Tritura y desgarra los alimentos. Erupciona hacia los 10 a 12 años."
+    }
+   ]
+  },
+  "upper lateral secondary incisor tooth": {
+   "resumen": "Incisivo lateral permanente superior, implantado en el arco dentario superior.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Corona similar a la del central pero algo más pequeña."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Corona cubierta de esmalte, cuello cubierto por la encía y raíz cubierta de cemento, fijada al alvéolo por el ligamento periodontal. Bajo el esmalte está la dentina y, en el centro, la cámara pulpar con vasos y nervios. Tiene una sola raíz, larga en el canino."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Corta los alimentos. Erupciona hacia los 7 a 9 años."
+    }
+   ]
+  },
+  "upper second secondary molar tooth": {
+   "resumen": "Segundo molar permanente superior, implantado en el arco dentario superior.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Corona grande con varias cúspides, algo menor que la del primer molar."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Corona cubierta de esmalte, cuello cubierto por la encía y raíz cubierta de cemento, fijada al alvéolo por el ligamento periodontal. Bajo el esmalte está la dentina y, en el centro, la cámara pulpar con vasos y nervios. Tiene tres raíces, a veces fusionadas. Corona con cuatro cúspides principales."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Tritura y muele los alimentos. Erupciona hacia los 11 a 13 años."
+    }
+   ]
+  },
+  "upper second secondary premolar tooth": {
+   "resumen": "Segundo premolar permanente superior, implantado en el arco dentario superior.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Corona con dos cúspides, de contorno similar al primer premolar."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Corona cubierta de esmalte, cuello cubierto por la encía y raíz cubierta de cemento, fijada al alvéolo por el ligamento periodontal. Bajo el esmalte está la dentina y, en el centro, la cámara pulpar con vasos y nervios. Tiene una sola raíz."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Tritura los alimentos. Erupciona hacia los 10 a 12 años."
+    }
+   ]
+  },
+  "upper secondary canine tooth": {
+   "resumen": "Canino permanente superior, implantado en el arco dentario superior.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Corona cónica con una cúspide única y una raíz larga, la más larga de los dientes superiores."
+    },
+    {
+     "titulo": "Partes",
+     "texto": "Corona cubierta de esmalte, cuello cubierto por la encía y raíz cubierta de cemento, fijada al alvéolo por el ligamento periodontal. Bajo el esmalte está la dentina y, en el centro, la cámara pulpar con vasos y nervios. Tiene una sola raíz, larga en el canino."
+    },
+    {
+     "titulo": "Función",
+     "texto": "Desgarra los alimentos y guía la oclusión. Erupciona hacia los 9 a 12 años."
+    }
+   ]
+  },
+  "vomer": {
+   "resumen": "Hueso impar, delgado y en forma de lámina, que forma la parte posteroinferior del tabique nasal.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Lámina romboidal en el plano medio, con un borde superior ensanchado en las alas del vómer."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "El surco nasopalatino de cada cara aloja el nervio nasopalatino y vasos acompañantes; su borde posterior libre separa las coanas."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el esfenoides, el etmoides (lámina perpendicular), el maxilar, el palatino y el cartílago del tabique nasal."
+    }
+   ]
+  },
+  "xiphoid process": {
+   "resumen": "Extremo inferior del esternón, pequeño y cartilaginoso en el joven, que se osifica con la edad.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Prolongación delgada y de forma variable, puntiaguda, bífida o perforada."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Se une al cuerpo del esternón en la sínfisis xifoesternal; sobre su cara anterior se fijan los ligamentos costoxifoideos."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el cuerpo del esternón y, por ligamentos, con el séptimo cartílago costal."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Línea alba, recto del abdomen (por fibras tendinosas), diafragma (fibras esternales) y transverso del tórax."
+    }
+   ]
+  },
+  "zygomatic bone": {
+   "resumen": "Hueso par de la mejilla que forma el relieve del pómulo, parte de la órbita y del arco cigomático.",
+   "detalles": [
+    {
+     "titulo": "Forma",
+     "texto": "Hueso cuadrangular con tres caras y tres procesos: frontal, temporal y maxilar."
+    },
+    {
+     "titulo": "Partes y accidentes",
+     "texto": "Presenta los forámenes cigomaticofacial y cigomaticotemporal, por donde pasan ramos del nervio cigomático (rama del maxilar), y el foramen cigomaticoorbitario, que comunica con la órbita. El proceso temporal se une al proceso cigomático del temporal para formar el arco cigomático; en el borde orbitario hay un tubérculo orbitario."
+    },
+    {
+     "titulo": "Articulaciones",
+     "texto": "Con el frontal, el esfenoides, el maxilar y el temporal."
+    },
+    {
+     "titulo": "Inserciones musculares",
+     "texto": "Masetero, cigomático mayor y menor, y fascia temporal."
+    }
+   ]
+  }
+ }
+}

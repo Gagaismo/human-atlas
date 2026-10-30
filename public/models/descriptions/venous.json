@@ -1,0 +1,3091 @@
+{
+ "system": "venous",
+ "entries": {
+  "coronary sinus": {
+   "resumen": "Vena ancha y corta que recoge la mayor parte de la sangre venosa del corazón. Ocupa la parte posterior del surco coronario (auriculoventricular).",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se forma como continuación de la vena cardíaca magna a nivel del surco coronario."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Recorre la cara posterior del corazón en el surco coronario, entre la aurícula izquierda y el ventrículo izquierdo."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Aurícula derecha, por el orificio del seno coronario, cerca del orificio de la vena cava inferior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el miocardio a través de las venas cardíacas magna, media y parva, y de la vena posterior del ventrículo izquierdo."
+    }
+   ]
+  },
+  "great cardiac vein": {
+   "resumen": "Vena principal de la cara anterior del corazón; acompaña a la arteria interventricular anterior y continúa como seno coronario.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace cerca del vértice del corazón, como continuación de la vena interventricular anterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por el surco interventricular anterior, rodea el borde izquierdo del corazón por el surco coronario y llega a la cara posterior."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Seno coronario."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena las caras anteriores de ambos ventrículos, la porción anterior del tabique interventricular y la aurícula izquierda."
+    }
+   ]
+  },
+  "anterior interventricular vein": {
+   "resumen": "Vena que recorre el surco interventricular anterior junto a la arteria homónima.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la región del vértice cardíaco."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por el surco interventricular anterior."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena cardíaca magna, a la altura del surco coronario."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena las caras anteriores de los ventrículos y parte del tabique interventricular."
+    }
+   ]
+  },
+  "middle cardiac vein": {
+   "resumen": "Vena del surco interventricular posterior, que acompaña a la arteria interventricular posterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace cerca del vértice del corazón, en la cara diafragmática."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por el surco interventricular posterior."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Seno coronario, cerca de su desembocadura en la aurícula derecha."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena las caras posteriores de ambos ventrículos y la parte posterior del tabique interventricular."
+    }
+   ]
+  },
+  "small cardiac vein": {
+   "resumen": "Vena cardíaca de calibre pequeño, ubicada en el surco coronario sobre el borde inferior del corazón.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la cara esternocostal del ventrículo derecho, cerca del borde derecho del corazón."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Recorre el surco coronario hacia atrás, junto a la arteria coronaria derecha."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Seno coronario (en ocasiones, directamente la aurícula derecha)."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la aurícula derecha y la parte posterior del ventrículo derecho."
+    }
+   ]
+  },
+  "anterior cardiac vein": {
+   "resumen": "Pequeña vena de la pared anterior del ventrículo derecho que desemboca directamente en la aurícula, sin pasar por el seno coronario.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la cara anterior del ventrículo derecho."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Cruza el surco coronario por delante, habitualmente sobre la arteria coronaria derecha."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Aurícula derecha, por su pared anterior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la pared anterior del ventrículo derecho."
+    }
+   ]
+  },
+  "posterior vein of ventricle": {
+   "resumen": "Vena de la cara posterior del ventrículo izquierdo que tributa al seno coronario.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la cara diafragmática del ventrículo izquierdo."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Corre por la cara posterior del ventrículo izquierdo, paralela al surco interventricular posterior."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Seno coronario o vena cardíaca media."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la pared posterior del ventrículo izquierdo."
+    }
+   ]
+  },
+  "marginal vein": {
+   "resumen": "Vena cardíaca que recorre el borde del ventrículo siguiendo el trayecto de las arterias marginales.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la pared libre del ventrículo."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Sigue el borde del ventrículo hasta alcanzar el surco coronario."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena cardíaca parva o seno coronario."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la pared libre del ventrículo correspondiente."
+    }
+   ]
+  },
+  "superior vena cava": {
+   "resumen": "Gran vena sin válvulas del mediastino que lleva al corazón la sangre de la mitad superior del cuerpo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se forma por la unión de las venas braquiocefálicas, detrás del primer cartílago costal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por el mediastino a la derecha de la aorta ascendente; su mitad inferior está dentro del pericardio fibroso. Recibe a la vena ácigos antes de entrar en el pericardio."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Aurícula derecha, a la altura del tercer cartílago costal."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la cabeza, el cuello, los miembros superiores y la pared torácica a través de las venas braquiocefálicas y ácigos."
+    }
+   ]
+  },
+  "inferior vena cava": {
+   "resumen": "La vena de mayor calibre del cuerpo; reúne la sangre de los miembros inferiores, la pelvis y el abdomen.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se forma por la unión de las venas ilíacas comunes, a nivel de la quinta vértebra lumbar."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por delante de la columna vertebral, a la derecha de la aorta abdominal, por detrás del hígado (surco de la vena cava) y atraviesa el diafragma por el orificio de la vena cava."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Aurícula derecha, tras un breve trayecto torácico."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena los miembros inferiores, la pelvis, los riñones, las glándulas suprarrenales, el hígado (venas hepáticas) y la pared posterior del abdomen."
+    }
+   ]
+  },
+  "brachiocephalic vein": {
+   "resumen": "Gran vena del mediastino superior formada por la unión de las venas yugular interna y subclavia.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace detrás de la articulación esternoclavicular, por la unión de las venas yugular interna y subclavia."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende hacia la línea media, por delante de los troncos arteriales que emergen del arco aórtico."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Se une con la vena braquiocefálica del lado opuesto y forma la vena cava superior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la cabeza, el cuello y el miembro superior, además de las venas tiroideas inferiores y torácicas internas."
+    }
+   ]
+  },
+  "azygos vein": {
+   "resumen": "Vena impar del mediastino posterior que comunica los sistemas de las venas cavas.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el abdomen, por la unión de la vena lumbar ascendente derecha y la vena subcostal, y atraviesa el diafragma."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por el lado derecho de la columna vertebral, por detrás del esófago, y se arquea sobre el pedículo del pulmón derecho."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena cava superior, a la altura de la cuarta vértebra torácica."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la pared posterior del tórax y del abdomen, el esófago, los bronquios y el pericardio, y recibe a las venas hemiácigos."
+    }
+   ]
+  },
+  "hemiazygos vein": {
+   "resumen": "Vena del lado izquierdo de la columna torácica inferior que tributa a la vena ácigos.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la unión de la vena lumbar ascendente y la subcostal izquierdas."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por el lado izquierdo de la columna vertebral y cruza la línea media hacia la octava vértebra torácica, por detrás de la aorta."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena ácigos."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena las venas intercostales posteriores inferiores izquierdas y la pared posterior del tórax."
+    }
+   ]
+  },
+  "accessory hemiazygos vein": {
+   "resumen": "Vena del lado izquierdo del tórax superior, accesoria de la vena hemiácigos.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se forma por las venas intercostales posteriores de los espacios intercostales superiores izquierdos (4.º a 8.º)."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por el lado izquierdo de la columna torácica y cruza hacia la derecha por detrás de la aorta."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena ácigos (o vena hemiácigos)."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena los espacios intercostales posteriores superiores izquierdos."
+    }
+   ]
+  },
+  "ascending lumbar vein": {
+   "resumen": "Vena longitudinal paravertebral de la pared posterior del abdomen que conecta las venas lumbares entre sí.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la anastomosis de las venas lumbares con la vena ilíaca común."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por delante de las apófisis transversas de las vértebras lumbares, por detrás del músculo psoas mayor."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Continúa como vena ácigos o hemiácigos, según el lado."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena las venas lumbares y la región paravertebral; comunica el sistema de la cava inferior con el de la cava superior."
+    }
+   ]
+  },
+  "lumbar vein": {
+   "resumen": "Venas segmentarias de la pared posterior del abdomen, dispuestas a lo largo de las vértebras lumbares.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nacen en la pared posterolateral del abdomen y en los plexos venosos vertebrales."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Rodean el cuerpo vertebral por debajo de los músculos psoas y se dirigen hacia la vena cava inferior."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena cava inferior y vena lumbar ascendente."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drenan los músculos y la piel de la pared posterior del abdomen y los plexos vertebrales."
+    }
+   ]
+  },
+  "subcostal vein": {
+   "resumen": "Vena que acompaña al nervio subcostal, bajo el borde inferior de la duodécima costilla.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la pared posterior del abdomen, bajo la duodécima costilla."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Pasa por detrás del diafragma (o lo atraviesa) junto al nervio subcostal."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena ácigos o hemiácigos, según el lado."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la pared posterior del abdomen superior."
+    }
+   ]
+  },
+  "superior intercostal vein": {
+   "resumen": "Vena que reúne los primeros espacios intercostales posteriores.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se forma por la unión de las primeras venas intercostales posteriores."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende hasta la base del cuello y se curva sobre la cúpula pleural."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena braquiocefálica (en ocasiones, la vena ácigos)."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena los dos o tres primeros espacios intercostales."
+    }
+   ]
+  },
+  "median sacral vein": {
+   "resumen": "Vena impar que acompaña a la arteria sacra media por delante del sacro y el cóccix.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la cara pelviana del cóccix y el sacro."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por delante de la columna sacra, en la línea media."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena ilíaca común izquierda."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la cara anterior del sacro y el cóccix."
+    }
+   ]
+  },
+  "lateral sacral vein": {
+   "resumen": "Venas que recogen la sangre de las regiones laterales del sacro.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nacen en los agujeros sacros anteriores."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Descienden por la cara pelviana del sacro junto a las arterias sacras laterales."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena ilíaca interna."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drenan los plexos del conducto sacro y las raíces nerviosas sacras."
+    }
+   ]
+  },
+  "iliolumbar vein": {
+   "resumen": "Vena que acompaña a la arteria iliolumbar en la fosa ilíaca.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la fosa ilíaca y la región lumbar inferior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Pasa entre el músculo psoas mayor y la cara anterior del sacro."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena ilíaca interna (o ilíaca común)."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el músculo ilíaco, el psoas mayor y los músculos lumbares."
+    }
+   ]
+  },
+  "common iliac vein": {
+   "resumen": "Vena corta y gruesa de la pelvis, formada por la unión de las venas ilíacas externa e interna.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace delante de la articulación sacroilíaca."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende junto a la arteria ilíaca común, hacia la quinta vértebra lumbar."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Se une con la vena ilíaca común del lado opuesto y forma la vena cava inferior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la pelvis y el miembro inferior."
+    }
+   ]
+  },
+  "external iliac vein": {
+   "resumen": "Continuación de la vena femoral por encima del ligamento inguinal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace por detrás del ligamento inguinal, como continuación de la vena femoral."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por el borde medial del músculo psoas mayor, por detrás y medial a la arteria ilíaca externa."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Se une a la vena ilíaca interna y forma la vena ilíaca común."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el miembro inferior, la pared abdominal inferior y los genitales externos; la acompañan los ganglios linfáticos ilíacos externos."
+    }
+   ]
+  },
+  "internal iliac vein": {
+   "resumen": "Vena corta de la pelvis menor que reúne la sangre de las vísceras y las paredes pelvianas.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se forma cerca del borde superior de la escotadura ciática mayor, por la reunión de sus tributarias."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por detrás de la arteria ilíaca interna."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Se une a la vena ilíaca externa y forma la vena ilíaca común."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena las vísceras pelvianas, la región glútea, el periné y los genitales externos; la acompañan los ganglios linfáticos ilíacos internos."
+    }
+   ]
+  },
+  "superior gluteal vein": {
+   "resumen": "Vena que acompaña a la arteria glútea superior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la región glútea, entre los músculos glúteos medio y menor."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Atraviesa la escotadura ciática mayor por encima del músculo piriforme."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena ilíaca interna."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena los músculos glúteos y la región posterior de la cadera."
+    }
+   ]
+  },
+  "inferior gluteal vein": {
+   "resumen": "Vena que acompaña a la arteria glútea inferior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la región glútea, en la profundidad del músculo glúteo mayor."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Atraviesa la escotadura ciática mayor por debajo del músculo piriforme."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena ilíaca interna."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el músculo glúteo mayor y la región posterior del muslo proximal."
+    }
+   ]
+  },
+  "internal pudendal vein": {
+   "resumen": "Vena que acompaña a la arteria pudenda interna; sale de la pelvis por la región glútea y vuelve a entrar por la escotadura ciática menor.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el periné, a partir de las venas de los genitales externos y del recto inferior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Pasa por la escotadura ciática menor y recorre el conducto pudendo."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena ilíaca interna."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el periné y los genitales externos."
+    }
+   ]
+  },
+  "obturator vein": {
+   "resumen": "Vena que acompaña a la arteria obturatriz y atraviesa el conducto obturador.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la región medial del muslo."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Atraviesa el conducto obturador y asciende por la pared lateral de la pelvis."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena ilíaca interna."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena los músculos aductores del muslo y el obturador externo."
+    }
+   ]
+  },
+  "superior rectal vein": {
+   "resumen": "Vena del recto que pertenece al sistema porta y se anastomosa con las venas rectales media e inferior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el plexo hemorroidal interno del recto."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por el mesorrecto junto a la arteria rectal superior."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena mesentérica inferior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la porción superior del recto y el conducto anal; es un sitio de anastomosis portocava."
+    }
+   ]
+  },
+  "deep dorsal vein of penis": {
+   "resumen": "Vena impar profunda del pene que recoge la sangre de los cuerpos cavernosos y del glande.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el surco coronal del glande y recibe tributarias de los cuerpos esponjoso y cavernosos."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Corre en la línea media bajo la fascia profunda, entre las arterias dorsales, y pasa por debajo del ligamento arqueado del pubis."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Plexo venoso prostático y venas pudendas internas."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el glande y los cuerpos eréctiles del pene."
+    }
+   ]
+  },
+  "superficial dorsal vein of penis": {
+   "resumen": "Vena superficial del dorso del pene, en el tejido subcutáneo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la piel del prepucio."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Corre por el dorso del pene, superficial a la fascia del pene."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena pudenda externa y luego vena safena magna."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la piel y el tejido subcutáneo del pene."
+    }
+   ]
+  },
+  "femoral vein": {
+   "resumen": "Vena principal del muslo; continúa a la vena poplítea y acompaña a la arteria femoral.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el hiato de los aductores, como continuación de la vena poplítea."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por el conducto aductor y el triángulo femoral, medial a la arteria femoral."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Continúa como vena ilíaca externa al pasar por debajo del ligamento inguinal."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el muslo, la pierna y la pared abdominal inferior; la acompañan los ganglios linfáticos inguinales profundos."
+    }
+   ]
+  },
+  "deep femoral vein": {
+   "resumen": "Vena profunda del muslo que acompaña a la arteria femoral profunda.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se forma a partir de las venas perforantes y de los músculos del muslo."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por detrás del músculo aductor largo."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena femoral."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena los músculos del muslo, en particular aductores y flexores."
+    }
+   ]
+  },
+  "lateral circumflex femoral vein": {
+   "resumen": "Vena que acompaña a la arteria circunfleja femoral lateral.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la cara lateral del muslo."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Rodea el cuello del fémur por su cara lateral."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena femoral o vena femoral profunda."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el músculo cuádriceps femoral y la región lateral de la cadera."
+    }
+   ]
+  },
+  "medial circumflex femoral vein": {
+   "resumen": "Vena que acompaña a la arteria circunfleja femoral medial.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la cara medial del muslo."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Rodea el cuello del fémur por su cara medial, entre los músculos pectíneo y psoas."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena femoral profunda o vena femoral."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena los músculos aductores y la región medial de la cadera."
+    }
+   ]
+  },
+  "great saphenous vein": {
+   "resumen": "Vena superficial más larga del cuerpo; recorre la cara medial del miembro inferior en el tejido subcutáneo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el borde medial del arco venoso dorsal del pie."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Pasa por delante del maléolo medial, asciende por la cara medial de la pierna y del muslo y atraviesa el hiato safeno."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena femoral."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la piel y el tejido subcutáneo medial del miembro inferior."
+    }
+   ]
+  },
+  "small saphenous vein": {
+   "resumen": "Vena superficial de la cara posterior de la pierna.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el borde lateral del arco venoso dorsal del pie."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Pasa por detrás del maléolo lateral y asciende por la cara posterior de la pierna, entre los vientres del músculo gastrocnemio."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena poplítea, en la fosa poplítea."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la piel y el tejido subcutáneo lateral y posterior de la pierna y del pie."
+    }
+   ]
+  },
+  "superficial epigastric vein": {
+   "resumen": "Vena subcutánea de la pared anterior del abdomen inferior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el tejido subcutáneo infraumbilical."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende hacia el ligamento inguinal."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena safena magna."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la piel y el tejido subcutáneo de la pared abdominal inferior."
+    }
+   ]
+  },
+  "inferior epigastric vein": {
+   "resumen": "Vena de la pared abdominal que acompaña a la arteria epigástrica inferior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la vaina del músculo recto del abdomen."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Corre por detrás del músculo recto del abdomen, medial al anillo inguinal profundo."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena ilíaca externa."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la pared abdominal anterior inferior; se anastomosa con la vena epigástrica superior."
+    }
+   ]
+  },
+  "superior epigastric vein": {
+   "resumen": "Vena de la parte superior de la pared abdominal anterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la vaina del músculo recto del abdomen."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por detrás del músculo recto del abdomen."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena torácica interna."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la pared abdominal anterior superior."
+    }
+   ]
+  },
+  "popliteal vein": {
+   "resumen": "Vena principal de la fosa poplítea; continúa a la vena femoral.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se forma por la unión de las venas tibiales anterior y posterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por la fosa poplítea, superficial y lateral a la arteria poplítea."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena femoral, a nivel del hiato de los aductores."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la rodilla y la región posterior de la pierna."
+    }
+   ]
+  },
+  "anterior tibial vein": {
+   "resumen": "Vena profunda de la pierna que acompaña a la arteria tibial anterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el dorso del pie."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por delante de la membrana interósea de la pierna."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena poplítea."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena los músculos del compartimiento anterior de la pierna."
+    }
+   ]
+  },
+  "posterior tibial vein": {
+   "resumen": "Vena profunda posterior de la pierna que acompaña a la arteria tibial posterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la planta del pie, por la unión de las venas plantares medial y lateral."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Pasa por detrás del maléolo medial y asciende bajo el músculo sóleo."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena poplítea."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el compartimiento posterior de la pierna y la planta del pie."
+    }
+   ]
+  },
+  "fibular vein": {
+   "resumen": "Vena profunda de la pierna que acompaña a la arteria fibular.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la región posterolateral de la pierna."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende junto al peroné y se une a la vena tibial posterior."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena tibial posterior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena los músculos del compartimiento lateral y parte del posterior de la pierna."
+    }
+   ]
+  },
+  "genicular vein": {
+   "resumen": "Venas que acompañan a las arterias geniculares alrededor de la rodilla.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nacen del plexo periarticular de la rodilla."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Rodean la articulación de la rodilla."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena poplítea."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drenan la articulación de la rodilla y las estructuras que la rodean."
+    }
+   ]
+  },
+  "set of perforating veins": {
+   "resumen": "Conjunto de venas que comunican el sistema venoso superficial con el profundo del miembro inferior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nacen de las venas safenas."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Atraviesan la fascia profunda; sus válvulas permiten solo el paso de la sangre desde lo superficial hacia lo profundo."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Venas profundas de la pierna y el muslo."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Comunican las venas safenas con las venas profundas."
+    }
+   ]
+  },
+  "dorsal venous arch of foot": {
+   "resumen": "Arco venoso superficial del dorso del pie.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se forma por la unión de las venas digitales dorsales y metatarsianas dorsales."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Cruza el dorso del pie a nivel de los metatarsianos."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Venas safenas magna (extremo medial) y parva (extremo lateral)."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el dorso del pie y los dedos."
+    }
+   ]
+  },
+  "plantar venous arch of foot": {
+   "resumen": "Arco venoso profundo de la planta del pie.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se forma a partir de las venas digitales y metatarsianas plantares."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Cruza la planta del pie junto al arco plantar arterial."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Venas plantares medial y lateral, y luego venas tibiales posteriores."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la planta del pie y los dedos."
+    }
+   ]
+  },
+  "tributary of plantar venous arch": {
+   "resumen": "Pequeña tributaria del arco venoso plantar.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en los tejidos de la planta del pie."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Corre entre los músculos de la planta del pie."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Arco venoso plantar."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena los músculos y la piel de la planta del pie."
+    }
+   ]
+  },
+  "set of plantar digital veins": {
+   "resumen": "Conjunto de venas pequeñas que drenan la cara plantar de los dedos del pie.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nacen en los pulpejos de los dedos."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Discurren por los lados de los dedos hacia las venas metatarsianas plantares."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Venas metatarsianas plantares y arco venoso plantar."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drenan la cara plantar de los dedos del pie."
+    }
+   ]
+  },
+  "plantar metatarsal vein": {
+   "resumen": "Vena de los espacios intermetatarsianos plantares.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de las venas digitales plantares."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Corre por los espacios intermetatarsianos."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Arco venoso plantar."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena los dedos del pie y los espacios intermetatarsianos."
+    }
+   ]
+  },
+  "set of dorsal digital veins": {
+   "resumen": "Conjunto de venas pequeñas de la cara dorsal de los dedos.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nacen en el dorso de los dedos."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Discurren por los lados de los dedos hacia el dorso de la mano o del pie."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Red venosa dorsal de la mano o arco venoso dorsal del pie."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drenan la cara dorsal de los dedos."
+    }
+   ]
+  },
+  "subclavian vein": {
+   "resumen": "Vena principal del hombro, continuación de la vena axilar, que pasa por delante del músculo escaleno anterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el borde lateral de la primera costilla, como continuación de la vena axilar."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Pasa sobre la primera costilla, por delante del músculo escaleno anterior y detrás de la clavícula."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Se une con la vena yugular interna y forma la vena braquiocefálica."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el miembro superior y parte del cuello y de la pared torácica."
+    }
+   ]
+  },
+  "axillary vein": {
+   "resumen": "Vena principal de la axila; acompaña a la arteria axilar.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace por la unión de las venas braquiales y la vena basílica, en el borde inferior del músculo redondo mayor."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por la axila, medial a la arteria axilar."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena subclavia, en el borde lateral de la primera costilla."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el miembro superior y la pared torácica lateral; la acompañan los ganglios linfáticos axilares."
+    }
+   ]
+  },
+  "cephalic vein": {
+   "resumen": "Vena superficial de la cara lateral del miembro superior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el borde lateral de la red venosa dorsal de la mano."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por la cara lateral del antebrazo y del brazo hasta el surco deltopectoral."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena axilar, tras atravesar la fascia clavipectoral."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la piel y el tejido subcutáneo laterales del miembro superior."
+    }
+   ]
+  },
+  "basilic vein": {
+   "resumen": "Vena superficial de la cara medial del miembro superior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el borde medial de la red venosa dorsal de la mano."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por la cara medial del antebrazo y del brazo; atraviesa la fascia profunda hacia la mitad del brazo."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena axilar (junto con las venas braquiales)."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la piel y el tejido subcutáneo mediales del miembro superior."
+    }
+   ]
+  },
+  "median cubital vein": {
+   "resumen": "Vena superficial del pliegue del codo que une las venas cefálica y basílica.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la vena cefálica, delante del codo."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Cruza en diagonal la fosa cubital, sobre la aponeurosis del músculo bíceps braquial."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena basílica."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Comunica los sistemas venosos superficiales lateral y medial; es una vena frecuente de punción."
+    }
+   ]
+  },
+  "median antebrachial vein": {
+   "resumen": "Vena superficial de la cara anterior del antebrazo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace del plexo venoso de la palma."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por la cara anterior del antebrazo."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena cubital mediana, basílica o cefálica."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la piel y el tejido subcutáneo de la cara anterior del antebrazo."
+    }
+   ]
+  },
+  "radial vein": {
+   "resumen": "Vena profunda del antebrazo que acompaña a la arteria radial.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el arco venoso palmar profundo."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por el borde lateral del antebrazo."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Venas braquiales."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la mano y la cara lateral del antebrazo."
+    }
+   ]
+  },
+  "ulnar vein": {
+   "resumen": "Vena profunda del antebrazo que acompaña a la arteria cubital.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el arco venoso palmar superficial."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por el borde medial del antebrazo."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Venas braquiales."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la mano y la cara medial del antebrazo."
+    }
+   ]
+  },
+  "medial brachial vein": {
+   "resumen": "Vena profunda del brazo que acompaña a la arteria braquial.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la unión de las venas radial y cubital, a nivel de la fosa cubital."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende junto a la arteria braquial, en el surco bicipital medial."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena axilar."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena los músculos del brazo."
+    }
+   ]
+  },
+  "deep palmar venous arch": {
+   "resumen": "Arco venoso profundo de la palma.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se forma a partir de las venas metacarpianas palmares."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Cruza la palma de la mano junto al arco palmar arterial profundo."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Venas radiales y cubitales."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la palma y los dedos."
+    }
+   ]
+  },
+  "superficial palmar venous arch": {
+   "resumen": "Arco venoso superficial de la palma.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se forma a partir de las venas digitales palmares comunes."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Cruza la palma por debajo de la aponeurosis palmar."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Venas cubitales y radiales."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la piel y el tejido subcutáneo de la palma."
+    }
+   ]
+  },
+  "dorsal venous network of hand": {
+   "resumen": "Red venosa superficial del dorso de la mano.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se forma por las venas metacarpianas dorsales y las venas digitales dorsales."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Cubre el dorso de la mano."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Venas cefálica (lateral) y basílica (medial)."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el dorso de la mano y los dedos."
+    }
+   ]
+  },
+  "dorsal metacarpal vein": {
+   "resumen": "Vena de los espacios intermetacarpianos dorsales.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de las venas digitales dorsales."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Corre sobre los músculos interóseos dorsales."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Red venosa dorsal de la mano."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena los dedos y los espacios intermetacarpianos."
+    }
+   ]
+  },
+  "palmar metacarpal vein": {
+   "resumen": "Vena de los espacios intermetacarpianos palmares.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de las venas digitales palmares."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Corre por los espacios intermetacarpianos."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Arco venoso palmar profundo."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena los dedos y los espacios intermetacarpianos."
+    }
+   ]
+  },
+  "common palmar digital vein": {
+   "resumen": "Vena corta de la palma que reúne las venas digitales de dedos adyacentes.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se forma a partir de las venas digitales palmares propias."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia la palma por los espacios interdigitales."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Arco venoso palmar superficial."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena los dedos adyacentes."
+    }
+   ]
+  },
+  "proper palmar digital vein of index finger": {
+   "resumen": "Vena pequeña de la cara palmar del dedo índice.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el pulpejo del dedo."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Corre por el borde del dedo, junto a la arteria digital palmar propia."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena digital palmar común y luego arco venoso palmar superficial."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la cara palmar del dedo índice."
+    }
+   ]
+  },
+  "proper palmar digital vein of little finger": {
+   "resumen": "Vena pequeña de la cara palmar del dedo meñique.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el pulpejo del dedo."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Corre por el borde del dedo, junto a la arteria digital palmar propia."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena digital palmar común y luego arco venoso palmar superficial."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la cara palmar del dedo meñique."
+    }
+   ]
+  },
+  "proper palmar digital vein of middle finger": {
+   "resumen": "Vena pequeña de la cara palmar del dedo medio.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el pulpejo del dedo."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Corre por el borde del dedo, junto a la arteria digital palmar propia."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena digital palmar común y luego arco venoso palmar superficial."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la cara palmar del dedo medio."
+    }
+   ]
+  },
+  "proper palmar digital vein of ring finger": {
+   "resumen": "Vena pequeña de la cara palmar del dedo anular.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el pulpejo del dedo."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Corre por el borde del dedo, junto a la arteria digital palmar propia."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena digital palmar común y luego arco venoso palmar superficial."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la cara palmar del dedo anular."
+    }
+   ]
+  },
+  "circumflex scapular vein": {
+   "resumen": "Vena que acompaña a la arteria circunfleja escapular.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la región subescapular."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Rodea el borde lateral de la escápula."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena subescapular."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la región escapular."
+    }
+   ]
+  },
+  "subscapular vein": {
+   "resumen": "Vena gruesa de la pared posterior de la axila.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se forma por la unión de las venas circunfleja escapular y toracodorsal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por la pared posterior de la axila."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena axilar."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el músculo subescapular y la región escapular."
+    }
+   ]
+  },
+  "thoracodorsal vein": {
+   "resumen": "Vena que acompaña a la arteria toracodorsal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el músculo dorsal ancho."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por la pared posterior de la axila, junto al nervio toracodorsal."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena subescapular."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el músculo dorsal ancho y la pared torácica posterior."
+    }
+   ]
+  },
+  "lateral thoracic vein": {
+   "resumen": "Vena de la pared lateral del tórax.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la pared torácica lateral."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por el borde lateral del músculo pectoral menor."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena axilar."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la mama lateral y los músculos serrato anterior y pectorales."
+    }
+   ]
+  },
+  "anterior circumflex humeral vein": {
+   "resumen": "Vena que rodea la cara anterior del cuello quirúrgico del húmero.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la región deltoidea."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Rodea por delante el cuello quirúrgico del húmero."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena axilar."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el músculo deltoides y la articulación del hombro."
+    }
+   ]
+  },
+  "suprascapular vein": {
+   "resumen": "Vena que acompaña a la arteria supraescapular.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la fosa supraespinosa."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Pasa por encima del ligamento transverso superior de la escápula."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena yugular externa o vena subclavia."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena los músculos supraespinoso e infraespinoso."
+    }
+   ]
+  },
+  "internal thoracic vein": {
+   "resumen": "Vena que acompaña a la arteria torácica interna, a los lados del esternón.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se forma por la unión de las venas epigástrica superior y musculofrénica."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por detrás de los cartílagos costales, junto al borde del esternón."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena braquiocefálica."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la pared torácica anterior, la mama y el diafragma."
+    }
+   ]
+  },
+  "musculophrenic vein": {
+   "resumen": "Vena que recorre el borde costal del diafragma.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el diafragma anterior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Corre por detrás del borde costal."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena torácica interna."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el diafragma y la pared abdominal superior."
+    }
+   ]
+  },
+  "set of anterior intercostal veins": {
+   "resumen": "Conjunto de venas de los espacios intercostales anteriores.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nacen en los espacios intercostales anteriores."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Corren por los espacios intercostales, junto a las arterias intercostales anteriores."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Venas torácica interna y musculofrénica."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drenan los músculos intercostales anteriores y la mama."
+    }
+   ]
+  },
+  "internal jugular vein": {
+   "resumen": "Vena principal del cuello, continuación del seno sigmoideo.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el foramen yugular, como continuación del seno sigmoideo."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Desciende por el cuello dentro de la vaina carotídea, junto a la arteria carótida común y al nervio vago."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Se une con la vena subclavia y forma la vena braquiocefálica."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el encéfalo, la cara y el cuello; la acompañan los ganglios linfáticos cervicales profundos."
+    }
+   ]
+  },
+  "renal vein": {
+   "resumen": "Vena corta y gruesa que sale del hilio renal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el hilio renal, por la unión de las venas segmentarias."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia la vena cava inferior, por delante de la arteria renal."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena cava inferior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el riñón."
+    }
+   ]
+  },
+  "suprarenal vein": {
+   "resumen": "Vena de la glándula suprarrenal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el hilio de la glándula suprarrenal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Sale por el hilio de la glándula y se dirige a la vena cava inferior o a la vena renal."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena cava inferior o vena renal, según el lado."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la glándula suprarrenal."
+    }
+   ]
+  },
+  "testicular vein": {
+   "resumen": "Vena que drena el testículo; forma el plexo pampiniforme en el cordón espermático.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el plexo pampiniforme, en el escroto."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por el conducto inguinal y por detrás del peritoneo parietal, junto al uréter."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena cava inferior o vena renal, según el lado."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el testículo y el epidídimo; la linfa del testículo acompaña a la vena hacia los ganglios lumbares."
+    }
+   ]
+  },
+  "inferior phrenic vein": {
+   "resumen": "Vena de la cara inferior del diafragma.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la cara inferior del diafragma."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por la cara inferior del diafragma."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena cava inferior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la cara inferior del diafragma."
+    }
+   ]
+  },
+  "superior phrenic vein": {
+   "resumen": "Vena de la cara superior del diafragma.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la cara superior del diafragma."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña a la arteria pericardiofrénica."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena torácica interna o braquiocefálica."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la cara superior del diafragma."
+    }
+   ]
+  },
+  "hepatic portal vein": {
+   "resumen": "Gran vena que lleva al hígado la sangre del tubo digestivo, el bazo y el páncreas.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se forma detrás del cuello del páncreas por la unión de las venas mesentérica superior y esplénica."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por el ligamento hepatoduodenal, por detrás de la arteria hepática propia y del conducto colédoco."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Se divide en el hilio del hígado en ramas derecha e izquierda."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el tubo digestivo abdominal, el bazo, el páncreas y la vesícula biliar."
+    }
+   ]
+  },
+  "portal vein": {
+   "resumen": "Vena porta; trae al hígado la sangre venosa de las vísceras digestivas.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se forma detrás del cuello del páncreas por la unión de las venas mesentérica superior y esplénica."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por el ligamento hepatoduodenal hasta el hilio hepático."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Se ramifica en el hígado."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena las vísceras digestivas, el bazo y el páncreas."
+    }
+   ]
+  },
+  "pre-hepatic portal vein": {
+   "resumen": "Segmento extrahepático de la vena porta, antes del hilio del hígado.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se origina detrás del páncreas."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por el ligamento hepatoduodenal."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Hilio hepático."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena las vísceras digestivas."
+    }
+   ]
+  },
+  "trunk of portal vein": {
+   "resumen": "Tronco de la vena porta.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se forma por la confluencia de las venas esplénica y mesentérica superior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende hacia el hilio hepático."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Se divide en el hilio hepático."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el tubo digestivo y el bazo."
+    }
+   ]
+  },
+  "splenic vein": {
+   "resumen": "Vena que drena el bazo y recibe tributarias del estómago y del páncreas.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el hilio esplénico."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Corre por detrás del páncreas, inferior a la arteria esplénica."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena porta, tras unirse a la vena mesentérica superior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el bazo, el estómago y el páncreas."
+    }
+   ]
+  },
+  "superior mesenteric vein": {
+   "resumen": "Vena que acompaña a la arteria mesentérica superior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la fosa ilíaca derecha, cerca del íleon terminal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por la raíz del mesenterio, a la derecha de la arteria mesentérica superior."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena porta, tras unirse a la vena esplénica."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el intestino delgado, el ciego, el colon ascendente y la mitad derecha del colon transverso."
+    }
+   ]
+  },
+  "inferior mesenteric vein": {
+   "resumen": "Vena del colon izquierdo y del recto superior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de la vena rectal superior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende por el retroperitoneo, junto a la arteria mesentérica inferior."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena esplénica o mesentérica superior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el colon descendente, el sigmoide y el recto superior."
+    }
+   ]
+  },
+  "ileocolic vein": {
+   "resumen": "Vena del ciego y del íleon terminal.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la región ileocecal."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende junto a la arteria ileocólica."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena mesentérica superior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el íleon terminal, el ciego, el apéndice vermiforme y el colon ascendente."
+    }
+   ]
+  },
+  "ileal vein": {
+   "resumen": "Vena del íleon.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la pared del íleon."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Discurre por el mesenterio."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena mesentérica superior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el íleon."
+    }
+   ]
+  },
+  "colic vein": {
+   "resumen": "Vena del colon.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la pared del colon."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Recorre el mesocolon."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena mesentérica superior o inferior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la porción correspondiente del colon."
+    }
+   ]
+  },
+  "middle colic vein": {
+   "resumen": "Vena del colon transverso.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el colon transverso."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Recorre el mesocolon transverso junto a la arteria cólica media."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena mesentérica superior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el colon transverso."
+    }
+   ]
+  },
+  "sigmoid vein": {
+   "resumen": "Vena del colon sigmoide.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el colon sigmoide."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Recorre el mesocolon sigmoide."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena mesentérica inferior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el colon sigmoide."
+    }
+   ]
+  },
+  "gastric vein": {
+   "resumen": "Vena del estómago.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en las curvaturas del estómago."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Corre a lo largo de las curvaturas gástricas."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena porta."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el estómago."
+    }
+   ]
+  },
+  "gastroepiploic vein": {
+   "resumen": "Vena de la curvatura mayor del estómago.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la curvatura mayor."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Corre a lo largo de la curvatura mayor, en el omento mayor."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena mesentérica superior o vena esplénica."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la curvatura mayor del estómago y el omento mayor."
+    }
+   ]
+  },
+  "pancreaticoduodenal vein": {
+   "resumen": "Vena del páncreas y del duodeno.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en la cabeza del páncreas y el duodeno."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Acompaña a las arterias pancreaticoduodenales."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena porta o vena mesentérica superior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la cabeza del páncreas y el duodeno."
+    }
+   ]
+  },
+  "hepatic vein": {
+   "resumen": "Vena que lleva la sangre del hígado hacia la vena cava inferior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de las venas centrolobulillares del hígado."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Converge hacia el borde posterior del hígado."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena cava inferior, cerca del diafragma."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el parénquima hepático."
+    }
+   ]
+  },
+  "middle hepatic vein": {
+   "resumen": "Vena hepática que drena la parte central del hígado.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace entre los lóbulos derecho e izquierdo del hígado."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Recorre la cisura portal principal."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena cava inferior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena los segmentos centrales del hígado."
+    }
+   ]
+  },
+  "tributary of middle hepatic vein": {
+   "resumen": "Pequeña tributaria de la vena hepática media.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en los segmentos centrales del hígado."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Converge hacia la vena hepática media."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena hepática media."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena una parte del parénquima hepático."
+    }
+   ]
+  },
+  "hepatovenous segment ii": {
+   "resumen": "Segmento hepático II, definido según la distribución de las venas hepáticas y portales. Corresponde a la porción posterior superior del lóbulo izquierdo.",
+   "detalles": [
+    {
+     "titulo": "Trayecto",
+     "texto": "Ocupa una porción definida del parénquima hepático."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Territorio hepático drenado por la vena hepática correspondiente (segmento II)."
+    }
+   ]
+  },
+  "hepatovenous segment iii": {
+   "resumen": "Segmento hepático III, definido según la distribución de las venas hepáticas y portales. Corresponde a la porción anterior inferior del lóbulo izquierdo.",
+   "detalles": [
+    {
+     "titulo": "Trayecto",
+     "texto": "Ocupa una porción definida del parénquima hepático."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Territorio hepático drenado por la vena hepática correspondiente (segmento III)."
+    }
+   ]
+  },
+  "hepatovenous segment iv": {
+   "resumen": "Segmento hepático IV, definido según la distribución de las venas hepáticas y portales. Corresponde a la porción medial del lóbulo izquierdo.",
+   "detalles": [
+    {
+     "titulo": "Trayecto",
+     "texto": "Ocupa una porción definida del parénquima hepático."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Territorio hepático drenado por la vena hepática correspondiente (segmento IV)."
+    }
+   ]
+  },
+  "hepatovenous segment v": {
+   "resumen": "Segmento hepático V, definido según la distribución de las venas hepáticas y portales. Corresponde a la porción anterior inferior del lóbulo derecho.",
+   "detalles": [
+    {
+     "titulo": "Trayecto",
+     "texto": "Ocupa una porción definida del parénquima hepático."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Territorio hepático drenado por la vena hepática correspondiente (segmento V)."
+    }
+   ]
+  },
+  "hepatovenous segment vi": {
+   "resumen": "Segmento hepático VI, definido según la distribución de las venas hepáticas y portales. Corresponde a la porción posterior inferior del lóbulo derecho.",
+   "detalles": [
+    {
+     "titulo": "Trayecto",
+     "texto": "Ocupa una porción definida del parénquima hepático."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Territorio hepático drenado por la vena hepática correspondiente (segmento VI)."
+    }
+   ]
+  },
+  "hepatovenous segment vii": {
+   "resumen": "Segmento hepático VII, definido según la distribución de las venas hepáticas y portales. Corresponde a la porción posterior superior del lóbulo derecho.",
+   "detalles": [
+    {
+     "titulo": "Trayecto",
+     "texto": "Ocupa una porción definida del parénquima hepático."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Territorio hepático drenado por la vena hepática correspondiente (segmento VII)."
+    }
+   ]
+  },
+  "hepatovenous segment viii": {
+   "resumen": "Segmento hepático VIII, definido según la distribución de las venas hepáticas y portales. Corresponde a la porción anterior superior del lóbulo derecho.",
+   "detalles": [
+    {
+     "titulo": "Trayecto",
+     "texto": "Ocupa una porción definida del parénquima hepático."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Territorio hepático drenado por la vena hepática correspondiente (segmento VIII)."
+    }
+   ]
+  },
+  "hepatovenous segment ix": {
+   "resumen": "Segmento hepático definido según la distribución de las venas; se asocia con el lóbulo caudado.",
+   "detalles": [
+    {
+     "titulo": "Trayecto",
+     "texto": "Ocupa la región posterior del hígado, junto a la vena cava inferior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Territorio hepático drenado por venas hepáticas cortas."
+    }
+   ]
+  },
+  "anterior superior segmental branch of portal vein": {
+   "resumen": "Rama segmentaria de la vena porta para el segmento hepático VIII.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de una de las ramas principales de la vena porta."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Penetra en el segmento hepático correspondiente."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Se ramifica en los sinusoides hepáticos del segmento."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Lleva sangre portal al segmento hepático VIII."
+    }
+   ]
+  },
+  "anterior inferior segmental branch of portal vein": {
+   "resumen": "Rama segmentaria de la vena porta para el segmento hepático V.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de una de las ramas principales de la vena porta."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Penetra en el segmento hepático correspondiente."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Se ramifica en los sinusoides hepáticos del segmento."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Lleva sangre portal al segmento hepático V."
+    }
+   ]
+  },
+  "posterior superior segmental branch of portal vein": {
+   "resumen": "Rama segmentaria de la vena porta para el segmento hepático VII.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de una de las ramas principales de la vena porta."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Penetra en el segmento hepático correspondiente."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Se ramifica en los sinusoides hepáticos del segmento."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Lleva sangre portal al segmento hepático VII."
+    }
+   ]
+  },
+  "posterior inferior segmental branch of portal vein": {
+   "resumen": "Rama segmentaria de la vena porta para el segmento hepático VI.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de una de las ramas principales de la vena porta."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Penetra en el segmento hepático correspondiente."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Se ramifica en los sinusoides hepáticos del segmento."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Lleva sangre portal al segmento hepático VI."
+    }
+   ]
+  },
+  "lateral superior segmental branch of portal vein": {
+   "resumen": "Rama segmentaria de la vena porta para el segmento hepático II.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de una de las ramas principales de la vena porta."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Penetra en el segmento hepático correspondiente."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Se ramifica en los sinusoides hepáticos del segmento."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Lleva sangre portal al segmento hepático II."
+    }
+   ]
+  },
+  "lateral inferior segmental branch of portal vein": {
+   "resumen": "Rama segmentaria de la vena porta para el segmento hepático III.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de una de las ramas principales de la vena porta."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Penetra en el segmento hepático correspondiente."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Se ramifica en los sinusoides hepáticos del segmento."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Lleva sangre portal al segmento hepático III."
+    }
+   ]
+  },
+  "medial superior segmental branch of portal vein": {
+   "resumen": "Rama segmentaria de la vena porta para el segmento hepático IVa.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de una de las ramas principales de la vena porta."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Penetra en el segmento hepático correspondiente."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Se ramifica en los sinusoides hepáticos del segmento."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Lleva sangre portal al segmento hepático IVa."
+    }
+   ]
+  },
+  "medial inferior segmental branch of portal vein": {
+   "resumen": "Rama segmentaria de la vena porta para el segmento hepático IVb.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de una de las ramas principales de la vena porta."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Penetra en el segmento hepático correspondiente."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Se ramifica en los sinusoides hepáticos del segmento."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Lleva sangre portal al segmento hepático IVb."
+    }
+   ]
+  },
+  "caudate lobe branch of portal vein": {
+   "resumen": "Rama de la vena porta para el lóbulo caudado.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de las ramas principales de la vena porta."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Penetra en el lóbulo caudado."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Se ramifica en el lóbulo caudado."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Lleva sangre portal al lóbulo caudado."
+    }
+   ]
+  },
+  "anterior superior segmental tributary of hepatic vein": {
+   "resumen": "Tributaria que drena el segmento hepático VIII hacia una vena hepática.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el segmento hepático VIII."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Converge hacia la vena hepática correspondiente."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena hepática."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el segmento VIII del hígado."
+    }
+   ]
+  },
+  "anterior inferior segmental tributary of middle hepatic vein": {
+   "resumen": "Tributaria que drena el segmento hepático V hacia una vena hepática.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el segmento hepático V."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Converge hacia la vena hepática correspondiente."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena hepática."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el segmento V del hígado."
+    }
+   ]
+  },
+  "posterior superior segmental tributary of hepatic vein": {
+   "resumen": "Tributaria que drena el segmento hepático VII hacia una vena hepática.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el segmento hepático VII."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Converge hacia la vena hepática correspondiente."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena hepática."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el segmento VII del hígado."
+    }
+   ]
+  },
+  "posterior inferior segmental tributary of hepatic vein": {
+   "resumen": "Tributaria que drena el segmento hepático VI hacia una vena hepática.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el segmento hepático VI."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Converge hacia la vena hepática correspondiente."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena hepática."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el segmento VI del hígado."
+    }
+   ]
+  },
+  "lateral superior segmental tributary of hepatic vein": {
+   "resumen": "Tributaria que drena el segmento hepático II hacia una vena hepática.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el segmento hepático II."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Converge hacia la vena hepática correspondiente."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena hepática."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el segmento II del hígado."
+    }
+   ]
+  },
+  "lateral inferior segmental tributary of hepatic vein": {
+   "resumen": "Tributaria que drena el segmento hepático III hacia una vena hepática.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el segmento hepático III."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Converge hacia la vena hepática correspondiente."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena hepática."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el segmento III del hígado."
+    }
+   ]
+  },
+  "medial superior segmental tributary of hepatic vein": {
+   "resumen": "Tributaria que drena el segmento hepático IVa hacia una vena hepática.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el segmento hepático IVa."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Converge hacia la vena hepática correspondiente."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena hepática."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el segmento IVa del hígado."
+    }
+   ]
+  },
+  "medial inferior segmental tributary of middle hepatic vein": {
+   "resumen": "Tributaria que drena el segmento hepático IVb hacia una vena hepática.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace en el segmento hepático IVb."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Converge hacia la vena hepática correspondiente."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena hepática."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el segmento IVb del hígado."
+    }
+   ]
+  },
+  "superior pulmonary vein": {
+   "resumen": "Vena pulmonar superior; lleva sangre oxigenada desde el pulmón hasta el corazón.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se forma en el hilio pulmonar por la reunión de las venas segmentarias de los lóbulos superior (y medio, en el pulmón derecho)."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia la aurícula izquierda, por delante de la arteria pulmonar y del bronquio principal."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Aurícula izquierda."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena los lóbulos pulmonares superior y medio (pulmón derecho) o el lóbulo superior con la língula (pulmón izquierdo)."
+    }
+   ]
+  },
+  "inferior pulmonary vein": {
+   "resumen": "Vena pulmonar inferior; lleva sangre oxigenada desde el pulmón hasta el corazón.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Se forma en el hilio pulmonar por la reunión de las venas del lóbulo inferior."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia la aurícula izquierda, por debajo del hilio y cerca del ligamento pulmonar."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Aurícula izquierda."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el lóbulo pulmonar inferior."
+    }
+   ]
+  },
+  "apical segmental vein": {
+   "resumen": "Vena del segmento apical del lóbulo superior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de los capilares pulmonares del segmento."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende hacia el hilio."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena pulmonar superior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el segmento apical del lóbulo superior."
+    }
+   ]
+  },
+  "anterior segmental vein": {
+   "resumen": "Vena del segmento anterior del lóbulo superior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de los capilares pulmonares del segmento."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia el hilio."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena pulmonar superior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el segmento anterior del lóbulo superior."
+    }
+   ]
+  },
+  "posterior segmental vein": {
+   "resumen": "Vena del segmento posterior del lóbulo superior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de los capilares pulmonares del segmento."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia el hilio."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena pulmonar superior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el segmento posterior del lóbulo superior."
+    }
+   ]
+  },
+  "trunk of apical segmental vein": {
+   "resumen": "Tronco de la vena segmentaria apical.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de los capilares pulmonares del segmento."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia el hilio."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena pulmonar superior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el segmento apical del lóbulo superior."
+    }
+   ]
+  },
+  "apical part of apical segmental vein": {
+   "resumen": "Porción apical de la vena segmentaria apical.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de los capilares pulmonares del segmento."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Asciende hacia el tronco de la vena."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Tronco de la vena segmentaria apical."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la parte apical del segmento apical."
+    }
+   ]
+  },
+  "anterior part of apical segmental vein": {
+   "resumen": "Porción anterior de la vena segmentaria apical.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de los capilares pulmonares del segmento."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia el tronco de la vena."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Tronco de la vena segmentaria apical."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la parte anterior del segmento apical."
+    }
+   ]
+  },
+  "anterior part of lateral segmental vein": {
+   "resumen": "Porción anterior de la vena segmentaria lateral del lóbulo medio.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de los capilares pulmonares del segmento."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia el hilio."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena pulmonar superior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la parte anterior del segmento lateral del lóbulo medio."
+    }
+   ]
+  },
+  "posterior part of lateral segmental vein": {
+   "resumen": "Porción posterior de la vena segmentaria lateral del lóbulo medio.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de los capilares pulmonares del segmento."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia el hilio."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena pulmonar superior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la parte posterior del segmento lateral del lóbulo medio."
+    }
+   ]
+  },
+  "superior part of anterior segmental vein": {
+   "resumen": "Porción superior de la vena segmentaria anterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de los capilares pulmonares del segmento."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia el hilio."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena segmentaria anterior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la parte superior del segmento anterior."
+    }
+   ]
+  },
+  "inferior part of anterior segmental vein": {
+   "resumen": "Porción inferior de la vena segmentaria anterior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de los capilares pulmonares del segmento."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia el hilio."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena segmentaria anterior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la parte inferior del segmento anterior."
+    }
+   ]
+  },
+  "superior part of medial segmental vein": {
+   "resumen": "Porción superior de la vena segmentaria medial del lóbulo medio.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de los capilares pulmonares del segmento."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia el hilio."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena pulmonar superior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la parte superior del segmento medial."
+    }
+   ]
+  },
+  "inferior part of medial segmental vein": {
+   "resumen": "Porción inferior de la vena segmentaria medial del lóbulo medio.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de los capilares pulmonares del segmento."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia el hilio."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena pulmonar superior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena la parte inferior del segmento medial."
+    }
+   ]
+  },
+  "superior lingular vein": {
+   "resumen": "Vena del segmento lingular superior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de los capilares pulmonares del segmento."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia el hilio."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena pulmonar superior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el segmento lingular superior de la língula del pulmón izquierdo."
+    }
+   ]
+  },
+  "inferior lingular vein": {
+   "resumen": "Vena del segmento lingular inferior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de los capilares pulmonares del segmento."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia el hilio."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena pulmonar superior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el segmento lingular inferior de la língula del pulmón izquierdo."
+    }
+   ]
+  },
+  "superior segmental vein": {
+   "resumen": "Vena del segmento superior del lóbulo inferior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de los capilares pulmonares del segmento."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia el hilio."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena pulmonar inferior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el segmento superior del lóbulo inferior."
+    }
+   ]
+  },
+  "anterior basal segmental vein": {
+   "resumen": "Vena del segmento basal anterior del lóbulo inferior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de los capilares pulmonares del segmento."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia el hilio."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena pulmonar inferior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el segmento basal anterior del lóbulo inferior."
+    }
+   ]
+  },
+  "lateral basal segmental vein": {
+   "resumen": "Vena del segmento basal lateral del lóbulo inferior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de los capilares pulmonares del segmento."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia el hilio."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena pulmonar inferior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el segmento basal lateral del lóbulo inferior."
+    }
+   ]
+  },
+  "medial basal segmental vein": {
+   "resumen": "Vena del segmento basal medial del lóbulo inferior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de los capilares pulmonares del segmento."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia el hilio."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena pulmonar inferior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el segmento basal medial del lóbulo inferior."
+    }
+   ]
+  },
+  "posterior basal segmental vein": {
+   "resumen": "Vena del segmento basal posterior del lóbulo inferior.",
+   "detalles": [
+    {
+     "titulo": "Origen",
+     "texto": "Nace de los capilares pulmonares del segmento."
+    },
+    {
+     "titulo": "Trayecto",
+     "texto": "Se dirige hacia el hilio."
+    },
+    {
+     "titulo": "Desembocadura",
+     "texto": "Vena pulmonar inferior."
+    },
+    {
+     "titulo": "Territorio",
+     "texto": "Drena el segmento basal posterior del lóbulo inferior."
+    }
+   ]
+  }
+ }
+}

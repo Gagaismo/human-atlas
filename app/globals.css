@@ -139,3 +139,7 @@ h1 .edition{font-family:inherit;font-weight:500;font-size:10px;letter-spacing:.0
 .section-foot button{font-size:12px;gap:6px;padding:6px 10px;border:1px solid #18253618;border-radius:3px}
 @media(max-width:767px){.section-panel{top:auto;bottom:calc(30px + env(safe-area-inset-bottom));left:12px;right:12px;width:auto;transform:none;z-index:40;padding:10px 14px 12px}.section-panel .search-note{display:none}.section-panel .section-planes{padding-top:8px;margin-bottom:8px}}
 @media(max-height:600px) and (orientation:landscape){.section-panel{top:70px;right:16px;transform:none;max-height:calc(100dvh - 90px);overflow:auto}}
+.structure-facts{display:grid;gap:12px;margin:16px 0 4px}
+.structure-facts dt{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#7f8c98;margin-bottom:3px}
+.structure-facts dd{margin:0;font-size:13.5px;line-height:1.55;color:#33414e}
+.review-note{display:inline-block;margin-top:10px}

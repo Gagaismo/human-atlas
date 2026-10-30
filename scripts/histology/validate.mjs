@@ -106,6 +106,11 @@ for(const c of CATEGORIES)assert.ok(perCategory[c]>0,`no image for category ${c}
 const missing=REQUIRED.filter(id=>!ids.has(id));
 assert.deepEqual(missing,[],`required tissues missing: ${missing.join(', ')}`);
 
+// Every image is credited in public/ATTRIBUTION.md (regenerate the table with scripts/histology/attribution.mjs).
+const attribution=readFileSync(new URL('ATTRIBUTION.md',root),'utf8');
+const uncredited=manifest.tissues.filter(t=>!attribution.includes(t.credit.source)||!attribution.includes(`histology/${t.id}.webp`)).map(t=>t.id);
+assert.deepEqual(uncredited,[],'images missing from public/ATTRIBUTION.md');
+
 console.log(`histology ok: ${manifest.tissues.length} images, total ${(total/1024/1024).toFixed(2)} MB (max ${(Math.max(...manifest.tissues.map(t=>statSync(new URL(`histology/${t.id}.webp`,root)).size))/1024).toFixed(0)} KB each)`);
 console.log('by category:',Object.entries(perCategory).map(([k,v])=>`${k} ${v}`).join(', '));
 console.log('by license:',Object.entries(perLicense).map(([k,v])=>`${k} ${v}`).join(', '));

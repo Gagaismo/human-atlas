@@ -1,6 +1,6 @@
 # Human Atlas
 
-An interactive 3D anatomy explorer built with React, Three.js, and shadcn/ui. Take the BodyParts3D adult male reference apart into **2,234 individually selectable meshes**, explore **15 anatomical systems**, and search **3,432 named concepts**.
+An interactive 3D anatomy explorer built with React, Three.js, and shadcn/ui, with its interface and content in Spanish. Take the BodyParts3D adult male reference apart into **2,234 individually selectable meshes**, explore **15 anatomical systems**, search **3,432 named concepts**, switch to a female variant, cut the body along anatomical planes, and read descriptions of bones, muscles, vessels and nerves.
 
 **[Explore the live demo](https://human-atlas-seven.vercel.app)**
 
@@ -11,8 +11,30 @@ An interactive 3D anatomy explorer built with React, Three.js, and shadcn/ui. Ta
 - Move from assembled anatomy to a spaced inventory of every visible piece.
 - Search anatomical names and source identifiers.
 - Isolate a selected structure and read its details.
+- Read Spanish descriptions of every bone (shape, parts, landmarks and what passes through its foramina), muscle (origin, insertion, innervation, action, supply), artery, vein, nerve and reproductive organ.
+- Switch between the male and the female variant.
+- Cut the assembled body with a sagittal, coronal or transverse plane, move the plane and flip the kept half.
+- Browse openly licensed histology micrographs, also linked from each structure.
 - Use compact controls and detail panels on mobile.
 - Open the **kinesiology mode** (`/#kinesiologia`, in Spanish) to pose a rigged patient and stretch lower-limb muscles.
+
+## Spanish content
+
+The interface is in Spanish. Structure names come from a line-aligned translation table (`scripts/i18n/names-en.txt` and `names-es-*.txt`, built into `public/models/names-es.json` by `npm run build:names`); a placeholder for left/right agrees in gender with the noun it qualifies. Search ignores accents and also accepts the English source names.
+
+Descriptions live in `public/models/descriptions/<system>.json`, one entry per structure name without its side, with a short summary and labelled fields per system. They, the histology captions and the Spanish names were written for this project, are educational, and are flagged in the interface as pending review by a teacher.
+
+## Female variant
+
+The sex switch in the systems panel replaces the male reproductive organs, bony pelvis, urinary bladder and skin with the Visible Human female pelvis, uterus, uterine tubes, ovaries, bladder, mammary glands and skin from the Human Reference Atlas (CC BY 4.0), aligned to the base model and packed as an extra geometry chunk. Muscles, nerves, vessels and the rest of the skeleton are shared, as the panel notes. The female skin keeps its source pose, with the arms away from the body.
+
+## Section planes
+
+The scissors button in the camera controls cuts the assembled body with a sagittal, coronal or transverse plane. The camera turns to face the cut, the plane position can be moved, and the kept half can be flipped. Cut interiors are shaded darker, taps on the removed half are ignored, and exploding the anatomy removes the cut.
+
+## Histology
+
+The Histología button opens 37 micrographs of the basic tissues and of organs in the atlas, from Wikimedia Commons under CC0, CC BY or CC BY-SA, each with its author, license and source. A structure's detail panel links to its own tissues, or to those of its system.
 
 ## Kinesiology mode
 

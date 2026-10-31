@@ -52,6 +52,12 @@ The kinesiology mode is a separate, lazily loaded view for physiotherapy student
 
 The clinical content is educational, follows Kendall and Kapandji, and is marked as pending review by a kinesiologist. Elongation is the change in origin-to-insertion distance of the muscle-tendon unit, an approximation rather than a measurement of fiber strain.
 
+## Gynecology area
+
+The gynecology area is a separate, lazily loaded view at `#ginecologia` (linked from the top bar), in Spanish, built on the female model: semi-transparent skin (with a switch to see inside), breasts with fat, lobes, ducts, areola and nipple, and the uterus, tubes, ovaries, bladder and pelvis. Its sections come from the Octubre Rosa leaflet by IFMSA Tucumán (SCOPH) and UTN Tucumán (`docs/research/folleto-octubre-rosa.md`), quoted verbatim: breast self-exam, warning signs, screening schedule, myths and truths, the free mammography centers in Tucumán, and an anatomy section that reuses the Spanish reproductive descriptions.
+
+The **Ver cómo palparte** button plays a 3D animation of the self-exam: the pads of three fingers move over the whole breast, pectoral and axillary area in vertical strips, making small circles with soft, medium and firm pressure (shown by how far the pads press in and by a halo color), standing or lying, on either breast, with a caption per step, a scrubbable progress bar and a slow speed. The path is generated in `app/gyneco/palpation.ts` and projected onto the skin by ray casting. The text is educational, not diagnostic, and flagged *a validar* until a teacher reviews it; every section lists its sources in `app/gyneco/content.ts` (a researched source is one line in `EXTRA_SOURCES`).
+
 ## Run locally
 
 Requires Node.js 22.13 or newer. No API keys or accounts are needed.
@@ -73,9 +79,11 @@ npm run validate:all
 npm run build
 ```
 
-`validate:all` runs every content and data check: Spanish names (`validate:names`), section planes (`validate:section`), descriptions and opening contents (`validate:descriptions`), the female variant (`validate:female`), landmarks, attachment areas and lymph nodes (`validate:descriptive`), histology images, credits and links (`validate:histology`) and the kinesiology mode (`validate:kinesio`).
+`validate:all` runs every content and data check: Spanish names (`validate:names`), section planes (`validate:section`), descriptions and opening contents (`validate:descriptions`), the female variant (`validate:female`), landmarks, attachment areas and lymph nodes (`validate:descriptive`), histology images, credits and links (`validate:histology`) the kinesiology mode (`validate:kinesio`) and the gynecology area (`validate:gyneco`).
 
 `validate:kinesio` checks the rigged model (joints, muscles, origin/insertion nodes, skin weights limited to the bones each muscle crosses, size budget), the clinical catalog (coverage, sign conventions, joint ranges, an immobile-patient option per group, pending-review flags) and the physiology of the rig: for example, a straight-leg raise must lengthen the hamstrings, knee flexion must not change the soleus, and every catalog technique must lengthen its target muscles.
+
+`validate:gyneco` checks the self-exam palpation timeline (every cell of the breast, pectoral and axillary area is within one finger-pad radius of a stop, each stop presses soft, medium and firm in that order, the path has no jumps, the steps cover the timeline with Spanish captions), that every stop lands on the skin of both breasts with an outward normal, that the leaflet text is verbatim and every section has sources and is flagged unvalidated, that all 13 mammography centers are listed, and that the female parts the scene needs exist.
 
 Validation covers mesh buffers, names and concept membership, nonoverlapping exploded layouts at desktop and mobile aspect ratios, search and inspection contracts, and tap-versus-drag handling. Browser interaction checks have exercised selection, system controls, search, isolation, rotation, and 390×844, 320×568, and 844×390 layouts. Phone controls stay clear of the exploded inventory, and isolated structures fit the space above or beside the detail panel. Physical-device performance and real multitouch hardware have not been tested.
 

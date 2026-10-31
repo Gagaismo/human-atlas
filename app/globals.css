@@ -176,3 +176,57 @@ h1 .edition{font-family:inherit;font-weight:500;font-size:10px;letter-spacing:.0
 li .tag{margin:0 0 0 6px}
 .tag.origin{background:#c8473f}.tag.insertion{background:#2f6fb3}
 .opening-content{display:block;font-size:12px;line-height:1.5;color:#5d6976;margin:1px 0 4px}
+
+/* Gynecology area */
+.gyneco-canvas{position:absolute;inset:0}
+.gyneco-canvas canvas{display:block;width:100%;height:100%;touch-action:none}
+.gyneco-list{position:absolute;left:30px;top:150px;width:240px;border-radius:6px;display:flex;flex-direction:column;gap:6px;padding:16px 12px}
+.gyneco-list button{width:100%;justify-content:flex-start;font-size:13px;color:#3a4652;height:auto;padding:9px 8px;text-align:left;white-space:normal}
+.gyneco-list button.active,.gyneco-toggle button.active,.gyneco-steps button.active,.gyneco-chips button.active{background:#263b48;color:#f3f4f4}
+.gyneco-detail{position:absolute;right:30px;top:100px;bottom:30px;width:400px;border-radius:6px;padding:18px 18px 22px;overflow:auto;font-size:13px;color:#33404c;line-height:1.5}
+.gyneco-title{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.gyneco-title h2{font-size:20px;font-weight:500;margin:0;color:#20242b}
+.gyneco-lead{font-size:18px;margin:10px 0 0;color:#a3365a;font-weight:500}
+.gyneco-detail p{margin:8px 0 0}
+.gyneco-items{margin:12px 0 0;padding-left:18px;display:grid;gap:6px}
+.gyneco-myths{margin:12px 0 0;padding-left:20px;display:grid;gap:12px}
+.gyneco-myths q{font-weight:500;color:#20242b}
+.gyneco-note{padding:10px 12px;background:#f6eef1;border-radius:6px}
+.gyneco-callout{padding:10px 12px;border-left:3px solid #a3365a;background:#a3365a0d;border-radius:0 6px 6px 0;font-weight:600;letter-spacing:.01em}
+.gyneco-demo{margin-top:14px;padding:14px;border:1px solid var(--border);border-radius:8px;background:#ffffff8c}
+.gyneco-play{width:100%;height:44px;gap:8px;font-size:14px;background:#263b48;color:#f3f4f4;border-radius:8px}
+.gyneco-play:hover{background:#31495a}
+.gyneco-caption{margin-top:12px;min-height:118px}
+.gyneco-step-name{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#78828c}
+.gyneco-caption p{margin:4px 0 0;font-size:13.5px;color:#26313c}
+.gyneco-pressure{display:flex;align-items:center;gap:8px;margin-top:8px;font-size:12px;font-weight:600;color:#26313c}
+.gyneco-pressure i{width:12px;height:12px;border-radius:50%;display:inline-block}
+.gyneco-progress{display:flex;align-items:center;gap:12px;margin-top:6px}
+.gyneco-progress [data-slot=slider]{flex:1;min-width:0}
+.gyneco-progress output{font-size:11px;font-variant-numeric:tabular-nums;color:#68727d;white-space:nowrap}
+.gyneco-progress [data-slot=slider-track]{height:4px;background:#18253615;border-radius:2px}
+.gyneco-progress [data-slot=slider-range]{background:#263b48}
+.gyneco-steps{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:4px}
+.gyneco-steps button{border:1px solid var(--border);font-size:11px;height:auto;padding:4px 8px}
+.gyneco-options{display:grid;gap:8px;margin-top:12px}
+.gyneco-toggle{display:flex;flex-wrap:wrap;gap:6px}
+.gyneco-toggle button,.gyneco-chips button{border:1px solid var(--border);font-size:12px;height:auto;padding:6px 10px}
+.gyneco-hint{font-size:12px;color:#68727d}
+.gyneco-views{position:absolute;left:50%;bottom:30px;transform:translateX(-50%);border-radius:8px;padding:8px 12px;display:flex;align-items:center;gap:14px}
+.gyneco-interior{display:flex;align-items:center;gap:8px;font-size:12px;color:#26313c;cursor:pointer;white-space:nowrap}
+.gyneco-subtitle,.gyneco-group-name{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#78828c;margin:16px 0 6px}
+.gyneco-chips{display:flex;flex-wrap:wrap;gap:6px}
+.gyneco-structure h3{font-size:16px;font-weight:500;margin:16px 0 0;color:#20242b}
+.gyneco-sources p{margin:0 0 6px;font-size:11px;color:#68727d}
+.gyneco-sources a{color:#3a6a86}
+@media(max-width:1000px){.gyneco-list{width:200px;left:16px}.gyneco-detail{width:340px;right:16px}}
+@media(max-width:767px){
+ .gyneco .identity{top:14px;left:16px}
+ .gyneco .top-actions{top:12px;right:10px}
+ .gyneco-list{top:auto;bottom:calc(46dvh + 12px);left:10px;right:10px;width:auto;flex-direction:row;gap:6px;padding:8px;overflow-x:auto;overflow-y:hidden}
+ .gyneco-list .panel-heading{display:none}
+ .gyneco-list button{width:auto;white-space:nowrap}
+ .gyneco-detail{top:auto;left:10px;right:10px;bottom:10px;width:auto;max-height:46dvh}
+ .gyneco-views{top:96px;right:10px;bottom:auto;left:auto;transform:none;flex-direction:column;align-items:flex-start;gap:8px;padding:6px 8px}
+ .gyneco-caption{min-height:0}
+}

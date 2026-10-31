@@ -3,29 +3,30 @@
 // Usage: node scripts/gyneco/validate.mjs   (Node 22.18+)
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {CENTERS,LEAFLET_CREDIT,SECTIONS} from '../../app/gyneco/content.ts';
+import * as C from '../../app/gyneco/content.ts';
 import {partGeometry} from '../../app/gyneco/model.ts';
 import {ChestSurface} from '../../app/gyneco/surface.ts';
-import {DURATION,PAD_RADIUS,PATTERN,PRESSURES,REGIONS,RHO,STEP_ORDER,STEPS,STOPS,STRIP_SPACING,TRAIL,buildTimeline,sampleAt} from '../../app/gyneco/palpation.ts';
+import {DURATION,NIPPLE,PAD_RADIUS,PATTERN,PRESSURES,REGIONS,RHO,STEP_ORDER,STEPS,STOPS,STRIP_SPACING,TRAIL,buildTimeline,sampleAt} from '../../app/gyneco/palpation.ts';
+const {CENTERS,LEAFLET_CREDIT,SECTIONS,SOURCES,CONFLICTS,CENTER_STATUS,UNT_NOTE}=C;
 
 let checks=0;const check=(ok,message)=>{assert.ok(ok,message);checks++;};
 const dist=(a,b)=>Math.hypot(RHO*(a.theta-b.theta),a.y-b.y);
 const deg=r=>r*180/Math.PI;
 
 // --- Palpation timeline ---
-check(PATTERN==='strips','the default pattern must be vertical strips');
-check(DURATION>=35&&DURATION<=45,`the demo must last 35–45 s, got ${DURATION.toFixed(1)} s`);
+check(PATTERN==='strips','the default pattern must be strips');
+check(DURATION>=40&&DURATION<=55,`the demo must last 40–55 s, got ${DURATION.toFixed(1)} s`);
 check(PAD_RADIUS>0&&STRIP_SPACING<=PAD_RADIUS*Math.SQRT2+1e-9,'stops must be close enough that a pad radius covers every cell between them');
 assert.throws(()=>buildTimeline({pattern:'circles'}),/pattern/i);checks++;
 assert.throws(()=>buildTimeline({pattern:'wedges'}),/pattern/i);checks++;
 
-// The area: sternum to midaxillary line, clavicle to below the inframammary fold, plus the axilla.
+// The area (A5, P1): clavicle / supraclavicular fossa to below the inframammary fold, toward the axilla (tail of the breast).
 const [breast,axilla]=REGIONS;
-check(deg(breast.thetaMin)<=6,`the medial edge must reach the sternum, got ${deg(breast.thetaMin).toFixed(1)}°`);
-check(deg(breast.thetaMax)>=78,`the lateral edge must reach the midaxillary line, got ${deg(breast.thetaMax).toFixed(1)}°`);
-check(breast.yTop>=1.4,'the top edge must reach the clavicle');
+check(deg(breast.thetaMin)<=6,`the medial edge must start at the midline, got ${deg(breast.thetaMin).toFixed(1)}°`);
+check(deg(breast.thetaMax)>=78,`the lateral edge must reach the side of the chest, got ${deg(breast.thetaMax).toFixed(1)}°`);
+check(breast.yTop>=1.43,`the top edge must reach the clavicle (y ≥ 1.43 m), got ${breast.yTop}`);
 check(breast.yBottom<=1.15,'the bottom edge must go below the inframammary fold');
-check(axilla&&axilla.thetaMin>=breast.thetaMax-.2&&axilla.yTop>1.3,'the axilla must be a separate region at the lateral, upper edge');
+check(axilla&&axilla.thetaMin>=breast.thetaMax-.2&&deg(axilla.thetaMax)>=84&&axilla.yBottom<=1.32&&axilla.yTop>=1.36,'the axilla must be a separate region at the lateral, upper edge, inside the armpit (θ ≥ 84°, y 1.32–1.36 m)');
 
 // Every cell of every region is within one pad radius of some stop.
 for(const [i,r] of REGIONS.entries()){
@@ -85,16 +86,38 @@ check(STEPS.some(s=>/suave/.test(s.caption)&&/media/.test(s.caption)&&/firme/.te
 check(STEPS.some(s=>/axila/i.test(s.caption)&&s.id==='axilla'),'the axilla step must mention the axilla');
 check(/acostad/i.test(STEPS.at(-1).caption)&&/de pie/i.test(STEPS.at(-1).caption),'the last step must mention both positions');
 
+// Researched technique (L4): mirror inspection first, nipple check after the palpation, each in the right order.
+assert.deepEqual(STEP_ORDER,['inspection','position','pads','circles','strips','axilla','nipple','repeat']);checks++;
+const cap=id=>STEPS.find(s=>s.id===id).caption;
+check(STEPS[0].id==='inspection'&&STEP_ORDER.indexOf('nipple')>STEP_ORDER.indexOf('axilla')&&STEP_ORDER.indexOf('nipple')<STEP_ORDER.indexOf('repeat'),'inspection comes first and the nipple step after the palpation');
+check(/espejo/i.test(cap('inspection'))&&/brazos ca[ií]dos/i.test(cap('inspection'))&&/cadera/i.test(cap('inspection'))&&/brazos arriba/i.test(cap('inspection')),'inspection: mirror, arms down → hands on hips → arms up');
+check(cap('inspection').search(/brazos ca[ií]dos/i)<cap('inspection').search(/cadera/i)&&cap('inspection').search(/cadera/i)<cap('inspection').search(/brazos arriba/i),'inspection: arms down, then hips, then arms up, in that order');
+check(/tres dedos del medio de la mano opuesta/i.test(cap('pads')),'pads: the three middle fingers of the opposite hand');
+check(/franjas/i.test(cap('strips'))&&/cuadrantes/.test(cap('strips'))&&/radial/.test(cap('strips'))&&/zigzag/.test(cap('strips'))&&/circular/.test(cap('strips'))&&/A5/.test(cap('strips')),'strips: strips that cover the whole breast; A5 also accepts quadrants, radial, zigzag, circular');
+check(/cl[aá]v[ií]cula/i.test(cap('strips'))&&/pliegue/i.test(cap('strips'))&&/axila/i.test(cap('strips')),'strips: clavicle to below the inframammary fold, toward the axilla');
+check(/cola de la mama/i.test(cap('axilla')),'axilla: names the tail of the breast');
+check(/almohada/i.test(cap('position'))&&/detr[aá]s de la cabeza/i.test(cap('position')),'position: lying with a pillow under the shoulder and the arm behind the head');
+check(/[ií]ndice y (el )?pulgar/i.test(cap('nipple'))&&/secreci[oó]n/i.test(cap('nipple'))&&/consult/i.test(cap('nipple')),'nipple: gentle pressure between index and thumb; discharge → consult');
+{
+ for(let t=0;t<STEPS[1].start;t+=.25)check(sampleAt(t).step==='inspection'&&sampleAt(t).pressure===null,'inspection: no finger pressure');
+ const n=STEPS.find(s=>s.id==='nipple'),x=sampleAt(n.end-.01);
+ check(x.step==='nipple'&&x.pressure==='suave','the nipple step ends pressing gently');
+ check(Math.hypot(RHO*(x.theta-NIPPLE.theta),x.y-NIPPLE.y)<1e-9,'the nipple step ends on the nipple');
+ check(n.end-n.start>=3&&n.end-n.start<=7,'the nipple step is a short hold');
+}
+for(const s of STEPS)check(!/franjas verticales|esternón|l[ií]nea axilar media/i.test(`${s.title} ${s.caption}`),`step ${s.id}: unsourced wording`);
+
 // The covered trail grows in time and visits every stop.
 check(TRAIL.length>50&&TRAIL.every((p,i)=>i===0||p.t>=TRAIL[i-1].t),'the trail must be time-ordered');
 for(const s of STOPS)check(TRAIL.some(p=>dist(p,s)<1e-9),'the trail must pass through every stop');
 
 // --- Content ---
 const leaflet=readFileSync(new URL('../../docs/research/folleto-octubre-rosa.md',import.meta.url),'utf8').replace(/\s+/g,' ');
+const report=readFileSync(new URL('../../docs/research/ginecologia.md',import.meta.url),'utf8');
 const ids=SECTIONS.map(s=>s.id);
 assert.deepEqual(ids,['autoexamen','signos','controles','mitos','mamografia','anatomia']);checks++;
 // Text copied from the leaflet is verbatim; ids, titles, labels and sources are ours.
-const textOf=v=>typeof v==='string'?[v]:Array.isArray(v)?v.flatMap(textOf):v&&typeof v==='object'?Object.entries(v).filter(([k])=>!['id','title','label','sources','validated','verdict'].includes(k)).flatMap(([,x])=>textOf(x)):[];
+const textOf=v=>typeof v==='string'?[v]:Array.isArray(v)?v.flatMap(textOf):v&&typeof v==='object'?Object.entries(v).filter(([k])=>!['id','title','label','sources','validated','verdict','extras','conflicts','statuses','noResearch'].includes(k)).flatMap(([,x])=>textOf(x)):[];
 for(const sec of SECTIONS){
  check(sec.validated===false,`${sec.id}: authored content must be flagged validated:false until a teacher reviews it`);
  check(sec.sources.length>=1&&sec.sources.every(x=>x.label.trim()),`${sec.id}: needs at least one source`);
@@ -113,6 +136,67 @@ check(SECTIONS.find(s=>s.id==='controles').items.length===4,'the leaflet lists f
 const centers=SECTIONS.find(s=>s.id==='mamografia').items;
 check(centers.length===13&&centers===CENTERS&&new Set(centers).size===13,'all 13 mammography centers must be listed once');
 check(centers.some(c=>/Trailer de la Mujer/.test(c))&&centers.some(c=>/Nicolás Avellaneda/.test(c)),'the centers must include the mobile unit and Hospital Nicolás Avellaneda');
+
+// --- Researched sources, conflicts, center statuses (docs/research/ginecologia.md) ---
+const srcList=Object.entries(SOURCES);
+check(srcList.length>=30,'the researched sources must be registered');
+for(const [id,x] of srcList){
+ check(x.id===id,`source ${id}: the key and the id must match`);
+ check(x.institution.trim()&&x.title.trim()&&x.label.includes(x.title),`source ${id}: needs an institution and a title`);
+ if(x.kind==='leaflet'){check(x.label===LEAFLET_CREDIT,'the leaflet source carries the credit');continue;}
+ if(x.kind==='atlas'){check(/^https?:\/\//.test(x.url),'the atlas source needs a URL');continue;}
+ check(/^https?:\/\/\S+$/.test(x.url),`source ${id}: needs an http(s) URL`);
+ check(report.includes(`| ${id} |`),`source ${id}: its id is not in the research report`);
+ check(report.includes(x.url),`source ${id}: its URL differs from the research report`);
+ check(x.retrieved==='2026-10-30','source '+id+': needs the retrieval date 2026-10-30');
+}
+assert.deepEqual(srcList.filter(([,x])=>x.backup).map(([id])=>id).sort(),['I1','P1','P2']);checks++;
+const citedIn=sec=>{const out=new Set(),walk=v=>{if(Array.isArray(v))v.forEach(walk);else if(v&&typeof v==='object'){for(const [k,x] of Object.entries(v)){if(k==='sources'&&Array.isArray(x)&&x.every(i=>typeof i==='string'))x.forEach(i=>out.add(i));else if(k!=='sources')walk(x);}}};walk({extras:sec.extras,conflicts:(sec.conflicts??[]).map(id=>CONFLICTS.find(c=>c.id===id)),statuses:sec.statuses,myths:sec.myths});return out;};
+for(const sec of SECTIONS){
+ const own=sec.sources.map(x=>x.id);
+ check(own.every(id=>SOURCES[id])&&new Set(own).size===own.length,`${sec.id}: every source id must exist once`);
+ const researched=sec.sources.filter(x=>x.kind==='researched');
+ check(researched.length>=1||(typeof sec.noResearch==='string'&&/informe/i.test(sec.noResearch)),`${sec.id}: must cite a researched source or say the report found none`);
+ for(const id of citedIn(sec))check(own.includes(id),`${sec.id}: cites ${id} in the text but not in its source list`);
+}
+check(SECTIONS.filter(s=>s.id!=='anatomia').every(s=>s.sources.some(x=>x.kind==='researched')),'every non-anatomy section cites at least one researched source');
+check(SECTIONS.find(s=>s.id==='anatomia').noResearch,'the anatomy section must say the report found no source for it');
+// No UNT Facultad de Medicina material on the self-exam was found: say so.
+check(/Facultad de Medicina/.test(UNT_NOTE)&&/U1/.test(UNT_NOTE)&&/U2/.test(UNT_NOTE)&&/INC/.test(UNT_NOTE)&&/Tucumán/.test(UNT_NOTE)&&/Mastología/.test(UNT_NOTE)&&/autoexamen/.test(UNT_NOTE),'UNT_NOTE must say no UNT Facultad de Medicina self-exam material was found and name the base');
+check(['U1','U2'].every(id=>SECTIONS[0].sources.some(x=>x.id===id)),'the self-exam section cites the U1/U2 syllabus');
+// Unsourced wording must not reach any UI string.
+const everyString=v=>typeof v==='string'?[v]:Array.isArray(v)?v.flatMap(everyString):v&&typeof v==='object'?Object.values(v).flatMap(everyString):[];
+for(const text of [...everyString(SECTIONS),...everyString(CONFLICTS),...everyString(CENTER_STATUS),UNT_NOTE])check(!/franjas verticales|esternón|l[ií]nea axilar media|círculos concéntricos/i.test(text),`unsourced wording in the UI: "${text}"`);
+// Leaflet source ids shown by the myths: each myth cites the report.
+check(myths.every(m=>Array.isArray(m.sources)&&m.sources.length>=1)&&myths.some(m=>m.sources.includes('A6')),'every myth cites a source and A6 (Ministerio de Salud, Mitos y verdades) is used');
+// Conflicts, each with both sides attributed.
+assert.deepEqual(CONFLICTS.map(c=>c.id),['timing','mammography','selfexam','clinical']);checks++;
+for(const c of CONFLICTS){
+ check(c.topic.trim()&&c.sides.length>=2,`${c.id}: needs a topic and at least two sides`);
+ for(const s of c.sides)check(s.who.trim()&&s.says.trim()&&s.sources.length>=1&&s.sources.every(id=>SOURCES[id]),`${c.id}: every side names who says it, what, and its sources`);
+ check(SECTIONS.some(s=>s.conflicts?.includes(c.id)),`${c.id}: must be shown in a section`);
+}
+const conflict=id=>CONFLICTS.find(c=>c.id===id),sideIds=id=>new Set(conflict(id).sides.flatMap(s=>s.sources)),sideText=id=>conflict(id).sides.map(s=>`${s.who} ${s.says}`).join(' ');
+check(['F','T8','I1','P1','S1'].every(i=>sideIds('timing').has(i))&&/2 y 5 días después de terminar/.test(sideText('timing'))&&/3 y 5 días/.test(sideText('timing'))&&/7 y 10 días/.test(sideText('timing'))&&/después de la menstruación/.test(conflict('timing').agreement),'timing: leaflet 2–5 after the end vs 3–5 from the start (T8, I1, P1) vs 7–10 (S1), and what all agree on');
+check(['A1','T1','S1'].every(i=>sideIds('mammography').has(i))&&/50/.test(sideText('mammography'))&&/69/.test(sideText('mammography'))&&/40/.test(sideText('mammography'))&&/70/.test(sideText('mammography'))&&/sin pedido/.test(sideText('mammography')),'mammography: INC 50–69 vs Tucumán 40–70 without referral vs societies from 40');
+check(/INC/.test(sideText('selfexam'))&&/Mastología/.test(sideText('selfexam'))&&/PAMI/.test(sideText('selfexam'))&&/Folleto/.test(sideText('selfexam'))&&/no reemplaza/.test(conflict('selfexam').agreement),'self-exam: promoted (leaflet) vs self-awareness (SAM, PAMI) vs INC does not name it; none replaces the clinical exam or the mammography');
+check(/20 años/.test(sideText('clinical'))&&/30 años/.test(sideText('clinical'))&&sideIds('clinical').has('S1'),'clinical exam: leaflet from 20 vs 2006 consensus from 30');
+// Cervical screening and HPV vaccine, with the report's wording.
+const controls=SECTIONS.find(s=>s.id==='controles'),controlsText=everyString(controls.extras).join('\n');
+for(const quote of ['A partir de los 25 años se recomienda realizar el PAP.','Los dos primeros controles se hacen con un año de diferencia.','el PAP puede repetirse cada 3 años','Cuando el resultado es negativo, se recomienda repetir el estudio cada cinco años.','Única dosis a los 11 años.'])check(controlsText.includes(quote)&&report.includes(quote),`controls: missing the report's wording "${quote}"`);
+check(/30 años/.test(controlsText)&&/VPH/.test(controlsText),'controls: the HPV test from 30');
+check(['A2','A4'].every(id=>citedIn(controls).has(id)),'controls: cervical screening cites A2 and the vaccine A4');
+// Every center has a status; the 13 names stay verbatim from the leaflet.
+check(CENTER_STATUS.length===13,'every one of the 13 centers needs a status');
+for(const [i,s] of CENTER_STATUS.entries()){
+ check(['confirmado','parcial','no confirmado'].includes(s.status)&&s.detail.trim(),`center ${i}: needs a status and a detail`);
+ check(s.status==='no confirmado'||s.sources.length>=1&&s.sources.every(id=>SOURCES[id]),`center ${i}: a confirmed or partial center needs a source`);
+ check(leaflet.includes(CENTERS[i]),`center ${i}: the name must stay verbatim from the leaflet`);
+}
+const statusOf=re=>CENTER_STATUS[CENTERS.findIndex(c=>re.test(c))].status;
+check(statusOf(/CAM Parque Independencia/)==='no confirmado'&&statusOf(/Ramon Carrillo/)==='parcial'&&CENTER_STATUS.filter(s=>s.status==='confirmado').length===11,'11 confirmed, Ramon Carrillo partial, CAM Parque Independencia not confirmed');
+const mammo=everyString(SECTIONS.find(s=>s.id==='mamografia').extras).join('\n');
+check(/18 nodos/.test(mammo)&&/móvil/.test(mammo),'mammography: mentions the 18 provincial nodes and the mobile unit');
 
 // --- Female model parts the scene needs ---
 const female=JSON.parse(readFileSync(new URL('../../public/models/female/female-parts.json',import.meta.url),'utf8'));
@@ -142,6 +226,7 @@ check(female.chunk.url&&female.chunk.gzip,'the female chunk must have a plain an
  // The nipple sits inside the covered region and a ray through it lands on the skin right there.
  const nb=byId.get('VHF-nipple-l').bounds,mid=i=>(nb[0][i]+nb[1][i])/2,nx=mid(0),ny=mid(1),nz=mid(2),nt=Math.atan2(nx,nz);
  check(nt>REGIONS[0].thetaMin&&nt<REGIONS[0].thetaMax&&ny>REGIONS[0].yBottom&&ny<REGIONS[0].yTop,'the nipple must fall inside the palpation region');
+ check(Math.abs(NIPPLE.theta-nt)<.02&&Math.abs(NIPPLE.y-ny)<.006,`NIPPLE (${deg(NIPPLE.theta).toFixed(1)}°, ${NIPPLE.y}) must match the model nipple (${deg(nt).toFixed(1)}°, ${ny.toFixed(3)})`);
  const hitNipple=surface.hit(nt,ny,1);
  check(hitNipple&&Math.hypot(hitNipple.point.x-nx,hitNipple.point.y-ny,hitNipple.point.z-nz)<.02,'a ray through the nipple must land on it');
 }

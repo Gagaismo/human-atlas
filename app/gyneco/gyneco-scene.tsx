@@ -6,7 +6,7 @@ import {decodeModelResponse} from '../model-download';
 import {PointerTap} from '../pointer-tap';
 import {ChestSurface,type SurfaceHit} from './surface';
 import {partGeometry,type FemaleManifest} from './model';
-import {DURATION,STOPS,TRAIL,circleOffset,sampleAt,type Pressure} from './palpation';
+import {DURATION,PALPATION_TRAIL,STOPS,TRAIL,circleOffset,sampleAt,type Pressure} from './palpation';
 
 export type Side='l'|'r';
 export type BodyPosition='standing'|'supine';
@@ -95,6 +95,8 @@ export default function GynecoScene(props:Props){
   const paint=(dt:number)=>{
    const h=hitAt(clock);if(!h)return;
    const s=sampleAt(clock),n=h.normal;
+   // Mirror inspection: no hands, no trail yet; the camera just holds on the breasts.
+   if(s.step==='inspection'){pads.visible=false;halo.visible=false;trailGeometry.setDrawRange(0,0);STOPS.forEach((_,i)=>{dots[i].visible=false;});return;}
    Y.copy(UP).addScaledVector(n,-UP.dot(n));if(Y.lengthSq()<1e-6)Y.set(1,0,0);Y.normalize();X.crossVectors(Y,n);
    const o=s.pressure?circleOffset(s.circlePhase):{u:0,v:0},target=HEIGHT[s.pressure??'lift'],k=1-Math.exp(-dt*28);
    height+=(target-height)*(dt>0?k:1);
@@ -102,7 +104,7 @@ export default function GynecoScene(props:Props){
    pads.position.copy(h.point).addScaledVector(X,o.u).addScaledVector(Y,o.v).addScaledVector(n,height);pads.visible=true;
    halo.visible=!!s.pressure;
    if(s.pressure){haloMaterial.color.set(HALO[s.pressure].color);halo.scale.setScalar(HALO[s.pressure].scale);halo.quaternion.copy(pads.quaternion);halo.position.copy(h.point).addScaledVector(n,.004);}
-   trailGeometry.setDrawRange(0,upperBound(times,clock));
+   trailGeometry.setDrawRange(0,Math.min(upperBound(times,clock),PALPATION_TRAIL));
    STOPS.forEach((stop,i)=>{dots[i].visible=stop.start<=clock;});
   };
   const select=(id:string|null)=>{for(const [pid,m] of meshes){const mat=m.material as T.MeshStandardMaterial;mat.emissive.set(pid===id?'#1d6fa5':'#000000');mat.emissiveIntensity=pid===id?.7:0;}dirty=true;};

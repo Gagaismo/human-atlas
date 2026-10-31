@@ -5,7 +5,7 @@ import {Badge} from '@/components/ui/badge';
 import {Slider} from '@/components/ui/slider';
 import {Switch} from '@/components/ui/switch';
 import GynecoScene,{type BodyPosition,type Side,type ViewPreset} from './gyneco-scene';
-import {SECTIONS,type Section,type SectionId} from './content';
+import {CONFLICTS,SECTIONS,UNT_NOTE,type Section,type SectionId} from './content';
 import {DURATION,STEPS,sampleAt,type Pressure} from './palpation';
 import type {FemaleManifest,FemalePart} from './model';
 import {describe,loadDescriptions,type DescriptionTables} from '../descriptions';
@@ -15,6 +15,7 @@ const MANIFEST='/models/female/female-parts.json';
 const PRESSURE_COLOR:Record<Pressure,string>={suave:'#5fd0b5',media:'#f2b84b',firme:'#e0463c'};
 const clock=(t:number)=>`${Math.floor(t/60)}:${String(Math.floor(t%60)).padStart(2,'0')}`;
 const capitalize=(text:string)=>text.charAt(0).toUpperCase()+text.slice(1);
+const ids=(list:string[])=>list.join(', ');
 const SIDED=['breast-fat','mammary-lobes','lactiferous-ducts','areola','nipple','uterine-tube','ovary','hip-bone'];
 // Anatomy list: ids without the side suffix are shared; the others follow the side chosen for the demo.
 const GROUPS:{name:string;ids:string[]}[]=[
@@ -33,10 +34,12 @@ function SectionText({section,children}:{section:Section;children?:React.ReactNo
   {section.lead&&<p className="gyneco-lead">{section.lead}</p>}
   {section.intro&&<p>{section.intro}</p>}
   {children}
-  {section.items&&<ul className="gyneco-items">{section.items.map(i=><li key={i}>{i}</li>)}</ul>}
-  {section.myths&&<ol className="gyneco-myths">{section.myths.map(m=><li key={m.claim}><q>{m.claim}</q><p><b>{m.verdict}:</b> {m.why}</p></li>)}</ol>}
+  {section.items&&<ul className="gyneco-items">{section.items.map((i,n)=>{const st=section.statuses?.[n];return <li key={i}>{i}{st&&<span className="gyneco-hint"> — <b>{capitalize(st.status)}</b>: {st.detail} ({ids(st.sources)})</span>}</li>;})}</ul>}
+  {section.myths&&<ol className="gyneco-myths">{section.myths.map(m=><li key={m.claim}><q>{m.claim}</q><p><b>{m.verdict}:</b> {m.why}</p><p className="gyneco-hint">Fuentes: {ids(m.sources)}</p></li>)}</ol>}
   {section.note&&<p className="gyneco-note">{section.note}</p>}
   {section.callout&&<p className="gyneco-callout" role="note">{section.callout}</p>}
+  {section.extras?.map(x=><div key={x.title}><div className="gyneco-subtitle">{x.title}</div><ul className="gyneco-items">{x.items.map(i=><li key={i}>{i}</li>)}</ul><p className="gyneco-hint">Fuentes: {ids(x.sources)}</p></div>)}
+  {section.conflicts?.map(id=>{const c=CONFLICTS.find(x=>x.id===id)!;return <div key={id}><div className="gyneco-subtitle">Las fuentes no coinciden: {c.topic}</div><ul className="gyneco-items">{c.sides.map(side=><li key={side.who}><b>{side.who}:</b> {side.says} <span className="gyneco-hint">({ids(side.sources)})</span></li>)}</ul>{c.agreement&&<p className="gyneco-note">{c.agreement}</p>}{c.caveat&&<p className="gyneco-hint">{c.caveat}</p>}</div>;})}
  </>;
 }
 
@@ -89,7 +92,7 @@ export default function GynecoMode(){
      <span className="context-note review-note">Contenido educativo · a validar por un docente</span>
     </div>}
    </SectionText>
-   <div className="gyneco-sources"><div className="gyneco-subtitle">Fuentes</div>{section.sources.map(s=><p key={s.label}>{s.url?<a href={s.url} target="_blank" rel="noreferrer">{s.label}</a>:s.label}</p>)}<p>Material educativo, no diagnóstico: no reemplaza la consulta con un profesional de la salud.</p></div>
+   <div className="gyneco-sources"><div className="gyneco-subtitle">Fuentes</div>{section.sources.map(s=><p key={s.id}>{s.id} · {s.url?<a href={s.url} target="_blank" rel="noreferrer">{s.label}</a>:s.label}{s.retrieved&&`, consultado ${s.retrieved}`}{s.backup&&' (respaldo, no oficial)'}</p>)}{section.noResearch&&<p>{section.noResearch}</p>}{section.id==='autoexamen'&&<p>{UNT_NOTE}</p>}<p>Material educativo, no diagnóstico: no reemplaza la consulta con un profesional de la salud.</p></div>
   </section>
   <nav className="gyneco-views glass" aria-label="Cámara"><Toggle label="Vista" value={view.preset} options={[{value:'breasts',text:'Mamas'},{value:'pelvis',text:'Pelvis'}]} onChange={look}/>
    <label className="gyneco-interior"><Switch checked={interior} onCheckedChange={setInterior} aria-label="Ver el interior"/><span>Ver el interior</span></label></nav>

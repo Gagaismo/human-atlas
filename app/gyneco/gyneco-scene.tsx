@@ -72,8 +72,9 @@ export default function GynecoScene(props:Props){
    holder.rotation.set(lying?-Math.PI/2:0,0,0);holder.position.set(0,lying?TABLE_TOP+SKIN_BACK+.003:0,lying?.86:0);holder.updateMatrixWorld(true);
   };
   const frame=()=>{
-   const {side,view}=latest.current,s=side==='l'?1:-1,breasts=view.preset==='breasts';
-   const target=breasts?new T.Vector3(s*.07,1.29,.08):new T.Vector3(0,.92,.01),offset=breasts?new T.Vector3(s*.14,.07,.72):new T.Vector3(.25,.1,.55);
+   const {side,view,position}=latest.current,s=side==='l'?1:-1,breasts=view.preset==='breasts',lying=position==='supine';
+   // Lying, the camera stands at the feet end above the table, so the head stays at the top of the screen.
+   const target=breasts?new T.Vector3(s*.07,1.29,.08):new T.Vector3(0,.92,.01),offset=lying?(breasts?new T.Vector3(s*.14,-.5,.55):new T.Vector3(.25,-.55,.5)):breasts?new T.Vector3(s*.14,.07,.72):new T.Vector3(.25,.1,.55);
    // Portrait phones show the body above the detail sheet: step back and move the view up into the free band.
    const portrait=camera.aspect<.8,back=portrait?(breasts?2.4:1.3):1;
    controls.target.copy(holder.localToWorld(target.clone()));camera.position.copy(holder.localToWorld(target.clone().add(offset.multiplyScalar(back))));

@@ -1,13 +1,22 @@
 // Checks of the gynecology mode: the self-exam palpation timeline covers the whole area, the leaflet content is
-// verbatim and sourced, and the female parts the scene needs exist.
-// Usage: node scripts/gyneco/validate.mjs   (Node 22.18+)
+// verbatim and sourced, the female parts the scene needs exist, and the rigged body (public/models/gyneco) performs the
+// exam: the hand of the examined side rests behind the nape while the other hand's finger pads reach every stop.
+// Usage: node scripts/gyneco/validate.mjs   (Node 22.18+, after npm ci)
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
+import {readFileSync,statSync} from 'node:fs';
+import * as mod from 'node:module';
+import {gunzipSync} from 'node:zlib';
+import * as THREE from 'three';
+import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
 import * as C from '../../app/gyneco/content.ts';
 import {partGeometry} from '../../app/gyneco/model.ts';
 import {ChestSurface} from '../../app/gyneco/surface.ts';
 import {DURATION,NIPPLE,PAD_RADIUS,PATTERN,PRESSURES,REGIONS,RHO,STEP_ORDER,STEPS,STOPS,STRIP_SPACING,TRAIL,buildTimeline,sampleAt} from '../../app/gyneco/palpation.ts';
 const {CENTERS,LEAFLET_CREDIT,SECTIONS,SOURCES,CONFLICTS,CENTER_STATUS,UNT_NOTE}=C;
+// body.ts imports its siblings without extensions (bundler style): resolve them to .ts for Node.
+mod.registerHooks(await import('./ts-resolve.mjs'));
+const {solveTwoBone,frameOf}=await import('../../app/gyneco/ik.ts');
+const {BODY_BONES,PAD_HEIGHT,applyExamPose,bakeChest,bindBody,padTarget,resetPose}=await import('../../app/gyneco/body.ts');
 
 let checks=0;const check=(ok,message)=>{assert.ok(ok,message);checks++;};
 const dist=(a,b)=>Math.hypot(RHO*(a.theta-b.theta),a.y-b.y);
@@ -24,7 +33,8 @@ assert.throws(()=>buildTimeline({pattern:'wedges'}),/pattern/i);checks++;
 const [breast,axilla]=REGIONS;
 check(deg(breast.thetaMin)<=6,`the medial edge must start at the midline, got ${deg(breast.thetaMin).toFixed(1)}°`);
 check(deg(breast.thetaMax)>=78,`the lateral edge must reach the side of the chest, got ${deg(breast.thetaMax).toFixed(1)}°`);
-check(breast.yTop>=1.43,`the top edge must reach the clavicle (y ≥ 1.43 m), got ${breast.yTop}`);
+// The rigged body's clavicle lies at y ≈ 1.38–1.40 m (the HRA skin had it near 1.43 m; above 1.40 m the rays reach the neck).
+check(breast.yTop>=1.39&&breast.yTop<=1.41,`the top edge must reach the clavicle of the body (y ≈ 1.40 m), got ${breast.yTop}`);
 check(breast.yBottom<=1.15,'the bottom edge must go below the inframammary fold');
 check(axilla&&axilla.thetaMin>=breast.thetaMax-.2&&deg(axilla.thetaMax)>=84&&axilla.yBottom<=1.32&&axilla.yTop>=1.36,'the axilla must be a separate region at the lateral, upper edge, inside the armpit (θ ≥ 84°, y 1.32–1.36 m)');
 
@@ -229,6 +239,124 @@ check(female.chunk.url&&female.chunk.gzip,'the female chunk must have a plain an
  check(Math.abs(NIPPLE.theta-nt)<.02&&Math.abs(NIPPLE.y-ny)<.006,`NIPPLE (${deg(NIPPLE.theta).toFixed(1)}°, ${NIPPLE.y}) must match the model nipple (${deg(nt).toFixed(1)}°, ${ny.toFixed(3)})`);
  const hitNipple=surface.hit(nt,ny,1);
  check(hitNipple&&Math.hypot(hitNipple.point.x-nx,hitNipple.point.y-ny,hitNipple.point.z-nz)<.02,'a ray through the nipple must land on it');
+}
+
+// --- Rigged body (scripts/gyneco/build-body.py): file, license, bones, size budget ---
+const bodyDir=new URL('../../public/models/gyneco/',import.meta.url);
+const body=JSON.parse(readFileSync(new URL('body.json',bodyDir),'utf8'));
+{
+ check(body.source.license==='CC0 1.0 Universal'&&/mpfb2/.test(body.source.licenseUrl)&&/CC0 1\.0 Universal/.test(body.source.licenseQuote)&&/github\.com\/makehumancommunity\/mpfb2\/tree\/v2\.0\.18/.test(body.source.url)&&/MakeHuman/.test(body.source.name),'body.json must record the MPFB2 source, its CC0 license, the license URL and the quoted license line');
+ const gz=statSync(new URL(body.model,bodyDir)).size;
+ check(gz===body.gzipBytes&&gz<=3*1024*1024,`body.glb.gz is ${gz} bytes; body.json says ${body.gzipBytes}; the budget is 3 MiB`);
+ check(body.transform.scale>.1&&body.transform.scale<.12&&typeof body.transform.shiftZ==='number'&&/MakeHuman/.test(body.transform.note),'body.json must record the transform from the MakeHuman frame');
+ check(BODY_BONES.every(b=>body.bones.includes(b)&&body.heads[b]&&body.tails[b]),'body.json must list every bone the scene poses, with heads and tails');
+ // Sources UI and README credit the body.
+ check(SOURCES.MH&&SOURCES.MH.kind==='atlas'&&/MakeHuman/.test(SOURCES.MH.label)&&/CC0/.test(SOURCES.MH.label)&&/mpfb2/.test(SOURCES.MH.url)&&SECTIONS.find(s=>s.id==='autoexamen').sources.some(x=>x.id==='MH'),'the self-exam section must credit the MakeHuman/MPFB2 body (CC0) in its sources');
+ const readme=readFileSync(new URL('../../README.md',import.meta.url),'utf8');
+ check(/build-body\.py/.test(readme)&&/MakeHuman/.test(readme)&&/CC0/.test(readme),'README must document build-body.py and credit the MakeHuman body');
+}
+const glb=gunzipSync(readFileSync(new URL(body.model,bodyDir)));
+check(glb.length===body.modelBytes&&glb.toString('latin1',0,4)==='glTF',`body.glb.gz must decode to ${body.modelBytes} bytes of binary glTF`);
+{
+ const jsonLength=glb.readUInt32LE(12),gltf=JSON.parse(glb.toString('utf8',20,20+jsonLength)),names=new Set(gltf.nodes.map(n=>n.name));
+ for(const b of BODY_BONES)check(names.has(b),`the body lacks the bone ${b}`);
+ const skinned=gltf.nodes.filter(n=>n.skin!==undefined&&n.mesh!==undefined);
+ check(skinned.length===1&&gltf.nodes[skinned[0]?.mesh!==undefined?gltf.nodes.indexOf(skinned[0]):0]&&gltf.meshes[skinned[0].mesh].primitives.every(p=>p.attributes.JOINTS_0!==undefined&&p.attributes.WEIGHTS_0!==undefined&&p.attributes.NORMAL!==undefined),'the body must be one skinned mesh with joints, weights and normals');
+ check(gltf.meshes.length===1&&gltf.meshes[0].name==='Body','only the body mesh may be exported (no default cube)');
+ const joints=new Set(gltf.skins[skinned[0].skin].joints.map(j=>gltf.nodes[j].name));
+ for(const b of BODY_BONES)check(joints.has(b),`the skin must bind ${b}`);
+}
+
+// --- Posed body: the HRA breast structures sit under the new skin, every stop lands on it, the IK reaches every stop ---
+{
+ const gltf=await new GLTFLoader().parseAsync(glb.buffer.slice(glb.byteOffset,glb.byteOffset+glb.byteLength),'');
+ const rig=bindBody(body,gltf.scene);
+ const finite=v=>[v.x,v.y,v.z].every(Number.isFinite);
+ const noNaN=label=>{for(const [name,b] of rig.bones){check(finite(b.position)&&[b.quaternion.x,b.quaternion.y,b.quaternion.z,b.quaternion.w].every(Number.isFinite),`${label}: bone ${name} has NaN`);}};
+ // Rest pose: bone heads where body.json says (frame and names agree with the Blender build).
+ resetPose(rig);rig.root.updateMatrixWorld(true);
+ for(const b of BODY_BONES){const p=rig.bones.get(b).getWorldPosition(new THREE.Vector3()),h=body.heads[b];check(p.distanceTo(new THREE.Vector3(...h))<.002,`${b}: rest head ${p.toArray().map(x=>x.toFixed(3))} differs from body.json ${h}`);}
+ const L=body.landmarks;
+ check(Math.abs(L.height-1.72)<.01&&Math.abs(L.headTop[1]-1.72)<.02,`the body must be 1.72 m tall like the HRA female, got ${L.height}`);
+ check(Math.abs(L.nipple.l[0]-.113)<.02&&Math.abs(L.nipple.l[1]-1.228)<.015&&L.nipple.l[2]>.147&&L.nipple.l[2]<.18,`the left nipple ${L.nipple.l} must sit just in front of the HRA nipple (0.113, 1.228, 0.147)`);
+ check(L.nipple.r[0]<-.1&&Math.abs(L.nipple.r[0]+L.nipple.l[0])<1e-3,'the body must be symmetric, left breast at +x');
+ const hra=new Map(female.parts.map(p=>[p.id,p])),bin=readFileSync(new URL('../../public/models/female/female-chunk.bin',import.meta.url)),buffer=bin.buffer.slice(bin.byteOffset,bin.byteOffset+bin.byteLength);
+ const hraSurface=new ChestSurface(partGeometry(buffer,hra.get('VHF-skin')));
+ const sternum=hraSurface.hit(.03,1.3,1);
+ check(Math.abs(L.chestFrontZ-sternum.point.z)<.01,`the body sternum (z ${L.chestFrontZ}) must match the HRA skin (z ${sternum.point.z.toFixed(3)}) at mid-chest`);
+ const skins={};
+ for(const side of ['l','r']){
+  const s=side==='l'?1:-1;
+  const geometry=bakeChest(rig,side),surface=new ChestSurface(geometry);skins[side]=surface;
+  check(surface.triangles>2000,`${side}: the baked chest must keep the skin triangles of the chest`);
+  // Every stop and trail point of the timeline lands on the posed skin with an outward normal.
+  for(const [what,list] of [['stop',STOPS],['trail point',TRAIL]])for(const p of list){
+   const hit=surface.hit(p.theta,p.y,s),where=`${what} θ=${deg(p.theta).toFixed(1)}° y=${p.y.toFixed(3)} side ${side}`;
+   assert.ok(hit,`no body skin at ${where}`);
+   assert.ok(hit.normal.dot(new THREE.Vector3(s*Math.sin(p.theta),0,Math.cos(p.theta)))>.15,`the body normal at ${where} must point out of the chest`);
+   assert.ok(hit.distance>.03&&hit.distance<.3,`${where}: implausible body skin distance ${hit.distance.toFixed(3)}`);
+   checks++;
+  }
+  // The HRA breast structures stay under the body skin (the fat may show by a hair at its flat edges).
+  for(const [part,tolerance] of [['areola',0],['nipple',0],['mammary-lobes',0],['lactiferous-ducts',0],['breast-fat',-.01]]){
+   const pos=partGeometry(buffer,hra.get(`VHF-${part}-${side}`)).getAttribute('position'),step=Math.max(1,Math.floor(pos.count/300));let worst=Infinity,tested=0;
+   for(let i=0;i<pos.count;i+=step){const x=pos.getX(i),y=pos.getY(i),z=pos.getZ(i),theta=Math.atan2(s*x,z),r=Math.hypot(x,z);if(theta<0||theta>1.5||y<1.1||y>1.45)continue;const hit=surface.hit(theta,y,s);if(!hit)continue;worst=Math.min(worst,hit.distance-r);tested++;}
+   check(tested>50&&worst>=tolerance,`${side}: VHF-${part} pokes ${(-worst*1000).toFixed(0)} mm through the body skin (tolerance ${-tolerance*1000} mm, ${tested} vertices)`);
+  }
+  const bodyNipple=surface.hit(NIPPLE.theta,NIPPLE.y,s);
+  check(bodyNipple&&bodyNipple.point.distanceTo(new THREE.Vector3(...L.nipple[side]))<.015,`${side}: the NIPPLE ray must land on the body nipple`);
+ }
+ // The exam pose, standing and lying (the lying body is the standing body rotated with its holder): the raised hand is
+ // behind the nape and the palpating pads reach every stop within 5 mm with a human elbow angle.
+ const holder=new THREE.Group();holder.add(rig.root);
+ for(const lying of [false,true]){
+  holder.rotation.set(lying?-Math.PI/2:0,0,0);holder.position.set(0,lying?.8:0,lying?.86:0);holder.updateMatrixWorld(true);
+  for(const side of ['l','r']){
+   const s=side==='l'?1:-1,surface=skins[side],label=`${lying?'lying':'standing'} ${side}`;
+   let worstPad=0,worstAngle=[180,0];
+   for(const [i,stop] of STOPS.entries()){
+    const hit=surface.hit(stop.theta,stop.y,s),sample=sampleAt(stop.start+stop.circleSeconds*1.5),target=padTarget(hit,sample,PAD_HEIGHT.media);
+    const report=applyExamPose(rig,{step:sample.step,side,pad:target,normal:hit.normal,t:sample.step==='circles'?stop.start:stop.start,demo:true});
+    noNaN(`${label} stop ${i}`);
+    const err=report.pad.distanceTo(target);worstPad=Math.max(worstPad,err);
+    assert.ok(err<=.005,`${label} stop ${i}: the middle pad is ${(err*1000).toFixed(1)} mm from its target`);
+    assert.ok(!report.clamped&&report.elbowAngle>=30&&report.elbowAngle<=175,`${label} stop ${i}: elbow angle ${report.elbowAngle.toFixed(0)}° (clamped ${report.clamped})`);
+    worstAngle=[Math.min(worstAngle[0],report.elbowAngle),Math.max(worstAngle[1],report.elbowAngle)];
+    // Raised arm: the hand of the examined side is behind the coronal plane of the ears and above the shoulders.
+    const hand=report.raisedHand;
+    assert.ok(hand.z<L.ear[2]-.02&&hand.y>L.shoulder[side][1]+.05&&Math.abs(hand.x)<.12,`${label} stop ${i}: the raised hand ${hand.toArray().map(x=>x.toFixed(3))} is not behind the nape (ear z ${L.ear[2]}, shoulder y ${L.shoulder[side][1]})`);
+    assert.ok(report.raisedElbow.y>L.shoulder[side][1]&&s*report.raisedElbow.x>.15,`${label} stop ${i}: the raised elbow must point up and out, got ${report.raisedElbow.toArray().map(x=>x.toFixed(3))}`);
+    checks++;
+   }
+   if(!lying)console.log(`gyneco body ${side}: pad error ≤ ${(worstPad*1000).toFixed(1)} mm, elbow ${worstAngle[0].toFixed(0)}–${worstAngle[1].toFixed(0)}°`);
+   // Nipple step: index pad on the nipple, thumb opposed to it.
+   const n=STEPS.find(x=>x.id==='nipple'),sample=sampleAt(n.end-.5),hit=surface.hit(sample.theta,sample.y,s),target=padTarget(hit,sample,PAD_HEIGHT.suave);
+   const report=applyExamPose(rig,{step:'nipple',side,pad:target,normal:hit.normal,t:n.end-.5,demo:true});noNaN(`${label} nipple`);
+   check(report.pad.distanceTo(target)<=.005,`${label}: the index pad is ${(report.pad.distanceTo(target)*1000).toFixed(1)} mm from the nipple`);
+   check(report.thumb&&report.thumb.distanceTo(target)<=.03,`${label}: the thumb must oppose the index at the nipple, it is ${(report.thumb.distanceTo(target)*1000).toFixed(0)} mm away`);
+   // Inspection: arms down, hands on the hips, arms up, in that order, both hands; no raised arm yet.
+   const insp=STEPS[0],phases=[[insp.start+.5,'down'],[insp.start+insp.end/2,'hips'],[insp.end-.5,'up']];
+   for(const [t,phase] of phases){
+    const r=applyExamPose(rig,{step:'inspection',side,pad:null,normal:null,t,demo:true});noNaN(`${label} inspection ${phase}`);
+    for(const hand of [r.hands.l,r.hands.r]){
+     if(phase==='down')check(hand.y<L.shoulder.l[1]-.3&&Math.abs(hand.x)<.3,`${label}: inspection starts with the arms down, hand at ${hand.toArray().map(x=>x.toFixed(2))}`);
+     if(phase==='hips')check(hand.y>.8&&hand.y<1.1&&Math.abs(hand.x)<.25&&Math.abs(hand.x)>.08,`${label}: then the hands rest on the hips, hand at ${hand.toArray().map(x=>x.toFixed(2))}`);
+     if(phase==='up')check(hand.y>L.headTop[1],`${label}: then the arms go up above the head, hand at ${hand.toArray().map(x=>x.toFixed(2))}`);
+    }
+   }
+   // Outside the demo the body stands at ease.
+   const ease=applyExamPose(rig,{step:'inspection',side,pad:null,normal:null,t:0,demo:false});
+   check(ease.hands.l.y<1.1&&ease.hands.r.y<1.1,`${label}: outside the self-exam both arms hang down`);
+  }
+ }
+ // The IK solver itself: reach, clamping, elbow angle and the frame helper.
+ {
+  const S=new THREE.Vector3(0,1.4,0),pole=new THREE.Vector3(0,0,-1);
+  const straight=solveTwoBone(S,new THREE.Vector3(0,.9,0),.25,.25,pole);check(Math.abs(straight.elbowAngle-180)<1e-3&&!straight.clamped&&straight.wrist.distanceTo(new THREE.Vector3(0,.9,0))<1e-9,'a target at full reach gives a straight arm');
+  const bent=solveTwoBone(S,new THREE.Vector3(0,1.4,.3),.25,.25,new THREE.Vector3(0,1,0));check(Math.abs(bent.elbowAngle-2*Math.asin(.15/.25)*180/Math.PI)<1e-3&&bent.elbow.y<1.4&&Math.abs(bent.elbow.distanceTo(S)-.25)<1e-9&&Math.abs(bent.elbow.distanceTo(bent.wrist)-.25)<1e-9,'the elbow bends toward the pole (below the shoulder here) and keeps both bone lengths');
+  const far=solveTwoBone(S,new THREE.Vector3(0,0,0),.25,.25,pole);check(far.clamped&&Math.abs(far.wrist.distanceTo(S)-.5)<1e-9&&far.wrist.y<S.y,'an unreachable target is pulled onto the reach sphere');
+  const q=frameOf(new THREE.Vector3(0,0,1),new THREE.Vector3(0,1,0)),x=new THREE.Vector3(1,0,0).applyQuaternion(q),y=new THREE.Vector3(0,1,0).applyQuaternion(q);check(x.distanceTo(new THREE.Vector3(0,0,1))<1e-9&&y.distanceTo(new THREE.Vector3(0,1,0))<1e-9,'frameOf maps x to along and y to the normal');
+ }
 }
 
 console.log(`gyneco: ${checks} checks, ${STOPS.length} stops, ${DURATION.toFixed(1)} s`);

@@ -24,10 +24,12 @@ export const RHO=.15;
 export const PAD_RADIUS=.04;
 /** Radius of each small circle the pads draw (m). */
 export const CIRCLE_RADIUS=.012;
-/** Clavicle / supraclavicular fossa to below the inframammary fold, out to the side of the chest; then the axilla (tail of the breast). */
+/** Clavicle / supraclavicular fossa to below the inframammary fold, out to the side of the chest; then the axilla (tail of
+ * the breast). Heights follow the rigged body (public/models/gyneco): its clavicle lies at y ≈ 1.38–1.40 m and, with the arm
+ * raised, the axillary hollow opens up to y ≈ 1.40 m. */
 export const REGIONS:Region[]=[
- {thetaMin:rad(5),thetaMax:rad(80),yBottom:1.14,yTop:1.44},
- {thetaMin:rad(78),thetaMax:rad(86),yBottom:1.3,yTop:1.38},
+ {thetaMin:rad(5),thetaMax:rad(80),yBottom:1.14,yTop:1.4},
+ {thetaMin:rad(78),thetaMax:rad(86),yBottom:1.3,yTop:1.4},
 ];
 /** Center of the nipple on the skin (same frame; checked against the model's nipple in scripts/gyneco/validate.mjs). */
 export const NIPPLE={theta:.6537,y:1.2285};

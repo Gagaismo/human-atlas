@@ -56,6 +56,7 @@ const r=(id:string,institution:string,title:string,url:string):Source=>({...f(id
 export const SOURCES:Record<string,Source>={
  F:f('F','IFMSA Tucumán (SCOPH) y UTN Tucumán',LEAFLET_CREDIT,'leaflet'),
  HRA:f('HRA','HuBMAP','Human Reference Atlas, Visible Human femenino — CC BY 4.0','atlas','https://lod.humanatlas.io/ref-organ'),
+ MH:f('MH','MakeHuman Community','Cuerpo 3D: malla base, esqueleto y morfologías de MakeHuman, vía MPFB2 v2.0.18 — CC0 1.0 (dominio público)','atlas','https://github.com/makehumancommunity/mpfb2/tree/v2.0.18/src/mpfb/data'),
  U1:r('U1','UNT Fac. de Medicina, Cátedra de Ginecología','Programas','https://sites.google.com/fm.unt.edu.ar/ginecologia/programas'),
  U2:r('U2','UNT Fac. de Medicina, Rotatorio Gineco-Obstetricia','Seminario','https://sites.google.com/fm.unt.edu.ar/rotatoriogineroobstetricia/seminario'),
  A1:r('A1','Ministerio de Salud de la Nación','Cáncer: prevención y detección temprana','https://www.argentina.gob.ar/salud/cancer/prevencion'),
@@ -171,7 +172,7 @@ export const SECTIONS:Section[]=[
    'Por último, presioná suavemente el pezón entre el índice y el pulgar: si sale secreción, consultá.',
   ],sources:['F','P1','I1','A5']}],
   conflicts:['timing','selfexam'],
-  sources:cite('F','A5','A1','A3','A8','S1','S2','S3','T3','T8','P1','P2','I1','U1','U2'),validated:false,
+  sources:cite('F','A5','A1','A3','A8','S1','S2','S3','T3','T8','P1','P2','I1','U1','U2','HRA','MH'),validated:false,
  },
  {
   id:'signos',label:'Signos y síntomas',title:'Signos y síntomas',
@@ -240,6 +241,6 @@ export const SECTIONS:Section[]=[
   id:'anatomia',label:'Anatomía',title:'Anatomía',
   intro:'Tocá una estructura del modelo para ver su descripción: tejido adiposo, lobulillos y conductos de la mama; útero, trompas y ovarios; vejiga y pelvis ósea.',
   noResearch:'El informe de investigación no relevó fuentes para esta sección: las descripciones salen del atlas de referencia.',
-  sources:cite('HRA'),validated:false,
+  sources:cite('HRA','MH'),validated:false,
  },
 ];

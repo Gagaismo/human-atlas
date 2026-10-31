@@ -306,6 +306,40 @@ check(glb.length===body.modelBytes&&glb.toString('latin1',0,4)==='glTF',`body.gl
   const bodyNipple=surface.hit(NIPPLE.theta,NIPPLE.y,s);
   check(bodyNipple&&bodyNipple.point.distanceTo(new THREE.Vector3(...L.nipple[side]))<.015,`${side}: the NIPPLE ray must land on the body nipple`);
  }
+ // The palpating arm never goes through the trunk (user report: "Al rededor del segundo 0:29 de la animacion el brazo
+ // atraviesa el cuerpo del modelo. Ocurre tanto en derecha como izquierda"). Oracle: the posed skin without the arms,
+ // ray-cast from points of the arm's axis moved 2.5 cm toward the trunk (about the arm's radius): a point is inside when
+ // the first surface it meets, both toward the front and toward the back, faces away from it.
+ {
+  const ARM=/^(upperarm|lowerarm|hand|thumb|index|middle|ring|pinky)/,raycaster=new THREE.Raycaster();
+  const trunk={};
+  for(const side of ['l','r']){
+   applyExamPose(rig,{step:'pads',side,pad:null,normal:null,t:0,demo:true});rig.root.updateMatrixWorld(true);
+   const mesh=rig.mesh,g=mesh.geometry,pos=g.getAttribute('position'),index=g.getIndex(),si=g.getAttribute('skinIndex'),sw=g.getAttribute('skinWeight');
+   const toBody=rig.root.matrixWorld.clone().invert().multiply(mesh.matrixWorld),posed=new Float32Array(pos.count*3),v=new THREE.Vector3();
+   for(let i=0;i<pos.count;i++){v.fromBufferAttribute(pos,i);mesh.applyBoneTransform(i,v);v.applyMatrix4(toBody).toArray(posed,i*3);}
+   const armBone=new Set(mesh.skeleton.bones.map((b,i)=>ARM.test(b.name)?i:-1).filter(i=>i>=0));
+   const dominant=i=>{let best=-1,w=-1;for(let k=0;k<4;k++){const x=sw.getComponent(i,k);if(x>w){w=x;best=si.getComponent(i,k);}}return best;};
+   const keep=[];for(let i=0;i<index.count;i+=3){if([0,1,2].some(k=>armBone.has(dominant(index.getX(i+k)))))continue;keep.push(index.getX(i),index.getX(i+1),index.getX(i+2));}
+   const geo=new THREE.BufferGeometry();geo.setAttribute('position',new THREE.BufferAttribute(posed,3));geo.setIndex(keep);
+   trunk[side]=new THREE.Mesh(geo,new THREE.MeshBasicMaterial({side:THREE.DoubleSide}));trunk[side].updateMatrixWorld(true);
+  }
+  const inside=(mesh,p)=>[1,-1].every(dz=>{const d=new THREE.Vector3(0,0,dz);raycaster.set(p,d);const hit=raycaster.intersectObject(mesh,false)[0];if(!hit)return false;const a=new THREE.Vector3().fromBufferAttribute(mesh.geometry.attributes.position,hit.face.a),b=new THREE.Vector3().fromBufferAttribute(mesh.geometry.attributes.position,hit.face.b),c=new THREE.Vector3().fromBufferAttribute(mesh.geometry.attributes.position,hit.face.c);return new THREE.Vector3().crossVectors(b.clone().sub(a),c.clone().sub(a)).dot(d)>0;});
+  const at=name=>rig.root.worldToLocal(rig.bones.get(name).getWorldPosition(new THREE.Vector3()));
+  let failures=[],tested=0;
+  for(const side of ['l','r']){
+   const s=side==='l'?1:-1,other=side==='l'?'r':'l',surface=skins[side];
+   for(const [i,stop] of STOPS.entries())for(const phase of [0,.35,.7]){
+    const hit=surface.hit(stop.theta,stop.y,s),sample=sampleAt(stop.start+stop.circleSeconds*(.5+phase*3)),target=padTarget(hit,sample,PAD_HEIGHT.media);
+    applyExamPose(rig,{step:sample.step,side,pad:target,normal:hit.normal,t:stop.start,demo:true});
+    const shoulder=at(`upperarm_${other}`),elbow=at(`lowerarm_${other}`),wrist=at(`hand_${other}`);
+    const points=[...[.4,.6,.8,1].map(k=>shoulder.clone().lerp(elbow,k)),...[.25,.5,.75,1].map(k=>elbow.clone().lerp(wrist,k))];
+    let bad=0;for(const p of points){const toAxis=new THREE.Vector3(-p.x,0,.006-p.z);if(toAxis.lengthSq()>1e-8)p.addScaledVector(toAxis.normalize(),.025);if(inside(trunk[side],p))bad++;}
+    tested++;if(bad)failures.push(`${side} stop ${i} (θ=${deg(stop.theta).toFixed(0)}° y=${stop.y.toFixed(2)}): ${bad} arm points inside the trunk`);
+   }
+  }
+  check(!failures.length,`the palpating arm goes through the trunk at ${failures.length}/${tested} samples:\n  ${failures.slice(0,12).join('\n  ')}`);
+ }
  // The exam pose, standing and lying (the lying body is the standing body rotated with its holder): the raised hand is
  // behind the nape and the palpating pads reach every stop within 5 mm with a human elbow angle.
  const holder=new THREE.Group();holder.add(rig.root);

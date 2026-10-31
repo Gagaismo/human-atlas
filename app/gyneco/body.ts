@@ -50,6 +50,8 @@ export interface BodyRig {
  root:T.Object3D;mesh:T.SkinnedMesh;bones:Map<string,T.Bone>;meta:BodyMeta;
  rest:Map<string,T.Quaternion>;restWorld:Map<string,T.Quaternion>;heads:Map<string,T.Vector3>;tails:Map<string,T.Vector3>;
  arms:Record<Side,Arm>;
+ /** Trunk profile per examined side (built on first use) and the last palpating-arm choice, for collision avoidance. */
+ trunk?:Partial<Record<Side,Trunk>>;choice?:Partial<Record<Side,string>>;
  /** Scratch: inverse of the root's world rotation, refreshed by every pose call. */
  rootInverse:T.Quaternion;
 }
@@ -168,6 +170,36 @@ function shrug(rig:BodyRig,arm:Arm,elevation:number,protraction:number){
  setRotation(rig,arm.clavicle,q.multiply(rig.restWorld.get(arm.clavicle.name)!));
 }
 const v=(x:number,y:number,z:number)=>new T.Vector3(x,y,z);
+
+/** Radial profile of the trunk (the posed skin without the arms): the largest radius around the body axis per height
+ * slice and angle bin, so the palpating arm can be kept outside the trunk without ray-casting every frame. */
+interface Trunk {r:Float32Array}
+const TRUNK={y0:.8,slices:42,dy:.02,bins:48,zc:.006};
+const ARM_BONE=/^(upperarm|lowerarm|hand|thumb|index|middle|ring|pinky)/;
+function buildTrunk(rig:BodyRig,side:Side):Trunk{
+ applyExamPose(rig,{step:'pads',side,pad:null,normal:null,t:0,demo:true});
+ rig.root.updateWorldMatrix(true,true);
+ const mesh=rig.mesh,g=mesh.geometry,position=g.getAttribute('position'),skinIndex=g.getAttribute('skinIndex') as T.BufferAttribute,skinWeight=g.getAttribute('skinWeight') as T.BufferAttribute;
+ const toBody=rig.root.matrixWorld.clone().invert().multiply(mesh.matrixWorld),arm=new Set(mesh.skeleton.bones.map((b,i)=>ARM_BONE.test(b.name)?i:-1).filter(i=>i>=0));
+ const r=new Float32Array(TRUNK.slices*TRUNK.bins);
+ for(let i=0;i<position.count;i++){
+  let best=-1,w=-1;for(let k=0;k<4;k++){const x=skinWeight.getComponent(i,k);if(x>w){w=x;best=skinIndex.getComponent(i,k);}}
+  if(arm.has(best))continue;
+  tmpV.fromBufferAttribute(position,i);mesh.applyBoneTransform(i,tmpV);tmpV.applyMatrix4(toBody);
+  const k=Math.round((tmpV.y-TRUNK.y0)/TRUNK.dy);if(k<0||k>=TRUNK.slices)continue;
+  const z=tmpV.z-TRUNK.zc,cell=k*TRUNK.bins+binOf(tmpV.x,z);r[cell]=Math.max(r[cell],Math.hypot(tmpV.x,z));
+ }
+ return {r};
+}
+const binOf=(x:number,z:number)=>(Math.floor((Math.atan2(x,z)+Math.PI)/(2*Math.PI)*TRUNK.bins)%TRUNK.bins+TRUNK.bins)%TRUNK.bins;
+/** Distance of `p` outside the trunk (negative inside), conservative: the larger radius of the two nearest slices. */
+function clearance(trunk:Trunk,p:T.Vector3){
+ const f=(p.y-TRUNK.y0)/TRUNK.dy;if(f<0||f>TRUNK.slices-1)return Infinity;
+ const z=p.z-TRUNK.zc,b=binOf(p.x,z),k=Math.floor(f),radius=Math.max(trunk.r[k*TRUNK.bins+b],trunk.r[Math.min(TRUNK.slices-1,k+1)*TRUNK.bins+b]);
+ return Math.hypot(p.x,z)-radius;
+}
+/** Arm radius plus a margin: the axis of the palpating arm stays this far outside the trunk. */
+const ARM_CLEARANCE=.035;
 /** Arm hanging at the side (at ease, mirror inspection first phase). */
 function hangArm(rig:BodyRig,arm:Arm){
  const s=arm.sign,shoulder=positionOf(rig,arm.upper);
@@ -185,6 +217,8 @@ export interface ExamReport {
  * arms down → hands on the hips → arms up. From the position step on: the arm of the examined side raised with the hand
  * behind the nape, the other hand palpating at `pad` with the palm facing the skin, or pinching the nipple. */
 export function applyExamPose(rig:BodyRig,input:ExamInput):ExamReport{
+ // The trunk profile is built from the exam pose itself, before this pose starts.
+ if(input.demo&&input.pad&&input.normal&&!rig.trunk?.[input.side])(rig.trunk??={})[input.side]=buildTrunk(rig,input.side);
  resetPose(rig);
  const examined=rig.arms[input.side],palpating=rig.arms[input.side==='l'?'r':'l'],s=examined.sign;
  const report:Partial<ExamReport>={thumb:null,elbowAngle:180,clamped:false};
@@ -206,17 +240,44 @@ export function applyExamPose(rig:BodyRig,input:ExamInput):ExamReport{
   if(!input.pad||!input.normal){hangArm(rig,palpating);report.pad=positionOf(rig,palpating.hand);}
   else{
    const pinch=input.step==='nipple',n=input.normal;
-   shrug(rig,palpating,2,14);
-   const shoulder=positionOf(rig,palpating.upper),away=input.pad.clone().sub(shoulder);
-   // Fingers lie on the skin pointing toward the examined side and up; the farther the point from the palpating
-   // shoulder, the more they point away from it, so the wrist stays within reach (the hand radiates from the shoulder).
-   const w=Math.min(1,Math.max(0,(away.length()-.22)/.15)),t=v(s,.4,0).multiplyScalar(1-w).addScaledVector(away.normalize(),w);
-   t.addScaledVector(n,-t.dot(n));if(t.lengthSq()<1e-6)t.set(0,1,0).addScaledVector(n,-n.y);t.normalize();
-   // Tilted so the pads touch while the wrist stays off the skin; the palm faces the skin.
-   const tilt=rad(pinch?32:20),along=t.clone().multiplyScalar(Math.cos(tilt)).addScaledVector(n,-Math.sin(tilt)),palm=n.clone().multiplyScalar(-Math.cos(tilt)).addScaledVector(t,-Math.sin(tilt));
-   const delta=deltaRotation(palpating.restHand,palpating.restPalm,along,palm),wrist=input.pad.clone().sub((pinch?palpating.pads.pinch:palpating.pads.flat).clone().applyQuaternion(delta));
-   // Elbow down, out and forward of the chest, so the forearm crosses in front of the breasts instead of over them.
-   const solved=poseArm(rig,palpating,wrist,shoulder.clone().add(v(-s*.25,-.45,.42)),along,palm,pinch?PINCH:FLAT);
+   const trunk=rig.trunk![input.side]!;
+   // Search the hand yaw on the skin, its tilt, the shoulder protraction and the elbow's turn about the shoulder-wrist
+   // axis for a pose whose arm stays outside the trunk; the default pose wins whenever it is clear. Reaching across to
+   // the far side of the other breast, a fixed pose would run the forearm through the chest.
+   type Candidate={score:number;key:string;protraction:number;wrist:T.Vector3;pole:T.Vector3;along:T.Vector3;palm:T.Vector3};
+   let best:Candidate|null=null,kept:Candidate|null=null;
+   const previous=(rig.choice??={})[input.side];
+   for(const protraction of [14,26,36]){
+    shrug(rig,palpating,2,protraction);
+    const shoulder=positionOf(rig,palpating.upper),away=input.pad.clone().sub(shoulder);
+    // Fingers lie on the skin pointing toward the examined side and up; the farther the point from the palpating
+    // shoulder, the more they point away from it, so the wrist stays within reach (the hand radiates from the shoulder).
+    const w=Math.min(1,Math.max(0,(away.length()-.22)/.15)),t0=v(s,.4,0).multiplyScalar(1-w).addScaledVector(away.normalize(),w);
+    t0.addScaledVector(n,-t0.dot(n));if(t0.lengthSq()<1e-6)t0.set(0,1,0).addScaledVector(n,-n.y);t0.normalize();
+    for(const yaw of [0,-20,20,-40,40,-60,60,-80,80])for(const tiltExtra of [0,20]){
+     const t=yaw?t0.clone().applyAxisAngle(n,rad(yaw)):t0;
+     // Tilted so the pads touch while the wrist stays off the skin; the palm faces the skin.
+     const tilt=rad((pinch?32:20)+tiltExtra),along=t.clone().multiplyScalar(Math.cos(tilt)).addScaledVector(n,-Math.sin(tilt)),palm=n.clone().multiplyScalar(-Math.cos(tilt)).addScaledVector(t,-Math.sin(tilt));
+     const delta=deltaRotation(palpating.restHand,palpating.restPalm,along,palm),wrist=input.pad.clone().sub((pinch?palpating.pads.pinch:palpating.pads.flat).clone().applyQuaternion(delta));
+     const axis=wrist.clone().sub(shoulder).normalize();
+     for(let turn=0;turn<360;turn+=20){
+      // Elbow down, out and forward of the chest by default, so the forearm crosses in front of the breasts.
+      const pole=shoulder.clone().add(v(-s*.25,-.45,.42).applyAxisAngle(axis,rad(turn))),sol=solveTwoBone(shoulder,wrist,palpating.upperLength,palpating.lowerLength,pole);
+      let depth=0;
+      for(const k of [.4,.6,.8,1])depth+=Math.max(0,ARM_CLEARANCE-clearance(trunk,shoulder.clone().lerp(sol.elbow,k)));
+      for(const k of [.25,.5,.75,1])depth+=Math.max(0,ARM_CLEARANCE-clearance(trunk,sol.elbow.clone().lerp(sol.wrist,k)));
+      const bend=Math.max(0,35-sol.elbowAngle)/30+Math.max(0,sol.elbowAngle-172)/10;
+      const score=depth*60+(sol.clamped?5:0)+bend+Math.abs(yaw)/90*.15+tiltExtra/20*.08+(protraction-14)/12*.08+Math.min(turn,360-turn)/180*.12;
+      const key=`${protraction}:${yaw}:${tiltExtra}:${turn}`,candidate={score,key,protraction,wrist,pole,along,palm};
+      if(!best||score<best.score)best=candidate;
+      if(key===previous)kept=candidate;
+     }
+    }
+   }
+   // Keep the previous choice while it is nearly as good, so the arm does not flicker between poses mid-circle.
+   const chosen=kept&&kept.score<=best!.score+.05?kept:best!;rig.choice[input.side]=chosen.key;
+   shrug(rig,palpating,2,chosen.protraction);
+   const solved=poseArm(rig,palpating,chosen.wrist,chosen.pole,chosen.along,chosen.palm,pinch?PINCH:FLAT);
    if(pinch)poseThumb(rig,palpating,...palpating.thumbPinch);
    report.elbowAngle=solved.elbowAngle;report.clamped=solved.clamped;
    report.pad=padOf(rig,palpating,pinch?'index':'middle');

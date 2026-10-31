@@ -1,0 +1,688 @@
+{
+ "model": "body.glb.gz",
+ "modelBytes": 3046156,
+ "gzipBytes": 2014730,
+ "source": {
+  "name": "MakeHuman base mesh, game-engine rig and targets, via MPFB2 v2.0.18",
+  "url": "https://github.com/makehumancommunity/mpfb2/tree/v2.0.18/src/mpfb/data",
+  "license": "CC0 1.0 Universal",
+  "licenseUrl": "https://github.com/makehumancommunity/mpfb2/blob/v2.0.18/LICENSE.md",
+  "licenseQuote": "The assets are defined as any data contributing to the output from MPFB. This includes: The base mesh and proxies, Targets and modifiers, Textures, Clothes (any MHCLO-based asset), Rigs, poses and expressions, JSON data with mesh information. These assets have been released under CC0 1.0 Universal.",
+  "files": [
+   "data/3dobjs/base.obj",
+   "data/rigs/standard/rig.game_engine.json",
+   "data/rigs/standard/weights.game_engine.json",
+   "data/targets/macrodetails/caucasian-female-young.target.gz",
+   "data/targets/macrodetails/african-female-young.target.gz",
+   "data/targets/macrodetails/asian-female-young.target.gz",
+   "data/targets/macrodetails/universal-female-young-averagemuscle-maxweight.target.gz",
+   "data/targets/torso/torso-scale-horiz-incr.target.gz",
+   "data/targets/breast/female-young-averagemuscle-averageweight-maxcup-averagefirmness.target.gz"
+  ]
+ },
+ "targets": [
+  {
+   "target": "macrodetails/caucasian-female-young",
+   "weight": 0.3333
+  },
+  {
+   "target": "macrodetails/african-female-young",
+   "weight": 0.3333
+  },
+  {
+   "target": "macrodetails/asian-female-young",
+   "weight": 0.3333
+  },
+  {
+   "target": "macrodetails/universal-female-young-averagemuscle-maxweight",
+   "weight": 0.3
+  },
+  {
+   "target": "torso/torso-scale-horiz-incr",
+   "weight": 0.3
+  },
+  {
+   "target": "breast/female-young-averagemuscle-averageweight-maxcup-averagefirmness",
+   "weight": 0.5
+  }
+ ],
+ "frame": "glTF: meters, y up, +z front, left at +x, feet on y = 0; aligned to the HRA female (chest axis x = 0, z = 0)",
+ "transform": {
+  "scale": 0.108191,
+  "floor": -8.1829,
+  "shiftZ": -0.0369,
+  "note": "gltf = (x, y - floor, z) * scale + (0, 0, shiftZ), applied to the MakeHuman decimeter frame"
+ },
+ "mesh": "Body",
+ "vertices": 54078,
+ "faces": 54072,
+ "bones": [
+  "Root",
+  "ball_l",
+  "ball_r",
+  "calf_l",
+  "calf_r",
+  "clavicle_l",
+  "clavicle_r",
+  "foot_l",
+  "foot_r",
+  "hand_l",
+  "hand_r",
+  "head",
+  "index_01_l",
+  "index_01_r",
+  "index_02_l",
+  "index_02_r",
+  "index_03_l",
+  "index_03_r",
+  "lowerarm_l",
+  "lowerarm_r",
+  "middle_01_l",
+  "middle_01_r",
+  "middle_02_l",
+  "middle_02_r",
+  "middle_03_l",
+  "middle_03_r",
+  "neck_01",
+  "pelvis",
+  "pinky_01_l",
+  "pinky_01_r",
+  "pinky_02_l",
+  "pinky_02_r",
+  "pinky_03_l",
+  "pinky_03_r",
+  "ring_01_l",
+  "ring_01_r",
+  "ring_02_l",
+  "ring_02_r",
+  "ring_03_l",
+  "ring_03_r",
+  "spine_01",
+  "spine_02",
+  "spine_03",
+  "thigh_l",
+  "thigh_r",
+  "thumb_01_l",
+  "thumb_01_r",
+  "thumb_02_l",
+  "thumb_02_r",
+  "thumb_03_l",
+  "thumb_03_r",
+  "upperarm_l",
+  "upperarm_r"
+ ],
+ "heads": {
+  "Root": [
+   0.0,
+   -2e-05,
+   -0.0369
+  ],
+  "ball_l": [
+   0.1842,
+   0.012,
+   0.11266
+  ],
+  "ball_r": [
+   -0.1842,
+   0.012,
+   0.11266
+  ],
+  "calf_l": [
+   0.1446,
+   0.48228,
+   0.01489
+  ],
+  "calf_r": [
+   -0.1446,
+   0.48228,
+   0.01489
+  ],
+  "clavicle_l": [
+   0.02626,
+   1.38159,
+   -0.0143
+  ],
+  "clavicle_r": [
+   -0.02626,
+   1.38159,
+   -0.0143
+  ],
+  "foot_l": [
+   0.17679,
+   0.07381,
+   -0.00429
+  ],
+  "foot_r": [
+   -0.17679,
+   0.07381,
+   -0.00429
+  ],
+  "hand_l": [
+   0.46527,
+   1.05018,
+   0.13511
+  ],
+  "hand_r": [
+   -0.46527,
+   1.05018,
+   0.13511
+  ],
+  "head": [
+   0.0,
+   1.56869,
+   0.00741
+  ],
+  "index_01_l": [
+   0.49272,
+   1.00637,
+   0.22539
+  ],
+  "index_01_r": [
+   -0.49272,
+   1.00637,
+   0.22539
+  ],
+  "index_02_l": [
+   0.49604,
+   0.99073,
+   0.24493
+  ],
+  "index_02_r": [
+   -0.49604,
+   0.99073,
+   0.24493
+  ],
+  "index_03_l": [
+   0.49544,
+   0.97409,
+   0.26004
+  ],
+  "index_03_r": [
+   -0.49544,
+   0.97409,
+   0.26004
+  ],
+  "lowerarm_l": [
+   0.34703,
+   1.17977,
+   -0.01027
+  ],
+  "lowerarm_r": [
+   -0.34703,
+   1.17977,
+   -0.01027
+  ],
+  "middle_01_l": [
+   0.50846,
+   0.99666,
+   0.20712
+  ],
+  "middle_01_r": [
+   -0.50846,
+   0.99666,
+   0.20712
+  ],
+  "middle_02_l": [
+   0.51548,
+   0.97025,
+   0.22608
+  ],
+  "middle_02_r": [
+   -0.51548,
+   0.97025,
+   0.22608
+  ],
+  "middle_03_l": [
+   0.51805,
+   0.94825,
+   0.24198
+  ],
+  "middle_03_r": [
+   -0.51805,
+   0.94825,
+   0.24198
+  ],
+  "neck_01": [
+   0.0,
+   1.45498,
+   -0.03833
+  ],
+  "pelvis": [
+   0.0,
+   0.89247,
+   -0.01163
+  ],
+  "pinky_01_l": [
+   0.51727,
+   0.98224,
+   0.17117
+  ],
+  "pinky_01_r": [
+   -0.51727,
+   0.98224,
+   0.17117
+  ],
+  "pinky_02_l": [
+   0.52299,
+   0.96317,
+   0.17745
+  ],
+  "pinky_02_r": [
+   -0.52299,
+   0.96317,
+   0.17745
+  ],
+  "pinky_03_l": [
+   0.52469,
+   0.94878,
+   0.1824
+  ],
+  "pinky_03_r": [
+   -0.52469,
+   0.94878,
+   0.1824
+  ],
+  "ring_01_l": [
+   0.51569,
+   0.98974,
+   0.19027
+  ],
+  "ring_01_r": [
+   -0.51569,
+   0.98974,
+   0.19027
+  ],
+  "ring_02_l": [
+   0.52475,
+   0.96517,
+   0.20298
+  ],
+  "ring_02_r": [
+   -0.52475,
+   0.96517,
+   0.20298
+  ],
+  "ring_03_l": [
+   0.52879,
+   0.94397,
+   0.21412
+  ],
+  "ring_03_r": [
+   -0.52879,
+   0.94397,
+   0.21412
+  ],
+  "spine_01": [
+   0.0,
+   0.97051,
+   -0.06094
+  ],
+  "spine_02": [
+   0.0,
+   1.03832,
+   -0.03728
+  ],
+  "spine_03": [
+   0.0,
+   1.13592,
+   -0.02415
+  ],
+  "thigh_l": [
+   0.10199,
+   0.88037,
+   -0.01798
+  ],
+  "thigh_r": [
+   -0.10199,
+   0.88037,
+   -0.01798
+  ],
+  "thumb_01_l": [
+   0.4664,
+   1.04108,
+   0.17732
+  ],
+  "thumb_01_r": [
+   -0.4664,
+   1.04108,
+   0.17732
+  ],
+  "thumb_02_l": [
+   0.44583,
+   1.03155,
+   0.19748
+  ],
+  "thumb_02_r": [
+   -0.44583,
+   1.03155,
+   0.19748
+  ],
+  "thumb_03_l": [
+   0.43378,
+   1.01646,
+   0.22695
+  ],
+  "thumb_03_r": [
+   -0.43378,
+   1.01646,
+   0.22695
+  ],
+  "upperarm_l": [
+   0.17712,
+   1.36515,
+   -0.01441
+  ],
+  "upperarm_r": [
+   -0.17712,
+   1.36515,
+   -0.01441
+  ]
+ },
+ "tails": {
+  "Root": [
+   0.0,
+   -2e-05,
+   -0.06602
+  ],
+  "ball_l": [
+   0.17935,
+   0.01272,
+   0.17865
+  ],
+  "ball_r": [
+   -0.17935,
+   0.01272,
+   0.17865
+  ],
+  "calf_l": [
+   0.17679,
+   0.07381,
+   -0.00429
+  ],
+  "calf_r": [
+   -0.17679,
+   0.07381,
+   -0.00429
+  ],
+  "clavicle_l": [
+   0.17712,
+   1.36515,
+   -0.01441
+  ],
+  "clavicle_r": [
+   -0.17712,
+   1.36515,
+   -0.01441
+  ],
+  "foot_l": [
+   0.1842,
+   0.012,
+   0.11266
+  ],
+  "foot_r": [
+   -0.1842,
+   0.012,
+   0.11266
+  ],
+  "hand_l": [
+   0.47579,
+   1.03391,
+   0.1595
+  ],
+  "hand_r": [
+   -0.47579,
+   1.03391,
+   0.1595
+  ],
+  "head": [
+   0.0,
+   1.72037,
+   -0.00054
+  ],
+  "index_01_l": [
+   0.49604,
+   0.99073,
+   0.24493
+  ],
+  "index_01_r": [
+   -0.49604,
+   0.99073,
+   0.24493
+  ],
+  "index_02_l": [
+   0.49544,
+   0.97409,
+   0.26004
+  ],
+  "index_02_r": [
+   -0.49544,
+   0.97409,
+   0.26004
+  ],
+  "index_03_l": [
+   0.49158,
+   0.95325,
+   0.27649
+  ],
+  "index_03_r": [
+   -0.49158,
+   0.95325,
+   0.27649
+  ],
+  "lowerarm_l": [
+   0.46527,
+   1.05018,
+   0.13511
+  ],
+  "lowerarm_r": [
+   -0.46527,
+   1.05018,
+   0.13511
+  ],
+  "middle_01_l": [
+   0.51548,
+   0.97025,
+   0.22608
+  ],
+  "middle_01_r": [
+   -0.51548,
+   0.97025,
+   0.22608
+  ],
+  "middle_02_l": [
+   0.51805,
+   0.94825,
+   0.24198
+  ],
+  "middle_02_r": [
+   -0.51805,
+   0.94825,
+   0.24198
+  ],
+  "middle_03_l": [
+   0.51783,
+   0.92542,
+   0.25556
+  ],
+  "middle_03_r": [
+   -0.51783,
+   0.92542,
+   0.25556
+  ],
+  "neck_01": [
+   0.0,
+   1.56869,
+   0.00741
+  ],
+  "pelvis": [
+   0.0,
+   0.97051,
+   -0.06094
+  ],
+  "pinky_01_l": [
+   0.52299,
+   0.96317,
+   0.17745
+  ],
+  "pinky_01_r": [
+   -0.52299,
+   0.96317,
+   0.17745
+  ],
+  "pinky_02_l": [
+   0.52469,
+   0.94878,
+   0.1824
+  ],
+  "pinky_02_r": [
+   -0.52469,
+   0.94878,
+   0.1824
+  ],
+  "pinky_03_l": [
+   0.52742,
+   0.93038,
+   0.18833
+  ],
+  "pinky_03_r": [
+   -0.52742,
+   0.93038,
+   0.18833
+  ],
+  "ring_01_l": [
+   0.52475,
+   0.96517,
+   0.20298
+  ],
+  "ring_01_r": [
+   -0.52475,
+   0.96517,
+   0.20298
+  ],
+  "ring_02_l": [
+   0.52879,
+   0.94397,
+   0.21412
+  ],
+  "ring_02_r": [
+   -0.52879,
+   0.94397,
+   0.21412
+  ],
+  "ring_03_l": [
+   0.53136,
+   0.91981,
+   0.2242
+  ],
+  "ring_03_r": [
+   -0.53136,
+   0.91981,
+   0.2242
+  ],
+  "spine_01": [
+   0.0,
+   1.03832,
+   -0.03728
+  ],
+  "spine_02": [
+   0.0,
+   1.13592,
+   -0.02415
+  ],
+  "spine_03": [
+   0.0,
+   1.3007,
+   -0.02311
+  ],
+  "thigh_l": [
+   0.1446,
+   0.48228,
+   0.01489
+  ],
+  "thigh_r": [
+   -0.1446,
+   0.48228,
+   0.01489
+  ],
+  "thumb_01_l": [
+   0.44583,
+   1.03155,
+   0.19748
+  ],
+  "thumb_01_r": [
+   -0.44583,
+   1.03155,
+   0.19748
+  ],
+  "thumb_02_l": [
+   0.43378,
+   1.01646,
+   0.22695
+  ],
+  "thumb_02_r": [
+   -0.43378,
+   1.01646,
+   0.22695
+  ],
+  "thumb_03_l": [
+   0.42837,
+   0.9983,
+   0.24741
+  ],
+  "thumb_03_r": [
+   -0.42837,
+   0.9983,
+   0.24741
+  ],
+  "upperarm_l": [
+   0.34703,
+   1.17977,
+   -0.01027
+  ],
+  "upperarm_r": [
+   -0.34703,
+   1.17977,
+   -0.01027
+  ]
+ },
+ "landmarks": {
+  "height": 1.7186,
+  "nipple": {
+   "l": [
+    0.12088,
+    1.23159,
+    0.16177
+   ],
+   "r": [
+    -0.12088,
+    1.23159,
+    0.16177
+   ]
+  },
+  "ear": [
+   0.08644,
+   1.59949,
+   -0.00338
+  ],
+  "headTop": [
+   0.0,
+   1.72037,
+   -0.00054
+  ],
+  "chestBackZ": -0.0946,
+  "chestFrontZ": 0.1067,
+  "backZ": -0.1356,
+  "shoulder": {
+   "l": [
+    0.17712,
+    1.36515,
+    -0.01441
+   ],
+   "r": [
+    -0.17712,
+    1.36515,
+    -0.01441
+   ]
+  }
+ }
+}

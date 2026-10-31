@@ -12,7 +12,7 @@ export type Side='l'|'r';
 export type BodyPosition='standing'|'supine';
 export type ViewPreset='breasts'|'pelvis';
 interface Props {
- side:Side;position:BodyPosition;interior:boolean;view:{preset:ViewPreset;n:number};
+ demo:boolean;side:Side;position:BodyPosition;interior:boolean;view:{preset:ViewPreset;n:number};
  playing:boolean;speed:number;seek:{t:number;n:number};selectedId:string|null;
  onTime:(t:number)=>void;onEnd:()=>void;onPick:(id:string)=>void;onProgress:(n:number)=>void;onError:(message:string)=>void;
 }
@@ -50,7 +50,8 @@ export default function GynecoScene(props:Props){
   const table=new T.Mesh(new T.BoxGeometry(.8,TABLE_TOP-.05,2.1),new T.MeshStandardMaterial({color:0xe7e3dc,roughness:.8}));table.position.set(0,(TABLE_TOP+.05)/2,0);scene.add(table);
   // Everything anatomical lives in the holder (the body frame), so lying down rotates body, fingers and trail together.
   const holder=new T.Group();scene.add(holder);
-  const resize=()=>{const w=el.clientWidth,h=el.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/Math.max(h,1);camera.updateProjectionMatrix();dirty=true;};
+  // On wide screens the detail panel covers the right side: shift the image left so the body (and the axilla) stays in the free band.
+  const resize=()=>{const w=el.clientWidth,h=el.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/Math.max(h,1);if(w>=768)camera.setViewOffset(w,h,w>1000?80:70,0,w,h);else camera.clearViewOffset();camera.updateProjectionMatrix();dirty=true;};
   const observer=new ResizeObserver(resize);observer.observe(el);resize();
 
   // Fingertip pads: three small capsules side by side, a halo on the skin that shows the pressure.
@@ -62,7 +63,7 @@ export default function GynecoScene(props:Props){
   const dotMaterial=new T.MeshBasicMaterial({color:'#2a8fb0'}),dots=STOPS.map(()=>{const d=new T.Mesh(new T.SphereGeometry(.005,10,8),dotMaterial);d.visible=false;holder.add(d);return d;});
 
   let surface:ChestSurface|null=null,paths:Paths|null=null;
-  let clock=0,lastNow=0,lastSent=-1,lastSeek=latest.current.seek.n,lastView=-1,lastSide:Side|null=null,lastPosition:BodyPosition|null=null,lastInterior:boolean|null=null,lastSelected:string|null|undefined,height=HEIGHT.lift,ended=false;
+  let clock=0,lastNow=0,lastSent=-1,lastSeek=latest.current.seek.n,lastView=-1,lastSide:Side|null=null,lastPosition:BodyPosition|null=null,lastInterior:boolean|null=null,lastDemo=true,lastSelected:string|null|undefined,height=HEIGHT.lift,ended=false;
   const meshes=new Map<string,T.Mesh>(),times=TRAIL.map(p=>p.t);
   let skinMaterial:T.MeshStandardMaterial|null=null;
 
@@ -72,11 +73,11 @@ export default function GynecoScene(props:Props){
   };
   const frame=()=>{
    const {side,view}=latest.current,s=side==='l'?1:-1,breasts=view.preset==='breasts';
-   const target=breasts?new T.Vector3(s*.07,1.27,.08):new T.Vector3(0,.92,.01),offset=breasts?new T.Vector3(s*.12,.06,.62):new T.Vector3(.25,.1,.55);
+   const target=breasts?new T.Vector3(s*.07,1.29,.08):new T.Vector3(0,.92,.01),offset=breasts?new T.Vector3(s*.14,.07,.72):new T.Vector3(.25,.1,.55);
    // Portrait phones show the body above the detail sheet: step back and move the view up into the free band.
-   const portrait=camera.aspect<.8,back=portrait?(breasts?2:1.3):1;
+   const portrait=camera.aspect<.8,back=portrait?(breasts?2.4:1.3):1;
    controls.target.copy(holder.localToWorld(target.clone()));camera.position.copy(holder.localToWorld(target.clone().add(offset.multiplyScalar(back))));
-   if(portrait){const dir=controls.target.clone().sub(camera.position).normalize(),shift=new T.Vector3().crossVectors(new T.Vector3().crossVectors(dir,camera.up).normalize(),dir).multiplyScalar(-.06*back);controls.target.add(shift);camera.position.add(shift);}
+   if(portrait){const dir=controls.target.clone().sub(camera.position).normalize(),shift=new T.Vector3().crossVectors(new T.Vector3().crossVectors(dir,camera.up).normalize(),dir).multiplyScalar(-(breasts?.064:.06)*back);controls.target.add(shift);camera.position.add(shift);}
    camera.updateProjectionMatrix();controls.update();dirty=true;
   };
   const refreshPaths=()=>{
@@ -95,6 +96,8 @@ export default function GynecoScene(props:Props){
   const paint=(dt:number)=>{
    const h=hitAt(clock);if(!h)return;
    const s=sampleAt(clock),n=h.normal;
+   // Outside the self-exam section the pads, the trail and its dots are hidden.
+   if(!latest.current.demo){pads.visible=false;halo.visible=false;trailGeometry.setDrawRange(0,0);STOPS.forEach((_,i)=>{dots[i].visible=false;});return;}
    // Mirror inspection: no hands, no trail yet; the camera just holds on the breasts.
    if(s.step==='inspection'){pads.visible=false;halo.visible=false;trailGeometry.setDrawRange(0,0);STOPS.forEach((_,i)=>{dots[i].visible=false;});return;}
    Y.copy(UP).addScaledVector(n,-UP.dot(n));if(Y.lengthSq()<1e-6)Y.set(1,0,0);Y.normalize();X.crossVectors(Y,n);
@@ -116,6 +119,7 @@ export default function GynecoScene(props:Props){
    if(p.seek.n!==lastSeek){lastSeek=p.seek.n;clock=Math.min(Math.max(p.seek.t,0),DURATION);ended=false;lastSent=-1;dirty=true;}
    if(p.position!==lastPosition){lastPosition=p.position;place(p.position);frame();}
    if(p.side!==lastSide){lastSide=p.side;refreshPaths();frame();}
+   if(p.demo!==lastDemo){lastDemo=p.demo;dirty=true;}
    if(p.view.n!==lastView){lastView=p.view.n;frame();}
    if(p.interior!==lastInterior){lastInterior=p.interior;if(skinMaterial){skinMaterial.opacity=p.interior?.08:.5;}dirty=true;}
    if(p.selectedId!==lastSelected){lastSelected=p.selectedId;select(p.selectedId);}

@@ -1,4 +1,4 @@
-import {useEffect,useMemo,useState} from 'react';
+import {useEffect,useMemo,useRef,useState} from 'react';
 import {ArrowLeft,Pause,Play,RotateCcw,TriangleAlert} from 'lucide-react';
 import {Button} from '@/components/ui/button';
 import {Badge} from '@/components/ui/badge';
@@ -34,12 +34,12 @@ function SectionText({section,children}:{section:Section;children?:React.ReactNo
   {section.lead&&<p className="gyneco-lead">{section.lead}</p>}
   {section.intro&&<p>{section.intro}</p>}
   {children}
-  {section.items&&<ul className="gyneco-items">{section.items.map((i,n)=>{const st=section.statuses?.[n];return <li key={i}>{i}{st&&<span className="gyneco-hint"> — <b>{capitalize(st.status)}</b>: {st.detail} ({ids(st.sources)})</span>}</li>;})}</ul>}
-  {section.myths&&<ol className="gyneco-myths">{section.myths.map(m=><li key={m.claim}><q>{m.claim}</q><p><b>{m.verdict}:</b> {m.why}</p><p className="gyneco-hint">Fuentes: {ids(m.sources)}</p></li>)}</ol>}
+  {section.items&&<ul className={section.statuses?'gyneco-centers':'gyneco-items'}>{section.items.map((i,n)=>{const st=section.statuses?.[n];return st?<li key={i} className="gyneco-center"><span className="gyneco-center-name">{i}</span><span className="gyneco-status" data-status={st.status}>{capitalize(st.status)}</span><span className="gyneco-center-detail">{st.detail} <span className="gyneco-hint">({ids(st.sources)})</span></span></li>:<li key={i}>{i}</li>;})}</ul>}
+  {section.myths&&<ol className="gyneco-myths">{section.myths.map(m=><li key={m.claim}><q>{m.claim}</q><p><span className="gyneco-verdict">{m.verdict}</span> {m.why}</p><p className="gyneco-hint">Fuentes: {ids(m.sources)}</p></li>)}</ol>}
   {section.note&&<p className="gyneco-note">{section.note}</p>}
   {section.callout&&<p className="gyneco-callout" role="note">{section.callout}</p>}
   {section.extras?.map(x=><div key={x.title}><div className="gyneco-subtitle">{x.title}</div><ul className="gyneco-items">{x.items.map(i=><li key={i}>{i}</li>)}</ul><p className="gyneco-hint">Fuentes: {ids(x.sources)}</p></div>)}
-  {section.conflicts?.map(id=>{const c=CONFLICTS.find(x=>x.id===id)!;return <div key={id}><div className="gyneco-subtitle">Las fuentes no coinciden: {c.topic}</div><ul className="gyneco-items">{c.sides.map(side=><li key={side.who}><b>{side.who}:</b> {side.says} <span className="gyneco-hint">({ids(side.sources)})</span></li>)}</ul>{c.agreement&&<p className="gyneco-note">{c.agreement}</p>}{c.caveat&&<p className="gyneco-hint">{c.caveat}</p>}</div>;})}
+  {section.conflicts?.map(id=>{const c=CONFLICTS.find(x=>x.id===id)!;return <div key={id} className="gyneco-conflict"><div className="gyneco-conflict-title"><TriangleAlert size={13}/> Las fuentes no coinciden: {c.topic}</div><ul className="gyneco-conflict-sides">{c.sides.map(side=><li key={side.who}><b>{side.who}</b><span>{side.says} <span className="gyneco-hint">({ids(side.sources)})</span></span></li>)}</ul>{c.agreement&&<p className="gyneco-note">{c.agreement}</p>}{c.caveat&&<p className="gyneco-hint">{c.caveat}</p>}</div>;})}
  </>;
 }
 
@@ -54,6 +54,9 @@ export default function GynecoMode(){
  useEffect(()=>{const system=selected?.system as SystemId|undefined;if(!system||tables[system])return;let live=true;loadDescriptions(system).then(t=>{if(live&&t)setTables(x=>({...x,[system]:t}));});return()=>{live=false;};},[selected?.system,tables]);
  const description=selected?describe(tables,selected.name,selected.system as SystemId):undefined;
  const partId=(base:string)=>SIDED.includes(base)?`VHF-${base}-${side}`:`VHF-${base}`;
+ const detailRef=useRef<HTMLElement>(null);
+ const listRef=useRef<HTMLElement>(null);
+ useEffect(()=>{detailRef.current?.scrollTo({top:0});const list=listRef.current,active=list?.querySelector<HTMLElement>('button.active');if(list&&active)list.scrollTo({left:active.offsetLeft-8});},[sectionId]);
  const choose=(id:SectionId)=>{setSectionId(id);if(id!=='autoexamen')setPlaying(false);};
  const pick=(id:string)=>{setSelectedId(id);choose('anatomia');};
  const seekTo=(t:number)=>{setSeek(s=>({t,n:s.n+1}));setTime(t);};
@@ -61,15 +64,15 @@ export default function GynecoMode(){
  const look=(preset:ViewPreset)=>{setView(v=>({preset,n:v.n+1}));setInterior(preset==='pelvis');};
  const label=ended?'Repetir':playing?'Pausar':time>.05?'Seguir':'Ver cómo palparte';
  return <main className="studio gyneco">
-  <GynecoScene side={side} position={position} interior={interior} view={view} playing={playing} speed={speed} seek={seek} selectedId={selectedId} onTime={setTime} onEnd={()=>setPlaying(false)} onPick={pick} onProgress={setProgress} onError={setError}/>
+  <GynecoScene demo={sectionId==='autoexamen'} side={side} position={position} interior={interior} view={view} playing={playing} speed={speed} seek={seek} selectedId={selectedId} onTime={setTime} onEnd={()=>setPlaying(false)} onPick={pick} onProgress={setProgress} onError={setError}/>
   <div className="vignette"/>
   <header className="identity"><div className="eyebrow"><span className="status-dot"/> GINECOLOGÍA · SALUD MAMARIA</div><h1>Conocé tus mamas<Badge variant="outline" className="edition">3D</Badge></h1><div className="identity-meta">Folleto Octubre Rosa · IFMSA Tucumán <span>·</span> contenido a validar</div></header>
   <nav className="top-actions" aria-label="Navegación"><a href="#" className="mode-link"><ArrowLeft size={18}/><span>Atlas anatómico</span></a></nav>
-  <section className="gyneco-list glass" aria-label="Secciones">
+  <section ref={listRef} className="gyneco-list glass" aria-label="Secciones">
    <div className="panel-heading"><span>Secciones</span></div>
    {SECTIONS.map(s=><Button key={s.id} variant="ghost" className={s.id===sectionId?'active':''} aria-pressed={s.id===sectionId} onClick={()=>choose(s.id)}>{s.label}</Button>)}
   </section>
-  <section className="gyneco-detail glass" aria-label={section.title}>
+  <section ref={detailRef} className="gyneco-detail glass" aria-label={section.title}>
    <div className="gyneco-title"><h2>{section.title}</h2><Badge variant="secondary" title="Contenido pendiente de revisión por un docente"><TriangleAlert size={12}/> A validar</Badge></div>
    <SectionText section={section}>
     {section.id==='autoexamen'&&<div className="gyneco-demo">
@@ -87,12 +90,12 @@ export default function GynecoMode(){
      <p className="gyneco-hint">Cuándo hacerlo: {SECTIONS.find(s=>s.id==='controles')!.items![0]}</p>
     </div>}
     {section.id==='anatomia'&&<div className="gyneco-anatomy">
-     {GROUPS.map(g=><div key={g.name} className="gyneco-group"><div className="gyneco-group-name">{g.name}</div><div className="gyneco-chips">{g.ids.map(base=>{const id=partId(base),p=parts.get(id);return p?<Button key={id} variant="ghost" className={id===selectedId?'active':''} aria-pressed={id===selectedId} onClick={()=>setSelectedId(id)}>{capitalize(p.nameEs)}</Button>:null;})}</div></div>)}
+     {GROUPS.map(g=><div key={g.name} className="gyneco-group"><div className="gyneco-group-name">{g.name}</div><div className="gyneco-chips">{g.ids.map(base=>{const id=partId(base),p=parts.get(id);return p?<Button key={id} variant="ghost" className={id===selectedId?'active':''} aria-pressed={id===selectedId} onClick={()=>{setSelectedId(id);look(g.name==='Mama'?'breasts':'pelvis');}}>{capitalize(p.nameEs)}</Button>:null;})}</div></div>)}
      {selected?<div className="gyneco-structure"><h3>{capitalize(selected.nameEs)}</h3>{description?<><p>{description.resumen}</p><dl className="structure-facts">{description.detalles.map(d=><div key={d.titulo}><dt>{d.titulo}</dt><dd>{d.texto}</dd></div>)}</dl></>:<p>Todavía no hay descripción para esta estructura.</p>}</div>:<p className="gyneco-hint">Tocá una estructura del modelo o elegila de la lista.</p>}
      <span className="context-note review-note">Contenido educativo · a validar por un docente</span>
     </div>}
    </SectionText>
-   <div className="gyneco-sources"><div className="gyneco-subtitle">Fuentes</div>{section.sources.map(s=><p key={s.id}>{s.id} · {s.url?<a href={s.url} target="_blank" rel="noreferrer">{s.label}</a>:s.label}{s.retrieved&&`, consultado ${s.retrieved}`}{s.backup&&' (respaldo, no oficial)'}</p>)}{section.noResearch&&<p>{section.noResearch}</p>}{section.id==='autoexamen'&&<p>{UNT_NOTE}</p>}<p>Material educativo, no diagnóstico: no reemplaza la consulta con un profesional de la salud.</p></div>
+   <div className="gyneco-sources"><div className="gyneco-subtitle">Fuentes</div>{section.sources.map(s=><p key={s.id} className="gyneco-source"><b>{s.id}</b><span>{s.url?<a href={s.url} target="_blank" rel="noreferrer">{s.label}</a>:s.label}{s.retrieved&&`, consultado ${s.retrieved}`}{s.backup&&' (respaldo, no oficial)'}</span></p>)}{section.noResearch&&<p>{section.noResearch}</p>}{section.id==='autoexamen'&&<p>{UNT_NOTE}</p>}<p>Material educativo, no diagnóstico: no reemplaza la consulta con un profesional de la salud.</p></div>
   </section>
   <nav className="gyneco-views glass" aria-label="Cámara"><Toggle label="Vista" value={view.preset} options={[{value:'breasts',text:'Mamas'},{value:'pelvis',text:'Pelvis'}]} onChange={look}/>
    <label className="gyneco-interior"><Switch checked={interior} onCheckedChange={setInterior} aria-label="Ver el interior"/><span>Ver el interior</span></label></nav>

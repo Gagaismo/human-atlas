@@ -34,8 +34,8 @@ export function vesselCenterline(vessel:Vessel,step=1):Centerline{
  return out;
 }
 
-/** Closed-cap tube with per-sample radius (parallel-transport frames) and an 'arc' vertex attribute. */
-export function buildVesselGeometry(vessel:Vessel,radialSegments=10,step=1):T.BufferGeometry{
+/** Closed-cap tube with per-sample radius (parallel-transport frames) and an 'arc' vertex attribute; `radiusScale` fattens it for the 3D view (the angiogram keeps 1). */
+export function buildVesselGeometry(vessel:Vessel,radialSegments=10,step=1,radiusScale=1):T.BufferGeometry{
  const geometry=new T.BufferGeometry(),{points,radii,arcs}=vesselCenterline(vessel,step),m=points.length,rs=Math.max(3,Math.round(radialSegments));
  if(m<2){
   geometry.setAttribute('position',new T.BufferAttribute(new Float32Array(0),3));geometry.setAttribute('normal',new T.BufferAttribute(new Float32Array(0),3));geometry.setAttribute('arc',new T.BufferAttribute(new Float32Array(0),1));
@@ -53,7 +53,7 @@ export function buildVesselGeometry(vessel:Vessel,radialSegments=10,step=1):T.Bu
   normal.addScaledVector(tk,-normal.dot(tk)).normalize();
   bin.crossVectors(tk,normal);
   tPrev=tk;
-  const r=Math.max(radii[k],MIN_RADIUS);
+  const r=Math.max(radii[k],MIN_RADIUS)*radiusScale;
   for(let j=0;j<rs;j++){
    const phi=j/rs*Math.PI*2,c=Math.cos(phi),sn=Math.sin(phi),i=(k*rs+j)*3,nx=normal.x*c+bin.x*sn,ny=normal.y*c+bin.y*sn,nz=normal.z*c+bin.z*sn;
    nor[i]=nx;nor[i+1]=ny;nor[i+2]=nz;

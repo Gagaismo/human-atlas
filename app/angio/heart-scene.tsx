@@ -1,8 +1,8 @@
 import {useEffect,useRef,useState} from 'react';
 import * as T from 'three';
 import type {CoronaryTree,Segment,Vec3,Vessel,Visibility} from './core/types';
-import {FAMILY_PALETTE,arcLengths,findSegment,pointAtArc,polylineLength,segmentRange,visibleVessels} from './core/tree';
-import {DETECTOR_SIZE,SID,SOD,imageAxes} from './core/geometry';
+import {arcLengths,findSegment,pointAtArc,polylineLength,segmentRange,visibleVessels} from './core/tree';
+import {imageAxes} from './core/geometry';
 import {foreshorteningOfPolyline} from './core/metrics';
 import {buildVesselGeometry,segmentAtArc} from './vessel-mesh';
 import {loadHeartAsset,type HeartPart} from './heart-asset';
@@ -11,16 +11,24 @@ export interface HeartToggles{detectorView:boolean;foreshortening:boolean;skelet
 export interface HeartSceneProps{tree:CoronaryTree;vis:Visibility;a:number;b:number;selected:string|null;toggles:HeartToggles;onSelect:(segmentId:string|null)=>void;onDetectorViewLeft:()=>void}
 
 const NO_WEBGL='Esta vista necesita WebGL 2, que este navegador tiene desactivado o no admite. Probá con una versión actual de Chrome, Firefox o Safari.';
-/** The C-arm is drawn at this fraction of its real size so the whole arc stays close to the heart. */
-const ARM_SCALE=.35,TUBE_Z=-SOD*ARM_SCALE,DETECTOR_Z=(SID-SOD)*ARM_SCALE,DETECTOR_SIDE=DETECTOR_SIZE*ARM_SCALE;
+/** The C-arm is drawn at a reduced size and distance (mm along the beam axis, isocentre = 0): the source behind the heart, the detector well beyond it so its field does not box the heart in. */
+const TUBE_Z=-170,DETECTOR_Z=175,DETECTOR_SIDE=105,TUBE_DOT=4;
+/** Coronary tubes are drawn this much thicker than their lumen so they read in the 3D view (the angiogram keeps the true calibre). */
+const TUBE_SCALE=1.8;
 const MIN_DIST=100,MAX_DIST=1500,DEFAULT_DIST=340,HIGHLIGHT='#ff9a1f',HOVER='#ffffff',FADE_S=.25;
-// S16: darker matte heart, plain grey-blue great vessels and a light grey skeleton ghost so the coloured coronaries stand out.
-const HEART_COLOR='#8a4b41',GREAT_COLOR='#7f93a6',SKELETON_COLOR='#dde5ec',SOURCE_COLOR='#ffa31f',FIELD_COLOR='#ffb347';
+/** Free-orbit rest pose = the detector's eye turned by this much, a 3/4 view like the reference (the detector panel then sits beside/below the heart instead of in front of it). */
+const FREE_YAW=.22,FREE_PITCH=-.55;
+// S16/S17: dark translucent maroon heart, faint grey-blue great vessels and a very faint skeleton ghost so the bright coloured coronaries stand out.
+const HEART_COLOR='#5a2a2a',GREAT_COLOR='#5d7288',SKELETON_COLOR='#b9c9d8',SOURCE_COLOR='#ff9a1f',FIELD_COLOR='#ffa31f';
+/** Saturated family colours (clickable things are the bright ones). */
+const FAMILY_COLOR:Record<Vessel['family'],string>={tci:'#f2c94c',da:'#ff8a65',cx:'#4f9dff',ri:'#b98cff',cd:'#4fe0b0',graft:'#ff6fb5'};
+/** Parts of the BodyParts3D asset not drawn: FJ1972 (left internal thoracic artery) is a long thin tube that runs straight through the heart; the LIMA graft already draws it. */
+const HIDDEN_PARTS=new Set(['FJ1972']);
 const LABEL_BASE='position:absolute;left:0;top:0;white-space:nowrap;pointer-events:none;font:11px/1.2 ui-monospace,Menlo,Consolas,monospace;padding:1px 5px;border-radius:3px;will-change:transform;';
 const LABEL_STYLE={vessel:'color:#f1f4f7;background:#0b1118b3;border:1px solid #ffffff2e;',selected:'color:#1b1002;background:#ff9a1f;font-weight:700;',plane:'color:#d6f6ff;background:#0b1118cc;border:1px solid #6fd3ff80;',carm:'color:#e6eef6;background:#0b1118b3;border:1px solid #7f95a855;',hover:'color:#f1f4f7;background:#0b1118d9;border:1px solid #ffffff55;z-index:3;'};
 
 type Kind=keyof typeof LABEL_STYLE;
-interface Label{el:HTMLDivElement;kind:Kind;at:()=>T.Vector3}
+interface Label{el:HTMLDivElement;kind:Kind;at:()=>T.Vector3;/** Screen position (px) of the last frame it was shown. */x?:number;y?:number}
 type Uni<T>={value:T};
 /** Highlight of one vessel: the segment range now selected and the one that is fading out (S14: no abrupt switching). */
 interface Glow{uHi0:Uni<number>;uHi1:Uni<number>;uHiA:Uni<number>;uHj0:Uni<number>;uHj1:Uni<number>;uHjA:Uni<number>;uHv0:Uni<number>;uHv1:Uni<number>;uHiColor:Uni<T.Color>;uHvColor:Uni<T.Color>}
@@ -76,8 +84,8 @@ export default function HeartScene(props:HeartSceneProps){
   canvas.setAttribute('aria-label','Corazón 3D con el árbol coronario. Arrastrá para rotar y usá la rueda o pellizcá para acercar.');
   el.appendChild(canvas);
   const scene=new T.Scene(),camera=new T.PerspectiveCamera(32,1,20,2500);scene.add(camera);
-  scene.add(new T.HemisphereLight(0xffffff,0x3b2b2b,1.05));
-  const headlight=new T.DirectionalLight(0xfff6ee,2);headlight.position.set(.4,.8,1);camera.add(headlight);
+  scene.add(new T.HemisphereLight(0xffffff,0x3b2b2b,.85));
+  const headlight=new T.DirectionalLight(0xfff6ee,1.7);headlight.position.set(.4,.8,1);camera.add(headlight);
   const world=new T.Group();scene.add(world);
 
   // Orbit: own quaternion trackball, because the detector view needs an arbitrary up vector (v) that OrbitControls would fight.
@@ -85,6 +93,9 @@ export default function HeartScene(props:HeartSceneProps){
   let dist=DEFAULT_DIST;
   const goalOf=(a:number,b:number)=>{const {u,v,d}=imageAxes(a,b);basis.makeBasis(v3(u),v3(v),v3(d));return qGoal.setFromRotationMatrix(basis);};
   q.copy(goalOf(latest.current.a,latest.current.b));
+  const freeTurn=new T.Quaternion().setFromEuler(new T.Euler(FREE_PITCH,FREE_YAW,0,'YXZ'));
+  if(!latest.current.toggles.detectorView)q.multiply(freeTurn);
+  let freeGoal:T.Quaternion|null=null;
   /** Camera distance at which the whole heart box, seen with orientation `qa` and aimed at the isocentre, fits the panel with margin. */
   const inv=new T.Quaternion(),corner=new T.Vector3();
   const fitDist=(qa:T.Quaternion,box:T.Box3=heartBox,margin=1.12)=>{
@@ -103,8 +114,11 @@ export default function HeartScene(props:HeartSceneProps){
   const observer=new ResizeObserver(resize);observer.observe(el);resize();
 
   // Heart parts.
-  const heartMat=new T.MeshStandardMaterial({color:HEART_COLOR,roughness:.88,metalness:0,side:T.DoubleSide,transparent:true,opacity:1}),greatMat=new T.MeshStandardMaterial({color:GREAT_COLOR,roughness:.8,side:T.DoubleSide,transparent:true,opacity:1});
-  const skeletonMat=new T.MeshStandardMaterial({color:SKELETON_COLOR,roughness:1,transparent:true,opacity:.1,depthWrite:false});
+  const heartMat=new T.MeshStandardMaterial({color:HEART_COLOR,roughness:1,metalness:0,side:T.DoubleSide,transparent:true,opacity:1}),greatMat=new T.MeshStandardMaterial({color:GREAT_COLOR,roughness:1,metalness:0,side:T.DoubleSide,transparent:true,opacity:.3,depthWrite:false});
+  // Skeleton: a thin ghost whose faces fade towards the view direction, so only the outlines show (no bright faces).
+  const skeletonMat=new T.ShaderMaterial({transparent:true,depthWrite:false,side:T.DoubleSide,uniforms:{uColor:{value:new T.Color(SKELETON_COLOR)},uAlpha:{value:.035}},
+   vertexShader:'varying vec3 vN;varying vec3 vV;void main(){vec4 mv=modelViewMatrix*vec4(position,1.);vN=normalize(normalMatrix*normal);vV=-mv.xyz;gl_Position=projectionMatrix*mv;}',
+   fragmentShader:'uniform vec3 uColor;uniform float uAlpha;varying vec3 vN;varying vec3 vV;void main(){float f=1.-abs(dot(normalize(vN),normalize(vV)));gl_FragColor=vec4(uColor,uAlpha*(.25+2.2*f*f));'+String.fromCharCode(10)+'#include <colorspace_fragment>'+String.fromCharCode(10)+'}'});
   const partGroup=new T.Group(),skeletonGroup=new T.Group(),heartMeshes:T.Mesh[]=[],heartCentre=new T.Vector3(),heartHalf=new T.Vector3(1,1,1),heartBox=new T.Box3(),thoraxBox=new T.Box3();
   world.add(partGroup,skeletonGroup);
   let parts:HeartPart[]|null=null,restDist=DEFAULT_DIST,distGoal:number|null=null;
@@ -112,6 +126,7 @@ export default function HeartScene(props:HeartSceneProps){
    if(disposed)return;parts=list;
    const box=new T.Box3();
    for(const p of list){
+    if(HIDDEN_PARTS.has(p.id))continue;
     const mesh=new T.Mesh(p.geometry,p.group==='skeleton'?skeletonMat:p.group==='heart'?heartMat:greatMat);
     if(p.group==='skeleton'){mesh.renderOrder=-1;skeletonGroup.add(mesh);thoraxBox.union(p.geometry.boundingBox!);}
     else{partGroup.add(mesh);if(p.group==='heart'){heartMeshes.push(mesh);box.union(p.geometry.boundingBox!);}}
@@ -125,14 +140,14 @@ export default function HeartScene(props:HeartSceneProps){
 
   // C-arm drawn around the heart (local frame: x = image right u, y = image up v, z = towards the detector d).
   const arm=new T.Group();arm.matrixAutoUpdate=false;world.add(arm);
-  const sourceMat=new T.MeshBasicMaterial({color:SOURCE_COLOR}),source=new T.Mesh(new T.SphereGeometry(4.5,20,14),sourceMat);source.position.z=TUBE_Z;arm.add(source);
-  const panelMat=new T.MeshBasicMaterial({color:'#9db2c6',transparent:true,opacity:.09,side:T.DoubleSide,depthWrite:false});
-  const panel=new T.Mesh(new T.PlaneGeometry(DETECTOR_SIDE*1.45,DETECTOR_SIDE*1.45),panelMat);panel.renderOrder=4;panel.position.z=DETECTOR_Z+1;arm.add(panel);
-  const fh=DETECTOR_SIDE/2*.94,fieldMat=new T.LineBasicMaterial({color:FIELD_COLOR,transparent:true,opacity:.85});
-  const field=new T.LineLoop(new T.BufferGeometry().setFromPoints([[-fh,-fh],[fh,-fh],[fh,fh],[-fh,fh]].map(([x,y])=>new T.Vector3(x,y,DETECTOR_Z))),fieldMat);arm.add(field);
+  const sourceMat=new T.MeshBasicMaterial({color:SOURCE_COLOR,depthTest:false,transparent:true}),source=new T.Mesh(new T.SphereGeometry(TUBE_DOT,20,14),sourceMat);source.position.z=TUBE_Z;source.renderOrder=6;arm.add(source);
+  const PANEL_OPACITY=.3,panelMat=new T.MeshBasicMaterial({color:'#2b2418',transparent:true,opacity:PANEL_OPACITY,side:T.DoubleSide,depthWrite:false});
+  const panel=new T.Mesh(new T.PlaneGeometry(DETECTOR_SIDE*1.3,DETECTOR_SIDE*1.3),panelMat);panel.renderOrder=4;panel.position.z=DETECTOR_Z+1;arm.add(panel);
+  const fh=DETECTOR_SIDE/2*.78,fieldMat=new T.LineBasicMaterial({color:FIELD_COLOR,transparent:true,opacity:.95,depthTest:false});
+  const field=new T.LineLoop(new T.BufferGeometry().setFromPoints([[-fh,-fh],[fh,-fh],[fh,fh],[-fh,fh]].map(([x,y])=>new T.Vector3(x,y,DETECTOR_Z))),fieldMat);field.renderOrder=6;arm.add(field);
   const apex=new T.Vector3(0,0,TUBE_Z),corners=[[-fh,-fh],[fh,-fh],[fh,fh],[-fh,fh]].map(([x,y])=>new T.Vector3(x,y,DETECTOR_Z));
-  const beamMat=new T.LineBasicMaterial({color:'#ffd36b',transparent:true,opacity:.3});
-  arm.add(new T.LineSegments(new T.BufferGeometry().setFromPoints([...corners.flatMap(c=>[apex,c]),apex,new T.Vector3(0,0,DETECTOR_Z)]),beamMat));
+  const beamMat=new T.LineBasicMaterial({color:'#ffb347',transparent:true,opacity:.4,depthTest:false});
+  const beams=new T.LineSegments(new T.BufferGeometry().setFromPoints([...corners.flatMap(c=>[apex,c]),apex,new T.Vector3(0,0,DETECTOR_Z)]),beamMat);beams.renderOrder=5;arm.add(beams);
   /** C-arm parts that react to the pointer (hover feedback only; clicking them does not change anything). */
   const armParts:T.Object3D[]=[source,field];   // the big translucent panel itself is not pickable: it would shadow the vessels behind it
 
@@ -149,8 +164,8 @@ export default function HeartScene(props:HeartSceneProps){
     Object.assign(shader.uniforms,hi);
     shader.vertexShader=shader.vertexShader.replace('#include <common>','#include <common>\nattribute float arc;\nvarying float vArc;').replace('#include <begin_vertex>','#include <begin_vertex>\nvArc=arc;');
     shader.fragmentShader=shader.fragmentShader.replace('#include <common>','#include <common>\nvarying float vArc;\nuniform float uHi0;\nuniform float uHi1;\nuniform float uHiA;\nuniform float uHj0;\nuniform float uHj1;\nuniform float uHjA;\nuniform float uHv0;\nuniform float uHv1;\nuniform vec3 uHiColor;\nuniform vec3 uHvColor;')
-     .replace('#include <color_fragment>','#include <color_fragment>\nfloat hiMask=max(step(uHi0,vArc)*step(vArc,uHi1)*uHiA,step(uHj0,vArc)*step(vArc,uHj1)*uHjA);\nfloat hvMask=step(uHv0,vArc)*step(vArc,uHv1);\ndiffuseColor.rgb=mix(mix(diffuseColor.rgb,uHvColor,.4*hvMask),uHiColor,hiMask);')
-     .replace('#include <emissivemap_fragment>','#include <emissivemap_fragment>\ntotalEmissiveRadiance+=uHiColor*0.35*hiMask+uHvColor*0.22*hvMask;');
+     .replace('#include <color_fragment>','#include <color_fragment>\nfloat hiMask=max(step(uHi0,vArc)*step(vArc,uHi1)*uHiA,step(uHj0,vArc)*step(vArc,uHj1)*uHjA);\nfloat hvMask=step(uHv0,vArc)*step(vArc,uHv1);\ndiffuseColor.rgb=mix(mix(diffuseColor.rgb,uHvColor,.55*hvMask),uHiColor,hiMask);')
+     .replace('#include <emissivemap_fragment>','#include <emissivemap_fragment>\ntotalEmissiveRadiance+=uHiColor*0.9*hiMask+uHvColor*0.5*hvMask+diffuseColor.rgb*pow(1.-clamp(dot(normalize(normal),normalize(vViewPosition)),0.,1.),2.)*0.7;');
    };
    material.customProgramCacheKey=()=>'angio-vessel-arc';
   };
@@ -166,13 +181,13 @@ export default function HeartScene(props:HeartSceneProps){
     const full=visible.has(vessel);
     if(!full&&(vessel.system==='graft'||(vessel.variant==='ramus'&&!vis.ramus)||vessel.points.length<2))continue;
     let geometry=geometries.get(vessel);
-    if(!geometry){geometry=buildVesselGeometry(vessel,10,1);geometries.set(vessel,geometry);}
+    if(!geometry){geometry=buildVesselGeometry(vessel,12,1,TUBE_SCALE);geometries.set(vessel,geometry);}
     if(!geometry.getAttribute('position').count)continue;
-    const base=new T.Color(FAMILY_PALETTE[vessel.family]).multiplyScalar(.92);
-    const material=new T.MeshStandardMaterial({color:base,roughness:.4,metalness:0,emissive:base.clone().multiplyScalar(.28)});
+    const base=new T.Color(FAMILY_COLOR[vessel.family]);
+    const material=new T.MeshStandardMaterial({color:base,roughness:.35,metalness:0,emissive:base.clone().multiplyScalar(.6)});
     const hi:Glow={uHi0:{value:-1},uHi1:{value:-1},uHiA:{value:0},uHj0:{value:-1},uHj1:{value:-1},uHjA:{value:0},uHv0:{value:-1},uHv1:{value:-1},uHiColor:{value:new T.Color(HIGHLIGHT)},uHvColor:{value:new T.Color(HOVER)}};
     patchMaterial(material,hi);
-    if(!full){material.transparent=true;material.opacity=.2;material.depthWrite=false;material.color.multiplyScalar(.55);material.emissive.setScalar(0);}
+    if(!full){material.color.multiplyScalar(.8);material.emissive.multiplyScalar(.8);}   // the system not injected stays bright, only ~20 % dimmer
     const mesh=new T.Mesh(geometry,material);mesh.renderOrder=full?1:0;tubeGroup.add(mesh);
     if(full)pickables.push(mesh);
     entries.push({vessel,mesh,material,hi,cur:{lo:-1,hi:-1,a:0,goal:0},old:{lo:-1,hi:-1,a:0,goal:0},full,base:material.color.clone(),arcF:(()=>{const a=arcLengths(vessel.points),t=a[a.length-1]||1;return a.map(x=>x/t);})()});
@@ -195,7 +210,7 @@ export default function HeartScene(props:HeartSceneProps){
    };
    avLabel=addPlane(planeFits.av,'#4fd6ff','Surco AV');septumLabel=addPlane(planeFits.septum,'#ff7ad9','Septum');
    const armLabel=(text:string,z:number,y:number)=>addLabel(text,'carm',()=>arm.localToWorld(new T.Vector3(0,y,z)));
-   armLabel('Rayos X',TUBE_Z,12);armLabel('Detector (I/I)',DETECTOR_Z,DETECTOR_SIDE*.74+6);
+   armLabel('Rayos X',TUBE_Z,TUBE_DOT+3);armLabel('Detector (I/I)',DETECTOR_Z,-DETECTOR_SIDE*.62);
    selectedLabel=addLabel('','selected',()=>new T.Vector3());
    shownTree=tree;shownVis=visKey(vis);shownSig='';dirty=true;
   };
@@ -205,7 +220,7 @@ export default function HeartScene(props:HeartSceneProps){
    const {a,b,selected,toggles}=latest.current;
    const {u,v,d}=imageAxes(a,b);arm.matrix.makeBasis(v3(u),v3(v),v3(d));arm.matrixWorldNeedsUpdate=true;arm.updateMatrixWorld(true);
    const glass=toggles.seeThrough;
-   heartMat.opacity=glass?.35:1;greatMat.opacity=glass?.42:1;heartMat.depthWrite=greatMat.depthWrite=!glass;
+   heartMat.opacity=glass?.5:.9;greatMat.opacity=glass?.3:.55;heartMat.depthWrite=!glass;
    skeletonGroup.visible=toggles.skeleton;planeGroup.visible=toggles.planes;arm.visible=!toggles.detectorView;
    const hit=selected?findSegment(latest.current.tree,selected):null,tmp=new T.Color();
    for(const e of entries){
@@ -247,13 +262,27 @@ export default function HeartScene(props:HeartSceneProps){
     NDC.copy(p).project(camera);
     if(NDC.z>1||Math.abs(NDC.x)>1.05||Math.abs(NDC.y)>1.05||(occludable&&!glass&&parts&&hiddenByHeart(p))){l.el.style.display='none';return;}
     l.el.style.display='block';
-    l.el.style.transform=`translate(${((NDC.x+1)/2*w).toFixed(1)}px,${((1-NDC.y)/2*hh).toFixed(1)}px) translate(-50%,-135%)`;
+    l.x=(NDC.x+1)/2*w;l.y=(1-NDC.y)/2*hh;
+    l.el.style.transform=`translate(${l.x.toFixed(1)}px,${l.y.toFixed(1)}px) translate(-50%,-135%)`;
    };
    for(const l of labels){
     if(l.kind==='vessel')show(l,toggles.labels,true);
     else if(l.kind==='plane')show(l,toggles.planes,false);
     else if(l.kind==='selected'){show(l,selAmount>.01,true);l.el.style.opacity=String(Math.min(1,selAmount));}
     else show(l,!toggles.detectorView,false);
+   }
+   // The C-arm labels never sit on each other or on the selected-segment label: the later one moves up until the boxes are clear.
+   const placed:Label[]=[];
+   for(const l of labels.filter(l=>l.kind==='selected'||l.kind==='carm')){
+    if(l.el.style.display==='none')continue;
+    const bw=l.el.offsetWidth,bh=l.el.offsetHeight;
+    for(let k=0;k<6;k++){
+     const hit=placed.find(o=>Math.abs((l.x??0)-(o.x??0))<(bw+o.el.offsetWidth)/2+4&&Math.abs((l.y??0)-(o.y??0))<bh+3);
+     if(!hit||l.kind==='selected')break;
+     l.y=(l.y??0)+((l.y??0)<=(hit.y??0)?-1:1)*(bh+3);
+    }
+    if(l.kind==='carm')l.el.style.transform=`translate(${(l.x??0).toFixed(1)}px,${(l.y??0).toFixed(1)}px) translate(-50%,-135%)`;
+    placed.push(l);
    }
   };
   const updateCube=()=>{
@@ -271,7 +300,7 @@ export default function HeartScene(props:HeartSceneProps){
   let hoverEntry:Entry|null=null,hoverArm:T.Object3D|null=null,hoverReq:{x:number;y:number}|null=null;
   const clearHover=()=>{
    if(hoverEntry){hoverEntry.hi.uHv0.value=hoverEntry.hi.uHv1.value=-1;hoverEntry=null;}
-   hoverArm=null;source.scale.setScalar(1);panelMat.opacity=.09;fieldMat.opacity=.85;beamMat.opacity=.3;hoverEl.style.display='none';
+   hoverArm=null;source.scale.setScalar(1);panelMat.opacity=PANEL_OPACITY;fieldMat.opacity=.95;beamMat.opacity=.4;hoverEl.style.display='none';
   };
   const applyHover=(x:number,y:number)=>{
    const hit=probe(x,y);
@@ -281,7 +310,7 @@ export default function HeartScene(props:HeartSceneProps){
     hit.entry.hi.uHv0.value=Math.min(r.f0,r.f1);hit.entry.hi.uHv1.value=Math.max(r.f0,r.f1);
     const b=canvas.getBoundingClientRect();hoverEl.textContent=hit.seg.short;hoverEl.style.display='block';
     hoverEl.style.transform=`translate(${(x-b.left+12).toFixed(0)}px,${(y-b.top-26).toFixed(0)}px)`;
-   }else if(hit){hoverArm=hit.arm;source.scale.setScalar(1.7);panelMat.opacity=.26;fieldMat.opacity=1;beamMat.opacity=.55;}
+   }else if(hit){hoverArm=hit.arm;source.scale.setScalar(1.7);panelMat.opacity=.5;fieldMat.opacity=1;beamMat.opacity=.8;}
    canvas.style.cursor=hit?'pointer':'grab';dirty=true;
   };
   const nearest=(cx:number,cy:number):{entry:Entry;seg:Segment}|null=>{
@@ -361,7 +390,12 @@ export default function HeartScene(props:HeartSceneProps){
     if(Math.abs(want-dist)>.05){dist+=(want-dist)*(Math.abs(want-dist)<.5?1:1-Math.exp(-dt*10));dirty=true;}
    }
    const calm=matchMedia('(prefers-reduced-motion: reduce)').matches,step=calm?1:dt/FADE_S;
-   if(prevDetector!==t.detectorView){if(prevDetector&&!t.detectorView&&!dragging)distGoal=restDist;prevDetector=t.detectorView;}
+   if(prevDetector!==t.detectorView){if(prevDetector&&!t.detectorView&&!dragging){distGoal=restDist;freeGoal=qGoal.clone().multiply(freeTurn);}prevDetector=t.detectorView;}
+   if(freeGoal){
+    const gap=q.angleTo(freeGoal);
+    if(dragging||gap<1e-3||calm){if(!dragging)q.copy(freeGoal);freeGoal=null;}else q.slerp(freeGoal,1-Math.exp(-dt*6));
+    dirty=true;
+   }
    if(distGoal!==null){
     if(Math.abs(distGoal-dist)<.5||calm){dist=distGoal;distGoal=null;}else dist+=(distGoal-dist)*(1-Math.exp(-dt*6));
     dirty=true;

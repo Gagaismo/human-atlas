@@ -47,6 +47,13 @@ const VIS_LEFT={system:'left',ramus:false,grafts:new Set()};
  check(G.projectPoint([10,0,-100],0,0).x>G.projectPoint([10,0,100],0,0).x,'ampliación cónica: más cerca de la fuente, más grande');
  const n=G.projectNorm([G.DETECTOR_SIZE/2/(G.SID/G.SOD),0,0],0,0);
  check(near(n[0],1,1e-9)&&near(n[1],0),'normalizado [-1,1]: el borde del detector vale 1');
+ // campo mostrado (FOV): FIELD_SIZE < DETECTOR_SIZE y fieldOffset deja el punto en el centro del campo en cualquier ángulo
+ check(G.FIELD_SIZE>0&&G.FIELD_SIZE<G.DETECTOR_SIZE,'FIELD_SIZE: campo mostrado menor que el detector');
+ for(const [a,b] of [[0,0],[-15,-27],[45,-35],[-90,45]]){
+  const ax=G.imageAxes(a,b),ctr=[30,-5,10],o=G.fieldOffset(ax,ctr),q=G.projectWith(ax,ctr);
+  check(near(q.x/(G.FIELD_SIZE/2)+o[0],0,1e-9)&&near(q.y/(G.FIELD_SIZE/2)+o[1],0,1e-9),`fieldOffset centra el punto en ${a}/${b}`);
+ }
+ check(nearV(G.fieldOffset(G.imageAxes(0,0),[0,0,0]),[0,0]),'fieldOffset del isocentro es 0');
  const c=G.clampAngles(200,-99);check(c.a===90&&c.b===-45,'clampAngles');
  check(G.fmtAngles(0,0)==='AP','fmt AP');check(G.fmtAngles(-30,-30)==='OAD 30 CAU 30','fmt OAD CAU');
  check(G.fmtAngles(45,-35)==='OAI 45 CAU 35','fmt OAI CAU');check(G.fmtAngles(0,30)==='AP CRA 30','fmt AP CRA');

@@ -12,6 +12,8 @@ import type {Vec3} from './types';
 export const SOD=750;            // source → isocentre, mm
 export const SID=1100;           // source → detector plane, mm
 export const DETECTOR_SIZE=250;  // square detector side, mm
+/** Displayed field of view at the detector, mm: the image-intensifier field mode of the angiogram (the detector itself stays DETECTOR_SIZE). */
+export const FIELD_SIZE=170;
 export const A_LIMIT=90;
 export const B_LIMIT=45;
 
@@ -48,6 +50,12 @@ export function projectWith(ax:ImageAxes,p:Vec3):Projected{
  const t=p[0]*d[0]+p[1]*d[1]+p[2]*d[2];
  const m=SID/(SOD+t);
  return {x:(p[0]*u[0]+p[1]*u[1]+p[2]*u[2])*m,y:(p[0]*v[0]+p[1]*v[1]+p[2]*v[2])*m,m};
+}
+
+/** Normalised offset (field half = 1) that puts the patient point `centre` in the middle of the displayed field at these angles. */
+export function fieldOffset(ax:ImageAxes,centre:Vec3):[number,number]{
+ const q=projectWith(ax,centre),h=FIELD_SIZE/2;
+ return [-q.x/h,-q.y/h];
 }
 
 export function projectPoint(p:Vec3,a:number,b:number):Projected{return projectWith(imageAxes(a,b),p)}

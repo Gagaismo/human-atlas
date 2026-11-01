@@ -3,7 +3,7 @@
 // subtracting and back faces adding the ray distance, so every pixel ends up with the total chord length (mm) the beam
 // crosses. The compositor turns it into intensity = background · exp(−μ·thickness), with soft edges, bloom, vignette and grain.
 import * as T from 'three';
-import {DETECTOR_SIZE,SID,SOD,imageAxes,projectWith} from './core/geometry';
+import {FIELD_SIZE,SID,SOD,imageAxes,projectWith} from './core/geometry';
 import {FAMILY_PALETTE,polylineLength,sampleSegment,visibleVessels} from './core/tree';
 import type {CoronaryTree,GraftId,Vec3,Vessel,Visibility} from './core/types';
 import {heartCloud,paintBackground} from './angiogram-background';
@@ -142,6 +142,7 @@ void main(){
  for(int k=0;k<8;k++){float an=float(k)*.7853982;wide+=th(vec2(cos(an),sin(an))*uSoft*3.).r;}
  wide/=8.;
  float tb=(t+.3*wide)*uDens;                            // slightly blooming, soft edges
+ tb=3.*(1.-exp(-tb/3.));                              // dense lumen saturates: proximal trunks stay medium grey, fine branches keep their contrast
  float pf=puff(uPuff0)+puff(uPuff1);                    // contrast cloud at the injected ostium (equivalent mm of iodine)
  float bg=texture2D(uBg,vUv).r;
  vec2 q=vUv-.5;
@@ -163,6 +164,7 @@ void main(){
 
 /** A selected segment and how visible its orange overlay is (0–1). */
 export interface Highlight{id:string|null;weight:number}
+/** `pan` is field-normalised and already includes the centring on the injected system. */
 export interface RenderOptions{a:number;b:number;pan:readonly [number,number];color:boolean;sel:Highlight;prev:Highlight;
  /** Seconds since the injection started (S14); anything ≥ CINE_END draws the fully opacified tree. */
  fill:number}
@@ -201,7 +203,7 @@ export function createAngioRenderer(canvas:HTMLCanvasElement):AngioRenderer|null
  const bgCtx=bgCanvas.getContext('2d')!;
  const bgTex=new T.CanvasTexture(bgCanvas);bgTex.minFilter=T.LinearFilter;bgTex.generateMipmaps=false;
  const quadMat=new T.ShaderMaterial({vertexShader:QUAD_VERT,fragmentShader:QUAD_FRAG,depthTest:false,depthWrite:false,uniforms:{
-  uThick:{value:rtThick.texture},uTint:{value:rtTint.texture},uBg:{value:bgTex},uTexel:{value:1/size},uSoft:{value:1},uMu:{value:.33},uSeed:{value:0},uColor:{value:0},
+  uThick:{value:rtThick.texture},uTint:{value:rtTint.texture},uBg:{value:bgTex},uTexel:{value:1/size},uSoft:{value:1},uMu:{value:.18},uSeed:{value:0},uColor:{value:0},
   uWCur:{value:0},uWPrev:{value:0},uDens:{value:1},uPuff0:{value:new T.Vector3()},uPuff1:{value:new T.Vector3()}}});
  const quad=new T.Mesh(new T.PlaneGeometry(2,2),quadMat);quad.frustumCulled=false;
  const quadScene=new T.Scene();quadScene.add(quad);
@@ -214,8 +216,8 @@ export function createAngioRenderer(canvas:HTMLCanvasElement):AngioRenderer|null
   const {d,u,v}=imageAxes(a,b);
   camera.matrix.makeBasis(v3(u,-1),v3(v),v3(d,-1)).setPosition(-SOD*d[0],-SOD*d[1],-SOD*d[2]);
   camera.matrixWorldNeedsUpdate=true;camera.updateMatrixWorld(true);
-  // Off-axis frustum: ±DETECTOR_SIZE/2 on the detector, x mirrored so screen right = u, shifted by the table pan.
-  const n=400,f=1400,w=DETECTOR_SIZE/2*n/SID;
+  // Off-axis frustum: ±FIELD_SIZE/2 on the detector, x mirrored so screen right = u, shifted by the table pan.
+  const n=400,f=1400,w=FIELD_SIZE/2*n/SID;
   camera.projectionMatrix.set(-n/w,0,-pan[0],0, 0,n/w,-pan[1],0, 0,0,-(f+n)/(f-n),-2*f*n/(f-n), 0,0,-1,0);
   camera.projectionMatrixInverse.copy(camera.projectionMatrix).invert();
  }
@@ -247,11 +249,11 @@ export function createAngioRenderer(canvas:HTMLCanvasElement):AngioRenderer|null
    qu.uWCur.value=o.sel.weight;qu.uWPrev.value=o.prev.weight;
    qu.uDens.value=done?1:.78+.22*smooth(.2,CINE_END,o.fill);
    // Faint contrast cloud at each ostium: rises as the injection starts and thins out once the vessels are filled.
-   const h=DETECTOR_SIZE/2,ax=imageAxes(o.a,o.b),amp=done?.5:smooth(0,.25,o.fill)*(1-.5*smooth(.9,CINE_END,o.fill));
+   const h=FIELD_SIZE/2,ax=imageAxes(o.a,o.b),amp=done?.5:smooth(0,.25,o.fill)*(1-.5*smooth(.9,CINE_END,o.fill));
    for(const [k,u] of [qu.uPuff0,qu.uPuff1].entries()){
     const pt=ostia[k];
     if(!pt||!hasTubes){u.value.set(0,0,0);continue;}
-    const q=projectWith(ax,pt);u.value.set((q.x/h+o.pan[0]+1)/2,(q.y/h+o.pan[1]+1)/2,amp*.7);
+    const q=projectWith(ax,pt);u.value.set((q.x/h+o.pan[0]+1)/2,(q.y/h+o.pan[1]+1)/2,amp*1.6);
    }
    renderer.setClearColor(0x000000,0);
    renderer.setRenderTarget(rtThick);renderer.clear();

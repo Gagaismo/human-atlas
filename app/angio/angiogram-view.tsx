@@ -1,6 +1,6 @@
 import {useCallback,useEffect,useMemo,useRef,useState} from 'react';
 import type {CSSProperties} from 'react';
-import {DETECTOR_SIZE,fmtAngles,projectWith,imageAxes} from './core/geometry';
+import {FIELD_SIZE,fieldOffset,fmtAngles,projectWith,imageAxes} from './core/geometry';
 import {FAMILY_PALETTE,sampleSegment} from './core/tree';
 import type {CoronaryTree,Family,Vec3,Visibility} from './core/types';
 import {CINE_END,createAngioRenderer,injectedVessels,type AngioRenderer,type Highlight} from './angiogram-render';
@@ -41,21 +41,30 @@ export default function AngiogramView(props:AngiogramViewProps){
  const [side,setSide]=useState(0),[failed,setFailed]=useState(false),[panned,setPanned]=useState(false),[lbls,setLbls]=useState<Lbl[]>([]);
 
  const graftKey=[...vis.grafts].sort().join(',');
- const {vessels,segs}=useMemo(()=>{
+ const {vessels,segs,centre}=useMemo(()=>{
   const vessels=injectedVessels(tree,vis),segs:Seg[]=[];
   for(const vessel of vessels)for(const s of vessel.segments){
    const sm=sampleSegment(vessel,s,2);
    if(sm.points.length<1)continue;
    segs.push({id:s.id,short:abbreviate(s.short),full:s.short,numbered:s.syntax!=='',family:vessel.family,pts:sm.points,mid:sm.points[sm.points.length>>1]});
   }
-  return {vessels,segs};
+  // Field centre: middle of the injected tree's bounding box, so the field is centred on the heart at every angle.
+  const lo:Vec3=[1e9,1e9,1e9],hi:Vec3=[-1e9,-1e9,-1e9];
+  for(const v of vessels)if(v.system!=='graft')for(const p of v.points)for(let k=0;k<3;k++){lo[k]=Math.min(lo[k],p[k]);hi[k]=Math.max(hi[k],p[k]);}
+  const centre:Vec3=lo[0]>hi[0]?[0,0,0]:[(lo[0]+hi[0])/2,(lo[1]+hi[1])/2,(lo[2]+hi[2])/2];
+  return {vessels,segs,centre};
   // eslint-disable-next-line react-hooks/exhaustive-deps
  },[tree,vis.system,vis.ramus,graftKey]);
 
- const project=useCallback((p:Vec3,ax:ReturnType<typeof imageAxes>):[number,number]=>{
-  const q=projectWith(ax,p),S=sizeRef.current,h=DETECTOR_SIZE/2;
-  return [(q.x/h+pan.current[0]+1)/2*S,(1-(q.y/h+pan.current[1]))/2*S];
+ const centreRef=useRef(centre);centreRef.current=centre;
+ /** Table pan as the renderer sees it: the user's pan plus the centring on the injected system at these angles. */
+ const effPan=useCallback((ax:ReturnType<typeof imageAxes>):[number,number]=>{
+  const o=fieldOffset(ax,centreRef.current);return [pan.current[0]+o[0],pan.current[1]+o[1]];
  },[]);
+ const project=useCallback((p:Vec3,ax:ReturnType<typeof imageAxes>):[number,number]=>{
+  const q=projectWith(ax,p),S=sizeRef.current,h=FIELD_SIZE/2,e=effPan(ax);
+  return [(q.x/h+e[0]+1)/2*S,(1-(q.y/h+e[1]))/2*S];
+ },[effPan]);
 
  drawRef.current=()=>{
   const {a,b,selected,color,labels:showLabels}=latest.current,S=sizeRef.current;
@@ -72,7 +81,7 @@ export default function AngiogramView(props:AngiogramViewProps){
   fd.prev.weight=Math.max(0,fd.prev.weight-step);
   if(fd.prev.weight<=0)fd.prev={id:null,weight:0};
   const elapsed=calm?CINE_END:(now-fillStart.current)/1000;
-  gl.current.render({a,b,pan:pan.current,color,sel:fd.cur,prev:fd.prev,fill:elapsed});
+  gl.current.render({a,b,pan:effPan(imageAxes(a,b)),color,sel:fd.cur,prev:fd.prev,fill:elapsed});
   if(cine.current)cine.current.textContent=cineText(elapsed);
   if(elapsed<CINE_END||fd.cur.weight<1||fd.prev.weight>0)request();
   const ax=imageAxes(a,b),out:Lbl[]=[];
@@ -121,7 +130,7 @@ export default function AngiogramView(props:AngiogramViewProps){
 
  // A new injection (system, dominance, ramus, grafts, first load) restarts the fill from the ostium; angle changes do not.
  useEffect(()=>{gl.current?.setScene(tree,vessels);fillStart.current=performance.now();request();},[tree,vessels,request,failed]);
- useEffect(()=>{request();},[a,b,selected,color,showLabels,segs,side,request]);
+ useEffect(()=>{request();},[a,b,selected,color,showLabels,segs,centre,side,request]);
 
  const setPan=useCallback((x:number,y:number)=>{
   pan.current=[Math.max(-PAN_MAX,Math.min(PAN_MAX,x)),Math.max(-PAN_MAX,Math.min(PAN_MAX,y))];

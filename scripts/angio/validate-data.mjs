@@ -152,6 +152,13 @@ for(const dom of ['right','left','co']){
  for(const id of REQUIRED[dom])check(segSyntax.has(id),`${tag}: missing segment ${id}`);
  for(const id of FORBIDDEN[dom])check(!segSyntax.has(id),`${tag}: segment ${id} must not exist in ${dom} dominance`);
  check(segSyntax.get('lad-mid')?.syntax==='7',`${tag}: lad-mid`);
+ {   // SYNTAX 6|7 is the D1 origin and 7|8 the D2 origin: the segment bounds follow where the branches leave the LAD
+  const lad=byId.get('lad');
+  for(const [child,seg,edge] of [['d1','lad-mid','from'],['d2','lad-apical','from']]){
+   const c=byId.get(child),s=lad?.segments.find(x=>x.id===seg);
+   if(c&&s)check(Math.abs(s[edge]-Math.min(0.7,Math.max(0.1,c.parentArc)))<=0.15&&s[edge]>0&&s[edge]<1,`${tag}: ${seg} ${edge} (${s[edge]}) near the ${child} origin (${c.parentArc})`);
+  }
+ }
  const ram=byId.get('ramus');check(ram?.variant==='ramus',`${tag}: ramus vessel must carry variant ramus`);
  check(t.vessels.filter(v=>v.variant==='ramus').length===1,`${tag}: exactly one ramus vessel`);
  // lumen: main trunks taper

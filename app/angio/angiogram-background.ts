@@ -1,7 +1,7 @@
 // Stand-in fluoroscopy background of the angiogram: grey field with the projected heart silhouette, the diaphragm dome,
 // the spine and faint ribs. Everything is procedural from the C-arm angles and uses the same projection as the vessels,
 // so it moves consistently with them. Canvas 2D, grey only (the red channel is what the compositor reads).
-import {DETECTOR_SIZE,imageAxes,projectWith} from './core/geometry';
+import {FIELD_SIZE,imageAxes,projectWith} from './core/geometry';
 import type {CoronaryTree,Vec3} from './core/types';
 
 type P2=[number,number];
@@ -90,12 +90,12 @@ function mottling(ctx:CanvasRenderingContext2D,S:number,pan:readonly [number,num
  }
 }
 
-/** Paint the background for angles (a,b) and table pan (detector-normalised, ±1 = half detector) onto a square canvas. */
+/** Paint the background for angles (a,b) and table pan (field-normalised, ±1 = half field) onto a square canvas. */
 export function paintBackground(ctx:CanvasRenderingContext2D,S:number,a:number,b:number,pan:readonly [number,number],cloud:readonly Vec3[]|null):void{
- const ax=imageAxes(a,b),h=DETECTOR_SIZE/2;
+ const ax=imageAxes(a,b),h=FIELD_SIZE/2;
  const toPx=(p:Vec3):[number,number,number]=>{
   const q=projectWith(ax,p);
-  return [(q.x/h+pan[0]+1)/2*S,(1-(q.y/h+pan[1]))/2*S,q.m*S/DETECTOR_SIZE];  // third: pixels per mm at that depth
+  return [(q.x/h+pan[0]+1)/2*S,(1-(q.y/h+pan[1]))/2*S,q.m*S/FIELD_SIZE];  // third: pixels per mm at that depth
  };
  const flat=(list:readonly Vec3[]):P2[]=>list.map(p=>{const q=toPx(p);return [q[0],q[1]];});
  ctx.save();

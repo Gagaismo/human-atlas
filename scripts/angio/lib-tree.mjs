@@ -93,6 +93,12 @@ export function buildTree(dominance,ctx){
   segments:[{id:'d1',syntax:'9',name:'Diagonal 1',short:'D1',from:0,to:1}]});
  add_({id:'d2',name:'Diagonal 2',short:'D2',system:'left',family:'da',parent:'lad',way:d2C.points,diam:taper([[0,1.9],[1,1.0]],d2C),source:ic('D2',d2C.n),
   segments:[{id:'d2',syntax:'10',name:'Diagonal 2',short:'D2',from:0,to:1}]});
+ // SYNTAX: D1 origin ends segment 6 and D2 origin ends segment 7, so the boundaries follow where the branches actually leave the (registered) LAD
+ {
+  const d1v=byId.get('d1'),d2v=byId.get('d2'),[sp,sm,sa]=lad.segments,r=x=>+x.toFixed(3);
+  const b1=Math.min(0.4,Math.max(0.1,d1v.parentArc)),b2=Math.min(0.7,Math.max(b1+0.1,d2v.parentArc));
+  sp.to=r(b1);sm.from=r(b1);sm.to=r(b2);sa.from=r(b2);
+ }
  add_({id:'d3',name:'Diagonal 3',short:'D3',system:'left',family:'da',parent:'lad',lay:true,
   way:[at('lad',0.72),[62,1275,62],[70,1268,56],[73,1263,50]].map((p,i)=>i?ctx.toFrame(p):p),
   diam:[[0,1.5],[1,0.8]],source:sy('spline on the epicardium from the LAD (arc 0.72) toward the apicolateral wall',['FJ2639','FJ2640']),

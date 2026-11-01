@@ -5,7 +5,7 @@
 // with vignette; a last pass adds the cath-lab edge enhancement (unsharp mask) and then the film grain, so the grain is never sharpened or softened.
 import * as T from 'three';
 import {FIELD_SIZE,SID,SOD,imageAxes,projectWith} from './core/geometry';
-import {FAMILY_PALETTE,polylineLength,sampleSegment,visibleVessels} from './core/tree';
+import {FAMILY_PALETTE,arcLengths,pointAtLength,polylineLength,segmentRange,visibleVessels} from './core/tree';
 import type {CoronaryTree,GraftId,Vec3,Vessel,Visibility} from './core/types';
 import {heartCloud,paintBackground} from './angiogram-background';
 
@@ -51,10 +51,40 @@ function smoothRadii(r:readonly number[]):number[]{
  return a;
 }
 
-/** One closed, capped tube per segment, merged in a single geometry; `aSeg` is the segment index, `aTint` its family colour. */
+/** Radius as drawn: anatomical radius × scale × calibre curve. */
+const drawnRadius=(r:number)=>Math.max(r*RADIUS_SCALE*calibre(r),MIN_RADIUS);
+/** Rounded ends: number of rings in each dome. */
+const DOME_RINGS=3;
+/** Arc (mm) at which a child vessel leaves its parent's drawn lumen; before that point it lies inside the parent and would be counted twice. */
+function parentExit(child:Vessel,parent:Vessel,childArcs:readonly number[]):number{
+ const pa=parent.points,total=childArcs[childArcs.length-1],reach=Math.min(total,25);
+ for(let s=0;s<=reach;s+=.25){
+  const q=pointAtLength(child.points,child.radii,childArcs,s).p;
+  let best=Infinity,rp=0;
+  for(let i=0;i+1<pa.length;i++){
+   const a=pa[i],b=pa[i+1],ex=b[0]-a[0],ey=b[1]-a[1],ez=b[2]-a[2],l2=ex*ex+ey*ey+ez*ez;
+   const u=l2>0?Math.min(Math.max(((q[0]-a[0])*ex+(q[1]-a[1])*ey+(q[2]-a[2])*ez)/l2,0),1):0;
+   const d=Math.hypot(q[0]-a[0]-ex*u,q[1]-a[1]-ey*u,q[2]-a[2]-ez*u);
+   if(d<best){best=d;rp=parent.radii[i]+(parent.radii[i+1]-parent.radii[i])*u;}
+  }
+  if(best>=drawnRadius(rp)*.9)return s;
+ }
+ return 0;
+}
+
+interface Ring{c:Vec3;n1:T.Vector3;n2:T.Vector3;r:number;dist:number;/** Segment index the ring belongs to, or −1 for "every segment whose range contains `arc`". */seg:number;arc:number}
+
+/**
+ * One continuous closed tube per vessel, merged in a single geometry (S5, S22, S24). Rings are shared by the whole vessel (one tangent and
+ * one parallel-transported frame along it), so segment boundaries carry no cap and no kink; a segment only gets its own copy of the
+ * boundary ring so `aSeg` stays constant over its strip. The free ends are rounded domes (the ostium one sits under the puff). A child
+ * starts where it leaves its parent's lumen, so the part inside the parent is not counted twice. `aSeg` is the segment index, `aTint`
+ * its family colour and `aDist` the distance from the ostium.
+ */
 export function buildTubes(vessels:readonly Vessel[]):TubeBuild{
  const pos:number[]=[],tint:number[]=[],seg:number[]=[],dst:number[]=[],idx:number[]=[],segmentIds:string[]=[];
  const col=new T.Color(),offsets=ostiumOffsets(vessels),ostia:Vec3[]=[],ostiaDirs:Vec3[]=[];
+ const byId=new Map(vessels.map(v=>[v.id,v]));
  let maxDist=1;
  for(const vessel of vessels){
   col.set(FAMILY_PALETTE[vessel.family]);
@@ -63,44 +93,65 @@ export function buildTubes(vessels:readonly Vessel[]):TubeBuild{
    const p0=vessel.points[0],p1=vessel.points[Math.min(4,vessel.points.length-1)],l=Math.hypot(p1[0]-p0[0],p1[1]-p0[1],p1[2]-p0[2])||1;
    ostia.push(p0);ostiaDirs.push([(p1[0]-p0[0])/l,(p1[1]-p0[1])/l,(p1[2]-p0[2])/l]);
   }
-  for(const s of vessel.segments){
-   const sm=sampleSegment(vessel,s,TUBE_STEP),n=sm.points.length;
-   if(n<2)continue;
-   const si=segmentIds.length;segmentIds.push(s.id);
-   const radii=smoothRadii(sm.radii);
-   maxDist=Math.max(maxDist,off+sm.arcs[n-1]);
-   const base=pos.length/3;
-   const t=new T.Vector3(),prev=new T.Vector3(),n1=new T.Vector3(),n2=new T.Vector3();
-   for(let i=0;i<n;i++){
-    const p0=sm.points[Math.max(i-1,0)],p1=sm.points[Math.min(i+1,n-1)];
-    t.set(p1[0]-p0[0],p1[1]-p0[1],p1[2]-p0[2]);
-    if(t.lengthSq()<1e-12)t.copy(prev);else t.normalize();
-    if(t.lengthSq()<1e-12)t.set(0,1,0);
-    prev.copy(t);
-    if(i===0){const w=Math.abs(t.x)<.6?new T.Vector3(1,0,0):new T.Vector3(0,1,0);n1.crossVectors(t,w).normalize();}
-    else{n1.addScaledVector(t,-n1.dot(t));if(n1.lengthSq()<1e-12)n1.set(t.y,-t.x,0);n1.normalize();}
-    n2.crossVectors(t,n1);   // (n1, n2, t) right-handed: angle increases counter-clockwise seen from +t
-    const c=sm.points[i],r=Math.max(radii[i]*RADIUS_SCALE*calibre(radii[i]),MIN_RADIUS),dd=off+sm.arcs[i];
-    for(let j=0;j<SIDES;j++){
-     const th=j/SIDES*Math.PI*2,cs=Math.cos(th)*r,sn=Math.sin(th)*r;
-     pos.push(c[0]+n1.x*cs+n2.x*sn,c[1]+n1.y*cs+n2.y*sn,c[2]+n1.z*cs+n2.z*sn);
-     tint.push(col.r,col.g,col.b);seg.push(si);dst.push(dd);
-    }
+  if(vessel.points.length<2||!vessel.segments.length)continue;
+  const vArcs=arcLengths(vessel.points),total=vArcs[vArcs.length-1];
+  const ranges=vessel.segments.map(sg=>{const {f0,f1}=segmentRange(vessel,sg);return [Math.min(f0,f1)*total,Math.max(f0,f1)*total] as const;});
+  const smin=Math.min(...ranges.map(r=>r[0])),smax=Math.max(...ranges.map(r=>r[1]));
+  if(smax-smin<1e-6)continue;
+  const parent=vessel.parent?byId.get(vessel.parent):undefined;
+  let sTrim=parent?Math.max(smin,parentExit(vessel,parent,vArcs)):smin;
+  if(sTrim>smax-1)sTrim=smin;
+  // Sample arcs: a regular grid from the (trimmed) start, plus every segment boundary.
+  const arcSet:number[]=[sTrim,smax];
+  for(let a=sTrim+TUBE_STEP;a<smax-1e-6;a+=TUBE_STEP)arcSet.push(a);
+  for(const [r0,r1] of ranges)for(const a of [r0,r1])if(a>sTrim+1e-6&&a<smax-1e-6)arcSet.push(a);
+  arcSet.sort((x,y)=>x-y);
+  const arcs=arcSet.filter((a,i)=>i===0||a-arcSet[i-1]>1e-6),n=arcs.length;
+  if(n<2)continue;
+  const pts=arcs.map(a=>pointAtLength(vessel.points,vessel.radii,vArcs,a));
+  const radii=smoothRadii(pts.map(q=>q.r)).map(drawnRadius);
+  // Frames: smooth central-difference tangents, parallel-transported along the whole vessel.
+  const tans:T.Vector3[]=[],n1s:T.Vector3[]=[],n2s:T.Vector3[]=[];
+  const t=new T.Vector3(),prev=new T.Vector3(0,1,0),n1=new T.Vector3();
+  for(let i=0;i<n;i++){
+   const q0=pts[Math.max(i-1,0)].p,q1=pts[Math.min(i+1,n-1)].p;
+   t.set(q1[0]-q0[0],q1[1]-q0[1],q1[2]-q0[2]);
+   if(t.lengthSq()<1e-12)t.copy(prev);else t.normalize();
+   prev.copy(t);
+   if(i===0){const w=Math.abs(t.x)<.6?new T.Vector3(1,0,0):new T.Vector3(0,1,0);n1.crossVectors(t,w).normalize();}
+   else{n1.addScaledVector(t,-n1.dot(t));if(n1.lengthSq()<1e-12)n1.set(t.y,-t.x,0);n1.normalize();}
+   tans.push(t.clone());n1s.push(n1.clone());n2s.push(new T.Vector3().crossVectors(t,n1));   // (n1, n2, t) right-handed
+  }
+  const rings:Ring[]=[];
+  const fwd=ranges.findIndex(([r0,r1])=>r0-1e-6<=sTrim&&sTrim<r1-1e-6),bwd=ranges.findIndex(([r0,r1])=>r0+1e-6<smax&&smax<=r1+1e-6);
+  const firstSeg=fwd>=0?fwd:0,lastSeg=bwd>=0?bwd:ranges.length-1;
+  const dome=(i:number,sign:1|-1,owner:number)=>{   // rings from the full ring outwards: sign −1 behind the start, +1 beyond the end
+   const list:Ring[]=[];
+   for(let k=1;k<=DOME_RINGS;k++){
+    const phi=k/DOME_RINGS*Math.PI/2,sh=radii[i]*Math.sin(phi),c=pts[i].p,tv=tans[i];
+    list.push({c:[c[0]+sign*tv.x*sh,c[1]+sign*tv.y*sh,c[2]+sign*tv.z*sh],n1:n1s[i],n2:n2s[i],r:k===DOME_RINGS?0:radii[i]*Math.cos(phi),dist:off+arcs[i]+sign*sh,seg:owner,arc:arcs[i]});
    }
-   for(let i=0;i<n-1;i++)for(let j=0;j<SIDES;j++){
+   return list;
+  };
+  rings.push(...dome(0,-1,firstSeg).reverse());
+  for(let i=0;i<n;i++)rings.push({c:pts[i].p,n1:n1s[i],n2:n2s[i],r:radii[i],dist:off+arcs[i],seg:-1,arc:arcs[i]});
+  rings.push(...dome(n-1,1,lastSeg));
+  maxDist=Math.max(maxDist,off+arcs[n-1]+radii[n-1]);
+  vessel.segments.forEach((sg,si)=>{
+   const [r0,r1]=ranges[si],mine=rings.filter(g=>g.seg===si||(g.seg<0&&g.arc>=r0-1e-6&&g.arc<=r1+1e-6));
+   if(mine.length<2)return;
+   const id=segmentIds.length;segmentIds.push(sg.id);
+   const base=pos.length/3;
+   for(const g of mine)for(let j=0;j<SIDES;j++){
+    const th=j/SIDES*Math.PI*2,cs=Math.cos(th)*g.r,sn=Math.sin(th)*g.r;
+    pos.push(g.c[0]+g.n1.x*cs+g.n2.x*sn,g.c[1]+g.n1.y*cs+g.n2.y*sn,g.c[2]+g.n1.z*cs+g.n2.z*sn);
+    tint.push(col.r,col.g,col.b);seg.push(id);dst.push(g.dist);
+   }
+   for(let i=0;i<mine.length-1;i++)for(let j=0;j<SIDES;j++){
     const a=base+i*SIDES+j,b=base+i*SIDES+(j+1)%SIDES,c=base+(i+1)*SIDES+j,d=base+(i+1)*SIDES+(j+1)%SIDES;
     idx.push(a,b,c,b,d,c);   // outward normal e_θ × t
    }
-   // Caps close the mesh so every ray enters and leaves it (balanced signs where tubes meet or end inside others).
-   for(const [end,ci] of [[0,0],[n-1,1]] as const){
-    const c=sm.points[end],cv=pos.length/3;
-    pos.push(c[0],c[1],c[2]);tint.push(col.r,col.g,col.b);seg.push(si);dst.push(off+sm.arcs[end]);
-    for(let j=0;j<SIDES;j++){
-     const a=base+end*SIDES+j,b=base+end*SIDES+(j+1)%SIDES;
-     if(ci)idx.push(a,b,cv);else idx.push(b,a,cv);   // end faces +t, start faces −t
-    }
-   }
-  }
+  });
  }
  const geometry=new T.BufferGeometry();
  geometry.setAttribute('position',new T.Float32BufferAttribute(pos,3));

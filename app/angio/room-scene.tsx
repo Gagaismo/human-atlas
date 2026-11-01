@@ -109,6 +109,7 @@ export default function RoomScene({a,b,onAngles}:RoomSceneProps){
   const screenOf=(a2:number,b2:number,out:{x:number;y:number})=>{
    rigMatrix(a2,b2,tmpM);const p=local.clone().applyMatrix4(tmpM).applyMatrix4(model.group.matrixWorld);return toScreen(p,out)&&out;
   };
+  let hovered=false;
   let drag:{id:number;x:number;y:number;a:number;b:number;wantA:number;wantB:number}|null=null;
   const onDown=(e:PointerEvent)=>{
    if(e.button!==0&&e.pointerType==='mouse')return;
@@ -118,11 +119,11 @@ export default function RoomScene({a,b,onAngles}:RoomSceneProps){
    local.copy(hit.point);model.rig.worldToLocal(local);
    const {a:ca,b:cb}=latest.current;
    drag={id:e.pointerId,x:e.clientX,y:e.clientY,a:ca,b:cb,wantA:ca,wantB:cb};
-   canvas.setPointerCapture(e.pointerId);canvas.style.cursor='grabbing';e.preventDefault();
+   canvas.setPointerCapture(e.pointerId);canvas.style.cursor='grabbing';model.highlight(true);request();e.preventDefault();
   };
   const P0={x:0,y:0},P1={x:0,y:0},Q0={x:0,y:0},Q1={x:0,y:0};
   const onMove=(e:PointerEvent)=>{
-   if(!drag){if(e.pointerType==='mouse'&&controls.enabled)canvas.style.cursor=pick(e)?'grab':'';return;}
+   if(!drag){if(e.pointerType==='mouse'&&controls.enabled){const over=!!pick(e);canvas.style.cursor=over?'grab':'';if(over!==hovered){hovered=over;model.highlight(over);request();}}return;}
    if(e.pointerId!==drag.id)return;
    const dx=e.clientX-drag.x,dy=e.clientY-drag.y;drag.x=e.clientX;drag.y=e.clientY;
    const {a:a0,b:b0}=drag;
@@ -141,11 +142,13 @@ export default function RoomScene({a,b,onAngles}:RoomSceneProps){
   };
   const onUp=(e:PointerEvent)=>{
    if(!drag||e.pointerId!==drag.id)return;
-   drag=null;controls.enabled=true;canvas.style.cursor='';
+   drag=null;controls.enabled=true;canvas.style.cursor='';hovered=false;model.highlight(false);request();
    if(canvas.hasPointerCapture(e.pointerId))canvas.releasePointerCapture(e.pointerId);
   };
   el.addEventListener('pointerdown',onDown,true);
   canvas.addEventListener('pointermove',onMove);canvas.addEventListener('pointerup',onUp);canvas.addEventListener('pointercancel',onUp);
+  const onLeave=()=>{if(!drag&&hovered){hovered=false;canvas.style.cursor='';model.highlight(false);request();}};
+  canvas.addEventListener('pointerleave',onLeave);
 
   request();
   return()=>{

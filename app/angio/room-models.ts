@@ -9,6 +9,8 @@ import {CAPSULES,DETECTOR_HOUSING,TABLE,TORSO,TUBE_HOUSING,type BodyPart} from '
 import type {Vec3} from './core/types';
 
 export const FLOOR_Z=-1000;
+/** Invisible pick volumes are this much bigger than the part they wrap (the C tube grows from 42 to PICK_ARC_RADIUS mm). */
+const PICK_SCALE=1.4,PICK_ARC_RADIUS=105;
 /** Distance from the isocentre to the carriage ("hub") the L-arm holds, along the image-up axis. */
 export const HUB_DISTANCE=660;
 const STAND_Y=1300,STAND_TOP_Z=-60,PEDESTAL_Y=-820;
@@ -30,7 +32,7 @@ export interface RoomModel{
  group:T.Group;
  /** The C-arm, pivoting about the isocentre. */
  rig:T.Group;
- /** Meshes that a drag grabs (C, detector, tube, carriage). */
+ /** Meshes that a drag grabs: the C-arm parts plus larger invisible volumes around them (S23). */
  pickables:T.Mesh[];
  detector:T.Object3D;tube:T.Object3D;
  /** Label anchors, children of the rig. */
@@ -38,6 +40,8 @@ export interface RoomModel{
  /** Patient-side letter anchors in the patient frame. */
  sideLetters:{text:string;point:T.Vector3}[];
  setAngles(a:number,b:number):void;
+ /** Subtle highlight of the grabbable C-arm parts (hover or drag). */
+ highlight(on:boolean):void;
  /** Colour a body part red (true) or back to its skin tone (false). */
  flash(part:BodyPart,on:boolean):void;
  dispose():void}
@@ -122,15 +126,19 @@ export function buildRoom():RoomModel{
  R[0]=425;R[6]=945;
  const curve=new T.CatmullRomCurve3(ang.map((t,i)=>new T.Vector3(0,R[i]*Math.sin(t),R[i]*Math.cos(t))),false,'centripetal');
  const arc=new T.Mesh(new T.TubeGeometry(curve,48,42,16,false),cMat);rig.add(arc);pickables.push(arc);
+ const pickMat=own(new T.MeshBasicMaterial({visible:false}));
+ const arcPick=new T.Mesh(new T.TubeGeometry(curve,48,PICK_ARC_RADIUS,8,false),pickMat);rig.add(arcPick);pickables.push(arcPick);
  const hub=new T.Mesh(new T.CylinderGeometry(95,95,150,28),standMat);hub.rotation.z=Math.PI/2;hub.position.set(0,HUB_DISTANCE,0);rig.add(hub);pickables.push(hub);
 
  const {size,thickness,faceDistance}=DETECTOR_HOUSING;
  const detector=new T.Group();detector.position.z=faceDistance+thickness/2;rig.add(detector);
- const det=rbox(size,size,thickness,14,own(mat('#2a3038',.5,.3)));detector.add(det);pickables.push(det);
+ const detMat=own(mat('#2a3038',.5,.3)),det=rbox(size,size,thickness,14,detMat);detector.add(det);pickables.push(det);
+ const detPick=box(size*PICK_SCALE,size*PICK_SCALE,thickness*PICK_SCALE+80,pickMat);detector.add(detPick);pickables.push(detPick);
  const plate=box(size*.88,size*.88,4,own(mat('#0f1216',.3,.4)));plate.position.z=-thickness/2-1;detector.add(plate);
 
  const th=TUBE_HOUSING,tube=new T.Group();tube.position.z=-(th.faceDistance+th.depth/2);rig.add(tube);
- const tub=rbox(th.width,th.height,th.depth,16,own(mat('#e7e9ec',.45,.2)));tube.add(tub);pickables.push(tub);
+ const tubMat=own(mat('#e7e9ec',.45,.2)),tub=rbox(th.width,th.height,th.depth,16,tubMat);tube.add(tub);pickables.push(tub);
+ const tubPick=box(th.width*PICK_SCALE,th.height*PICK_SCALE,th.depth*PICK_SCALE+60,pickMat);tube.add(tubPick);pickables.push(tubPick);
  const coll=new T.Mesh(new T.CylinderGeometry(70,80,50,24),darkMat);coll.rotation.x=Math.PI/2;coll.position.z=th.depth/2+20;tube.add(coll);
 
  const {cone,iso}=xrayCone();rig.add(cone,iso);
@@ -152,6 +160,7 @@ export function buildRoom():RoomModel{
  return {
   group,rig,pickables,detector,tube,detectorAnchor,tubeAnchor,setAngles,
   sideLetters:[{text:'I',point:new T.Vector3(TABLE.halfWidth+90,-380,TABLE.top)},{text:'D',point:new T.Vector3(-TABLE.halfWidth-90,-380,TABLE.top)}],
+  highlight(on){for(const m of [cMat,detMat,tubMat])m.emissive.set(on?'#33414f':'#000000');},
   flash(part,on){const m=parts.get(part);if(!m)return;m.color.copy(on?flashColor:skinColor);m.emissive.set(on?'#6a0d0a':'#000000');},
   dispose(){
    const mm=new Set<T.Material>(owned);

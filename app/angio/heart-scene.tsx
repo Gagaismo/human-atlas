@@ -2,13 +2,13 @@ import {useEffect,useRef,useState} from 'react';
 import * as T from 'three';
 import type {CoronaryTree,Segment,Vec3,Vessel,Visibility} from './core/types';
 import {arcLengths,findSegment,pointAtArc,polylineLength,segmentRange,visibleVessels} from './core/tree';
-import {imageAxes} from './core/geometry';
+import {clampAngles,imageAxes} from './core/geometry';
 import {foreshorteningOfPolyline} from './core/metrics';
 import {buildVesselGeometry,segmentAtArc} from './vessel-mesh';
 import {loadHeartAsset,type HeartPart} from './heart-asset';
 
 export interface HeartToggles{detectorView:boolean;foreshortening:boolean;skeleton:boolean;seeThrough:boolean;labels:boolean;planes:boolean}
-export interface HeartSceneProps{tree:CoronaryTree;vis:Visibility;a:number;b:number;selected:string|null;toggles:HeartToggles;onSelect:(segmentId:string|null)=>void;onDetectorViewLeft:()=>void}
+export interface HeartSceneProps{tree:CoronaryTree;vis:Visibility;a:number;b:number;selected:string|null;toggles:HeartToggles;onSelect:(segmentId:string|null)=>void;onDetectorViewLeft:()=>void;/** S23: dragging the detector or the X-ray source asks for these angles (the shell applies the room-collision clamp). Without it the C-arm parts are hover-only. */onAngles?:(a:number,b:number)=>void}
 
 const NO_WEBGL='Esta vista necesita WebGL 2, que este navegador tiene desactivado o no admite. Probá con una versión actual de Chrome, Firefox o Safari.';
 /** The C-arm is drawn at a reduced size and distance (mm along the beam axis, isocentre = 0): the source behind the heart, the detector well beyond it so its field does not box the heart in. */
@@ -149,7 +149,11 @@ export default function HeartScene(props:HeartSceneProps){
   const beamMat=new T.LineBasicMaterial({color:'#ffb347',transparent:true,opacity:.4,depthTest:false});
   const beams=new T.LineSegments(new T.BufferGeometry().setFromPoints([...corners.flatMap(c=>[apex,c]),apex,new T.Vector3(0,0,DETECTOR_Z)]),beamMat);beams.renderOrder=5;arm.add(beams);
   /** C-arm parts that react to the pointer (hover feedback only; clicking them does not change anything). */
-  const armParts:T.Object3D[]=[source,field];   // the big translucent panel itself is not pickable: it would shadow the vessels behind it
+  // S23: generous invisible hit areas (about 1.4x the drawn panel, a sphere about 3x the dot) so the C-arm is easy to grab; the drawn panel itself stays unpickable.
+  const pickMat=new T.MeshBasicMaterial({visible:false,side:T.DoubleSide});
+  const panelPick=new T.Mesh(new T.PlaneGeometry(DETECTOR_SIDE*1.3*1.4,DETECTOR_SIDE*1.3*1.4),pickMat);panelPick.position.z=DETECTOR_Z+1;arm.add(panelPick);
+  const sourcePick=new T.Mesh(new T.SphereGeometry(TUBE_DOT*3,12,8),pickMat);sourcePick.position.z=TUBE_Z;arm.add(sourcePick);
+  const armParts:T.Object3D[]=[source,field,beams,panelPick,sourcePick];
 
   // Vessels, planes and labels depend on (tree, visibility); style depends on angles, selection and toggles.
   const tubeGroup=new T.Group(),planeGroup=new T.Group();world.add(tubeGroup,planeGroup);
@@ -302,6 +306,7 @@ export default function HeartScene(props:HeartSceneProps){
    if(hoverEntry){hoverEntry.hi.uHv0.value=hoverEntry.hi.uHv1.value=-1;hoverEntry=null;}
    hoverArm=null;source.scale.setScalar(1);panelMat.opacity=PANEL_OPACITY;fieldMat.opacity=.95;beamMat.opacity=.4;hoverEl.style.display='none';
   };
+  const lightArm=()=>{source.scale.setScalar(1.7);panelMat.opacity=.5;fieldMat.opacity=1;beamMat.opacity=.8;dirty=true;};
   const applyHover=(x:number,y:number)=>{
    const hit=probe(x,y);
    clearHover();
@@ -310,8 +315,8 @@ export default function HeartScene(props:HeartSceneProps){
     hit.entry.hi.uHv0.value=Math.min(r.f0,r.f1);hit.entry.hi.uHv1.value=Math.max(r.f0,r.f1);
     const b=canvas.getBoundingClientRect();hoverEl.textContent=hit.seg.short;hoverEl.style.display='block';
     hoverEl.style.transform=`translate(${(x-b.left+12).toFixed(0)}px,${(y-b.top-26).toFixed(0)}px)`;
-   }else if(hit){hoverArm=hit.arm;source.scale.setScalar(1.7);panelMat.opacity=.5;fieldMat.opacity=1;beamMat.opacity=.8;}
-   canvas.style.cursor=hit?'pointer':'grab';dirty=true;
+   }else if(hit){hoverArm=hit.arm;lightArm();}
+   canvas.style.cursor=hit&&'seg' in hit?'pointer':'grab';dirty=true;
   };
   const nearest=(cx:number,cy:number):{entry:Entry;seg:Segment}|null=>{
    const r=canvas.getBoundingClientRect(),w=r.width,h=r.height,glass=latest.current.toggles.seeThrough;
@@ -331,11 +336,14 @@ export default function HeartScene(props:HeartSceneProps){
    return best&&seg?{entry:best.entry,seg}:null;
   };
 /** Nearest coloured thing under a pointer position: a coronary segment (with its arc range) or a C-arm part. */
-  const probe=(cx:number,cy:number):{arm:T.Object3D}|{entry:Entry;seg:Segment}|null=>{
+  const probe=(cx:number,cy:number,withArm=true):{arm:T.Object3D;point:T.Vector3}|{entry:Entry;seg:Segment}|null=>{
    const r=canvas.getBoundingClientRect();ndc.set((cx-r.left)/r.width*2-1,-((cy-r.top)/r.height)*2+1);
    raycaster.setFromCamera(ndc,camera);
-   const vh=raycaster.intersectObjects(pickables,false)[0],ah=arm.visible?raycaster.intersectObjects(armParts,false)[0]:undefined;
-   if(ah&&(!vh||ah.distance<vh.distance))return {arm:ah.object};
+   const vh=raycaster.intersectObjects(pickables,false)[0];
+   // The source dot wins over the big panel margin even when the panel is nearer to the camera, otherwise it could not be grabbed from the front.
+   const ahs=withArm&&arm.visible?raycaster.intersectObjects(armParts,false):[],ah=ahs.find(h=>h.object===sourcePick||h.object===source)??ahs[0];
+   // A coronary under the generous panel area wins over it (only the invisible margin grabs the C-arm), so vessels stay selectable.
+   if(ah&&(!vh||ah.distance<vh.distance)&&!(ah.object===panelPick&&!vh&&nearest(cx,cy)))return {arm:ah.object,point:ah.point.clone()};
    if(!vh||!vh.face)return nearest(cx,cy);   // thin vessels are a pixel or two wide at this zoom: fall back to the closest centreline within a few pixels
    const entry=entries.find(e=>e.mesh===vh.object);if(!entry)return null;
    const arcs=(vh.object as T.Mesh).geometry.getAttribute('arc'),pos=(vh.object as T.Mesh).geometry.getAttribute('position'),f=vh.face,bc=new T.Vector3();
@@ -344,21 +352,59 @@ export default function HeartScene(props:HeartSceneProps){
    return seg?{entry,seg}:null;
   };
   const pick=(cx:number,cy:number)=>{
-   const hit=probe(cx,cy);
+   const hit=probe(cx,cy,false);
    if(hit&&'seg' in hit)latest.current.onSelect(hit.seg.id);
+  };
+  // S23: a press on the detector panel, its field, the beam or the X-ray source moves the C-arm instead of the camera. The grabbed point is
+  // kept under the pointer: the pointer ray is cast on the sphere (about the isocentre) through that point and the rotation between the
+  // grabbed direction and the new one is applied to the detector direction at the start of the drag.
+  let grab:{arm:T.Object3D;point:T.Vector3}|null=null,armDrag:{id:number;r:number;dir0:T.Vector3;d0:T.Vector3;last:T.Vector3;lastA:number}|null=null;
+  const sphereDir=(cx:number,cy:number,r:number,near:T.Vector3)=>{
+   const rc=canvas.getBoundingClientRect();ndc.set((cx-rc.left)/rc.width*2-1,-((cy-rc.top)/rc.height)*2+1);raycaster.setFromCamera(ndc,camera);
+   const O=raycaster.ray.origin,D=raycaster.ray.direction,bq=O.dot(D),disc=bq*bq-(O.lengthSq()-r*r),P=new T.Vector3();
+   if(disc>=0){
+    const s=Math.sqrt(disc),p1=O.clone().addScaledVector(D,-bq-s).normalize(),p2=O.clone().addScaledVector(D,-bq+s).normalize();
+    P.copy(p1.dot(near)>=p2.dot(near)?p1:p2);
+   }else P.copy(O).addScaledVector(D,-bq);   // pointer outside the sphere: the closest point of the ray
+   return P.lengthSq()>1e-9?P.normalize():near.clone();
+  };
+  const startArmDrag=(id:number,cx:number,cy:number)=>{
+   if(!grab)return;
+   const {a,b}=latest.current,{d}=imageAxes(a,b),r=Math.max(grab.point.length(),1),dir0=grab.point.clone().normalize();
+   armDrag={id,r,dir0,d0:v3(d),last:dir0.clone(),lastA:a};grab=null;
+   dragging=true;canvas.style.cursor='grabbing';lightArm();moveArm(cx,cy);
+  };
+  const moveArm=(cx:number,cy:number)=>{
+   if(!armDrag)return;
+   const dn=sphereDir(cx,cy,armDrag.r,armDrag.last);armDrag.last.copy(dn);
+   const nd=armDrag.d0.clone().applyQuaternion(new T.Quaternion().setFromUnitVectors(armDrag.dir0,dn));
+   let a=T.MathUtils.radToDeg(Math.atan2(nd.x,nd.z));
+   if(Math.abs(a)>90)a=(armDrag.lastA||a)<0?-90:90;   // past the lateral limit: stay on the side the arm came from instead of wrapping
+   const res=clampAngles(a,T.MathUtils.radToDeg(Math.asin(Math.min(Math.max(nd.y,-1),1))));
+   armDrag.lastA=res.a;
+   const cur=latest.current;
+   if(res.a!==cur.a||res.b!==cur.b)cur.onAngles?.(res.a,res.b);
+   dirty=true;
   };
   const onDown=(e:PointerEvent)=>{
    canvas.setPointerCapture(e.pointerId);ptrs.set(e.pointerId,{x:e.clientX,y:e.clientY});
-   if(ptrs.size===1)press={x:e.clientX,y:e.clientY,moved:false};
-   else{press=null;const [p1,p2]=[...ptrs.values()];pinch=Math.hypot(p1.x-p2.x,p1.y-p2.y);}
+   if(ptrs.size===1){
+    press={x:e.clientX,y:e.clientY,moved:false};
+    const hit=latest.current.onAngles&&arm.visible?probe(e.clientX,e.clientY):null;
+    grab=hit&&'arm' in hit?hit:null;
+   }else{press=null;grab=null;armDrag=null;const [p1,p2]=[...ptrs.values()];pinch=Math.hypot(p1.x-p2.x,p1.y-p2.y);}
   };
   const onMove=(e:PointerEvent)=>{
    if(!ptrs.size){hoverReq=e.pointerType==='touch'?null:{x:e.clientX,y:e.clientY};return;}
    const prev=ptrs.get(e.pointerId);if(!prev)return;
    const dx=e.clientX-prev.x,dy=e.clientY-prev.y;prev.x=e.clientX;prev.y=e.clientY;
    if(ptrs.size===1&&press){
-    if(!press.moved&&Math.hypot(e.clientX-press.x,e.clientY-press.y)>4){press.moved=true;dragging=true;canvas.style.cursor='grabbing';if(latest.current.toggles.detectorView){latest.current.onDetectorViewLeft();distGoal=restDist;}clearHover();}
-    if(press.moved){qDrag.setFromEuler(new T.Euler(-dy*.0055,-dx*.0055,0,'YXZ'));q.multiply(qDrag).normalize();dirty=true;}
+    if(!press.moved&&Math.hypot(e.clientX-press.x,e.clientY-press.y)>4){
+     press.moved=true;
+     if(grab)startArmDrag(e.pointerId,e.clientX,e.clientY);
+     else{dragging=true;canvas.style.cursor='grabbing';if(latest.current.toggles.detectorView){latest.current.onDetectorViewLeft();distGoal=restDist;}clearHover();}
+    }else if(armDrag)moveArm(e.clientX,e.clientY);
+    if(press.moved&&!armDrag){qDrag.setFromEuler(new T.Euler(-dy*.0055,-dx*.0055,0,'YXZ'));q.multiply(qDrag).normalize();dirty=true;}
    }else if(ptrs.size===2){
     const [p1,p2]=[...ptrs.values()],d=Math.hypot(p1.x-p2.x,p1.y-p2.y);
     if(pinch>0&&d>0){distGoal=null;dist=Math.min(Math.max(dist*pinch/d,MIN_DIST),MAX_DIST);dirty=true;}
@@ -368,7 +414,8 @@ export default function HeartScene(props:HeartSceneProps){
   const onUp=(e:PointerEvent)=>{
    if(!ptrs.has(e.pointerId))return;
    if(ptrs.size===1&&press&&!press.moved&&e.type==='pointerup')pick(e.clientX,e.clientY);
-   ptrs.delete(e.pointerId);press=null;pinch=0;if(!ptrs.size){dragging=false;canvas.style.cursor='grab';}
+   if(armDrag){clearHover();armDrag=null;}
+   grab=null;ptrs.delete(e.pointerId);press=null;pinch=0;if(!ptrs.size){dragging=false;canvas.style.cursor='grab';}
   };
   const onWheel=(e:WheelEvent)=>{e.preventDefault();distGoal=null;if(latest.current.toggles.detectorView)latest.current.onDetectorViewLeft();dist=Math.min(Math.max(dist*Math.exp(e.deltaY*.0012),MIN_DIST),MAX_DIST);dirty=true;};
   const onLeave=()=>{hoverReq=null;clearHover();canvas.style.cursor='grab';dirty=true;};

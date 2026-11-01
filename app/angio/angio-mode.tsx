@@ -149,7 +149,7 @@ export default function AngioMode(){
      <Toggle on={toggles.planes} onClick={()=>flip('planes')} title="Plano del surco auriculoventricular y plano septal">Planos</Toggle>
     </div>
     <div className="angio-view angio-heart-view"><span className="angio-title">CORAZÓN 3D</span>
-     {ready?<HeartScene tree={tree} vis={vis} a={ang.a} b={ang.b} selected={sel} toggles={toggles} onSelect={setSel} onDetectorViewLeft={leaveDetector}/>:placeholder}</div>
+     {ready?<HeartScene tree={tree} vis={vis} a={ang.a} b={ang.b} selected={sel} toggles={toggles} onSelect={setSel} onDetectorViewLeft={leaveDetector} onAngles={set}/>:placeholder}</div>
    </section>
    <div className="angio-center">
     <section className="angio-panel angio-angiogram" aria-label="Angiograma">

@@ -27,10 +27,11 @@ export const DETECTOR_HOUSING={size:DETECTOR_SIZE,thickness:120,faceDistance:SID
 /** Tube housing, behind the source point on the opposite side (below the table in AP). */
 export const TUBE_HOUSING={width:220,height:220,depth:260,faceDistance:SOD-60} as const;
 
-interface Box{min:Vec3;max:Vec3}
-interface Capsule{a:Vec3;b:Vec3;r:number}
-const TORSO:Box={min:[-145,-420,-120],max:[145,150,85]};
-const CAPSULES:{part:BodyPart;c:Capsule}[]=[
+export interface Box{min:Vec3;max:Vec3}
+export interface Capsule{a:Vec3;b:Vec3;r:number}
+/** Patient solids used for collisions; the room view draws these same volumes. */
+export const TORSO:Box={min:[-145,-420,-120],max:[145,150,85]};
+export const CAPSULES:readonly {part:BodyPart;c:Capsule}[]=[
  {part:'cuello',c:{a:[0,150,-60],b:[0,215,-45],r:55}},
  {part:'cabeza',c:{a:[0,245,30],b:[0,285,30],r:100}},
  {part:'brazo',c:{a:[-205,110,-75],b:[-205,-330,-75],r:45}},

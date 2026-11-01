@@ -1,0 +1,4 @@
+{
+ "rotationDeg": [0, 0, 0],
+ "note": "Rotación global (grados alrededor de X, Y, Z del marco del paciente, orden Rz·Ry·Rx, alrededor del punto medio de los ostios) aplicada al árbol medio de ImageCAS-X al colocarlo. Cero a propósito: las medias de ImageCAS-X ya están en el marco del paciente y el ajuste con CARDIAG (scripts/angio/cardiag/fit-orientation.mjs) halló solo (−1,2°, 2,5°, 2,8°), con 0,3° de mejora en el conjunto de prueba, por debajo del ruido de los rasgos; no se aplica."
+}

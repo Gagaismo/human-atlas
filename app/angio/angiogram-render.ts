@@ -108,7 +108,7 @@ varying vec3 vView;varying vec3 vTint;varying float vSeg;varying float vDist;
 void main(){vec4 mv=modelViewMatrix*vec4(position,1.);vView=mv.xyz;vTint=aTint;vSeg=aSeg;vDist=aDist;gl_Position=projectionMatrix*mv;}`;
 // Ray length relative to the isocentre; the overall sign depends on winding and the mirrored projection, so the compositor takes abs().
 const TUBE_FRAG=`
-uniform float uSod;uniform float uSel;uniform float uSelPrev;uniform float uFront;uniform float uSoftMm;
+uniform float uSod;uniform float uSel;uniform float uSelPrev;uniform float uHover;uniform float uFront;uniform float uSoftMm;
 varying vec3 vView;varying vec3 vTint;varying float vSeg;varying float vDist;
 void main(){
  // Contrast front: everything nearer the ostium than the front is opaque, with a soft edge instead of a hard cut.
@@ -117,7 +117,7 @@ void main(){
  #ifdef TINT
  gl_FragColor=vec4(vTint*s,1.);
  #else
- gl_FragColor=vec4(s,abs(vSeg-uSel)<.5?s:0.,abs(vSeg-uSelPrev)<.5?s:0.,1.);
+ gl_FragColor=vec4(s,abs(vSeg-uSel)<.5?s:0.,abs(vSeg-uSelPrev)<.5?s:0.,abs(vSeg-uHover)<.5?s:0.);
  #endif
 }`;
 
@@ -125,19 +125,19 @@ const QUAD_VERT=`varying vec2 vUv;void main(){vUv=uv;gl_Position=vec4(position.x
 const QUAD_FRAG=`
 uniform sampler2D uThick;uniform sampler2D uTint;uniform sampler2D uBg;
 uniform float uTexel;uniform float uSoft;uniform float uMu;uniform float uSeed;uniform float uColor;
-uniform float uWCur;uniform float uWPrev;uniform float uDens;uniform vec3 uPuff0;uniform vec3 uPuff1;
+uniform float uWCur;uniform float uWPrev;uniform float uWHover;uniform float uDens;uniform vec3 uPuff0;uniform vec3 uPuff1;
 varying vec2 vUv;
 float hash(vec2 p){p=fract(p*vec2(443.897,441.423));p+=dot(p,p.yx+19.19);return fract((p.x+p.y)*p.x);}
 vec4 th(vec2 o){return abs(texture2D(uThick,vUv+o*uTexel));}
 float puff(vec3 p){vec2 d=vUv-p.xy;float r2=dot(d,d);return p.z*(exp(-r2/.0016)*.7+exp(-r2/.0075)*.5);}
 void main(){
- float t=0.,s=0.,sp=0.,w=0.;vec3 tc=vec3(0.);
+ float t=0.,s=0.,sp=0.,sh=0.,w=0.;vec3 tc=vec3(0.);
  for(int j=-1;j<=1;j++)for(int i=-1;i<=1;i++){
   float k=(i==0?2.:1.)*(j==0?2.:1.);vec2 o=vec2(float(i),float(j))*uSoft;
   vec4 v=th(o);
-  t+=k*v.r;s+=k*v.g;sp+=k*v.b;tc+=k*abs(texture2D(uTint,vUv+o*uTexel).rgb);w+=k;
+  t+=k*v.r;s+=k*v.g;sp+=k*v.b;sh+=k*v.a;tc+=k*abs(texture2D(uTint,vUv+o*uTexel).rgb);w+=k;
  }
- t/=w;s/=w;sp/=w;tc/=w;
+ t/=w;s/=w;sp/=w;sh/=w;tc/=w;
  float wide=0.;
  for(int k=0;k<8;k++){float an=float(k)*.7853982;wide+=th(vec2(cos(an),sin(an))*uSoft*3.).r;}
  wide/=8.;
@@ -154,6 +154,8 @@ void main(){
  vec3 grey=vec3(bg*(1.-cov));                           // plain Beer-Lambert: grey, not black
  vec3 col=mix(grey,mix(vec3(bg*(1.-.5*(cov-vcov))),vessel,vcov),uColor*smoothstep(0.,.08,tb));
  float sc=(1.-exp(-1.8*s))*uWCur+(1.-exp(-1.8*sp))*uWPrev;   // selected segment: orange overlay, fading in and out
+ float hc=(1.-exp(-1.8*sh))*uWHover;                          // hovered segment: lighter, yellower overlay, under the selection
+ col=mix(col,vec3(1.,.82,.3),clamp(.75*hc,0.,.75));
  col=mix(col,vec3(1.,.55,.12),clamp(.9*sc,0.,.9));
  vec2 px=gl_FragCoord.xy;
  float grain=(hash(px+uSeed)-.5)*.055+(hash(floor(px*.35)+uSeed*1.7)-.5)*.03;
@@ -166,6 +168,8 @@ void main(){
 export interface Highlight{id:string|null;weight:number}
 /** `pan` is field-normalised and already includes the centring on the injected system. */
 export interface RenderOptions{a:number;b:number;pan:readonly [number,number];color:boolean;sel:Highlight;prev:Highlight;
+ /** Segment under the pointer (S20) and how visible its yellow-orange overlay is. */
+ hover:Highlight;
  /** Seconds since the injection started (S14); anything ≥ CINE_END draws the fully opacified tree. */
  fill:number}
 
@@ -192,7 +196,7 @@ export function createAngioRenderer(canvas:HTMLCanvasElement):AngioRenderer|null
  let size=512;
  const rtThick=new T.WebGLRenderTarget(size,size,targetOpts),rtTint=new T.WebGLRenderTarget(size,size,targetOpts);
  const additive={side:T.DoubleSide,depthTest:false,depthWrite:false,transparent:true,blending:T.CustomBlending,blendEquation:T.AddEquation,blendSrc:T.OneFactor,blendDst:T.OneFactor,blendSrcAlpha:T.OneFactor,blendDstAlpha:T.OneFactor};
- const fillUniforms=()=>({uSod:{value:SOD},uSel:{value:-1},uSelPrev:{value:-1},uFront:{value:1e6},uSoftMm:{value:FRONT_SOFT_MM}});
+ const fillUniforms=()=>({uSod:{value:SOD},uSel:{value:-1},uSelPrev:{value:-1},uHover:{value:-1},uFront:{value:1e6},uSoftMm:{value:FRONT_SOFT_MM}});
  const matThick=new T.ShaderMaterial({vertexShader:TUBE_VERT,fragmentShader:TUBE_FRAG,uniforms:fillUniforms(),...additive});
  const matTint=new T.ShaderMaterial({vertexShader:TUBE_VERT,fragmentShader:TUBE_FRAG,defines:{TINT:1},uniforms:fillUniforms(),...additive});
  const tubes=new T.Mesh(new T.BufferGeometry(),matThick);tubes.frustumCulled=false;
@@ -204,7 +208,7 @@ export function createAngioRenderer(canvas:HTMLCanvasElement):AngioRenderer|null
  const bgTex=new T.CanvasTexture(bgCanvas);bgTex.minFilter=T.LinearFilter;bgTex.generateMipmaps=false;
  const quadMat=new T.ShaderMaterial({vertexShader:QUAD_VERT,fragmentShader:QUAD_FRAG,depthTest:false,depthWrite:false,uniforms:{
   uThick:{value:rtThick.texture},uTint:{value:rtTint.texture},uBg:{value:bgTex},uTexel:{value:1/size},uSoft:{value:1},uMu:{value:.18},uSeed:{value:0},uColor:{value:0},
-  uWCur:{value:0},uWPrev:{value:0},uDens:{value:1},uPuff0:{value:new T.Vector3()},uPuff1:{value:new T.Vector3()}}});
+  uWCur:{value:0},uWPrev:{value:0},uWHover:{value:0},uDens:{value:1},uPuff0:{value:new T.Vector3()},uPuff1:{value:new T.Vector3()}}});
  const quad=new T.Mesh(new T.PlaneGeometry(2,2),quadMat);quad.frustumCulled=false;
  const quadScene=new T.Scene();quadScene.add(quad);
  const quadCamera=new T.OrthographicCamera(-1,1,1,-1,0,1);
@@ -241,12 +245,12 @@ export function createAngioRenderer(canvas:HTMLCanvasElement):AngioRenderer|null
    const key=[o.a,o.b,o.pan[0],o.pan[1]].join('|');
    if(key!==bgKey){bgKey=key;paintBackground(bgCtx,BG,o.a,o.b,o.pan,cloudPts);bgTex.needsUpdate=true;}
    const idx=(h:Highlight)=>h.id?segmentIds.indexOf(h.id):-1;
-   matThick.uniforms.uSel.value=idx(o.sel);matThick.uniforms.uSelPrev.value=idx(o.prev);
+   matThick.uniforms.uSel.value=idx(o.sel);matThick.uniforms.uSelPrev.value=idx(o.prev);matThick.uniforms.uHover.value=idx(o.hover);
    const p=Math.min(Math.max(o.fill/FILL_S,0),1),done=o.fill>=CINE_END,ease=1-Math.pow(1-p,1.5);
    matThick.uniforms.uFront.value=matTint.uniforms.uFront.value=done?1e6:ease*(maxDist+FRONT_SOFT_MM);
    const smooth=(a:number,b:number,x:number)=>{const k=Math.min(Math.max((x-a)/(b-a),0),1);return k*k*(3-2*k);};
    const qu=quadMat.uniforms;
-   qu.uWCur.value=o.sel.weight;qu.uWPrev.value=o.prev.weight;
+   qu.uWCur.value=o.sel.weight;qu.uWPrev.value=o.prev.weight;qu.uWHover.value=o.hover.weight;
    qu.uDens.value=done?1:.78+.22*smooth(.2,CINE_END,o.fill);
    // Faint contrast cloud at each ostium: rises as the injection starts and thins out once the vessels are filled.
    const h=FIELD_SIZE/2,ax=imageAxes(o.a,o.b),amp=done?.5:smooth(0,.25,o.fill)*(1-.5*smooth(.9,CINE_END,o.fill));

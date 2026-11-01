@@ -54,6 +54,12 @@ const VIS_LEFT={system:'left',ramus:false,grafts:new Set()};
   check(near(q.x/(G.FIELD_SIZE/2)+o[0],0,1e-9)&&near(q.y/(G.FIELD_SIZE/2)+o[1],0,1e-9),`fieldOffset centra el punto en ${a}/${b}`);
  }
  check(nearV(G.fieldOffset(G.imageAxes(0,0),[0,0,0]),[0,0]),'fieldOffset del isocentro es 0');
+ // campo fijo centrado en el corazón (S19): sin centro explícito, fieldOffset usa HEART_CENTRE, el mismo para cualquier sistema inyectado
+ for(const [a,b] of [[0,0],[40,-2],[-15,-27]]){
+  const ax=G.imageAxes(a,b),o=G.fieldOffset(ax),q=G.projectWith(ax,G.HEART_CENTRE);
+  check(nearV(o,G.fieldOffset(ax,G.HEART_CENTRE))&&near(q.x/(G.FIELD_SIZE/2)+o[0],0,1e-9)&&near(q.y/(G.FIELD_SIZE/2)+o[1],0,1e-9),`campo fijo centrado en el corazón en ${a}/${b}`);
+ }
+ check(G.HEART_CENTRE.every(x=>Math.abs(x)<40)&&G.FIELD_SIZE>150&&G.FIELD_SIZE<G.DETECTOR_SIZE,'HEART_CENTRE cerca del isocentro, campo de 15–25 cm');
  const c=G.clampAngles(200,-99);check(c.a===90&&c.b===-45,'clampAngles');
  check(G.fmtAngles(0,0)==='AP','fmt AP');check(G.fmtAngles(-30,-30)==='OAD 30 CAU 30','fmt OAD CAU');
  check(G.fmtAngles(45,-35)==='OAI 45 CAU 35','fmt OAI CAU');check(G.fmtAngles(0,30)==='AP CRA 30','fmt AP CRA');

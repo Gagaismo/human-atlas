@@ -174,7 +174,7 @@ export default function AngioMode(){
        {GRAFTS.map(g=><Toggle key={g.id} on={dom==='right'&&grafts.has(g.id)} disabled={dom!=='right'} title={g.title} onClick={()=>toggleGraft(g.id)}>{g.text}</Toggle>)}</div>
       {dom!=='right'&&<span className="angio-hint">Por ahora los puentes solo están con dominancia derecha</span>}
      </div>
-     <div className="angio-stage"><div className="angio-view angio-square">{ready?<AngiogramView tree={tree} vis={vis} a={ang.a} b={ang.b} selected={sel} labels={labels} color={color} onSelect={setSel}/>:placeholder}</div></div>
+     <div className="angio-stage"><div className="angio-view angio-square">{ready?<AngiogramView tree={tree} vis={vis} a={ang.a} b={ang.b} selected={sel} labels={labels} color={color} onSelect={setSel} onAngles={set}/>:placeholder}</div></div>
     </section>
     {ready&&<AngioPad tree={tree} vis={vis} a={ang.a} b={ang.b} sel={sel} mode={padMode} onMode={setPadMode} onSet={set} onGo={go}/>}
    </div>

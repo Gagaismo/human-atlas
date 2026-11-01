@@ -1,14 +1,16 @@
 import {useCallback,useEffect,useMemo,useRef,useState} from 'react';
 import type {CSSProperties} from 'react';
-import {FIELD_SIZE,fieldOffset,fmtAngles,projectWith,imageAxes} from './core/geometry';
+import {FIELD_SIZE,clampAngles,fieldOffset,fmtAngles,projectWith,imageAxes} from './core/geometry';
 import {FAMILY_PALETTE,sampleSegment} from './core/tree';
 import type {CoronaryTree,Family,Vec3,Visibility} from './core/types';
 import {CINE_END,createAngioRenderer,injectedVessels,type AngioRenderer,type Highlight} from './angiogram-render';
 
-export interface AngiogramViewProps{tree:CoronaryTree;vis:Visibility;a:number;b:number;selected:string|null;labels:boolean;color:boolean;onSelect:(segmentId:string|null)=>void}
+export interface AngiogramViewProps{tree:CoronaryTree;vis:Visibility;a:number;b:number;selected:string|null;labels:boolean;color:boolean;onSelect:(segmentId:string|null)=>void;
+ /** Dragging the image turns the C-arm (S21): called continuously with the new angles; the shell applies its own limits. Without it, dragging pans the table. */
+ onAngles?:(a:number,b:number)=>void}
 
 const NO_WEBGL='Esta vista necesita WebGL 2, que este navegador tiene desactivado o no admite. Probá con una versión actual de Chrome, Firefox o Safari.';
-const HIT_PX=8,DRAG_PX=4,PAN_NOTE_PX=3,PAN_MAX=1.2,FADE_MS=250;
+const HIT_PX=8,DRAG_PX=4,PAN_NOTE_PX=3,PAN_MAX=1.2,FADE_MS=250,HOVER_MS=150,DEG_PER_PX=.25;
 
 /** Cine fill and highlight fades are skipped for people who ask for less motion. */
 const reducedMotion=()=>typeof matchMedia==='function'&&matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -38,28 +40,25 @@ export default function AngiogramView(props:AngiogramViewProps){
  // Cine fill (S14): when the injection started (performance.now), and the cross-fade between the previous and the current selection.
  const fillStart=useRef(0),cine=useRef<HTMLSpanElement>(null),lblKey=useRef('');
  const fade=useRef({cur:{id:null,weight:0} as Highlight,prev:{id:null,weight:0} as Highlight,at:0});
+ // Hover (S20): the segment under the pointer; its overlay fades out before the next one fades in.
+ const hoverWant=useRef<string|null>(null),hover=useRef({id:null,weight:0} as Highlight),[hoverOn,setHoverOn]=useState(false);
  const [side,setSide]=useState(0),[failed,setFailed]=useState(false),[panned,setPanned]=useState(false),[lbls,setLbls]=useState<Lbl[]>([]);
 
  const graftKey=[...vis.grafts].sort().join(',');
- const {vessels,segs,centre}=useMemo(()=>{
+ const {vessels,segs}=useMemo(()=>{
   const vessels=injectedVessels(tree,vis),segs:Seg[]=[];
   for(const vessel of vessels)for(const s of vessel.segments){
    const sm=sampleSegment(vessel,s,2);
    if(sm.points.length<1)continue;
    segs.push({id:s.id,short:abbreviate(s.short),full:s.short,numbered:s.syntax!=='',family:vessel.family,pts:sm.points,mid:sm.points[sm.points.length>>1]});
   }
-  // Field centre: middle of the injected tree's bounding box, so the field is centred on the heart at every angle.
-  const lo:Vec3=[1e9,1e9,1e9],hi:Vec3=[-1e9,-1e9,-1e9];
-  for(const v of vessels)if(v.system!=='graft')for(const p of v.points)for(let k=0;k<3;k++){lo[k]=Math.min(lo[k],p[k]);hi[k]=Math.max(hi[k],p[k]);}
-  const centre:Vec3=lo[0]>hi[0]?[0,0,0]:[(lo[0]+hi[0])/2,(lo[1]+hi[1])/2,(lo[2]+hi[2])/2];
-  return {vessels,segs,centre};
+  return {vessels,segs};
   // eslint-disable-next-line react-hooks/exhaustive-deps
  },[tree,vis.system,vis.ramus,graftKey]);
 
- const centreRef=useRef(centre);centreRef.current=centre;
- /** Table pan as the renderer sees it: the user's pan plus the centring on the injected system at these angles. */
+ /** Table pan as the renderer sees it: the user's pan plus the centring on the heart at these angles (the same field for every injected system). */
  const effPan=useCallback((ax:ReturnType<typeof imageAxes>):[number,number]=>{
-  const o=fieldOffset(ax,centreRef.current);return [pan.current[0]+o[0],pan.current[1]+o[1]];
+  const o=fieldOffset(ax);return [pan.current[0]+o[0],pan.current[1]+o[1]];
  },[]);
  const project=useCallback((p:Vec3,ax:ReturnType<typeof imageAxes>):[number,number]=>{
   const q=projectWith(ax,p),S=sizeRef.current,h=FIELD_SIZE/2,e=effPan(ax);
@@ -81,9 +80,12 @@ export default function AngiogramView(props:AngiogramViewProps){
   fd.prev.weight=Math.max(0,fd.prev.weight-step);
   if(fd.prev.weight<=0)fd.prev={id:null,weight:0};
   const elapsed=calm?CINE_END:(now-fillStart.current)/1000;
-  gl.current.render({a,b,pan:effPan(imageAxes(a,b)),color,sel:fd.cur,prev:fd.prev,fill:elapsed});
+  const hv=hover.current,hs=calm?1:dt/HOVER_MS;
+  if(hv.id!==hoverWant.current){hv.weight=Math.max(0,hv.weight-hs);if(hv.weight<=0)hv.id=hoverWant.current;}
+  else if(hv.id)hv.weight=Math.min(1,hv.weight+hs);
+  gl.current.render({a,b,pan:effPan(imageAxes(a,b)),color,sel:fd.cur,prev:fd.prev,hover:hv,fill:elapsed});
   if(cine.current)cine.current.textContent=cineText(elapsed);
-  if(elapsed<CINE_END||fd.cur.weight<1||fd.prev.weight>0)request();
+  if(elapsed<CINE_END||fd.cur.weight<1||fd.prev.weight>0||hv.id!==hoverWant.current||(hv.id&&hv.weight<1))request();
   const ax=imageAxes(a,b),out:Lbl[]=[];
   const want=segs.filter(s=>s.id===selected||(showLabels&&s.numbered));
   if(want.length){
@@ -130,7 +132,7 @@ export default function AngiogramView(props:AngiogramViewProps){
 
  // A new injection (system, dominance, ramus, grafts, first load) restarts the fill from the ostium; angle changes do not.
  useEffect(()=>{gl.current?.setScene(tree,vessels);fillStart.current=performance.now();request();},[tree,vessels,request,failed]);
- useEffect(()=>{request();},[a,b,selected,color,showLabels,segs,centre,side,request]);
+ useEffect(()=>{request();},[a,b,selected,color,showLabels,segs,side,request]);
 
  const setPan=useCallback((x:number,y:number)=>{
   pan.current=[Math.max(-PAN_MAX,Math.min(PAN_MAX,x)),Math.max(-PAN_MAX,Math.min(PAN_MAX,y))];
@@ -152,8 +154,11 @@ export default function AngiogramView(props:AngiogramViewProps){
  useEffect(()=>{if(firstSystem.current){firstSystem.current=false;return;}recentre();},[vis.system,recentre]);
 
  // Pointer: one finger / mouse drags the table; a tap without drag selects the nearest segment.
- const drag=useRef<{id:number;x:number;y:number;px:number;py:number;moved:boolean}|null>(null);
- const pick=(x:number,y:number)=>{
+ // Pointer (S21): left/middle button or one finger turns the C-arm (like grabbing the heart: right → OAD, down → CRA); Shift, right button or two fingers pan the table;
+ // a press without movement selects. Touches are tracked so the second finger turns the gesture into a pan.
+ type Drag={id:number;x:number;y:number;px:number;py:number;a0:number;b0:number;mode:'rotate'|'pan';moved:boolean};
+ const drag=useRef<Drag|null>(null),touches=useRef(new Map<number,[number,number]>()),idle=useRef(false);
+ const hit=(x:number,y:number):string|null=>{
   const ax=imageAxes(latest.current.a,latest.current.b);
   let best:string|null=null,bd=HIT_PX;
   for(const s of segs){
@@ -165,36 +170,63 @@ export default function AngiogramView(props:AngiogramViewProps){
     if(d<bd){bd=d;best=s.id;}
    }
   }
-  latest.current.onSelect(best);
+  return best;
  };
+ const setHover=(id:string|null)=>{
+  if(hoverWant.current===id)return;
+  hoverWant.current=id;setHoverOn(id!==null);request();
+ };
+ const centroid=()=>{const v=[...touches.current.values()];return [v.reduce((t,p)=>t+p[0],0)/v.length,v.reduce((t,p)=>t+p[1],0)/v.length] as const;};
  const onDown=(e:React.PointerEvent<HTMLDivElement>)=>{
-  if(e.button!==0||drag.current)return;
+  if(e.pointerType==='touch'){
+   touches.current.set(e.pointerId,[e.clientX,e.clientY]);
+   if(touches.current.size>=2){   // two fingers: pan from the centroid; the first finger's pending tap is cancelled
+    cancelAnimationFrame(anim.current);setHover(null);idle.current=true;
+    const [cx,cy]=centroid();drag.current={id:-1,x:cx,y:cy,px:pan.current[0],py:pan.current[1],a0:0,b0:0,mode:'pan',moved:true};
+    return;
+   }
+   idle.current=false;
+  }else if(e.button>2)return;
+  if(drag.current)return;
   cancelAnimationFrame(anim.current);
   e.currentTarget.setPointerCapture(e.pointerId);
-  drag.current={id:e.pointerId,x:e.clientX,y:e.clientY,px:pan.current[0],py:pan.current[1],moved:false};
+  const {a:a0,b:b0}=latest.current,pans=e.pointerType!=='touch'&&(e.button===2||e.shiftKey)||!latest.current.onAngles;
+  drag.current={id:e.pointerId,x:e.clientX,y:e.clientY,px:pan.current[0],py:pan.current[1],a0,b0,mode:pans?'pan':'rotate',moved:e.button===2};
  };
  const onMove=(e:React.PointerEvent<HTMLDivElement>)=>{
   const d=drag.current;
+  if(e.pointerType==='touch'){
+   if(touches.current.has(e.pointerId))touches.current.set(e.pointerId,[e.clientX,e.clientY]);
+   if(d&&d.id===-1&&touches.current.size>=2){const [cx,cy]=centroid();setPan(d.px+(cx-d.x)*2/sizeRef.current,d.py-(cy-d.y)*2/sizeRef.current);return;}
+  }
+  if(e.pointerType==='mouse'&&(!d||!d.moved)){const r=e.currentTarget.getBoundingClientRect();setHover(hit(e.clientX-r.left,e.clientY-r.top));}
   if(!d||d.id!==e.pointerId)return;
   const dx=e.clientX-d.x,dy=e.clientY-d.y;
   if(!d.moved&&Math.hypot(dx,dy)<DRAG_PX)return;
-  d.moved=true;
-  setPan(d.px+dx*2/sizeRef.current,d.py-dy*2/sizeRef.current);
+  d.moved=true;setHover(null);
+  if(d.mode==='rotate'){const c=clampAngles(d.a0-dx*DEG_PER_PX,d.b0+dy*DEG_PER_PX);latest.current.onAngles?.(c.a,c.b);}
+  else setPan(d.px+dx*2/sizeRef.current,d.py-dy*2/sizeRef.current);
  };
  const onUp=(e:React.PointerEvent<HTMLDivElement>)=>{
+  if(e.pointerType==='touch'){touches.current.delete(e.pointerId);if(touches.current.size===0){const was=idle.current;idle.current=false;if(was){drag.current=null;return;}}else{drag.current=null;return;}}
   const d=drag.current;
   if(!d||d.id!==e.pointerId)return;
   drag.current=null;
-  if(!d.moved){const r=e.currentTarget.getBoundingClientRect();pick(e.clientX-r.left,e.clientY-r.top);}
+  if(!d.moved&&e.button===0&&!e.shiftKey){const r=e.currentTarget.getBoundingClientRect();latest.current.onSelect(hit(e.clientX-r.left,e.clientY-r.top));}
  };
- const onCancel=(e:React.PointerEvent<HTMLDivElement>)=>{if(drag.current?.id===e.pointerId)drag.current=null;};
+ const onCancel=(e:React.PointerEvent<HTMLDivElement>)=>{
+  touches.current.delete(e.pointerId);
+  if(drag.current?.id===e.pointerId||touches.current.size===0)drag.current=null;
+  setHover(null);
+ };
+ const onLeave=()=>{if(!drag.current)setHover(null);};
 
  const sys=SYSTEM_TEXT[vis.system];
- const square:CSSProperties={position:'relative',width:side,height:side,overflow:'hidden',background:'#9a9a9a',borderRadius:4,cursor:'grab',touchAction:'none',userSelect:'none'};
+ const square:CSSProperties={position:'relative',width:side,height:side,overflow:'hidden',background:'#9a9a9a',borderRadius:4,touchAction:'none',userSelect:'none'};
  return (
   <div ref={host} style={{position:'absolute',inset:0,display:'flex',alignItems:'center',justifyContent:'center',minWidth:0,minHeight:0}}>
-   <div style={failed?{...square,width:'100%',height:'100%',background:'#15191d',display:'flex',alignItems:'center',justifyContent:'center',padding:24,cursor:'default'}:square}
-    onPointerDown={failed?undefined:onDown} onPointerMove={failed?undefined:onMove} onPointerUp={failed?undefined:onUp} onPointerCancel={onCancel}>
+   <div style={failed?{...square,width:'100%',height:'100%',background:'#15191d',display:'flex',alignItems:'center',justifyContent:'center',padding:24,cursor:'default'}:{...square,cursor:hoverOn?'pointer':'grab'}}
+    onPointerDown={failed?undefined:onDown} onPointerMove={failed?undefined:onMove} onPointerUp={failed?undefined:onUp} onPointerCancel={onCancel} onPointerLeave={failed?undefined:onLeave} onContextMenu={e=>e.preventDefault()} onMouseDown={e=>{if(e.button===1)e.preventDefault();}}>
     <canvas ref={canvas} role="img" aria-label={`Angiograma simulado, ${fmtAngles(a,b)}, sistema inyectado ${sys}`} style={{position:'absolute',inset:0,width:'100%',height:'100%',display:failed?'none':'block'}}/>
     {failed?<p style={{color:'#cfd5da',fontSize:14,lineHeight:1.5,textAlign:'center',maxWidth:360,margin:0}}>{NO_WEBGL}</p>:<>
      {lbls.map(l=>(

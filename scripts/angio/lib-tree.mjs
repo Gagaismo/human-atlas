@@ -59,6 +59,8 @@ export function buildTree(dominance,ctx){
    // re-pin the ends after smoothing
    if(o.parent)pts[0]=way[0];if(o.keepEnd)pts[pts.length-1]=way.at(-1);
   }
+  // maxLen (mm): angiographic length cap (S19), the ImageCAS-X mean courses of the PDA/PL run on to the apex and the lateral wall, farther than the angiograms show
+  if(o.maxLen){let acc=0;for(let i=1;i<pts.length;i++){acc+=dist(pts[i-1],pts[i]);if(acc>=o.maxLen){pts=pts.slice(0,i+1);break;}}}
   if(o.parent){const hit=nearestOn(byId.get(o.parent).points,pts[0]);parentArc=hit.t;}
   const n=pts.length;
   let radii=pts.map((_,i)=>D(profile(o.diam,n===1?0:i/(n-1))*1));
@@ -167,9 +169,9 @@ export function buildTree(dominance,ctx){
    {id:'rca-mid',syntax:'2',name:'CD media',short:'CD media',from:rcaSegs[1][0],to:rcaSegs[1][1]},
    {id:'rca-dist',syntax:'3',name:'CD distal',short:'CD distal',from:rcaSegs[2][0],to:rcaSegs[2][1]},
   ]});
- add_({id:'cono',name:'Ramo del cono',short:'Cono',system:'right',family:'cd',parent:'rca',way:piece('FJ2670',{}),diam:[[0,1.7],[1,0.9]],source:bp(['FJ2670','FJ2676']),
+ add_({id:'cono',name:'Ramo del cono',short:'Cono',system:'right',family:'cd',parent:'rca',way:piece('FJ2670',{}),maxLen:36,diam:[[0,1.7],[1,0.9]],source:bp(['FJ2670','FJ2676']),
   segments:[{id:'cono',syntax:'',name:'Ramo del cono',short:'Cono',from:0,to:1}]});
- add_({id:'ma',name:'Marginal aguda',short:'MA',system:'right',family:'cd',parent:'rca',way:piece('FJ2672',{rev:true}),diam:[[0,2.1],[1,0.9]],source:bp(['FJ2672']),
+ add_({id:'ma',name:'Marginal aguda',short:'MA',system:'right',family:'cd',parent:'rca',way:piece('FJ2672',{rev:true}),maxLen:45,diam:[[0,2.1],[1,0.9]],source:bp(['FJ2672']),
   segments:[{id:'ma',syntax:'',name:'Marginal aguda',short:'MA',from:0,to:1}]});
  add_({id:'rv1',name:'Ramo ventricular derecho 1',short:'RV1',system:'right',family:'cd',parent:'rca',way:piece('FJ2671',{rev:true}),diam:[[0,1.7],[1,0.8]],source:bp(['FJ2671']),
   segments:[{id:'rv1',syntax:'',name:'Ramo ventricular derecho 1',short:'RV1',from:0,to:1}]});
@@ -185,19 +187,19 @@ export function buildTree(dominance,ctx){
   const rcaV=vessels.find(v=>v.id==='rca');
   rcaV.segments.at(-1).to=1; // the RCA ends at the crux in right/co dominance
   const pdaC=C('rpda'),rplC=C('rpla');
-  const pdaV=add_({id:'pda',name:'Descendente posterior',short:'DP',system:'right',family:'cd',parent:parentId,way:pdaC.points,diam:taper(co?[[0,2.2],[1,1.1]]:[[0,2.4],[1,1.2]],pdaC),source:ic('R-PDA',pdaC.n),
+  const pdaV=add_({id:'pda',name:'Descendente posterior',short:'DP',system:'right',family:'cd',parent:parentId,way:pdaC.points,maxLen:32,diam:taper(co?[[0,2.2],[1,1.1]]:[[0,2.4],[1,1.2]],pdaC),source:ic('R-PDA',pdaC.n),
    segments:[{id:'pda',syntax:'4',name:'Descendente posterior',short:'DP',from:0,to:1}]});
 
-  const rpl=add_({id:'rpl',name:'Posterolateral derecha',short:'PL',system:'right',family:'cd',parent:'rca',way:rplC.points,diam:taper(co?[[0,1.9],[1,1.1]]:[[0,2.3],[1,1.3]],rplC),source:ic('R-PLA',rplC.n),
+  const rpl=add_({id:'rpl',name:'Posterolateral derecha',short:'PL',system:'right',family:'cd',parent:'rca',way:rplC.points,maxLen:24,diam:taper(co?[[0,1.9],[1,1.1]]:[[0,2.3],[1,1.3]],rplC),source:ic('R-PLA',rplC.n),
    segments:[{id:'rpl',syntax:'16',name:'Posterolateral derecha',short:'PL',from:0,to:1}]});
 
   // posterolateral branches 16a-c: BodyParts3D pieces / synthesised, re-attached to the new PL trunk
   const A=piece('FJ2720',{rev:true}),Bc=[...piece('FJ2722',{rev:true}),...piece('FJ2721',{rev:true})];
-  add_({id:'rpl1',name:'Posterolateral derecha 1',short:'PL1',system:'right',family:'cd',parent:'rpl',way:A,diam:[[0,1.6],[1,0.8]],source:bp(['FJ2720']),
+  add_({id:'rpl1',name:'Posterolateral derecha 1',short:'PL1',system:'right',family:'cd',parent:'rpl',way:A,maxLen:18,diam:[[0,1.6],[1,0.8]],source:bp(['FJ2720']),
    segments:[{id:'rpl1',syntax:'16a',name:'Posterolateral derecha 1',short:'PL1',from:0,to:1}]});
-  add_({id:'rpl2',name:'Posterolateral derecha 2',short:'PL2',system:'right',family:'cd',parent:'rpl',way:Bc,diam:[[0,1.5],[1,0.8]],source:bp(['FJ2722','FJ2721']),
+  add_({id:'rpl2',name:'Posterolateral derecha 2',short:'PL2',system:'right',family:'cd',parent:'rpl',way:Bc,maxLen:24,diam:[[0,1.5],[1,0.8]],source:bp(['FJ2722','FJ2721']),
    segments:[{id:'rpl2',syntax:'16b',name:'Posterolateral derecha 2',short:'PL2',from:0,to:1}]});
-  add_({id:'rpl3',name:'Posterolateral derecha 3',short:'PL3',system:'right',family:'cd',parent:'rpl',lay:true,way:[at('rpl',co?0.5:0.4),ctx.toFrame([42,1257,14]),ctx.toFrame([40,1256,22]),ctx.toFrame([41,1255,30])],diam:[[0,1.4],[1,0.7]],source:sy('spline on the inferior wall from the PL trunk toward the apex',['FJ2719']),
+  add_({id:'rpl3',name:'Posterolateral derecha 3',short:'PL3',system:'right',family:'cd',parent:'rpl',lay:true,maxLen:30,way:[at('rpl',co?0.5:0.4),ctx.toFrame([42,1257,14]),ctx.toFrame([40,1256,22]),ctx.toFrame([41,1255,30])],diam:[[0,1.4],[1,0.7]],source:sy('spline on the inferior wall from the PL trunk toward the apex',['FJ2719']),
    segments:[{id:'rpl3',syntax:'16c',name:'Posterolateral derecha 3',short:'PL3',from:0,to:1}]});
   // septal perforators of the PDA, into the septum toward the LAD
   [[1,0.2],[2,0.42],[3,0.66]].forEach(([k,t])=>{

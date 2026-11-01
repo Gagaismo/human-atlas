@@ -141,3 +141,8 @@ BodyParts3D (CC BY 4.0, atribución obligatoria) → líneas centrales, mallas d
 - El árbol es la media de población; el corazón se deforma a él con un ICP rígido y una RBF (el epicardio se ajusta a 1,2 ± 0,8 mm de los vasos epicárdicos; el septo, las aurículas y la raíz aórtica solo lo siguen de forma suave). Es una anatomía de población sobre un único corazón, no una medición en él.
 - Las mallas coronarias de BodyParts3D están fragmentadas y la nomenclatura es la del proyecto (p. ej. «First posterior ventricular branch of RCA» es en realidad el tramo PL/surco AV posterior): la asignación a segmentos SYNTAX es nuestra y debe revisarla un docente (**a validar**).
 - Las distancias de los vasos al epicardio se validan contra la malla decimada (límite 5,5 mm; septales y NAV hasta 26 mm).
+
+## Encuadre y proporciones angiográficas (T10, S19)
+
+- Campo fijo centrado en el corazón (`HEART_CENTRE` = (8, −2, 18) mm, `FIELD_SIZE` = 185 mm), el mismo para coronaria izquierda, derecha y ambas: ajuste por mínimos cuadrados de los ostiums y de los bordes externos de ambos árboles contra las capturas de referencia a OAI 40 CAU 2 y OAD 15 CAU 27 (residuos ≤ 0,03 del lado de la imagen).
+- DP, PL y ramas PL1–PL3 acortadas (`maxLen` en `scripts/angio/lib-tree.mjs`: DP 32 mm, PL 24, PL1 18, PL2 24, PL3 30; ramo del cono 36 y marginal aguda 45): el abanico distal llega a ≈ 78 % del ancho de la imagen a OAI 40 CAU 2, como en las referencias. Valores plausibles marcados a validar.

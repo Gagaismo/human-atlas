@@ -1,0 +1,328 @@
+import {useEffect,useRef,useState} from 'react';
+import * as T from 'three';
+import type {CoronaryTree,Vec3,Vessel,Visibility} from './core/types';
+import {FAMILY_PALETTE,findSegment,pointAtArc,polylineLength,segmentRange,visibleVessels} from './core/tree';
+import {DETECTOR_SIZE,SID,SOD,imageAxes} from './core/geometry';
+import {foreshorteningOfPolyline} from './core/metrics';
+import {buildVesselGeometry,segmentAtArc} from './vessel-mesh';
+import {loadHeartAsset,type HeartPart} from './heart-asset';
+
+export interface HeartToggles{detectorView:boolean;foreshortening:boolean;skeleton:boolean;seeThrough:boolean;labels:boolean;planes:boolean}
+export interface HeartSceneProps{tree:CoronaryTree;vis:Visibility;a:number;b:number;selected:string|null;toggles:HeartToggles;onSelect:(segmentId:string|null)=>void;onDetectorViewLeft:()=>void}
+
+const NO_WEBGL='Esta vista necesita WebGL 2, que este navegador tiene desactivado o no admite. Probá con una versión actual de Chrome, Firefox o Safari.';
+/** The C-arm is drawn at this fraction of its real size so the whole arc stays close to the heart. */
+const ARM_SCALE=.35,TUBE_Z=-SOD*ARM_SCALE,DETECTOR_Z=(SID-SOD)*ARM_SCALE,DETECTOR_SIDE=DETECTOR_SIZE*ARM_SCALE;
+const MIN_DIST=100,MAX_DIST=900,DEFAULT_DIST=340,HIGHLIGHT='#ff9a1f';
+const HEART_COLOR='#a85a4c',GREAT_COLOR='#6f3a3c',SKELETON_COLOR='#a9b4bf';
+const LABEL_BASE='position:absolute;left:0;top:0;white-space:nowrap;pointer-events:none;font:11px/1.2 ui-monospace,Menlo,Consolas,monospace;padding:1px 5px;border-radius:3px;will-change:transform;';
+const LABEL_STYLE={vessel:'color:#f1f4f7;background:#0b1118b3;border:1px solid #ffffff2e;',selected:'color:#1b1002;background:#ff9a1f;font-weight:700;',plane:'color:#d6f6ff;background:#0b1118cc;border:1px solid #6fd3ff80;',carm:'color:#bcd4e8;background:#0b1118b3;border:1px solid #7f95a855;'};
+
+type Kind=keyof typeof LABEL_STYLE;
+interface Label{el:HTMLDivElement;kind:Kind;at:()=>T.Vector3}
+interface Entry{vessel:Vessel;mesh:T.Mesh;material:T.MeshStandardMaterial;hi:{uHi0:{value:number};uHi1:{value:number};uHiColor:{value:T.Color}};full:boolean;base:T.Color}
+interface PlaneFit{centre:T.Vector3;basis:T.Matrix4;size:[number,number];axis:T.Vector3;corner:T.Vector3}
+
+const v3=(p:Vec3)=>new T.Vector3(p[0],p[1],p[2]);
+const visKey=(v:Visibility)=>`${v.system}|${v.ramus}|${[...v.grafts].sort().join(',')}`;
+
+/** Total-least-squares plane through points: centroid + the eigenvector of the smallest covariance eigenvalue. */
+function fitPlane(points:T.Vector3[]):PlaneFit|null{
+ if(points.length<3)return null;
+ const c=new T.Vector3();points.forEach(p=>c.add(p));c.divideScalar(points.length);
+ const cov=[0,0,0,0,0,0];
+ for(const p of points){const x=p.x-c.x,y=p.y-c.y,z=p.z-c.z;cov[0]+=x*x;cov[1]+=x*y;cov[2]+=x*z;cov[3]+=y*y;cov[4]+=y*z;cov[5]+=z*z;}
+ const tr=cov[0]+cov[3]+cov[5],m=new T.Matrix3().set(tr-cov[0],-cov[1],-cov[2],-cov[1],tr-cov[3],-cov[4],-cov[2],-cov[4],tr-cov[5]);
+ // Power iteration on (tr·I − C): its dominant eigenvector is the smallest-variance direction of C.
+ const n=new T.Vector3(.31,.52,.79).normalize();
+ for(let i=0;i<80;i++){n.applyMatrix3(m);if(n.lengthSq()<1e-12)return null;n.normalize();}
+ const e1=new T.Vector3().crossVectors(n,Math.abs(n.y)<.9?new T.Vector3(0,1,0):new T.Vector3(1,0,0)).normalize(),e2=new T.Vector3().crossVectors(n,e1);
+ let lo1=Infinity,hi1=-Infinity,lo2=Infinity,hi2=-Infinity;
+ for(const p of points){const d=p.clone().sub(c),s=d.dot(e1),t=d.dot(e2);lo1=Math.min(lo1,s);hi1=Math.max(hi1,s);lo2=Math.min(lo2,t);hi2=Math.max(hi2,t);}
+ const pad=14,mid=c.clone().addScaledVector(e1,(lo1+hi1)/2).addScaledVector(e2,(lo2+hi2)/2);
+ return {centre:mid,basis:new T.Matrix4().makeBasis(e1,e2,n),size:[hi1-lo1+2*pad,hi2-lo2+2*pad],axis:n,corner:mid.clone().addScaledVector(e1,(hi1-lo1)/2+pad).addScaledVector(e2,(hi2-lo2)/2+pad)};
+}
+
+const COLD=new T.Color('#2f6bff'),MID=new T.Color('#f2d230'),HOT=new T.Color('#e5322d');
+/** Foreshortening → colour: 0 % blue, 25 % yellow, ≥ 50 % red. */
+function shortColor(f:number,out:T.Color){const t=Math.min(Math.max(f/.5,0),1);return t<.5?out.copy(COLD).lerp(MID,t*2):out.copy(MID).lerp(HOT,t*2-1);}
+
+function labelFor(el:HTMLDivElement,text:string,kind:Kind){el.style.cssText=LABEL_BASE+LABEL_STYLE[kind];el.textContent=text;}
+
+function webgl2(){try{return !!document.createElement('canvas').getContext('webgl2');}catch{return false;}}
+
+const FACES:[string,string,string][]=[
+ ['A','translateZ(24px)','Anterior'],['P','rotateY(180deg) translateZ(24px)','Posterior'],['I','rotateY(90deg) translateZ(24px)','Izquierda'],
+ ['D','rotateY(-90deg) translateZ(24px)','Derecha'],['C','rotateX(90deg) translateZ(24px)','Craneal'],['Cd','rotateX(-90deg) translateZ(24px)','Caudal']];
+
+export default function HeartScene(props:HeartSceneProps){
+ const host=useRef<HTMLDivElement>(null),layer=useRef<HTMLDivElement>(null),cube=useRef<HTMLDivElement>(null),latest=useRef(props);
+ latest.current=props;
+ const [ok,setOk]=useState(true),[status,setStatus]=useState('Cargando corazón…');
+ useEffect(()=>{
+  const el=host.current,labelLayer=layer.current,cubeEl=cube.current;
+  if(!el||!labelLayer||!cubeEl)return;
+  if(!webgl2()){setOk(false);return;}
+  let renderer:T.WebGLRenderer;
+  try{renderer=new T.WebGLRenderer({antialias:true,alpha:true,powerPreference:'high-performance'});}catch{setOk(false);return;}
+  let disposed=false,dirty=true,raf=0,lastNow=performance.now();
+  renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setClearColor(0x000000,0);renderer.outputColorSpace=T.SRGBColorSpace;
+  const canvas=renderer.domElement;canvas.style.cssText='display:block;width:100%;height:100%;touch-action:none;cursor:grab';
+  canvas.setAttribute('aria-label','Corazón 3D con el árbol coronario. Arrastrá para rotar y usá la rueda o pellizcá para acercar.');
+  el.appendChild(canvas);
+  const scene=new T.Scene(),camera=new T.PerspectiveCamera(32,1,20,2500);scene.add(camera);
+  scene.add(new T.HemisphereLight(0xffffff,0x3b2b2b,1.05));
+  const headlight=new T.DirectionalLight(0xfff6ee,2);headlight.position.set(.4,.8,1);camera.add(headlight);
+  const world=new T.Group();scene.add(world);
+
+  // Orbit: own quaternion trackball, because the detector view needs an arbitrary up vector (v) that OrbitControls would fight.
+  const q=new T.Quaternion(),qGoal=new T.Quaternion(),qDrag=new T.Quaternion(),basis=new T.Matrix4();
+  let dist=DEFAULT_DIST;
+  const goalOf=(a:number,b:number)=>{const {u,v,d}=imageAxes(a,b);basis.makeBasis(v3(u),v3(v),v3(d));return qGoal.setFromRotationMatrix(basis);};
+  q.copy(goalOf(latest.current.a,latest.current.b));
+  const place=()=>{camera.quaternion.copy(q);camera.position.set(0,0,dist).applyQuaternion(q);camera.updateMatrixWorld(true);};
+  const resize=()=>{const w=el.clientWidth,h=el.clientHeight;if(!w||!h)return;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();dirty=true;};
+  const observer=new ResizeObserver(resize);observer.observe(el);resize();
+
+  // Heart parts.
+  const heartMat=new T.MeshStandardMaterial({color:HEART_COLOR,roughness:.62,metalness:0,side:T.DoubleSide,transparent:true,opacity:1}),greatMat=new T.MeshStandardMaterial({color:GREAT_COLOR,roughness:.6,side:T.DoubleSide,transparent:true,opacity:1});
+  const skeletonMat=new T.MeshStandardMaterial({color:SKELETON_COLOR,roughness:1,transparent:true,opacity:.13,depthWrite:false});
+  const partGroup=new T.Group(),skeletonGroup=new T.Group(),heartMeshes:T.Mesh[]=[],heartCentre=new T.Vector3(),heartHalf=new T.Vector3(1,1,1);
+  world.add(partGroup,skeletonGroup);
+  let parts:HeartPart[]|null=null;
+  loadHeartAsset().then(list=>{
+   if(disposed)return;parts=list;
+   const box=new T.Box3();
+   for(const p of list){
+    const mesh=new T.Mesh(p.geometry,p.group==='skeleton'?skeletonMat:p.group==='heart'?heartMat:greatMat);
+    if(p.group==='skeleton'){mesh.renderOrder=-1;skeletonGroup.add(mesh);}
+    else{partGroup.add(mesh);if(p.group==='heart'){heartMeshes.push(mesh);box.union(p.geometry.boundingBox!);}}
+   }
+   if(!box.isEmpty()){box.getCenter(heartCentre);box.getSize(heartHalf).multiplyScalar(.5);}
+   setStatus('');dirty=true;
+  }).catch(()=>{if(!disposed)setStatus('No se pudo cargar el modelo del corazón.');});
+
+  // C-arm drawn around the heart (local frame: x = image right u, y = image up v, z = towards the detector d).
+  const arm=new T.Group();arm.matrixAutoUpdate=false;world.add(arm);
+  const metal=new T.MeshStandardMaterial({color:'#7f95a8',roughness:.45,metalness:.5}),dark=new T.MeshStandardMaterial({color:'#3d4f60',roughness:.5,metalness:.4});
+  const housing=new T.Mesh(new T.BoxGeometry(34,34,44),metal);housing.position.z=TUBE_Z-12;arm.add(housing);
+  const collimator=new T.Mesh(new T.CylinderGeometry(9,13,22,18).rotateX(Math.PI/2),dark);collimator.position.z=TUBE_Z+21;arm.add(collimator);
+  const panel=new T.Mesh(new T.BoxGeometry(DETECTOR_SIDE,DETECTOR_SIDE,6),dark);panel.position.z=DETECTOR_Z+4;arm.add(panel);
+  const h=DETECTOR_SIDE/2,faceZ=DETECTOR_Z,tint=new T.Mesh(new T.PlaneGeometry(DETECTOR_SIDE*.94,DETECTOR_SIDE*.94),new T.MeshBasicMaterial({color:'#7fd0ff',transparent:true,opacity:.1,side:T.DoubleSide,depthWrite:false}));
+  tint.position.z=faceZ;tint.renderOrder=5;arm.add(tint);
+  const frame=new T.LineSegments(new T.EdgesGeometry(new T.PlaneGeometry(DETECTOR_SIDE*.94,DETECTOR_SIDE*.94)),new T.LineBasicMaterial({color:'#9fdcff',transparent:true,opacity:.7}));frame.position.z=faceZ;arm.add(frame);
+  const apex=new T.Vector3(0,0,TUBE_Z+4),corners=[[-h,-h],[h,-h],[h,h],[-h,h]].map(([x,y])=>new T.Vector3(x*.94,y*.94,faceZ));
+  const coneGeo=new T.BufferGeometry().setFromPoints([0,1,2,3].flatMap(i=>[apex,corners[i],corners[(i+1)%4]]));
+  const cone=new T.Mesh(coneGeo,new T.MeshBasicMaterial({color:'#ffd36b',transparent:true,opacity:.07,side:T.DoubleSide,depthWrite:false}));cone.renderOrder=4;arm.add(cone);
+  arm.add(new T.LineSegments(new T.BufferGeometry().setFromPoints(corners.flatMap(c=>[apex,c])),new T.LineBasicMaterial({color:'#ffd36b',transparent:true,opacity:.35})));
+
+  // Vessels, planes and labels depend on (tree, visibility); style depends on angles, selection and toggles.
+  const tubeGroup=new T.Group(),planeGroup=new T.Group();world.add(tubeGroup,planeGroup);
+  const geometries=new Map<Vessel,T.BufferGeometry>(),pickables:T.Mesh[]=[];
+  let entries:Entry[]=[],labels:Label[]=[],shownTree:CoronaryTree|null=null,shownVis='',shownSig='',planeFits:{av:PlaneFit|null;septum:PlaneFit|null}={av:null,septum:null};
+  const addLabel=(text:string,kind:Kind,at:()=>T.Vector3)=>{const e=document.createElement('div');labelFor(e,text,kind);e.style.display='none';labelLayer.appendChild(e);const l={el:e,kind,at};labels.push(l);return l;};
+  const vesselLabels:{label:Label;vessel:Vessel}[]=[];let selectedLabel:Label|null=null,avLabel:Label|null=null,septumLabel:Label|null=null;
+  const clearLabels=()=>{labels.forEach(l=>l.el.remove());labels=[];vesselLabels.length=0;selectedLabel=null;avLabel=null;septumLabel=null;};
+
+  const patchMaterial=(material:T.MeshStandardMaterial,hi:Entry['hi'])=>{
+   material.onBeforeCompile=shader=>{
+    Object.assign(shader.uniforms,hi);
+    shader.vertexShader=shader.vertexShader.replace('#include <common>','#include <common>\nattribute float arc;\nvarying float vArc;').replace('#include <begin_vertex>','#include <begin_vertex>\nvArc=arc;');
+    shader.fragmentShader=shader.fragmentShader.replace('#include <common>','#include <common>\nvarying float vArc;\nuniform float uHi0;\nuniform float uHi1;\nuniform vec3 uHiColor;')
+     .replace('#include <color_fragment>','#include <color_fragment>\nfloat hiMask=step(uHi0,vArc)*step(vArc,uHi1);\ndiffuseColor.rgb=mix(diffuseColor.rgb,uHiColor,hiMask);')
+     .replace('#include <emissivemap_fragment>','#include <emissivemap_fragment>\ntotalEmissiveRadiance+=uHiColor*0.35*hiMask;');
+   };
+   material.customProgramCacheKey=()=>'angio-vessel-arc';
+  };
+
+  const rebuild=()=>{
+   const {tree,vis}=latest.current;
+   tubeGroup.clear();planeGroup.clear();pickables.length=0;clearLabels();
+   entries.forEach(e=>e.material.dispose());entries=[];
+   const live=new Set(tree.vessels);
+   for(const [v,g] of geometries)if(!live.has(v)){g.dispose();geometries.delete(v);}
+   const visible=new Set(visibleVessels(tree,vis));
+   for(const vessel of tree.vessels){
+    const full=visible.has(vessel);
+    if(!full&&(vessel.system==='graft'||(vessel.variant==='ramus'&&!vis.ramus)||vessel.points.length<2))continue;
+    let geometry=geometries.get(vessel);
+    if(!geometry){geometry=buildVesselGeometry(vessel,10,1);geometries.set(vessel,geometry);}
+    if(!geometry.getAttribute('position').count)continue;
+    const base=new T.Color(FAMILY_PALETTE[vessel.family]).multiplyScalar(.92);
+    const material=new T.MeshStandardMaterial({color:base,roughness:.4,metalness:0,emissive:base.clone().multiplyScalar(.28)});
+    const hi={uHi0:{value:-1},uHi1:{value:-1},uHiColor:{value:new T.Color(HIGHLIGHT)}};
+    patchMaterial(material,hi);
+    if(!full){material.transparent=true;material.opacity=.2;material.depthWrite=false;material.color.multiplyScalar(.55);material.emissive.setScalar(0);}
+    const mesh=new T.Mesh(geometry,material);mesh.renderOrder=full?1:0;tubeGroup.add(mesh);
+    if(full)pickables.push(mesh);
+    entries.push({vessel,mesh,material,hi,full,base:material.color.clone()});
+    if(full&&polylineLength(vessel.points)>=28){
+     const label=addLabel(vessel.short,'vessel',()=>{const p=pointAtArc(vessel.points,vessel.radii,.55).p;return v3(p);});
+     vesselLabels.push({label,vessel});
+    }
+   }
+   // Anatomical planes: AV groove from CD + Cx, septum from DA + DP.
+   const pts=(ids:string[])=>tree.vessels.filter(v=>ids.includes(v.id)).flatMap(v=>v.points.map(v3));
+   const lad=pts(['lad']),pda=pts(['pda','lpda']);
+   planeFits={av:fitPlane(pts(['rca','lcx'])),septum:fitPlane([...lad,...(pda.length?pda:[v3(tree.landmarks.crux),v3(tree.landmarks.apex)])])};
+   const addPlane=(fit:PlaneFit|null,color:string,text:string)=>{
+    if(!fit)return null;
+    const mesh=new T.Mesh(new T.PlaneGeometry(fit.size[0],fit.size[1]),new T.MeshBasicMaterial({color,transparent:true,opacity:.16,side:T.DoubleSide,depthWrite:false}));
+    mesh.applyMatrix4(fit.basis.clone().setPosition(fit.centre));mesh.renderOrder=3;
+    const edge=new T.LineSegments(new T.EdgesGeometry(mesh.geometry),new T.LineBasicMaterial({color,transparent:true,opacity:.65}));edge.applyMatrix4(mesh.matrix);edge.matrixAutoUpdate=false;
+    planeGroup.add(mesh,edge);
+    return addLabel(text,'plane',()=>fit.corner);
+   };
+   avLabel=addPlane(planeFits.av,'#4fd6ff','Surco AV');septumLabel=addPlane(planeFits.septum,'#ff7ad9','Septum');
+   const armLabel=(text:string,z:number,y:number)=>addLabel(text,'carm',()=>arm.localToWorld(new T.Vector3(0,y,z)));
+   armLabel('Tubo de rayos X',TUBE_Z-34,22);armLabel('Detector (I/I)',DETECTOR_Z,DETECTOR_SIDE/2+8);
+   selectedLabel=addLabel('','selected',()=>new T.Vector3());
+   shownTree=tree;shownVis=visKey(vis);shownSig='';dirty=true;
+  };
+
+  /** Applies angles, selection and toggles to materials, planes and the C-arm. */
+  const restyle=()=>{
+   const {a,b,selected,toggles}=latest.current;
+   const {u,v,d}=imageAxes(a,b);arm.matrix.makeBasis(v3(u),v3(v),v3(d));arm.matrixWorldNeedsUpdate=true;arm.updateMatrixWorld(true);
+   const glass=toggles.seeThrough;
+   heartMat.opacity=glass?.35:1;greatMat.opacity=glass?.42:1;heartMat.depthWrite=greatMat.depthWrite=!glass;
+   skeletonGroup.visible=toggles.skeleton;planeGroup.visible=toggles.planes;
+   const hit=selected?findSegment(latest.current.tree,selected):null,tmp=new T.Color();
+   for(const e of entries){
+    if(e.full)e.material.color.copy(toggles.foreshortening?shortColor(foreshorteningOfPolyline(e.vessel.points,a,b),tmp):e.base);
+    let lo=-1,hi=-1;
+    if(hit&&hit.vessel===e.vessel){const r=segmentRange(e.vessel,hit.segment);lo=Math.min(r.f0,r.f1);hi=Math.max(r.f0,r.f1);}
+    e.hi.uHi0.value=lo;e.hi.uHi1.value=hi;
+   }
+   if(selectedLabel){
+    const sel=hit&&entries.find(e=>e.vessel===hit.vessel&&e.full);
+    if(hit&&sel){const r=segmentRange(hit.vessel,hit.segment);labelFor(selectedLabel.el,hit.segment.short,'selected');const p=pointAtArc(hit.vessel.points,hit.vessel.radii,(r.f0+r.f1)/2).p;selectedLabel.at=()=>v3(p);}
+    else selectedLabel.at=()=>new T.Vector3(NaN,NaN,NaN);
+   }
+   dirty=true;
+  };
+
+  // Labels: projected each frame; those behind the heart are hidden (a shrunk bounding ellipsoid stands in for the heart) unless see-through.
+  const NDC=new T.Vector3(),dir=new T.Vector3(),o=new T.Vector3();
+  const hiddenByHeart=(p:T.Vector3)=>{
+   o.copy(camera.position).sub(heartCentre);dir.copy(p).sub(camera.position);
+   const k=.84,sx=1/(heartHalf.x*k),sy=1/(heartHalf.y*k),sz=1/(heartHalf.z*k);
+   const ox=o.x*sx,oy=o.y*sy,oz=o.z*sz,dx=dir.x*sx,dy=dir.y*sy,dz=dir.z*sz;
+   const A=dx*dx+dy*dy+dz*dz,B=2*(ox*dx+oy*dy+oz*dz),C=ox*ox+oy*oy+oz*oz-1,disc=B*B-4*A*C;
+   if(disc<0||A<1e-9)return false;
+   const t=(-B-Math.sqrt(disc))/(2*A);
+   return t>0&&t<1;
+  };
+  const placeLabels=()=>{
+   const {toggles,selected}=latest.current,w=el.clientWidth,hh=el.clientHeight,glass=toggles.seeThrough;
+   const show=(l:Label,visible:boolean,occludable:boolean)=>{
+    if(!visible){l.el.style.display='none';return;}
+    const p=l.at();
+    if(!Number.isFinite(p.x)){l.el.style.display='none';return;}
+    NDC.copy(p).project(camera);
+    if(NDC.z>1||Math.abs(NDC.x)>1.05||Math.abs(NDC.y)>1.05||(occludable&&!glass&&parts&&hiddenByHeart(p))){l.el.style.display='none';return;}
+    l.el.style.display='block';
+    l.el.style.transform=`translate(${((NDC.x+1)/2*w).toFixed(1)}px,${((1-NDC.y)/2*hh).toFixed(1)}px) translate(-50%,-135%)`;
+   };
+   for(const l of labels){
+    if(l.kind==='vessel')show(l,toggles.labels,true);
+    else if(l.kind==='plane')show(l,toggles.planes,false);
+    else if(l.kind==='selected')show(l,!!selected,true);
+    else show(l,true,false);
+   }
+  };
+  const updateCube=()=>{
+   const e=new T.Matrix4().makeRotationFromQuaternion(camera.quaternion.clone().invert()).elements,s=[1,-1,1],m:number[]=[];
+   for(let c=0;c<3;c++){for(let r=0;r<3;r++)m.push(e[c*4+r]*s[r]*s[c]);m.push(0);}
+   cubeEl.style.transform=`matrix3d(${m.join(',')},0,0,0,1)`;
+  };
+
+  // Pointer input: one pointer orbits, two pinch; a press without movement picks the segment under it.
+  const ptrs=new Map<number,{x:number;y:number}>();let press:{x:number;y:number;moved:boolean}|null=null,pinch=0,dragging=false;
+  const raycaster=new T.Raycaster(),ndc=new T.Vector2();
+  const pick=(cx:number,cy:number)=>{
+   const r=canvas.getBoundingClientRect();ndc.set((cx-r.left)/r.width*2-1,-((cy-r.top)/r.height)*2+1);
+   raycaster.setFromCamera(ndc,camera);
+   const hit=raycaster.intersectObjects(pickables,false)[0];
+   if(!hit||!hit.face)return;
+   const entry=entries.find(e=>e.mesh===hit.object);if(!entry)return;
+   const arcs=(hit.object as T.Mesh).geometry.getAttribute('arc'),pos=(hit.object as T.Mesh).geometry.getAttribute('position'),f=hit.face;
+   const bc=new T.Vector3();
+   T.Triangle.getBarycoord(hit.point,new T.Vector3().fromBufferAttribute(pos,f.a),new T.Vector3().fromBufferAttribute(pos,f.b),new T.Vector3().fromBufferAttribute(pos,f.c),bc);
+   const arc=arcs.getX(f.a)*bc.x+arcs.getX(f.b)*bc.y+arcs.getX(f.c)*bc.z,seg=segmentAtArc(entry.vessel,Math.min(Math.max(arc,0),1));
+   if(seg)latest.current.onSelect(seg.id);
+  };
+  const onDown=(e:PointerEvent)=>{
+   canvas.setPointerCapture(e.pointerId);ptrs.set(e.pointerId,{x:e.clientX,y:e.clientY});
+   if(ptrs.size===1)press={x:e.clientX,y:e.clientY,moved:false};
+   else{press=null;const [p1,p2]=[...ptrs.values()];pinch=Math.hypot(p1.x-p2.x,p1.y-p2.y);}
+  };
+  const onMove=(e:PointerEvent)=>{
+   const prev=ptrs.get(e.pointerId);if(!prev)return;
+   const dx=e.clientX-prev.x,dy=e.clientY-prev.y;prev.x=e.clientX;prev.y=e.clientY;
+   if(ptrs.size===1&&press){
+    if(!press.moved&&Math.hypot(e.clientX-press.x,e.clientY-press.y)>4){press.moved=true;dragging=true;canvas.style.cursor='grabbing';if(latest.current.toggles.detectorView)latest.current.onDetectorViewLeft();}
+    if(press.moved){qDrag.setFromEuler(new T.Euler(-dy*.0055,-dx*.0055,0,'YXZ'));q.multiply(qDrag).normalize();dirty=true;}
+   }else if(ptrs.size===2){
+    const [p1,p2]=[...ptrs.values()],d=Math.hypot(p1.x-p2.x,p1.y-p2.y);
+    if(pinch>0&&d>0){dist=Math.min(Math.max(dist*pinch/d,MIN_DIST),MAX_DIST);dirty=true;}
+    pinch=d;
+   }
+  };
+  const onUp=(e:PointerEvent)=>{
+   if(!ptrs.has(e.pointerId))return;
+   if(ptrs.size===1&&press&&!press.moved&&e.type==='pointerup')pick(e.clientX,e.clientY);
+   ptrs.delete(e.pointerId);press=null;pinch=0;if(!ptrs.size){dragging=false;canvas.style.cursor='grab';}
+  };
+  const onWheel=(e:WheelEvent)=>{e.preventDefault();dist=Math.min(Math.max(dist*Math.exp(e.deltaY*.0012),MIN_DIST),MAX_DIST);dirty=true;};
+  canvas.addEventListener('pointerdown',onDown);canvas.addEventListener('pointermove',onMove);canvas.addEventListener('pointerup',onUp);canvas.addEventListener('pointercancel',onUp);canvas.addEventListener('wheel',onWheel,{passive:false});
+
+  const loop=(now:number)=>{
+   raf=requestAnimationFrame(loop);
+   const dt=Math.min((now-lastNow)/1000,.1);lastNow=now;
+   const p=latest.current;
+   if(p.tree!==shownTree||visKey(p.vis)!==shownVis)rebuild();
+   const t=p.toggles,sig=[p.a,p.b,p.selected,t.foreshortening,t.skeleton,t.seeThrough,t.planes,parts?1:0].join('|');
+   if(sig!==shownSig){shownSig=sig;restyle();}
+   if(t.detectorView&&!dragging){
+    goalOf(p.a,p.b);
+    const gap=q.angleTo(qGoal);
+    if(gap>1e-4){q.slerp(qGoal,gap<.002?1:1-Math.exp(-dt*14));dirty=true;}
+   }
+   if(!dirty)return;
+   dirty=false;place();placeLabels();updateCube();renderer.render(scene,camera);
+  };
+  raf=requestAnimationFrame(loop);
+
+  return()=>{
+   disposed=true;cancelAnimationFrame(raf);observer.disconnect();
+   canvas.removeEventListener('pointerdown',onDown);canvas.removeEventListener('pointermove',onMove);canvas.removeEventListener('pointerup',onUp);canvas.removeEventListener('pointercancel',onUp);canvas.removeEventListener('wheel',onWheel);
+   clearLabels();
+   entries.forEach(e=>e.material.dispose());geometries.forEach(g=>g.dispose());
+   parts?.forEach(p=>p.geometry.dispose());
+   scene.traverse(o=>{const m=o as T.Mesh;if(m.isMesh||(o as T.LineSegments).isLineSegments){if(!(parts?.some(p=>p.geometry===m.geometry))&&!([...geometries.values()].includes(m.geometry)))m.geometry.dispose();const mat=m.material;(Array.isArray(mat)?mat:[mat]).forEach(x=>x.dispose());}});
+   renderer.dispose();renderer.forceContextLoss();canvas.remove();
+  };
+ },[]);
+
+ const {toggles}=props;
+ const box:React.CSSProperties={position:'relative',width:'100%',height:'100%',minHeight:0,overflow:'hidden',background:'radial-gradient(ellipse at 50% 45%,#16202b 0%,#0a0f15 75%)'};
+ const tag:React.CSSProperties={position:'absolute',font:'11px ui-monospace,Menlo,Consolas,monospace',letterSpacing:'.14em',color:'#9fb2c4',pointerEvents:'none'};
+ if(!ok)return <div style={{...box,display:'flex',alignItems:'center',justifyContent:'center',padding:24,textAlign:'center',color:'#c9d4de',font:'13px/1.5 system-ui,sans-serif'}} role="status"><span style={{...tag,left:12,top:10}}>CORAZÓN 3D</span>{NO_WEBGL}</div>;
+ return <div style={box}>
+  <div ref={host} style={{position:'absolute',inset:0}}/>
+  <div ref={layer} style={{position:'absolute',inset:0,overflow:'hidden',pointerEvents:'none'}}/>
+  <span style={{...tag,left:12,top:10}}>CORAZÓN 3D</span>
+  {status&&<span style={{...tag,left:'50%',top:'50%',transform:'translate(-50%,-50%)',letterSpacing:'.04em'}} role="status">{status}</span>}
+  <div aria-hidden style={{position:'absolute',right:14,top:14,width:48,height:48,perspective:220,pointerEvents:'none'}} title="Orientación: D derecha, I izquierda, A anterior, P posterior, C craneal, Cd caudal">
+   <div ref={cube} style={{position:'absolute',inset:0,transformStyle:'preserve-3d'}}>
+    {FACES.map(([t,tr,name])=><div key={t} title={name} style={{position:'absolute',inset:0,transform:tr,backfaceVisibility:'hidden',display:'flex',alignItems:'center',justifyContent:'center',font:'700 15px ui-monospace,Menlo,Consolas,monospace',color:t==='A'||t==='P'?'#ffd9a0':'#cfe3f5',background:'#1b2a38d9',border:'1px solid #6f8aa3'}}>{t}</div>)}
+   </div>
+  </div>
+  {toggles.foreshortening&&<div style={{position:'absolute',left:12,bottom:12,width:150,pointerEvents:'none',font:'11px ui-monospace,Menlo,Consolas,monospace',color:'#c9d4de'}}>
+   <div style={{marginBottom:4}}>Acortamiento</div>
+   <div style={{height:8,borderRadius:2,background:'linear-gradient(90deg,#2f6bff,#f2d230,#e5322d)'}}/>
+   <div style={{display:'flex',justifyContent:'space-between',marginTop:3,color:'#8da0b3'}}><span>0 %</span><span>25 %</span><span>≥ 50 %</span></div>
+  </div>}
+ </div>;
+}

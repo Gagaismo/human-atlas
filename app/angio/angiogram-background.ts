@@ -102,7 +102,7 @@ export function paintBackground(ctx:CanvasRenderingContext2D,S:number,a:number,b
  ctx.globalAlpha=1;ctx.shadowBlur=0;
  // Lung field: brighter at the periphery, slightly darker towards the mediastinum.
  const g=ctx.createRadialGradient(S*(.5+pan[0]/2),S*(.5-pan[1]/2),S*.05,S*.5,S*.5,S*.78);
- g.addColorStop(0,'#a2a2a2');g.addColorStop(1,'#c2c2c2');
+ g.addColorStop(0,'#c8c8c8');g.addColorStop(1,'#e2e2e2');
  ctx.fillStyle=g;ctx.fillRect(0,0,S,S);
  mottling(ctx,S,pan);
  const blur=S*.03;

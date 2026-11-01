@@ -23,8 +23,10 @@ const SIDES=8,MIN_RADIUS=.1,RADIUS_SCALE=.95;
 /** Contrast fill (S14): the front travels from the ostium to the farthest tip in FILL_S seconds; the "CINE" timer stops at CINE_END. */
 export const FILL_S=1.4,CINE_END=1.8;
 const FRONT_SOFT_MM=38;
+/** Ostium puff (S22): centre this far behind the ostium (towards the sinus), Gaussian sigma and peak density in the compositor's chord units. */
+const PUFF_BACK_MM=4,PUFF_SIGMA_MM=4.8,PUFF_DENSITY=2.5;
 
-export interface TubeBuild{geometry:T.BufferGeometry;segmentIds:string[];/** Longest ostium-to-tip path (mm). */maxDist:number;/** Where each injected system's catheter enters (mm, patient frame). */ostia:Vec3[]}
+export interface TubeBuild{geometry:T.BufferGeometry;segmentIds:string[];/** Longest ostium-to-tip path (mm). */maxDist:number;/** Where each injected system's catheter enters (mm, patient frame). */ostia:Vec3[];/** Unit vector of each vessel leaving its ostium (same order). */ostiaDirs:Vec3[]}
 
 /** Distance (mm) along the vessels from the ostium to the start of each vessel: parent's own offset + the arc up to the branch point. */
 function ostiumOffsets(vessels:readonly Vessel[]):Map<string,number>{
@@ -48,12 +50,15 @@ function smoothRadii(r:readonly number[]):number[]{
 /** One closed, capped tube per segment, merged in a single geometry; `aSeg` is the segment index, `aTint` its family colour. */
 export function buildTubes(vessels:readonly Vessel[]):TubeBuild{
  const pos:number[]=[],tint:number[]=[],seg:number[]=[],dst:number[]=[],idx:number[]=[],segmentIds:string[]=[];
- const col=new T.Color(),offsets=ostiumOffsets(vessels),ostia:Vec3[]=[];
+ const col=new T.Color(),offsets=ostiumOffsets(vessels),ostia:Vec3[]=[],ostiaDirs:Vec3[]=[];
  let maxDist=1;
  for(const vessel of vessels){
   col.set(FAMILY_PALETTE[vessel.family]);
   const off=offsets.get(vessel.id)??0;
-  if(!vessel.parent&&vessel.system!=='graft'&&vessel.points.length)ostia.push(vessel.points[0]);
+  if(!vessel.parent&&vessel.system!=='graft'&&vessel.points.length){
+   const p0=vessel.points[0],p1=vessel.points[Math.min(4,vessel.points.length-1)],l=Math.hypot(p1[0]-p0[0],p1[1]-p0[1],p1[2]-p0[2])||1;
+   ostia.push(p0);ostiaDirs.push([(p1[0]-p0[0])/l,(p1[1]-p0[1])/l,(p1[2]-p0[2])/l]);
+  }
   for(const s of vessel.segments){
    const sm=sampleSegment(vessel,s,TUBE_STEP),n=sm.points.length;
    if(n<2)continue;
@@ -99,7 +104,7 @@ export function buildTubes(vessels:readonly Vessel[]):TubeBuild{
  geometry.setAttribute('aSeg',new T.Float32BufferAttribute(seg,1));
  geometry.setAttribute('aDist',new T.Float32BufferAttribute(dst,1));
  geometry.setIndex(idx);
- return {geometry,segmentIds,maxDist,ostia};
+ return {geometry,segmentIds,maxDist,ostia,ostiaDirs};
 }
 
 const TUBE_VERT=`
@@ -124,29 +129,32 @@ void main(){
 const QUAD_VERT=`varying vec2 vUv;void main(){vUv=uv;gl_Position=vec4(position.xy,0.,1.);}`;
 const QUAD_FRAG=`
 uniform sampler2D uThick;uniform sampler2D uTint;uniform sampler2D uBg;
-uniform float uTexel;uniform float uSoft;uniform float uMu;uniform float uSeed;uniform float uColor;
-uniform float uWCur;uniform float uWPrev;uniform float uWHover;uniform float uDens;uniform vec3 uPuff0;uniform vec3 uPuff1;
+uniform float uSharp;uniform vec3 uCurve;uniform float uTexel;uniform float uSoft;uniform float uMu;uniform float uSeed;uniform float uColor;
+uniform float uWCur;uniform float uWPrev;uniform float uWHover;uniform float uDens;uniform vec4 uPuff0;uniform vec4 uPuff1;
 varying vec2 vUv;
 float hash(vec2 p){p=fract(p*vec2(443.897,441.423));p+=dot(p,p.yx+19.19);return fract((p.x+p.y)*p.x);}
 vec4 th(vec2 o){return abs(texture2D(uThick,vUv+o*uTexel));}
-float puff(vec3 p){vec2 d=vUv-p.xy;float r2=dot(d,d);return p.z*(exp(-r2/.0016)*.7+exp(-r2/.0075)*.5);}
+// Contrast cloud: a round core plus a wider skirt, elongated a little along the catheter axis (p.xy centre, p.z amplitude, p.w sigma in uv).
+float puff(vec4 p){vec2 d=vUv-p.xy;float r2=dot(d,d)/(p.w*p.w);return p.z*(exp(-r2*.5)*.8+exp(-r2*.14)*.35);}
 void main(){
  float t=0.,s=0.,sp=0.,sh=0.,w=0.;vec3 tc=vec3(0.);
+ // Small anti-aliasing kernel (about 0.7 px): the edges stay crisp, the rasterised steps do not alias.
  for(int j=-1;j<=1;j++)for(int i=-1;i<=1;i++){
-  float k=(i==0?2.:1.)*(j==0?2.:1.);vec2 o=vec2(float(i),float(j))*uSoft;
+  float k=(i==0?2.:1.)*(j==0?2.:1.);vec2 o=vec2(float(i),float(j))*uSoft*.7;
   vec4 v=th(o);
   t+=k*v.r;s+=k*v.g;sp+=k*v.b;sh+=k*v.a;tc+=k*abs(texture2D(uTint,vUv+o*uTexel).rgb);w+=k;
  }
  t/=w;s/=w;sp/=w;sh/=w;tc/=w;
  float wide=0.;
- for(int k=0;k<8;k++){float an=float(k)*.7853982;wide+=th(vec2(cos(an),sin(an))*uSoft*3.).r;}
+ for(int k=0;k<8;k++){float an=float(k)*.7853982;wide+=th(vec2(cos(an),sin(an))*uSoft*2.5).r;}
  wide/=8.;
- float tb=(t+.3*wide)*uDens;                            // slightly blooming, soft edges
- tb=3.*(1.-exp(-tb/3.));                              // dense lumen saturates: proximal trunks stay medium grey, fine branches keep their contrast
- float pf=puff(uPuff0)+puff(uPuff1);                    // contrast cloud at the injected ostium (equivalent mm of iodine)
+ float tb=max(t+uSharp*(t-wide),0.)*uDens;               // unsharp mask on the chord length: crisper rims, darker cores, nothing added outside
+ tb=uCurve.x*pow(tb,uCurve.y);                          // thin twigs keep their contrast, thick trunks gain depth
+ tb=uCurve.z*(1.-exp(-tb/uCurve.z));                    // soft ceiling so overlapping trunks do not turn black
+ float pf=puff(uPuff0)+puff(uPuff1);                    // contrast cloud at the injected ostium (equivalent chord, same units as tb)
  float bg=texture2D(uBg,vUv).r;
  vec2 q=vUv-.5;
- bg*=1.-.32*pow(clamp(length(q)*1.35,0.,1.),2.4);       // mild vignette
+ bg*=1.-.26*pow(clamp(length(q)*1.35,0.,1.),2.4);       // mild vignette
  float cov=1.-exp(-uMu*(tb+pf));
  float vcov=1.-exp(-uMu*tb);
  vec3 tint=clamp(tc/max(t,.05),0.,1.);
@@ -207,13 +215,13 @@ export function createAngioRenderer(canvas:HTMLCanvasElement):AngioRenderer|null
  const bgCtx=bgCanvas.getContext('2d')!;
  const bgTex=new T.CanvasTexture(bgCanvas);bgTex.minFilter=T.LinearFilter;bgTex.generateMipmaps=false;
  const quadMat=new T.ShaderMaterial({vertexShader:QUAD_VERT,fragmentShader:QUAD_FRAG,depthTest:false,depthWrite:false,uniforms:{
-  uThick:{value:rtThick.texture},uTint:{value:rtTint.texture},uBg:{value:bgTex},uTexel:{value:1/size},uSoft:{value:1},uMu:{value:.18},uSeed:{value:0},uColor:{value:0},
-  uWCur:{value:0},uWPrev:{value:0},uWHover:{value:0},uDens:{value:1},uPuff0:{value:new T.Vector3()},uPuff1:{value:new T.Vector3()}}});
+  uThick:{value:rtThick.texture},uTint:{value:rtTint.texture},uBg:{value:bgTex},uTexel:{value:1/size},uSoft:{value:1},uMu:{value:.17},uSharp:{value:.45},uCurve:{value:new T.Vector3(.33,1.7,4.2)},uSeed:{value:0},uColor:{value:0},
+  uWCur:{value:0},uWPrev:{value:0},uWHover:{value:0},uDens:{value:1},uPuff0:{value:new T.Vector4()},uPuff1:{value:new T.Vector4()}}});
  const quad=new T.Mesh(new T.PlaneGeometry(2,2),quadMat);quad.frustumCulled=false;
  const quadScene=new T.Scene();quadScene.add(quad);
  const quadCamera=new T.OrthographicCamera(-1,1,1,-1,0,1);
 
- let segmentIds:string[]=[],cloudPts:[number,number,number][]|null=null,hasTubes=false,maxDist=1,ostia:Vec3[]=[],bgKey='';
+ let segmentIds:string[]=[],cloudPts:[number,number,number][]|null=null,hasTubes=false,maxDist=1,ostia:Vec3[]=[],ostiaDirs:Vec3[]=[],bgKey='';
  const v3=(p:readonly number[],k=1)=>new T.Vector3(p[0]*k,p[1]*k,p[2]*k);
 
  function placeCamera(a:number,b:number,pan:readonly [number,number]){
@@ -230,7 +238,7 @@ export function createAngioRenderer(canvas:HTMLCanvasElement):AngioRenderer|null
   setScene(tree,vessels){
    const old=tubes.geometry;
    const built=buildTubes(vessels);
-   tubes.geometry=built.geometry;segmentIds=built.segmentIds;hasTubes=built.segmentIds.length>0;maxDist=built.maxDist;ostia=built.ostia;bgKey='';
+   tubes.geometry=built.geometry;segmentIds=built.segmentIds;hasTubes=built.segmentIds.length>0;maxDist=built.maxDist;ostia=built.ostia;ostiaDirs=built.ostiaDirs;bgKey='';
    old.dispose();
    cloudPts=heartCloud(tree);
   },
@@ -252,12 +260,14 @@ export function createAngioRenderer(canvas:HTMLCanvasElement):AngioRenderer|null
    const qu=quadMat.uniforms;
    qu.uWCur.value=o.sel.weight;qu.uWPrev.value=o.prev.weight;qu.uWHover.value=o.hover.weight;
    qu.uDens.value=done?1:.78+.22*smooth(.2,CINE_END,o.fill);
-   // Faint contrast cloud at each ostium: rises as the injection starts and thins out once the vessels are filled.
-   const h=FIELD_SIZE/2,ax=imageAxes(o.a,o.b),amp=done?.5:smooth(0,.25,o.fill)*(1-.5*smooth(.9,CINE_END,o.fill));
+   // Contrast cloud at each ostium, on the aortic-sinus side (behind the ostium, against the vessel's direction): rises with the injection and
+   // settles at a fainter level once the vessels are filled.
+   const h=FIELD_SIZE/2,ax=imageAxes(o.a,o.b),amp=done?.8:smooth(0,.3,o.fill)*(1-.2*smooth(.9,CINE_END,o.fill));
    for(const [k,u] of [qu.uPuff0,qu.uPuff1].entries()){
-    const pt=ostia[k];
-    if(!pt||!hasTubes){u.value.set(0,0,0);continue;}
-    const q=projectWith(ax,pt);u.value.set((q.x/h+o.pan[0]+1)/2,(q.y/h+o.pan[1]+1)/2,amp*1.6);
+    const pt=ostia[k],dir=ostiaDirs[k];
+    if(!pt||!dir||!hasTubes){u.value.set(0,0,0,1);continue;}
+    const q=projectWith(ax,[pt[0]-dir[0]*PUFF_BACK_MM,pt[1]-dir[1]*PUFF_BACK_MM,pt[2]-dir[2]*PUFF_BACK_MM]);
+    u.value.set((q.x/h+o.pan[0]+1)/2,(q.y/h+o.pan[1]+1)/2,amp*PUFF_DENSITY,PUFF_SIGMA_MM/FIELD_SIZE);
    }
    renderer.setClearColor(0x000000,0);
    renderer.setRenderTarget(rtThick);renderer.clear();

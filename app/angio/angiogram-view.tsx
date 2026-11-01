@@ -3,12 +3,17 @@ import type {CSSProperties} from 'react';
 import {DETECTOR_SIZE,fmtAngles,projectWith,imageAxes} from './core/geometry';
 import {FAMILY_PALETTE,sampleSegment} from './core/tree';
 import type {CoronaryTree,Family,Vec3,Visibility} from './core/types';
-import {createAngioRenderer,injectedVessels,type AngioRenderer} from './angiogram-render';
+import {CINE_END,createAngioRenderer,injectedVessels,type AngioRenderer,type Highlight} from './angiogram-render';
 
 export interface AngiogramViewProps{tree:CoronaryTree;vis:Visibility;a:number;b:number;selected:string|null;labels:boolean;color:boolean;onSelect:(segmentId:string|null)=>void}
 
 const NO_WEBGL='Esta vista necesita WebGL 2, que este navegador tiene desactivado o no admite. Probá con una versión actual de Chrome, Firefox o Safari.';
-const HIT_PX=8,DRAG_PX=4,PAN_NOTE_PX=3,PAN_MAX=1.2;
+const HIT_PX=8,DRAG_PX=4,PAN_NOTE_PX=3,PAN_MAX=1.2,FADE_MS=250;
+
+/** Cine fill and highlight fades are skipped for people who ask for less motion. */
+const reducedMotion=()=>typeof matchMedia==='function'&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+/** "CINE 1,8 s": Spanish decimal comma. */
+const cineText=(seconds:number)=>`CINE ${Math.min(seconds,CINE_END).toFixed(1).replace('.',',')} s`;
 
 interface Seg{id:string;short:string;full:string;numbered:boolean;family:Family;pts:Vec3[];mid:Vec3}
 interface Lbl{id:string;text:string;x:number;y:number;selected:boolean;family:Family}
@@ -30,6 +35,9 @@ export default function AngiogramView(props:AngiogramViewProps){
  const latest=useRef(props);latest.current=props;
  const gl=useRef<AngioRenderer|null>(null),pan=useRef<[number,number]>([0,0]);
  const raf=useRef(0),anim=useRef(0),sizeRef=useRef(0),drawRef=useRef(()=>{});
+ // Cine fill (S14): when the injection started (performance.now), and the cross-fade between the previous and the current selection.
+ const fillStart=useRef(0),cine=useRef<HTMLSpanElement>(null),lblKey=useRef('');
+ const fade=useRef({cur:{id:null,weight:0} as Highlight,prev:{id:null,weight:0} as Highlight,at:0});
  const [side,setSide]=useState(0),[failed,setFailed]=useState(false),[panned,setPanned]=useState(false),[lbls,setLbls]=useState<Lbl[]>([]);
 
  const graftKey=[...vis.grafts].sort().join(',');
@@ -52,7 +60,21 @@ export default function AngiogramView(props:AngiogramViewProps){
  drawRef.current=()=>{
   const {a,b,selected,color,labels:showLabels}=latest.current,S=sizeRef.current;
   if(!gl.current||S<=0)return;
-  gl.current.render({a,b,pan:pan.current,color,selected});
+  const now=performance.now(),calm=reducedMotion(),fd=fade.current,dt=fd.at?Math.min(now-fd.at,64):0;
+  fd.at=now;
+  if(selected!==fd.cur.id){   // selection changed: the old overlay fades out while the new one fades in
+   if(fd.cur.id&&fd.cur.id!==selected)fd.prev={...fd.cur};
+   fd.cur=selected&&selected===fd.prev.id?{id:selected,weight:fd.prev.weight}:{id:selected,weight:0};
+   if(fd.cur.id===fd.prev.id)fd.prev={id:null,weight:0};
+  }
+  const step=calm?1:dt/FADE_MS;
+  fd.cur.weight=Math.min(1,fd.cur.weight+step);
+  fd.prev.weight=Math.max(0,fd.prev.weight-step);
+  if(fd.prev.weight<=0)fd.prev={id:null,weight:0};
+  const elapsed=calm?CINE_END:(now-fillStart.current)/1000;
+  gl.current.render({a,b,pan:pan.current,color,sel:fd.cur,prev:fd.prev,fill:elapsed});
+  if(cine.current)cine.current.textContent=cineText(elapsed);
+  if(elapsed<CINE_END||fd.cur.weight<1||fd.prev.weight>0)request();
   const ax=imageAxes(a,b),out:Lbl[]=[];
   const want=segs.filter(s=>s.id===selected||(showLabels&&s.numbered));
   if(want.length){
@@ -70,7 +92,8 @@ export default function AngiogramView(props:AngiogramViewProps){
     }
    }
   }
-  setLbls(out);
+  const key=out.map(l=>`${l.id}:${l.x.toFixed(0)}:${l.y.toFixed(0)}:${l.selected}`).join('|');
+  if(key!==lblKey.current){lblKey.current=key;setLbls(out);}
  };
  const request=useCallback(()=>{
   if(raf.current)return;
@@ -96,7 +119,8 @@ export default function AngiogramView(props:AngiogramViewProps){
   };
  },[request]);
 
- useEffect(()=>{gl.current?.setScene(tree,vessels);request();},[tree,vessels,request,failed]);
+ // A new injection (system, dominance, ramus, grafts, first load) restarts the fill from the ostium; angle changes do not.
+ useEffect(()=>{gl.current?.setScene(tree,vessels);fillStart.current=performance.now();request();},[tree,vessels,request,failed]);
  useEffect(()=>{request();},[a,b,selected,color,showLabels,segs,side,request]);
 
  const setPan=useCallback((x:number,y:number)=>{
@@ -157,7 +181,7 @@ export default function AngiogramView(props:AngiogramViewProps){
  const onCancel=(e:React.PointerEvent<HTMLDivElement>)=>{if(drag.current?.id===e.pointerId)drag.current=null;};
 
  const sys=SYSTEM_TEXT[vis.system];
- const square:CSSProperties={position:'relative',width:side,height:side,overflow:'hidden',background:'#7a7a7a',borderRadius:4,cursor:'grab',touchAction:'none',userSelect:'none'};
+ const square:CSSProperties={position:'relative',width:side,height:side,overflow:'hidden',background:'#9a9a9a',borderRadius:4,cursor:'grab',touchAction:'none',userSelect:'none'};
  return (
   <div ref={host} style={{position:'absolute',inset:0,display:'flex',alignItems:'center',justifyContent:'center',minWidth:0,minHeight:0}}>
    <div style={failed?{...square,width:'100%',height:'100%',background:'#15191d',display:'flex',alignItems:'center',justifyContent:'center',padding:24,cursor:'default'}:square}
@@ -170,6 +194,7 @@ export default function AngiogramView(props:AngiogramViewProps){
      ))}
      <span style={{...T_MONO,left:10,top:8,fontSize:15,fontWeight:600,letterSpacing:'.04em'}}>{fmtAngles(a,b)}</span>
      <span style={{...T_MONO,right:10,top:8,fontSize:15,fontWeight:600,letterSpacing:'.04em',textAlign:'right'}}>{sys}
+      <span ref={cine} aria-hidden style={{display:'block',fontSize:10,fontWeight:500,letterSpacing:'.08em',opacity:.8}}>{cineText(CINE_END)}</span>
       {vis.system==='both'&&<span style={{display:'block',fontSize:9,fontWeight:500,letterSpacing:'.08em',opacity:.8}}>AMBAS: SOLO DOCENTE</span>}</span>
      <span style={{...T_MONO,left:10,bottom:8,fontSize:9,letterSpacing:'.1em',opacity:.75,lineHeight:'13px'}}>ANATOMÍA DE REFERENCIA<br/>FONDO: SIMULADO</span>
      {panned&&<div style={{position:'absolute',left:0,right:0,bottom:8,display:'flex',flexDirection:'column',alignItems:'center',gap:6,pointerEvents:'none'}}>

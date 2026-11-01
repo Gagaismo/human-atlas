@@ -47,7 +47,10 @@ function usePadMap(tree:CoronaryTree,system:System,ramus:boolean,grafts:GraftId[
  return {pad:pad.current,rows:rows.current,state,version};
 }
 
-const ramp=(t:number)=>{const k=Math.pow(clamp(t,0,1),1.4);return [12+k*150,18+k*172,28+k*190];};
+/** Light pad palette (S15): mid grey-blue where the view is worst, near white where it is best. */
+const WORST=[78,96,114],BEST=[240,244,247];
+const ramp=(t:number)=>{const k=clamp(t,0,1),e=k*k*(3-2*k)*.35+k*.65;return WORST.map((w,i)=>w+(BEST[i]-w)*e);};
+const PLOT_BG='#5b6d80';
 
 export default function AngioPad({tree,vis,a,b,sel,mode,onMode,onSet,onGo}:AngioPadProps){
  const grafts=useMemo(()=>[...vis.grafts],[vis.grafts]);
@@ -62,7 +65,8 @@ export default function AngioPad({tree,vis,a,b,sel,mode,onMode,onSet,onGo}:Angio
   const measure=()=>{setWidth(Math.floor(el.clientWidth));setBoxH(Math.floor(el.clientHeight));setDpr(Math.min(2,window.devicePixelRatio||1));};
   measure();const ro=new ResizeObserver(measure);ro.observe(el);return()=>ro.disconnect();
  },[]);
- const views=useMemo(()=>STANDARD_VIEWS.filter(v=>vis.system==='both'||v.group===(vis.system==='left'?'izquierda':'derecha')),[vis.system]);
+ // Both groups of windows are drawn: the injected system's in white, the other one's dimmer. "Ambas" draws them all the same.
+ const injected=vis.system==='right'?'derecha':'izquierda',other=injected==='derecha'?'izquierda':'derecha',showLegend=vis.system!=='both';
 
  useEffect(()=>{
   const cv=canvas.current;if(!cv)return;
@@ -72,7 +76,7 @@ export default function AngioPad({tree,vis,a,b,sel,mode,onMode,onSet,onGo}:Angio
   const px=MARGIN.l,py=MARGIN.t,X=(av:number)=>px+(av+A_LIMIT)/(2*A_LIMIT)*plotW,Y=(bv:number)=>py+(B_LIMIT-bv)/(2*B_LIMIT)*plotH;
   // Map (light = good), rows flipped so CRA is on top.
   const data=mode==='none'?null:mode==='foreshortening'?pad.foreshortening:mode==='overlap'?pad.overlap:pad.combined;
-  g.fillStyle='#0d1117';g.fillRect(px,py,plotW,plotH);
+  g.fillStyle=PLOT_BG;g.fillRect(px,py,plotW,plotH);
   if(data&&sel&&state!=='hidden'&&state!=='error'){
    const img=new ImageData(pad.na,pad.nb);
    for(let j=0;j<pad.nb;j++)for(let i=0;i<pad.na;i++){
@@ -80,9 +84,9 @@ export default function AngioPad({tree,vis,a,b,sel,mode,onMode,onSet,onGo}:Angio
     img.data[o]=r;img.data[o+1]=gg;img.data[o+2]=bb;img.data[o+3]=255;
    }
    const off=document.createElement('canvas');off.width=pad.na;off.height=pad.nb;off.getContext('2d')!.putImageData(img,0,0);
-   g.imageSmoothingEnabled=true;g.drawImage(off,px,py,plotW,plotH);
+   g.imageSmoothingEnabled=true;g.imageSmoothingQuality='high';g.drawImage(off,px,py,plotW,plotH);
   }
-  g.strokeStyle='#2b323b';g.lineWidth=1;g.strokeRect(px+.5,py+.5,plotW-1,plotH-1);
+  g.strokeStyle='#3b4756';g.lineWidth=1;g.strokeRect(px+.5,py+.5,plotW-1,plotH-1);
   g.font='10px ui-monospace,Menlo,Consolas,monospace';g.fillStyle='#7d8791';g.textBaseline='middle';
   g.textAlign='center';
   for(const v of [-90,-60,-30,0,30,60,90]){g.fillText(String(Math.abs(v)),X(v),py+plotH+9);g.fillStyle='#1d232a';g.fillRect(X(v),py+plotH-3,1,3);g.fillStyle='#7d8791';}
@@ -90,30 +94,34 @@ export default function AngioPad({tree,vis,a,b,sel,mode,onMode,onSet,onGo}:Angio
   g.textAlign='right';
   for(const v of [-45,-30,-15,0,15,30,45]){g.fillText(String(Math.abs(v)),px-5,Y(v));}
   g.fillText('CRA',px-24,py+3);g.fillText('CAU',px-24,py+plotH-3);
-  // Standard-view windows of the injected system. Each distinct rectangle is drawn once (the injected group's first), and a label
-  // that would land on an earlier one is skipped.
-  g.setLineDash([3,3]);g.strokeStyle='#8f9aa5';g.fillStyle='#cdd4da';g.textAlign='center';g.font='9px ui-monospace,Menlo,Consolas,monospace';g.lineWidth=1;
-  const seen=new Set<string>(),taken:{x0:number;y0:number;x1:number;y1:number}[]=[],said=new Set<string>(),pref=vis.system==='right'?'derecha':'izquierda';
-  const ordered=[...views].sort((p,q)=>(p.group===pref?0:1)-(q.group===pref?0:1));
+  // Standard-view windows. Each distinct rectangle is drawn once (the injected group's first), and a label that would land on an
+  // earlier one is skipped. Labels are white with a dark halo so they read on the light map.
+  const seen=new Set<string>(),taken:{x0:number;y0:number;x1:number;y1:number}[]=[],said=new Set<string>();
+  const ordered=[...STANDARD_VIEWS].sort((p,q)=>(p.group===injected?0:1)-(q.group===injected?0:1));
+  g.textAlign='center';g.font='600 12px ui-monospace,Menlo,Consolas,monospace';g.lineJoin='round';g.lineWidth=1.25;
   for(const v of ordered){
+   const dim=vis.system!=='both'&&v.group===other;
    for(const [k,w] of [v.window,v.altWindow].entries()){
     if(!w)continue;
     const x0=X(w.aMin),x1=X(w.aMax),y0=Y(w.bMax),y1=Y(w.bMin),ww=Math.max(6,x1-x0),hh=Math.max(6,y1-y0),key=[x0,y0,ww,hh].map(n=>Math.round(n)).join(',');
     if(seen.has(key))continue;
     seen.add(key);
+    g.setLineDash(dim?[2,3]:[4,3]);g.lineWidth=1.25;g.strokeStyle=dim?'rgba(255,255,255,.42)':'rgba(255,255,255,.92)';
     g.beginPath();g.roundRect(x0,y0,ww,hh,4);g.stroke();
     if(k!==0)continue;
-    const tw=g.measureText(v.padLabel).width+4,cx=x0+ww/2,cy=y0+hh/2,box={x0:cx-tw/2,x1:cx+tw/2,y0:cy-6,y1:cy+6};
+    const tw=g.measureText(v.padLabel).width+6,cx=x0+ww/2,cy=y0+hh/2,box={x0:cx-tw/2,x1:cx+tw/2,y0:cy-8,y1:cy+8};
     if(said.has(v.padLabel)||taken.some(r=>box.x0<r.x1&&box.x1>r.x0&&box.y0<r.y1&&box.y1>r.y0))continue;
-    taken.push(box);said.add(v.padLabel);g.fillText(v.padLabel,cx,cy);
+    taken.push(box);said.add(v.padLabel);
+    g.setLineDash([]);g.lineJoin='round';g.lineWidth=3;g.strokeStyle='rgba(12,18,26,.82)';g.strokeText(v.padLabel,cx,cy);
+    g.fillStyle=dim?'rgba(255,255,255,.72)':'#fff';g.fillText(v.padLabel,cx,cy);
    }
   }
   g.setLineDash([]);
-  if(best){g.strokeStyle='#ffffff';g.lineWidth=1.5;g.beginPath();g.arc(X(best.a),Y(best.b),6,0,Math.PI*2);g.stroke();}
+  if(best){g.strokeStyle='rgba(12,18,26,.7)';g.lineWidth=3.5;g.beginPath();g.arc(X(best.a),Y(best.b),6,0,Math.PI*2);g.stroke();g.strokeStyle='#ffffff';g.lineWidth=1.75;g.stroke();}
   const cx=X(clamp(a,-A_LIMIT,A_LIMIT)),cy=Y(clamp(b,-B_LIMIT,B_LIMIT));
-  g.strokeStyle='#ff9d2e';g.lineWidth=1;g.beginPath();g.moveTo(cx-9,cy);g.lineTo(cx+9,cy);g.moveTo(cx,cy-9);g.lineTo(cx,cy+9);g.stroke();
+  g.strokeStyle='#ff9d2e';g.lineWidth=1.5;g.beginPath();g.moveTo(cx-10,cy);g.lineTo(cx+10,cy);g.moveTo(cx,cy-10);g.lineTo(cx,cy+10);g.stroke();
   g.fillStyle='#ff9d2e';g.beginPath();g.arc(cx,cy,3.5,0,Math.PI*2);g.fill();
- },[width,height,dpr,plotW,plotH,mode,pad,rows,version,state,sel,views,best,a,b,vis.system]);
+ },[width,height,dpr,plotW,plotH,mode,pad,rows,version,state,sel,injected,other,best,a,b,vis.system]);
 
  const fromEvent=(e:PointerEvent)=>{
   const r=canvas.current!.getBoundingClientRect(),x=(e.clientX-r.left-MARGIN.l)/plotW,y=(e.clientY-r.top-MARGIN.t)/plotH;
@@ -141,6 +149,7 @@ export default function AngioPad({tree,vis,a,b,sel,mode,onMode,onSet,onGo}:Angio
    <div className="angio-pad-bar">
     <span className="angio-label">EL MAPA MUESTRA</span>
     <div className="angio-seg" role="group" aria-label="El mapa muestra">{MODES.map(m=><button key={m.id} className={mode===m.id?'on':''} aria-pressed={mode===m.id} title={m.title} onClick={()=>onMode(m.id)}>{m.text}</button>)}</div>
+    {showLegend&&<span className="angio-pad-legend"><svg width="22" height="12" aria-hidden><rect x=".75" y=".75" width="20.5" height="10.5" rx="3" fill="none" stroke="#ffffff80" strokeWidth="1.25" strokeDasharray="2 3"/></svg>vistas de la coronaria {other}</span>}
    </div>
    <p className="angio-pad-best" aria-live="polite">{!sel?<span className="angio-hint">Elegí un segmento en el angiograma o en el corazón para ver su mapa</span>
     :state==='hidden'?<span className="angio-hint">{name||'El segmento'} no está visible con el sistema inyectado actual.</span>

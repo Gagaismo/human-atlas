@@ -78,6 +78,18 @@ function softStroke(ctx:CanvasRenderingContext2D,pts:readonly P2[],S:number,colo
  ctx.restore();
 }
 
+/** Large soft light and dark clouds (fixed pattern, drifting a little with the table pan), like the uneven density of a real fluoroscopy field. */
+function mottling(ctx:CanvasRenderingContext2D,S:number,pan:readonly [number,number]){
+ let seed=7;
+ const rnd=()=>{seed=(seed*16807)%2147483647;return seed/2147483647;};
+ for(let k=0;k<46;k++){
+  const x=(rnd()+pan[0]*.04)*S,y=(rnd()-pan[1]*.04)*S,r=S*(.12+rnd()*.22),dark=rnd()<.55,a=.035+rnd()*.05;
+  const g=ctx.createRadialGradient(x,y,0,x,y,r),c=dark?'0,0,0':'255,255,255';
+  g.addColorStop(0,`rgba(${c},${a.toFixed(3)})`);g.addColorStop(1,`rgba(${c},0)`);
+  ctx.fillStyle=g;ctx.fillRect(x-r,y-r,r*2,r*2);
+ }
+}
+
 /** Paint the background for angles (a,b) and table pan (detector-normalised, ±1 = half detector) onto a square canvas. */
 export function paintBackground(ctx:CanvasRenderingContext2D,S:number,a:number,b:number,pan:readonly [number,number],cloud:readonly Vec3[]|null):void{
  const ax=imageAxes(a,b),h=DETECTOR_SIZE/2;
@@ -90,16 +102,17 @@ export function paintBackground(ctx:CanvasRenderingContext2D,S:number,a:number,b
  ctx.globalAlpha=1;ctx.shadowBlur=0;
  // Lung field: brighter at the periphery, slightly darker towards the mediastinum.
  const g=ctx.createRadialGradient(S*(.5+pan[0]/2),S*(.5-pan[1]/2),S*.05,S*.5,S*.5,S*.78);
- g.addColorStop(0,'#8e8e8e');g.addColorStop(1,'#b4b4b4');
+ g.addColorStop(0,'#a2a2a2');g.addColorStop(1,'#c2c2c2');
  ctx.fillStyle=g;ctx.fillRect(0,0,S,S);
+ mottling(ctx,S,pan);
  const blur=S*.03;
  // Diaphragm dome: denser (darker) tissue under it.
- softBlob(ctx,flat(domePoints()),2.3,.34);
+ softBlob(ctx,flat(domePoints()),2.3,.26);
  // Mediastinum + heart silhouette.
  if(cloud&&cloud.length){
   const pts=flat(cloud);
-  softBlob(ctx,pts,3.1,.2);
-  softBlob(ctx,pts,2.15,.42);
+  softBlob(ctx,pts,3.1,.14);
+  softBlob(ctx,pts,2.15,.3);
  }
  // Spine: a band along the vertical axis of the patient; its position follows the rotation (over the midline at AP, swinging
  // aside in obliques). Bone attenuates more than soft tissue, so on this display (contrast dark, lungs bright) it is darker.
@@ -127,7 +140,7 @@ export function paintBackground(ctx:CanvasRenderingContext2D,S:number,a:number,b
    line.push([q[0],q[1]]);
   }
   const k0=toPx([MIDLINE_X,y0,-10])[2];
-  softStroke(ctx,line,S,'rgba(0,0,0,.075)',Math.max(2,k0*9),blur*.6);
+  softStroke(ctx,line,S,'rgba(0,0,0,.035)',Math.max(2,k0*9),blur*.6);
  }
  ctx.restore();
 }

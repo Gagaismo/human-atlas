@@ -4,7 +4,10 @@ import {readFileSync,existsSync,statSync} from 'node:fs';
 import {gzipSync,gunzipSync} from 'node:zlib';
 import {Surface} from './lib-geom.mjs';
 import {nearestOn,slice} from './lib-curves.mjs';
+import * as nodeModule from 'node:module';
 import {loadMean,makeRegistration,LANDMARK_KEYS} from './lib-imagecas.mjs';
+nodeModule.registerHooks(await import('../gyneco/ts-resolve.mjs'));
+const G=await import('../../app/angio/core/geometry.ts');
 
 const dir=new URL('../../public/models/angio/',import.meta.url);
 let checks=0;const failures=[];
@@ -142,9 +145,11 @@ for(const dom of ['right','left','co']){
   if(reg&&LANDMARK_KEYS.every(k=>isVec(reg.targets?.[k]))){
    const R=makeRegistration(MEAN,dom,reg.targets);
    for(const v of t.vessels??[])for(const s of v.segments??[]){
-    const key=MEAN_KEY[s.id];if(!key||!SYNTAX[s.id])continue;
+    const key=s.id==='lpda'?'rpda':MEAN_KEY[s.id];if(!key||!SYNTAX[s.id])continue; // the left PDA runs down the same groove as the mean R-PDA course
     const c=R.course(key);check(!!c,`${tag}/${s.id}: no ImageCAS-X mean course for ${key}`);if(!c)continue;
-    const ds=slice(v.points,s.from,s.to).map(p=>nearestOn(c.points,p).d),avg=ds.reduce((a,b)=>a+b,0)/ds.length,mx=Math.max(...ds);
+    // left dominance: the LCx continues past the mean course along the posterior AV groove to the crux (chord from the mean end to the crux)
+    let ref=c.points;if(dom==='left'&&s.id==='lcx-dist'){const e=c.points.at(-1),cr=R.placedLandmarks.crux,n=Math.ceil(dist(e,cr)/2);ref=[...c.points,...Array.from({length:n},(_,i)=>e.map((x,k)=>x+(cr[k]-x)*(i+1)/n))];}
+    const ds=slice(v.points,s.from,s.to).map(p=>nearestOn(ref,p).d),avg=ds.reduce((a,b)=>a+b,0)/ds.length,mx=Math.max(...ds);
     check(avg<=MEAN_TOL.avg&&mx<=MEAN_TOL.max,`${tag}/${s.id}: ${avg.toFixed(1)} mm mean / ${mx.toFixed(1)} mm max from the ImageCAS-X mean course (limits ${MEAN_TOL.avg}/${MEAN_TOL.max})`);
    }
   }
@@ -193,6 +198,57 @@ for(const dom of ['right','left','co']){
  if(lm)check(dist(t.landmarks.lmOstium,lm.points[0])<=0.5,`${tag}: lmOstium must be the first LM point`);
  if(lm)check(dist(t.landmarks.lmBifurcation,lm.points.at(-1))<=0.5,`${tag}: lmBifurcation must be the last LM point`);
  if(lad&&byId.get('lcx'))check(dist(lad.points[0],byId.get('lcx').points[0])<=1&&dist(lad.points[0],t.landmarks.lmBifurcation)<=1,`${tag}: LAD and LCx start at the bifurcation`);
+}
+
+// ---- S18: orientation, calibration against CARDIAG, ostia, left-dominant loop -----------------------------------------
+{
+ const CF=read('../../../scripts/angio/data/cardiag-features.json');
+ check(!!CF&&/CC BY 4\.0/.test(CF.meta?.license??'')&&/10\.5281\/zenodo\.19958730/.test(CF.meta?.source??''),'cardiag-features.json: license and DOI');
+ check(!!CF&&!/image|"case"|patient_id/i.test(JSON.stringify(CF.cells??{})),'cardiag-features.json: only aggregated cells (no images, no per-patient fields)');
+ check(!!CF&&CF.meta.cases>=600&&CF.meta.centres>=5,'cardiag-features.json: 645 cases from 5 centres');
+ const MAP={'01':['rca','rca-prox'],'02':['rca','rca-mid'],'04':['pda','pda'],'05':['lm','lm'],'06':['lad','lad-prox'],'07':['lad','lad-mid'],'11':['lcx','lcx-prox']};
+ const R=trees.right;
+ const ends=seg=>{const [vid,sid]=MAP[seg],v=R?.vessels.find(x=>x.id===vid),sg=v?.segments.find(x=>x.id===sid);if(!v||!sg)return null;const at=t=>{const c=[0];for(let i=1;i<v.points.length;i++)c.push(c[i-1]+dist(v.points[i-1],v.points[i]));const sx=t*c.at(-1);let j=0;while(j<v.points.length-2&&c[j+1]<sx)j++;const f=(sx-c[j])/((c[j+1]-c[j])||1);return v.points[j].map((x,k)=>x+(v.points[j+1][k]-x)*f);};const w=sg.to-sg.from;return [at(sg.from+0.05*w),at(sg.to-0.05*w)];};
+ const predict=(seg,a,b)=>{const e=ends(seg),ax=G.imageAxes(a,b),P=e.map(p=>G.projectWith(ax,p));return Math.atan2(P[1].y-P[0].y,P[1].x-P[0].x)*180/Math.PI;};
+ const adiff=(a,b)=>{let d=((a-b)%360+360)%360;return d>180?360-d:d;};
+ if(CF&&R){
+  let tot=0,n=0;const per={};
+  for(const [seg,cells] of Object.entries(CF.cells)){if(!MAP[seg])continue;let t=0,m=0;for(const c of cells){const e=adiff(predict(seg,c.primary,c.secondary),c.dirDeg);t+=e*c.n;m+=c.n;}per[seg]=t/m;tot+=t;n+=m;check(t/m<=25,`S18 calibration: segment ${seg} (${MAP[seg][1]}) projects ${(t/m).toFixed(1)} deg off the CARDIAG cell means (limit 25)`);}
+  check(tot/n<=15,`S18 calibration: mean angle error vs CARDIAG cell means ${(tot/n).toFixed(1)} deg (limit 15; ImageCAS-X Procrustes tree was 21.9)`);
+  // the proximal RCA at OAI 40 / CAU 2 leaves the ostium almost horizontally to the screen left, then forms the C
+  const rc=CF.cells['01'].find(c=>c.primary===40&&c.secondary===0);
+  check(!!rc&&adiff(predict('01',40,-2),rc.dirDeg)<=20,`S18: proximal RCA direction at OAI 40 CAU 2 is ${predict('01',40,-2).toFixed(0)} deg, CARDIAG ${rc?.dirDeg} deg (tolerance 20)`);
+  const d=predict('01',40,-2);check(Math.cos(d*Math.PI/180)<-0.7&&Math.sin(d*Math.PI/180)<0.1,'S18: proximal RCA at OAI 40 CAU 2 points to the screen left and not up');
+  // the left coronary arteries leave the root to the screen left/right as the observed cells (LM heads to the screen right in OAI)
+  check(adiff(predict('06',-20,-20),CF.cells['06'].find(c=>c.primary===-20&&c.secondary===-20).dirDeg)<=20,'S18: proximal LAD direction at OAD 20 CAU 20');
+ }
+ for(const dom of ['right','left','co']){
+  const t=trees[dom];if(!t)continue;
+  const reg=t.meta?.registration;
+  check(Array.isArray(reg?.rotationDeg)&&reg.rotationDeg.every(x=>Math.abs(x)<=6)&&/translat/i.test(reg?.method??''),`coronary-${dom}: orientation of the ImageCAS-X mean is kept (no per-case rotation; global correction <= 6 deg)`);
+  const lm=t.landmarks.lmOstium,rc=t.landmarks.rcaOstium;
+  // ImageCAS-X (781 scans): LM ostium is 16.5 mm (p10 10.5, p90 23.0) higher and 13.9 mm (p10 7, p90 20.7) further left than the RCA ostium
+  check(lm[1]-rc[1]>=5&&lm[1]-rc[1]<=24,`coronary-${dom}: LM ostium ${(lm[1]-rc[1]).toFixed(1)} mm higher than the RCA ostium (ImageCAS-X range 5-24)`);
+  check(lm[0]-rc[0]>=5&&lm[0]-rc[0]<=25,`coronary-${dom}: LM ostium ${(lm[0]-rc[0]).toFixed(1)} mm left of the RCA ostium (ImageCAS-X range 5-25)`);
+  const san=t.vessels.find(v=>v.id==='san');if(san){let L=0;for(let i=1;i<san.points.length;i++)L+=dist(san.points[i-1],san.points[i]);check(L<=32,`coronary-${dom}/san: ${L.toFixed(0)} mm long (short, curved branch, limit 32)`);}
+ }
+ // left dominance: the LCx follows the posterior AV groove to the crux and gives the left PDA there
+ if(trees.left&&trees.right){
+  const lc=trees.left.vessels.find(v=>v.id==='lcx'),lp=trees.left.vessels.find(v=>v.id==='lpda'),rcaEnd=trees.right.vessels.find(v=>v.id==='rca').points.at(-1);
+  if(lc&&lp){
+   check(dist(lc.points.at(-1),rcaEnd)<=10,`S18 left dominance: LCx ends ${dist(lc.points.at(-1),rcaEnd).toFixed(1)} mm from the crux (right-dominant RCA end), limit 10`);
+   check(dist(lp.points[0],lc.points.at(-1))<=1.5,'S18 left dominance: the left PDA starts at the end of the LCx');
+   check(lp.points.at(-1)[1]<lp.points[0][1]-1,'S18 left dominance: the left PDA descends from the crux');
+   // at OAI 40 CAU 2 the LCx runs along the bottom toward the screen left: its distal third is a long, nearly horizontal run
+   const ax=G.imageAxes(40,-2),P=lc.points.map(p=>G.projectWith(ax,p)),n=P.length,seg=P.slice(Math.floor(n*0.78));
+   const dx=seg.at(-1).x-seg[0].x,dy=seg.at(-1).y-seg[0].y;
+   check(dx<-20&&Math.abs(dy)<0.45*Math.abs(dx),`S18 left dominance: LCx distal run at OAI 40 CAU 2 goes ${dx.toFixed(0)} mm to the screen left with ${dy.toFixed(0)} mm of drop (needs dx < -20 and a nearly horizontal course)`);
+  }
+ }
+ if(heart){
+  const df=heart.meta?.deformation;
+  check(!!df&&/ICP/.test(df.method??'')&&df.rigidRotationDeg<=12&&df.fit?.treeToEpicardiumMm?.max<=4&&df.fit?.ostiaToWallMm?.every(v=>v<=3),'S18: heart.json meta.deformation (heart deformed to the tree, small rigid part, vessels within 4 mm of the epicardium, ostia within 3 mm of the aortic wall)');
+ }
 }
 
 // ---- grafts --------------------------------------------------------------------------------------------

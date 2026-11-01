@@ -6,7 +6,6 @@
 // Salida: SOLO estadísticas derivadas (cursos medios, dispersión, posición de nacimiento sobre el padre, cantidades),
 // nunca geometría por paciente. Uso: node build-mean.mjs <scans.json> <salida imagecas-mean.json>
 import { readFileSync, writeFileSync } from "node:fs";
-import { similarity } from "./lib-fit.mjs";
 
 const [scansPath, outPath] = process.argv.slice(2);
 const N = 32;
@@ -66,47 +65,23 @@ for (const s of scans) {
   usable.push(s);
 }
 
-// ---- Procrustes generalizado ---------------------------------------------------------------------------------
-// vector de forma: 5 puntos de referencia (peso alto) + LM(4) + LAD(8) + Cx(8) + primera mitad de la CD (6) por scan
-const SHAPE_W = [4, 4, 4, 4, 3];
-function shapeVec(s, T) {
-  const pts = [...s.land], w = [...SHAPE_W];
-  const add = (key, idx, wt) => { const r = s.rs[key]; if (!r) return; for (const i of idx) { pts.push(r[i]); w.push(wt); } };
-  add("lm", [4, 12, 20, 28], 1);
-  add("lad", [4, 8, 12, 16, 20, 24, 28, 31], 1);
-  add("lcx", [4, 8, 12, 16, 20, 24, 28, 31], 1);
-  add("rca", [3, 7, 11, 15, 19, 23], 1);
-  return { pts: T ? pts.map((p) => T.apply(p)) : pts, w };
+// ---- normalización SIN rotación -------------------------------------------------------------------------------
+// Las centerlines de ImageCAS-X vienen en el marco del paciente (LPS del escáner, ya pasado al marco del atlas), así que la
+// orientación de cada árbol respecto del paciente es información real: la media la conserva. Cada scan se normaliza solo
+// por traslación (centroide de cuatro puntos de referencia comunes a las tres dominancias: ostios, bifurcación del TCI y
+// extremo de la DA) y escala isotrópica (tamaño de centroide de esos puntos, llevado a la media de la cohorte para
+// conservar los mm). El Procrustes generalizado anterior rotaba cada caso y la media quedaba en un marco arbitrario.
+const NORM_IDX = [0, 1, 2, 3];
+const sizes = usable.map((s) => {
+  const P = NORM_IDX.map((i) => s.land[i]);
+  s.cen = [0, 1, 2].map((k) => P.reduce((a, p) => a + p[k], 0) / P.length);
+  return (s.size = Math.sqrt(P.reduce((a, p) => a + dist(p, s.cen) ** 2, 0) / P.length));
+});
+const meanSize = sizes.reduce((a, b) => a + b, 0) / sizes.length;
+for (const s of usable) {
+  const k = meanSize / s.size;
+  s.T = { s: k, apply: (p) => [(p[0] - s.cen[0]) * k, (p[1] - s.cen[1]) * k, (p[2] - s.cen[2]) * k] };
 }
-// (los scans sin LM pierden esos 4 puntos: el vector tiene largo variable, así que el ajuste usa el conjunto común
-// de índices con el medio; se maneja alineando por clave)
-function keyedShape(s) {
-  const m = new Map();
-  ["lmOstium", "rcaOstium", "lmBif", "ladEnd", "crux"].forEach((k, i) => m.set(k, [s.land[i], SHAPE_W[i]]));
-  const add = (key, idx, wt) => { const r = s.rs[key]; if (!r) return; idx.forEach((i) => m.set(`${key}${i}`, [r[i], wt])); };
-  add("lm", [4, 12, 20, 28], 1); add("lad", [4, 8, 12, 16, 20, 24, 28, 31], 1);
-  add("lcx", [4, 8, 12, 16, 20, 24, 28, 31], 1); add("rca", [3, 7, 11, 15, 19, 23], 1);
-  return m;
-}
-usable.forEach((s) => (s.shape = keyedShape(s)));
-let ref = new Map();
-for (const [k, [p, w]] of usable[0].shape) ref.set(k, p);
-usable.forEach((s) => (s.T = null));
-for (let it = 0; it < 8; it++) {
-  for (const s of usable) {
-    const keys = [...s.shape.keys()].filter((k) => ref.has(k));
-    s.T = similarity(keys.map((k) => s.shape.get(k)[0]), keys.map((k) => ref.get(k)), { weights: keys.map((k) => s.shape.get(k)[1]) });
-  }
-  // nueva referencia: media de las formas transformadas, escalada a la escala media (1 en promedio) para conservar los mm
-  const meanScale = usable.reduce((a, s) => a + s.T.s, 0) / usable.length;
-  const acc = new Map();
-  for (const s of usable) for (const [k, [p]] of s.shape) { const q = s.T.apply(p); const a = acc.get(k) ?? [0, 0, 0, 0]; acc.set(k, [a[0] + q[0], a[1] + q[1], a[2] + q[2], a[3] + 1]); }
-  const next = new Map();
-  for (const [k, a] of acc) if (a[3] > usable.length * 0.5) next.set(k, [a[0] / a[3] / meanScale, a[1] / a[3] / meanScale, a[2] / a[3] / meanScale]);
-  ref = next;
-  // reescala: dejamos que las T absorban 1/meanScale en la próxima vuelta
-}
-// la escala final: cada scan escalado a la referencia (cuyo tamaño es el medio de la cohorte)
 const scales = usable.map((s) => s.T.s);
 const meanS = scales.reduce((a, b) => a + b, 0) / scales.length;
 const sdS = Math.sqrt(scales.reduce((a, b) => a + (b - meanS) ** 2, 0) / scales.length);
@@ -165,9 +140,8 @@ for (const dom of ["right", "left", "co"]) {
   groups[dom] = { scans: g.length, labels };
 }
 
-// referencia de puntos de referencia en el marco medio
-const landmarks = {};
-for (const [k, p] of ref) if (!/\d/.test(k)) landmarks[k] = p.map(r2);
+// puntos de referencia en el marco medio (todos los scans usados)
+const landmarks = Object.fromEntries(["lmOstium", "rcaOstium", "lmBif", "ladEnd", "crux"].map((k, i) => [k, [0, 1, 2].map((c) => r2(trimmedMean(usable.map((s) => s.T.apply(s.land[i])[c]))))]));
 // los mismos cinco puntos, por grupo
 for (const dom of ["right", "left", "co"]) {
   const g = usable.filter((s) => s.dominance === dom);
@@ -180,8 +154,8 @@ const out = {
   meta: {
     source: "ImageCAS-X (Bransby KM, Paulsen RR; Zenodo, doi:10.5281/zenodo.21887809), centerlines con etiquetas de segmento de 800 CCTA de la cohorte ImageCAS",
     license: "CC BY 4.0 (ImageCAS-X); cohorte ImageCAS original: ver public/ATTRIBUTION.md",
-    note: "Solo estadísticas derivadas: cursos medios por fracción de arco tras Procrustes generalizado. Sin geometría por paciente.",
-    frame: "X = izquierda del paciente, Y = superior, Z = anterior; mm; marco medio de la cohorte (semejanza sobre ostios, bifurcación del TCI, extremo de la DA y crux)",
+    note: "Solo estadísticas derivadas: cursos medios por fracción de arco, normalizados por traslación y escala isotrópica (SIN rotación: conservan la orientación del paciente de ImageCAS-X). Sin geometría por paciente.",
+    frame: "X = izquierda del paciente, Y = superior, Z = anterior; mm; marco del paciente de la cohorte (X izquierda, Y superior, Z anterior), origen en el centroide de ostios + bifurcación del TCI + extremo de la DA, escala isotrópica a la media de la cohorte; sin rotación",
     samples: N,
     scansTotal: scans.length,
     scansUsed: usable.length,

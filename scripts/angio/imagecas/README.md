@@ -1,6 +1,6 @@
 # ImageCAS-X → cursos medios de las coronarias
 
-Regenera `scripts/angio/data/imagecas-mean.json` (solo estadísticas derivadas, el único archivo que se versiona). Los datos descargados son no confiables: viven en `work/imagecas-x/` (ignorado por git), solo se leen y los scripts reciben las rutas por argumento. Python siempre con `-I`.
+Regenera `scripts/angio/data/imagecas-mean.json` (solo estadísticas derivadas, el único archivo que se versiona). Las medias conservan la orientación del paciente: normalización por traslación + escala isotrópica, sin rotación (S18). Los datos descargados son no confiables: viven en `work/imagecas-x/` (ignorado por git), solo se leen y los scripts reciben las rutas por argumento. Python siempre con `-I`.
 
 Fuente: ImageCAS-X, Bransby KM y Paulsen RR, Zenodo, doi:10.5281/zenodo.21887809, CC BY 4.0. No se baja `pretrained_weights.zip`.
 

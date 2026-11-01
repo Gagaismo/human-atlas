@@ -4,8 +4,8 @@
 // laid on the epicardium (septals inside the septum), re-attached to the new parents.
 import {add,sub,mul,dot,len,dist,unit,lerp,cross,pointAt,nearestOn,slice,spline,smooth,resample,profile,arcLength} from './lib-curves.mjs';
 
-const bp=ids=>`BodyParts3D ${ids.join(' ')} centreline, re-attached to the ImageCAS-X course of its parent`;
-const ic=(keys,n)=>`ImageCAS-X mean course (${keys}; n=${n}) registered onto the BodyParts3D heart`;
+const bp=ids=>`BodyParts3D ${ids.join(' ')} centreline, re-attached to the ImageCAS-X course of its parent (deformed with the heart)`;
+const ic=(keys,n)=>`ImageCAS-X mean course (${keys}; n=${n}) placed in the thorax frame keeping its orientation (the heart is deformed to it)`;
 const sy=(how,ids)=>`synthesised: ${how}${ids?.length?` (guided by BodyParts3D ${ids.join(' ')})`:''}`;
 
 /** ctx: {piece(id,{rev,from,to}), epi:Surface, lay(point,offset), landmarks...} */
@@ -25,6 +25,8 @@ export function buildTree(dominance,ctx){
   return [0,0.1,0.2,0.35,0.5,0.65,0.8,0.9,1].map(t=>[t,d0*(0.5*profile(diam,t)/d0+0.5*rel(t))]);
  };
 
+ // sinoatrial nodal artery: short (about 22 mm) and curved toward the SVC–right atrial junction, like in the angiograms
+ const sanWay=(p0,end)=>{const d=sub(end,p0),L=len(d),u=unit(d),side=unit(cross(u,[0,0,1])),k=Math.min(1,22/L);return [p0,add(add(p0,mul(d,0.35*k)),mul(side,3)),add(add(p0,mul(d,0.7*k)),mul(side,-2.5)),add(add(p0,mul(d,k)),mul(side,3.5))];};
  const dedupe=(pts,min=0.4)=>{const out=[pts[0]];for(const p of pts.slice(1))if(dist(p,out.at(-1))>=min)out.push(p);return out;};
 
  /** make + register a vessel. way: waypoints (frame mm). opts.parent: vessel id (snaps the start onto it). */
@@ -124,11 +126,21 @@ export function buildTree(dominance,ctx){
   segments:[{id:'rvd2',syntax:'',name:'Ramo ventricular derecho anterior 2',short:'RVD2',from:0,to:1}]});
 
  // circumflex: follows the ImageCAS-X mean (right/co: ends on the lateral wall; left: continues in the posterior AV groove to the crux)
- const cxC=C('lcx'),cxWay=[bif,...cxC.points.slice(1)];
+ const cxC=C('lcx');
+ let cxWay=[bif,...cxC.points.slice(1)];
+ const cxMeanLen=arcLength(cxWay);
+ // left dominance (S18): the LCx does not stop on the lateral wall: it continues along the posterior AV groove to the crux
+ // (where the right-dominant tree has its RCA end), laid on the epicardium, and gives the left PDA there
+ if(left){
+  const e=cxWay.at(-1),n=Math.max(2,Math.ceil(dist(e,ctx.crux)/3)),ext=[];
+  for(let i=1;i<=n;i++)ext.push(i===n?ctx.crux:lay(lerp(e,ctx.crux,i/n),1.4));
+  cxWay=[...cxWay,...smooth([e,...ext],2,2).slice(1)];
+  cxWay[cxWay.length-1]=ctx.crux;
+ }
  const cxTaper=left?[[0,3.4],[0.3,3.0],[0.7,2.6],[1,2.1]]:[[0,3.4],[0.3,2.9],[0.7,2.2],[1,1.5]];
  // OM1 origin along the Cx splits 11 | 13
  const om1C=C('om1'),om2C=C('om2'),riC=C('ramus');
- const a2=Math.min(0.5,Math.max(0.2,om1C.attachOnParent?.t??0.3));
+ const a2=Math.min(0.5,Math.max(0.2,(om1C.attachOnParent?.t??0.3)*cxMeanLen/arcLength(cxWay)));
  add_({id:'lcx',name:'Circunfleja',short:'Cx',system:'left',family:'cx',parent:'lm',way:cxWay,diam:taper(cxTaper,cxC),source:ic('LCx',cxC.n),
   segments:[
    {id:'lcx-prox',syntax:'11',name:'Circunfleja proximal',short:'Cx prox',from:0,to:a2},
@@ -164,7 +176,7 @@ export function buildTree(dominance,ctx){
  add_({id:'rv2',name:'Ramo ventricular derecho 2',short:'RV2',system:'right',family:'cd',parent:'rv1',way:piece('FJ2673',{rev:true}),diam:[[0,1.3],[1,0.7]],source:bp(['FJ2673']),
   segments:[{id:'rv2',syntax:'',name:'Ramo ventricular derecho 2',short:'RV2',from:0,to:1}]});
  // sinoatrial nodal artery: proximal RCA toward the SVC–right atrial junction
- add_({id:'san',name:'Arteria del nodo sinusal',short:'NS',system:'right',family:'cd',parent:'rca',lay:true,layOffset:0.9,way:[at('rca',0.05),lerp(at('rca',0.05),ctx.sanEnd,0.5),ctx.sanEnd],diam:[[0,1.5],[1,0.9]],source:sy('spline from the proximal RCA over the right atrium to the superior vena cava junction'),
+ add_({id:'san',name:'Arteria del nodo sinusal',short:'NS',system:'right',family:'cd',parent:'rca',lay:true,layOffset:0.9,way:sanWay(at('rca',0.05),ctx.sanEnd),diam:[[0,1.5],[1,0.9]],source:sy('spline from the proximal RCA over the right atrium to the superior vena cava junction'),
   segments:[{id:'san',syntax:'',name:'Arteria del nodo sinusal',short:'NS',from:0,to:1}]});
 
  // ---------------------------------------------------------------- posterior descending + posterolaterals
@@ -175,10 +187,10 @@ export function buildTree(dominance,ctx){
   const pdaC=C('rpda'),rplC=C('rpla');
   const pdaV=add_({id:'pda',name:'Descendente posterior',short:'DP',system:'right',family:'cd',parent:parentId,way:pdaC.points,diam:taper(co?[[0,2.2],[1,1.1]]:[[0,2.4],[1,1.2]],pdaC),source:ic('R-PDA',pdaC.n),
    segments:[{id:'pda',syntax:'4',name:'Descendente posterior',short:'DP',from:0,to:1}]});
-  pdaV.parentArc=1;
+
   const rpl=add_({id:'rpl',name:'Posterolateral derecha',short:'PL',system:'right',family:'cd',parent:'rca',way:rplC.points,diam:taper(co?[[0,1.9],[1,1.1]]:[[0,2.3],[1,1.3]],rplC),source:ic('R-PLA',rplC.n),
    segments:[{id:'rpl',syntax:'16',name:'Posterolateral derecha',short:'PL',from:0,to:1}]});
-  rpl.parentArc=1;
+
   // posterolateral branches 16a-c: BodyParts3D pieces / synthesised, re-attached to the new PL trunk
   const A=piece('FJ2720',{rev:true}),Bc=[...piece('FJ2722',{rev:true}),...piece('FJ2721',{rev:true})];
   add_({id:'rpl1',name:'Posterolateral derecha 1',short:'PL1',system:'right',family:'cd',parent:'rpl',way:A,diam:[[0,1.6],[1,0.8]],source:bp(['FJ2720']),
@@ -203,10 +215,12 @@ export function buildTree(dominance,ctx){
    segments:[{id:'lpl',syntax:'14',name:'Posterolateral izquierda',short:'PLI',from:0,to:1}]});
  }
  if(left){
-  const lpdaC=C('lpda');
-  const lp=add_({id:'lpda',name:'Descendente posterior izquierda',short:'DPI',system:'left',family:'cx',parent:'lcx',way:lpdaC.points,diam:taper([[0,2.3],[1,1.1]],lpdaC),source:ic('L-PDA',lpdaC.n),
+  // the left PDA leaves the LCx at the crux and runs down the posterior interventricular groove: the ImageCAS-X mean R-PDA course
+  // (same groove) re-attached at the end of the LCx; the 38 left-dominant scans' L-PDA labels (mean length 41 mm vs 44 mm) agree on its length
+  const lpdaC=C('rpda');
+  const lp=add_({id:'lpda',name:'Descendente posterior izquierda',short:'DPI',system:'left',family:'cx',parent:'lcx',way:lpdaC.points,diam:taper([[0,2.3],[1,1.1]],lpdaC),source:ic('R-PDA course, i.e. the posterior interventricular groove; left-dominant L-PDA labels n=38 for the length',lpdaC.n),
    segments:[{id:'lpda',syntax:'15',name:'Descendente posterior izquierda',short:'DPI',from:0,to:1}]});
-  lp.parentArc=1;
+
   [[1,0.2],[2,0.42],[3,0.66]].forEach(([k,t])=>{
    const p0=at('lpda',t),tan=unit(sub(at('lpda',Math.min(1,t+0.03)),at('lpda',Math.max(0,t-0.03))));
    const g=pointAt(byId.get('lad').points,Math.min(0.95,0.95-t*0.8));

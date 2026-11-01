@@ -11,6 +11,7 @@ import {add,sub,mul,dot,unit,lerp,dist,pointAt,nearestOn,spline,smooth,resample,
 import {buildTree} from './lib-tree.mjs';
 import {buildHeartAsset,toFrame as meshToFrame} from './lib-heart.mjs';
 import {loadMean,makeRegistration,fitEpicardium,LANDMARK_KEYS} from './lib-imagecas.mjs';
+import {buildHeartWarp} from './lib-warp.mjs';
 
 const out=new URL('../../public/models/angio/',import.meta.url);
 mkdirSync(out,{recursive:true});
@@ -32,11 +33,29 @@ const hullPts=[];
 for(const id of heartIds){const {positions}=loadPart(id);for(let i=0;i<positions.length;i+=3)hullPts.push([positions[i]*1000,positions[i+1]*1000,positions[i+2]*1000]);}
 for(const pts of raw.values())hullPts.push(...pts);
 const {centroid:iso,volume:hullVolume}=hullCentroid(hullPts);
-const toFrame=p=>[p[0]-iso[0],p[1]-iso[1],p[2]-iso[2]];
+const toFrameRaw=p=>[p[0]-iso[0],p[1]-iso[1],p[2]-iso[2]];
+const rawTris=id=>{const {positions,indices}=loadPart(id);return trisOf(positions,indices,1000).map(t=>t.map(toFrameRaw));};
+const rawPieces=new Map([...raw].map(([id,pts])=>[id,pts.map(toFrameRaw)]));
+const rawPiece=(id,{rev=false}={})=>{const pts=rawPieces.get(id);if(!pts)throw new Error(`no centreline for ${id}`);return (rev?[...pts].reverse():[...pts]).map(p=>[...p]);};
+
+// ---- 3. ImageCAS-X mean courses, placed keeping the population orientation (S18) ---------------------------------------
+// five landmarks measured on the BodyParts3D heart: ostia, LM bifurcation, distal LAD end, crux (origin of the posterior descending).
+// The tree is only TRANSLATED onto the BodyParts3D aortic root (ostia midpoint); the heart is then deformed to the tree.
+const mean=loadMean();
+const regTargets={lmOstium:rawPiece('FJ2737',{rev:true})[0],rcaOstium:rawPiece('FJ2723',{rev:true})[0],lmBif:rawPiece('FJ2737',{rev:true}).at(-1),ladEnd:rawPiece('FJ2631',{rev:true}).at(-1),crux:rawPiece('FJ2692',{rev:true})[0]};
+const registrations=Object.fromEntries(['right','left','co'].map(d=>[d,makeRegistration(mean,d,regTargets)]));
+
+// ---- 4. heart deformed to the tree ----------------------------------------------------------------------------------------
+const EPI_IDS=['FJ2428','FJ2438','FJ2439','FJ3413','FJ2966'];
+const EPICARDIAL=['lad','d1','d2','lcx','om1','om2','rca','rpda','rpla'];
+const warpPoints=EPICARDIAL.flatMap(k=>{const c=registrations.right.course(k);return c?resample(c.points,4):[];});
+const warpLog=[];
+const warp=buildHeartWarp({epiTris:EPI_IDS.flatMap(rawTris),aortaTris:rawTris('FJ3413'),points:warpPoints,ostia:[registrations.right.course('lm').points[0],registrations.right.course('rca').points[0]],log:m=>{warpLog.push(m);console.log('warp:',m);}});
+const toFrame=p=>warp.apply(toFrameRaw(p));
 const frameTris=id=>{const {positions,indices}=loadPart(id);return trisOf(positions,indices,1000).map(t=>t.map(toFrame));};
 
-// ---- 3. surfaces and landmarks (isocentre frame) ------------------------------------------------------------
-const epi=new Surface(['FJ2428','FJ2438','FJ2439','FJ3413','FJ2966'].flatMap(frameTris),6);
+// ---- 5. surfaces and landmarks (deformed heart, isocentre frame) -------------------------------------------------
+const epi=new Surface(EPI_IDS.flatMap(frameTris),6);
 const aortaSurf=new Surface(frameTris('FJ3413'),6);
 const outward=c=>dot(c.normal,c.point)<0?mul(c.normal,-1):c.normal;
 const lay=(p,off)=>{const c=epi.closest(p,60);return add(c.point,mul(outward(c),off));};
@@ -54,26 +73,21 @@ const piece=(id,{rev=false,from,to}={})=>{
  let r=pts;if(from!==undefined||to!==undefined)r=pts.slice(from??0,to??pts.length);
  return (rev?[...r].reverse():[...r]).map(p=>[...p]);
 };
-// ---- 3b. ImageCAS-X mean courses registered onto this heart ------------------------------------------------------
-// five landmarks measured on the BodyParts3D heart: ostia, LM bifurcation, distal LAD end, crux (origin of the posterior descending)
-const mean=loadMean();
-const regTargets={lmOstium:piece('FJ2737',{rev:true})[0],rcaOstium:piece('FJ2723',{rev:true})[0],lmBif:piece('FJ2737',{rev:true}).at(-1),ladEnd:piece('FJ2631',{rev:true}).at(-1),crux:piece('FJ2692',{rev:true})[0]};
-const registrations=Object.fromEntries(['right','left','co'].map(d=>[d,makeRegistration(mean,d,regTargets)]));
 const courseCache=new Map();
 const course=(dominance,key)=>{
  const k=dominance+'/'+key;
  if(!courseCache.has(k)){
   const c=registrations[dominance].course(key);
-  courseCache.set(k,c&&{...c,points:fitEpicardium(c.points,lay,{off:1.4})});
+  courseCache.set(k,c&&{...c,points:fitEpicardium(c.points,lay,{off:1.4,maxMove:6})});
  }
  const c=courseCache.get(k);
  return c&&{...c,points:c.points.map(p=>[...p])};
 };
-const ctx={piece,lay,epi,toFrame,aorticRootCentre,apex,avnTarget,sanEnd,course,fitEpi:pts=>fitEpicardium(pts,lay,{off:1.0,iters:3})};
+const ctx={piece,lay,epi,toFrame,crux:registrations.right.placedLandmarks.crux,aorticRootCentre,apex,avnTarget,sanEnd,course,fitEpi:pts=>fitEpicardium(pts,lay,{off:1.0,iters:3})};
 
 // ---- 4. trees ---------------------------------------------------------------------------------------------
 const SRC='BodyParts3D © DBCLS (https://lifesciencedb.jp/bp3d/), CC BY 4.0; ImageCAS-X (Bransby KM, Paulsen RR; doi:10.5281/zenodo.21887809, CC BY 4.0) mean coronary courses; Dodge JT Jr et al., Circulation 1988;78:1167 (segment positions) and 1992;86:232 (lumen calibers)';
-const meta=dominance=>({units:'mm',frame:'X = patient left, Y = superior, Z = anterior; origin = isocentre = volume centroid of the convex hull of the heart (ventricle wall, atrial walls, ascending aorta, pulmonary trunk, coronary arteries)',dominance,isocentre:`atlas millimetres [${iso.map(v=>v.toFixed(3)).join(', ')}] (atlas metres = frame/1000 + isocentre/1000; frame = (atlas*1000 - isocentre), same axes, no rotation)`,source:SRC,license:'Derived from BodyParts3D (CC BY 4.0, attribution required: "BodyParts3D, © The Database Center for Life Science, licensed under CC Attribution-Share Alike 4.0 International") and from the ImageCAS-X population-mean centrelines (CC BY 4.0, Bransby KM and Paulsen RR, doi:10.5281/zenodo.21887809); this derived data is released under CC BY 4.0 terms',generator:'scripts/angio/build-anatomy.mjs',registration:{method:'similarity on 5 landmarks (LM ostium, RCA ostium, LM bifurcation, distal LAD end, crux) fitted on the right-dominant group and applied to all three groups, which share the cohort mean frame, + gaussian residual warp (sigma 40 mm) + epicardial fit (1.4 mm outside the wall)',targets:Object.fromEntries(LANDMARK_KEYS.map(k=>[k,regTargets[k].map(v=>+v.toFixed(2))])),scale:+registrations[dominance].scale.toFixed(4),residualRmsMm:+registrations[dominance].residualRms.toFixed(2),imagecasX:{doi:'10.5281/zenodo.21887809',scansUsed:mean.meta.scansUsedByDominance[dominance],scansUsedAll:mean.meta.scansUsed}}});
+const meta=dominance=>({units:'mm',frame:'X = patient left, Y = superior, Z = anterior; origin = isocentre = volume centroid of the convex hull of the heart (ventricle wall, atrial walls, ascending aorta, pulmonary trunk, coronary arteries)',dominance,isocentre:`atlas millimetres [${iso.map(v=>v.toFixed(3)).join(', ')}] (atlas metres = frame/1000 + isocentre/1000; frame = (atlas*1000 - isocentre), same axes, no rotation)`,source:SRC,license:'Derived from BodyParts3D (CC BY 4.0, attribution required: "BodyParts3D, © The Database Center for Life Science, licensed under CC Attribution-Share Alike 4.0 International") and from the ImageCAS-X population-mean centrelines (CC BY 4.0, Bransby KM and Paulsen RR, doi:10.5281/zenodo.21887809); this derived data is released under CC BY 4.0 terms',generator:'scripts/angio/build-anatomy.mjs',registration:{method:'the ImageCAS-X population-mean courses keep their patient-frame orientation (no per-case rotation in the averaging, no rotation when placing them: translation only, plus an optional documented global rotation, scripts/angio/data/orientation.json) and are translated so that the midpoint of their ostia meets the midpoint of the BodyParts3D ostia; the BodyParts3D heart is then deformed to the tree (ICP rigid + regularised gaussian RBF, see heart.json meta.deformation) and the courses are laid on the deformed epicardium (1.4 mm outside, at most 6 mm of movement)',targets:Object.fromEntries(LANDMARK_KEYS.map(k=>[k,regTargets[k].map(v=>+v.toFixed(2))])),scale:1,rotationDeg:registrations[dominance].rotationDeg,residualRmsMm:+registrations[dominance].residualRms.toFixed(2),imagecasX:{doi:'10.5281/zenodo.21887809',scansUsed:mean.meta.scansUsedByDominance[dominance],scansUsedAll:mean.meta.scansUsed}}});
 const trees={};
 for(const dominance of ['right','left','co']){
  const {vessels,landmarks}=buildTree(dominance,ctx);
@@ -118,9 +132,9 @@ const strip=g=>{const {target,...rest}=g;return rest;};
 writeFileSync(new URL('grafts-right.json',out),JSON.stringify({meta:graftMeta,vessels:[lima,svgOm,svgPda].map(strip)})+'\n');
 
 // ---- 6. heart + great vessels + thoracic skeleton ------------------------------------------------------------
-const heart=await buildHeartAsset(out,iso,{units:'mm',frame:trees.right.meta.frame,transform:{isocentreAtlasMetres:iso.map(v=>+(v/1000).toFixed(6)),isocentreAtlasMillimetres:iso.map(v=>+v.toFixed(3)),rule:'frame_mm = atlas_metres * 1000 - isocentreAtlasMillimetres (translation only; axes unchanged)',hullVolumeMm3:Math.round(hullVolume)},source:'BodyParts3D © DBCLS, CC BY 4.0 (decimated)',license:'Derived from BodyParts3D (CC BY 4.0, attribution required: "BodyParts3D, © The Database Center for Life Science, licensed under CC Attribution-Share Alike 4.0 International"); this derived data is released under the same CC BY 4.0 terms',generator:'scripts/angio/build-anatomy.mjs'});
+const heart=await buildHeartAsset(out,iso,{units:'mm',frame:trees.right.meta.frame,transform:{isocentreAtlasMetres:iso.map(v=>+(v/1000).toFixed(6)),isocentreAtlasMillimetres:iso.map(v=>+v.toFixed(3)),rule:'frame_mm = atlas_metres * 1000 - isocentreAtlasMillimetres (translation only; axes unchanged), then, for the heart and great-vessel parts only, the deformation described in meta.deformation; the skeleton parts are not deformed',hullVolumeMm3:Math.round(hullVolume)},source:'BodyParts3D © DBCLS, CC BY 4.0 (decimated)',license:'Derived from BodyParts3D (CC BY 4.0, attribution required: "BodyParts3D, © The Database Center for Life Science, licensed under CC Attribution-Share Alike 4.0 International"); this derived data is released under the same CC BY 4.0 terms',generator:'scripts/angio/build-anatomy.mjs',deformation:{purpose:'the heart follows the ImageCAS-X population-mean coronary tree (S18), not the other way round',method:'rigid ICP of epicardial tree samples onto the BodyParts3D epicardium (rotation + translation, no scale), then a regularised gaussian RBF on pairs (epicardium point -> point 1.6 mm under the vessel) and (aortic wall -> ostium); the effect fades out between 90 and 210 mm from the isocentre, so the aortic arch and neck vessels stay in place',applies:'parts with group heart and great-vessel; skeleton untouched',rigidRotationDeg:+warp.rigidRotationDeg.toFixed(1),...warp.params,fit:warp.stats,generator:'scripts/angio/lib-warp.mjs'}},{warp:warp.apply});
 
-for(const [k,t] of Object.entries(trees)){const syn=t.vessels.filter(v=>v.source.startsWith('synthesised')),ic=t.vessels.filter(v=>v.source.startsWith('ImageCAS-X'));console.log(`${k}: ${t.vessels.length} vessels, ${ic.length} from ImageCAS-X mean courses, ${t.vessels.length-syn.length-ic.length} from BodyParts3D centrelines, ${syn.length} synthesised: ${syn.map(v=>v.id).join(', ')}; registration scale ${t.meta.registration.scale}, landmark residual ${t.meta.registration.residualRmsMm} mm`);}
+for(const [k,t] of Object.entries(trees)){const syn=t.vessels.filter(v=>v.source.startsWith('synthesised')),ic=t.vessels.filter(v=>v.source.startsWith('ImageCAS-X'));console.log(`${k}: ${t.vessels.length} vessels, ${ic.length} from ImageCAS-X mean courses, ${t.vessels.length-syn.length-ic.length} from BodyParts3D centrelines, ${syn.length} synthesised: ${syn.map(v=>v.id).join(', ')}; landmark offset to the BodyParts3D heart before the deformation ${t.meta.registration.residualRmsMm} mm`);}
 const counts=Object.fromEntries(Object.entries(trees).map(([k,t])=>[k,t.vessels.length]));
 console.log('isocentre (atlas mm):',iso.map(v=>v.toFixed(2)).join(', '));
 console.log('vessels per dominance:',JSON.stringify(counts));

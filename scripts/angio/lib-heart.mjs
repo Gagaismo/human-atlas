@@ -68,15 +68,17 @@ async function decimate(pos,idx,targetTris){
  return {pos:Float32Array.from(np),idx:ni};
 }
 
-/** Builds heart.json + heart.bin(.gz) in outDir (URL). iso = isocentre in atlas millimetres. */
-export async function buildHeartAsset(outDir,iso,meta){
+/** Builds heart.json + heart.bin(.gz) in outDir (URL). iso = isocentre in atlas millimetres. opts.warp: frame-mm point → point, applied to the heart and great-vessel parts (never the skeleton). */
+export async function buildHeartAsset(outDir,iso,meta,{warp=null}={}){
  const blocks=[],parts=[];let offset=0;
  const push=array=>{const at=offset;blocks.push(new Uint8Array(array.buffer,array.byteOffset,array.byteLength));offset+=array.byteLength;const pad=(4-offset%4)%4;if(pad){blocks.push(new Uint8Array(pad));offset+=pad;}return at;};
  let sourceTris=0,tris=0;
  for(const [id,name,group,target] of HEART_PARTS){
   const {positions,indices}=loadPart(id);
   sourceTris+=indices.length/3;
-  const {pos,idx}=await decimate(toFrame(positions,iso),indices,target);
+  let framed=toFrame(positions,iso);
+  if(warp&&group!=='skeleton'){const o=new Float32Array(framed.length);for(let i=0;i<framed.length;i+=3){const q=warp([framed[i],framed[i+1],framed[i+2]]);o[i]=q[0];o[i+1]=q[1];o[i+2]=q[2];}framed=o;}
+  const {pos,idx}=await decimate(framed,indices,target);
   const lo=[Infinity,Infinity,Infinity],hi=[-Infinity,-Infinity,-Infinity];
   for(let i=0;i<pos.length;i+=3)for(let k=0;k<3;k++){lo[k]=Math.min(lo[k],pos[i+k]);hi[k]=Math.max(hi[k],pos[i+k]);}
   tris+=idx.length/3;

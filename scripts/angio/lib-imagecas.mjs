@@ -1,40 +1,34 @@
-// Cursos medios de las coronarias (ImageCAS-X, scripts/angio/data/imagecas-mean.json) registrados sobre el corazón de
-// BodyParts3D: semejanza sobre cinco puntos de referencia + corrección suave (RBF gaussiana) que los hace coincidir
-// exactamente. El ajuste fino al epicardio vive en fitEpicardium(). Marco del atlas: X izquierda, Y superior, Z anterior, mm.
-import {readFileSync} from 'node:fs';
-import {similarity} from './imagecas/lib-fit.mjs';
+// Cursos medios de las coronarias (ImageCAS-X, scripts/angio/data/imagecas-mean.json), colocados en el marco del tórax
+// conservando la orientación de la población (sin rotación por caso). El ajuste fino al epicardio vive en fitEpicardium(). Marco del atlas: X izquierda, Y superior, Z anterior, mm.
+import {readFileSync,existsSync} from 'node:fs';
 import {add,sub,mul,dist,resample,smooth,arcLength} from './lib-curves.mjs';
 
 export const LANDMARK_KEYS=['lmOstium','rcaOstium','lmBif','ladEnd','crux'];
 export const MEAN_URL=new URL('./data/imagecas-mean.json',import.meta.url);
 export const loadMean=()=>JSON.parse(readFileSync(MEAN_URL,'utf8'));
 
-// RBF gaussiana: el desplazamiento residual en los puntos de referencia es exacto y decae con la distancia
-function rbfWarp(centres,residuals,sigma){
- const n=centres.length,K=Array.from({length:n},(_,i)=>Array.from({length:n},(_,j)=>Math.exp(-(dist(centres[i],centres[j])**2)/(2*sigma*sigma))));
- // resolver K·W = R (eliminación gaussiana, 3 columnas)
- const A=K.map((row,i)=>[...row,...residuals[i]]);
- for(let c=0;c<n;c++){
-  let p=c;for(let r=c+1;r<n;r++)if(Math.abs(A[r][c])>Math.abs(A[p][c]))p=r;
-  [A[c],A[p]]=[A[p],A[c]];
-  for(let r=c+1;r<n;r++){const f=A[r][c]/A[c][c];for(let k=c;k<n+3;k++)A[r][k]-=f*A[c][k];}
- }
- const W=Array.from({length:n},()=>[0,0,0]);
- for(let r=n-1;r>=0;r--)for(let k=0;k<3;k++){let s=A[r][n+k];for(let c=r+1;c<n;c++)s-=A[r][c]*W[c][k];W[r][k]=s/A[r][r];}
- return p=>{let d=[0,0,0];for(let i=0;i<n;i++){const g=Math.exp(-(dist(p,centres[i])**2)/(2*sigma*sigma));d=add(d,mul(W[i],g));}return d;};
+// Orientación: las medias de ImageCAS-X conservan la orientación del paciente (marco LPS del escáner), así que el árbol se
+// COLOCA por traslación (y, si la calibración con CARDIAG lo justifica, una rotación global pequeña, documentada en
+// scripts/angio/data/orientation.json); no se registra al corazón de BodyParts3D: el corazón se deforma al árbol (lib-warp.mjs).
+export const ORIENTATION_URL=new URL('./data/orientation.json',import.meta.url);
+export const loadOrientation=()=>existsSync(ORIENTATION_URL)?JSON.parse(readFileSync(ORIENTATION_URL,'utf8')):{rotationDeg:[0,0,0]};
+/** rotación (grados) alrededor de X, Y, Z aplicada en el orden Rz·Ry·Rx */
+export function eulerMatrix([rx,ry,rz]){
+ const a=rx*Math.PI/180,b=ry*Math.PI/180,c=rz*Math.PI/180,sa=Math.sin(a),ca=Math.cos(a),sb=Math.sin(b),cb=Math.cos(b),sc=Math.sin(c),cc=Math.cos(c);
+ const X=[[1,0,0],[0,ca,-sa],[0,sa,ca]],Y=[[cb,0,sb],[0,1,0],[-sb,0,cb]],Z=[[cc,-sc,0],[sc,cc,0],[0,0,1]];
+ const mm=(A,B)=>A.map(r=>[0,1,2].map(j=>r[0]*B[0][j]+r[1]*B[1][j]+r[2]*B[2][j]));
+ return mm(Z,mm(Y,X));
 }
+const mid=(a,b)=>[(a[0]+b[0])/2,(a[1]+b[1])/2,(a[2]+b[2])/2];
 
-/** Registro de un grupo de dominancia sobre el corazón. targets: {lmOstium,rcaOstium,lmBif,ladEnd,crux} (marco del corazón). */
-// El marco se ajusta con los puntos de referencia del grupo derecho (el más numeroso) y se aplica a los tres grupos: están en
-// el mismo marco medio de la cohorte, así los tres árboles coinciden entre sí. (En dominancia izquierda el punto «crux» de la
-// cohorte, el origen de la DPI, no es el mismo punto anatómico que el crux de la CD.)
-export function makeRegistration(mean,dominance,targets,{sigma=40,frameGroup='right'}={}){
- const lm=mean.groups[frameGroup].landmarks,src=LANDMARK_KEYS.map(k=>lm[k]),dst=LANDMARK_KEYS.map(k=>targets[k]);
- const T=similarity(src,dst,{weights:[2,2,2,2,2]});
- const moved=src.map(T.apply),res=dst.map((d,i)=>sub(d,moved[i]));
- const warp=rbfWarp(moved,res,sigma);
- const apply=p=>{const q=T.apply(p);return add(q,warp(q));};
- const residualRms=Math.sqrt(res.reduce((a,r)=>a+r[0]**2+r[1]**2+r[2]**2,0)/res.length);
+/** Colocación de un grupo de dominancia: traslación (+ rotación global opcional) que lleva el punto medio de los dos ostios
+ *  de la media al de los ostios de `targets` (marco del corazón); escala 1 (milímetros de la cohorte). Los tres grupos
+ *  comparten el marco medio de la cohorte, así coinciden entre sí. */
+export function makeRegistration(mean,dominance,targets,{frameGroup='right',rotationDeg=loadOrientation().rotationDeg}={}){
+ const lm=mean.groups[frameGroup].landmarks,R=eulerMatrix(rotationDeg);
+ const pivot=mid(lm.lmOstium,lm.rcaOstium),dst=mid(targets.lmOstium,targets.rcaOstium);
+ const apply=p=>{const q=sub(p,pivot);return add([0,1,2].map(r=>R[r][0]*q[0]+R[r][1]*q[1]+R[r][2]*q[2]),dst);};
+ const placed=LANDMARK_KEYS.map(k=>apply(lm[k])),residualRms=Math.sqrt(LANDMARK_KEYS.reduce((a,k,i)=>a+dist(placed[i],targets[k])**2,0)/LANDMARK_KEYS.length);
  const group=key=>{
   const own=mean.groups[dominance].labels[key];
   // ramas poco frecuentes en un grupo pequeño: se toma la media del grupo derecho (mismo marco medio)
@@ -43,9 +37,9 @@ export function makeRegistration(mean,dominance,targets,{sigma=40,frameGroup='ri
   return r?{label:r,from:'right'}:own?{label:own,from:dominance}:null;
  };
  return {
-  scale:T.s,residualRms,targets,
-  /** curso medio registrado (sin ajuste al epicardio) o null */
-  course(key){const g=group(key);if(!g)return null;return {points:g.label.points.map(apply),n:g.label.n,from:g.from,attachOnParent:g.label.attachOnParent??null,lengthMm:g.label.lengthMm,radiusMm:g.label.radiusMm?g.label.radiusMm.map(r=>r*T.s):null};},
+  scale:1,residualRms,targets,rotationDeg,apply,placedLandmarks:Object.fromEntries(LANDMARK_KEYS.map((k,i)=>[k,placed[i]])),
+  /** curso medio colocado (sin ajuste al epicardio) o null */
+  course(key){const g=group(key);if(!g)return null;return {points:g.label.points.map(apply),n:g.label.n,from:g.from,attachOnParent:g.label.attachOnParent??null,lengthMm:g.label.lengthMm,radiusMm:g.label.radiusMm??null};},
  };
 }
 

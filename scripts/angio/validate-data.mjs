@@ -3,7 +3,8 @@
 import {readFileSync,existsSync,statSync} from 'node:fs';
 import {gzipSync,gunzipSync} from 'node:zlib';
 import {Surface} from './lib-geom.mjs';
-import {nearestOn} from './lib-curves.mjs';
+import {nearestOn,slice} from './lib-curves.mjs';
+import {loadMean,makeRegistration,LANDMARK_KEYS} from './lib-imagecas.mjs';
 
 const dir=new URL('../../public/models/angio/',import.meta.url);
 let checks=0;const failures=[];
@@ -24,6 +25,15 @@ const FORBIDDEN={right:['lpl','lpda'],left:['pda','rpl','rpl1','rpl2','rpl3'],co
 const ENGLISH=/\b(artery|arteries|branch|branches|left|right|trunk|descending|vein|graft|circumflex|posterior descending|marginal artery|septal branch)\b/i;
 const FAMILIES=['tci','da','cx','ri','cd','graft'];
 const SEPTAL=/^s[0-9]$|^dp-s[0-9]$|^avn$|septal/; // deep branches (septum, AV node region) may run inside the myocardium
+
+// ---- ImageCAS-X mean courses (derived statistics only) ------------------------------------------------------
+const MEAN=loadMean();
+const MEAN_KEY={lm:'lm','lad-prox':'lad','lad-mid':'lad','lad-apical':'lad',d1:'d1',d2:'d2','lcx-prox':'lcx','lcx-dist':'lcx',ramus:'ramus',om1:'om1',om2:'om2',lpl:'lpla',lpda:'lpda','rca-prox':'rca','rca-mid':'rca','rca-dist':'rca',pda:'rpda',rpl:'rpla'};
+const MEAN_TOL={avg:7,max:12}; // mm, segment course vs the registered ImageCAS-X mean (before the epicardial fit)
+check(MEAN.meta?.scansUsed>=700&&MEAN.meta?.scansUsedByDominance?.right>=600&&MEAN.meta?.scansUsedByDominance?.left>=30&&MEAN.meta?.scansUsedByDominance?.co>=20,'imagecas-mean.json: scan counts per dominance');
+check(/CC BY 4\.0/.test(MEAN.meta?.license??'')&&/10\.5281\/zenodo\.21887809/.test(MEAN.meta?.source??''),'imagecas-mean.json: license and DOI');
+check(Object.values(MEAN.groups).every(g=>Object.values(g.labels).every(l=>l.n>=3&&l.points.length===MEAN.meta.samples&&l.points.every(isVec))),'imagecas-mean.json: only mean courses (n >= 3 scans each, fixed sample count)');
+check(!JSON.stringify(MEAN).includes('"scans"')||typeof MEAN.groups.right.scans==='number','imagecas-mean.json: no per-patient geometry');
 
 // ---- heart asset ---------------------------------------------------------------------------------------
 const heart=read('heart.json');
@@ -95,7 +105,7 @@ for(const dom of ['right','left','co']){
   check(FAMILIES.includes(v.family)&&v.family!=='graft',`${w}: family`);
   check(v.parent===null||byId.has(v.parent),`${w}: parent ${v.parent} does not exist`);
   check(v.parent===null?v.parentArc===null:(typeof v.parentArc==='number'&&v.parentArc>=0&&v.parentArc<=1),`${w}: parentArc`);
-  check(typeof v.source==='string'&&(/^BodyParts3D /.test(v.source)||/^synthesised: /.test(v.source)),`${w}: source`);
+  check(typeof v.source==='string'&&(/^(BodyParts3D|ImageCAS-X) /.test(v.source)||/^synthesised: /.test(v.source)),`${w}: source`);
   check(v.variant===undefined||v.variant==='ramus',`${w}: variant`);
   check(Array.isArray(v.points)&&Array.isArray(v.radii)&&v.points.length===v.radii.length&&v.points.length>=2,`${w}: points/radii length`);
   if(!Array.isArray(v.points)||!Array.isArray(v.radii))continue;
@@ -123,6 +133,20 @@ for(const dom of ['right','left','co']){
    const par=byId.get(v.parent),hit=nearestOn(par.points,v.points[0]);
    check(hit.d<=1.0,`${tag}/${v.id}: starts ${hit.d.toFixed(2)} mm from parent ${v.parent}`);
    check(Math.abs(hit.t-v.parentArc)<=0.08,`${tag}/${v.id}: parentArc ${v.parentArc} vs nearest ${hit.t.toFixed(2)}`);
+  }
+ }
+ // the course of each SYNTAX segment stays within tolerance of the ImageCAS-X mean after registration onto the heart
+ {
+  const reg=t.meta?.registration;
+  check(!!reg&&LANDMARK_KEYS.every(k=>isVec(reg.targets?.[k]))&&reg.imagecasX?.doi==='10.5281/zenodo.21887809',`${tag}: meta.registration (targets, ImageCAS-X doi)`);
+  if(reg&&LANDMARK_KEYS.every(k=>isVec(reg.targets?.[k]))){
+   const R=makeRegistration(MEAN,dom,reg.targets);
+   for(const v of t.vessels??[])for(const s of v.segments??[]){
+    const key=MEAN_KEY[s.id];if(!key||!SYNTAX[s.id])continue;
+    const c=R.course(key);check(!!c,`${tag}/${s.id}: no ImageCAS-X mean course for ${key}`);if(!c)continue;
+    const ds=slice(v.points,s.from,s.to).map(p=>nearestOn(c.points,p).d),avg=ds.reduce((a,b)=>a+b,0)/ds.length,mx=Math.max(...ds);
+    check(avg<=MEAN_TOL.avg&&mx<=MEAN_TOL.max,`${tag}/${s.id}: ${avg.toFixed(1)} mm mean / ${mx.toFixed(1)} mm max from the ImageCAS-X mean course (limits ${MEAN_TOL.avg}/${MEAN_TOL.max})`);
+   }
   }
  }
  for(const id of REQUIRED[dom])check(segSyntax.has(id),`${tag}: missing segment ${id}`);

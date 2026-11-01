@@ -1,6 +1,8 @@
 // Builds the angiography anatomy assets in public/models/angio/ from the BodyParts3D meshes already in the atlas
 // (© DBCLS, CC BY 4.0) and published measurements (Dodge 1988 positions, Dodge 1992 calibers). Own data: nothing
-// is taken from angioview.com. Usage: node scripts/angio/build-anatomy.mjs
+// is taken from angioview.com. The vessel courses labelled by ImageCAS-X (Bransby & Paulsen, CC BY 4.0) follow its
+// population-mean centrelines (scripts/angio/data/imagecas-mean.json) registered onto the BodyParts3D heart.
+// Usage: node scripts/angio/build-anatomy.mjs
 import {writeFileSync,mkdirSync} from 'node:fs';
 import {atlasParts,loadPart} from './lib-atlas.mjs';
 import {extractCenterline,smoothResample} from './lib-centerline.mjs';
@@ -8,6 +10,7 @@ import {Surface,trisOf,hullCentroid} from './lib-geom.mjs';
 import {add,sub,mul,dot,unit,lerp,dist,pointAt,nearestOn,spline,smooth,resample,len} from './lib-curves.mjs';
 import {buildTree} from './lib-tree.mjs';
 import {buildHeartAsset,toFrame as meshToFrame} from './lib-heart.mjs';
+import {loadMean,makeRegistration,fitEpicardium,LANDMARK_KEYS} from './lib-imagecas.mjs';
 
 const out=new URL('../../public/models/angio/',import.meta.url);
 mkdirSync(out,{recursive:true});
@@ -51,11 +54,26 @@ const piece=(id,{rev=false,from,to}={})=>{
  let r=pts;if(from!==undefined||to!==undefined)r=pts.slice(from??0,to??pts.length);
  return (rev?[...r].reverse():[...r]).map(p=>[...p]);
 };
-const ctx={piece,lay,epi,toFrame,aorticRootCentre,apex,avnTarget,sanEnd};
+// ---- 3b. ImageCAS-X mean courses registered onto this heart ------------------------------------------------------
+// five landmarks measured on the BodyParts3D heart: ostia, LM bifurcation, distal LAD end, crux (origin of the posterior descending)
+const mean=loadMean();
+const regTargets={lmOstium:piece('FJ2737',{rev:true})[0],rcaOstium:piece('FJ2723',{rev:true})[0],lmBif:piece('FJ2737',{rev:true}).at(-1),ladEnd:piece('FJ2631',{rev:true}).at(-1),crux:piece('FJ2692',{rev:true})[0]};
+const registrations=Object.fromEntries(['right','left','co'].map(d=>[d,makeRegistration(mean,d,regTargets)]));
+const courseCache=new Map();
+const course=(dominance,key)=>{
+ const k=dominance+'/'+key;
+ if(!courseCache.has(k)){
+  const c=registrations[dominance].course(key);
+  courseCache.set(k,c&&{...c,points:fitEpicardium(c.points,lay,{off:1.4})});
+ }
+ const c=courseCache.get(k);
+ return c&&{...c,points:c.points.map(p=>[...p])};
+};
+const ctx={piece,lay,epi,toFrame,aorticRootCentre,apex,avnTarget,sanEnd,course,fitEpi:pts=>fitEpicardium(pts,lay,{off:1.0,iters:3})};
 
 // ---- 4. trees ---------------------------------------------------------------------------------------------
-const SRC='BodyParts3D © DBCLS (https://lifesciencedb.jp/bp3d/), CC BY 4.0; Dodge JT Jr et al., Circulation 1988;78:1167 (segment positions) and 1992;86:232 (lumen calibers)';
-const meta=dominance=>({units:'mm',frame:'X = patient left, Y = superior, Z = anterior; origin = isocentre = volume centroid of the convex hull of the heart (ventricle wall, atrial walls, ascending aorta, pulmonary trunk, coronary arteries)',dominance,isocentre:`atlas millimetres [${iso.map(v=>v.toFixed(3)).join(', ')}] (atlas metres = frame/1000 + isocentre/1000; frame = (atlas*1000 - isocentre), same axes, no rotation)`,source:SRC,license:'Derived from BodyParts3D (CC BY 4.0, attribution required: "BodyParts3D, © The Database Center for Life Science, licensed under CC Attribution-Share Alike 4.0 International"); this derived data is released under the same CC BY 4.0 terms',generator:'scripts/angio/build-anatomy.mjs'});
+const SRC='BodyParts3D © DBCLS (https://lifesciencedb.jp/bp3d/), CC BY 4.0; ImageCAS-X (Bransby KM, Paulsen RR; doi:10.5281/zenodo.21887809, CC BY 4.0) mean coronary courses; Dodge JT Jr et al., Circulation 1988;78:1167 (segment positions) and 1992;86:232 (lumen calibers)';
+const meta=dominance=>({units:'mm',frame:'X = patient left, Y = superior, Z = anterior; origin = isocentre = volume centroid of the convex hull of the heart (ventricle wall, atrial walls, ascending aorta, pulmonary trunk, coronary arteries)',dominance,isocentre:`atlas millimetres [${iso.map(v=>v.toFixed(3)).join(', ')}] (atlas metres = frame/1000 + isocentre/1000; frame = (atlas*1000 - isocentre), same axes, no rotation)`,source:SRC,license:'Derived from BodyParts3D (CC BY 4.0, attribution required: "BodyParts3D, © The Database Center for Life Science, licensed under CC Attribution-Share Alike 4.0 International") and from the ImageCAS-X population-mean centrelines (CC BY 4.0, Bransby KM and Paulsen RR, doi:10.5281/zenodo.21887809); this derived data is released under CC BY 4.0 terms',generator:'scripts/angio/build-anatomy.mjs',registration:{method:'similarity on 5 landmarks (LM ostium, RCA ostium, LM bifurcation, distal LAD end, crux) fitted on the right-dominant group and applied to all three groups, which share the cohort mean frame, + gaussian residual warp (sigma 40 mm) + epicardial fit (1.4 mm outside the wall)',targets:Object.fromEntries(LANDMARK_KEYS.map(k=>[k,regTargets[k].map(v=>+v.toFixed(2))])),scale:+registrations[dominance].scale.toFixed(4),residualRmsMm:+registrations[dominance].residualRms.toFixed(2),imagecasX:{doi:'10.5281/zenodo.21887809',scansUsed:mean.meta.scansUsedByDominance[dominance],scansUsedAll:mean.meta.scansUsed}}});
 const trees={};
 for(const dominance of ['right','left','co']){
  const {vessels,landmarks}=buildTree(dominance,ctx);
@@ -100,9 +118,9 @@ const strip=g=>{const {target,...rest}=g;return rest;};
 writeFileSync(new URL('grafts-right.json',out),JSON.stringify({meta:graftMeta,vessels:[lima,svgOm,svgPda].map(strip)})+'\n');
 
 // ---- 6. heart + great vessels + thoracic skeleton ------------------------------------------------------------
-const heart=await buildHeartAsset(out,iso,{units:'mm',frame:trees.right.meta.frame,transform:{isocentreAtlasMetres:iso.map(v=>+(v/1000).toFixed(6)),isocentreAtlasMillimetres:iso.map(v=>+v.toFixed(3)),rule:'frame_mm = atlas_metres * 1000 - isocentreAtlasMillimetres (translation only; axes unchanged)',hullVolumeMm3:Math.round(hullVolume)},source:'BodyParts3D © DBCLS, CC BY 4.0 (decimated)',license:trees.right.meta.license,generator:'scripts/angio/build-anatomy.mjs'});
+const heart=await buildHeartAsset(out,iso,{units:'mm',frame:trees.right.meta.frame,transform:{isocentreAtlasMetres:iso.map(v=>+(v/1000).toFixed(6)),isocentreAtlasMillimetres:iso.map(v=>+v.toFixed(3)),rule:'frame_mm = atlas_metres * 1000 - isocentreAtlasMillimetres (translation only; axes unchanged)',hullVolumeMm3:Math.round(hullVolume)},source:'BodyParts3D © DBCLS, CC BY 4.0 (decimated)',license:'Derived from BodyParts3D (CC BY 4.0, attribution required: "BodyParts3D, © The Database Center for Life Science, licensed under CC Attribution-Share Alike 4.0 International"); this derived data is released under the same CC BY 4.0 terms',generator:'scripts/angio/build-anatomy.mjs'});
 
-for(const [k,t] of Object.entries(trees)){const syn=t.vessels.filter(v=>v.source.startsWith('synthesised'));console.log(`${k}: ${t.vessels.length} vessels, ${t.vessels.length-syn.length} from BodyParts3D centrelines, ${syn.length} synthesised: ${syn.map(v=>v.id).join(', ')}`);}
+for(const [k,t] of Object.entries(trees)){const syn=t.vessels.filter(v=>v.source.startsWith('synthesised')),ic=t.vessels.filter(v=>v.source.startsWith('ImageCAS-X'));console.log(`${k}: ${t.vessels.length} vessels, ${ic.length} from ImageCAS-X mean courses, ${t.vessels.length-syn.length-ic.length} from BodyParts3D centrelines, ${syn.length} synthesised: ${syn.map(v=>v.id).join(', ')}; registration scale ${t.meta.registration.scale}, landmark residual ${t.meta.registration.residualRmsMm} mm`);}
 const counts=Object.fromEntries(Object.entries(trees).map(([k,t])=>[k,t.vessels.length]));
 console.log('isocentre (atlas mm):',iso.map(v=>v.toFixed(2)).join(', '));
 console.log('vessels per dominance:',JSON.stringify(counts));

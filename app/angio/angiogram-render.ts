@@ -1,7 +1,8 @@
 // X-ray style renderer of the angiogram (S5). The camera is the C-arm geometry (source at −SOD·d, image mirrored so screen
 // right = u, as seen from the detector); vessels are closed tubes drawn additively into a float target, front faces
 // subtracting and back faces adding the ray distance, so every pixel ends up with the total chord length (mm) the beam
-// crosses. The compositor turns it into intensity = background · exp(−μ·thickness), with soft edges, bloom, vignette and grain.
+// crosses (4× multisampled, so silhouettes get real partial coverage). The compositor turns it into intensity = background · exp(−μ·thickness)
+// with vignette; a last pass adds the cath-lab edge enhancement (unsharp mask) and then the film grain, so the grain is never sharpened or softened.
 import * as T from 'three';
 import {FIELD_SIZE,SID,SOD,imageAxes,projectWith} from './core/geometry';
 import {FAMILY_PALETTE,polylineLength,sampleSegment,visibleVessels} from './core/tree';
@@ -20,6 +21,9 @@ export function injectedVessels(tree:CoronaryTree,vis:Visibility):Vessel[]{
 
 export const TUBE_STEP=1.5;   // mm between rings
 const SIDES=8,MIN_RADIUS=.1,RADIUS_SCALE=.95;
+/** Calibre curve (S24): trunks (radius ≳ 2 mm) are drawn this much wider than their anatomical radius, distal twigs (≲ 0.8 mm) keep theirs. */
+const TRUNK_BOOST=.2,TRUNK_R0=.8,TRUNK_R1=2;
+const calibre=(r:number)=>{const k=Math.min(Math.max((r-TRUNK_R0)/(TRUNK_R1-TRUNK_R0),0),1);return 1+TRUNK_BOOST*k*k*(3-2*k);};
 /** Contrast fill (S14): the front travels from the ostium to the farthest tip in FILL_S seconds; the "CINE" timer stops at CINE_END. */
 export const FILL_S=1.4,CINE_END=1.8;
 const FRONT_SOFT_MM=38;
@@ -76,7 +80,7 @@ export function buildTubes(vessels:readonly Vessel[]):TubeBuild{
     if(i===0){const w=Math.abs(t.x)<.6?new T.Vector3(1,0,0):new T.Vector3(0,1,0);n1.crossVectors(t,w).normalize();}
     else{n1.addScaledVector(t,-n1.dot(t));if(n1.lengthSq()<1e-12)n1.set(t.y,-t.x,0);n1.normalize();}
     n2.crossVectors(t,n1);   // (n1, n2, t) right-handed: angle increases counter-clockwise seen from +t
-    const c=sm.points[i],r=Math.max(radii[i]*RADIUS_SCALE,MIN_RADIUS),dd=off+sm.arcs[i];
+    const c=sm.points[i],r=Math.max(radii[i]*RADIUS_SCALE*calibre(radii[i]),MIN_RADIUS),dd=off+sm.arcs[i];
     for(let j=0;j<SIDES;j++){
      const th=j/SIDES*Math.PI*2,cs=Math.cos(th)*r,sn=Math.sin(th)*r;
      pos.push(c[0]+n1.x*cs+n2.x*sn,c[1]+n1.y*cs+n2.y*sn,c[2]+n1.z*cs+n2.z*sn);
@@ -109,12 +113,12 @@ export function buildTubes(vessels:readonly Vessel[]):TubeBuild{
 
 const TUBE_VERT=`
 attribute vec3 aTint;attribute float aSeg;attribute float aDist;
-varying vec3 vView;varying vec3 vTint;varying float vSeg;varying float vDist;
+centroid varying vec3 vView;varying vec3 vTint;varying float vSeg;centroid varying float vDist;
 void main(){vec4 mv=modelViewMatrix*vec4(position,1.);vView=mv.xyz;vTint=aTint;vSeg=aSeg;vDist=aDist;gl_Position=projectionMatrix*mv;}`;
 // Ray length relative to the isocentre; the overall sign depends on winding and the mirrored projection, so the compositor takes abs().
 const TUBE_FRAG=`
 uniform float uSod;uniform float uSel;uniform float uSelPrev;uniform float uHover;uniform float uFront;uniform float uSoftMm;
-varying vec3 vView;varying vec3 vTint;varying float vSeg;varying float vDist;
+centroid varying vec3 vView;varying vec3 vTint;varying float vSeg;centroid varying float vDist;
 void main(){
  // Contrast front: everything nearer the ostium than the front is opaque, with a soft edge instead of a hard cut.
  float fill=1.-smoothstep(uFront-uSoftMm,uFront,vDist);
@@ -129,18 +133,17 @@ void main(){
 const QUAD_VERT=`varying vec2 vUv;void main(){vUv=uv;gl_Position=vec4(position.xy,0.,1.);}`;
 const QUAD_FRAG=`
 uniform sampler2D uThick;uniform sampler2D uTint;uniform sampler2D uBg;
-uniform float uSharp;uniform vec3 uCurve;uniform float uTexel;uniform float uSoft;uniform float uMu;uniform float uSeed;uniform float uColor;
+uniform float uSharp;uniform vec3 uCurve;uniform float uTexel;uniform float uSoft;uniform float uMu;uniform float uColor;
 uniform float uWCur;uniform float uWPrev;uniform float uWHover;uniform float uDens;uniform vec4 uPuff0;uniform vec4 uPuff1;
 varying vec2 vUv;
-float hash(vec2 p){p=fract(p*vec2(443.897,441.423));p+=dot(p,p.yx+19.19);return fract((p.x+p.y)*p.x);}
 vec4 th(vec2 o){return abs(texture2D(uThick,vUv+o*uTexel));}
 // Contrast cloud: a round core plus a wider skirt, elongated a little along the catheter axis (p.xy centre, p.z amplitude, p.w sigma in uv).
 float puff(vec4 p){vec2 d=vUv-p.xy;float r2=dot(d,d)/(p.w*p.w);return p.z*(exp(-r2*.5)*.8+exp(-r2*.14)*.35);}
 void main(){
  float t=0.,s=0.,sp=0.,sh=0.,w=0.;vec3 tc=vec3(0.);
- // Small anti-aliasing kernel (about 0.7 px): the edges stay crisp, the rasterised steps do not alias.
+ // The target is multisampled; this tent kernel (about 0.4 px) only hides what is left of the rasterised steps.
  for(int j=-1;j<=1;j++)for(int i=-1;i<=1;i++){
-  float k=(i==0?2.:1.)*(j==0?2.:1.);vec2 o=vec2(float(i),float(j))*uSoft*.7;
+  float k=(i==0?2.:1.)*(j==0?2.:1.);vec2 o=vec2(float(i),float(j))*uSoft*.3;
   vec4 v=th(o);
   t+=k*v.r;s+=k*v.g;sp+=k*v.b;sh+=k*v.a;tc+=k*abs(texture2D(uTint,vUv+o*uTexel).rgb);w+=k;
  }
@@ -161,16 +164,31 @@ void main(){
  vec3 vessel=tint*(.5+.5*bg);
  vec3 grey=vec3(bg*(1.-cov));                           // plain Beer-Lambert: grey, not black
  vec3 col=mix(grey,mix(vec3(bg*(1.-.5*(cov-vcov))),vessel,vcov),uColor*smoothstep(0.,.08,tb));
- float sc=(1.-exp(-1.8*s))*uWCur+(1.-exp(-1.8*sp))*uWPrev;   // selected segment: orange overlay, fading in and out
+ float sc=(1.-exp(-1.8*s))*uWCur+(1.-exp(-1.8*sp))*uWPrev;   // selected segment: warm overlay, fading in and out
  float hc=(1.-exp(-1.8*sh))*uWHover;                          // hovered segment: lighter, yellower overlay, under the selection
- col=mix(col,vec3(1.,.82,.3),clamp(.75*hc,0.,.75));
- col=mix(col,vec3(1.,.55,.12),clamp(.9*sc,0.,.9));
- vec2 px=gl_FragCoord.xy;
- float grain=(hash(px+uSeed)-.5)*.055+(hash(floor(px*.35)+uSeed*1.7)-.5)*.03;
- col+=grain*(.5+.5*(1.-cov));
+ // Translucent tints: the vessel's own darkness still modulates the colour (dark core stays visible through it).
+ float lum=dot(col,vec3(.299,.587,.114));
+ col=mix(col,vec3(1.,.78,.4)*(.28+.95*lum),clamp(hc,0.,1.));
+ col=mix(col,vec3(1.,.66,.22)*(.46+lum),clamp(sc,0.,1.));
  gl_FragColor=vec4(clamp(col,0.,1.),1.);
 }`;
 
+// Last pass: cath-lab style edge enhancement (unsharp mask, radius about 1.2 px) on the composited image, then the film grain.
+// The dark side of an edge is deepened fully, the light side only a little, so the background gets no halos.
+const SHARP_FRAG=`
+uniform sampler2D uComp;uniform float uTexel;uniform float uRad;uniform float uAmt;uniform float uHalo;uniform float uSeed;uniform float uGrain;
+varying vec2 vUv;
+float hash(vec2 p){p=fract(p*vec2(443.897,441.423));p+=dot(p,p.yx+19.19);return fract((p.x+p.y)*p.x);}
+vec3 at(vec2 o){return texture2D(uComp,vUv+o*uTexel*uRad).rgb;}
+void main(){
+ vec3 c=at(vec2(0.));
+ vec3 b=(c*4.+(at(vec2(1.,0.))+at(vec2(-1.,0.))+at(vec2(0.,1.))+at(vec2(0.,-1.)))*2.+at(vec2(1.,1.))+at(vec2(-1.,1.))+at(vec2(1.,-1.))+at(vec2(-1.,-1.)))/16.;
+ vec3 d=c-b;
+ vec3 col=c+uAmt*mix(d,d*uHalo,step(0.,d));
+ vec2 px=gl_FragCoord.xy;
+ float grain=(hash(px+uSeed)-.5)*uGrain+(hash(floor(px*.5)+uSeed*1.7)-.5)*uGrain*.2;
+ gl_FragColor=vec4(clamp(col+grain,0.,1.),1.);
+}`;
 
 /** A selected segment and how visible its orange overlay is (0–1). */
 export interface Highlight{id:string|null;weight:number}
@@ -200,9 +218,10 @@ export function createAngioRenderer(canvas:HTMLCanvasElement):AngioRenderer|null
  renderer.outputColorSpace=T.LinearSRGBColorSpace;
  renderer.setPixelRatio(1);
 
- const targetOpts={type:fullFloat?T.FloatType:T.HalfFloatType,format:T.RGBAFormat,minFilter:T.LinearFilter,magFilter:T.LinearFilter,depthBuffer:false,generateMipmaps:false};
+ const targetOpts={type:fullFloat?T.FloatType:T.HalfFloatType,format:T.RGBAFormat,minFilter:T.LinearFilter,magFilter:T.LinearFilter,depthBuffer:false,generateMipmaps:false,samples:4};
+ const compOpts={type:halfOk?T.HalfFloatType:T.UnsignedByteType,format:T.RGBAFormat,minFilter:T.LinearFilter,magFilter:T.LinearFilter,depthBuffer:false,generateMipmaps:false};
  let size=512;
- const rtThick=new T.WebGLRenderTarget(size,size,targetOpts),rtTint=new T.WebGLRenderTarget(size,size,targetOpts);
+ const rtThick=new T.WebGLRenderTarget(size,size,targetOpts),rtTint=new T.WebGLRenderTarget(size,size,targetOpts),rtComp=new T.WebGLRenderTarget(size,size,compOpts);
  const additive={side:T.DoubleSide,depthTest:false,depthWrite:false,transparent:true,blending:T.CustomBlending,blendEquation:T.AddEquation,blendSrc:T.OneFactor,blendDst:T.OneFactor,blendSrcAlpha:T.OneFactor,blendDstAlpha:T.OneFactor};
  const fillUniforms=()=>({uSod:{value:SOD},uSel:{value:-1},uSelPrev:{value:-1},uHover:{value:-1},uFront:{value:1e6},uSoftMm:{value:FRONT_SOFT_MM}});
  const matThick=new T.ShaderMaterial({vertexShader:TUBE_VERT,fragmentShader:TUBE_FRAG,uniforms:fillUniforms(),...additive});
@@ -215,8 +234,10 @@ export function createAngioRenderer(canvas:HTMLCanvasElement):AngioRenderer|null
  const bgCtx=bgCanvas.getContext('2d')!;
  const bgTex=new T.CanvasTexture(bgCanvas);bgTex.minFilter=T.LinearFilter;bgTex.generateMipmaps=false;
  const quadMat=new T.ShaderMaterial({vertexShader:QUAD_VERT,fragmentShader:QUAD_FRAG,depthTest:false,depthWrite:false,uniforms:{
-  uThick:{value:rtThick.texture},uTint:{value:rtTint.texture},uBg:{value:bgTex},uTexel:{value:1/size},uSoft:{value:1},uMu:{value:.17},uSharp:{value:.45},uCurve:{value:new T.Vector3(.33,1.7,4.2)},uSeed:{value:0},uColor:{value:0},
+  uThick:{value:rtThick.texture},uTint:{value:rtTint.texture},uBg:{value:bgTex},uTexel:{value:1/size},uSoft:{value:1},uMu:{value:.17},uSharp:{value:.45},uCurve:{value:new T.Vector3(.62,1.3,3.5)},uColor:{value:0},
   uWCur:{value:0},uWPrev:{value:0},uWHover:{value:0},uDens:{value:1},uPuff0:{value:new T.Vector4()},uPuff1:{value:new T.Vector4()}}});
+ const sharpMat=new T.ShaderMaterial({vertexShader:QUAD_VERT,fragmentShader:SHARP_FRAG,depthTest:false,depthWrite:false,uniforms:{
+  uComp:{value:rtComp.texture},uTexel:{value:1/size},uRad:{value:1},uAmt:{value:2.2},uHalo:{value:.3},uSeed:{value:0},uGrain:{value:.05}}});
  const quad=new T.Mesh(new T.PlaneGeometry(2,2),quadMat);quad.frustumCulled=false;
  const quadScene=new T.Scene();quadScene.add(quad);
  const quadCamera=new T.OrthographicCamera(-1,1,1,-1,0,1);
@@ -243,10 +264,12 @@ export function createAngioRenderer(canvas:HTMLCanvasElement):AngioRenderer|null
    cloudPts=heartCloud(tree);
   },
   resize(cssSize,dpr){
-   const n=Math.max(256,Math.min(1024,Math.round(cssSize*Math.min(dpr,2))));
+   // Full device resolution (S24): the targets are as big as the canvas is on screen, never upscaled from a smaller one (DPR capped at 2).
+   const css=canvas.getBoundingClientRect().width||cssSize,ratio=Math.min(dpr,2);
+   const n=Math.max(256,Math.min(2048,Math.round(css*ratio)));
    if(n===size&&renderer.domElement.width===n)return;
-   size=n;renderer.setSize(n,n,false);rtThick.setSize(n,n);rtTint.setSize(n,n);
-   quadMat.uniforms.uTexel.value=1/n;quadMat.uniforms.uSoft.value=Math.max(1,n/640);bgKey='';
+   size=n;renderer.setSize(n,n,false);rtThick.setSize(n,n);rtTint.setSize(n,n);rtComp.setSize(n,n);
+   quadMat.uniforms.uTexel.value=1/n;quadMat.uniforms.uSoft.value=n/css;sharpMat.uniforms.uTexel.value=1/n;sharpMat.uniforms.uRad.value=1.0*n/css;bgKey='';
   },
   render(o){
    // The background only depends on the view, so it is not repainted while the fill or a highlight animates.
@@ -277,14 +300,14 @@ export function createAngioRenderer(canvas:HTMLCanvasElement):AngioRenderer|null
    }
    renderer.setRenderTarget(rtTint);renderer.clear();
    if(hasTubes&&o.color){tubes.material=matTint;renderer.render(tubeScene,camera);}
-   renderer.setRenderTarget(null);
    qu.uColor.value=o.color?1:0;
-   qu.uSeed.value=(Math.abs(o.a*.123+o.b*.0731)%1)*97+(Math.abs(o.pan[0]*3.1+o.pan[1]*1.7)%1)*13;
-   renderer.render(quadScene,quadCamera);
+   sharpMat.uniforms.uSeed.value=(Math.abs(o.a*.123+o.b*.0731)%1)*97+(Math.abs(o.pan[0]*3.1+o.pan[1]*1.7)%1)*13;
+   renderer.setRenderTarget(rtComp);quad.material=quadMat;renderer.render(quadScene,quadCamera);
+   renderer.setRenderTarget(null);quad.material=sharpMat;renderer.render(quadScene,quadCamera);
   },
   dispose(){
-   tubes.geometry.dispose();matThick.dispose();matTint.dispose();quadMat.dispose();quad.geometry.dispose();
-   bgTex.dispose();rtThick.dispose();rtTint.dispose();renderer.dispose();
+   tubes.geometry.dispose();matThick.dispose();matTint.dispose();quadMat.dispose();sharpMat.dispose();quad.geometry.dispose();
+   bgTex.dispose();rtThick.dispose();rtTint.dispose();rtComp.dispose();renderer.dispose();
   },
  };
 }

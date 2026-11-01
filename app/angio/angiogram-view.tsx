@@ -36,7 +36,7 @@ export default function AngiogramView(props:AngiogramViewProps){
  const host=useRef<HTMLDivElement>(null),canvas=useRef<HTMLCanvasElement>(null);
  const latest=useRef(props);latest.current=props;
  const gl=useRef<AngioRenderer|null>(null),pan=useRef<[number,number]>([0,0]);
- const raf=useRef(0),anim=useRef(0),sizeRef=useRef(0),drawRef=useRef(()=>{});
+ const dprSeen=useRef(0),raf=useRef(0),anim=useRef(0),sizeRef=useRef(0),drawRef=useRef(()=>{});
  // Cine fill (S14): when the injection started (performance.now), and the cross-fade between the previous and the current selection.
  const fillStart=useRef(0),cine=useRef<HTMLSpanElement>(null),lblKey=useRef('');
  const fade=useRef({cur:{id:null,weight:0} as Highlight,prev:{id:null,weight:0} as Highlight,at:0});
@@ -68,6 +68,7 @@ export default function AngiogramView(props:AngiogramViewProps){
  drawRef.current=()=>{
   const {a,b,selected,color,labels:showLabels}=latest.current,S=sizeRef.current;
   if(!gl.current||S<=0)return;
+  if(dprSeen.current!==devicePixelRatio){dprSeen.current=devicePixelRatio;gl.current.resize(S,devicePixelRatio);}
   const now=performance.now(),calm=reducedMotion(),fd=fade.current,dt=fd.at?Math.min(now-fd.at,64):0;
   fd.at=now;
   if(selected!==fd.cur.id){   // selection changed: the old overlay fades out while the new one fades in
@@ -121,7 +122,7 @@ export default function AngiogramView(props:AngiogramViewProps){
   cv.addEventListener('webglcontextlost',lost);
   const ro=new ResizeObserver(()=>{
    const s=Math.floor(Math.min(el.clientWidth,el.clientHeight));
-   sizeRef.current=s;r.resize(s,devicePixelRatio);setSide(s);request();
+   sizeRef.current=s;setSide(s);request();
   });
   ro.observe(el);
   return ()=>{
@@ -132,6 +133,8 @@ export default function AngiogramView(props:AngiogramViewProps){
 
  // A new injection (system, dominance, ramus, grafts, first load) restarts the fill from the ostium; angle changes do not.
  useEffect(()=>{gl.current?.setScene(tree,vessels);fillStart.current=performance.now();request();},[tree,vessels,request,failed]);
+ // The canvas is sized to the panel on screen times the device pixel ratio; once the new side is committed to the DOM (and whenever the ratio changes).
+ useEffect(()=>{gl.current?.resize(side,devicePixelRatio);request();},[side,request]);
  useEffect(()=>{request();},[a,b,selected,color,showLabels,segs,side,request]);
 
  const setPan=useCallback((x:number,y:number)=>{

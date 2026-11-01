@@ -80,6 +80,19 @@ export default function HeartScene(props:HeartSceneProps){
   let dist=DEFAULT_DIST;
   const goalOf=(a:number,b:number)=>{const {u,v,d}=imageAxes(a,b);basis.makeBasis(v3(u),v3(v),v3(d));return qGoal.setFromRotationMatrix(basis);};
   q.copy(goalOf(latest.current.a,latest.current.b));
+  /** Camera distance at which the whole heart box, seen with orientation `qa` and aimed at the isocentre, fits the panel with margin. */
+  const inv=new T.Quaternion(),corner=new T.Vector3();
+  const fitDist=(qa:T.Quaternion)=>{
+   if(heartBox.isEmpty())return DEFAULT_DIST;
+   inv.copy(qa).invert();
+   const tv=Math.tan(T.MathUtils.degToRad(camera.fov)/2),th=tv*camera.aspect;
+   let need=0;
+   for(let i=0;i<8;i++){
+    corner.set(i&1?heartBox.max.x:heartBox.min.x,i&2?heartBox.max.y:heartBox.min.y,i&4?heartBox.max.z:heartBox.min.z).applyQuaternion(inv);
+    need=Math.max(need,corner.z+Math.abs(corner.y)/tv*1.12,corner.z+Math.abs(corner.x)/th*1.12);
+   }
+   return Math.min(Math.max(need,MIN_DIST),MAX_DIST);
+  };
   const place=()=>{camera.quaternion.copy(q);camera.position.set(0,0,dist).applyQuaternion(q);camera.updateMatrixWorld(true);};
   const resize=()=>{const w=el.clientWidth,h=el.clientHeight;if(!w||!h)return;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();dirty=true;};
   const observer=new ResizeObserver(resize);observer.observe(el);resize();
@@ -87,7 +100,7 @@ export default function HeartScene(props:HeartSceneProps){
   // Heart parts.
   const heartMat=new T.MeshStandardMaterial({color:HEART_COLOR,roughness:.62,metalness:0,side:T.DoubleSide,transparent:true,opacity:1}),greatMat=new T.MeshStandardMaterial({color:GREAT_COLOR,roughness:.6,side:T.DoubleSide,transparent:true,opacity:1});
   const skeletonMat=new T.MeshStandardMaterial({color:SKELETON_COLOR,roughness:1,transparent:true,opacity:.13,depthWrite:false});
-  const partGroup=new T.Group(),skeletonGroup=new T.Group(),heartMeshes:T.Mesh[]=[],heartCentre=new T.Vector3(),heartHalf=new T.Vector3(1,1,1);
+  const partGroup=new T.Group(),skeletonGroup=new T.Group(),heartMeshes:T.Mesh[]=[],heartCentre=new T.Vector3(),heartHalf=new T.Vector3(1,1,1),heartBox=new T.Box3();
   world.add(partGroup,skeletonGroup);
   let parts:HeartPart[]|null=null;
   loadHeartAsset().then(list=>{
@@ -98,7 +111,7 @@ export default function HeartScene(props:HeartSceneProps){
     if(p.group==='skeleton'){mesh.renderOrder=-1;skeletonGroup.add(mesh);}
     else{partGroup.add(mesh);if(p.group==='heart'){heartMeshes.push(mesh);box.union(p.geometry.boundingBox!);}}
    }
-   if(!box.isEmpty()){box.getCenter(heartCentre);box.getSize(heartHalf).multiplyScalar(.5);}
+   if(!box.isEmpty()){heartBox.copy(box);box.getCenter(heartCentre);box.getSize(heartHalf).multiplyScalar(.5);}
    setStatus('');dirty=true;
   }).catch(()=>{if(!disposed)setStatus('No se pudo cargar el modelo del corazón.');});
 
@@ -107,14 +120,14 @@ export default function HeartScene(props:HeartSceneProps){
   const metal=new T.MeshStandardMaterial({color:'#7f95a8',roughness:.45,metalness:.5}),dark=new T.MeshStandardMaterial({color:'#3d4f60',roughness:.5,metalness:.4});
   const housing=new T.Mesh(new T.BoxGeometry(34,34,44),metal);housing.position.z=TUBE_Z-12;arm.add(housing);
   const collimator=new T.Mesh(new T.CylinderGeometry(9,13,22,18).rotateX(Math.PI/2),dark);collimator.position.z=TUBE_Z+21;arm.add(collimator);
-  const panel=new T.Mesh(new T.BoxGeometry(DETECTOR_SIDE,DETECTOR_SIDE,6),dark);panel.position.z=DETECTOR_Z+4;arm.add(panel);
+  const panel=new T.Mesh(new T.BoxGeometry(DETECTOR_SIDE,DETECTOR_SIDE,6),new T.MeshStandardMaterial({color:'#3d4f60',roughness:.5,metalness:.4,transparent:true,opacity:.35,depthWrite:false}));panel.renderOrder=4;panel.position.z=DETECTOR_Z+4;arm.add(panel);
   const h=DETECTOR_SIDE/2,faceZ=DETECTOR_Z,tint=new T.Mesh(new T.PlaneGeometry(DETECTOR_SIDE*.94,DETECTOR_SIDE*.94),new T.MeshBasicMaterial({color:'#7fd0ff',transparent:true,opacity:.1,side:T.DoubleSide,depthWrite:false}));
   tint.position.z=faceZ;tint.renderOrder=5;arm.add(tint);
   const frame=new T.LineSegments(new T.EdgesGeometry(new T.PlaneGeometry(DETECTOR_SIDE*.94,DETECTOR_SIDE*.94)),new T.LineBasicMaterial({color:'#9fdcff',transparent:true,opacity:.7}));frame.position.z=faceZ;arm.add(frame);
   const apex=new T.Vector3(0,0,TUBE_Z+4),corners=[[-h,-h],[h,-h],[h,h],[-h,h]].map(([x,y])=>new T.Vector3(x*.94,y*.94,faceZ));
   const coneGeo=new T.BufferGeometry().setFromPoints([0,1,2,3].flatMap(i=>[apex,corners[i],corners[(i+1)%4]]));
-  const cone=new T.Mesh(coneGeo,new T.MeshBasicMaterial({color:'#ffd36b',transparent:true,opacity:.07,side:T.DoubleSide,depthWrite:false}));cone.renderOrder=4;arm.add(cone);
-  arm.add(new T.LineSegments(new T.BufferGeometry().setFromPoints(corners.flatMap(c=>[apex,c])),new T.LineBasicMaterial({color:'#ffd36b',transparent:true,opacity:.35})));
+  const cone=new T.Mesh(coneGeo,new T.MeshBasicMaterial({color:'#ffd36b',transparent:true,opacity:.025,side:T.DoubleSide,depthWrite:false}));cone.renderOrder=4;arm.add(cone);
+  arm.add(new T.LineSegments(new T.BufferGeometry().setFromPoints(corners.flatMap(c=>[apex,c])),new T.LineBasicMaterial({color:'#ffd36b',transparent:true,opacity:.22})));
 
   // Vessels, planes and labels depend on (tree, visibility); style depends on angles, selection and toggles.
   const tubeGroup=new T.Group(),planeGroup=new T.Group();world.add(tubeGroup,planeGroup);
@@ -186,7 +199,7 @@ export default function HeartScene(props:HeartSceneProps){
    const {u,v,d}=imageAxes(a,b);arm.matrix.makeBasis(v3(u),v3(v),v3(d));arm.matrixWorldNeedsUpdate=true;arm.updateMatrixWorld(true);
    const glass=toggles.seeThrough;
    heartMat.opacity=glass?.35:1;greatMat.opacity=glass?.42:1;heartMat.depthWrite=greatMat.depthWrite=!glass;
-   skeletonGroup.visible=toggles.skeleton;planeGroup.visible=toggles.planes;
+   skeletonGroup.visible=toggles.skeleton;planeGroup.visible=toggles.planes;arm.visible=!toggles.detectorView;
    const hit=selected?findSegment(latest.current.tree,selected):null,tmp=new T.Color();
    for(const e of entries){
     if(e.full)e.material.color.copy(toggles.foreshortening?shortColor(foreshorteningOfPolyline(e.vessel.points,a,b),tmp):e.base);
@@ -228,7 +241,7 @@ export default function HeartScene(props:HeartSceneProps){
     if(l.kind==='vessel')show(l,toggles.labels,true);
     else if(l.kind==='plane')show(l,toggles.planes,false);
     else if(l.kind==='selected')show(l,!!selected,true);
-    else show(l,true,false);
+    else show(l,!toggles.detectorView,false);
    }
   };
   const updateCube=()=>{
@@ -261,7 +274,7 @@ export default function HeartScene(props:HeartSceneProps){
    const prev=ptrs.get(e.pointerId);if(!prev)return;
    const dx=e.clientX-prev.x,dy=e.clientY-prev.y;prev.x=e.clientX;prev.y=e.clientY;
    if(ptrs.size===1&&press){
-    if(!press.moved&&Math.hypot(e.clientX-press.x,e.clientY-press.y)>4){press.moved=true;dragging=true;canvas.style.cursor='grabbing';if(latest.current.toggles.detectorView)latest.current.onDetectorViewLeft();}
+    if(!press.moved&&Math.hypot(e.clientX-press.x,e.clientY-press.y)>4){press.moved=true;dragging=true;canvas.style.cursor='grabbing';if(latest.current.toggles.detectorView){latest.current.onDetectorViewLeft();dist=Math.max(dist,DEFAULT_DIST);}}
     if(press.moved){qDrag.setFromEuler(new T.Euler(-dy*.0055,-dx*.0055,0,'YXZ'));q.multiply(qDrag).normalize();dirty=true;}
    }else if(ptrs.size===2){
     const [p1,p2]=[...ptrs.values()],d=Math.hypot(p1.x-p2.x,p1.y-p2.y);
@@ -274,7 +287,7 @@ export default function HeartScene(props:HeartSceneProps){
    if(ptrs.size===1&&press&&!press.moved&&e.type==='pointerup')pick(e.clientX,e.clientY);
    ptrs.delete(e.pointerId);press=null;pinch=0;if(!ptrs.size){dragging=false;canvas.style.cursor='grab';}
   };
-  const onWheel=(e:WheelEvent)=>{e.preventDefault();dist=Math.min(Math.max(dist*Math.exp(e.deltaY*.0012),MIN_DIST),MAX_DIST);dirty=true;};
+  const onWheel=(e:WheelEvent)=>{e.preventDefault();if(latest.current.toggles.detectorView)latest.current.onDetectorViewLeft();dist=Math.min(Math.max(dist*Math.exp(e.deltaY*.0012),MIN_DIST),MAX_DIST);dirty=true;};
   canvas.addEventListener('pointerdown',onDown);canvas.addEventListener('pointermove',onMove);canvas.addEventListener('pointerup',onUp);canvas.addEventListener('pointercancel',onUp);canvas.addEventListener('wheel',onWheel,{passive:false});
 
   const loop=(now:number)=>{
@@ -282,12 +295,14 @@ export default function HeartScene(props:HeartSceneProps){
    const dt=Math.min((now-lastNow)/1000,.1);lastNow=now;
    const p=latest.current;
    if(p.tree!==shownTree||visKey(p.vis)!==shownVis)rebuild();
-   const t=p.toggles,sig=[p.a,p.b,p.selected,t.foreshortening,t.skeleton,t.seeThrough,t.planes,parts?1:0].join('|');
+   const t=p.toggles,sig=[p.a,p.b,p.selected,t.foreshortening,t.skeleton,t.seeThrough,t.planes,t.detectorView,parts?1:0].join('|');
    if(sig!==shownSig){shownSig=sig;restyle();}
    if(t.detectorView&&!dragging){
     goalOf(p.a,p.b);
     const gap=q.angleTo(qGoal);
     if(gap>1e-4){q.slerp(qGoal,gap<.002?1:1-Math.exp(-dt*14));dirty=true;}
+    const want=fitDist(qGoal);
+    if(Math.abs(want-dist)>.05){dist+=(want-dist)*(Math.abs(want-dist)<.5?1:1-Math.exp(-dt*10));dirty=true;}
    }
    if(!dirty)return;
    dirty=false;place();placeLabels();updateCube();renderer.render(scene,camera);

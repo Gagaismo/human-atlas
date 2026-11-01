@@ -8,7 +8,7 @@ import AngioControls from './angio-controls';
 import AngioPad from './angio-pad';
 import type {PadMode} from './angio-pad';
 import {loadTree} from './angio-data';
-import {clampAngles,fmtAngles,fmtAngulation,fmtRotation} from './core/geometry';
+import {clampAngles,fmtAngles} from './core/geometry';
 import {clampToSafe} from './core/room';
 import {findSegment} from './core/tree';
 import {isAngioHash,parseHash,serializeHash} from './core/url';
@@ -128,7 +128,6 @@ export default function AngioMode(){
  const placeholder=loadError
   ?<div className="angio-loading" role="alert"><p>{loadError}</p><button onClick={()=>setAttempt(n=>n+1)}>Reintentar</button></div>
   :<div className="angio-loading" role="status">Cargando la anatomía coronaria…</div>;
- const roomReadout=fmtRotation(ang.a)+(Math.round(ang.b)?` ${fmtAngulation(ang.b)}`:'');
 
  return <div className="angio" ref={root} lang="es">
   <header className="angio-top">
@@ -175,7 +174,7 @@ export default function AngioMode(){
        {GRAFTS.map(g=><Toggle key={g.id} on={dom==='right'&&grafts.has(g.id)} disabled={dom!=='right'} title={g.title} onClick={()=>toggleGraft(g.id)}>{g.text}</Toggle>)}</div>
       {dom!=='right'&&<span className="angio-hint">Por ahora los puentes solo están con dominancia derecha</span>}
      </div>
-     <div className="angio-view angio-square">{ready?<AngiogramView tree={tree} vis={vis} a={ang.a} b={ang.b} selected={sel} labels={labels} color={color} onSelect={setSel}/>:placeholder}</div>
+     <div className="angio-stage"><div className="angio-view angio-square">{ready?<AngiogramView tree={tree} vis={vis} a={ang.a} b={ang.b} selected={sel} labels={labels} color={color} onSelect={setSel}/>:placeholder}</div></div>
     </section>
     {ready&&<AngioPad tree={tree} vis={vis} a={ang.a} b={ang.b} sel={sel} mode={padMode} onMode={setPadMode} onSet={set} onGo={go}/>}
    </div>
@@ -185,8 +184,7 @@ export default function AngioMode(){
      {note&&<div className={`angio-note ${note.kind}`} role="status">{note.text}</div>}
     </div>
     <section className="angio-panel angio-room" aria-label="Sala de hemodinamia">
-     <span className="angio-title room-readout">{roomReadout}</span>
-     <div className="angio-view"><RoomScene a={ang.a} b={ang.b} onAngles={set}/></div>
+          <div className="angio-view"><RoomScene a={ang.a} b={ang.b} onAngles={set}/></div>
     </section>
    </div>
   </main>

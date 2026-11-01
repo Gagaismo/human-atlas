@@ -23,7 +23,7 @@ const ui={
  side:{position:'absolute',left:0,top:0,fontSize:11,color:'#aab3bd',pointerEvents:'none',willChange:'transform'},
  hint:{position:'absolute',left:10,bottom:8,fontSize:10,color:'#7d8793',pointerEvents:'none'},
  reset:{position:'absolute',right:8,bottom:8,font:'inherit',fontSize:11,padding:'4px 8px',color:'#c9ced4',background:'#161a20',border:'1px solid #343c46',borderRadius:3,cursor:'pointer'},
- warn:{position:'absolute',left:'50%',top:10,transform:'translateX(-50%)',maxWidth:'90%',fontSize:12,textAlign:'center',color:'#ffd9d6',background:'rgba(120,20,16,.88)',border:'1px solid #e0302c',borderRadius:3,padding:'5px 10px',pointerEvents:'none'},
+ warn:{position:'absolute',left:'50%',top:34,transform:'translateX(-50%)',maxWidth:'90%',fontSize:12,textAlign:'center',color:'#ffd9d6',background:'rgba(120,20,16,.88)',border:'1px solid #e0302c',borderRadius:3,padding:'5px 10px',pointerEvents:'none'},
  fallback:{position:'absolute',inset:0,display:'flex',alignItems:'center',justifyContent:'center',padding:16,textAlign:'center',fontSize:12,lineHeight:1.5,color:'#aab3bd'},
 } satisfies Record<string,React.CSSProperties>;
 
@@ -63,7 +63,7 @@ export default function RoomScene({a,b,onAngles}:RoomSceneProps){
   controls.addEventListener('change',request);
 
   const home=()=>{
-   const k=Math.min(2.2,Math.max(1,1.35/Math.max(w/h,.1)));
+   const k=Math.min(1.6,Math.max(.7,.78/Math.max(w/h,.1)));
    camera.position.copy(HOME_TARGET).addScaledVector(HOME_DIR,k);controls.target.copy(HOME_TARGET);controls.update();request();
   };
   resetView.current=home;
@@ -79,7 +79,7 @@ export default function RoomScene({a,b,onAngles}:RoomSceneProps){
   function draw(){
    frameQueued=0;if(disposed)return;
    scene.updateMatrixWorld(true);renderer.render(scene,camera);
-   placeTag(detTag.current,model.detectorAnchor,-30,-20);
+   placeTag(detTag.current,model.detectorAnchor,-100,-14);
    placeTag(tubeTag.current,model.tubeAnchor,-30,6);
    model.sideLetters.forEach((s,i)=>placeTag(letters.current[i],s.point,-4,-6));
   }
@@ -164,7 +164,7 @@ export default function RoomScene({a,b,onAngles}:RoomSceneProps){
    <span ref={detTag} style={ui.tag} aria-hidden="true">Detector (I/I)</span>
    <span ref={tubeTag} style={ui.tag} aria-hidden="true">Tubo de rayos X</span>
    {['I','D'].map((t,i)=><span key={t} ref={n=>{letters.current[i]=n;}} style={ui.side} aria-hidden="true" title={t==='I'?'Izquierda del paciente':'Derecha del paciente'}>{t}</span>)}
-   <div className="angio-room-readout" style={ui.corner}><div style={ui.label}>SALA</div><div style={ui.readout}>{fmtRotation(a)} {fmtAngulation(b)}</div></div>
+   <div className="angio-room-readout" style={ui.corner}><span style={ui.label}>SALA</span><span style={ui.readout}> · {fmtRotation(a)}{Math.round(b)?` ${fmtAngulation(b)}`:''}</span></div>
    <div style={ui.hint}>arrastrá para mover el arco en C</div>
    <button type="button" className="angio-room-reset" style={ui.reset} onClick={()=>resetView.current()}>Vista de la sala</button>
    {warning&&<div role="status" style={ui.warn}>{warning}</div>}

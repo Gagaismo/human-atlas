@@ -19,8 +19,10 @@
 
 .angio-grid{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) 340px;gap:12px;padding:6px 16px 16px}
 .angio-panel{position:relative;min-height:0;background:var(--panel);border:1px solid var(--line);border-radius:6px}
-.angio-center,.angio-right{display:flex;flex-direction:column;gap:10px;min-height:0;min-width:0;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#2f3741 transparent}
+.angio-center,.angio-right{display:flex;flex-direction:column;gap:10px;min-height:0;min-width:0}
 .angio-center>*,.angio-right>*{flex:none}
+.angio-center>.angio-angiogram{flex:1 1 0;min-height:0}
+.angio-controls-wrap{flex:0 1 auto;min-height:0;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#2f3741 transparent;border-radius:6px}
 .angio-heart{display:flex;flex-direction:column;overflow:hidden}
 .angio-view{position:relative;flex:1;min-height:0;overflow:hidden}
 .angio-view>*{width:100%;height:100%}
@@ -46,38 +48,39 @@
 
 /* angiogram */
 .angio-angiogram{display:flex;flex-direction:column;overflow:hidden}
-.angio-square{flex:none;width:min(100%,calc(100dvh - 380px));min-width:min(100%,260px);aspect-ratio:1;margin:0 auto}
-.angio-angiogram .angio-square{margin:10px auto}
+.angio-angiogram>.angio-row,.angio-angiogram>.angio-row:last-of-type{flex:none}
+.angio-stage{flex:1;min-height:0;container-type:size;display:flex;align-items:center;justify-content:center;padding:8px}
+.angio-square{flex:none;width:min(100cqw,100cqh);height:min(100cqw,100cqh)}
 
 /* angle pad */
-.angio-pad{display:flex}
-.angio-pad-read{width:92px;flex:none;border-right:1px solid var(--line);padding:10px 12px;font:600 14px/1.5 var(--mono);color:#fff}
-.angio-pad-main{flex:1;min-width:0;padding:8px 10px 10px}
-.angio-pad-wrap{position:relative;width:100%}
+.angio-pad{display:flex;flex:none;height:212px;overflow:hidden}
+.angio-pad-read{width:84px;flex:none;border-right:1px solid var(--line);padding:10px 12px;font:600 14px/1.5 var(--mono);color:#fff}
+.angio-pad-main{flex:1;min-width:0;min-height:0;display:flex;flex-direction:column;padding:6px 10px 8px}
+.angio-pad-wrap{position:relative;width:100%;flex:1;min-height:70px}
 .angio-pad-wrap canvas{display:block;cursor:crosshair;touch-action:none;border-radius:3px}
 .angio-pad-hint{position:absolute;left:40px;right:6px;top:8px;bottom:30px;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 16px;margin:0;font-size:11px;color:#9aa5b0;background:#0d1117cc;pointer-events:none}
-.angio-pad-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:6px}
+.angio-pad-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:4px}
 .angio-pad-bar .angio-seg button{padding:4px 8px;font-size:11px;border:1px solid var(--line2)}
-.angio-pad-best{margin:6px 0 0;font-size:12px;min-height:18px}
+.angio-pad-best{margin:4px 0 0;font-size:11px;line-height:1.3;min-height:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .angio-best{display:inline-flex;align-items:center;gap:8px;text-align:left;color:var(--ink)!important;padding:2px 0!important}
 .angio-best:hover:not(:disabled){background:none!important;text-decoration:underline}
 .angio-best .ring{width:9px;height:9px;border:1.5px solid #fff;border-radius:50%;flex:none}
 
 /* controls */
 .angio-controls-wrap{position:relative}
-.angio-controls{padding:12px 14px 14px}
+.angio-controls{padding:10px 14px 10px}
 .angio-controls-top{display:flex;gap:14px;align-items:stretch}
 .angio-rotation{flex:1;min-width:0;display:flex;flex-direction:column;gap:6px}
 .angio-label.sub{color:#9aa5b0}
 .angio-label.sub span{color:var(--mute);letter-spacing:.06em;margin-left:4px}
 .angio-big{display:block;font:600 22px/1.2 var(--mono);color:#fff}
 .angio-big.small{display:inline;margin-left:auto;font-size:20px}
-.angulation-readout{display:flex;align-items:baseline;gap:6px;margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
+.angulation-readout{display:flex;align-items:baseline;gap:6px;margin-top:6px;padding-top:6px;border-top:1px solid var(--line)}
 .angio-ends{display:flex;justify-content:space-between;font:10px var(--mono);color:var(--mute)}
 .angio-home{align-self:flex-start;border:1px solid var(--line2)!important;border-radius:4px;padding:4px 9px!important;font-size:11px}
 .angio-angulation{display:flex;flex-direction:column;align-items:center;gap:4px;font:10px var(--mono);color:var(--mute)}
 .angio-slider{position:relative;height:36px;border:1px solid #ff9d2e80;border-radius:3px;background:#0d1014;cursor:pointer;touch-action:none;user-select:none}
-.angio-slider.vertical{width:32px;height:160px}
+.angio-slider.vertical{width:30px;height:104px}
 .angio-slider .tick{position:absolute;top:50%;width:1px;height:8px;background:#4a5561;transform:translate(-50%,-50%);pointer-events:none}
 .angio-slider .tick.major{height:14px}
 .angio-slider .tick.mid{height:24px;background:var(--acc)}
@@ -86,14 +89,14 @@
 .angio-slider.vertical .tick.mid{width:24px;height:1px}
 .angio-slider .thumb{position:absolute;top:3px;bottom:3px;width:7px;margin-left:-3.5px;background:var(--acc);border-radius:2px;pointer-events:none}
 .angio-slider.vertical .thumb{top:auto;bottom:auto;left:3px;right:3px;width:auto;height:7px;margin:0 0 -3.5px}
-.angio-section{margin:14px 0 6px}
+.angio-section{margin:9px 0 4px}
 .angio-views{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
-.angio-view-btn{display:flex;flex-direction:column;align-items:flex-start;gap:1px;border:1px solid var(--line2)!important;border-radius:4px;padding:6px 8px!important;text-align:left;min-width:0}
+.angio-view-btn{display:flex;flex-direction:column;align-items:flex-start;gap:0;border:1px solid var(--line2)!important;border-radius:4px;padding:4px 8px!important;text-align:left;min-width:0}
 .angio-view-btn .name{font-size:12px;color:#e6eaee}
 .angio-view-btn .angles{font:9px var(--mono);color:var(--mute);white-space:nowrap}
 .angio-view-btn.on,.angio-view-btn.on:hover:not(:disabled){border-color:var(--acc)!important;background:#ff9d2e14}
 .angio-view-btn.on .name{color:var(--acc)}
-.angio-view-desc{margin:12px 0 0;font-size:12px;color:#9aa5b0;min-height:3.9em}
+.angio-view-desc{margin:8px 0 0;font-size:12px;line-height:1.35;color:#9aa5b0;min-height:4em}
 .angio-view-desc em{color:var(--mute)}
 .angio-view-list{margin-top:6px;font-size:12px;color:#9aa5b0}
 .angio-view-list summary{cursor:pointer;color:var(--mute);font-size:11px}
@@ -104,8 +107,7 @@
 .angio-note.move{font-family:var(--mono)}
 
 /* room */
-.angio-room{flex:1;min-height:240px;display:flex;flex-direction:column;overflow:hidden}
-.angio-room .room-readout{font-size:10px;letter-spacing:.08em}
+.angio-room{flex:1 1 0;min-height:230px;display:flex;flex-direction:column;overflow:hidden}
 
 /* credits */
 .angio-credits{background:var(--panel);color:var(--ink);border:1px solid var(--line2);border-radius:10px;padding:0;width:min(560px,92vw);max-height:86dvh;overflow:hidden}
@@ -118,13 +120,13 @@
 .angio-credits p{margin:6px 0}.angio-credits ul{margin:6px 0;padding-left:18px}.angio-credits code{font:12px var(--mono);color:#9aa5b0}
 .angio-strong{color:#fff;font-weight:600}
 
-@media(max-width:1180px){.angio-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.angio-right{grid-column:1 / -1;flex-direction:row;overflow:visible}.angio-right>*{flex:1 1 320px}.angio-room{min-height:300px}}
-@media(max-width:820px){
+@media(max-width:1180px){.angio-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto;overflow-y:auto}.angio-right{grid-column:1 / -1;flex-direction:row}.angio-right>*{flex:1 1 320px}.angio-controls-wrap{overflow:visible}.angio-room{min-height:300px}.angio-heart,.angio-center{min-height:520px}}
+@media(max-width:760px){
  .angio-grid{display:flex;flex-direction:column;overflow-y:auto;padding:6px 10px 12px;scrollbar-width:thin}
  .angio-grid>*{flex:none}
- .angio-center,.angio-right{overflow:visible}.angio-right{flex-direction:column}
+ .angio-center,.angio-right{overflow:visible}.angio-right{flex-direction:column}.angio-center>.angio-angiogram{flex:none}.angio-controls-wrap{overflow:visible}.angio-pad{height:auto;min-height:212px}.angio-pad-wrap{flex:none;height:140px}
  .angio-heart{height:min(78dvh,560px);min-height:360px}
- .angio-square{width:100%;min-width:0}
+ .angio-stage{container-type:normal;padding:8px}.angio-square{width:100%;height:auto;aspect-ratio:1}
  .angio-room{height:320px;flex:none}
  .angio-disclaimer{order:9;flex-basis:100%;margin:0}
  .angio-top{padding:8px 10px 4px}

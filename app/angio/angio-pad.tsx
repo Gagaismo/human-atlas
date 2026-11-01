@@ -53,13 +53,13 @@ export default function AngioPad({tree,vis,a,b,sel,mode,onMode,onSet,onGo}:Angio
  const grafts=useMemo(()=>[...vis.grafts],[vis.grafts]);
  const {pad,rows,state,version}=usePadMap(tree,vis.system,vis.ramus,grafts,sel);
  const wrap=useRef<HTMLDivElement>(null),canvas=useRef<HTMLCanvasElement>(null),drag=useRef(false);
- const [width,setWidth]=useState(300),[dpr,setDpr]=useState(1);
+ const [width,setWidth]=useState(300),[boxH,setBoxH]=useState(120),[dpr,setDpr]=useState(1);
  const segment=sel?findSegment(tree,sel)?.segment:undefined;
  const best:BestView|null=useMemo(()=>state==='done'?bestOfPad(pad):null,[state,pad]);
- const plotW=Math.max(120,width-MARGIN.l-MARGIN.r),plotH=Math.round(plotW/2),height=plotH+MARGIN.t+MARGIN.b;
+ const plotW=Math.max(120,width-MARGIN.l-MARGIN.r),plotH=Math.max(48,boxH-MARGIN.t-MARGIN.b),height=plotH+MARGIN.t+MARGIN.b;
  useEffect(()=>{
   const el=wrap.current;if(!el)return;
-  const measure=()=>{setWidth(Math.floor(el.clientWidth));setDpr(Math.min(2,window.devicePixelRatio||1));};
+  const measure=()=>{setWidth(Math.floor(el.clientWidth));setBoxH(Math.floor(el.clientHeight));setDpr(Math.min(2,window.devicePixelRatio||1));};
   measure();const ro=new ResizeObserver(measure);ro.observe(el);return()=>ro.disconnect();
  },[]);
  const views=useMemo(()=>STANDARD_VIEWS.filter(v=>vis.system==='both'||v.group===(vis.system==='left'?'izquierda':'derecha')),[vis.system]);
@@ -90,14 +90,22 @@ export default function AngioPad({tree,vis,a,b,sel,mode,onMode,onSet,onGo}:Angio
   g.textAlign='right';
   for(const v of [-45,-30,-15,0,15,30,45]){g.fillText(String(Math.abs(v)),px-5,Y(v));}
   g.fillText('CRA',px-24,py+3);g.fillText('CAU',px-24,py+plotH-3);
-  // Standard-view windows of the injected system.
+  // Standard-view windows of the injected system. Each distinct rectangle is drawn once (the injected group's first), and a label
+  // that would land on an earlier one is skipped.
   g.setLineDash([3,3]);g.strokeStyle='#8f9aa5';g.fillStyle='#cdd4da';g.textAlign='center';g.font='9px ui-monospace,Menlo,Consolas,monospace';g.lineWidth=1;
-  for(const v of views){
+  const seen=new Set<string>(),taken:{x0:number;y0:number;x1:number;y1:number}[]=[],said=new Set<string>(),pref=vis.system==='right'?'derecha':'izquierda';
+  const ordered=[...views].sort((p,q)=>(p.group===pref?0:1)-(q.group===pref?0:1));
+  for(const v of ordered){
    for(const [k,w] of [v.window,v.altWindow].entries()){
     if(!w)continue;
-    const x0=X(w.aMin),x1=X(w.aMax),y0=Y(w.bMax),y1=Y(w.bMin),ww=Math.max(6,x1-x0),hh=Math.max(6,y1-y0);
+    const x0=X(w.aMin),x1=X(w.aMax),y0=Y(w.bMax),y1=Y(w.bMin),ww=Math.max(6,x1-x0),hh=Math.max(6,y1-y0),key=[x0,y0,ww,hh].map(n=>Math.round(n)).join(',');
+    if(seen.has(key))continue;
+    seen.add(key);
     g.beginPath();g.roundRect(x0,y0,ww,hh,4);g.stroke();
-    if(k===0)g.fillText(v.padLabel,x0+ww/2,y0+hh/2);
+    if(k!==0)continue;
+    const tw=g.measureText(v.padLabel).width+4,cx=x0+ww/2,cy=y0+hh/2,box={x0:cx-tw/2,x1:cx+tw/2,y0:cy-6,y1:cy+6};
+    if(said.has(v.padLabel)||taken.some(r=>box.x0<r.x1&&box.x1>r.x0&&box.y0<r.y1&&box.y1>r.y0))continue;
+    taken.push(box);said.add(v.padLabel);g.fillText(v.padLabel,cx,cy);
    }
   }
   g.setLineDash([]);
@@ -105,7 +113,7 @@ export default function AngioPad({tree,vis,a,b,sel,mode,onMode,onSet,onGo}:Angio
   const cx=X(clamp(a,-A_LIMIT,A_LIMIT)),cy=Y(clamp(b,-B_LIMIT,B_LIMIT));
   g.strokeStyle='#ff9d2e';g.lineWidth=1;g.beginPath();g.moveTo(cx-9,cy);g.lineTo(cx+9,cy);g.moveTo(cx,cy-9);g.lineTo(cx,cy+9);g.stroke();
   g.fillStyle='#ff9d2e';g.beginPath();g.arc(cx,cy,3.5,0,Math.PI*2);g.fill();
- },[width,height,dpr,plotW,plotH,mode,pad,rows,version,state,sel,views,best,a,b]);
+ },[width,height,dpr,plotW,plotH,mode,pad,rows,version,state,sel,views,best,a,b,vis.system]);
 
  const fromEvent=(e:PointerEvent)=>{
   const r=canvas.current!.getBoundingClientRect(),x=(e.clientX-r.left-MARGIN.l)/plotW,y=(e.clientY-r.top-MARGIN.t)/plotH;
@@ -125,7 +133,7 @@ export default function AngioPad({tree,vis,a,b,sel,mode,onMode,onSet,onGo}:Angio
  return <section className="angio-panel angio-pad" aria-label="Mapa de ángulos">
   <div className="angio-pad-read"><output>{fmtRotation(a)}<br/>{fmtAngulation(b)}</output></div>
   <div className="angio-pad-main">
-   <div ref={wrap} className="angio-pad-wrap" style={{height}}>
+   <div ref={wrap} className="angio-pad-wrap">
     <canvas ref={canvas} style={{width,height}} tabIndex={0} role="application" aria-label="Mapa de ángulos: rotación en horizontal, angulación en vertical" aria-description="Con las flechas se mueve 1 grado; con Mayús, 5 grados; Inicio vuelve a AP."
      onKeyDown={key} onPointerDown={e=>{drag.current=true;e.currentTarget.setPointerCapture(e.pointerId);fromEvent(e);}} onPointerMove={e=>{if(drag.current)fromEvent(e);}} onPointerUp={()=>{drag.current=false;}} onPointerCancel={()=>{drag.current=false;}}/>
     {!sel&&mode!=='none'&&<p className="angio-pad-hint">Elegí un segmento en el angiograma o en el corazón para ver su mapa</p>}
